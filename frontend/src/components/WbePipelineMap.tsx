@@ -194,12 +194,12 @@ export const WbePipelineMap: React.FC<WbePipelineMapProps> = ({ bottleneck, metr
           return (
             <div key={stage.id} className="relative">
               <div
-                className={`p-4 sm:p-4.5 rounded-xl border transition-all duration-200 relative ${
+                className={`p-4 sm:p-4.5 rounded-xl transition-all duration-200 relative ${
                   stage.isDominant
-                    ? 'border-rose-500 bg-rose-50/40 ring-2 ring-rose-500/30 shadow-md'
+                    ? 'border-2 border-rose-500 bg-gradient-to-b from-rose-50/80 to-rose-50/30 ring-2 ring-rose-500/30 shadow-md -translate-y-0.5'
                     : stage.isSecond
-                    ? 'border-amber-400/90 bg-amber-50/25 shadow-xs'
-                    : 'border-slate-200/90 bg-white hover:border-slate-300 hover:bg-slate-50/60 shadow-xs'
+                    ? 'border-2 border-amber-400/90 bg-gradient-to-b from-amber-50/60 to-amber-50/20 shadow-sm'
+                    : 'border border-slate-200/90 bg-gradient-to-b from-white to-slate-50/70 hover:border-slate-300 hover:bg-white shadow-sm hover:shadow-md hover:-translate-y-0.5'
                 }`}
               >
                 {stage.isDominant && (

@@ -335,7 +335,7 @@ export const InteractiveTour: React.FC<InteractiveTourProps> = ({
             <div className="flex items-center space-x-2">
               <button
                 onClick={onClose}
-                className="px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-500 hover:text-slate-800 hover:bg-slate-200/60 transition-colors cursor-pointer"
+                className="px-3 py-2 rounded-xl text-xs font-bold text-slate-500 hover:text-slate-800 hover:bg-slate-200/60 transition-colors cursor-pointer"
               >
                 Skip Tour
               </button>
@@ -343,7 +343,7 @@ export const InteractiveTour: React.FC<InteractiveTourProps> = ({
               {currentStep > 0 && (
                 <button
                   onClick={handlePrev}
-                  className="flex items-center space-x-1 px-3 py-1.5 rounded-lg border border-slate-300 bg-white hover:bg-slate-100 text-xs font-semibold text-slate-700 transition-colors cursor-pointer"
+                  className="flex items-center space-x-1.5 px-3.5 py-2 rounded-xl border border-slate-300 bg-gradient-to-b from-white to-slate-100 hover:from-slate-50 hover:to-slate-200 text-xs font-bold text-slate-700 transition-all cursor-pointer shadow-sm hover:shadow hover:-translate-y-0.5 active:translate-y-0.5"
                 >
                   <ArrowLeft className="w-3.5 h-3.5" />
                   <span>Back</span>
@@ -352,7 +352,7 @@ export const InteractiveTour: React.FC<InteractiveTourProps> = ({
 
               <button
                 onClick={handleNext}
-                className="flex items-center space-x-1 px-4 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold shadow-xs hover:shadow transition-all cursor-pointer"
+                className="flex items-center space-x-1.5 px-4.5 py-2 rounded-xl bg-gradient-to-b from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 border border-blue-500 text-white text-xs font-bold shadow-sm hover:shadow-md hover:-translate-y-0.5 active:translate-y-0.5 transition-all cursor-pointer"
               >
                 <span>{currentStep === TOUR_STEPS.length - 1 ? 'Finish' : 'Next'}</span>
                 <ArrowRight className="w-3.5 h-3.5" />

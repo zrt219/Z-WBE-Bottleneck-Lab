@@ -223,7 +223,7 @@ export const CompareScenariosModal: React.FC<CompareScenariosModalProps> = ({
           <div className="flex items-center space-x-2.5">
             <button
               onClick={onClose}
-              className="px-4 py-2 rounded-xl border border-slate-300 bg-white text-xs font-bold text-slate-700 hover:bg-slate-50 transition-colors cursor-pointer shadow-xs"
+              className="px-4 py-2.5 rounded-xl border border-slate-300 bg-gradient-to-b from-white to-slate-100 hover:from-slate-50 hover:to-slate-200 text-xs font-bold text-slate-700 hover:text-slate-900 transition-all cursor-pointer shadow-sm hover:shadow hover:-translate-y-0.5 active:translate-y-0.5"
             >
               Close
             </button>
@@ -233,7 +233,7 @@ export const CompareScenariosModal: React.FC<CompareScenariosModalProps> = ({
                   onApplyModifiedAsBaseline();
                   onClose();
                 }}
-                className="px-4 py-2 rounded-xl bg-blue-600 text-white text-xs font-bold hover:bg-blue-500 transition-colors shadow-glow-blue cursor-pointer flex items-center space-x-1.5"
+                className="px-4.5 py-2.5 rounded-xl bg-gradient-to-b from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 border border-blue-500 text-white text-xs font-bold transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0.5 cursor-pointer flex items-center space-x-1.5"
               >
                 <Check className="w-3.5 h-3.5" />
                 <span>Set Modified as New Baseline</span>

@@ -47,22 +47,22 @@ export const SensitivityLab: React.FC<SensitivityLabProps> = ({ sensitivity }) =
         </p>
 
         <div className="pt-1.5 flex flex-wrap gap-2.5 text-[11px] font-mono">
-          <div className="bg-white px-3.5 py-1.5 rounded-lg border border-slate-200 shadow-xs flex items-center space-x-1.5">
+          <div className="bg-gradient-to-b from-white to-slate-50/90 px-3.5 py-1.5 rounded-lg border border-slate-200/90 shadow-sm flex items-center space-x-1.5">
             <span className="text-slate-400 font-semibold">0.5x:</span>
             <span className="font-bold text-slate-800">{highest.perturbations['0.5x'].bottleneckScore.toFixed(1)}%</span>
             <span className="text-[9px] text-slate-400">({highest.perturbations['0.5x'].dominantBottleneck})</span>
           </div>
-          <div className="bg-white px-3.5 py-1.5 rounded-lg border border-blue-400/80 ring-2 ring-blue-500/20 shadow-xs flex items-center space-x-1.5">
+          <div className="bg-gradient-to-b from-white to-blue-50/60 px-3.5 py-1.5 rounded-lg border border-blue-400 ring-2 ring-blue-500/20 shadow-sm flex items-center space-x-1.5">
             <span className="text-blue-700 font-bold">1.0x (Base):</span>
             <span className="font-black text-blue-950">{highest.perturbations['1x'].bottleneckScore.toFixed(1)}%</span>
             <span className="text-[9px] text-blue-600 font-medium">({highest.perturbations['1x'].dominantBottleneck})</span>
           </div>
-          <div className="bg-white px-3.5 py-1.5 rounded-lg border border-slate-200 shadow-xs flex items-center space-x-1.5">
+          <div className="bg-gradient-to-b from-white to-slate-50/90 px-3.5 py-1.5 rounded-lg border border-slate-200/90 shadow-sm flex items-center space-x-1.5">
             <span className="text-slate-400 font-semibold">2.0x:</span>
             <span className="font-bold text-slate-800">{highest.perturbations['2x'].bottleneckScore.toFixed(1)}%</span>
             <span className="text-[9px] text-slate-400">({highest.perturbations['2x'].dominantBottleneck})</span>
           </div>
-          <div className="bg-emerald-50 px-3.5 py-1.5 rounded-lg border border-emerald-300 shadow-xs flex items-center space-x-1.5">
+          <div className="bg-gradient-to-b from-emerald-50 to-emerald-100/70 px-3.5 py-1.5 rounded-lg border border-emerald-300 shadow-sm flex items-center space-x-1.5">
             <span className="text-emerald-700 font-bold">10x:</span>
             <span className="font-black text-emerald-900">{highest.perturbations['10x'].bottleneckScore.toFixed(1)}%</span>
             <span className="text-[9px] text-emerald-700 font-semibold">({highest.perturbations['10x'].dominantBottleneck})</span>

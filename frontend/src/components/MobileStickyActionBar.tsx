@@ -54,7 +54,7 @@ export const MobileStickyActionBar: React.FC<MobileStickyActionBarProps> = ({
           <button
             onClick={onOneClickDemo}
             disabled={isLoadingExplanation}
-            className="flex-1 max-w-[130px] sm:max-w-[150px] min-h-[44px] flex items-center justify-center space-x-1.5 px-2.5 py-2 rounded-xl bg-gradient-to-r from-emerald-600 via-teal-600 to-blue-600 active:from-emerald-700 active:to-blue-700 text-white font-extrabold text-[11px] uppercase tracking-tight shadow-xs hover:shadow transition-all disabled:opacity-50 cursor-pointer"
+            className="flex-1 max-w-[130px] sm:max-w-[150px] min-h-[44px] flex items-center justify-center space-x-1.5 px-2.5 py-2 rounded-xl bg-gradient-to-r from-emerald-600 via-teal-600 to-blue-600 active:from-emerald-700 active:to-blue-700 text-white font-extrabold text-[11px] uppercase tracking-tight shadow-sm hover:shadow-md active:translate-y-0.5 transition-all disabled:opacity-50 cursor-pointer"
             title="1-Click Hero Demo: Accelerate imaging 100x & explain"
           >
             <Zap className="w-3.5 h-3.5 text-amber-300 fill-amber-300 shrink-0" />
@@ -65,7 +65,7 @@ export const MobileStickyActionBar: React.FC<MobileStickyActionBarProps> = ({
           {hasInterpretation ? (
             <button
               onClick={onScrollToInterpretation}
-              className="flex-1 max-w-[130px] sm:max-w-[150px] min-h-[44px] flex items-center justify-center space-x-1.5 px-2.5 py-2 rounded-xl bg-blue-50 hover:bg-blue-100 active:bg-blue-200 border border-blue-300 text-blue-800 font-bold text-[11px] uppercase tracking-tight transition-colors cursor-pointer"
+              className="flex-1 max-w-[130px] sm:max-w-[150px] min-h-[44px] flex items-center justify-center space-x-1.5 px-2.5 py-2 rounded-xl bg-gradient-to-b from-blue-50 to-blue-100/90 active:from-blue-100 active:to-blue-200 border border-blue-300 text-blue-900 font-bold text-[11px] uppercase tracking-tight shadow-sm active:translate-y-0.5 transition-all cursor-pointer"
             >
               <ArrowUp className="w-3.5 h-3.5 text-blue-600 shrink-0" />
               <span className="truncate">View Analysis</span>
@@ -74,7 +74,7 @@ export const MobileStickyActionBar: React.FC<MobileStickyActionBarProps> = ({
             <button
               onClick={onExplainClick}
               disabled={isLoadingExplanation}
-              className="flex-1 max-w-[130px] sm:max-w-[150px] min-h-[44px] flex items-center justify-center space-x-1.5 px-2.5 py-2 rounded-xl bg-slate-900 active:bg-slate-950 text-white font-extrabold text-[11px] uppercase tracking-tight shadow-xs transition-all disabled:opacity-50 cursor-pointer"
+              className="flex-1 max-w-[130px] sm:max-w-[150px] min-h-[44px] flex items-center justify-center space-x-1.5 px-2.5 py-2 rounded-xl bg-gradient-to-b from-slate-800 to-slate-950 active:from-slate-900 active:to-black border border-slate-700 text-white font-extrabold text-[11px] uppercase tracking-tight shadow-sm active:translate-y-0.5 transition-all disabled:opacity-50 cursor-pointer"
             >
               {isLoadingExplanation ? (
                 <>

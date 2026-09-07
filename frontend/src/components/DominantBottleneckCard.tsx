@@ -118,7 +118,7 @@ export const DominantBottleneckCard: React.FC<DominantBottleneckCardProps> = ({
           data-testid="explain-scenario-button"
           aria-label="Explain this scenario"
           title="Explain this scenario"
-          className="w-full py-3.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 active:bg-slate-950 text-white text-xs font-bold uppercase tracking-wider flex items-center justify-center space-x-2 transition-all duration-150 shadow-sm hover:shadow-md hover:scale-[1.01] active:scale-[0.99] disabled:opacity-50 cursor-pointer"
+          className="w-full py-3.5 px-4 rounded-xl bg-gradient-to-b from-slate-800 to-slate-950 hover:from-slate-700 hover:to-slate-900 border border-slate-700 text-white text-xs font-bold uppercase tracking-wider flex items-center justify-center space-x-2 transition-all duration-150 shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0.5 disabled:opacity-50 cursor-pointer"
         >
           {isLoadingExplanation ? (
             <>
@@ -137,7 +137,7 @@ export const DominantBottleneckCard: React.FC<DominantBottleneckCardProps> = ({
         {hasInterpretation && onScrollToInterpretation && (
           <button
             onClick={onScrollToInterpretation}
-            className="w-full py-2 px-3 rounded-lg bg-blue-50 hover:bg-blue-100 text-blue-700 text-xs font-semibold flex items-center justify-center space-x-1 transition-colors cursor-pointer border border-blue-200/80"
+            className="w-full py-2.5 px-3 rounded-xl bg-gradient-to-b from-blue-50 to-blue-100/80 hover:from-blue-100 hover:to-blue-200 border border-blue-200 text-blue-900 text-xs font-bold flex items-center justify-center space-x-1.5 transition-all cursor-pointer shadow-xs hover:shadow hover:-translate-y-0.5 active:translate-y-0.5"
           >
             <span>✓ Interpretation generated • View Analysis ↓</span>
           </button>
@@ -148,7 +148,7 @@ export const DominantBottleneckCard: React.FC<DominantBottleneckCardProps> = ({
             onClick={onOneClickDemo}
             disabled={isLoadingExplanation}
             data-testid="card-one-click-demo-button"
-            className="w-full py-2 px-3 rounded-xl bg-gradient-to-r from-emerald-50 via-teal-50 to-blue-50 hover:from-emerald-100 hover:via-teal-100 hover:to-blue-100 border border-emerald-300/80 text-emerald-900 text-xs font-bold flex items-center justify-center space-x-1.5 transition-all cursor-pointer shadow-2xs hover:shadow-xs hover:scale-[1.01] active:scale-[0.99] disabled:opacity-50"
+            className="w-full py-2.5 px-3 rounded-xl bg-gradient-to-b from-emerald-50 to-teal-100/90 hover:from-emerald-100 hover:to-teal-200/90 border border-emerald-300 text-emerald-950 text-xs font-bold flex items-center justify-center space-x-1.5 transition-all cursor-pointer shadow-sm hover:shadow hover:-translate-y-0.5 active:translate-y-0.5 disabled:opacity-50"
             title="1-Click Demo: Accelerate imaging 100x & immediately run grounded AI interpretation"
           >
             <Zap className="w-3.5 h-3.5 text-emerald-600 fill-emerald-600 shrink-0" />

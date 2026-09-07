@@ -24,7 +24,7 @@ import { GpuExplorationMap } from '../components/GpuExplorationMap';
 import { InteractiveTour } from '../components/InteractiveTour';
 import { MobileStickyActionBar } from '../components/MobileStickyActionBar';
 import { useAccessibility } from '../context/AccessibilityContext';
-import { GitCompare, RotateCcw, Share2, Check, Compass, ArrowRight, Zap, ChevronDown, ChevronUp, Sliders, Layers } from 'lucide-react';
+import { GitCompare, RotateCcw, Share2, Check, Compass, ArrowRight, ChevronDown, ChevronUp, Sliders, Layers } from 'lucide-react';
 
 export const SimulatorPage: React.FC = () => {
   const { announce } = useAccessibility();
@@ -328,7 +328,7 @@ export const SimulatorPage: React.FC = () => {
       )}
 
       {/* Top Controls: Preset selector, hero trigger, compare button */}
-      <div id="tour-preset-selector" className="flex flex-col md:flex-row md:items-center justify-between gap-3">
+      <div id="tour-preset-selector" className="w-full">
         <PresetSelector
           currentAssumptions={assumptions}
           onSelectPreset={handleSelectPreset}
@@ -338,19 +338,8 @@ export const SimulatorPage: React.FC = () => {
         />
       </div>
 
-      <div className="flex flex-wrap items-center justify-end gap-2.5">
-        {/* Primary One-Click Demo Trigger */}
-        <button
-          onClick={handleOneClickDemo}
-          disabled={isLoadingExplanation}
-          data-testid="main-one-click-demo-button"
-          className="flex items-center space-x-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-emerald-600 via-teal-600 to-blue-600 hover:from-emerald-500 hover:via-teal-500 hover:to-blue-500 active:from-emerald-700 active:to-blue-700 text-white text-xs font-black uppercase tracking-wider shadow-sm hover:shadow-md transition-all cursor-pointer hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50"
-          title="One-Click Demo: Accelerate imaging 100x, verify constraint shift, and generate grounded AI explanation"
-        >
-          <Zap className="w-4 h-4 text-amber-300 fill-amber-300 animate-pulse shrink-0" />
-          <span>⚡ ONE-CLICK DEMO</span>
-        </button>
-
+      {/* Centered Utility Toolbar: Sharing, Multi-scenario Comparison, and Reset */}
+      <div className="flex flex-wrap items-center justify-center gap-3 py-1">
         <button
           onClick={() => {
             if (typeof window !== 'undefined') {
@@ -359,17 +348,17 @@ export const SimulatorPage: React.FC = () => {
               setTimeout(() => setCopiedLink(false), 2000);
             }
           }}
-          className="flex items-center space-x-2 px-3.5 py-2 rounded-xl border border-indigo-200 bg-indigo-50/60 hover:bg-indigo-100/70 text-xs font-semibold text-indigo-800 shadow-xs hover:shadow transition-all cursor-pointer"
+          className="flex items-center space-x-2 px-4 py-2.5 rounded-xl border border-indigo-300 bg-gradient-to-b from-indigo-50 to-indigo-100/80 hover:from-indigo-100 hover:to-indigo-200/90 text-xs font-bold text-indigo-950 shadow-sm hover:shadow-md hover:-translate-y-0.5 active:translate-y-0.5 transition-all cursor-pointer"
           title="Copy permalink with active parameters to clipboard"
         >
           {copiedLink ? (
             <>
               <Check className="w-4 h-4 text-emerald-600 shrink-0" />
-              <span className="text-emerald-700 font-bold">Link Copied to Clipboard!</span>
+              <span className="text-emerald-800 font-extrabold">Link Copied to Clipboard!</span>
             </>
           ) : (
             <>
-              <Share2 className="w-4 h-4 text-indigo-600 shrink-0" />
+              <Share2 className="w-4 h-4 text-indigo-700 shrink-0" />
               <span>Share Scenario Link</span>
             </>
           )}
@@ -379,14 +368,14 @@ export const SimulatorPage: React.FC = () => {
             setBaselineAssumptions(assumptions);
             setIsCompareOpen(true);
           }}
-          className="flex items-center space-x-2 px-4 py-2 rounded-xl border border-slate-300 bg-white hover:bg-slate-50 text-xs font-semibold text-slate-700 shadow-xs hover:shadow transition-all cursor-pointer"
+          className="flex items-center space-x-2 px-4.5 py-2.5 rounded-xl border border-blue-200 bg-gradient-to-b from-white via-blue-50/40 to-blue-50/80 hover:from-blue-50 hover:to-blue-100 text-xs font-bold text-blue-950 shadow-sm hover:shadow-md hover:-translate-y-0.5 active:translate-y-0.5 transition-all cursor-pointer"
         >
           <GitCompare className="w-4 h-4 text-blue-600 shrink-0" />
           <span>Compare Scenarios (Baseline vs Modified)</span>
         </button>
         <button
           onClick={() => handleSelectPreset(PRESET_DROSOPHILA)}
-          className="flex items-center space-x-1.5 px-3.5 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-xs font-semibold text-slate-600 hover:text-slate-800 shadow-xs transition-colors cursor-pointer"
+          className="flex items-center space-x-1.5 px-3.5 py-2.5 rounded-xl border border-slate-300 bg-gradient-to-b from-white to-slate-100 hover:from-slate-50 hover:to-slate-200 text-xs font-bold text-slate-700 hover:text-slate-900 shadow-sm hover:shadow-md hover:-translate-y-0.5 active:translate-y-0.5 transition-all cursor-pointer"
           title="Reset to default preset"
         >
           <RotateCcw className="w-3.5 h-3.5 shrink-0" />

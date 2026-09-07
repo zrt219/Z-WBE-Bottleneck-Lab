@@ -98,7 +98,7 @@ export const ResultStrip: React.FC<ResultStripProps> = ({ metrics }) => {
           return (
             <div
               key={idx}
-              className={`p-3.5 rounded-xl bg-slate-50/70 border border-slate-200/80 border-t-2 ${card.accentBorder} hover:border-slate-300 hover:bg-white transition-all duration-150 shadow-xs hover:shadow-sm flex flex-col justify-between group ${
+              className={`p-3.5 rounded-xl bg-gradient-to-b from-white to-slate-50/90 border border-slate-200/90 border-t-2 ${card.accentBorder} hover:border-slate-300 hover:shadow-md hover:-translate-y-0.5 transition-all duration-150 shadow-sm flex flex-col justify-between group ${
                 idx === cards.length - 1 ? 'col-span-2 sm:col-span-3 md:col-span-2 xl:col-span-1' : ''
               }`}
             >

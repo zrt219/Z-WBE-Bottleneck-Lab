@@ -91,7 +91,7 @@ export const NemotronInterpretation: React.FC<NemotronInterpretationProps> = ({
               onClick={onExplainClick}
               disabled={isLoading}
               data-testid="idle-explain-scenario-button"
-              className="inline-flex items-center space-x-2 py-3 px-7 rounded-xl bg-slate-900 hover:bg-slate-800 active:bg-slate-950 text-white text-xs font-bold uppercase tracking-wider transition-all duration-150 shadow-sm hover:shadow-md hover:scale-[1.01] active:scale-[0.99] cursor-pointer"
+              className="inline-flex items-center space-x-2 py-3.5 px-8 rounded-xl bg-gradient-to-b from-slate-800 to-slate-950 hover:from-slate-700 hover:to-slate-900 border border-slate-700 text-white text-xs font-bold uppercase tracking-wider transition-all duration-150 shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0.5 cursor-pointer"
             >
               <Sparkles className="w-4 h-4 text-emerald-400 animate-pulse" />
               <span>EXPLAIN THIS SCENARIO</span>

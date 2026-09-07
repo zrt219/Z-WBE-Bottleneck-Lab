@@ -370,14 +370,14 @@ export const AccessibilityModal: React.FC = () => {
               resetSettings();
               announce('Accessibility settings reset to default');
             }}
-            className="flex items-center space-x-1.5 text-xs text-slate-500 hover:text-slate-800 font-semibold cursor-pointer px-2.5 py-1.5 rounded-lg hover:bg-slate-200/60 transition-colors"
+            className="flex items-center space-x-1.5 text-xs text-slate-700 hover:text-slate-900 font-bold cursor-pointer px-3 py-2 rounded-xl border border-slate-300 bg-gradient-to-b from-white to-slate-100 hover:from-slate-50 hover:to-slate-200 shadow-sm hover:shadow hover:-translate-y-0.5 active:translate-y-0.5 transition-all"
           >
             <RotateCcw className="w-3.5 h-3.5" />
             <span>Reset to Defaults</span>
           </button>
           <button
             onClick={closeModal}
-            className="px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold rounded-xl shadow-xs transition-colors cursor-pointer"
+            className="px-4.5 py-2.5 bg-gradient-to-b from-slate-800 to-slate-950 hover:from-slate-700 hover:to-slate-900 border border-slate-700 text-white text-xs font-bold rounded-xl shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0.5 transition-all cursor-pointer"
           >
             Save &amp; Close
           </button>
