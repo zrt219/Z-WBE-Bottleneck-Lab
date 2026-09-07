@@ -9,8 +9,11 @@ import {
   calculateAllMetrics,
   calculateBottlenecks,
   runSensitivityAnalysis,
+  sanitizeUserProse,
+  cleanScenarioProse,
   PRESET_DROSOPHILA,
   PRESET_SMALL_NEURAL_SYSTEM,
+  PRESET_MOUSE_CIRCUIT,
   PRESET_HUMAN_SCALE,
   BottleneckDimension
 } from '../src';
@@ -146,5 +149,45 @@ Imaging Rate Per Instrument
     }
     expect(getFriendlyBottleneck('ECONOMIC_COST').label).toBe('Financial Budget & Capital');
     expect(getFriendlyBottleneck('RECONSTRUCTION').label).toBe('Neuron Reconstruction & Proofreading');
+  });
+
+  it('generateGroundedFallback outputs clean scenario name without triplicate parentheses and without raw bracketed enums', () => {
+    const metrics = calculateAllMetrics(PRESET_MOUSE_CIRCUIT);
+    const bottleneck = calculateBottlenecks(PRESET_MOUSE_CIRCUIT, metrics);
+    const sensitivity = runSensitivityAnalysis(PRESET_MOUSE_CIRCUIT);
+    const request = buildNemotronInputSchema(PRESET_MOUSE_CIRCUIT, metrics, bottleneck, sensitivity);
+
+    const response = generateGroundedFallback(request);
+
+    // Verify summary has clean scenario name exactly once
+    const summary = response.structuredOutput?.summary || '';
+    expect(summary).toContain('In Mouse Circuit Scale (10 mm³ cortical column), the primary technical blocker is');
+    // Ensure no duplicate nested parentheses like "(mouse-circuit) (Mouse Circuit"
+    expect(summary).not.toContain('(mouse-circuit)');
+    expect(summary).not.toContain('(Mouse Circuit (10 mm³))');
+    // Ensure no raw bracketed enums like [ACQUISITION] or [MEMORY_BANDWIDTH]
+    expect(summary).not.toContain('[ACQUISITION]');
+    expect(summary).not.toContain('[MEMORY_BANDWIDTH]');
+    expect(summary).not.toContain('[STORAGE]');
+
+    // Human-friendly labels must be present
+    expect(summary).toContain('Microscope Scanning Time');
+  });
+
+  it('sanitizeUserProse and cleanScenarioProse strip bracketed enums and redundant nested parentheses', () => {
+    const dirtyProse =
+      'In Mouse Circuit Scale (10 mm³ cortical column) (mouse-circuit) (Mouse Circuit (10 mm³)), the primary technical blocker is Acquisition Throughput [ACQUISITION] (pressure: 184.2%), followed by Memory Bandwidth [MEMORY_BANDWIDTH] (95.0%). Addressing multi-beam throughput gives the greatest speedup.';
+
+    const cleaned = cleanScenarioProse(sanitizeUserProse(dirtyProse));
+
+    expect(cleaned).toBe(
+      'In Mouse Circuit Scale (10 mm³ cortical column), the primary technical blocker is Acquisition Throughput (pressure: 184.2%), followed by Memory Bandwidth (95.0%). Addressing multi-beam throughput gives the greatest speedup.'
+    );
+    expect(cleaned).not.toContain('[ACQUISITION]');
+    expect(cleaned).not.toContain('[MEMORY_BANDWIDTH]');
+    expect(cleaned).not.toContain('(mouse-circuit)');
+
+    // Standalone enum replacement
+    expect(sanitizeUserProse('Gated primarily by [STORAGE].')).toBe('Gated primarily by Data Storage & Disk Capacity.');
   });
 });

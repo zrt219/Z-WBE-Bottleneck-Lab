@@ -140,15 +140,17 @@ export function getFriendlyBottleneck(key: string): { label: string; analogy: st
 export function sanitizeUserProse(text: string): string {
   if (!text) return '';
   return text
-    // Replace bracketed enums preceded by human label (e.g. "Acquisition Throughput [ACQUISITION]") -> "Acquisition Throughput"
-    .replace(/([A-Za-z0-9\s&]+?)\s*\[([A-Z_]{3,30})\]/g, (_match, prefix, enumName) => {
-      const friendly = getFriendlyBottleneck(enumName);
-      if (friendly && prefix.trim().toLowerCase().includes(friendly.label.toLowerCase().slice(0, 5))) {
-        return prefix.trim();
+    // Strip bracketed enums that follow a label or word (e.g. "Acquisition Throughput [ACQUISITION]")
+    .replace(/(\b[A-Za-z0-9&/_-]+\b)\s*\[([A-Z_]{3,30})\]/g, (_match, prevWord, enumName) => {
+      const lowerPrev = prevWord.toLowerCase();
+      const prepositions = ['in', 'by', 'on', 'is', 'of', 'the', 'a', 'at', 'into', 'for', 'to'];
+      if (prepositions.includes(lowerPrev)) {
+        const friendly = getFriendlyBottleneck(enumName);
+        return `${prevWord} ${friendly ? friendly.label : enumName}`;
       }
-      return `${prefix.trim()} ${friendly ? friendly.label : enumName}`;
+      return prevWord;
     })
-    // Replace standalone bracketed enums like "[ACQUISITION]" -> "Acquisition Throughput"
+    // Replace any remaining standalone bracketed enums like "[ACQUISITION]"
     .replace(/\[([A-Z_]{3,30})\]/g, (_match, enumName) => {
       const friendly = getFriendlyBottleneck(enumName);
       return friendly ? friendly.label : enumName;
@@ -167,13 +169,10 @@ export function sanitizeUserProse(text: string): string {
  */
 export function cleanScenarioProse(text: string): string {
   if (!text) return '';
-  let cleaned = text;
-  // Match "In ScenarioTitle (...) (...)," and retain only the primary scenario title
-  cleaned = cleaned.replace(
-    /In\s+([^,\n]+?)(?:\s*\((?:[a-z0-9_-]+|[A-Za-z0-9\s()³µ².-]+)\)){2,}\s*,/i,
-    (_full, title) => `In ${title.trim()},`
-  );
-  return cleaned;
+  return text
+    .replace(/(In\s+[^,]+?)\s*\([a-z0-9_-]+\)\s*(?:\((?:[^()]|\([^()]*\))*\)\s*)?,/gi, '$1,')
+    .replace(/^([^(\n]+(?:\((?:[^()]|\([^()]*\))*\))?)\s*\([a-z0-9_-]+\)\s*(?:\((?:[^()]|\([^()]*\))*\)\s*)?$/gi, '$1')
+    .trim();
 }
 
 /**
