@@ -172,8 +172,11 @@ exports.apiRouter.get('/sweep-summary', (_req, res) => {
         const searchPaths = [
             path_1.default.resolve(__dirname, '../../public/data/gpu-sweep-summary.json'),
             path_1.default.resolve(__dirname, '../../../public/data/gpu-sweep-summary.json'),
+            path_1.default.resolve(__dirname, '../../frontend/dist/data/gpu-sweep-summary.json'),
+            path_1.default.resolve(__dirname, '../../../frontend/dist/data/gpu-sweep-summary.json'),
             path_1.default.resolve(__dirname, '../../frontend/public/data/gpu-sweep-summary.json'),
-            path_1.default.resolve(__dirname, '../../../frontend/public/data/gpu-sweep-summary.json')
+            path_1.default.resolve(__dirname, '../../../frontend/public/data/gpu-sweep-summary.json'),
+            path_1.default.resolve(__dirname, '../../dist/data/gpu-sweep-summary.json')
         ];
         for (const filePath of searchPaths) {
             if (fs_1.default.existsSync(filePath)) {

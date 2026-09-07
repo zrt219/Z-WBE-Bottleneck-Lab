@@ -208,8 +208,11 @@ apiRouter.get('/sweep-summary', (_req: Request, res: Response) => {
     const searchPaths = [
       path.resolve(__dirname, '../../public/data/gpu-sweep-summary.json'),
       path.resolve(__dirname, '../../../public/data/gpu-sweep-summary.json'),
+      path.resolve(__dirname, '../../frontend/dist/data/gpu-sweep-summary.json'),
+      path.resolve(__dirname, '../../../frontend/dist/data/gpu-sweep-summary.json'),
       path.resolve(__dirname, '../../frontend/public/data/gpu-sweep-summary.json'),
-      path.resolve(__dirname, '../../../frontend/public/data/gpu-sweep-summary.json')
+      path.resolve(__dirname, '../../../frontend/public/data/gpu-sweep-summary.json'),
+      path.resolve(__dirname, '../../dist/data/gpu-sweep-summary.json')
     ];
 
     for (const filePath of searchPaths) {

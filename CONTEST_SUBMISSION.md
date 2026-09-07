@@ -179,7 +179,7 @@ Unlike typical AI applications that prompt models to estimate or compute enginee
 
 ## 15. LinkedIn Launch Post
 
-I am thrilled to present **Z-WBE Bottleneck Lab**, developed for the **Google Cloud × NVIDIA GTC Berlin 2026 Golden Ticket Build**.
+I am thrilled to present **Z-WBE Bottleneck Lab**, developed for the **Google Cloud × NVIDIA GTC Berlin 2026 Golden Ticket Build**!
 
 The debate surrounding Whole Brain Emulation (WBE) is often divided into isolated silos: microscopists assume compute is trivial, while computer architects assume connectome imaging is solved. 
 
@@ -196,10 +196,12 @@ The debate surrounding Whole Brain Emulation (WBE) is often divided into isolate
 * **GPU Exploration Map**: 100,000-scenario Monte Carlo parameter sweep accelerated via NVIDIA RAPIDS `cudf.pandas` in Google Cloud Colab Enterprise.
 * **Cloud Native**: Scalable, zero-secret-leak backend hosted on **Google Cloud Run**.
 
-Explore the technical methodology, architecture diagrams, and open-source implementation here:
-[GitHub Repository Link]
+Explore the live demonstrator, technical methodology, and open-source code:
+🌐 Live Lab: https://z-wbe-bottleneck-lab.vercel.app
+💻 GitHub Repository: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
-#CloudComputing #GoogleCloud #NVIDIA #GTC26 #Nemotron #OpenRouter #ArtificialIntelligence #ComputationalNeuroscience #RAPIDS #OpenSource
+Mentions & Judges: Google for Developers | NVIDIA AI | Jen Harvey | Ray Harvey
+#NVIDIAGTC #GoogleCloud #NVIDIA #GTC26 #GTC2026 #Nemotron #OpenRouter #ArtificialIntelligence #ComputationalNeuroscience #RAPIDS #cuDF #CloudRun #OpenSource
 
 ---
 
@@ -217,16 +219,17 @@ Key highlights:
 📊 100,000 synthetic parameter sweep powered by NVIDIA RAPIDS cuDF & Google Cloud Colab.
 ☁️ Deployed seamlessly on Google Cloud Run with zero client API key exposure.
 
-Experience the live lab: [Demo Link]
-Code & Methodology: [GitHub Link]
+🌐 Experience the live lab: https://z-wbe-bottleneck-lab.vercel.app
+💻 Code & Methodology: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
-#GoogleCloud #NVIDIA #GTC2026 #Nemotron #OpenRouter #RAPIDS #BioEngineering #MachineLearning
+cc @googledevs @NVIDIAAI
+#NVIDIAGTC #GoogleCloud #NVIDIA #GTC2026 #Nemotron #OpenRouter #RAPIDS #cuDF #CloudRun #BioEngineering #MachineLearning
 
 ---
 
 ## 17. Required Contest Tags
 
-`#GoogleCloud` `#NVIDIA` `#GTC2026` `#GTC26` `#Nemotron` `#OpenRouter` `#RAPIDS` `#cuDF` `#CloudRun` `#WholeBrainEmulation`
+`#NVIDIAGTC` `#GoogleCloud` `#NVIDIA` `#GTC2026` `#GTC26` `#Nemotron` `#OpenRouter` `#RAPIDS` `#cuDF` `#CloudRun` `#WholeBrainEmulation`
 
 ---
 
@@ -234,7 +237,7 @@ Code & Methodology: [GitHub Link]
 
 - [x] **Typecheck passes**: `npm run typecheck` passes across `shared`, `backend`, and `frontend` with 0 errors.
 - [x] **Lint passes**: `npm run lint` passes cleanly.
-- [x] **Unit tests pass**: 57 tests passing across `equations`, `bottlenecks`, `sensitivity`, `security`, and `api`.
+- [x] **Unit tests pass**: 71 tests passing across `equations`, `bottlenecks`, `sensitivity`, `security`, `urlParams`, `heroDemo`, `accessibility`, and `api`.
 - [x] **Production build passes**: `npm run build` bundles `shared`, `backend`, and `frontend` into production assets cleanly.
 - [x] **OpenRouter key is server-side**: Key is never exposed to client bundles, never prefixed with `VITE_`, never sent to the browser.
 - [x] **No Gemma references remain**: Legacy Gemma files purged, zero active dependencies.
@@ -253,7 +256,8 @@ Code & Methodology: [GitHub Link]
 - [x] **Methodology page exists**: `/methodology` documents equations, assumptions, and scientific responsibility boundary.
 - [x] **Architecture page exists**: `/architecture` provides complete diagrams of Cloud Run, Deterministic Engine, OpenRouter, Nemotron 3 Super, and RAPIDS experiment.
 - [x] **About page exists**: `/about` explains research motivation, contest background, and limitations.
-- [x] **README is complete**: Covers all required sections and four learning pathways.
+- [x] **README is complete**: Covers all required sections, Google Cloud Run deployment, and four learning pathways.
 - [x] **.env.example exists**: Verbatim match with required format.
 - [x] **Demo script exists**: Complete step-by-step walkthrough documented.
+
 
