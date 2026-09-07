@@ -14,7 +14,12 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": ".",
+    "paths": {
+      "@z-wbe/shared": ["../shared/src/index.ts"]
+    }
   },
-  "include": ["src"]
+  "include": ["src", "../shared/src"],
+  "exclude": ["src/**/*.test.ts", "src/**/*.spec.ts"]
 }

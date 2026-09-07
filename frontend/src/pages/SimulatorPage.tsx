@@ -22,8 +22,9 @@ import { NemotronInterpretation } from '../components/NemotronInterpretation';
 import { CompareScenariosModal } from '../components/CompareScenariosModal';
 import { GpuExplorationMap } from '../components/GpuExplorationMap';
 import { InteractiveTour } from '../components/InteractiveTour';
+import { MobileStickyActionBar } from '../components/MobileStickyActionBar';
 import { useAccessibility } from '../context/AccessibilityContext';
-import { GitCompare, RotateCcw, Share2, Check, Compass, ArrowRight, Zap } from 'lucide-react';
+import { GitCompare, RotateCcw, Share2, Check, Compass, ArrowRight, Zap, ChevronDown, ChevronUp, Sliders, Layers } from 'lucide-react';
 
 export const SimulatorPage: React.FC = () => {
   const { announce } = useAccessibility();
@@ -48,6 +49,10 @@ export const SimulatorPage: React.FC = () => {
   const [isCompareOpen, setIsCompareOpen] = useState(false);
   const [bottleneckMovedBanner, setBottleneckMovedBanner] = useState(false);
   const [copiedLink, setCopiedLink] = useState(false);
+
+  // Mobile Collapsible Accordion States (collapsed by default on mobile)
+  const [isAssumptionsExpanded, setIsAssumptionsExpanded] = useState(false);
+  const [isPipelineExpanded, setIsPipelineExpanded] = useState(false);
 
   // Tutorial / Tour State
   const [isTourOpen, setIsTourOpen] = useState(false);
@@ -285,7 +290,7 @@ export const SimulatorPage: React.FC = () => {
   };
 
   return (
-    <div className="space-y-8 pb-20">
+    <div className="space-y-8 pb-32 lg:pb-20">
       {/* Optional Welcome & Tutorial Prompt Banner */}
       {showWelcomeBanner && (
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-4 rounded-2xl bg-gradient-to-r from-blue-500/10 via-indigo-500/10 to-purple-500/10 border border-blue-200/80 shadow-xs">
@@ -389,20 +394,10 @@ export const SimulatorPage: React.FC = () => {
         </button>
       </div>
 
-      {/* Main 3-Column Layout: Equal-width 1:1:1 Grid, Full-height stretched */}
+      {/* Main 3-Column Layout: Equal-width 1:1:1 Grid on desktop; Collapsible accordions with top bottleneck on mobile */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
-        {/* Left: Assumptions Controls (1/3 width) */}
-        <div id="tour-assumption-controls" className="w-full flex flex-col">
-          <AssumptionControls assumptions={assumptions} onChange={setAssumptions} />
-        </div>
-
-        {/* Center: WBE Pipeline Stages (1/3 width) */}
-        <div id="tour-pipeline-map" className="w-full flex flex-col">
-          <WbePipelineMap bottleneck={bottleneck} metrics={metrics} />
-        </div>
-
-        {/* Right: Dominant Bottleneck & Trigger (1/3 width) */}
-        <div id="tour-explain-button" className="w-full flex flex-col">
+        {/* Dominant Bottleneck & Trigger: Shown first on mobile (<lg) so users immediately see key insights and action buttons */}
+        <div id="tour-explain-button" className="w-full flex flex-col order-first lg:order-last">
           <DominantBottleneckCard
             bottleneck={bottleneck}
             onExplainClick={() => handleExplainScenario(assumptions)}
@@ -414,6 +409,82 @@ export const SimulatorPage: React.FC = () => {
             }}
             onOneClickDemo={handleOneClickDemo}
           />
+        </div>
+
+        {/* Assumptions Controls: Collapsible accordion on mobile, always visible on desktop */}
+        <div id="tour-assumption-controls" className="w-full flex flex-col">
+          {/* Mobile Accordion Toggle Header (<lg) */}
+          <button
+            onClick={() => setIsAssumptionsExpanded(!isAssumptionsExpanded)}
+            className="lg:hidden w-full mb-2 p-3.5 rounded-2xl bg-white border border-slate-200/90 shadow-card flex items-center justify-between transition-colors cursor-pointer text-left min-h-[44px]"
+            aria-expanded={isAssumptionsExpanded}
+          >
+            <div className="flex items-center space-x-2.5">
+              <div className="w-8 h-8 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
+                <Sliders className="w-4 h-4" />
+              </div>
+              <div>
+                <div className="text-xs font-bold text-slate-900 uppercase tracking-wide">
+                  Scenario Assumptions
+                </div>
+                <div className="text-[10px] text-slate-500 font-mono">
+                  {assumptions.name}
+                </div>
+              </div>
+            </div>
+            <div className="flex items-center space-x-2">
+              <span className="text-[10px] font-mono font-semibold px-2 py-0.5 rounded bg-slate-100 text-slate-600 border border-slate-200">
+                {isAssumptionsExpanded ? 'Tap to Collapse' : 'Tap to Customize'}
+              </span>
+              {isAssumptionsExpanded ? (
+                <ChevronUp className="w-4 h-4 text-slate-500" />
+              ) : (
+                <ChevronDown className="w-4 h-4 text-slate-500" />
+              )}
+            </div>
+          </button>
+
+          <div className={`${isAssumptionsExpanded ? 'block' : 'hidden'} lg:block h-full`}>
+            <AssumptionControls assumptions={assumptions} onChange={setAssumptions} />
+          </div>
+        </div>
+
+        {/* Center: WBE Pipeline Stages: Collapsible accordion on mobile, always visible on desktop */}
+        <div id="tour-pipeline-map" className="w-full flex flex-col">
+          {/* Mobile Accordion Toggle Header (<lg) */}
+          <button
+            onClick={() => setIsPipelineExpanded(!isPipelineExpanded)}
+            className="lg:hidden w-full mb-2 p-3.5 rounded-2xl bg-white border border-slate-200/90 shadow-card flex items-center justify-between transition-colors cursor-pointer text-left min-h-[44px]"
+            aria-expanded={isPipelineExpanded}
+          >
+            <div className="flex items-center space-x-2.5">
+              <div className="w-8 h-8 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center shrink-0">
+                <Layers className="w-4 h-4" />
+              </div>
+              <div>
+                <div className="text-xs font-bold text-slate-900 uppercase tracking-wide">
+                  WBE Pipeline (6 Stages)
+                </div>
+                <div className="text-[10px] text-slate-500 font-mono">
+                  Stage {bottleneck.dominantBottleneck}: {bottleneck.pressures[bottleneck.dominantBottleneck].score.toFixed(0)}%
+                </div>
+              </div>
+            </div>
+            <div className="flex items-center space-x-2">
+              <span className="text-[10px] font-mono font-semibold px-2 py-0.5 rounded bg-slate-100 text-slate-600 border border-slate-200">
+                {isPipelineExpanded ? 'Tap to Collapse' : 'Tap to View Stages'}
+              </span>
+              {isPipelineExpanded ? (
+                <ChevronUp className="w-4 h-4 text-slate-500" />
+              ) : (
+                <ChevronDown className="w-4 h-4 text-slate-500" />
+              )}
+            </div>
+          </button>
+
+          <div className={`${isPipelineExpanded ? 'block' : 'hidden'} lg:block h-full`}>
+            <WbePipelineMap bottleneck={bottleneck} metrics={metrics} />
+          </div>
         </div>
       </div>
 
@@ -457,6 +528,24 @@ export const SimulatorPage: React.FC = () => {
         isApiLoading={isLoadingExplanation}
         hasInterpretation={Boolean(interpretation)}
         apiTelemetry={apiTelemetry}
+      />
+
+      {/* Persistent Mobile Bottom Action Bar (<lg) */}
+      <MobileStickyActionBar
+        dominantBottleneck={bottleneck.dominantBottleneck}
+        dominantScore={bottleneck.dominantScore}
+        isLoadingExplanation={isLoadingExplanation}
+        hasInterpretation={Boolean(interpretation)}
+        onOneClickDemo={handleOneClickDemo}
+        onExplainClick={() => handleExplainScenario(assumptions)}
+        onScrollToBottleneck={() => {
+          const el = document.getElementById('tour-explain-button');
+          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }}
+        onScrollToInterpretation={() => {
+          const el = document.getElementById('interpretation-layer');
+          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }}
       />
     </div>
   );

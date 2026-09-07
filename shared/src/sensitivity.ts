@@ -1,7 +1,6 @@
 import { calculateAllMetrics } from './equations';
 import { calculateBottlenecks } from './bottlenecks';
 import {
-  BottleneckDimension,
   ScenarioAssumptions,
   SensitivityAnalysisResult,
   SensitivityPerturbation,

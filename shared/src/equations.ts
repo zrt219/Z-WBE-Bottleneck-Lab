@@ -160,7 +160,7 @@ export function calculateInterconnectTrafficBytesSec(
  * Calculate all deterministic metrics for a scenario.
  */
 export function calculateAllMetrics(assumptions: ScenarioAssumptions): CalculatedMetrics {
-  const { acquisition, reconstruction, neuralModel, hardware, economics } = assumptions;
+  const { acquisition, reconstruction, neuralModel, economics } = assumptions;
 
   // 1. Acquisition
   const voxelCount = calculateVoxelCount(

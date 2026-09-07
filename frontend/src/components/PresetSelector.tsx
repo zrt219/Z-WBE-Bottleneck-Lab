@@ -169,18 +169,18 @@ export const PresetSelector: React.FC<PresetSelectorProps> = ({
             Active: <span className="font-bold text-slate-800">{currentAssumptions.name}</span>
           </span>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-5 gap-3">
+        <div className="flex sm:grid sm:grid-cols-5 gap-2.5 sm:gap-3 overflow-x-auto pb-1.5 sm:pb-0 snap-x snap-mandatory scrollbar-none">
           {scalePresets.map((scale) => {
             const active = isCurrentPreset(scale.preset);
             return (
               <button
                 key={scale.id}
                 onClick={() => onSelectPreset(scale.preset)}
-                className={`text-left p-3.5 sm:p-4 rounded-xl border transition-all duration-150 relative cursor-pointer ${
+                className={`min-w-[160px] sm:min-w-0 snap-start flex-1 text-left p-3 sm:p-4 rounded-xl border transition-all duration-150 relative cursor-pointer min-h-[44px] ${
                   active
                     ? 'border-blue-600 bg-blue-50/60 text-blue-950 shadow-xs ring-2 ring-blue-600/30'
                     : 'border-slate-200 bg-white hover:border-slate-300 hover:bg-slate-50/70 text-slate-700 shadow-xs'
-                } ${scale.id === 'custom' ? 'col-span-2 sm:col-span-1' : ''}`}
+                }`}
               >
                 <div className="flex items-start justify-between">
                   <span className={`text-xs font-bold leading-snug ${active ? 'text-blue-950' : 'text-slate-800'}`}>
@@ -217,14 +217,14 @@ export const PresetSelector: React.FC<PresetSelectorProps> = ({
           </span>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+        <div className="flex sm:grid sm:grid-cols-3 gap-2.5 sm:gap-3 overflow-x-auto pb-1.5 sm:pb-0 snap-x snap-mandatory scrollbar-none">
           {demoPresets.map((demo) => {
             const active = isCurrentPreset(demo.preset);
             return (
               <button
                 key={demo.id}
                 onClick={() => onSelectPreset(demo.preset)}
-                className={`p-3.5 sm:p-4 rounded-xl border text-left transition-all duration-150 cursor-pointer border-l-4 ${demo.accentColor} ${
+                className={`min-w-[240px] sm:min-w-0 snap-start flex-1 p-3.5 sm:p-4 rounded-xl border text-left transition-all duration-150 cursor-pointer border-l-4 min-h-[44px] ${demo.accentColor} ${
                   active
                     ? 'border-indigo-600 bg-indigo-50/70 text-indigo-950 ring-2 ring-indigo-600/30 shadow-xs'
                     : 'border-slate-200 bg-white hover:border-slate-300 hover:bg-slate-50/70 text-slate-700 shadow-xs'
