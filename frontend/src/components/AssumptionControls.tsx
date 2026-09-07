@@ -35,37 +35,37 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
     onChange(updated);
   };
 
-  const tabs: Array<{ id: TabKey; label: string; shortLabel: string; icon: React.FC<{ className?: string }> }> = [
-    { id: 'acquisition', label: 'Acquisition', shortLabel: 'Acquis.', icon: Camera },
-    { id: 'reconstruction', label: 'Reconstruction', shortLabel: 'Recon.', icon: Database },
-    { id: 'neuralModel', label: 'Neural Model', shortLabel: 'Neural', icon: Activity },
-    { id: 'hardware', label: 'Hardware', shortLabel: 'Hardw.', icon: Cpu },
-    { id: 'economics', label: 'Economics', shortLabel: 'Econ.', icon: DollarSign }
+  const tabs: Array<{ id: TabKey; label: string; colSpan: string; icon: React.FC<{ className?: string }> }> = [
+    { id: 'acquisition', label: 'Acquisition', colSpan: 'col-span-2', icon: Camera },
+    { id: 'reconstruction', label: 'Reconstruction', colSpan: 'col-span-2', icon: Database },
+    { id: 'neuralModel', label: 'Neural Model', colSpan: 'col-span-2', icon: Activity },
+    { id: 'hardware', label: 'Hardware', colSpan: 'col-span-3', icon: Cpu },
+    { id: 'economics', label: 'Economics', colSpan: 'col-span-3', icon: DollarSign }
   ];
 
   return (
     <div id="tour-assumption-controls" className="h-full bg-white border border-slate-200/90 rounded-2xl p-5 sm:p-6 shadow-card flex flex-col justify-between space-y-4 sm:space-y-5">
       <div className="space-y-3 sm:space-y-3.5 flex-1 flex flex-col">
         <div className="flex items-center justify-between border-b border-slate-100 pb-3.5 min-h-[52px]">
-          <div className="flex items-center space-x-2.5">
+          <div className="flex items-center space-x-2.5 min-w-0">
             <div className="w-8 h-8 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 shadow-xs">
               <Sliders className="w-4 h-4" />
             </div>
-            <div>
-              <h2 className="text-xs font-bold uppercase tracking-wider text-slate-900">
+            <div className="min-w-0">
+              <h2 className="text-xs font-bold uppercase tracking-wider text-slate-900 whitespace-nowrap">
                 Scenario Assumptions
               </h2>
-              <p className="text-[10px] text-slate-500 font-mono">Independent Variable Controls</p>
+              <p className="text-[10px] text-slate-500 font-mono whitespace-nowrap">Independent Variable Controls</p>
             </div>
           </div>
-          <span className="text-[10px] font-mono text-emerald-700 font-semibold bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200 flex items-center space-x-1.5 shadow-xs shrink-0">
+          <span className="text-[10px] font-mono text-emerald-700 font-semibold bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200 flex items-center space-x-1.5 shadow-xs shrink-0 ml-2">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
             <span>Live Deterministic</span>
           </span>
         </div>
 
-      {/* Category Tabs: Responsive 5-column grid with zero cut-off buttons and Framer Motion sliding pill */}
-      <div className="grid grid-cols-5 gap-1 p-1 bg-slate-100/90 rounded-xl border border-slate-200/80 shadow-inner">
+      {/* Category Tabs: Balanced 6-column grid (3 top, 2 bottom) ensuring titles can NEVER be cut off */}
+      <div className="grid grid-cols-6 gap-1.5 p-1.5 bg-slate-100/90 rounded-xl border border-slate-200/80 shadow-inner">
         {tabs.map((t) => {
           const Icon = t.icon;
           const isActive = activeTab === t.id;
@@ -74,7 +74,7 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
               key={t.id}
               onClick={() => setActiveTab(t.id)}
               title={t.label}
-              className={`relative flex items-center justify-center py-2 px-1 rounded-lg text-[11px] font-semibold transition-colors duration-150 cursor-pointer w-full text-center ${
+              className={`relative ${t.colSpan} flex items-center justify-center space-x-1 sm:space-x-1.5 py-2 px-1.5 sm:px-2 rounded-lg text-[11px] sm:text-xs font-semibold whitespace-nowrap transition-colors duration-150 cursor-pointer text-center ${
                 isActive ? 'text-blue-950 font-bold' : 'text-slate-600 hover:text-slate-900'
               }`}
             >
@@ -85,12 +85,9 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
                   transition={{ type: 'spring', bounce: 0.2, duration: 0.35 }}
                 />
               )}
-              <span className="relative z-10 flex flex-col 2xl:flex-row items-center justify-center gap-0.5 2xl:gap-1.5 w-full min-w-0">
+              <span className="relative z-10 flex items-center justify-center space-x-1 sm:space-x-1.5 min-w-0">
                 <Icon className={`w-3.5 h-3.5 shrink-0 ${isActive ? 'text-blue-600' : 'text-slate-400'}`} />
-                <span className="truncate text-center">
-                  <span className="hidden 2xl:inline">{t.label}</span>
-                  <span className="2xl:hidden">{t.shortLabel}</span>
-                </span>
+                <span className="whitespace-nowrap font-medium">{t.label}</span>
               </span>
             </button>
           );
