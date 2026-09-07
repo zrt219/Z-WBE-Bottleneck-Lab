@@ -44,24 +44,25 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
   ];
 
   return (
-    <div id="tour-assumption-controls" className="h-full bg-white border border-slate-200/90 rounded-2xl p-5 shadow-card space-y-4 flex flex-col">
-      <div className="flex items-center justify-between border-b border-slate-100 pb-3">
-        <div className="flex items-center space-x-2">
-          <div className="w-7 h-7 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center">
-            <Sliders className="w-4 h-4" />
+    <div id="tour-assumption-controls" className="h-full bg-white border border-slate-200/90 rounded-2xl p-5 sm:p-6 shadow-card flex flex-col justify-between space-y-4 sm:space-y-5">
+      <div className="space-y-3 sm:space-y-3.5 flex-1 flex flex-col">
+        <div className="flex items-center justify-between border-b border-slate-100 pb-3.5 min-h-[52px]">
+          <div className="flex items-center space-x-2.5">
+            <div className="w-8 h-8 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 shadow-xs">
+              <Sliders className="w-4 h-4" />
+            </div>
+            <div>
+              <h2 className="text-xs font-bold uppercase tracking-wider text-slate-900">
+                Scenario Assumptions
+              </h2>
+              <p className="text-[10px] text-slate-500 font-mono">Independent Variable Controls</p>
+            </div>
           </div>
-          <div>
-            <h2 className="text-xs font-bold uppercase tracking-wider text-slate-900">
-              Scenario Assumptions
-            </h2>
-            <p className="text-[10px] text-slate-500 font-mono">Independent Variable Controls</p>
-          </div>
+          <span className="text-[10px] font-mono text-emerald-700 font-semibold bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200 flex items-center space-x-1.5 shadow-xs shrink-0">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span>Live Deterministic</span>
+          </span>
         </div>
-        <span className="text-[10px] font-mono text-emerald-700 font-semibold bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200 flex items-center space-x-1 shadow-xs">
-          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-          <span>Live Deterministic</span>
-        </span>
-      </div>
 
       {/* Category Tabs: Smooth horizontal scrollable pill bar with zero visible scrollbar and Framer Motion sliding pill */}
       <div className="flex items-center gap-1 overflow-x-auto p-1.5 bg-slate-100/90 rounded-xl border border-slate-200/80 shadow-inner no-scrollbar scrollbar-none">
@@ -93,7 +94,7 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
       </div>
 
       {/* Tab Panels (Solid and instant without see-through fade) */}
-      <div className="space-y-3 text-xs pt-1">
+      <div className="space-y-2.5 text-xs pt-1 flex-1 overflow-y-auto pr-1 max-h-[580px] lg:max-h-[640px] scrollbar-thin">
         {activeTab === 'acquisition' && (
           <>
             <ControlField
@@ -495,7 +496,17 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
         )}
       </div>
     </div>
-  );
+
+    {/* Footer Strip */}
+    <div className="pt-3.5 border-t border-slate-100 flex items-center justify-between text-[11px] font-mono">
+      <div className="flex items-center space-x-2 text-slate-600 min-w-0">
+        <span className="w-2 h-2 rounded-full bg-blue-500 shrink-0"></span>
+        <span className="truncate">Active: <strong className="text-slate-800">{assumptions.scaleLabel}</strong></span>
+      </div>
+      <span className="text-[10px] text-slate-400 font-medium shrink-0">Real-time sync</span>
+    </div>
+  </div>
+);
 };
 
 interface ControlFieldProps {
@@ -544,8 +555,8 @@ const ControlField: React.FC<ControlFieldProps> = ({
   };
 
   return (
-    <div className="p-3 sm:p-3.5 rounded-xl bg-slate-50/70 border border-slate-200/80 hover:border-slate-300/90 transition-all duration-150 space-y-2.5 shadow-xs hover:bg-slate-50/90">
-      <div className="flex items-center justify-between gap-2">
+    <div className="h-full min-h-[96px] p-3 sm:p-3.5 rounded-xl bg-slate-50/70 border border-slate-200/80 hover:border-slate-300/90 transition-all duration-150 space-y-2.5 shadow-xs hover:bg-slate-50/90 flex flex-col justify-between">
+      <div className="flex items-center justify-between gap-2 min-h-[30px]">
         <div className="flex items-center space-x-1.5 min-w-0">
           <Tooltip
             info={tooltipInfo}
@@ -572,8 +583,8 @@ const ControlField: React.FC<ControlFieldProps> = ({
           >
             <Minus className="w-3.5 h-3.5 sm:w-3 sm:h-3" />
           </button>
-          <div className="flex items-center space-x-1 font-mono text-xs sm:text-[11px] font-bold text-slate-900 bg-white px-2.5 py-1.5 sm:py-1 rounded-lg border border-slate-200 shadow-xs min-w-[76px] justify-center shrink-0">
-            <span>{formatDisplay(value)}</span>
+          <div className="flex items-center space-x-1 font-mono text-xs sm:text-[11px] font-bold text-slate-900 bg-white px-2 py-1.5 sm:py-1 rounded-lg border border-slate-200 shadow-xs w-22 min-w-[84px] justify-center shrink-0">
+            <span className="truncate">{formatDisplay(value)}</span>
             <span className="text-[10px] sm:text-[9px] font-semibold text-slate-400 shrink-0">{unit}</span>
           </div>
           <button
@@ -587,35 +598,37 @@ const ControlField: React.FC<ControlFieldProps> = ({
         </div>
       </div>
 
-      {settings.simplifiedInputs ? (
-        <div className="flex items-center space-x-2 pt-0.5">
+      <div className="w-full pt-0.5">
+        {settings.simplifiedInputs ? (
+          <div className="flex items-center space-x-2">
+            <input
+              type="number"
+              min={min}
+              max={max}
+              step={step}
+              value={value}
+              onChange={(e) => {
+                const val = parseFloat(e.target.value);
+                if (!isNaN(val)) onChange(val);
+              }}
+              className="w-full px-2.5 py-1.5 rounded-lg border border-slate-300 font-mono text-base sm:text-xs font-bold text-slate-900 bg-white focus:border-blue-600 focus:ring-2 focus:ring-blue-100 focus:outline-hidden"
+              aria-label={`${label} direct input (${unit})`}
+            />
+            <span className="text-xs sm:text-[10px] font-bold font-mono text-slate-400 shrink-0">{unit}</span>
+          </div>
+        ) : (
           <input
-            type="number"
+            type="range"
             min={min}
             max={max}
             step={step}
             value={value}
-            onChange={(e) => {
-              const val = parseFloat(e.target.value);
-              if (!isNaN(val)) onChange(val);
-            }}
-            className="w-full px-2.5 py-1.5 rounded-lg border border-slate-300 font-mono text-base sm:text-xs font-bold text-slate-900 bg-white focus:border-blue-600 focus:ring-2 focus:ring-blue-100 focus:outline-hidden"
-            aria-label={`${label} direct input (${unit})`}
+            onChange={(e) => onChange(parseFloat(e.target.value))}
+            className="w-full h-2 cursor-pointer mt-1 accent-blue-600 rounded-lg touch-manipulation block"
+            aria-label={label}
           />
-          <span className="text-xs sm:text-[10px] font-bold font-mono text-slate-400 shrink-0">{unit}</span>
-        </div>
-      ) : (
-        <input
-          type="range"
-          min={min}
-          max={max}
-          step={step}
-          value={value}
-          onChange={(e) => onChange(parseFloat(e.target.value))}
-          className="w-full h-3 sm:h-2 cursor-pointer mt-1 accent-blue-600 rounded-lg touch-manipulation"
-          aria-label={label}
-        />
-      )}
+        )}
+      </div>
     </div>
   );
 };
