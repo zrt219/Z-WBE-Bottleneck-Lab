@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { Zap, Sparkles, Loader2, ArrowUp, AlertTriangle } from 'lucide-react';
 
 interface MobileStickyActionBarProps {
@@ -51,30 +52,39 @@ export const MobileStickyActionBar: React.FC<MobileStickyActionBarProps> = ({
         {/* Action Buttons Group */}
         <div className="flex items-center gap-1.5 flex-1 justify-end">
           {/* 1-Click Demo Button */}
-          <button
+          <motion.button
             onClick={onOneClickDemo}
             disabled={isLoadingExplanation}
-            className="flex-1 max-w-[130px] sm:max-w-[150px] min-h-[44px] flex items-center justify-center space-x-1.5 px-2.5 py-2 rounded-xl bg-gradient-to-r from-emerald-600 via-teal-600 to-blue-600 active:from-emerald-700 active:to-blue-700 text-white font-extrabold text-[11px] uppercase tracking-tight shadow-sm hover:shadow-md active:translate-y-0.5 transition-all disabled:opacity-50 cursor-pointer"
+            whileHover={{ scale: isLoadingExplanation ? 1 : 1.02 }}
+            whileTap={{ scale: isLoadingExplanation ? 1 : 0.96 }}
+            transition={{ type: 'spring', stiffness: 400, damping: 20 }}
+            className="flex-1 max-w-[140px] sm:max-w-[160px] h-11 min-h-[44px] flex items-center justify-center space-x-1.5 px-3 py-2 rounded-xl bg-gradient-to-r from-emerald-600 via-teal-600 to-blue-600 active:from-emerald-700 active:to-blue-700 text-white font-extrabold text-[11px] uppercase tracking-wide shadow-sm hover:shadow-md transition-colors disabled:opacity-50 cursor-pointer select-none"
             title="1-Click Hero Demo: Accelerate imaging 100x & explain"
           >
             <Zap className="w-3.5 h-3.5 text-amber-300 fill-amber-300 shrink-0" />
             <span className="truncate">⚡ Demo</span>
-          </button>
+          </motion.button>
 
           {/* Explain Scenario or View Analysis Button */}
           {hasInterpretation ? (
-            <button
+            <motion.button
               onClick={onScrollToInterpretation}
-              className="flex-1 max-w-[130px] sm:max-w-[150px] min-h-[44px] flex items-center justify-center space-x-1.5 px-2.5 py-2 rounded-xl bg-gradient-to-b from-blue-50 to-blue-100/90 active:from-blue-100 active:to-blue-200 border border-blue-300 text-blue-900 font-bold text-[11px] uppercase tracking-tight shadow-sm active:translate-y-0.5 transition-all cursor-pointer"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.96 }}
+              transition={{ type: 'spring', stiffness: 400, damping: 20 }}
+              className="flex-1 max-w-[140px] sm:max-w-[160px] h-11 min-h-[44px] flex items-center justify-center space-x-1.5 px-3 py-2 rounded-xl bg-gradient-to-b from-blue-50 to-blue-100/90 border border-blue-300 text-blue-900 font-extrabold text-[11px] uppercase tracking-wide shadow-sm transition-colors cursor-pointer select-none"
             >
               <ArrowUp className="w-3.5 h-3.5 text-blue-600 shrink-0" />
               <span className="truncate">View Analysis</span>
-            </button>
+            </motion.button>
           ) : (
-            <button
+            <motion.button
               onClick={onExplainClick}
               disabled={isLoadingExplanation}
-              className="flex-1 max-w-[130px] sm:max-w-[150px] min-h-[44px] flex items-center justify-center space-x-1.5 px-2.5 py-2 rounded-xl bg-gradient-to-b from-slate-800 to-slate-950 active:from-slate-900 active:to-black border border-slate-700 text-white font-extrabold text-[11px] uppercase tracking-tight shadow-sm active:translate-y-0.5 transition-all disabled:opacity-50 cursor-pointer"
+              whileHover={{ scale: isLoadingExplanation ? 1 : 1.02 }}
+              whileTap={{ scale: isLoadingExplanation ? 1 : 0.96 }}
+              transition={{ type: 'spring', stiffness: 400, damping: 20 }}
+              className="flex-1 max-w-[140px] sm:max-w-[160px] h-11 min-h-[44px] flex items-center justify-center space-x-1.5 px-3 py-2 rounded-xl bg-gradient-to-b from-slate-800 to-slate-950 border border-slate-700 text-white font-extrabold text-[11px] uppercase tracking-wide shadow-sm transition-colors disabled:opacity-50 cursor-pointer select-none"
             >
               {isLoadingExplanation ? (
                 <>
@@ -87,7 +97,7 @@ export const MobileStickyActionBar: React.FC<MobileStickyActionBarProps> = ({
                   <span className="truncate">Explain</span>
                 </>
               )}
-            </button>
+            </motion.button>
           )}
         </div>
       </div>

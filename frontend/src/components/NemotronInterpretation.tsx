@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { GroundingContractResponse, NemotronInputSchema, getFriendlyBottleneck } from '@z-wbe/shared';
 import {
   Sparkles,
@@ -81,21 +82,24 @@ export const NemotronInterpretation: React.FC<NemotronInterpretationProps> = ({
             AI Plain-English Interpretation Ready
           </div>
           <p className="text-xs text-slate-500 max-w-lg mx-auto leading-relaxed">
-            Click <strong className="text-slate-800 font-bold">[ EXPLAIN THIS SCENARIO ]</strong> to get a crystal-clear, plain-English explanation of why this scenario is limited, which breakthroughs matter most, and where bottlenecks shift.
+            Click <strong className="text-slate-800 font-bold">[ EXPLAIN WITH NEMOTRON ]</strong> to get a crystal-clear, plain-English explanation of why this scenario is limited, which breakthroughs matter most, and where bottlenecks shift.
           </p>
         </div>
 
         {onExplainClick && (
           <div className="pt-2">
-            <button
+            <motion.button
               onClick={onExplainClick}
               disabled={isLoading}
               data-testid="idle-explain-scenario-button"
-              className="inline-flex items-center space-x-2 py-3.5 px-8 rounded-xl bg-gradient-to-b from-slate-800 to-slate-950 hover:from-slate-700 hover:to-slate-900 border border-slate-700 text-white text-xs font-bold uppercase tracking-wider transition-all duration-150 shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0.5 cursor-pointer"
+              whileHover={{ scale: isLoading ? 1 : 1.02 }}
+              whileTap={{ scale: isLoading ? 1 : 0.96 }}
+              transition={{ type: 'spring', stiffness: 400, damping: 20 }}
+              className="inline-flex items-center justify-center space-x-2 h-12 px-8 rounded-xl bg-gradient-to-b from-slate-800 to-slate-950 hover:from-slate-700 hover:to-slate-900 border border-slate-700 text-white text-xs font-extrabold uppercase tracking-wider shadow-md hover:shadow-lg disabled:opacity-50 cursor-pointer select-none whitespace-nowrap"
             >
-              <Sparkles className="w-4 h-4 text-emerald-400 animate-pulse" />
-              <span>EXPLAIN THIS SCENARIO</span>
-            </button>
+              <Sparkles className="w-4 h-4 text-emerald-400 animate-pulse shrink-0" />
+              <span>EXPLAIN WITH NEMOTRON</span>
+            </motion.button>
           </div>
         )}
 
@@ -399,139 +403,153 @@ ${s.whatNeedsRealExperimentalEvidence}
       {/* Human-Friendly Grounded Interpretation Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 text-xs">
         {/* Section 1: MAIN BLOCKER */}
-        <div className="p-5 rounded-2xl bg-slate-50/80 border border-slate-200/90 border-t-4 border-t-rose-500 space-y-3 shadow-xs hover:bg-slate-50 transition-colors">
-          <div className="flex items-center justify-between">
-            <h3 className="font-bold text-slate-900 text-sm flex items-center space-x-2">
-              <span className="w-2.5 h-2.5 rounded-full bg-rose-600 shrink-0"></span>
-              <span>1. Main Blocker</span>
-            </h3>
-            <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-rose-100 text-rose-800 border border-rose-200">
-              Active Ceiling
-            </span>
+        <div className="h-full p-5 sm:p-6 rounded-2xl bg-slate-50/80 border border-slate-200/90 border-t-4 border-t-rose-500 flex flex-col justify-between space-y-3 shadow-xs hover:bg-slate-50 transition-colors">
+          <div>
+            <div className="flex items-center justify-between min-h-[28px]">
+              <h3 className="font-bold text-slate-900 text-sm flex items-center space-x-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-rose-600 shrink-0"></span>
+                <span>1. Main Blocker</span>
+              </h3>
+              <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-rose-100 text-rose-800 border border-rose-200">
+                Active Ceiling
+              </span>
+            </div>
+            <div className="text-[11px] text-slate-500 font-medium min-h-[34px] flex items-center mt-1">
+              What is currently slowing this scenario down the most?
+            </div>
           </div>
-          <div className="text-[11px] text-slate-500 font-medium">
-            What is currently slowing this scenario down the most?
-          </div>
-          <div className="text-slate-700 whitespace-pre-line leading-relaxed font-sans text-xs sm:text-[13px] pt-1">
+          <div className="text-slate-700 whitespace-pre-line leading-relaxed font-sans text-xs sm:text-[13px] pt-1 flex-1">
             {s.whatLimitsThisScenario}
           </div>
         </div>
 
         {/* Section 2: THE ROOT CAUSE */}
-        <div className="p-5 rounded-2xl bg-slate-50/80 border border-slate-200/90 border-t-4 border-t-blue-500 space-y-3 shadow-xs hover:bg-slate-50 transition-colors">
-          <div className="flex items-center justify-between">
-            <h3 className="font-bold text-slate-900 text-sm flex items-center space-x-2">
-              <span className="w-2.5 h-2.5 rounded-full bg-blue-600 shrink-0"></span>
-              <span>2. The Root Cause</span>
-            </h3>
-            <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-blue-100 text-blue-800 border border-blue-200">
-              Metric Breakdown
-            </span>
+        <div className="h-full p-5 sm:p-6 rounded-2xl bg-slate-50/80 border border-slate-200/90 border-t-4 border-t-blue-500 flex flex-col justify-between space-y-3 shadow-xs hover:bg-slate-50 transition-colors">
+          <div>
+            <div className="flex items-center justify-between min-h-[28px]">
+              <h3 className="font-bold text-slate-900 text-sm flex items-center space-x-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-blue-600 shrink-0"></span>
+                <span>2. The Root Cause</span>
+              </h3>
+              <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-blue-100 text-blue-800 border border-blue-200">
+                Metric Breakdown
+              </span>
+            </div>
+            <div className="text-[11px] text-slate-500 font-medium min-h-[34px] flex items-center mt-1">
+              Why is this happening in plain terms?
+            </div>
           </div>
-          <div className="text-[11px] text-slate-500 font-medium">
-            Why is this happening in plain terms?
-          </div>
-          <div className="text-slate-700 whitespace-pre-line leading-relaxed font-sans text-xs sm:text-[13px] pt-1">
+          <div className="text-slate-700 whitespace-pre-line leading-relaxed font-sans text-xs sm:text-[13px] pt-1 flex-1">
             {s.why}
           </div>
         </div>
 
         {/* Section 3: BIGGEST BREAKTHROUGH */}
-        <div className="p-5 rounded-2xl bg-slate-50/80 border border-slate-200/90 border-t-4 border-t-emerald-500 space-y-3 shadow-xs hover:bg-slate-50 transition-colors">
-          <div className="flex items-center justify-between">
-            <h3 className="font-bold text-slate-900 text-sm flex items-center space-x-2">
-              <span className="w-2.5 h-2.5 rounded-full bg-emerald-600 shrink-0"></span>
-              <span>3. Biggest Breakthrough</span>
-            </h3>
-            <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-emerald-100 text-emerald-800 border border-emerald-200 flex items-center space-x-1">
-              <TrendingUp className="w-3 h-3" />
-              <span>Highest Leverage</span>
-            </span>
+        <div className="h-full p-5 sm:p-6 rounded-2xl bg-slate-50/80 border border-slate-200/90 border-t-4 border-t-emerald-500 flex flex-col justify-between space-y-3 shadow-xs hover:bg-slate-50 transition-colors">
+          <div>
+            <div className="flex items-center justify-between min-h-[28px]">
+              <h3 className="font-bold text-slate-900 text-sm flex items-center space-x-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-emerald-600 shrink-0"></span>
+                <span>3. Biggest Breakthrough</span>
+              </h3>
+              <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-emerald-100 text-emerald-800 border border-emerald-200 flex items-center space-x-1">
+                <TrendingUp className="w-3 h-3" />
+                <span>Highest Leverage</span>
+              </span>
+            </div>
+            <div className="text-[11px] text-slate-500 font-medium min-h-[34px] flex items-center mt-1">
+              What single upgrade provides the steepest performance gain?
+            </div>
           </div>
-          <div className="text-[11px] text-slate-500 font-medium">
-            What single upgrade provides the steepest performance gain?
-          </div>
-          <div className="text-slate-700 whitespace-pre-line leading-relaxed font-sans text-xs sm:text-[13px] pt-1">
+          <div className="text-slate-700 whitespace-pre-line leading-relaxed font-sans text-xs sm:text-[13px] pt-1 flex-1">
             {s.whatImprovementMattersMost}
           </div>
         </div>
 
         {/* Section 4: LOW-IMPACT UPGRADES */}
-        <div className="p-5 rounded-2xl bg-slate-50/80 border border-slate-200/90 border-t-4 border-t-amber-500 space-y-3 shadow-xs hover:bg-slate-50 transition-colors">
-          <div className="flex items-center justify-between">
-            <h3 className="font-bold text-slate-900 text-sm flex items-center space-x-2">
-              <span className="w-2.5 h-2.5 rounded-full bg-amber-500 shrink-0"></span>
-              <span>4. Low-Impact Upgrades</span>
-            </h3>
-            <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-amber-100 text-amber-900 border border-amber-200 flex items-center space-x-1">
-              <AlertTriangle className="w-3 h-3 text-amber-700" />
-              <span>Diminishing Returns</span>
-            </span>
+        <div className="h-full p-5 sm:p-6 rounded-2xl bg-slate-50/80 border border-slate-200/90 border-t-4 border-t-amber-500 flex flex-col justify-between space-y-3 shadow-xs hover:bg-slate-50 transition-colors">
+          <div>
+            <div className="flex items-center justify-between min-h-[28px]">
+              <h3 className="font-bold text-slate-900 text-sm flex items-center space-x-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-amber-500 shrink-0"></span>
+                <span>4. Low-Impact Upgrades</span>
+              </h3>
+              <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-amber-100 text-amber-900 border border-amber-200 flex items-center space-x-1">
+                <AlertTriangle className="w-3 h-3 text-amber-700" />
+                <span>Diminishing Returns</span>
+              </span>
+            </div>
+            <div className="text-[11px] text-slate-500 font-medium min-h-[34px] flex items-center mt-1">
+              What upgrades will NOT help much until the primary blocker is fixed?
+            </div>
           </div>
-          <div className="text-[11px] text-slate-500 font-medium">
-            What upgrades will NOT help much until the primary blocker is fixed?
-          </div>
-          <div className="text-slate-700 whitespace-pre-line leading-relaxed font-sans text-xs sm:text-[13px] pt-1">
+          <div className="text-slate-700 whitespace-pre-line leading-relaxed font-sans text-xs sm:text-[13px] pt-1 flex-1">
             {s.whatDoesNotHelpMuch || 'Upgrading secondary parameters provides negligible acceleration while the primary bottleneck remains saturated.'}
           </div>
         </div>
 
         {/* Section 5: WHERE THE BLOCKER MOVES */}
-        <div className="p-5 rounded-2xl bg-slate-50/80 border border-slate-200/90 border-t-4 border-t-indigo-500 space-y-3 shadow-xs hover:bg-slate-50 transition-colors">
-          <div className="flex items-center justify-between">
-            <h3 className="font-bold text-slate-900 text-sm flex items-center space-x-2">
-              <span className="w-2.5 h-2.5 rounded-full bg-indigo-600 shrink-0"></span>
-              <span>5. Where the Blocker Moves</span>
-            </h3>
-            <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-indigo-100 text-indigo-800 border border-indigo-200 flex items-center space-x-1">
-              <ArrowRight className="w-3 h-3" />
-              <span>Next Frontier</span>
-            </span>
+        <div className="h-full p-5 sm:p-6 rounded-2xl bg-slate-50/80 border border-slate-200/90 border-t-4 border-t-indigo-500 flex flex-col justify-between space-y-3 shadow-xs hover:bg-slate-50 transition-colors">
+          <div>
+            <div className="flex items-center justify-between min-h-[28px]">
+              <h3 className="font-bold text-slate-900 text-sm flex items-center space-x-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-indigo-600 shrink-0"></span>
+                <span>5. Where the Blocker Moves</span>
+              </h3>
+              <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-indigo-100 text-indigo-800 border border-indigo-200 flex items-center space-x-1">
+                <ArrowRight className="w-3 h-3" />
+                <span>Next Frontier</span>
+              </span>
+            </div>
+            <div className="text-[11px] text-slate-500 font-medium min-h-[34px] flex items-center mt-1">
+              What becomes the next bottleneck once you solve the current blocker?
+            </div>
           </div>
-          <div className="text-[11px] text-slate-500 font-medium">
-            What becomes the next bottleneck once you solve the current blocker?
-          </div>
-          <div className="text-slate-700 whitespace-pre-line leading-relaxed font-sans text-xs sm:text-[13px] pt-1">
+          <div className="text-slate-700 whitespace-pre-line leading-relaxed font-sans text-xs sm:text-[13px] pt-1 flex-1">
             {s.whereDidTheBottleneckMove}
           </div>
         </div>
 
         {/* Section 6: KEY UNKNOWNS & ASSUMPTIONS */}
-        <div className="p-5 rounded-2xl bg-amber-50/50 border border-amber-200/90 border-t-4 border-t-amber-500 space-y-3 shadow-xs hover:bg-amber-50/70 transition-colors">
-          <div className="flex items-center justify-between">
-            <h3 className="font-bold text-amber-950 text-sm flex items-center space-x-2">
-              <span className="w-2.5 h-2.5 rounded-full bg-amber-600 shrink-0"></span>
-              <span>6. Key Unknowns & Assumptions</span>
-            </h3>
-            <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-amber-200/70 text-amber-950 border border-amber-300 flex items-center space-x-1">
-              <HelpCircle className="w-3 h-3 text-amber-800" />
-              <span>Uncertainties</span>
-            </span>
+        <div className="h-full p-5 sm:p-6 rounded-2xl bg-amber-50/50 border border-amber-200/90 border-t-4 border-t-amber-500 flex flex-col justify-between space-y-3 shadow-xs hover:bg-amber-50/70 transition-colors">
+          <div>
+            <div className="flex items-center justify-between min-h-[28px]">
+              <h3 className="font-bold text-amber-950 text-sm flex items-center space-x-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-amber-600 shrink-0"></span>
+                <span>6. Key Unknowns & Assumptions</span>
+              </h3>
+              <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-amber-200/70 text-amber-950 border border-amber-300 flex items-center space-x-1">
+                <HelpCircle className="w-3 h-3 text-amber-800" />
+                <span>Uncertainties</span>
+              </span>
+            </div>
+            <div className="text-[11px] text-amber-800/80 font-medium min-h-[34px] flex items-center mt-1">
+              What biological, algorithmic, and hardware uncertainties remain?
+            </div>
           </div>
-          <div className="text-[11px] text-amber-800/80 font-medium">
-            What biological, algorithmic, and hardware uncertainties remain?
-          </div>
-          <div className="text-amber-950 whitespace-pre-line leading-relaxed font-sans text-xs sm:text-[13px] pt-1">
+          <div className="text-amber-950 whitespace-pre-line leading-relaxed font-sans text-xs sm:text-[13px] pt-1 flex-1">
             {s.whatRemainsUncertain}
           </div>
         </div>
 
         {/* Section 7: REAL-WORLD EXPERIMENTS NEEDED */}
-        <div className="md:col-span-2 p-5 sm:p-6 rounded-2xl bg-slate-50/80 border border-slate-200/90 border-t-4 border-t-purple-500 space-y-3 shadow-xs hover:bg-slate-50 transition-colors">
-          <div className="flex items-center justify-between">
-            <h3 className="font-bold text-slate-900 text-sm flex items-center space-x-2">
-              <span className="w-2.5 h-2.5 rounded-full bg-purple-600 shrink-0"></span>
-              <span>7. Real-World Experiments Needed</span>
-            </h3>
-            <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-purple-100 text-purple-800 border border-purple-200 flex items-center space-x-1">
-              <FlaskConical className="w-3 h-3 text-purple-700" />
-              <span>Empirical Validation</span>
-            </span>
+        <div className="md:col-span-2 p-5 sm:p-6 rounded-2xl bg-slate-50/80 border border-slate-200/90 border-t-4 border-t-purple-500 flex flex-col justify-between space-y-3 shadow-xs hover:bg-slate-50 transition-colors">
+          <div>
+            <div className="flex items-center justify-between min-h-[28px]">
+              <h3 className="font-bold text-slate-900 text-sm flex items-center space-x-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-purple-600 shrink-0"></span>
+                <span>7. Real-World Experiments Needed</span>
+              </h3>
+              <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-purple-100 text-purple-800 border border-purple-200 flex items-center space-x-1">
+                <FlaskConical className="w-3 h-3 text-purple-700" />
+                <span>Empirical Validation</span>
+              </span>
+            </div>
+            <div className="text-[11px] text-slate-500 font-medium min-h-[28px] flex items-center mt-1">
+              What physical laboratory experiments and hardware benchmarks are required to prove this in reality?
+            </div>
           </div>
-          <div className="text-[11px] text-slate-500 font-medium">
-            What physical laboratory experiments and hardware benchmarks are required to prove this in reality?
-          </div>
-          <div className="text-slate-700 whitespace-pre-line leading-relaxed font-sans text-xs sm:text-[13px] pt-1">
+          <div className="text-slate-700 whitespace-pre-line leading-relaxed font-sans text-xs sm:text-[13px] pt-1 flex-1">
             {s.whatNeedsRealExperimentalEvidence}
           </div>
         </div>

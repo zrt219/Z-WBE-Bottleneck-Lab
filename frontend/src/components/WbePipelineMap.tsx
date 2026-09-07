@@ -8,7 +8,7 @@ import {
   formatBandwidth,
   formatPowerDemand
 } from '@z-wbe/shared';
-import { ShieldCheck, Camera, Database, Cpu, Play, CheckCircle, AlertOctagon, ArrowDown, Info } from 'lucide-react';
+import { ShieldCheck, Camera, Database, Cpu, Play, CheckCircle, AlertOctagon, ArrowDown, Info, Layers } from 'lucide-react';
 import { Tooltip } from './Tooltip';
 import { PIPELINE_STAGE_TOOLTIPS } from '../data/tooltipData';
 
@@ -161,41 +161,47 @@ export const WbePipelineMap: React.FC<WbePipelineMapProps> = ({ bottleneck, metr
   };
 
   return (
-    <div id="tour-pipeline-map" className="h-full bg-white border border-slate-200/90 rounded-2xl p-5 sm:p-6 shadow-card space-y-5 flex flex-col">
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 border-b border-slate-100 pb-3.5">
-        <div>
-          <h2 className="text-xs font-bold uppercase tracking-wider text-slate-900 flex items-center space-x-1.5">
-            <span>WBE End-to-End Pipeline</span>
-          </h2>
-          <p className="text-[11px] text-slate-500">
-            6 canonical technical stages. Stage with active constraint ceiling is highlighted.
-          </p>
+    <div id="tour-pipeline-map" className="h-full bg-white border border-slate-200/90 rounded-2xl p-5 sm:p-6 shadow-card space-y-4 sm:space-y-5 flex flex-col justify-between">
+      <div className="flex items-center justify-between border-b border-slate-100 pb-3.5 min-h-[52px]">
+        <div className="flex items-center space-x-2.5">
+          <div className="w-8 h-8 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center shrink-0 shadow-xs">
+            <Layers className="w-4 h-4" />
+          </div>
+          <div>
+            <h2 className="text-xs font-bold uppercase tracking-wider text-slate-900">
+              WBE Pipeline Map
+            </h2>
+            <p className="text-[10px] text-slate-500 font-mono">6 Canonical Technical Stages</p>
+          </div>
         </div>
-        <div className="flex flex-wrap items-center gap-2 text-[10px] font-mono">
-          <span className="flex items-center space-x-1.5 text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-lg border border-emerald-200 shadow-xs font-semibold">
+        <div className="flex items-center space-x-1 sm:space-x-1.5 text-[9px] font-mono font-semibold shrink-0">
+          <span className="flex items-center space-x-1 text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200 shadow-xs">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-            <span>&lt;40% Feasible</span>
+            <span className="hidden sm:inline">&lt;40% Feasible</span>
+            <span className="sm:hidden">&lt;40%</span>
           </span>
-          <span className="flex items-center space-x-1.5 text-amber-700 bg-amber-50 px-2.5 py-1 rounded-lg border border-amber-200 shadow-xs font-semibold">
+          <span className="flex items-center space-x-1 text-amber-700 bg-amber-50 px-2 py-0.5 rounded-full border border-amber-200 shadow-xs">
             <span className="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
-            <span>40-70% Load</span>
+            <span className="hidden sm:inline">40-70% Load</span>
+            <span className="sm:hidden">40-70%</span>
           </span>
-          <span className="flex items-center space-x-1.5 text-rose-700 bg-rose-50 px-2.5 py-1 rounded-lg border border-rose-200 shadow-xs font-semibold">
+          <span className="flex items-center space-x-1 text-rose-700 bg-rose-50 px-2 py-0.5 rounded-full border border-rose-200 shadow-xs">
             <span className="w-1.5 h-1.5 rounded-full bg-rose-600"></span>
-            <span>&gt;70% Ceiling</span>
+            <span className="hidden sm:inline">&gt;70% Ceiling</span>
+            <span className="sm:hidden">&gt;70%</span>
           </span>
         </div>
       </div>
 
       {/* Pipeline Stages Vertical Flow */}
-      <div className="space-y-3.5">
+      <div className="space-y-3 flex-1 flex flex-col justify-between">
         {stages.map((stage, idx) => {
           const sev = getSeverity(stage.pressureScore);
           const stageTooltip = PIPELINE_STAGE_TOOLTIPS[stage.id.toLowerCase()];
           return (
             <div key={stage.id} className="relative">
               <div
-                className={`p-4 sm:p-4.5 rounded-xl transition-all duration-200 relative ${
+                className={`p-3.5 sm:p-4 rounded-xl transition-all duration-200 relative ${
                   stage.isDominant
                     ? 'border-2 border-rose-500 bg-gradient-to-b from-rose-50/80 to-rose-50/30 ring-2 ring-rose-500/30 shadow-md -translate-y-0.5'
                     : stage.isSecond
@@ -213,9 +219,9 @@ export const WbePipelineMap: React.FC<WbePipelineMapProps> = ({ bottleneck, metr
                 )}
 
                 <div className="flex items-center justify-between">
-                  <div className="flex items-center space-x-3.5">
+                  <div className="flex items-center space-x-3">
                     <div
-                      className={`w-9 h-9 rounded-xl flex items-center justify-center font-mono font-bold text-xs shrink-0 shadow-xs ${
+                      className={`w-8 h-8 rounded-xl flex items-center justify-center font-mono font-bold text-xs shrink-0 shadow-xs ${
                         stage.isDominant
                           ? 'bg-rose-600 text-white shadow-sm'
                           : 'bg-slate-100 text-slate-700 border border-slate-200/80'
@@ -250,7 +256,7 @@ export const WbePipelineMap: React.FC<WbePipelineMapProps> = ({ bottleneck, metr
                 </div>
 
                 {/* Pressure progress bar with Framer Motion spring */}
-                <div className="mt-3.5 w-full bg-slate-100 rounded-full h-2 overflow-hidden border border-slate-200/50">
+                <div className="mt-3 w-full bg-slate-100 rounded-full h-2 overflow-hidden border border-slate-200/50">
                   <motion.div
                     className={`h-full rounded-full ${sev.bar}`}
                     initial={false}
@@ -260,7 +266,7 @@ export const WbePipelineMap: React.FC<WbePipelineMapProps> = ({ bottleneck, metr
                 </div>
 
                 {/* Demand vs Capacity context chips */}
-                <div className="mt-3 grid grid-cols-1 xl:grid-cols-2 gap-2 text-[10px] text-slate-500 font-mono">
+                <div className="mt-2.5 grid grid-cols-1 xl:grid-cols-2 gap-2 text-[10px] text-slate-500 font-mono">
                   <div className="bg-slate-50/90 px-3 py-1.5 rounded-lg border border-slate-200/90 shadow-xs flex items-center justify-between xl:justify-start gap-1">
                     <span className="shrink-0">Demand:</span>
                     <strong className="text-slate-800 font-semibold truncate" title={stage.demandFormatted}>{stage.demandFormatted}</strong>
@@ -274,15 +280,30 @@ export const WbePipelineMap: React.FC<WbePipelineMapProps> = ({ bottleneck, metr
 
               {/* Connecting Flow Arrow */}
               {idx < stages.length - 1 && (
-                <div className="flex justify-center -my-1.5 relative z-10 pointer-events-none">
-                  <div className="w-5 h-5 rounded-full bg-white border border-slate-200 text-slate-400 flex items-center justify-center text-[10px] shadow-xs">
-                    <ArrowDown className="w-3 h-3 text-slate-500" />
+                <div className="flex justify-center -my-1 relative z-10 pointer-events-none">
+                  <div className={`w-5 h-5 rounded-full bg-white border flex items-center justify-center shadow-xs transition-colors ${
+                    stage.isDominant
+                      ? 'border-rose-300 text-rose-600 bg-rose-50/80 ring-2 ring-rose-200'
+                      : stage.isSecond
+                      ? 'border-amber-300 text-amber-600 bg-amber-50/80'
+                      : 'border-slate-200 text-slate-400'
+                  }`}>
+                    <ArrowDown className="w-2.5 h-2.5" />
                   </div>
                 </div>
               )}
             </div>
           );
         })}
+      </div>
+
+      {/* Footer Strip */}
+      <div className="pt-3.5 border-t border-slate-100 flex items-center justify-between text-[11px] font-mono">
+        <div className="flex items-center space-x-2 text-slate-600">
+          <span className="w-2 h-2 rounded-full bg-indigo-500 shrink-0"></span>
+          <span>Pipeline: <strong className="text-slate-800">6 Stages Evaluated</strong></span>
+        </div>
+        <span className="text-[10px] text-slate-400 font-medium shrink-0">Amdahl's Law verified</span>
       </div>
     </div>
   );

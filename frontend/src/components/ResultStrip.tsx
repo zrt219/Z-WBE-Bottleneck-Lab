@@ -7,7 +7,7 @@ import {
   formatBandwidth,
   formatCurrency
 } from '@z-wbe/shared';
-import { HardDrive, Clock, Database, Cpu, Activity, Zap, DollarSign } from 'lucide-react';
+import { HardDrive, Clock, Database, Cpu, Activity, Zap, DollarSign, BarChart3 } from 'lucide-react';
 
 interface ResultStripProps {
   metrics: CalculatedMetrics;
@@ -81,28 +81,34 @@ export const ResultStrip: React.FC<ResultStripProps> = ({ metrics }) => {
 
   return (
     <div className="bg-white border border-slate-200/90 rounded-2xl p-5 sm:p-6 shadow-card space-y-4">
-      <div className="flex items-center justify-between border-b border-slate-100 pb-3">
-        <div className="flex items-center space-x-2">
-          <span className="text-xs font-bold uppercase tracking-wider text-slate-900">
-            Calculated Output Metrics
-          </span>
+      <div className="flex items-center justify-between border-b border-slate-100 pb-3.5 min-h-[52px]">
+        <div className="flex items-center space-x-2.5">
+          <div className="w-8 h-8 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 shadow-xs">
+            <BarChart3 className="w-4 h-4" />
+          </div>
+          <div>
+            <h2 className="text-xs font-bold uppercase tracking-wider text-slate-900">
+              Calculated Output Metrics
+            </h2>
+            <p className="text-[10px] text-slate-500 font-mono">Real-Time Biophysical & Engineering Demands</p>
+          </div>
         </div>
-        <span className="text-[9px] font-mono font-bold text-slate-500 uppercase tracking-wide bg-slate-100 px-2.5 py-0.5 rounded-full border border-slate-200 shadow-xs">
+        <span className="text-[9px] font-mono font-bold text-slate-700 uppercase tracking-wider bg-slate-100 px-2.5 py-1 rounded-full border border-slate-200 shadow-xs shrink-0 whitespace-nowrap">
           CALCULATED FROM SCENARIO ASSUMPTIONS
         </span>
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-7 gap-3 sm:gap-3.5">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-7 gap-3 sm:gap-3.5 items-stretch">
         {cards.map((card, idx) => {
           const Icon = card.icon;
           return (
             <div
               key={idx}
-              className={`p-3.5 rounded-xl bg-gradient-to-b from-white to-slate-50/90 border border-slate-200/90 border-t-2 ${card.accentBorder} hover:border-slate-300 hover:shadow-md hover:-translate-y-0.5 transition-all duration-150 shadow-sm flex flex-col justify-between group ${
+              className={`h-full min-h-[118px] p-3.5 sm:p-4 rounded-xl bg-gradient-to-b from-white to-slate-50/90 border border-slate-200/90 border-t-2 ${card.accentBorder} hover:border-slate-300 hover:shadow-md hover:-translate-y-0.5 transition-all duration-150 shadow-sm flex flex-col justify-between group ${
                 idx === cards.length - 1 ? 'col-span-2 sm:col-span-3 md:col-span-2 xl:col-span-1' : ''
               }`}
             >
-              <div className="flex items-start justify-between gap-1.5 mb-2">
+              <div className="flex items-start justify-between gap-1.5 min-h-[32px]">
                 <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-tight text-slate-700 leading-snug">
                   {card.label}
                 </span>
@@ -110,19 +116,19 @@ export const ResultStrip: React.FC<ResultStripProps> = ({ metrics }) => {
                   <Icon className="w-3.5 h-3.5" />
                 </div>
               </div>
-              <div className="mt-1">
+              <div className="my-1">
                 <div
-                  className="text-sm sm:text-base font-black font-mono text-slate-900 tracking-tight group-hover:text-blue-600 transition-colors break-words"
+                  className="text-sm sm:text-base font-black font-mono text-slate-900 tracking-tight group-hover:text-blue-600 transition-colors break-words truncate"
                   title={card.value}
                 >
                   {card.value}
                 </div>
-                <div
-                  className="text-[10px] text-slate-500 font-mono leading-tight mt-0.5 break-words"
-                  title={card.subtext}
-                >
-                  {card.subtext}
-                </div>
+              </div>
+              <div
+                className="pt-1.5 border-t border-slate-100 text-[10px] text-slate-500 font-mono leading-tight truncate"
+                title={card.subtext}
+              >
+                {card.subtext}
               </div>
             </div>
           );

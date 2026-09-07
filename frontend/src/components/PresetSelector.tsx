@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import {
   ScaleId,
   ScenarioAssumptions,
@@ -34,38 +35,44 @@ export const PresetSelector: React.FC<PresetSelectorProps> = ({
     label: string;
     description: string;
     preset: ScenarioAssumptions;
+    tag: string;
     warning?: string;
   }> = [
     {
       id: 'small-neural-system',
       label: 'Small Neural System',
       description: '302 neurons / 7.5k synapses',
-      preset: PRESET_SMALL_NEURAL_SYSTEM
+      preset: PRESET_SMALL_NEURAL_SYSTEM,
+      tag: 'C. ELEGANS'
     },
     {
       id: 'drosophila',
       label: 'Drosophila-Scale',
       description: '140k neurons / 50M synapses',
-      preset: PRESET_DROSOPHILA
+      preset: PRESET_DROSOPHILA,
+      tag: 'BENCHMARK'
     },
     {
       id: 'mouse-circuit',
       label: 'Mouse-Circuit Scale',
       description: '10M neurons / 10B synapses',
-      preset: PRESET_MOUSE_CIRCUIT
+      preset: PRESET_MOUSE_CIRCUIT,
+      tag: 'CIRCUIT LEVEL'
     },
     {
       id: 'human-scale',
       label: 'Human-Scale Estimate',
       description: '86B neurons / 150T synapses',
       preset: PRESET_HUMAN_SCALE,
+      tag: 'HYPOTHETICAL',
       warning: 'ESTIMATE / HYPOTHETICAL SCALE'
     },
     {
       id: 'custom',
       label: 'Custom Scenario',
       description: 'User-specified parameters',
-      preset: PRESET_CUSTOM
+      preset: PRESET_CUSTOM,
+      tag: 'USER DEFINED'
     }
   ];
 
@@ -173,34 +180,47 @@ export const PresetSelector: React.FC<PresetSelectorProps> = ({
           {scalePresets.map((scale) => {
             const active = isCurrentPreset(scale.preset);
             return (
-              <button
+              <motion.button
                 key={scale.id}
                 onClick={() => onSelectPreset(scale.preset)}
-                className={`min-w-[170px] sm:min-w-0 snap-start flex-1 text-left p-3.5 sm:p-4 rounded-xl transition-all duration-200 relative cursor-pointer min-h-[48px] ${
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                transition={{ type: 'spring', stiffness: 400, damping: 20 }}
+                className={`min-w-[170px] sm:min-w-0 snap-start flex-1 h-full min-h-[116px] text-left p-3.5 sm:p-4 rounded-xl flex flex-col justify-between cursor-pointer select-none transition-colors duration-150 ${
                   active
-                    ? 'border-2 border-blue-600 bg-gradient-to-b from-blue-50/90 via-blue-50/40 to-indigo-50/50 text-blue-950 shadow-md shadow-blue-500/10 ring-2 ring-blue-500/20 -translate-y-0.5'
-                    : 'border border-slate-200/90 bg-gradient-to-b from-white to-slate-50/80 hover:border-blue-300 hover:bg-white text-slate-800 shadow-sm hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 active:shadow-xs'
+                    ? 'border-2 border-blue-600 bg-gradient-to-b from-blue-50/90 via-blue-50/40 to-indigo-50/50 text-blue-950 shadow-md shadow-blue-500/10 ring-2 ring-blue-500/20'
+                    : 'border border-slate-200/90 bg-gradient-to-b from-white to-slate-50/80 hover:border-blue-300 hover:bg-white text-slate-800 shadow-sm hover:shadow-md'
                 }`}
               >
-                <div className="flex items-start justify-between">
-                  <span className={`text-xs font-bold leading-snug ${active ? 'text-blue-950' : 'text-slate-800'}`}>
-                    {scale.label}
-                  </span>
-                  {active && (
-                    <span className="w-4 h-4 rounded-full bg-blue-600 text-white flex items-center justify-center shrink-0 ml-1 shadow-xs">
-                      <Check className="w-2.5 h-2.5" />
+                <div>
+                  <div className="flex items-start justify-between gap-1">
+                    <span className={`text-xs font-bold leading-snug ${active ? 'text-blue-950' : 'text-slate-800'}`}>
+                      {scale.label}
                     </span>
-                  )}
+                    {active && (
+                      <span className="w-4 h-4 rounded-full bg-blue-600 text-white flex items-center justify-center shrink-0 ml-1 shadow-xs">
+                        <Check className="w-2.5 h-2.5" />
+                      </span>
+                    )}
+                  </div>
+                  <div className="text-[10px] text-slate-500 mt-1 font-mono leading-tight">
+                    {scale.description}
+                  </div>
                 </div>
-                <div className="text-[10px] text-slate-500 mt-1 font-mono leading-tight">
-                  {scale.description}
-                </div>
-                {scale.warning && (
-                  <span className="inline-block mt-1.5 text-[9px] font-mono font-bold text-amber-800 bg-amber-100/90 px-1.5 py-0.5 rounded border border-amber-200 shadow-2xs">
-                    {scale.warning}
+                <div className="mt-2 pt-0.5">
+                  <span
+                    className={`inline-block text-[9px] font-mono font-bold px-2 py-0.5 rounded border shadow-2xs max-w-full truncate ${
+                      scale.warning
+                        ? 'text-amber-800 bg-amber-100/90 border-amber-200'
+                        : active
+                        ? 'text-blue-800 bg-blue-100/80 border-blue-200'
+                        : 'text-slate-600 bg-slate-100/90 border-slate-200'
+                    }`}
+                  >
+                    {scale.warning ? scale.warning : scale.tag}
                   </span>
-                )}
-              </button>
+                </div>
+              </motion.button>
             );
           })}
         </div>
@@ -221,25 +241,28 @@ export const PresetSelector: React.FC<PresetSelectorProps> = ({
           {demoPresets.map((demo) => {
             const active = isCurrentPreset(demo.preset);
             return (
-              <button
+              <motion.button
                 key={demo.id}
                 onClick={() => onSelectPreset(demo.preset)}
-                className={`min-w-[240px] sm:min-w-0 snap-start flex-1 p-4 rounded-xl text-left transition-all duration-200 cursor-pointer border-l-4 min-h-[48px] ${demo.accentColor} ${
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                transition={{ type: 'spring', stiffness: 400, damping: 20 }}
+                className={`min-w-[240px] sm:min-w-0 snap-start flex-1 h-full min-h-[104px] p-4 rounded-xl text-left flex flex-col justify-between cursor-pointer border-l-4 select-none transition-colors duration-150 ${demo.accentColor} ${
                   active
-                    ? 'border-t-2 border-r-2 border-b-2 border-indigo-600 bg-gradient-to-b from-indigo-50/90 via-indigo-50/40 to-blue-50/50 text-indigo-950 ring-2 ring-indigo-500/20 shadow-md shadow-indigo-500/10 -translate-y-0.5'
-                    : 'border border-slate-200/90 bg-gradient-to-b from-white to-slate-50/80 hover:border-slate-300 hover:bg-white text-slate-800 shadow-sm hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 active:shadow-xs'
+                    ? 'border-t-2 border-r-2 border-b-2 border-indigo-600 bg-gradient-to-b from-indigo-50/90 via-indigo-50/40 to-blue-50/50 text-indigo-950 ring-2 ring-indigo-500/20 shadow-md shadow-indigo-500/10'
+                    : 'border border-slate-200/90 bg-gradient-to-b from-white to-slate-50/80 hover:border-slate-300 hover:bg-white text-slate-800 shadow-sm hover:shadow-md'
                 }`}
               >
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-between gap-2">
                   <span className="font-bold text-xs text-slate-900">{demo.title}</span>
-                  <span className="text-[9px] font-mono font-bold px-2 py-0.5 rounded-md bg-slate-100/90 text-slate-700 border border-slate-200/80 shadow-2xs">
+                  <span className="text-[9px] font-mono font-bold px-2 py-0.5 rounded-md bg-slate-100/90 text-slate-700 border border-slate-200/80 shadow-2xs shrink-0 whitespace-nowrap">
                     {demo.tag}
                   </span>
                 </div>
-                <p className="text-[11px] text-slate-500 mt-1.5 leading-snug">
+                <p className="text-[11px] text-slate-500 mt-2 leading-snug">
                   {demo.subtitle}
                 </p>
-              </button>
+              </motion.button>
             );
           })}
         </div>
@@ -262,27 +285,33 @@ export const PresetSelector: React.FC<PresetSelectorProps> = ({
           </div>
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 shrink-0">
             {onOneClickDemo && (
-              <button
+              <motion.button
                 onClick={onOneClickDemo}
                 data-testid="hero-one-click-demo-button"
-                className="flex items-center justify-center space-x-2 px-6 py-3.5 bg-gradient-to-r from-emerald-600 via-teal-600 to-blue-600 hover:from-emerald-500 hover:via-teal-500 hover:to-blue-500 active:from-emerald-700 active:to-blue-700 text-white rounded-xl text-xs font-black tracking-wide uppercase transition-all duration-150 shadow-md shadow-emerald-700/25 hover:shadow-lg hover:shadow-emerald-700/35 border border-emerald-400/30 cursor-pointer hover:scale-[1.02] active:scale-[0.98]"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.96 }}
+                transition={{ type: 'spring', stiffness: 400, damping: 20 }}
+                className="flex items-center justify-center space-x-2 w-full sm:w-60 h-12 px-5 py-3 bg-gradient-to-r from-emerald-600 via-teal-600 to-blue-600 hover:from-emerald-500 hover:via-teal-500 hover:to-blue-500 active:from-emerald-700 active:to-blue-700 text-white rounded-xl text-xs font-extrabold tracking-wider uppercase shadow-md shadow-emerald-700/25 hover:shadow-lg hover:shadow-emerald-700/35 border border-emerald-400/30 cursor-pointer whitespace-nowrap select-none"
                 title="Accelerate imaging 100x and automatically generate grounded AI explanation in one click"
               >
-                <Zap className="w-4 h-4 text-amber-300 fill-amber-300 animate-pulse" />
+                <Zap className="w-4 h-4 text-amber-300 fill-amber-300 animate-pulse shrink-0" />
                 <span>⚡ 1-Click Demo &amp; Explain</span>
-              </button>
+              </motion.button>
             )}
-            <button
+            <motion.button
               onClick={() => {
                 const accelerated = applyImaging100xDemo(currentAssumptions);
                 onHeroDemoTrigger(accelerated);
               }}
-              className="flex items-center justify-center space-x-2 px-5 py-3.5 bg-gradient-to-b from-white to-slate-50 hover:to-slate-100 active:from-slate-100 border border-slate-300 text-slate-800 font-bold rounded-xl text-xs tracking-wide uppercase transition-all duration-150 shadow-sm hover:shadow-md cursor-pointer hover:scale-[1.01] active:scale-[0.99]"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.96 }}
+              transition={{ type: 'spring', stiffness: 400, damping: 20 }}
+              className="flex items-center justify-center space-x-2 w-full sm:w-60 h-12 px-5 py-3 bg-gradient-to-b from-white to-slate-50 hover:to-slate-100 active:from-slate-100 border border-slate-300 text-slate-800 font-extrabold rounded-xl text-xs tracking-wider uppercase shadow-sm hover:shadow-md cursor-pointer whitespace-nowrap select-none"
               title="Shift parameters only without auto-running explanation"
             >
               <span>Shift Params Only</span>
-              <ArrowRight className="w-3.5 h-3.5 text-slate-500" />
-            </button>
+              <ArrowRight className="w-4 h-4 text-slate-500 shrink-0" />
+            </motion.button>
           </div>
         </div>
       </div>

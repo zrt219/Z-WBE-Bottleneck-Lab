@@ -23,6 +23,7 @@ import { CompareScenariosModal } from '../components/CompareScenariosModal';
 import { GpuExplorationMap } from '../components/GpuExplorationMap';
 import { InteractiveTour } from '../components/InteractiveTour';
 import { MobileStickyActionBar } from '../components/MobileStickyActionBar';
+import { WorkflowStepper } from '../components/WorkflowStepper';
 import { useAccessibility } from '../context/AccessibilityContext';
 import { GitCompare, RotateCcw, Share2, Check, Compass, ArrowRight, ChevronDown, ChevronUp, Sliders, Layers } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -293,6 +294,16 @@ export const SimulatorPage: React.FC = () => {
 
   return (
     <div className="space-y-8 pb-32 lg:pb-20">
+      {/* Interactive 4-Stage Workflow Stepper Ribbon */}
+      <WorkflowStepper
+        activePresetName={assumptions.name || 'Drosophila'}
+        tissueVolumeMm3={assumptions.acquisition.tissueVolumeMm3}
+        dominantBottleneck={bottleneck.dominantBottleneck}
+        dominantScore={bottleneck.dominantScore}
+        hasInterpretation={Boolean(interpretation)}
+        isLoadingInterpretation={isLoadingExplanation}
+      />
+
       {/* Optional Welcome & Tutorial Prompt Banner */}
       {showWelcomeBanner && (
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-4 rounded-2xl bg-gradient-to-r from-blue-500/10 via-indigo-500/10 to-purple-500/10 border border-blue-200/80 shadow-xs">
@@ -329,16 +340,22 @@ export const SimulatorPage: React.FC = () => {
         </div>
       )}
 
-      {/* Top Controls: Preset selector, hero trigger, compare button */}
-      <div id="tour-preset-selector" className="w-full">
-        <PresetSelector
-          currentAssumptions={assumptions}
-          onSelectPreset={handleSelectPreset}
-          onHeroDemoTrigger={handleHeroDemoTrigger}
-          onOneClickDemo={handleOneClickDemo}
-          bottleneckMovedBanner={bottleneckMovedBanner}
-        />
-      </div>
+      {/* STAGE 1: Scope & Assumptions */}
+      <section
+        id="section-scope"
+        aria-label="Scope and Parameter Assumptions"
+        className="scroll-mt-32 space-y-4"
+      >
+        {/* Top Controls: Preset selector, hero trigger, compare button */}
+        <div id="tour-preset-selector" className="w-full">
+          <PresetSelector
+            currentAssumptions={assumptions}
+            onSelectPreset={handleSelectPreset}
+            onHeroDemoTrigger={handleHeroDemoTrigger}
+            onOneClickDemo={handleOneClickDemo}
+            bottleneckMovedBanner={bottleneckMovedBanner}
+          />
+        </div>
 
       {/* Centered Utility Toolbar: Sharing, Multi-scenario Comparison, and Reset */}
       <div className="flex flex-wrap items-center justify-center gap-3 py-1">
@@ -350,16 +367,16 @@ export const SimulatorPage: React.FC = () => {
               setTimeout(() => setCopiedLink(false), 2000);
             }
           }}
-          whileHover={{ scale: 1.03 }}
-          whileTap={{ scale: 0.95 }}
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.96 }}
           transition={{ type: 'spring', stiffness: 400, damping: 20 }}
-          className="flex items-center space-x-2 px-5 py-2.5 rounded-xl border border-indigo-300 bg-gradient-to-b from-indigo-50 to-indigo-100/80 hover:from-indigo-100 hover:to-indigo-200/90 text-xs font-bold text-indigo-950 shadow-sm hover:shadow-md cursor-pointer whitespace-nowrap shrink-0 select-none"
+          className="flex items-center justify-center space-x-2 w-full sm:w-64 h-11 px-4 py-2.5 rounded-xl border border-indigo-300 bg-gradient-to-b from-indigo-50 to-indigo-100/80 hover:from-indigo-100 hover:to-indigo-200/90 text-xs font-bold text-indigo-950 shadow-sm hover:shadow-md cursor-pointer whitespace-nowrap shrink-0 select-none"
           title="Copy permalink with active parameters to clipboard"
         >
           {copiedLink ? (
             <>
               <Check className="w-4 h-4 text-emerald-600 shrink-0" />
-              <span className="text-emerald-800 font-extrabold">Link Copied to Clipboard!</span>
+              <span className="text-emerald-800 font-extrabold">Link Copied!</span>
             </>
           ) : (
             <>
@@ -374,16 +391,16 @@ export const SimulatorPage: React.FC = () => {
             setBaselineAssumptions(assumptions);
             setIsCompareOpen(true);
           }}
-          whileHover={{ scale: 1.03 }}
-          whileTap={{ scale: 0.95 }}
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.96 }}
           transition={{ type: 'spring', stiffness: 400, damping: 20 }}
-          className="flex items-center space-x-2.5 px-6 py-2.5 rounded-xl border border-blue-200 bg-gradient-to-b from-white via-blue-50/40 to-blue-50/80 hover:from-blue-50 hover:to-blue-100 text-xs font-bold text-blue-950 shadow-sm hover:shadow-md cursor-pointer whitespace-nowrap shrink-0 select-none"
+          className="flex items-center justify-center space-x-2 w-full sm:w-64 h-11 px-4 py-2.5 rounded-xl border border-blue-200 bg-gradient-to-b from-white via-blue-50/40 to-blue-50/80 hover:from-blue-50 hover:to-blue-100 text-xs font-bold text-blue-950 shadow-sm hover:shadow-md cursor-pointer whitespace-nowrap shrink-0 select-none"
           title="Compare current scenario against baseline"
         >
           <GitCompare className="w-4 h-4 text-blue-600 shrink-0" />
           <span>Compare Scenarios</span>
-          <span className="text-[10px] font-semibold text-blue-700 bg-blue-100/80 px-2 py-0.5 rounded-md border border-blue-200/80 shrink-0">
-            Baseline vs Modified
+          <span className="text-[10px] font-semibold text-blue-700 bg-blue-100/80 px-1.5 py-0.5 rounded border border-blue-200/80 shrink-0">
+            Diff
           </span>
         </motion.button>
 
@@ -394,10 +411,10 @@ export const SimulatorPage: React.FC = () => {
             announce('Reset all assumptions to default Drosophila-Scale scenario.');
             setTimeout(() => setIsResetting(false), 500);
           }}
-          whileHover={{ scale: 1.03 }}
-          whileTap={{ scale: 0.95 }}
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.96 }}
           transition={{ type: 'spring', stiffness: 400, damping: 20 }}
-          className="flex items-center space-x-2.5 px-6 py-2.5 rounded-xl border border-slate-300 bg-gradient-to-b from-white to-slate-100 hover:from-slate-50 hover:to-slate-200 text-xs font-bold text-slate-700 hover:text-slate-900 shadow-sm hover:shadow-md cursor-pointer whitespace-nowrap shrink-0 min-w-[110px] justify-center select-none"
+          className="flex items-center justify-center space-x-2 w-full sm:w-64 h-11 px-4 py-2.5 rounded-xl border border-slate-300 bg-gradient-to-b from-white to-slate-100 hover:from-slate-50 hover:to-slate-200 text-xs font-bold text-slate-700 hover:text-slate-900 shadow-sm hover:shadow-md cursor-pointer whitespace-nowrap shrink-0 select-none"
           title="Reset to default Drosophila preset"
         >
           <motion.div
@@ -405,31 +422,17 @@ export const SimulatorPage: React.FC = () => {
             transition={{ duration: 0.5, ease: 'easeInOut' }}
             className="shrink-0 flex items-center justify-center"
           >
-            <RotateCcw className="w-3.5 h-3.5 text-slate-600 shrink-0" />
+            <RotateCcw className="w-4 h-4 text-slate-600 shrink-0" />
           </motion.div>
-          <span className="font-bold tracking-tight">Reset</span>
+          <span>Reset to Default</span>
         </motion.button>
       </div>
+      </section>
 
       {/* Main 3-Column Layout: Equal-width 1:1:1 Grid on desktop; Collapsible accordions with top bottleneck on mobile */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
-        {/* Dominant Bottleneck & Trigger: Shown first on mobile (<lg) so users immediately see key insights and action buttons */}
-        <div id="tour-explain-button" className="w-full flex flex-col order-first lg:order-last">
-          <DominantBottleneckCard
-            bottleneck={bottleneck}
-            onExplainClick={() => handleExplainScenario(assumptions)}
-            isLoadingExplanation={isLoadingExplanation}
-            hasInterpretation={Boolean(interpretation)}
-            onScrollToInterpretation={() => {
-              const el = document.getElementById('interpretation-layer');
-              if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }}
-            onOneClickDemo={handleOneClickDemo}
-          />
-        </div>
-
-        {/* Assumptions Controls: Collapsible accordion on mobile, always visible on desktop */}
-        <div id="tour-assumption-controls" className="w-full flex flex-col">
+        {/* Scenario Assumptions: Column 1 on desktop (order-1), accordion on mobile (order-2) */}
+        <div id="col-assumption-controls" className="w-full flex flex-col order-2 lg:order-1 h-full">
           {/* Mobile Accordion Toggle Header (<lg) */}
           <button
             onClick={() => setIsAssumptionsExpanded(!isAssumptionsExpanded)}
@@ -461,46 +464,69 @@ export const SimulatorPage: React.FC = () => {
             </div>
           </button>
 
-          <div className={`${isAssumptionsExpanded ? 'block' : 'hidden'} lg:block h-full`}>
+          <div id="tour-assumption-controls" className={`${isAssumptionsExpanded ? 'block' : 'hidden'} lg:block h-full flex flex-col flex-1`}>
             <AssumptionControls assumptions={assumptions} onChange={setAssumptions} />
           </div>
         </div>
 
-        {/* Center: WBE Pipeline Stages: Collapsible accordion on mobile, always visible on desktop */}
-        <div id="tour-pipeline-map" className="w-full flex flex-col">
-          {/* Mobile Accordion Toggle Header (<lg) */}
-          <button
-            onClick={() => setIsPipelineExpanded(!isPipelineExpanded)}
-            className="lg:hidden w-full mb-2 p-3.5 rounded-2xl bg-white border border-slate-200/90 shadow-card flex items-center justify-between transition-colors cursor-pointer text-left min-h-[44px]"
-            aria-expanded={isPipelineExpanded}
-          >
-            <div className="flex items-center space-x-2.5">
-              <div className="w-8 h-8 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center shrink-0">
-                <Layers className="w-4 h-4" />
-              </div>
-              <div>
-                <div className="text-xs font-bold text-slate-900 uppercase tracking-wide">
-                  WBE Pipeline (6 Stages)
+        {/* STAGE 2: WBE Pipeline Stages: Column 2 on desktop (order-2), accordion on mobile (order-3) */}
+        <section
+          id="section-pipeline"
+          aria-label="Biophysical Pipeline Map"
+          className="w-full flex flex-col order-3 lg:order-2 h-full scroll-mt-32"
+        >
+          <div id="col-pipeline-map" className="w-full flex flex-col h-full">
+            {/* Mobile Accordion Toggle Header (<lg) */}
+            <button
+              onClick={() => setIsPipelineExpanded(!isPipelineExpanded)}
+              className="lg:hidden w-full mb-2 p-3.5 rounded-2xl bg-white border border-slate-200/90 shadow-card flex items-center justify-between transition-colors cursor-pointer text-left min-h-[44px]"
+              aria-expanded={isPipelineExpanded}
+            >
+              <div className="flex items-center space-x-2.5">
+                <div className="w-8 h-8 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center shrink-0">
+                  <Layers className="w-4 h-4" />
                 </div>
-                <div className="text-[10px] text-slate-500 font-mono">
-                  Stage {bottleneck.dominantBottleneck}: {bottleneck.pressures[bottleneck.dominantBottleneck].score.toFixed(0)}%
+                <div>
+                  <div className="text-xs font-bold text-slate-900 uppercase tracking-wide">
+                    WBE Pipeline (6 Stages)
+                  </div>
+                  <div className="text-[10px] text-slate-500 font-mono">
+                    Stage {bottleneck.dominantBottleneck}: {bottleneck.pressures[bottleneck.dominantBottleneck].score.toFixed(0)}%
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="flex items-center space-x-2">
-              <span className="text-[10px] font-mono font-semibold px-2 py-0.5 rounded bg-slate-100 text-slate-600 border border-slate-200">
-                {isPipelineExpanded ? 'Tap to Collapse' : 'Tap to View Stages'}
-              </span>
-              {isPipelineExpanded ? (
-                <ChevronUp className="w-4 h-4 text-slate-500" />
-              ) : (
-                <ChevronDown className="w-4 h-4 text-slate-500" />
-              )}
-            </div>
-          </button>
+              <div className="flex items-center space-x-2">
+                <span className="text-[10px] font-mono font-semibold px-2 py-0.5 rounded bg-slate-100 text-slate-600 border border-slate-200">
+                  {isPipelineExpanded ? 'Tap to Collapse' : 'Tap to View Stages'}
+                </span>
+                {isPipelineExpanded ? (
+                  <ChevronUp className="w-4 h-4 text-slate-500" />
+                ) : (
+                  <ChevronDown className="w-4 h-4 text-slate-500" />
+                )}
+              </div>
+            </button>
 
-          <div className={`${isPipelineExpanded ? 'block' : 'hidden'} lg:block h-full`}>
-            <WbePipelineMap bottleneck={bottleneck} metrics={metrics} />
+            <div id="tour-pipeline-map" className={`${isPipelineExpanded ? 'block' : 'hidden'} lg:block h-full flex flex-col flex-1`}>
+              <WbePipelineMap bottleneck={bottleneck} metrics={metrics} />
+            </div>
+          </div>
+        </section>
+
+        {/* Dominant Bottleneck & Trigger: Column 3 on desktop (order-3), shown first on mobile (order-1) */}
+        <div id="col-dominant-bottleneck" className="w-full flex flex-col order-1 lg:order-3 h-full">
+          <div id="tour-explain-button" className="h-full flex flex-col">
+            <DominantBottleneckCard
+              bottleneck={bottleneck}
+              onExplainClick={() => handleExplainScenario(assumptions)}
+              isLoadingExplanation={isLoadingExplanation}
+              hasInterpretation={Boolean(interpretation)}
+              onScrollToInterpretation={() => {
+                const el = document.getElementById('interpretation-layer');
+                if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }}
+              onOneClickDemo={handleOneClickDemo}
+            />
           </div>
         </div>
       </div>
@@ -508,22 +534,34 @@ export const SimulatorPage: React.FC = () => {
       {/* Result Strip */}
       <ResultStrip metrics={metrics} />
 
-      {/* Sensitivity Lab */}
-      <SensitivityLab sensitivity={sensitivity} />
+      {/* STAGE 3: Bottleneck Analysis & Sensitivity */}
+      <section
+        id="section-bottlenecks"
+        aria-label="Bottleneck Analysis & Sensitivity"
+        className="scroll-mt-32"
+      >
+        <SensitivityLab sensitivity={sensitivity} />
+      </section>
 
-      {/* Nemotron Interpretation Layer */}
-      <div id="tour-nemotron-interpretation" className="scroll-mt-24">
-        <div id="interpretation-layer">
-          <NemotronInterpretation
-            interpretation={interpretation}
-            groundingRequest={groundingPayload}
-            isLoading={isLoadingExplanation}
-            requestsCount={requestsCount}
-            onExplainClick={() => handleExplainScenario(assumptions)}
-            apiTelemetry={apiTelemetry}
-          />
+      {/* STAGE 4: Grounded AI Interpretation Layer */}
+      <section
+        id="section-ai-interpretation"
+        aria-label="Grounded AI Interpretation"
+        className="scroll-mt-32"
+      >
+        <div id="tour-nemotron-interpretation">
+          <div id="interpretation-layer">
+            <NemotronInterpretation
+              interpretation={interpretation}
+              groundingRequest={groundingPayload}
+              isLoading={isLoadingExplanation}
+              requestsCount={requestsCount}
+              onExplainClick={() => handleExplainScenario(assumptions)}
+              apiTelemetry={apiTelemetry}
+            />
+          </div>
         </div>
-      </div>
+      </section>
 
       {/* GPU Exploration Map */}
       <GpuExplorationMap />
@@ -556,7 +594,7 @@ export const SimulatorPage: React.FC = () => {
         onOneClickDemo={handleOneClickDemo}
         onExplainClick={() => handleExplainScenario(assumptions)}
         onScrollToBottleneck={() => {
-          const el = document.getElementById('tour-explain-button');
+          const el = document.getElementById('tour-bottleneck-card') || document.getElementById('tour-explain-button');
           if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }}
         onScrollToInterpretation={() => {

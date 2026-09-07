@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { BottleneckResult } from '@z-wbe/shared';
-import { AlertTriangle, Sparkles, Loader2, ShieldCheck, ArrowUpRight, Info, Zap } from 'lucide-react';
+import { AlertTriangle, Sparkles, Loader2, ShieldCheck, ArrowUpRight, Info, Zap, Check } from 'lucide-react';
 import { Tooltip } from './Tooltip';
 import { BOTTLENECK_DIMENSION_TOOLTIPS } from '../data/tooltipData';
 
@@ -26,17 +26,18 @@ export const DominantBottleneckCard: React.FC<DominantBottleneckCardProps> = ({
   const second = bottleneck.secondBottleneck;
   const dominantPressure = bottleneck.pressures[dominant];
   const secondPressure = bottleneck.pressures[second];
+  const isBioAcquisition = dominant === 'ACQUISITION' || dominant === 'RECONSTRUCTION';
 
   const formatBottleneckName = (dim: string) => {
     return dim.replace('_', ' ');
   };
 
   return (
-    <div id="tour-bottleneck-card" className="h-full bg-white border border-slate-200/90 rounded-2xl p-5 sm:p-6 shadow-card flex flex-col justify-between space-y-5">
+    <div id="tour-bottleneck-card" className="h-full bg-white border border-slate-200/90 rounded-2xl p-5 sm:p-6 shadow-card flex flex-col justify-between space-y-4 sm:space-y-5">
       <div className="space-y-4">
-        <div className="flex items-center justify-between border-b border-slate-100 pb-3.5">
+        <div className="flex items-center justify-between border-b border-slate-100 pb-3.5 min-h-[52px]">
           <div className="flex items-center space-x-2.5">
-            <div className="w-8 h-8 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center shrink-0">
+            <div className="w-8 h-8 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center shrink-0 shadow-xs">
               <AlertTriangle className="w-4 h-4 text-rose-600" />
             </div>
             <div>
@@ -46,19 +47,31 @@ export const DominantBottleneckCard: React.FC<DominantBottleneckCardProps> = ({
               <p className="text-[10px] text-slate-500 font-mono">Dynamic Critical Ceiling</p>
             </div>
           </div>
-          <span className="text-[9px] font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-slate-100 text-slate-700 border border-slate-200 shrink-0 whitespace-nowrap">
+          <span className="text-[9px] font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-slate-100 text-slate-700 border border-slate-200 shrink-0 whitespace-nowrap shadow-xs">
             CALCULATED FROM SCENARIO ASSUMPTIONS
           </span>
         </div>
 
         {/* Primary Bottleneck Callout */}
-        <div className="p-4 sm:p-5 rounded-xl bg-gradient-to-br from-rose-50/80 via-rose-50/30 to-white border border-rose-200/90 shadow-xs space-y-3 relative">
-          <div className="flex items-center justify-between gap-2">
-            <span className="text-[10px] font-mono font-extrabold text-rose-700 uppercase tracking-wide bg-rose-100 px-2.5 py-0.5 rounded-full border border-rose-300 shadow-xs shrink-0 whitespace-nowrap">
-              #1 Limiting Constraint
+        <div className={`p-4 sm:p-5 rounded-xl border-2 space-y-3 relative shadow-xs transition-colors ${
+          dominantPressure.score > 100
+            ? 'border-rose-500 bg-gradient-to-b from-rose-50/80 to-rose-50/20'
+            : 'border-emerald-500 bg-gradient-to-b from-emerald-50/80 to-emerald-50/20'
+        }`}>
+          <div className="flex items-center justify-between">
+            <span
+              className={`text-[10px] font-mono uppercase tracking-wider font-bold px-2.5 py-0.5 rounded-full border ${
+                dominantPressure.score > 100
+                  ? 'text-rose-700 bg-rose-100/90 border-rose-200'
+                  : 'text-emerald-700 bg-emerald-100/90 border-emerald-200'
+              }`}
+            >
+              {dominantPressure.score > 100 ? 'Constraint Violation Active' : 'All Constraints Feasible'}
             </span>
             <span
-              className="font-mono font-black text-lg sm:text-xl text-rose-600 tracking-tight shrink-0 whitespace-nowrap opacity-100"
+              className={`font-mono font-black text-lg sm:text-xl tracking-tight shrink-0 whitespace-nowrap opacity-100 ${
+                dominantPressure.score > 100 ? 'text-rose-600' : 'text-emerald-600'
+              }`}
             >
               {dominantPressure.score > 999 ? '>999%' : `${dominantPressure.score.toFixed(1)}%`}
             </span>
@@ -77,9 +90,13 @@ export const DominantBottleneckCard: React.FC<DominantBottleneckCardProps> = ({
             {dominantPressure.summary}
           </p>
 
-          <div className="text-[10px] font-mono text-rose-950 bg-rose-100/70 p-3 rounded-lg border border-rose-200 space-y-1 shadow-xs">
-            <div><strong className="text-rose-900">Demand:</strong> {dominantPressure.demandFormatted}</div>
-            <div><strong className="text-rose-900">Ceiling:</strong> {dominantPressure.capacityFormatted}</div>
+          <div className={`text-[10px] font-mono p-3 rounded-lg border space-y-1 shadow-xs ${
+            dominantPressure.score > 100
+              ? 'text-rose-950 bg-rose-100/70 border-rose-200'
+              : 'text-emerald-950 bg-emerald-100/70 border-emerald-200'
+          }`}>
+            <div><strong>Demand:</strong> {dominantPressure.demandFormatted}</div>
+            <div><strong>Ceiling:</strong> {dominantPressure.capacityFormatted}</div>
           </div>
         </div>
 
@@ -112,32 +129,85 @@ export const DominantBottleneckCard: React.FC<DominantBottleneckCardProps> = ({
             />
           </div>
         </div>
+
+        {/* System Pressure Hierarchy & Physical Regime */}
+        <div className="p-3.5 sm:p-4 rounded-xl bg-slate-50/80 border border-slate-200/80 space-y-2.5 shadow-xs">
+          <div className="flex items-center justify-between text-xs">
+            <span className="font-bold text-slate-700 uppercase tracking-wider text-[10px] font-mono">
+              Governing Regime
+            </span>
+            <span className={`text-[10px] font-mono font-bold px-2 py-0.5 rounded-md border ${
+              isBioAcquisition
+                ? 'bg-blue-50 text-blue-700 border-blue-200'
+                : 'bg-purple-50 text-purple-700 border-purple-200'
+            }`}>
+              {isBioAcquisition ? 'Biological Acquisition Bound' : 'Exascale Hardware Bound'}
+            </span>
+          </div>
+
+          <div className="space-y-1.5 pt-0.5">
+            <div className="text-[10px] font-mono text-slate-500 flex items-center justify-between">
+              <span>8-Dimension Resource Pressures:</span>
+              <span className="text-slate-400 font-normal">Score %</span>
+            </div>
+            <div className="grid grid-cols-4 gap-1.5">
+              {(Object.keys(bottleneck.pressures) as Array<keyof typeof bottleneck.pressures>).map((dimKey) => {
+                const isDom = dimKey === dominant;
+                const pItem = bottleneck.pressures[dimKey];
+                const score = pItem.score;
+
+                const badgeStyle = score > 100
+                  ? 'bg-rose-100/90 border-rose-300 text-rose-900 font-bold'
+                  : score >= 80
+                  ? 'bg-amber-100/80 border-amber-300 text-amber-900 font-semibold'
+                  : isDom
+                  ? 'bg-blue-100/90 border-blue-300 text-blue-900 font-bold'
+                  : 'bg-emerald-50/80 border-emerald-200 text-emerald-800';
+
+                return (
+                  <div
+                    key={dimKey}
+                    className={`p-1.5 rounded-lg border text-center font-mono transition-all ${badgeStyle}`}
+                    title={`${formatBottleneckName(dimKey)}: ${pItem.score.toFixed(1)}% (${pItem.demandFormatted} / ${pItem.capacityFormatted})`}
+                  >
+                    <div className="text-[8px] uppercase truncate tracking-tight">
+                      {dimKey.replace('_', ' ').slice(0, 6)}
+                    </div>
+                    <div className="text-[10px] font-bold">
+                      {pItem.score > 999 ? '>999' : `${pItem.score.toFixed(0)}%`}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
       </div>
 
-      {/* Action Button: EXPLAIN THIS SCENARIO */}
+      {/* Action Buttons: Standardized uniform height (h-12), generous padding (px-4 py-3), font weights, and tactile spring physics */}
       <div className="pt-3.5 border-t border-slate-100 space-y-2.5">
         <motion.button
           id="tour-explain-button"
           onClick={onExplainClick}
           disabled={isLoadingExplanation}
           data-testid="explain-scenario-button"
-          aria-label="Explain this scenario"
-          title="Explain this scenario"
+          aria-label="Explain with Nemotron"
+          title="Explain with Nemotron"
           whileHover={{ scale: isLoadingExplanation ? 1 : 1.02 }}
-          whileTap={{ scale: isLoadingExplanation ? 1 : 0.97 }}
+          whileTap={{ scale: isLoadingExplanation ? 1 : 0.96 }}
           transition={{ type: 'spring', stiffness: 400, damping: 20 }}
-          className="w-full py-3.5 px-4 rounded-xl bg-gradient-to-b from-slate-800 to-slate-950 hover:from-slate-700 hover:to-slate-900 border border-slate-700 text-white text-xs font-bold uppercase tracking-wider flex items-center justify-center space-x-2 shadow-md hover:shadow-lg disabled:opacity-50 cursor-pointer select-none"
+          className="w-full h-12 py-3 px-4 rounded-xl bg-gradient-to-b from-slate-800 to-slate-950 hover:from-slate-700 hover:to-slate-900 border border-slate-700 text-white text-xs font-extrabold uppercase tracking-wider flex items-center justify-center space-x-2 shadow-md hover:shadow-lg disabled:opacity-50 cursor-pointer select-none whitespace-nowrap"
         >
           {isLoadingExplanation ? (
             <>
-              <Loader2 className="w-4 h-4 animate-spin text-emerald-400" />
-              <span>Reasoning with Nemotron 3 Super...</span>
+              <Loader2 className="w-4 h-4 animate-spin text-emerald-400 shrink-0" />
+              <span>Reasoning with Nemotron 3...</span>
             </>
           ) : (
             <>
-              <Sparkles className="w-4 h-4 text-emerald-400" />
-              <span>EXPLAIN THIS SCENARIO</span>
-              <ArrowUpRight className="w-3.5 h-3.5 text-slate-400" />
+              <Sparkles className="w-4 h-4 text-emerald-400 shrink-0" />
+              <span>EXPLAIN WITH NEMOTRON</span>
+              <ArrowUpRight className="w-4 h-4 text-slate-400 shrink-0" />
             </>
           )}
         </motion.button>
@@ -146,11 +216,12 @@ export const DominantBottleneckCard: React.FC<DominantBottleneckCardProps> = ({
           <motion.button
             onClick={onScrollToInterpretation}
             whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.97 }}
+            whileTap={{ scale: 0.96 }}
             transition={{ type: 'spring', stiffness: 400, damping: 20 }}
-            className="w-full py-2.5 px-3 rounded-xl bg-gradient-to-b from-blue-50 to-blue-100/80 hover:from-blue-100 hover:to-blue-200 border border-blue-200 text-blue-900 text-xs font-bold flex items-center justify-center space-x-1.5 cursor-pointer shadow-xs hover:shadow select-none"
+            className="w-full h-12 py-3 px-4 rounded-xl bg-gradient-to-b from-blue-50 to-blue-100/80 hover:from-blue-100 hover:to-blue-200 border border-blue-200 text-blue-900 text-xs font-extrabold uppercase tracking-wider flex items-center justify-center space-x-2 cursor-pointer shadow-sm hover:shadow select-none whitespace-nowrap"
           >
-            <span>✓ Interpretation generated • View Analysis ↓</span>
+            <Check className="w-4 h-4 text-blue-600 shrink-0" />
+            <span>View Generated Analysis ↓</span>
           </motion.button>
         )}
 
@@ -160,12 +231,12 @@ export const DominantBottleneckCard: React.FC<DominantBottleneckCardProps> = ({
             disabled={isLoadingExplanation}
             data-testid="card-one-click-demo-button"
             whileHover={{ scale: isLoadingExplanation ? 1 : 1.02 }}
-            whileTap={{ scale: isLoadingExplanation ? 1 : 0.97 }}
+            whileTap={{ scale: isLoadingExplanation ? 1 : 0.96 }}
             transition={{ type: 'spring', stiffness: 400, damping: 20 }}
-            className="w-full py-2.5 px-3 rounded-xl bg-gradient-to-b from-emerald-50 to-teal-100/90 hover:from-emerald-100 hover:to-teal-200/90 border border-emerald-300 text-emerald-950 text-xs font-bold flex items-center justify-center space-x-1.5 cursor-pointer shadow-sm hover:shadow disabled:opacity-50 select-none"
+            className="w-full h-12 py-3 px-4 rounded-xl bg-gradient-to-b from-emerald-50 to-teal-100/90 hover:from-emerald-100 hover:to-teal-200/90 border border-emerald-300 text-emerald-950 text-xs font-extrabold uppercase tracking-wider flex items-center justify-center space-x-2 cursor-pointer shadow-sm hover:shadow disabled:opacity-50 select-none whitespace-nowrap"
             title="1-Click Demo: Accelerate imaging 100x & immediately run grounded AI interpretation"
           >
-            <Zap className="w-3.5 h-3.5 text-emerald-600 fill-emerald-600 shrink-0" />
+            <Zap className="w-4 h-4 text-emerald-600 fill-emerald-600 shrink-0" />
             <span>⚡ 1-Click Demo (100x Shift)</span>
           </motion.button>
         )}

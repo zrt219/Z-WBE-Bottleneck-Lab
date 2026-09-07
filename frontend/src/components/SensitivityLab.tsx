@@ -46,23 +46,23 @@ export const SensitivityLab: React.FC<SensitivityLabProps> = ({ sensitivity }) =
           {sensitivity.takeaway}
         </p>
 
-        <div className="pt-1.5 flex flex-wrap gap-2.5 text-[11px] font-mono">
-          <div className="bg-gradient-to-b from-white to-slate-50/90 px-3.5 py-1.5 rounded-lg border border-slate-200/90 shadow-sm flex items-center space-x-1.5">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 text-[11px] font-mono w-full">
+          <div className="bg-gradient-to-b from-white to-slate-50/90 px-3 py-2 rounded-lg border border-slate-200/90 shadow-sm flex items-center justify-between sm:justify-center space-x-1.5 min-h-[40px]">
             <span className="text-slate-400 font-semibold">0.5x:</span>
             <span className="font-bold text-slate-800">{highest.perturbations['0.5x'].bottleneckScore.toFixed(1)}%</span>
             <span className="text-[9px] text-slate-400">({highest.perturbations['0.5x'].dominantBottleneck})</span>
           </div>
-          <div className="bg-gradient-to-b from-white to-blue-50/60 px-3.5 py-1.5 rounded-lg border border-blue-400 ring-2 ring-blue-500/20 shadow-sm flex items-center space-x-1.5">
-            <span className="text-blue-700 font-bold">1.0x (Base):</span>
+          <div className="bg-gradient-to-b from-white to-blue-50/60 px-3 py-2 rounded-lg border border-blue-400 ring-2 ring-blue-500/20 shadow-sm flex items-center justify-between sm:justify-center space-x-1.5 min-h-[40px]">
+            <span className="text-blue-700 font-bold">1.0x:</span>
             <span className="font-black text-blue-950">{highest.perturbations['1x'].bottleneckScore.toFixed(1)}%</span>
             <span className="text-[9px] text-blue-600 font-medium">({highest.perturbations['1x'].dominantBottleneck})</span>
           </div>
-          <div className="bg-gradient-to-b from-white to-slate-50/90 px-3.5 py-1.5 rounded-lg border border-slate-200/90 shadow-sm flex items-center space-x-1.5">
+          <div className="bg-gradient-to-b from-white to-slate-50/90 px-3 py-2 rounded-lg border border-slate-200/90 shadow-sm flex items-center justify-between sm:justify-center space-x-1.5 min-h-[40px]">
             <span className="text-slate-400 font-semibold">2.0x:</span>
             <span className="font-bold text-slate-800">{highest.perturbations['2x'].bottleneckScore.toFixed(1)}%</span>
             <span className="text-[9px] text-slate-400">({highest.perturbations['2x'].dominantBottleneck})</span>
           </div>
-          <div className="bg-gradient-to-b from-emerald-50 to-emerald-100/70 px-3.5 py-1.5 rounded-lg border border-emerald-300 shadow-sm flex items-center space-x-1.5">
+          <div className="bg-gradient-to-b from-emerald-50 to-emerald-100/70 px-3 py-2 rounded-lg border border-emerald-300 shadow-sm flex items-center justify-between sm:justify-center space-x-1.5 min-h-[40px]">
             <span className="text-emerald-700 font-bold">10x:</span>
             <span className="font-black text-emerald-900">{highest.perturbations['10x'].bottleneckScore.toFixed(1)}%</span>
             <span className="text-[9px] text-emerald-700 font-semibold">({highest.perturbations['10x'].dominantBottleneck})</span>
@@ -83,7 +83,16 @@ export const SensitivityLab: React.FC<SensitivityLabProps> = ({ sensitivity }) =
         </div>
 
         <div className="overflow-x-auto border border-slate-200/90 rounded-xl shadow-xs">
-          <table className="w-full min-w-[580px] text-left text-xs border-collapse">
+          <table className="table-fixed w-full min-w-[620px] text-left text-xs border-collapse">
+            <colgroup>
+              <col className="w-[26%]" />
+              <col className="w-[14%]" />
+              <col className="w-[16%]" />
+              <col className="w-[10%]" />
+              <col className="w-[10%]" />
+              <col className="w-[10%]" />
+              <col className="w-[14%]" />
+            </colgroup>
             <thead>
               <tr className="border-b border-slate-200 text-[10px] font-mono uppercase text-slate-500 bg-slate-50">
                 <th className="py-3 px-3.5 font-bold">Variable</th>
@@ -100,22 +109,24 @@ export const SensitivityLab: React.FC<SensitivityLabProps> = ({ sensitivity }) =
                 return (
                   <tr
                     key={v.variableKey}
-                    className={`hover:bg-slate-50/80 transition-colors ${
+                    className={`hover:bg-slate-50/80 transition-colors h-11 ${
                       v.isHighestLeverage ? 'bg-blue-50/35 font-semibold' : ''
                     }`}
                   >
-                    <td className="py-2.5 px-3.5 text-slate-900 font-sans flex items-center space-x-2">
-                      {v.isHighestLeverage && (
-                        <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
-                      )}
-                      <span className={v.isHighestLeverage ? 'font-bold text-blue-950' : 'font-medium'}>
-                        {v.variableLabel}
-                      </span>
+                    <td className="py-2.5 px-3.5 text-slate-900 font-sans truncate">
+                      <div className="flex items-center space-x-2 truncate">
+                        {v.isHighestLeverage && (
+                          <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse shrink-0"></span>
+                        )}
+                        <span className={`truncate ${v.isHighestLeverage ? 'font-bold text-blue-950' : 'font-medium'}`}>
+                          {v.variableLabel}
+                        </span>
+                      </div>
                     </td>
-                    <td className="py-2.5 px-2 text-slate-500 uppercase text-[9px] font-bold">
+                    <td className="py-2.5 px-2 text-slate-500 uppercase text-[9px] font-bold truncate">
                       {v.variableCategory}
                     </td>
-                    <td className="py-2.5 px-2 text-right text-slate-700">
+                    <td className="py-2.5 px-2 text-right text-slate-700 truncate">
                       {v.baselineValue > 1000 ? v.baselineValue.toLocaleString() : v.baselineValue} <span className="text-slate-400 text-[10px]">{v.unit}</span>
                     </td>
                     <td className="py-2.5 px-2 text-center text-slate-600">
@@ -128,11 +139,11 @@ export const SensitivityLab: React.FC<SensitivityLabProps> = ({ sensitivity }) =
                       {v.perturbations['10x'].bottleneckScore.toFixed(0)}%
                     </td>
                     <td className="py-2.5 px-3.5 text-right">
-                      <div className="flex items-center justify-end space-x-2.5">
-                        <span className={v.isHighestLeverage ? 'text-blue-700 font-black' : 'text-slate-700 font-semibold'}>
+                      <div className="flex items-center justify-end space-x-2">
+                        <span className={`w-8 text-right font-mono ${v.isHighestLeverage ? 'text-blue-700 font-black' : 'text-slate-700 font-semibold'}`}>
                           {v.leverageScore.toFixed(1)}
                         </span>
-                        <div className="w-20 bg-slate-100 h-2 rounded-full overflow-hidden hidden sm:block border border-slate-200/70">
+                        <div className="w-16 sm:w-20 bg-slate-100 h-2 rounded-full overflow-hidden hidden sm:block border border-slate-200/70 shrink-0">
                           <div
                             className={`h-full rounded-full transition-all duration-300 ${
                               v.isHighestLeverage
