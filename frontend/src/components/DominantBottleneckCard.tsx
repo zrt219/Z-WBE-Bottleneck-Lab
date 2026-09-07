@@ -57,9 +57,15 @@ export const DominantBottleneckCard: React.FC<DominantBottleneckCardProps> = ({
             <span className="text-[10px] font-mono font-extrabold text-rose-700 uppercase tracking-wide bg-rose-100 px-2.5 py-0.5 rounded-full border border-rose-300 shadow-xs shrink-0 whitespace-nowrap">
               #1 Limiting Constraint
             </span>
-            <span className="font-mono font-black text-lg sm:text-xl text-rose-600 tracking-tight shrink-0 whitespace-nowrap">
+            <motion.span
+              key={dominantPressure.score}
+              initial={{ scale: 0.92, opacity: 0.8 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.2 }}
+              className="font-mono font-black text-lg sm:text-xl text-rose-600 tracking-tight shrink-0 whitespace-nowrap"
+            >
               {dominantPressure.score > 999 ? '>999%' : `${dominantPressure.score.toFixed(1)}%`}
-            </span>
+            </motion.span>
           </div>
 
           <div className="text-base font-extrabold text-slate-900 tracking-tight">
@@ -100,12 +106,14 @@ export const DominantBottleneckCard: React.FC<DominantBottleneckCardProps> = ({
             </span>
           </div>
 
-          {/* Margin bar visualization */}
+          {/* Margin bar visualization with Framer Motion spring */}
           <div className="w-full bg-slate-200/80 h-2 rounded-full overflow-hidden border border-slate-200/60">
-            <div
-              className="bg-blue-600 h-full rounded-full transition-all duration-300"
-              style={{ width: `${Math.min(100, Math.max(5, (bottleneck.margin / Math.max(1, dominantPressure.score)) * 100))}%` }}
-            ></div>
+            <motion.div
+              className="bg-blue-600 h-full rounded-full"
+              initial={false}
+              animate={{ width: `${Math.min(100, Math.max(5, (bottleneck.margin / Math.max(1, dominantPressure.score)) * 100))}%` }}
+              transition={{ type: 'spring', damping: 22, stiffness: 140 }}
+            />
           </div>
         </div>
       </div>

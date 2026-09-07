@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import {
   BottleneckResult,
   CalculatedMetrics,
@@ -203,10 +204,15 @@ export const WbePipelineMap: React.FC<WbePipelineMapProps> = ({ bottleneck, metr
                 }`}
               >
                 {stage.isDominant && (
-                  <div className="absolute -top-3 right-4 bg-rose-600 text-white font-mono text-[9px] font-black uppercase tracking-wider px-3 py-0.5 rounded-full shadow-sm flex items-center space-x-1 animate-pulse ring-2 ring-white">
+                  <motion.div
+                    initial={{ scale: 0.85, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    transition={{ type: 'spring', bounce: 0.3 }}
+                    className="absolute -top-3 right-4 bg-rose-600 text-white font-mono text-[9px] font-black uppercase tracking-wider px-3 py-0.5 rounded-full shadow-sm flex items-center space-x-1 animate-pulse ring-2 ring-white"
+                  >
                     <AlertOctagon className="w-3 h-3" />
                     <span>#1 DOMINANT BOTTLENECK</span>
-                  </div>
+                  </motion.div>
                 )}
 
                 <div className="flex items-center justify-between">
@@ -246,12 +252,14 @@ export const WbePipelineMap: React.FC<WbePipelineMapProps> = ({ bottleneck, metr
                   </div>
                 </div>
 
-                {/* Pressure progress bar */}
+                {/* Pressure progress bar with Framer Motion spring */}
                 <div className="mt-3.5 w-full bg-slate-100 rounded-full h-2 overflow-hidden border border-slate-200/50">
-                  <div
-                    className={`h-full rounded-full transition-all duration-300 ${sev.bar}`}
-                    style={{ width: `${Math.min(100, Math.max(4, stage.pressureScore))}%` }}
-                  ></div>
+                  <motion.div
+                    className={`h-full rounded-full ${sev.bar}`}
+                    initial={false}
+                    animate={{ width: `${Math.min(100, Math.max(4, stage.pressureScore))}%` }}
+                    transition={{ type: 'spring', damping: 22, stiffness: 140 }}
+                  />
                 </div>
 
                 {/* Demand vs Capacity context chips */}
