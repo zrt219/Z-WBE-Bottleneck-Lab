@@ -39,7 +39,12 @@ app.get('*', (req, res, next) => {
   });
 });
 
-if (process.env.NODE_ENV !== 'test') {
+const isDirectExecution = process.argv[1] && (
+  process.argv[1].endsWith('server.ts') ||
+  process.argv[1].endsWith('server.js')
+);
+
+if (process.env.NODE_ENV !== 'test' && !process.env.VERCEL && isDirectExecution) {
   validateStartupEnvironment();
   app.listen(config.port, () => {
     console.log(`[Z-WBE Backend] Server listening on port ${config.port}`);

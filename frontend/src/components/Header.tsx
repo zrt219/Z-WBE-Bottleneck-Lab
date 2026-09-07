@@ -4,9 +4,10 @@ import { Activity, Compass, BookOpen, Layers, Zap, Cloud, Github } from 'lucide-
 
 interface HeaderProps {
   onStartTutorial?: () => void;
+  onOneClickDemo?: () => void;
 }
 
-export const Header: React.FC<HeaderProps> = ({ onStartTutorial }) => {
+export const Header: React.FC<HeaderProps> = ({ onStartTutorial, onOneClickDemo }) => {
   const location = useLocation();
 
   const handleStartTutorial = () => {
@@ -14,6 +15,14 @@ export const Header: React.FC<HeaderProps> = ({ onStartTutorial }) => {
       onStartTutorial();
     } else {
       window.dispatchEvent(new CustomEvent('zwbe:start-tour'));
+    }
+  };
+
+  const handleOneClickDemo = () => {
+    if (onOneClickDemo) {
+      onOneClickDemo();
+    } else {
+      window.dispatchEvent(new CustomEvent('zwbe:one-click-demo'));
     }
   };
 
@@ -96,6 +105,17 @@ export const Header: React.FC<HeaderProps> = ({ onStartTutorial }) => {
               <span>Cloud Run</span>
             </div>
 
+            {/* One-Click Demo Quick Button */}
+            <button
+              onClick={handleOneClickDemo}
+              data-testid="header-one-click-demo-button"
+              className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-gradient-to-r from-emerald-50 to-teal-50 hover:from-emerald-100 hover:to-teal-100 text-emerald-800 border border-emerald-300/80 font-bold text-xs shadow-2xs transition-all cursor-pointer shrink-0 hover:scale-105 active:scale-95"
+              title="Run 1-Click Hero Demo (100x Acceleration + Instant Grounded AI Explanation)"
+            >
+              <Zap className="w-3.5 h-3.5 text-emerald-600 fill-emerald-600 shrink-0" />
+              <span>⚡ 1-Click Demo</span>
+            </button>
+
             {/* Interactive Tutorial Button */}
             <button
               onClick={handleStartTutorial}
@@ -122,7 +142,14 @@ export const Header: React.FC<HeaderProps> = ({ onStartTutorial }) => {
       </div>
 
       {/* Mobile & Tablet Responsive Navigation Strip (<lg) */}
-      <div className="flex lg:hidden items-center justify-start sm:justify-center border-t border-slate-200/70 bg-white/95 px-3 py-2 overflow-x-auto gap-1 shadow-xs">
+      <div className="flex lg:hidden items-center justify-start sm:justify-center border-t border-slate-200/70 bg-white/95 px-3 py-2 overflow-x-auto gap-1.5 shadow-xs">
+        <button
+          onClick={handleOneClickDemo}
+          className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-bold whitespace-nowrap shrink-0 bg-emerald-50 text-emerald-800 border border-emerald-300 shadow-xs cursor-pointer"
+        >
+          <Zap className="w-3.5 h-3.5 text-emerald-600 fill-emerald-600 shrink-0" />
+          <span>⚡ 1-Click Demo</span>
+        </button>
         <button
           onClick={handleStartTutorial}
           className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-bold whitespace-nowrap shrink-0 bg-blue-50 text-blue-700 border border-blue-200 shadow-xs cursor-pointer"

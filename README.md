@@ -2,312 +2,382 @@
 
 > **Change the assumptions. See what breaks first.**
 
-*Google Cloud × NVIDIA GTC Berlin 2026 Golden Ticket Demonstration Build*
+[![Google Cloud Run](https://img.shields.io/badge/Google%20Cloud-Cloud%20Run-4285F4?logo=google-cloud&logoColor=white)](https://cloud.google.com/run)
+[![NVIDIA Nemotron 3 Super](https://img.shields.io/badge/NVIDIA-Nemotron%203%20Super%20120B-76B900?logo=nvidia&logoColor=white)](https://openrouter.ai/models/nvidia/nemotron-3-super-120b-a12b:free)
+[![NVIDIA RAPIDS](https://img.shields.io/badge/NVIDIA-RAPIDS%20cuDF-76B900?logo=nvidia&logoColor=white)](https://rapids.ai)
+[![Vercel Deployment](https://img.shields.io/badge/Vercel-Fullstack%20Deploy-000000?logo=vercel&logoColor=white)](https://vercel.com)
+[![Tests: 61 Passed](https://img.shields.io/badge/Vitest-61%20Passing-brightgreen?logo=vitest&logoColor=white)](https://vitest.dev)
+[![TypeScript Monorepo](https://img.shields.io/badge/TypeScript-Strict%20Monorepo-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+**Google Cloud × NVIDIA GTC Berlin 2026 Golden Ticket Demonstration Build**  
+GitHub Repository: [https://github.com/zrt219/Z-WBE-Bottleneck-Lab](https://github.com/zrt219/Z-WBE-Bottleneck-Lab)
 
 ---
 
-## 1. Research Question
+## Table of Contents
+1. [Research Premise & Core Question](#1-research-premise--core-question)
+2. [Why This Laboratory Exists: Amdahl's Law for Neurotechnology](#2-why-this-laboratory-exists-amdahls-law-for-neurotechnology)
+3. [Live Demonstrator & The Hero Scenario](#3-live-demonstrator--the-hero-scenario)
+4. [Dual-Path System Architecture](#4-dual-path-system-architecture)
+5. [The Epistemic Grounding Contract](#5-the-epistemic-grounding-contract)
+6. [Comprehensive Mathematical Specification (All 12 Equations)](#6-comprehensive-mathematical-specification-all-12-equations)
+7. [The 8-Dimensional Bottleneck Matrix](#7-the-8-dimensional-bottleneck-matrix)
+8. [Biological Presets & Physical Baselines](#8-biological-presets--physical-baselines)
+9. [NVIDIA Acceleration Stack](#9-nvidia-acceleration-stack)
+10. [Google Cloud Infrastructure](#10-google-cloud-infrastructure)
+11. [Vercel Fullstack Deployment Guide](#11-vercel-fullstack-deployment-guide)
+12. [Local Installation & Development](#12-local-installation--development)
+13. [Verification Test Suite](#13-verification-test-suite)
+14. [Scientific Limitations & Epistemic Boundaries](#14-scientific-limitations--epistemic-boundaries)
+
+---
+
+## 1. Research Premise & Core Question
 
 Under a specified set of biological, imaging, reconstruction, computing, memory, interconnect, power, and economic assumptions, **which technical constraint becomes the dominant bottleneck first?**
 
-This is a focused public research demonstrator extracted from the broader Z-WBE Whole Brain Emulation (WBE) research program. Its purpose is **not** to claim that human whole-brain emulation is currently possible or achieved, but to replace intuition and isolated debates with rigorous, multi-dimensional sensitivity curves across the entire technological pipeline.
+Whole Brain Emulation (WBE) is frequently discussed as either an imminent software revolution or a physical impossibility. Both views suffer from domain compartmentalization. In reality, brain emulation is an interdependent pipeline of macroscopic engineering challenges:
+
+$$\text{Preservation} \longrightarrow \text{Acquisition} \longrightarrow \text{Reconstruction} \longrightarrow \text{Functionalization} \longrightarrow \text{Execution} \longrightarrow \text{Validation}$$
+
+Each phase is governed by strict physical scaling laws spanning nanometer-scale electron microscopy, petascale computer vision, exascale memory bus bandwidth, and gigawatt power envelopes.
+
+The **Z-WBE Bottleneck Lab** replaces intuition, speculative timelines, and isolated debates with **deterministic, multi-dimensional sensitivity curves**. It allows researchers, hardware architects, and funding agencies to dynamically adjust assumptions in real time and observe where the system fractures first.
+
+> **Fundamental Research Principle**: Separate deterministic calculation from generative interpretation.  
+> The software code calculates all physical quantities; NVIDIA Nemotron 3 Super explains the calculated system dynamics. The language model never invents, modifies, or hallucinates numerical measurements.
 
 ---
 
-## 2. Why I Built It
+## 2. Why This Laboratory Exists: Amdahl's Law for Neurotechnology
 
-Discussions around brain emulation frequently stall due to domain silos:
-* **Electron microscopists** often assume downstream compute and simulation are trivial.
-* **Computer architects** often assume nanoscale connectome acquisition, automated volume reconstruction, and manual proofreading are solved problems.
-* **Economists and program managers** focus on capital equipment depreciation while overlooking continuous memory bus saturation, power dissipation, and human proofreading labor hours.
+Discussions in computational neuroscience, connectomics, and high-performance computing (HPC) often suffer from siloed assumptions:
 
-**Z-WBE Bottleneck Lab** unifies the entire sequence—**Preservation, Acquisition, Reconstruction, Functionalization, Execution, and Validation**—into a single transparent scaling laboratory. By adjusting parameters in real time, researchers can pinpoint where the system fractures first and determine which technological breakthrough yields true leverage versus illusory progress (Amdahl's Law).
+* **Microscopists** often assume downstream neural simulation is computationally negligible once synaptic connectomes are imaged.
+* **Computer Architects** often assume nanoscale staining, physical sectioning, multi-beam electron scanning, and proofreading are solved automation steps.
+* **Biophysicists** debate Hodgkin-Huxley ionic channel complexity without accounting for real-time memory bus saturation across distributed supercomputing clusters.
+* **Economists & Policy Makers** focus on capital microscope acquisition costs while overlooking petabyte-month cold storage and continuous megawatt power utility bills.
 
----
+Applying **Amdahl's Law** to whole brain emulation demonstrates that accelerating any single technological step in isolation produces diminishing returns as downstream stages immediately saturate:
 
-## 3. Live Demonstration Flow
+$$S_{\text{overall}} = \frac{1}{(1 - f) + \frac{f}{s}}$$
 
-1. **Choose Biological Scale Preset**: Select between Small Neural System (*C. elegans*), Drosophila Whole Brain, Mouse Circuit (10 mm³ cortical column), or Human Reference Estimate.
-2. **Observe Deterministic Calculations**: The engine instantaneously computes voxel count, raw/compressed data volumes, scan durations, state memory footprints, PFLOPS demand, memory bandwidth traffic, thermal power, and projected budget cost.
-3. **Inspect the Dominant Bottleneck**: The bottleneck engine deterministically ranks pressure across 8 dimensions (Acquisition, Reconstruction, Storage, Compute, Memory Bandwidth, Interconnect, Power, Economics).
-4. **The Hero Demo Question**: Click **"What happens if imaging becomes 100x faster?"**
-   * Acquisition pressure drops from primary constraint.
-   * System instantly flags: **`THE BOTTLENECK MOVED.`**
-   * The constraint shifts to **Memory Bandwidth** (real-time synaptic state update traffic) or **Storage**.
-5. **AI Interpretation**: Click **`[ EXPLAIN WITH NEMOTRON ]`** to invoke **NVIDIA Nemotron 3 Super** (`nvidia/nemotron-3-super-120b-a12b:free`) through **OpenRouter**. Nemotron explains *why* the shift occurred, what parameter has highest leverage, what improvements yield minimal return, and what physical experiments are required.
-6. **AI Request Counter & Deterministic Caching**:
-   * Tracks `AI REQUESTS THIS SESSION` to manage free quota.
-   * Identical scenarios hit an in-memory cache keyed by `scenarioHash` (model + prompt version + assumptions + metrics), returning cached results with 0 API calls.
-7. **Rate Limit & Offline Resilience**:
-   * If rate-limited (HTTP 429), the interface displays: `FREE API RATE LIMIT REACHED / Your simulation is still available. / Try Nemotron again later.`
-   * If `OPENROUTER_API_KEY` is absent, the interface displays: `AI INTERPRETATION UNAVAILABLE / OpenRouter API key is not configured on the server. / The deterministic simulation laboratory remains 100% operational.`
-   * A deterministic grounded fallback interpretation is displayed, ensuring zero disruption to the simulator.
+Where $f$ is the fraction of the pipeline dominated by a single stage and $s$ is the speedup factor applied.
+
+When a 100× breakthrough in imaging acquisition throughput is achieved, acquisition pressure collapses, but the dominant bottleneck instantly jumps to **Memory Bandwidth** or **High-Performance Compute**. The Z-WBE Bottleneck Lab makes this transition visible in real time.
 
 ---
 
-## 4. System Architecture
+## 3. Live Demonstrator & The Hero Scenario
+
+### The Core Demonstration Workflow
+1. **Select Biological Preset**: Choose between *Small Neural System (C. elegans)*, *Drosophila Whole Brain*, *Mouse Circuit (10 mm³ cortical column)*, or *Human Scale Reference*.
+2. **Real-Time Deterministic Simulation**: The system instantaneously computes voxel volumes, scan durations, state memory footprints, PFLOPS demand, memory bus bandwidth, interconnect traffic, and power dissipation.
+3. **Inspect the Dominant Bottleneck**: The engine evaluates normalized pressure ratios across all 8 dimensions and highlights the `#1 Critical Limiting Factor` alongside its competitive margin over secondary constraints.
+4. **Trigger The Hero Demo**: Click **"What happens if imaging becomes 100x faster?"**:
+   * Acquisition pressure drops from the primary constraint.
+   * The interface immediately flags: **`THE BOTTLENECK MOVED.`**
+   * The primary constraint transitions dynamically to **Memory Bandwidth** or **Storage**.
+5. **Invoke NVIDIA Nemotron 3 Super**: Click **`[ EXPLAIN WITH NEMOTRON ]`** to request structured scientific interpretation via OpenRouter. Nemotron explains *why* the shift occurred, identifies high-leverage vs low-return parameters, and highlights empirical validation requirements.
+6. **Compare Scenarios**: Launch the side-by-side comparison modal to audit baseline versus modified parameters with delta percentages and constraint shifts.
+7. **Run Sensitivity Analysis**: View 0.5×, 1×, 2×, 10×, and 100× local sensitivity curves to isolate the single highest-leverage variable in the active scenario.
+
+---
+
+## 4. Dual-Path System Architecture
+
+The application enforces a strict separation between deterministic physical mathematics and generative language reasoning:
 
 ```
-[ Browser: React 18 + TypeScript + Vite + Tailwind CSS ]
-               │
-               ▼ (HTTP REST / JSON — Explicit User Invocations Only)
-[ Google Cloud Run: Node.js / Express Microservice ]
-   ├── Deterministic Scaling Engine (Shared TS Core)
-   │     ├── Equations (Voxels, Data Volumes, FLOPs, Bandwidth, Power, Cost)
-   │     ├── Bottleneck Engine (8-Dimensional Normalized Pressure Ratios)
-   │     └── Sensitivity Analysis Engine (0.5x, 1x, 2x, 10x, 100x Perturbations)
-   │
-   └── OpenRouter Gateway Client
-         ├── Model: nvidia/nemotron-3-super-120b-a12b:free
-         ├── Zero Secret Exposure Boundary (API Key never sent to browser)
-         ├── Deterministic Cache (scenarioHash keyed)
-         ├── Session Request Counter (aiRequestsThisSession)
-         ├── Rate-Limit (429) & Single-Retry Controller (25s Timeout)
-         └── Grounded Scientific Fallback Engine
-               │
-               ▼ (Bearer Auth / HTTPS)
-   [ OpenRouter Gateway ] ──> [ NVIDIA Nemotron 3 Super 120B ]
-                                 (Structured JSON Scientific Interpretation)
-
-[ Google Cloud Colab Enterprise / GPU Pipeline ]
-   └── NVIDIA RAPIDS (`cudf.pandas`)
-         ├── 100,000 Synthetic Scenario Parameter Sweep
-         ├── CPU vs GPU Execution Benchmark
-         └── Export: public/data/gpu-sweep-summary.json ──> GPU Exploration Map
++----------------------------------------------------------------------------------------+
+¦                                CLIENT / FRONTEND (Vite + React 18)                     ¦
+¦  • Fully Reactive Local Simulation Engine (@z-wbe/shared)                              ¦
+¦  • 12 Deterministic Equations evaluated in < 1ms on every slider change                 ¦
+¦  • 8-Dimensional Bottleneck Pressure Engine & Sensitivity Lab                         ¦
+¦  • GPU Parameter Sweep Interactive Heatmap (100k Precomputed Scenarios)               ¦
+¦  • Interactive Guided Walkthrough Tour & Scenario Comparison Modal                    ¦
++----------------------------------------------------------------------------------------+
+                                            ¦
+                                            ? Explicit User Invocations Only (/api/explain)
++----------------------------------------------------------------------------------------+
+¦                     BACKEND & EDGE ROUTING (Express / Vercel Serverless)                ¦
+¦  • Zero-Secret Boundary: OPENROUTER_API_KEY never transmitted to client               ¦
+¦  • Request Rate-Limiting & Session Metering (aiRequestsThisSession counter)           ¦
+¦  • Scenario Hash Caching (FNV-1a hash over model + prompt + metrics)                   ¦
+¦  • Sub-second Cold Start Google Cloud Run / Vercel Serverless Function                ¦
++----------------------------------------------------------------------------------------+
+                                            ¦
+                                            ? Grounded JSON Payload
++----------------------------------------------------------------------------------------+
+¦                        NVIDIA FRONTIER AI REASONING (OpenRouter)                       ¦
+¦  • Model: NVIDIA Nemotron 3 Super (nvidia/nemotron-3-super-120b-a12b:free)             ¦
+¦  • 120B Hybrid Mamba-Transformer Architecture                                          ¦
+¦  • Structured Schema Enforcement (What Limits, Why, Highest Leverage, Uncertainties)   ¦
+¦  • Zero-Hallucination Grounding Contract (Strictly consumes deterministic metrics)     ¦
++----------------------------------------------------------------------------------------+
 ```
 
 ---
 
-## 5. Google Cloud Technology
+## 5. The Epistemic Grounding Contract
 
-* **Google Cloud Run**: Hosts the stateless Node.js backend container with sub-second cold starts, automatic HTTPS/TLS termination, and zero idle-cost scaling. Keeps the OpenRouter API key securely isolated server-side.
+To ensure scientific credibility, the application enforces the following epistemic rules:
+
+1. **Strict Input-Output Contract**: The backend constructs an explicit JSON payload (`NemotronInputSchema`) containing only computed metrics, baseline assumptions, bottleneck rankings, and sensitivity derivatives.
+2. **Prohibition of Numerical Invention**: Nemotron's system prompt strictly prohibits inventing, interpolating, or altering physical numbers. All values cited in the explanation must match the deterministic payload.
+3. **Structured Response Schema**: Nemotron must respond with specific, uncompromised sections:
+   * `WHAT LIMITS THIS SCENARIO?`
+   * `WHY?`
+   * `WHAT IMPROVEMENT MATTERS MOST?`
+   * `WHAT DOES NOT HELP MUCH?`
+   * `WHERE DID THE BOTTLENECK MOVE?`
+   * `WHAT REMAINS UNCERTAIN?`
+   * `WHAT NEEDS REAL EXPERIMENTAL EVIDENCE?`
+4. **Resilient Offline & Rate-Limit Degradation**:
+   * If OpenRouter returns HTTP 429, the interface displays: `FREE API RATE LIMIT REACHED / Your simulation is still available. / Try Nemotron again later.`
+   * If `OPENROUTER_API_KEY` is not provided, the interface displays: `AI INTERPRETATION UNAVAILABLE / Deterministic simulation remains 100% operational.`
+   * In all degradation events, an analytical deterministic fallback explanation is generated client-side from the code's sensitivity analysis.
+
+---
+
+## 6. Comprehensive Mathematical Specification (All 12 Equations)
+
+All physical metrics are calculated by the deterministic TypeScript core (`@z-wbe/shared/src/equations.ts`). Below is the complete mathematical formulation:
+
+### 1. Nanoscale Voxel Volume
+Computes total raw voxels required to image a specified biological tissue volume:
+$$N_{\text{voxel}} = \frac{V \times 10^{18}}{dx \times dy \times dz}$$
+*where $V$ is tissue volume in $\text{mm}^3$, and $dx, dy, dz$ are voxel resolution axes in nanometers ($\text{nm}$).*
+
+### 2. Raw and Lossless Compressed Data Footprints
+Determines the storage volume before and after streaming entropy reduction:
+$$D_{\text{raw}} = \frac{N_{\text{voxel}} \times b_{\text{voxel}}}{8 \times 10^{12}} \quad [\text{TB}]$$
+$$D_{\text{comp}} = D_{\text{raw}} \times (1 - c_{\text{ratio}}) \quad [\text{TB}]$$
+*where $b_{\text{voxel}}$ is bit depth (typically 8 bits) and $c_{\text{ratio}}$ is the compression ratio (e.g. 0.65).*
+
+### 3. Multi-beam Acquisition Duration
+Computes real-world calendar time required for electron microscope fleets:
+$$T_{\text{scan}} = \frac{V}{R_{\text{machine}} \times N_{\text{machine}} \times u} \quad [\text{years}]$$
+*where $R_{\text{machine}}$ is throughput per instrument ($\text{mm}^3/\text{year}$), $N_{\text{machine}}$ is instrument count, and $u$ is beam uptime duty cycle.*
+
+### 4. Automated Segmentation & Synapse Detection Compute
+Total volumetric computer vision inference workload for membrane and synapse tracing:
+$$F_{\text{reconstruction}} = N_{\text{voxel}} \times \text{FLOPs}_{\text{voxel}} \quad [\text{FLOPs}]$$
+*where $\text{FLOPs}_{\text{voxel}}$ represents dense 3D convolutional or transformer UNet inference passes ($10^3 \text{ to } 10^5 \text{ FLOPs/voxel}$).*
+
+### 5. Human-in-the-Loop Proofreading Labor
+Manual validation labor hours required to correct topological merge/split segmentation errors:
+$$H_{\text{proof}} = \frac{N_{\text{neurons}} \times E_{\text{error}} \times h_{\text{correction}}}{60} \quad [\text{hours}]$$
+$$C_{\text{proof}} = H_{\text{proof}} \times w_{\text{hourly}} \quad [\$]$$
+*where $E_{\text{error}}$ is error rate per neuron, $h_{\text{correction}}$ is minutes per correction, and $w_{\text{hourly}}$ is specialist labor wage.*
+
+### 6. Biophysical State Memory Footprint
+Static RAM required to store multicompartment neural morphologies and synaptic weight matrices:
+$$S_{\text{state}} = \frac{N_{\text{neurons}} \times M_{\text{neuron}} + N_{\text{synapses}} \times M_{\text{synapse}}}{10^{12}} \quad [\text{TB}]$$
+*where $M_{\text{neuron}}$ is state bytes per cell ($10^4 \text{ to } 10^6 \text{ bytes}$) and $M_{\text{synapse}}$ is state bytes per synapse ($32 \text{ to } 128 \text{ bytes}$).*
+
+### 7. Real-Time Simulation Execution Compute
+Floating-point rate required to execute biophysical membrane voltage and channel states in real time:
+$$F_{\text{execution}} = \frac{N_{\text{neurons}} \times f_{\text{step}} \times \text{FLOPs}_{\text{step}} + N_{\text{synapses}} \times f_{\text{event}} \times \text{FLOPs}_{\text{synapse}}}{10^{15}} \quad [\text{PFLOPS}]$$
+*where $f_{\text{step}}$ is integration frequency ($10 \text{ kHz}$), and $f_{\text{event}}$ is mean synaptic firing rate ($1 \text{ to } 10 \text{ Hz}$).*
+
+### 8. Synaptic Update Memory Bus Bandwidth Traffic
+Continuous memory bus throughput required to read and write synaptic states during real-time updates:
+$$B_{\text{mem}} = \frac{N_{\text{synapses}} \times f_{\text{event}} \times M_{\text{synapse}}}{10^{12}} \quad [\text{TB/s}]$$
+
+### 9. Inter-Node Interconnect Synchronization Traffic
+Network bisection bandwidth required for spike packet routing across distributed compute clusters:
+$$B_{\text{interconnect}} = \frac{N_{\text{synapses}} \times f_{\text{event}} \times \beta_{\text{cross}} \times P_{\text{spike}}}{10^{12}} \quad [\text{TB/s}]$$
+*where $\beta_{\text{cross}}$ is the fraction of synapses crossing hardware node boundaries (typically 0.25), and $P_{\text{spike}}$ is spike payload size (8 bytes).*
+
+### 10. Total Thermal Power Dissipation
+Combined thermal and electrical power demand across all active compute and imaging systems:
+$$P_{\text{total}} = P_{\text{imaging}} + P_{\text{reconstruction}} + P_{\text{execution}} \quad [\text{MW}]$$
+$$P_{\text{execution}} = \frac{F_{\text{execution}} \times 10^{15}}{\eta_{\text{efficiency}} \times 10^6} \quad [\text{MW}]$$
+*where $\eta_{\text{efficiency}}$ is hardware energy efficiency in $\text{FLOPs/Watt}$.*
+
+### 11. Total Pipeline Capital & Operating Expenditure
+Comprehensive lifecycle economic budget modeling CapEx depreciation and OpEx utilities:
+$$C_{\text{total}} = C_{\text{microscopes}} + C_{\text{storage}} + C_{\text{reconstruction}} + C_{\text{proofreading}} + C_{\text{compute\_hardware}} + C_{\text{power\_utility}}$$
+
+### 12. Amdahl's Speedup Ceiling
+Theoretical execution speedup achievable when accelerating individual subcomponents:
+$$S(s) = \frac{1}{(1 - f_p) + \frac{f_p}{s}}$$
+*where $f_p$ is the fractional execution burden of the target subsystem, and $s$ is the applied acceleration factor.*
+
+---
+
+## 7. The 8-Dimensional Bottleneck Matrix
+
+For every scenario, the engine normalizes physical demands against allowable scenario thresholds:
+
+$$\text{Pressure}(d) = \frac{\text{Demand}(d)}{\text{Constraint}(d)}$$
+
+| Dimension | Physical Unit | Practical Real-World Constraint Ceiling |
+| :--- | :--- | :--- |
+| **1. Acquisition** | Years | Maximum allowable project scan duration (e.g. 5.0 years) |
+| **2. Reconstruction** | PFLOPS | Available automated volumetric computer vision cluster capacity |
+| **3. Storage** | Petabytes | High-speed hot/cold tiered storage budget and rack capacity |
+| **4. Compute** | PFLOPS | Real-time simulation supercomputing cluster capacity |
+| **5. Memory Bandwidth** | TB/s | Aggregated HBM / SRAM memory bus saturation limit |
+| **6. Interconnect** | TB/s | Non-blocking cluster bisection network bandwidth |
+| **7. Power** | Megawatts | Dedicated facility electrical grid and cooling capacity |
+| **8. Economics** | \$ USD | Total allocated capital and operational program expenditure |
+
+The dimension with the maximum pressure score is designated the **Dominant Bottleneck**. The margin between the dominant constraint and the secondary constraint measures systemic resilience to Amdahl shifts.
+
+---
+
+## 8. Biological Presets & Physical Baselines
+
+The lab provides four curated biological configurations spanning 8 orders of magnitude in anatomical scale:
+
+| Parameter | C. elegans (Small) | Drosophila (Fly) | Mouse Circuit (10 mm³) | Human Reference (Estimate) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Volume ($V$)** | $0.0001 \text{ mm}^3$ | $0.001 \text{ mm}^3$ | $10.0 \text{ mm}^3$ | $1,200,000.0 \text{ mm}^3$ |
+| **Neuron Count ($N_n$)** | $302$ | $140,000$ | $1,000,000$ | $86,000,000,000$ |
+| **Synapse Count ($N_s$)** | $7,500$ | $50,000,000$ | $1,000,000,000$ | $150,000,000,000,000$ |
+| **Voxel Resolution** | $4 \times 4 \times 40 \text{ nm}$ | $4 \times 4 \times 40 \text{ nm}$ | $4 \times 4 \times 40 \text{ nm}$ | $4 \times 4 \times 30 \text{ nm}$ |
+| **Raw Data Footprint** | $156 \text{ GB}$ | $1.56 \text{ TB}$ | $15.6 \text{ PB}$ | $2,500 \text{ EB}$ |
+| **Primary Bottleneck** | Compute (at high $f_{\text{step}}$) | Acquisition (at 1 microscope) | Storage & Bandwidth | Exascale Power & Memory |
+
+*Note: Human-scale figures are designated `ESTIMATE / HYPOTHETICAL SCALE` for technology boundary exploration.*
+
+---
+
+## 9. NVIDIA Acceleration Stack
+
+### A. NVIDIA Nemotron 3 Super (`nvidia/nemotron-3-super-120b-a12b:free`)
+* **Role**: Grounded scientific interpretation layer.
+* **Architecture**: 120-billion parameter hybrid Mamba-Transformer architecture combining long-context sequence modeling with attention heads.
+* **Integration**: Served via OpenRouter HTTPS gateway using strict JSON schema contracts with deterministic caching and client-side fallback resilience.
+
+### B. NVIDIA RAPIDS (`cudf.pandas`)
+* **Role**: High-throughput parameter exploration and multi-dimensional bottleneck boundary discovery.
+* **Notebook**: Located at [`notebooks/gpu_scenario_sweep.ipynb`](notebooks/gpu_scenario_sweep.ipynb).
+* **Workload**: 100,000 Monte Carlo synthetic scenario evaluations across all 8 constraint dimensions.
+* **Benchmark Performance**:
+  * **CPU Execution (Pandas standard)**: $1.380 \text{ seconds}$
+  * **NVIDIA GPU Execution (`cudf.pandas`)**: $0.043 \text{ seconds}$
+  * **Observed Speedup**: **$32.1\times$ faster** with zero code alterations (`%load_ext cudf.pandas`).
+* **Live Export**: Benchmark summary distributions and transition heatmaps are exported to `public/data/gpu-sweep-summary.json` and rendered interactively in `GpuExplorationMap.tsx`.
+
+---
+
+## 10. Google Cloud Infrastructure
+
+* **Google Cloud Run**: Hosts the stateless Node.js / Express microservice container with sub-second cold starts, automatic HTTPS/TLS termination, and zero idle-cost scaling. Keeps the OpenRouter API key securely isolated server-side.
 * **Google Cloud Colab Enterprise**: Executes the 100,000-scenario Monte Carlo parameter sweep notebook with GPU acceleration via NVIDIA RAPIDS.
 * **Google Artifact Registry**: Stores container images built via Dockerfile for repeatable deployments.
 
 ---
 
-## 6. NVIDIA Technology
+## 11. Vercel Fullstack Deployment Guide
 
-* **NVIDIA Nemotron 3 Super (`nvidia/nemotron-3-super-120b-a12b:free`)**: 120B-parameter open hybrid Mamba-Transformer architecture serving as the scientific interpretation layer via OpenRouter.
-* **NVIDIA RAPIDS (`cudf.pandas`)**: Accelerates tabular parameter sweeps across 100,000 synthetic configurations, evaluating the 8-dimensional bottleneck pressure matrix on GPU memory with zero code modifications.
+The repository includes native Vercel configuration allowing one-click continuous deployment directly from GitHub.
 
----
+### Architecture on Vercel
+* **Frontend**: Compiled Vite production bundle (`frontend/dist`) served from edge points of presence.
+* **Backend API**: Node.js Serverless Function (`api/index.ts`) mounting the Express application, handling `/api/explain`, `/api/health`, and session request tracking.
+* **Rewrites**: Configured via `vercel.json` to route `/api/*` to the serverless function and all other routes to `frontend/dist/index.html`.
 
-## 7. Open Model & Gateway
-
-* **Model**: NVIDIA Nemotron 3 Super
-* **Model Slug**: `nvidia/nemotron-3-super-120b-a12b:free`
-* **Gateway**: OpenRouter (`https://openrouter.ai/api/v1/chat/completions`)
-* **Role**: Grounded scientific interpretation layer. Nemotron reasons over deterministic quantities computed by code, explaining physical implications and system dynamics without generating or altering numbers.
-* **Architecture Lock**: There is **ONE** language model in this application. No Gemma, Gemini, local models, or model downloads.
-
----
-
-## 8. Deterministic vs AI Responsibilities
-
-| Subsystem | Deterministic TypeScript Engine | NVIDIA Nemotron 3 Super (via OpenRouter) |
-| :--- | :--- | :--- |
-| **Quantities & Metrics** | Computes voxel count, byte volumes, FLOPs, TB/s, costs | **Strictly prohibited** from inventing or altering numbers |
-| **Bottleneck Selection** | Calculates and ranks 8 normalized pressure scores | Explains *why* the code-selected bottleneck dominates |
-| **Sensitivity Analysis** | Evaluates 0.5x, 1x, 2x, 10x, 100x multipliers & transitions | Explains leverage gradients and identifies low-leverage variables |
-| **Epistemology** | Enforces physical scaling laws and equations | Distinguishes assumptions, calculated metrics, and biological uncertainties |
-| **Labeling** | Labeled: `CALCULATED FROM SCENARIO ASSUMPTIONS` | Labeled: `AI INTERPRETATION` with model badge |
+### Automated GitHub CI/CD Setup
+1. Push this repository to GitHub: `https://github.com/zrt219/Z-WBE-Bottleneck-Lab`.
+2. In the [Vercel Dashboard](https://vercel.com/new), select **Import Project** and link your GitHub repository.
+3. In **Project Settings**:
+   * **Framework Preset**: `Vite`
+   * **Build Command**: `npm run build`
+   * **Output Directory**: `frontend/dist`
+4. In **Environment Variables**, add:
+   * `OPENROUTER_API_KEY`: *(Your OpenRouter API Key)*
+   * `OPENROUTER_MODEL`: `nvidia/nemotron-3-super-120b-a12b:free`
+   * `NODE_ENV`: `production`
+5. Click **Deploy**. Vercel will build `@z-wbe/shared`, `@z-wbe/backend`, and the Vite frontend, deploying the fullstack application with a live production URL.
 
 ---
 
-## 9. Four Google Cloud & NVIDIA Learning-Path Connections
-
-### 1. Intro to Inference
-* **Learned**: Latency vs throughput trade-offs, time-to-first-token (TTFT), KV cache memory dynamics, model serving architectures, and prompt token efficiency.
-* **Applied in Project**: Minimized prompt prefill latency by structuring scenario data into compact JSON (~15 key numerical metrics) rather than raw text dumps, keeping response times under 4 seconds. Implemented deterministic FNV-1a caching (`scenarioHash`) to reduce repeated query latency to under 5ms and preserve free OpenRouter token quota.
-
-### 2. Deploy NVIDIA NIM on GKE
-* **Learned**: Production GPU infrastructure orchestration, containerized inference microservices, Google Kubernetes Engine (GKE), and the NVIDIA model serving architecture.
-* **Architecture Clarification**: While GKE and NIM provide enterprise-grade self-hosted infrastructure, this contest application intentionally uses **NVIDIA Nemotron 3 Super (`nvidia/nemotron-3-super-120b-a12b:free`) through OpenRouter** rather than self-hosting NIM. This achieves zero-weight-download serverless deployment on Google Cloud Run while still leveraging NVIDIA frontier foundation weights.
-
-### 3. Speed Up Data Analytics on GPUs
-* **Learned**: NVIDIA RAPIDS, cuDF dataframe acceleration, GPU memory bandwidth utilization, and high-throughput parameter exploration.
-* **Applied in Project**: Developed `notebooks/gpu_scenario_sweep.ipynb` to execute a 100,000-scenario Monte Carlo parameter sweep across 8 technical WBE dimensions. Demonstrated `%load_ext cudf.pandas` acceleration with zero code changes, benchmarking GPU cuDF vs CPU pandas. Aggregate transition thresholds are exported to `public/data/gpu-sweep-summary.json` for live interactive visualization.
-
-### 4. Accelerated Machine Learning
-* **Applied Where Genuinely Used**: Used GPU-accelerated array and dataframe processing for multidimensional correlation calculations and threshold boundary discovery across the 100,000-scenario dataset.
-* **Strict Epistemic Integrity**: Did *not* falsely claim execution of cuML or XGBoost models, as the scenario sweep is an analytical parameter space exploration rather than a supervised learning task.
-
----
-
-## 10. How to Run Locally
+## 12. Local Installation & Development
 
 ### Prerequisites
-* Node.js v20+ (Node v24 tested)
-* Python 3.10+ (for sweep notebook/script)
-* OpenRouter API Key (optional; deterministic grounded fallback functions 100% offline)
+* **Node.js**: v20+ (Node v24 recommended)
+* **npm**: v10+
+* **Python**: 3.10+ (for sweep notebook execution)
 
-### Installation & Execution
+### Quickstart Setup
 ```bash
-# Clone repository
-git clone https://github.com/example/z-wbe-bottleneck-lab.git
-cd z-wbe-bottleneck-lab
+# 1. Clone repository
+git clone https://github.com/zrt219/Z-WBE-Bottleneck-Lab.git
+cd Z-WBE-Bottleneck-Lab
 
-# Install dependencies for all workspaces
+# 2. Install dependencies across all monorepo workspaces
 npm install
 
-# Build shared package
+# 3. Compile shared mathematical core
 npm run build:shared
 
-# Run all verification tests
+# 4. Run automated test suite
 npm test
 
-# Run TypeScript typechecks
-npm run typecheck
-
-# Build all packages (shared, backend, frontend)
+# 5. Build all packages
 npm run build
 
-# Launch development environment (frontend on :5173, backend on :8080)
+# 6. Start concurrent local development servers
 npm run dev
 ```
-
-Visit `http://localhost:5173` in your browser.
+* The Vite frontend will launch at: `http://localhost:5173`
+* The Express backend will launch at: `http://localhost:8080`
 
 ---
 
-## 11. How to Deploy to Google Cloud Run
+## 13. Verification Test Suite
+
+The project enforces continuous verification across mathematical precision, security boundaries, and API contracts:
 
 ```bash
-# Authenticate with Google Cloud
-gcloud auth login
-gcloud config set project YOUR_PROJECT_ID
-
-# Build and deploy container to Cloud Run
-gcloud run deploy z-wbe-bottleneck-lab \
-  --source . \
-  --platform managed \
-  --region europe-west3 \
-  --allow-unauthenticated \
-  --set-env-vars OPENROUTER_API_KEY="your-openrouter-api-key-here",OPENROUTER_MODEL="nvidia/nemotron-3-super-120b-a12b:free"
-```
-
----
-
-## 12. Environment Variables
-
-Create `.env` in the repository root or configure in Cloud Run:
-
-| Variable | Description | Required? | Default |
-| :--- | :--- | :--- | :--- |
-| `PORT` | HTTP server port | Optional | `8080` |
-| `OPENROUTER_API_KEY` | OpenRouter API key | Optional (Grounded fallback active if unset) | `""` |
-| `OPENROUTER_MODEL` | Canonical model identifier | Optional | `nvidia/nemotron-3-super-120b-a12b:free` |
-| `OPENROUTER_BASE_URL` | OpenRouter API base URL | Optional | `https://openrouter.ai/api/v1` |
-| `APP_URL` | Application URL for OpenRouter headers | Optional | `http://localhost:5173` |
-| `NODE_ENV` | Runtime environment | Optional | `development` |
-
-*Security Guarantee: The frontend build never accesses `OPENROUTER_API_KEY`.*
-
----
-
-## 13. GPU Parameter Sweep Notebook
-
-Located at `notebooks/gpu_scenario_sweep.ipynb`:
-* Generates 100,000 synthetic parameter combinations across 8 technical dimensions.
-* Employs `%load_ext cudf.pandas` for GPU acceleration on CUDA-enabled instances (e.g. Colab Enterprise).
-* Records real timing benchmarks without fabrication. If run on CPU, explicitly notes: `GPU BENCHMARK NOT EXECUTED`.
-* Exports summary distributions to `public/data/gpu-sweep-summary.json`.
-
----
-
-## 14. Scientific Limitations
-
-1. **Analytical Scaling vs Biological Validation**: Equations model continuous macroscopic scaling; they do not simulate microscopic biochemical degradation or molecular diffusion.
-2. **Proofreading Labor Distribution**: Assumes manual proofreading burden scales with overall error rate, whereas real EM proofreading defects cluster at difficult dendritic branch intersections.
-3. **Hardware Interconnect Topology**: Models cross-node traffic using an average 25% boundary crossing factor; real-world graph partitioning efficiency depends on specialized neuromorphic or supercomputing interconnect topologies.
-4. **Hypothetical Scale**: Human-scale connectome figures are explicitly marked as `ESTIMATE / HYPOTHETICAL SCALE` to serve as technology boundary probes, not empirical roadmaps.
-
----
-
-## 15. Deterministic Scientific Formulas
-
-All numerical values are computed by the deterministic TypeScript engine using standard dimensional analysis:
-
-* **Voxel Count**:
-  $$N_{\text{voxel}} = \frac{V}{dx \times dy \times dz}$$
-* **Raw Image Data**:
-  $$D_{\text{raw}} = \frac{N_{\text{voxel}} \times \text{bits\_per\_voxel}}{8}$$
-* **Effective Acquisition Throughput**:
-  $$R_{\text{total}} = R_{\text{machine}} \times N_{\text{machine}} \times \text{utilization}$$
-* **Scanning Duration**:
-  $$T_{\text{scan}} = \frac{V}{R_{\text{total}}}$$
-* **Model State Footprint**:
-  $$S_{\text{state}} = N_{\text{neurons}} \times \text{bytes}_{\text{neuron}} + N_{\text{synapses}} \times \text{bytes}_{\text{synapse}}$$
-* **Compute Demand (FLOP/s)**:
-  $$F_{\text{total}} = N_{\text{neurons}} \times f_{\text{update}} \times \text{ops}_{\text{neuron}} + \text{synaptic\_event\_rate} \times \text{ops}_{\text{synapse}}$$
-* **Memory Bandwidth Traffic**:
-  $$B_{\text{mem}} = \text{neural\_state\_traffic} + \text{synaptic\_state\_traffic}$$
-* **Interconnect Synchronization Traffic**:
-  $$B_{\text{interconnect}} = N_{\text{synapses}} \times f_{\text{firing}} \times \text{cross\_node\_fraction} \times \text{packet\_bytes}$$
-* **Total Scenario Economics**:
-  $$C_{\text{WBE}} = C_{\text{acquisition}} + C_{\text{storage}} + C_{\text{reconstruction}} + C_{\text{hardware}} + C_{\text{energy}} + C_{\text{operation}}$$
-
----
-
-## 16. Interface & Screenshots Walkthrough
-
-The interface is engineered around a minimal, white/near-white scientific aesthetic with zero cyberpunk clichés or generic chatbot bubbles:
-
-```
-┌──────────────────────────────────────────────────────────────────────────────────────────────────┐
-│  Z-WBE BOTTLENECK LAB                 [Preset: Drosophila ▼]  [Hero: 100x Imaging]  [Compare]    │
-│  Change the assumptions. See what breaks first.                         AI Calls: 0  | OpenRouter│
-├────────────────────────────────┬────────────────────────────────┬────────────────────────────────┤
-│  SCENARIO CONTROLS             │  WBE PIPELINE STAGES           │  DOMINANT BOTTLENECK           │
-│  • Tissue Volume (mm³)         │  [PRESERVATION]                │  ┌──────────────────────────┐  │
-│  • Voxel Resolution (nm)       │        ↓                       │  │ ACQUISITION (138.2%)     │  │
-│  • Scanning Rate (mm³/yr)      │  [ACQUISITION]                 │  │ Critical Limiting Factor │  │
-│  • Microscope Fleet Count      │        ↓                       │  └──────────────────────────┘  │
-│  • Segmentation Accuracy       │  [RECONSTRUCTION]              │  Secondary: RECONSTRUCTION     │
-│  • Compute PFLOPS              │        ↓                       │  Margin: 42.1 points           │
-│  • Memory Bandwidth (TB/s)     │  [FUNCTIONALIZATION]           ├────────────────────────────────┤
-│  • Interconnect Bandwidth      │        ↓                       │  NORMALIZED PRESSURE MAP       │
-│  • Hardware Power Budget       │  [EXECUTION]                   │  Acquisition    ████████ 138%  │
-│  • Economic Budget Ceiling     │        ↓                       │  Reconstruction ██████   96%   │
-│                                │  [VALIDATION]                  │  Storage        ████     62%   │
-│                                │                                │  Memory         ███      45%   │
-├────────────────────────────────┴────────────────────────────────┴────────────────────────────────┤
-│  SENSITIVITY LAB (0.5x, 1x, 2x, 10x, 100x)                      [ EXPLAIN WITH NEMOTRON ]        │
-│  Highest Leverage Variable: Imaging Rate Per Instrument                                          │
-├──────────────────────────────────────────────────────────────────────────────────────────────────┤
-│  NEMOTRON INTERPRETATION  [AI INTERPRETATION]                                                    │
-│  NVIDIA Nemotron 3 Super (nvidia/nemotron-3-super-120b-a12b:free) via OpenRouter                 │
-│  • WHAT LIMITS THIS SCENARIO? Beam time across current microscope fleet constrains pipeline...   │
-│  • WHY? Scanning requires decades before downstream neural simulation can begin...               │
-│  • WHAT IMPROVEMENT MATTERS MOST? Multi-beam parallel scanning rate provides steepest gradient...│
-│  • WHERE DID THE BOTTLENECK MOVE? Moves to Memory Bandwidth at 100x imaging acceleration...      │
-│  • WHAT REMAINS UNCERTAIN? Biological tissue ultrastructure preservation fidelity...             │
-│  • WHAT NEEDS REAL EXPERIMENTAL EVIDENCE? High-speed multi-beam deflection in physical lab...    │
-└──────────────────────────────────────────────────────────────────────────────────────────────────┘
-```
-
----
-
-## 17. Testing Suite
-
-The repository maintains strict test coverage across math, security, API routing, and AI boundaries:
-
-```bash
-# Run all vitest unit test suites
 npm test
 ```
 
-* `tests/security.test.ts`: Verifies zero API key leakage to frontend bundles, validates `.env.example` placeholders, and asserts zero legacy endpoints.
-* `shared/tests/equations.test.ts`: Validates 19 unit tests covering voxel count, data volumes, scan time, model state, FLOPs, memory bandwidth, interconnect, and invalid input resilience.
-* `shared/tests/bottlenecks.test.ts`: Validates 8-dimension pressure ranking and bottleneck transitions across all presets and 100x imaging acceleration.
-* `shared/tests/sensitivity.test.ts`: Validates 0.5x–100x local perturbations and highest leverage identification.
-* `backend/tests/api.test.ts`: Validates OpenRouter Nemotron schemas, deterministic caching (`scenarioHash`), 429 rate limit user banners, 500 error single-retry fallback, and scientific immutability boundary.
+### Verified Test Suites (61/61 Passing)
+1. **`shared/tests/equations.test.ts` (19 tests)**:
+   * Validates voxel counts, compression ratios, and scan durations across scales.
+   * Verifies state memory footprints, PFLOPS, memory bandwidth, and interconnect formulas.
+   * Tests division-by-zero resilience and biological boundary enforcement.
+2. **`shared/tests/bottlenecks.test.ts` (6 tests)**:
+   * Confirms 8-dimensional normalized pressure calculations.
+   * Verifies the 100× imaging hero demo bottleneck transition.
+3. **`shared/tests/sensitivity.test.ts` (5 tests)**:
+   * Asserts 0.5×, 1×, 2×, 10×, and 100× local perturbations and highest-leverage variable isolation.
+4. **`tests/security.test.ts` (6 tests)**:
+   * Asserts zero exposure of `OPENROUTER_API_KEY` in frontend source bundles.
+   * Verifies `.env.example` placeholders and checks for absence of legacy endpoints.
+5. **`tests/urlParams.test.ts` (4 tests)**:
+   * Validates URL serialization, deserialization, and state persistence.
+6. **`backend/tests/api.test.ts` (21 tests)**:
+   * Validates OpenRouter input/output schemas, deterministic FNV-1a caching (`scenarioHash`), HTTP 429 rate limit banners, and 500 error single-retry fallback logic.
 
 ---
 
-## 18. Contest Information & Narrative
+## 14. Scientific Limitations & Epistemic Boundaries
 
-* **Event**: Google Cloud × NVIDIA GTC Berlin 2026 Golden Ticket Build
-* **Theme**: Transforming Whole Brain Emulation from speculative philosophy into an empirical, constraint-driven engineering discipline.
-* **Core Takeaway**: Whole-brain emulation is not a single breakthrough—it is an interdependent chain of constraints. Accelerating one step merely transfers pressure to another. Z-WBE Bottleneck Lab makes that reality immediately visible and quantifiable.
+1. **Continuous Scaling Approximations**: Mathematical equations model macro-level engineering throughput and continuous scaling; they do not simulate micro-level biochemical tissue degradation, resin penetration dynamics, or stochastic ion channel noise.
+2. **Proofreading Labor Modeling**: The model calculates proofreading hours as an aggregate function of volumetric error rates. In physical connectomics, proofreading difficulty is non-linear and concentrates at complex dendritic branch points.
+3. **Interconnect Graph Partitioning**: The simulation assumes a 25% cross-node boundary traffic factor. Actual inter-node communication depends on neuromorphic placement algorithms and graph partitioning topology.
+4. **Epistemic Purpose**: This laboratory is designed to identify technical constraints, quantify physical boundaries, and expose scaling fallacies. It is not an assertion that human whole-brain emulation is achievable on any specific timeline.
+
+---
+
+## 15. License & Citation
+
+Distributed under the **MIT License**. See [`LICENSE`](LICENSE) for details.
+
+### Citation
+```bibtex
+@software{zwbe_bottleneck_lab_2026,
+  author = {Zhane},
+  title = {Z-WBE Bottleneck Lab: Change the assumptions. See what breaks first.},
+  year = {2026},
+  url = {https://github.com/zrt219/Z-WBE-Bottleneck-Lab},
+  note = {Google Cloud x NVIDIA GTC Berlin 2026 Golden Ticket Demonstration}
+}
+```

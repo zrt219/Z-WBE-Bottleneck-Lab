@@ -2,6 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import {
   ScenarioAssumptions,
   PRESET_DROSOPHILA,
+  applyImaging100xDemo,
   calculateAllMetrics,
   calculateBottlenecks,
   runSensitivityAnalysis,
@@ -21,7 +22,7 @@ import { NemotronInterpretation } from '../components/NemotronInterpretation';
 import { CompareScenariosModal } from '../components/CompareScenariosModal';
 import { GpuExplorationMap } from '../components/GpuExplorationMap';
 import { InteractiveTour } from '../components/InteractiveTour';
-import { GitCompare, RotateCcw, Share2, Check, Compass, ArrowRight } from 'lucide-react';
+import { GitCompare, RotateCcw, Share2, Check, Compass, ArrowRight, Zap } from 'lucide-react';
 
 export const SimulatorPage: React.FC = () => {
   // Check URL query parameters first, then localStorage persistence
@@ -117,6 +118,33 @@ export const SimulatorPage: React.FC = () => {
     // User explicitly clicks [ EXPLAIN WITH NEMOTRON ].
     setInterpretation(null);
   };
+
+  const handleOneClickDemo = async () => {
+    // 1. Establish baseline from current un-accelerated scenario
+    const baseScenario = assumptions.name.includes('(100x')
+      ? PRESET_DROSOPHILA
+      : assumptions;
+    setBaselineAssumptions(baseScenario);
+
+    // 2. Apply 100x imaging acceleration transformation
+    const accelerated = applyImaging100xDemo(baseScenario);
+    setAssumptions(accelerated);
+
+    // 3. Mark the constraint shift banner
+    setBottleneckMovedBanner(true);
+
+    // 4. Automatically trigger Nemotron/grounded interpretation
+    await handleExplainScenario(accelerated);
+  };
+
+  // Listen to global one-click demo events from Header or other navigation components
+  useEffect(() => {
+    const onDemo = () => {
+      handleOneClickDemo();
+    };
+    window.addEventListener('zwbe:one-click-demo', onDemo);
+    return () => window.removeEventListener('zwbe:one-click-demo', onDemo);
+  }, [assumptions]);
 
   const handleExplainScenario = async (targetAssumptions: ScenarioAssumptions = assumptions) => {
     setIsLoadingExplanation(true);
@@ -269,11 +297,24 @@ export const SimulatorPage: React.FC = () => {
           currentAssumptions={assumptions}
           onSelectPreset={handleSelectPreset}
           onHeroDemoTrigger={handleHeroDemoTrigger}
+          onOneClickDemo={handleOneClickDemo}
           bottleneckMovedBanner={bottleneckMovedBanner}
         />
       </div>
 
       <div className="flex flex-wrap items-center justify-end gap-2.5">
+        {/* Primary One-Click Demo Trigger */}
+        <button
+          onClick={handleOneClickDemo}
+          disabled={isLoadingExplanation}
+          data-testid="main-one-click-demo-button"
+          className="flex items-center space-x-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-emerald-600 via-teal-600 to-blue-600 hover:from-emerald-500 hover:via-teal-500 hover:to-blue-500 active:from-emerald-700 active:to-blue-700 text-white text-xs font-black uppercase tracking-wider shadow-sm hover:shadow-md transition-all cursor-pointer hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50"
+          title="One-Click Demo: Accelerate imaging 100x, verify constraint shift, and generate grounded AI explanation"
+        >
+          <Zap className="w-4 h-4 text-amber-300 fill-amber-300 animate-pulse shrink-0" />
+          <span>⚡ ONE-CLICK DEMO</span>
+        </button>
+
         <button
           onClick={() => {
             if (typeof window !== 'undefined') {
@@ -340,6 +381,7 @@ export const SimulatorPage: React.FC = () => {
               const el = document.getElementById('interpretation-layer');
               if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }}
+            onOneClickDemo={handleOneClickDemo}
           />
         </div>
       </div>

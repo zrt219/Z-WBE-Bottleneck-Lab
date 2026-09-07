@@ -1,6 +1,6 @@
 import React from 'react';
 import { BottleneckResult } from '@z-wbe/shared';
-import { AlertTriangle, Sparkles, Loader2, ShieldCheck, ArrowUpRight, Info } from 'lucide-react';
+import { AlertTriangle, Sparkles, Loader2, ShieldCheck, ArrowUpRight, Info, Zap } from 'lucide-react';
 import { Tooltip } from './Tooltip';
 import { BOTTLENECK_DIMENSION_TOOLTIPS } from '../data/tooltipData';
 
@@ -10,6 +10,7 @@ interface DominantBottleneckCardProps {
   isLoadingExplanation: boolean;
   hasInterpretation?: boolean;
   onScrollToInterpretation?: () => void;
+  onOneClickDemo?: () => void;
 }
 
 export const DominantBottleneckCard: React.FC<DominantBottleneckCardProps> = ({
@@ -17,7 +18,8 @@ export const DominantBottleneckCard: React.FC<DominantBottleneckCardProps> = ({
   onExplainClick,
   isLoadingExplanation,
   hasInterpretation = false,
-  onScrollToInterpretation
+  onScrollToInterpretation,
+  onOneClickDemo
 }) => {
   const dominant = bottleneck.dominantBottleneck;
   const second = bottleneck.secondBottleneck;
@@ -138,6 +140,19 @@ export const DominantBottleneckCard: React.FC<DominantBottleneckCardProps> = ({
             className="w-full py-2 px-3 rounded-lg bg-blue-50 hover:bg-blue-100 text-blue-700 text-xs font-semibold flex items-center justify-center space-x-1 transition-colors cursor-pointer border border-blue-200/80"
           >
             <span>✓ Interpretation generated • View Analysis ↓</span>
+          </button>
+        )}
+
+        {onOneClickDemo && (
+          <button
+            onClick={onOneClickDemo}
+            disabled={isLoadingExplanation}
+            data-testid="card-one-click-demo-button"
+            className="w-full py-2 px-3 rounded-xl bg-gradient-to-r from-emerald-50 via-teal-50 to-blue-50 hover:from-emerald-100 hover:via-teal-100 hover:to-blue-100 border border-emerald-300/80 text-emerald-900 text-xs font-bold flex items-center justify-center space-x-1.5 transition-all cursor-pointer shadow-2xs hover:shadow-xs hover:scale-[1.01] active:scale-[0.99] disabled:opacity-50"
+            title="1-Click Demo: Accelerate imaging 100x & immediately run grounded AI interpretation"
+          >
+            <Zap className="w-3.5 h-3.5 text-emerald-600 fill-emerald-600 shrink-0" />
+            <span>⚡ 1-Click Demo (100x Shift)</span>
           </button>
         )}
 

@@ -18,6 +18,7 @@ interface PresetSelectorProps {
   currentAssumptions: ScenarioAssumptions;
   onSelectPreset: (preset: ScenarioAssumptions) => void;
   onHeroDemoTrigger: (newAssumptions: ScenarioAssumptions) => void;
+  onOneClickDemo?: () => void;
   bottleneckMovedBanner: boolean;
 }
 
@@ -25,6 +26,7 @@ export const PresetSelector: React.FC<PresetSelectorProps> = ({
   currentAssumptions,
   onSelectPreset,
   onHeroDemoTrigger,
+  onOneClickDemo,
   bottleneckMovedBanner
 }) => {
   const scalePresets: Array<{
@@ -258,16 +260,30 @@ export const PresetSelector: React.FC<PresetSelectorProps> = ({
               Instantly accelerates acquisition rate 100x to test if the dominant constraint shifts to memory bandwidth, real-time compute, or proofreading costs.
             </p>
           </div>
-          <button
-            onClick={() => {
-              const accelerated = applyImaging100xDemo(currentAssumptions);
-              onHeroDemoTrigger(accelerated);
-            }}
-            className="flex items-center justify-center space-x-2 px-6 py-3.5 bg-blue-600 hover:bg-blue-500 active:bg-blue-700 text-white rounded-xl text-xs font-bold tracking-wide uppercase transition-all duration-150 shrink-0 shadow-sm hover:shadow-md cursor-pointer hover:scale-[1.02] active:scale-[0.98]"
-          >
-            <span>Run 100x Imaging Acceleration</span>
-            <ArrowRight className="w-4 h-4" />
-          </button>
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 shrink-0">
+            {onOneClickDemo && (
+              <button
+                onClick={onOneClickDemo}
+                data-testid="hero-one-click-demo-button"
+                className="flex items-center justify-center space-x-2 px-5 py-3.5 bg-gradient-to-r from-emerald-600 via-teal-600 to-blue-600 hover:from-emerald-500 hover:via-teal-500 hover:to-blue-500 text-white rounded-xl text-xs font-extrabold tracking-wide uppercase transition-all duration-150 shadow-sm hover:shadow-md cursor-pointer hover:scale-[1.02] active:scale-[0.98]"
+                title="Accelerate imaging 100x and automatically generate grounded AI explanation in one click"
+              >
+                <Zap className="w-4 h-4 text-amber-300 fill-amber-300 animate-pulse" />
+                <span>⚡ 1-Click Demo & Explain</span>
+              </button>
+            )}
+            <button
+              onClick={() => {
+                const accelerated = applyImaging100xDemo(currentAssumptions);
+                onHeroDemoTrigger(accelerated);
+              }}
+              className="flex items-center justify-center space-x-2 px-4 py-3.5 bg-white hover:bg-slate-50 border border-slate-300 text-slate-700 rounded-xl text-xs font-bold tracking-wide uppercase transition-all duration-150 shadow-2xs hover:shadow cursor-pointer hover:scale-[1.01] active:scale-[0.99]"
+              title="Shift parameters only without auto-running explanation"
+            >
+              <span>Shift Params Only</span>
+              <ArrowRight className="w-3.5 h-3.5 text-slate-400" />
+            </button>
+          </div>
         </div>
       </div>
     </div>
