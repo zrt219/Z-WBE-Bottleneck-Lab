@@ -1,6 +1,15 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ScenarioAssumptions } from '@z-wbe/shared';
+import {
+  ScenarioAssumptions,
+  calculateAllMetrics,
+  formatBytes,
+  formatComputeFlops,
+  formatPowerDemand,
+  formatBandwidth,
+  formatAcquisitionDuration,
+  formatCurrency
+} from '@z-wbe/shared';
 import { Sliders, Camera, Cpu, Database, DollarSign, Activity, Plus, Minus, Info } from 'lucide-react';
 import { Tooltip } from './Tooltip';
 import { ASSUMPTION_TOOLTIPS } from '../data/tooltipData';
@@ -15,6 +24,7 @@ type TabKey = 'acquisition' | 'reconstruction' | 'neuralModel' | 'hardware' | 'e
 
 export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumptions, onChange }) => {
   const [activeTab, setActiveTab] = useState<TabKey>('acquisition');
+  const metrics = calculateAllMetrics(assumptions);
 
   const updateNested = <K extends keyof ScenarioAssumptions>(
     category: K,
@@ -74,8 +84,8 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
               key={t.id}
               onClick={() => setActiveTab(t.id)}
               title={t.label}
-              className={`relative ${t.colSpan} flex items-center justify-center space-x-1 sm:space-x-1.5 py-2 px-1.5 sm:px-2 rounded-lg text-[11px] sm:text-xs font-semibold whitespace-nowrap transition-colors duration-150 cursor-pointer text-center ${
-                isActive ? 'text-blue-950 font-bold' : 'text-slate-600 hover:text-slate-900'
+              className={`relative ${t.colSpan} flex items-center justify-center space-x-1 sm:space-x-1.5 py-2 px-1.5 sm:px-2 rounded-lg text-[11px] sm:text-xs font-semibold whitespace-nowrap transition-all duration-150 cursor-pointer text-center select-none ${
+                isActive ? 'text-blue-950 font-bold shadow-2xs' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-200/60'
               }`}
             >
               {isActive && (
@@ -95,7 +105,7 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
       </div>
 
       {/* Tab Panels (Solid and instant without see-through fade, zero scrollbar) */}
-      <div className="space-y-2.5 text-xs pt-1 flex-1 overflow-y-auto pr-1 max-h-[580px] lg:max-h-[640px] no-scrollbar scrollbar-none">
+      <div className="space-y-3 text-xs pt-1 flex-1 overflow-y-auto pr-1 no-scrollbar scrollbar-none">
         {activeTab === 'acquisition' && (
           <>
             <ControlField
@@ -495,6 +505,142 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
             </div>
           </>
         )}
+
+        {/* Live Category Telemetry & Quick-Summary Card — Fills bottom space with live domain metrics */}
+        <div className="mt-4 p-3.5 rounded-xl bg-gradient-to-br from-slate-50/90 via-slate-100/50 to-blue-50/40 border border-slate-200/90 shadow-2xs space-y-2.5">
+          <div className="flex items-center justify-between border-b border-slate-200/70 pb-2">
+            <div className="flex items-center space-x-1.5 text-[11px] font-bold text-slate-800 uppercase tracking-wider">
+              <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
+              <span>
+                {activeTab === 'acquisition' && 'Acquisition Telemetry'}
+                {activeTab === 'reconstruction' && 'Reconstruction Telemetry'}
+                {activeTab === 'neuralModel' && 'Neural Model Telemetry'}
+                {activeTab === 'hardware' && 'Hardware Demand Telemetry'}
+                {activeTab === 'economics' && 'Economic Cost Telemetry'}
+              </span>
+            </div>
+            <span className="text-[10px] font-mono font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
+              Calculated
+            </span>
+          </div>
+
+          {activeTab === 'acquisition' && (
+            <div className="grid grid-cols-2 gap-2 text-[11px]">
+              <div className="p-2 rounded-lg bg-white border border-slate-200/70 shadow-xs">
+                <div className="text-[10px] text-slate-500 font-medium">Raw Image Data</div>
+                <div className="font-mono font-bold text-slate-900 text-xs mt-0.5">{formatBytes(metrics.rawDataBytes)}</div>
+              </div>
+              <div className="p-2 rounded-lg bg-white border border-slate-200/70 shadow-xs">
+                <div className="text-[10px] text-slate-500 font-medium">Compressed Data</div>
+                <div className="font-mono font-bold text-slate-900 text-xs mt-0.5">{formatBytes(metrics.compressedDataBytes)}</div>
+              </div>
+              <div className="p-2 rounded-lg bg-white border border-slate-200/70 shadow-xs">
+                <div className="text-[10px] text-slate-500 font-medium">Scan Duration</div>
+                <div className="font-mono font-bold text-slate-900 text-xs mt-0.5">{formatAcquisitionDuration(metrics.acquisitionTimeYears, metrics.acquisitionTimeDays)}</div>
+              </div>
+              <div className="p-2 rounded-lg bg-white border border-slate-200/70 shadow-xs">
+                <div className="text-[10px] text-slate-500 font-medium">Total Voxel Count</div>
+                <div className="font-mono font-bold text-slate-900 text-xs mt-0.5">{metrics.voxelCount > 1e12 ? metrics.voxelCount.toExponential(2) : metrics.voxelCount.toLocaleString()}</div>
+              </div>
+            </div>
+          )}
+
+          {activeTab === 'reconstruction' && (
+            <div className="grid grid-cols-2 gap-2 text-[11px]">
+              <div className="p-2 rounded-lg bg-white border border-slate-200/70 shadow-xs">
+                <div className="text-[10px] text-slate-500 font-medium">Auto Segmentation</div>
+                <div className="font-mono font-bold text-slate-900 text-xs mt-0.5">{metrics.automatedReconstructionYears.toFixed(2)} yrs</div>
+              </div>
+              <div className="p-2 rounded-lg bg-white border border-slate-200/70 shadow-xs">
+                <div className="text-[10px] text-slate-500 font-medium">Proofreading Effort</div>
+                <div className="font-mono font-bold text-slate-900 text-xs mt-0.5">{metrics.manualProofreadingPersonYears.toFixed(1)} person-yrs</div>
+              </div>
+              <div className="p-2 rounded-lg bg-white border border-slate-200/70 shadow-xs">
+                <div className="text-[10px] text-slate-500 font-medium">Proofreading Hours</div>
+                <div className="font-mono font-bold text-slate-900 text-xs mt-0.5">{Math.round(metrics.manualProofreadingPersonHours).toLocaleString()} hrs</div>
+              </div>
+              <div className="p-2 rounded-lg bg-white border border-slate-200/70 shadow-xs">
+                <div className="text-[10px] text-slate-500 font-medium">Proofreading Cost</div>
+                <div className="font-mono font-bold text-slate-900 text-xs mt-0.5">{formatCurrency(metrics.proofreadingCostUsd)}</div>
+              </div>
+            </div>
+          )}
+
+          {activeTab === 'neuralModel' && (
+            <div className="grid grid-cols-2 gap-2 text-[11px]">
+              <div className="p-2 rounded-lg bg-white border border-slate-200/70 shadow-xs">
+                <div className="text-[10px] text-slate-500 font-medium">Model State Storage</div>
+                <div className="font-mono font-bold text-slate-900 text-xs mt-0.5">{formatBytes(metrics.modelStateBytes)}</div>
+              </div>
+              <div className="p-2 rounded-lg bg-white border border-slate-200/70 shadow-xs">
+                <div className="text-[10px] text-slate-500 font-medium">Compute Demand</div>
+                <div className="font-mono font-bold text-slate-900 text-xs mt-0.5">{formatComputeFlops(metrics.computeDemandFlops)}</div>
+              </div>
+              <div className="p-2 rounded-lg bg-white border border-slate-200/70 shadow-xs">
+                <div className="text-[10px] text-slate-500 font-medium">Neural State Traffic</div>
+                <div className="font-mono font-bold text-slate-900 text-xs mt-0.5">{formatBandwidth(metrics.neuralStateTrafficBytesSec / 1e12)}</div>
+              </div>
+              <div className="p-2 rounded-lg bg-white border border-slate-200/70 shadow-xs">
+                <div className="text-[10px] text-slate-500 font-medium">Synapse Traffic</div>
+                <div className="font-mono font-bold text-slate-900 text-xs mt-0.5">{formatBandwidth(metrics.synapticStateTrafficBytesSec / 1e12)}</div>
+              </div>
+            </div>
+          )}
+
+          {activeTab === 'hardware' && (
+            <div className="grid grid-cols-2 gap-2 text-[11px]">
+              <div className="p-2 rounded-lg bg-white border border-slate-200/70 shadow-xs">
+                <div className="text-[10px] text-slate-500 font-medium">Memory Bandwidth Req.</div>
+                <div className="font-mono font-bold text-slate-900 text-xs mt-0.5">{formatBandwidth(metrics.memoryTrafficTbS)}</div>
+              </div>
+              <div className="p-2 rounded-lg bg-white border border-slate-200/70 shadow-xs">
+                <div className="text-[10px] text-slate-500 font-medium">Interconnect Req.</div>
+                <div className="font-mono font-bold text-slate-900 text-xs mt-0.5">{formatBandwidth(metrics.interconnectTrafficTbS)}</div>
+              </div>
+              <div className="p-2 rounded-lg bg-white border border-slate-200/70 shadow-xs">
+                <div className="text-[10px] text-slate-500 font-medium">Total Power Demand</div>
+                <div className="font-mono font-bold text-slate-900 text-xs mt-0.5">{formatPowerDemand(metrics.totalPowerDemandMw)}</div>
+              </div>
+              <div className="p-2 rounded-lg bg-white border border-slate-200/70 shadow-xs">
+                <div className="text-[10px] text-slate-500 font-medium">Compute Required</div>
+                <div className="font-mono font-bold text-slate-900 text-xs mt-0.5">{formatComputeFlops(metrics.computeDemandFlops)}</div>
+              </div>
+            </div>
+          )}
+
+          {activeTab === 'economics' && (
+            <div className="space-y-2">
+              <div className="p-2.5 rounded-lg bg-white border border-slate-200/70 shadow-xs flex items-center justify-between">
+                <div>
+                  <div className="text-[10px] text-slate-500 font-medium uppercase tracking-wider">Total Scenario Capex</div>
+                  <div className="font-mono font-extrabold text-blue-900 text-sm mt-0.5">{formatCurrency(metrics.totalEstimatedCostUsd)}</div>
+                </div>
+                <div className="text-right">
+                  <div className="text-[10px] text-slate-500 font-medium">Budget Ceiling</div>
+                  <div className="font-mono font-bold text-slate-700 text-xs mt-0.5">{formatCurrency(assumptions.economics.budgetCeilingUsd)}</div>
+                </div>
+              </div>
+              <div className="grid grid-cols-2 gap-2 text-[11px]">
+                <div className="p-2 rounded-lg bg-white border border-slate-200/70 shadow-xs">
+                  <div className="text-[10px] text-slate-500 font-medium">Imaging Instruments</div>
+                  <div className="font-mono font-bold text-slate-900 text-xs mt-0.5">{formatCurrency(metrics.imagingCostUsd)}</div>
+                </div>
+                <div className="p-2 rounded-lg bg-white border border-slate-200/70 shadow-xs">
+                  <div className="text-[10px] text-slate-500 font-medium">Proofreading Cost</div>
+                  <div className="font-mono font-bold text-slate-900 text-xs mt-0.5">{formatCurrency(metrics.proofreadingCostUsd)}</div>
+                </div>
+                <div className="p-2 rounded-lg bg-white border border-slate-200/70 shadow-xs">
+                  <div className="text-[10px] text-slate-500 font-medium">Storage / Year</div>
+                  <div className="font-mono font-bold text-slate-900 text-xs mt-0.5">{formatCurrency(metrics.storageCostUsdPerYear)}/yr</div>
+                </div>
+                <div className="p-2 rounded-lg bg-white border border-slate-200/70 shadow-xs">
+                  <div className="text-[10px] text-slate-500 font-medium">Compute / Year</div>
+                  <div className="font-mono font-bold text-slate-900 text-xs mt-0.5">{formatCurrency(metrics.computeCostUsdPerYear)}/yr</div>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
       </div>
     </div>
 
