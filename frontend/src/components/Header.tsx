@@ -47,9 +47,9 @@ export const Header: React.FC<HeaderProps> = ({ onStartTutorial, onOneClickDemo 
         Skip to main content
       </a>
 
-      <header className="border-b border-slate-200/80 bg-white/95 backdrop-blur-md sticky top-0 z-40 shadow-xs">
+      <header className="border-b border-slate-200/80 bg-white sticky top-0 z-40 shadow-xs">
         <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="relative flex items-center justify-between h-16 gap-x-3 sm:gap-x-4 lg:gap-x-6">
+          <div className="flex items-center justify-between h-16 gap-x-3 sm:gap-x-4">
             {/* Brand & Logo Lockup */}
             <div className="flex items-center space-x-3 shrink-0">
               <Link to="/" className="flex items-center space-x-2.5 group shrink-0">
@@ -65,18 +65,10 @@ export const Header: React.FC<HeaderProps> = ({ onStartTutorial, onOneClickDemo 
                   </span>
                 </div>
               </Link>
-
-              <div className="h-5 w-px bg-slate-200 hidden md:block lg:hidden xl:block shrink-0" />
-
-              {/* Single-line GTC 2026 Golden Ticket Badge */}
-              <span className="hidden md:inline-flex lg:hidden xl:inline-flex items-center space-x-1.5 text-[10px] font-mono font-bold uppercase px-2.5 py-1 rounded-full bg-gradient-to-r from-amber-50 to-orange-50 text-amber-900 border border-amber-300/90 whitespace-nowrap shadow-xs shrink-0">
-                <span className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse shrink-0"></span>
-                <span>GTC 2026 Golden Ticket</span>
-              </span>
             </div>
 
-            {/* Mathematically Centered Segmented Navigation Links (Desktop lg+) */}
-            <nav className="hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center space-x-1 bg-slate-100/90 p-1 rounded-xl border border-slate-200/90 shadow-inner z-10">
+            {/* Segmented Navigation Links (Desktop lg+) - Centered in flex flow, ZERO overlap */}
+            <nav className="hidden lg:flex items-center space-x-1 bg-slate-100/90 p-1 rounded-xl border border-slate-200 shadow-inner mx-auto shrink-0">
               {navItems.map((item) => {
                 const Icon = item.icon;
                 const isActive = item.path === '/' ? location.pathname === '/' : location.pathname.startsWith(item.path);
@@ -97,28 +89,9 @@ export const Header: React.FC<HeaderProps> = ({ onStartTutorial, onOneClickDemo 
               })}
             </nav>
 
-            {/* Right Status Cluster & Action Buttons */}
+            {/* Right Action Buttons Cluster */}
             <div className="flex items-center space-x-2 shrink-0">
-              {/* Deterministic Engine Latency (Wide 2xl+) */}
-              <div className="hidden 2xl:flex items-center space-x-1.5 text-[11px] font-mono px-2.5 py-1.5 rounded-lg bg-slate-50 text-slate-700 border border-slate-200 shadow-2xs whitespace-nowrap shrink-0" title="Deterministic Math Pipeline Latency">
-                <Zap className="w-3 h-3 text-amber-500 fill-amber-500 shrink-0" />
-                <span className="font-semibold text-slate-700">Engine:</span>
-                <span className="text-emerald-600 font-bold">&lt;1ms</span>
-              </div>
-
-              {/* AI Model Badge (sm+) */}
-              <div className="hidden sm:flex items-center space-x-1.5 text-[11px] font-mono px-2.5 py-1.5 rounded-lg bg-slate-50 text-slate-700 border border-slate-200 shadow-2xs whitespace-nowrap shrink-0">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse shrink-0"></span>
-                <span className="font-semibold text-slate-900">Nemotron 3 Super</span>
-              </div>
-
-              {/* Cloud Run Host Badge (xl+) */}
-              <div className="hidden xl:flex items-center space-x-1.5 text-[11px] font-mono px-2.5 py-1.5 rounded-lg bg-emerald-50/90 text-emerald-800 border border-emerald-200/80 font-semibold shadow-2xs whitespace-nowrap shrink-0">
-                <Cloud className="w-3 h-3 text-emerald-600 shrink-0" />
-                <span>Cloud Run</span>
-              </div>
-
-              {/* One-Click Demo Quick Button with tactile depth */}
+              {/* One-Click Demo Quick Button */}
               <button
                 onClick={handleOneClickDemo}
                 data-testid="header-one-click-demo-button"
@@ -129,14 +102,14 @@ export const Header: React.FC<HeaderProps> = ({ onStartTutorial, onOneClickDemo 
                 <span>⚡ 1-Click Demo</span>
               </button>
 
-              {/* Interactive Tutorial Button with tactile depth */}
+              {/* Guided Tour Walkthrough Button */}
               <button
                 onClick={handleStartTutorial}
                 className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-gradient-to-b from-blue-50 to-blue-100 hover:from-blue-100 hover:to-blue-200 text-blue-900 border border-blue-200 font-bold text-xs shadow-xs hover:shadow-sm transition-all cursor-pointer shrink-0 active:scale-95"
-                title="Start Interactive Tutorial & Walkthrough"
+                title="Start Interactive Guided Tour"
               >
                 <Compass className="w-3.5 h-3.5 text-blue-600 shrink-0" />
-                <span>Tutorial</span>
+                <span>Guided Tour</span>
               </button>
 
               {/* Accessibility & Readability Settings Toggle */}
@@ -153,7 +126,7 @@ export const Header: React.FC<HeaderProps> = ({ onStartTutorial, onOneClickDemo 
                 <span>A11y</span>
               </button>
 
-              {/* GitHub Repo Link with tactile depth */}
+              {/* GitHub Repo Link */}
               <a
                 href="https://github.com/zrt219/Z-WBE-Bottleneck-Lab"
                 target="_blank"
@@ -164,6 +137,48 @@ export const Header: React.FC<HeaderProps> = ({ onStartTutorial, onOneClickDemo 
               >
                 <Github className="w-4 h-4 shrink-0" />
               </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Dedicated Telemetry & Contest Status Sub-Bar */}
+        <div className="border-t border-slate-200/80 bg-slate-50/95 backdrop-blur-xs py-1.5 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-[1600px] mx-auto flex flex-wrap items-center justify-between gap-y-1.5 gap-x-4 text-[11px] font-mono">
+            {/* Left: Golden Ticket Recognition */}
+            <div className="flex items-center space-x-2 shrink-0">
+              <span className="inline-flex items-center space-x-1.5 px-2.5 py-0.5 rounded-full bg-gradient-to-r from-amber-50 to-orange-50 text-amber-900 border border-amber-300/90 font-bold uppercase text-[10px] shadow-2xs">
+                <span className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse shrink-0"></span>
+                <span>GTC 2026 Golden Ticket</span>
+              </span>
+              <span className="text-slate-300 hidden sm:inline">|</span>
+              <span className="text-slate-500 hidden sm:inline text-[11px]">Whole-Brain Emulation Demonstrator</span>
+            </div>
+
+            {/* Right: Live Telemetry Indicators */}
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-slate-600 shrink-0">
+              {/* Deterministic Math Engine Latency */}
+              <div className="flex items-center space-x-1.5" title="Deterministic Math Pipeline Latency">
+                <Zap className="w-3 h-3 text-amber-500 fill-amber-500 shrink-0" />
+                <span className="text-slate-500">Engine:</span>
+                <span className="text-emerald-600 font-bold">&lt;1ms</span>
+              </div>
+
+              <span className="text-slate-300">•</span>
+
+              {/* AI Model Indicator */}
+              <div className="flex items-center space-x-1.5" title="Grounded AI Interpretation Engine via OpenRouter">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse shrink-0"></span>
+                <span className="text-slate-500">AI:</span>
+                <span className="font-semibold text-slate-800">NVIDIA Nemotron 3 Super 120B</span>
+              </div>
+
+              <span className="text-slate-300 hidden md:inline">•</span>
+
+              {/* Cloud Run / Vercel Serverless Host Badge */}
+              <div className="hidden md:flex items-center space-x-1.5 text-emerald-800 font-semibold" title="Deployment Infrastructure">
+                <Cloud className="w-3 h-3 text-emerald-600 shrink-0" />
+                <span>Cloud Run × Vercel Serverless</span>
+              </div>
             </div>
           </div>
         </div>
@@ -190,7 +205,7 @@ export const Header: React.FC<HeaderProps> = ({ onStartTutorial, onOneClickDemo 
           className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-bold whitespace-nowrap shrink-0 bg-blue-50 text-blue-700 border border-blue-200 shadow-xs cursor-pointer"
         >
           <Compass className="w-3.5 h-3.5 text-blue-600 shrink-0" />
-          <span>Tutorial</span>
+          <span>Guided Tour</span>
         </button>
         {navItems.map((item) => {
           const Icon = item.icon;

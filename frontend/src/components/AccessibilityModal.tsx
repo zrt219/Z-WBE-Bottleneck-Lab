@@ -12,6 +12,7 @@ import {
   Check,
   Keyboard
 } from 'lucide-react';
+import { motion } from 'framer-motion';
 import { useAccessibility, FontSizeOption } from '../context/AccessibilityContext';
 
 export const AccessibilityModal: React.FC = () => {
@@ -365,22 +366,28 @@ export const AccessibilityModal: React.FC = () => {
 
         {/* Footer */}
         <div className="flex items-center justify-between px-6 py-3.5 border-t border-slate-200 bg-slate-50/80 shrink-0">
-          <button
+          <motion.button
             onClick={() => {
               resetSettings();
               announce('Accessibility settings reset to default');
             }}
-            className="flex items-center space-x-1.5 text-xs text-slate-700 hover:text-slate-900 font-bold cursor-pointer px-3 py-2 rounded-xl border border-slate-300 bg-gradient-to-b from-white to-slate-100 hover:from-slate-50 hover:to-slate-200 shadow-sm hover:shadow hover:-translate-y-0.5 active:translate-y-0.5 transition-all"
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: 'spring', stiffness: 400, damping: 20 }}
+            className="flex items-center space-x-2 text-xs text-slate-700 hover:text-slate-900 font-bold cursor-pointer px-4.5 py-2.5 rounded-xl border border-slate-300 bg-gradient-to-b from-white to-slate-100 hover:from-slate-50 hover:to-slate-200 shadow-sm hover:shadow whitespace-nowrap select-none"
           >
-            <RotateCcw className="w-3.5 h-3.5" />
+            <RotateCcw className="w-3.5 h-3.5 shrink-0" />
             <span>Reset to Defaults</span>
-          </button>
-          <button
+          </motion.button>
+          <motion.button
             onClick={closeModal}
-            className="px-4.5 py-2.5 bg-gradient-to-b from-slate-800 to-slate-950 hover:from-slate-700 hover:to-slate-900 border border-slate-700 text-white text-xs font-bold rounded-xl shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0.5 transition-all cursor-pointer"
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: 'spring', stiffness: 400, damping: 20 }}
+            className="px-5 py-2.5 bg-gradient-to-b from-slate-800 to-slate-950 hover:from-slate-700 hover:to-slate-900 border border-slate-700 text-white text-xs font-bold rounded-xl shadow-md hover:shadow-lg whitespace-nowrap cursor-pointer select-none"
           >
             Save &amp; Close
-          </button>
+          </motion.button>
         </div>
       </div>
     </div>

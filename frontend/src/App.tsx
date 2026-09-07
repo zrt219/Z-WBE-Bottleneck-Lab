@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import { Header } from './components/Header';
 import { SimulatorPage } from './pages/SimulatorPage';
 import { MethodologyPage } from './pages/MethodologyPage';
 import { ArchitecturePage } from './pages/ArchitecturePage';
 import { AboutPage } from './pages/AboutPage';
+import { TutorialsLayout } from './pages/tutorials/TutorialsLayout';
+import { TutorialBasicsPage } from './pages/tutorials/TutorialBasicsPage';
+import { TutorialOptionsPage } from './pages/tutorials/TutorialOptionsPage';
+import { TutorialPipelinePage } from './pages/tutorials/TutorialPipelinePage';
+import { TutorialApiWalkthroughPage } from './pages/tutorials/TutorialApiWalkthroughPage';
 import { InteractiveTour } from './components/InteractiveTour';
 import { AccessibilityProvider } from './context/AccessibilityContext';
 import { Cpu, ShieldCheck, Sparkles } from 'lucide-react';
@@ -45,6 +50,13 @@ export const App: React.FC = () => {
         <main id="main-simulator-content" tabIndex={-1} className="flex-1 max-w-[1600px] w-full mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-12 focus:outline-hidden">
           <Routes>
             <Route path="/" element={<SimulatorPage />} />
+            <Route path="/tutorials" element={<TutorialsLayout />}>
+              <Route index element={<Navigate to="/tutorials/basics" replace />} />
+              <Route path="basics" element={<TutorialBasicsPage />} />
+              <Route path="options" element={<TutorialOptionsPage />} />
+              <Route path="pipeline" element={<TutorialPipelinePage />} />
+              <Route path="api-walkthrough" element={<TutorialApiWalkthroughPage />} />
+            </Route>
             <Route path="/methodology" element={<MethodologyPage />} />
             <Route path="/architecture" element={<ArchitecturePage />} />
             <Route path="/about" element={<AboutPage />} />

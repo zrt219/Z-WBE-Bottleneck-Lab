@@ -116,14 +116,17 @@ export const DominantBottleneckCard: React.FC<DominantBottleneckCardProps> = ({
 
       {/* Action Button: EXPLAIN THIS SCENARIO */}
       <div className="pt-3.5 border-t border-slate-100 space-y-2.5">
-        <button
+        <motion.button
           id="tour-explain-button"
           onClick={onExplainClick}
           disabled={isLoadingExplanation}
           data-testid="explain-scenario-button"
           aria-label="Explain this scenario"
           title="Explain this scenario"
-          className="w-full py-3.5 px-4 rounded-xl bg-gradient-to-b from-slate-800 to-slate-950 hover:from-slate-700 hover:to-slate-900 border border-slate-700 text-white text-xs font-bold uppercase tracking-wider flex items-center justify-center space-x-2 transition-all duration-150 shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0.5 disabled:opacity-50 cursor-pointer"
+          whileHover={{ scale: isLoadingExplanation ? 1 : 1.02 }}
+          whileTap={{ scale: isLoadingExplanation ? 1 : 0.97 }}
+          transition={{ type: 'spring', stiffness: 400, damping: 20 }}
+          className="w-full py-3.5 px-4 rounded-xl bg-gradient-to-b from-slate-800 to-slate-950 hover:from-slate-700 hover:to-slate-900 border border-slate-700 text-white text-xs font-bold uppercase tracking-wider flex items-center justify-center space-x-2 shadow-md hover:shadow-lg disabled:opacity-50 cursor-pointer select-none"
         >
           {isLoadingExplanation ? (
             <>
@@ -132,33 +135,39 @@ export const DominantBottleneckCard: React.FC<DominantBottleneckCardProps> = ({
             </>
           ) : (
             <>
-              <Sparkles className="w-4 h-4 text-emerald-400 animate-pulse" />
+              <Sparkles className="w-4 h-4 text-emerald-400" />
               <span>EXPLAIN THIS SCENARIO</span>
               <ArrowUpRight className="w-3.5 h-3.5 text-slate-400" />
             </>
           )}
-        </button>
+        </motion.button>
 
         {hasInterpretation && onScrollToInterpretation && (
-          <button
+          <motion.button
             onClick={onScrollToInterpretation}
-            className="w-full py-2.5 px-3 rounded-xl bg-gradient-to-b from-blue-50 to-blue-100/80 hover:from-blue-100 hover:to-blue-200 border border-blue-200 text-blue-900 text-xs font-bold flex items-center justify-center space-x-1.5 transition-all cursor-pointer shadow-xs hover:shadow hover:-translate-y-0.5 active:translate-y-0.5"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.97 }}
+            transition={{ type: 'spring', stiffness: 400, damping: 20 }}
+            className="w-full py-2.5 px-3 rounded-xl bg-gradient-to-b from-blue-50 to-blue-100/80 hover:from-blue-100 hover:to-blue-200 border border-blue-200 text-blue-900 text-xs font-bold flex items-center justify-center space-x-1.5 cursor-pointer shadow-xs hover:shadow select-none"
           >
             <span>✓ Interpretation generated • View Analysis ↓</span>
-          </button>
+          </motion.button>
         )}
 
         {onOneClickDemo && (
-          <button
+          <motion.button
             onClick={onOneClickDemo}
             disabled={isLoadingExplanation}
             data-testid="card-one-click-demo-button"
-            className="w-full py-2.5 px-3 rounded-xl bg-gradient-to-b from-emerald-50 to-teal-100/90 hover:from-emerald-100 hover:to-teal-200/90 border border-emerald-300 text-emerald-950 text-xs font-bold flex items-center justify-center space-x-1.5 transition-all cursor-pointer shadow-sm hover:shadow hover:-translate-y-0.5 active:translate-y-0.5 disabled:opacity-50"
+            whileHover={{ scale: isLoadingExplanation ? 1 : 1.02 }}
+            whileTap={{ scale: isLoadingExplanation ? 1 : 0.97 }}
+            transition={{ type: 'spring', stiffness: 400, damping: 20 }}
+            className="w-full py-2.5 px-3 rounded-xl bg-gradient-to-b from-emerald-50 to-teal-100/90 hover:from-emerald-100 hover:to-teal-200/90 border border-emerald-300 text-emerald-950 text-xs font-bold flex items-center justify-center space-x-1.5 cursor-pointer shadow-sm hover:shadow disabled:opacity-50 select-none"
             title="1-Click Demo: Accelerate imaging 100x & immediately run grounded AI interpretation"
           >
             <Zap className="w-3.5 h-3.5 text-emerald-600 fill-emerald-600 shrink-0" />
             <span>⚡ 1-Click Demo (100x Shift)</span>
-          </button>
+          </motion.button>
         )}
 
         <div className="flex items-center justify-center space-x-1.5 text-[10px] text-slate-400 font-mono">

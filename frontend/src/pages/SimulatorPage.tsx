@@ -25,6 +25,7 @@ import { InteractiveTour } from '../components/InteractiveTour';
 import { MobileStickyActionBar } from '../components/MobileStickyActionBar';
 import { useAccessibility } from '../context/AccessibilityContext';
 import { GitCompare, RotateCcw, Share2, Check, Compass, ArrowRight, ChevronDown, ChevronUp, Sliders, Layers } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export const SimulatorPage: React.FC = () => {
   const { announce } = useAccessibility();
@@ -49,6 +50,7 @@ export const SimulatorPage: React.FC = () => {
   const [isCompareOpen, setIsCompareOpen] = useState(false);
   const [bottleneckMovedBanner, setBottleneckMovedBanner] = useState(false);
   const [copiedLink, setCopiedLink] = useState(false);
+  const [isResetting, setIsResetting] = useState(false);
 
   // Mobile Collapsible Accordion States (collapsed by default on mobile)
   const [isAssumptionsExpanded, setIsAssumptionsExpanded] = useState(false);
@@ -340,7 +342,7 @@ export const SimulatorPage: React.FC = () => {
 
       {/* Centered Utility Toolbar: Sharing, Multi-scenario Comparison, and Reset */}
       <div className="flex flex-wrap items-center justify-center gap-3 py-1">
-        <button
+        <motion.button
           onClick={() => {
             if (typeof window !== 'undefined') {
               navigator.clipboard.writeText(window.location.href);
@@ -348,7 +350,10 @@ export const SimulatorPage: React.FC = () => {
               setTimeout(() => setCopiedLink(false), 2000);
             }
           }}
-          className="flex items-center space-x-2 px-5 py-2.5 rounded-xl border border-indigo-300 bg-gradient-to-b from-indigo-50 to-indigo-100/80 hover:from-indigo-100 hover:to-indigo-200/90 text-xs font-bold text-indigo-950 shadow-sm hover:shadow-md hover:-translate-y-0.5 active:translate-y-0.5 transition-all cursor-pointer whitespace-nowrap"
+          whileHover={{ scale: 1.03 }}
+          whileTap={{ scale: 0.95 }}
+          transition={{ type: 'spring', stiffness: 400, damping: 20 }}
+          className="flex items-center space-x-2 px-5 py-2.5 rounded-xl border border-indigo-300 bg-gradient-to-b from-indigo-50 to-indigo-100/80 hover:from-indigo-100 hover:to-indigo-200/90 text-xs font-bold text-indigo-950 shadow-sm hover:shadow-md cursor-pointer whitespace-nowrap shrink-0 select-none"
           title="Copy permalink with active parameters to clipboard"
         >
           {copiedLink ? (
@@ -362,13 +367,17 @@ export const SimulatorPage: React.FC = () => {
               <span>Share Scenario Link</span>
             </>
           )}
-        </button>
-        <button
+        </motion.button>
+
+        <motion.button
           onClick={() => {
             setBaselineAssumptions(assumptions);
             setIsCompareOpen(true);
           }}
-          className="flex items-center space-x-2.5 px-6 py-2.5 rounded-xl border border-blue-200 bg-gradient-to-b from-white via-blue-50/40 to-blue-50/80 hover:from-blue-50 hover:to-blue-100 text-xs font-bold text-blue-950 shadow-sm hover:shadow-md hover:-translate-y-0.5 active:translate-y-0.5 transition-all cursor-pointer whitespace-nowrap"
+          whileHover={{ scale: 1.03 }}
+          whileTap={{ scale: 0.95 }}
+          transition={{ type: 'spring', stiffness: 400, damping: 20 }}
+          className="flex items-center space-x-2.5 px-6 py-2.5 rounded-xl border border-blue-200 bg-gradient-to-b from-white via-blue-50/40 to-blue-50/80 hover:from-blue-50 hover:to-blue-100 text-xs font-bold text-blue-950 shadow-sm hover:shadow-md cursor-pointer whitespace-nowrap shrink-0 select-none"
           title="Compare current scenario against baseline"
         >
           <GitCompare className="w-4 h-4 text-blue-600 shrink-0" />
@@ -376,15 +385,30 @@ export const SimulatorPage: React.FC = () => {
           <span className="text-[10px] font-semibold text-blue-700 bg-blue-100/80 px-2 py-0.5 rounded-md border border-blue-200/80 shrink-0">
             Baseline vs Modified
           </span>
-        </button>
-        <button
-          onClick={() => handleSelectPreset(PRESET_DROSOPHILA)}
-          className="flex items-center space-x-2 px-4.5 py-2.5 rounded-xl border border-slate-300 bg-gradient-to-b from-white to-slate-100 hover:from-slate-50 hover:to-slate-200 text-xs font-bold text-slate-700 hover:text-slate-900 shadow-sm hover:shadow-md hover:-translate-y-0.5 active:translate-y-0.5 transition-all cursor-pointer whitespace-nowrap"
-          title="Reset to default preset"
+        </motion.button>
+
+        <motion.button
+          onClick={() => {
+            setIsResetting(true);
+            handleSelectPreset(PRESET_DROSOPHILA);
+            announce('Reset all assumptions to default Drosophila-Scale scenario.');
+            setTimeout(() => setIsResetting(false), 500);
+          }}
+          whileHover={{ scale: 1.03 }}
+          whileTap={{ scale: 0.95 }}
+          transition={{ type: 'spring', stiffness: 400, damping: 20 }}
+          className="flex items-center space-x-2.5 px-6 py-2.5 rounded-xl border border-slate-300 bg-gradient-to-b from-white to-slate-100 hover:from-slate-50 hover:to-slate-200 text-xs font-bold text-slate-700 hover:text-slate-900 shadow-sm hover:shadow-md cursor-pointer whitespace-nowrap shrink-0 min-w-[110px] justify-center select-none"
+          title="Reset to default Drosophila preset"
         >
-          <RotateCcw className="w-3.5 h-3.5 shrink-0" />
-          <span>Reset</span>
-        </button>
+          <motion.div
+            animate={{ rotate: isResetting ? -360 : 0 }}
+            transition={{ duration: 0.5, ease: 'easeInOut' }}
+            className="shrink-0 flex items-center justify-center"
+          >
+            <RotateCcw className="w-3.5 h-3.5 text-slate-600 shrink-0" />
+          </motion.div>
+          <span className="font-bold tracking-tight">Reset</span>
+        </motion.button>
       </div>
 
       {/* Main 3-Column Layout: Equal-width 1:1:1 Grid on desktop; Collapsible accordions with top bottleneck on mobile */}
