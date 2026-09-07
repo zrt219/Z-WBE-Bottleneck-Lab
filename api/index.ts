@@ -1,15 +1,175 @@
-import express from 'express';
-import cors from 'cors';
-import { apiRouter } from '../backend/src/routes';
+import {
+  ALL_PRESETS,
+  calculateAllMetrics,
+  calculateBottlenecks,
+  runSensitivityAnalysis,
+  buildNemotronInputSchema,
+  generateGroundedFallback,
+  NEMOTRON_SYSTEM_PROMPT,
+  repairAndParseNemotronResponse,
+  scenarioHash
+} from '../shared/dist/index.js';
 
-const app = express();
+let sessionRequests = 0;
+const cache = new Map<string, any>();
 
-app.use(cors({ origin: '*' }));
-app.use(express.json({ limit: '10mb' }));
+export default async function handler(req: any, res: any) {
+  res.setHeader('Access-Control-Allow-Credentials', 'true');
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
+  res.setHeader(
+    'Access-Control-Allow-Headers',
+    'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
+  );
 
-app.use('/api', apiRouter);
-app.use('/', apiRouter);
+  if (req.method === 'OPTIONS') {
+    return res.status(200).end();
+  }
 
-export default function handler(req: any, res: any) {
-  return app(req, res);
+  const url = req.url || '';
+
+  if (url.includes('health')) {
+    return res.status(200).json({
+      status: 'ok',
+      service: 'Z-WBE Bottleneck Lab Backend (Vercel Serverless)',
+      version: '1.0.0',
+      model: process.env.OPENROUTER_MODEL || 'nvidia/nemotron-3-super-120b-a12b:free',
+      openrouterConfigured: Boolean(process.env.OPENROUTER_API_KEY && !process.env.OPENROUTER_API_KEY.includes('placeholder')),
+      aiRequestsThisSession: sessionRequests,
+      timestamp: new Date().toISOString()
+    });
+  }
+
+  if (url.includes('session-requests')) {
+    return res.status(200).json({
+      requestsThisSession: sessionRequests
+    });
+  }
+
+  if (url.includes('explain')) {
+    if (req.method !== 'POST') {
+      return res.status(405).json({ error: 'Method Not Allowed' });
+    }
+
+    const { assumptions, metrics, bottleneck, sensitivity } = req.body || {};
+
+    const activeAssumptions = assumptions || ALL_PRESETS.drosophila;
+    const activeMetrics = metrics || calculateAllMetrics(activeAssumptions);
+    const activeBottleneck = bottleneck || calculateBottlenecks(activeAssumptions, activeMetrics);
+    const activeSensitivity = sensitivity || runSensitivityAnalysis(activeAssumptions);
+
+    const groundingRequest = buildNemotronInputSchema(
+      activeAssumptions,
+      activeMetrics,
+      activeBottleneck,
+      activeSensitivity
+    );
+
+    const apiKey = process.env.OPENROUTER_API_KEY;
+    const model = process.env.OPENROUTER_MODEL || 'nvidia/nemotron-3-super-120b-a12b:free';
+
+    if (!apiKey || apiKey.includes('placeholder')) {
+      const fallback = generateGroundedFallback(
+        groundingRequest,
+        'unavailable',
+        'AI INTERPRETATION UNAVAILABLE\nOpenRouter API key is not configured on the server.\nThe deterministic simulation laboratory remains 100% operational.'
+      );
+      return res.status(200).json({
+        enabled: false,
+        modelIdentifier: model,
+        requestsThisSession: sessionRequests,
+        status: 'unavailable',
+        interpretation: fallback,
+        groundingRequest
+      });
+    }
+
+    const hash = scenarioHash(model, '2026-03-gtc-nemotron-v1', activeAssumptions, activeMetrics);
+    if (cache.has(hash)) {
+      return res.status(200).json({
+        enabled: true,
+        modelIdentifier: model,
+        fromCache: true,
+        requestsThisSession: sessionRequests,
+        status: 'ok',
+        interpretation: cache.get(hash),
+        groundingRequest
+      });
+    }
+
+    sessionRequests += 1;
+    try {
+      const payload = {
+        model,
+        messages: [
+          { role: 'system', content: NEMOTRON_SYSTEM_PROMPT },
+          { role: 'user', content: JSON.stringify(groundingRequest, null, 2) }
+        ],
+        temperature: 0.1,
+        max_tokens: 2000
+      };
+
+      const openRouterRes = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${apiKey}`,
+          'HTTP-Referer': process.env.APP_URL || 'https://z-wbe-bottleneck-lab.vercel.app',
+          'X-Title': 'Z-WBE Bottleneck Lab'
+        },
+        body: JSON.stringify(payload)
+      });
+
+      if (!openRouterRes.ok) {
+        if (openRouterRes.status === 429) {
+          const fallback = generateGroundedFallback(
+            groundingRequest,
+            'rate_limited',
+            'FREE API RATE LIMIT REACHED\nYour simulation is still available.\nTry Nemotron again later.'
+          );
+          return res.status(429).json({
+            enabled: true,
+            modelIdentifier: model,
+            requestsThisSession: sessionRequests,
+            status: 'rate_limited',
+            interpretation: fallback,
+            groundingRequest
+          });
+        }
+        throw new Error(`OpenRouter returned status ${openRouterRes.status}`);
+      }
+
+      const data = await openRouterRes.json();
+      const rawContent = data.choices?.[0]?.message?.content || '';
+      const interpretation = repairAndParseNemotronResponse(rawContent, groundingRequest);
+      cache.set(hash, interpretation);
+
+      return res.status(200).json({
+        enabled: true,
+        modelIdentifier: model,
+        fromCache: false,
+        requestsThisSession: sessionRequests,
+        status: 'ok',
+        interpretation,
+        groundingRequest
+      });
+    } catch (err: any) {
+      const fallback = generateGroundedFallback(
+        groundingRequest,
+        'temporarily_unavailable',
+        'AI INTERPRETATION TEMPORARILY UNAVAILABLE\nThe deterministic simulation remains valid.'
+      );
+      return res.status(200).json({
+        enabled: true,
+        modelIdentifier: model,
+        requestsThisSession: sessionRequests,
+        status: 'temporarily_unavailable',
+        errorMessage: err.message,
+        interpretation: fallback,
+        groundingRequest
+      });
+    }
+  }
+
+  return res.status(404).json({ error: 'Endpoint not found', url });
 }
