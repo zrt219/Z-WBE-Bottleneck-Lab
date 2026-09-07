@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ScenarioAssumptions } from '@z-wbe/shared';
 import { Sliders, Camera, Cpu, Database, DollarSign, Activity, Plus, Minus, Info } from 'lucide-react';
 import { Tooltip } from './Tooltip';
@@ -62,8 +63,8 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
         </span>
       </div>
 
-      {/* Category Tabs: Smooth horizontal scrollable pill bar with full legible titles */}
-      <div className="flex items-center gap-1.5 overflow-x-auto p-1.5 bg-slate-100/90 rounded-xl border border-slate-200/80 shadow-inner scrollbar-none">
+      {/* Category Tabs: Smooth horizontal scrollable pill bar with zero visible scrollbar and Framer Motion sliding pill */}
+      <div className="flex items-center gap-1 overflow-x-auto p-1.5 bg-slate-100/90 rounded-xl border border-slate-200/80 shadow-inner no-scrollbar scrollbar-none">
         {tabs.map((t) => {
           const Icon = t.icon;
           const isActive = activeTab === t.id;
@@ -71,21 +72,36 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
             <button
               key={t.id}
               onClick={() => setActiveTab(t.id)}
-              className={`flex items-center justify-center space-x-1.5 py-2 px-3.5 rounded-lg text-xs font-semibold whitespace-nowrap transition-all duration-150 cursor-pointer shrink-0 ${
-                isActive
-                  ? 'bg-white text-blue-900 shadow-xs ring-1 ring-slate-200/90 font-bold'
-                  : 'text-slate-600 hover:text-slate-900 hover:bg-white/60'
+              className={`relative flex items-center justify-center space-x-1.5 py-2 px-3 rounded-lg text-xs font-semibold whitespace-nowrap transition-colors duration-150 cursor-pointer shrink-0 ${
+                isActive ? 'text-blue-950 font-bold' : 'text-slate-600 hover:text-slate-900'
               }`}
             >
-              <Icon className={`w-3.5 h-3.5 shrink-0 ${isActive ? 'text-blue-600' : 'text-slate-400'}`} />
-              <span>{t.label}</span>
+              {isActive && (
+                <motion.div
+                  layoutId="activeTabIndicator"
+                  className="absolute inset-0 bg-white rounded-lg shadow-sm border border-slate-200/90"
+                  transition={{ type: 'spring', bounce: 0.2, duration: 0.35 }}
+                />
+              )}
+              <span className="relative z-10 flex items-center space-x-1.5">
+                <Icon className={`w-3.5 h-3.5 shrink-0 ${isActive ? 'text-blue-600' : 'text-slate-400'}`} />
+                <span>{t.label}</span>
+              </span>
             </button>
           );
         })}
       </div>
 
-      {/* Tab Panels */}
-      <div className="space-y-3 text-xs pt-1">
+      {/* Tab Panels with smooth AnimatePresence transition */}
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={activeTab}
+          initial={{ opacity: 0, y: 5 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -4 }}
+          transition={{ duration: 0.16, ease: 'easeOut' }}
+          className="space-y-3 text-xs pt-1"
+        >
         {activeTab === 'acquisition' && (
           <>
             <ControlField
@@ -485,7 +501,8 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
             </div>
           </>
         )}
-      </div>
+        </motion.div>
+      </AnimatePresence>
     </div>
   );
 };

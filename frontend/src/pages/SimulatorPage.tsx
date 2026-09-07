@@ -348,7 +348,7 @@ export const SimulatorPage: React.FC = () => {
               setTimeout(() => setCopiedLink(false), 2000);
             }
           }}
-          className="flex items-center space-x-2 px-4 py-2.5 rounded-xl border border-indigo-300 bg-gradient-to-b from-indigo-50 to-indigo-100/80 hover:from-indigo-100 hover:to-indigo-200/90 text-xs font-bold text-indigo-950 shadow-sm hover:shadow-md hover:-translate-y-0.5 active:translate-y-0.5 transition-all cursor-pointer"
+          className="flex items-center space-x-2 px-5 py-2.5 rounded-xl border border-indigo-300 bg-gradient-to-b from-indigo-50 to-indigo-100/80 hover:from-indigo-100 hover:to-indigo-200/90 text-xs font-bold text-indigo-950 shadow-sm hover:shadow-md hover:-translate-y-0.5 active:translate-y-0.5 transition-all cursor-pointer whitespace-nowrap"
           title="Copy permalink with active parameters to clipboard"
         >
           {copiedLink ? (
@@ -368,14 +368,18 @@ export const SimulatorPage: React.FC = () => {
             setBaselineAssumptions(assumptions);
             setIsCompareOpen(true);
           }}
-          className="flex items-center space-x-2 px-4.5 py-2.5 rounded-xl border border-blue-200 bg-gradient-to-b from-white via-blue-50/40 to-blue-50/80 hover:from-blue-50 hover:to-blue-100 text-xs font-bold text-blue-950 shadow-sm hover:shadow-md hover:-translate-y-0.5 active:translate-y-0.5 transition-all cursor-pointer"
+          className="flex items-center space-x-2.5 px-6 py-2.5 rounded-xl border border-blue-200 bg-gradient-to-b from-white via-blue-50/40 to-blue-50/80 hover:from-blue-50 hover:to-blue-100 text-xs font-bold text-blue-950 shadow-sm hover:shadow-md hover:-translate-y-0.5 active:translate-y-0.5 transition-all cursor-pointer whitespace-nowrap"
+          title="Compare current scenario against baseline"
         >
           <GitCompare className="w-4 h-4 text-blue-600 shrink-0" />
-          <span>Compare Scenarios (Baseline vs Modified)</span>
+          <span>Compare Scenarios</span>
+          <span className="text-[10px] font-semibold text-blue-700 bg-blue-100/80 px-2 py-0.5 rounded-md border border-blue-200/80 shrink-0">
+            Baseline vs Modified
+          </span>
         </button>
         <button
           onClick={() => handleSelectPreset(PRESET_DROSOPHILA)}
-          className="flex items-center space-x-1.5 px-3.5 py-2.5 rounded-xl border border-slate-300 bg-gradient-to-b from-white to-slate-100 hover:from-slate-50 hover:to-slate-200 text-xs font-bold text-slate-700 hover:text-slate-900 shadow-sm hover:shadow-md hover:-translate-y-0.5 active:translate-y-0.5 transition-all cursor-pointer"
+          className="flex items-center space-x-2 px-4.5 py-2.5 rounded-xl border border-slate-300 bg-gradient-to-b from-white to-slate-100 hover:from-slate-50 hover:to-slate-200 text-xs font-bold text-slate-700 hover:text-slate-900 shadow-sm hover:shadow-md hover:-translate-y-0.5 active:translate-y-0.5 transition-all cursor-pointer whitespace-nowrap"
           title="Reset to default preset"
         >
           <RotateCcw className="w-3.5 h-3.5 shrink-0" />

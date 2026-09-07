@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { BottleneckResult } from '@z-wbe/shared';
 import { AlertTriangle, Sparkles, Loader2, ShieldCheck, ArrowUpRight, Info, Zap } from 'lucide-react';
 import { Tooltip } from './Tooltip';
