@@ -2,10 +2,13 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.buildGroundingRequest = exports.BOTTLENECK_INFO = exports.NEMOTRON_SYSTEM_PROMPT = exports.PROMPT_VERSION = void 0;
 exports.getFriendlyBottleneck = getFriendlyBottleneck;
+exports.generateEli5 = generateEli5;
+exports.getLowImpactExplanation = getLowImpactExplanation;
 exports.scenarioHash = scenarioHash;
 exports.buildNemotronInputSchema = buildNemotronInputSchema;
 exports.generateGroundedFallback = generateGroundedFallback;
 exports.repairAndParseNemotronResponse = repairAndParseNemotronResponse;
+const equations_1 = require("./equations");
 exports.PROMPT_VERSION = 'v1.0.0-gtc2026';
 exports.NEMOTRON_SYSTEM_PROMPT = `You are the scientific interpretation layer for Z-WBE Bottleneck Lab.
 Z-WBE is a research simulator exploring hypothetical engineering requirements for whole-brain emulation.
@@ -33,7 +36,14 @@ Respond with valid JSON matching this schema:
   "bottleneck_transition": "Where the bottleneck will shift next once the current blocker is relieved",
   "uncertainties": ["Key biological, algorithmic, and hardware unknowns explained in accessible terms"],
   "empirical_validation_needed": ["Specific laboratory experiments and physical benchmarks needed to prove this in the real world"],
-  "bottom_line": "One-sentence takeaway on practical feasibility"
+  "bottom_line": "One-sentence takeaway on practical feasibility",
+  "eli5": {
+    "headline": "Short punchy analogy title (e.g. Phone Out of Storage Mid-Video)",
+    "analogy": "Friendly 2-3 sentence ELI5 analogy",
+    "simpleSummary": "One simple sentence explaining what is happening",
+    "whyItStalls": "One simple sentence explaining why it is stuck",
+    "whatToFixFirst": "One simple sentence on the first fix"
+  }
 }`;
 /**
  * Friendly name and analogy dictionary for bottleneck categories
@@ -95,6 +105,130 @@ function getFriendlyBottleneck(key) {
         analogy: 'This technical constraint represents the primary limiting factor for this scenario.',
         shortDesc: 'Systemic capacity threshold reached.'
     };
+}
+/**
+ * Tailored real-world ELI5 analogies for each dominant bottleneck dimension.
+ */
+function generateEli5(dominant, request, highestLev) {
+    const norm = dominant.toUpperCase().replace(/\s+/g, '_');
+    const leverageTarget = highestLev || request.highest_leverage_variable || 'the highest-leverage parameter';
+    switch (norm) {
+        case 'STORAGE':
+            return {
+                headline: 'Your Phone Ran Out of Storage Mid-Video',
+                analogy: 'Imagine trying to record 10 straight years of 8K ultra-high-definition video on your smartphone. Before you can even edit, watch, or share the clip, your phone screams "Storage Full!". That is what is happening here: our microscopes produce such an unfathomable ocean of nanometer-scale images that our storage hard drive arrays fill up completely before we can do anything else with them.',
+                simpleSummary: 'The brain image files are too gigantic to fit on available storage hard drives.',
+                whyItStalls: 'Microscopes generate petabytes of raw visual data that overflow storage arrays, stopping all downstream analysis.',
+                whatToFixFirst: `Deploy larger petabyte-scale storage arrays and smarter image compression, prioritizing ${leverageTarget}.`
+            };
+        case 'ACQUISITION':
+            return {
+                headline: 'Reading an Encyclopedia with a Tiny Magnifying Glass',
+                analogy: 'Imagine trying to read a 10-million-page encyclopedia one single letter at a time through a high-powered magnifying glass. Even with hundreds of helpers, photographing every microscopic nanometer of brain tissue with electron beams takes decades of real-world physical camera time.',
+                simpleSummary: 'Physical microscopes take too many years to photograph the brain tissue.',
+                whyItStalls: 'Physical electron beam scanning speeds are limited. Until the tissue is photographed, supercomputers have no data to work with.',
+                whatToFixFirst: `Speed up physical scanning by adding multi-beam microscopes or parallelizing instruments, prioritizing ${leverageTarget}.`
+            };
+        case 'COMPUTE':
+            return {
+                headline: 'Simulating a Hurricane on a Pocket Calculator',
+                analogy: 'Imagine trying to predict every drop of rain and gust of wind in a Category 5 hurricane using a basic pocket solar calculator. Simulating billions of living neurons firing simultaneously requires trillions of complex mathematical equations every split second, far exceeding our available computer processor chips.',
+                simpleSummary: 'Computer processors are too slow to calculate all the neural math in real time.',
+                whyItStalls: 'Billions of dynamic neuron updates and synaptic firings overwhelm the mathematical calculation throughput of available chips.',
+                whatToFixFirst: `Add high-performance GPU clusters or specialized neural accelerator processors, prioritizing ${leverageTarget}.`
+            };
+        case 'MEMORY_BANDWIDTH':
+            return {
+                headline: 'Rush-Hour Gridlock on a 2-Lane Highway',
+                analogy: 'Imagine having a kitchen full of world-class master chefs ready to cook at lightning speed, but only a single narrow doorway to the pantry. The chefs spend 95% of their day waiting in line for ingredients. Even if our processor chips are super-fast, the memory data cables cannot feed them brain state information fast enough.',
+                simpleSummary: 'Data gets stuck in traffic between memory chips and processors.',
+                whyItStalls: 'Processors sit idle waiting for synaptic data to travel across memory buses, creating a massive communication traffic jam.',
+                whatToFixFirst: `Upgrade memory bandwidth with High Bandwidth Memory (HBM3e/HBM4) or near-memory computing, prioritizing ${leverageTarget}.`
+            };
+        case 'POWER':
+            return {
+                headline: 'Plugging an Industrial Steel Mill into a Bedroom Outlet',
+                analogy: 'Imagine plugging a massive industrial factory into your bedroom wall socket. The circuit breaker trips immediately. Running this many supercomputers simultaneously draws so much electrical power that it would overload standard utility grids and generate enough heat to boil a swimming pool.',
+                simpleSummary: 'The simulation requires more electrical power than the facility grid can deliver.',
+                whyItStalls: 'Megawatt power limits and heat dissipation constraints cap the number of processing chips that can run at once.',
+                whatToFixFirst: `Improve computational energy efficiency (FLOPs per Watt) or expand facility power infrastructure, prioritizing ${leverageTarget}.`
+            };
+        case 'INTERCONNECT':
+            return {
+                headline: 'Sending Snail-Mail Letters Across Town for Every Decision',
+                analogy: 'Imagine an orchestra where every musician is sitting in a different building across town and has to mail a postcard before playing the next note. Supercomputer server nodes spend more time waiting for network cables to synchronize than doing actual simulation math.',
+                simpleSummary: 'Network cables between server racks are too slow to keep nodes synchronized.',
+                whyItStalls: 'Densely connected neural circuits require constant cross-node communication, saturating network fabrics and stalling synchronized steps.',
+                whatToFixFirst: `Install ultra-fast optical interconnects and low-latency network switches, prioritizing ${leverageTarget}.`
+            };
+        case 'RECONSTRUCTION':
+        case 'AUTOMATED_RECONSTRUCTION':
+            return {
+                headline: 'Tracing Tangled Spaghetti in the Dark',
+                analogy: 'Imagine taking a photo of a bowl with 100,000 miles of tangled spaghetti noodles and trying to trace every single noodle from start to finish without making a single mistake. AI computer vision models must trace billions of microscopic neural wires across millions of image slices, creating an enormous AI computational backlog.',
+                simpleSummary: 'AI vision models take years to stitch 2D microscope photos into 3D neurons.',
+                whyItStalls: 'Automated volumetric segmentation of densely packed axons and dendrites requires immense GPU inference time.',
+                whatToFixFirst: `Deploy accelerated segmentation algorithms and dedicated AI inference accelerators, prioritizing ${leverageTarget}.`
+            };
+        case 'MANUAL_PROOFREADING':
+            return {
+                headline: 'Proofreading an Entire Library with a Red Pen',
+                analogy: 'Imagine hiring human editors to proofread every book in the Library of Congress letter-by-letter to catch spelling errors. Even the best AI tracing models make mistakes, and human neuroscientists must manually inspect and fix billions of tangled connections.',
+                simpleSummary: 'Humans cannot review and correct AI tracing errors fast enough.',
+                whyItStalls: 'Manual proofreading requires millions of expert human hours, creating a massive labor and timeline bottleneck.',
+                whatToFixFirst: `Improve AI segmentation accuracy to slash proofreading error rates, prioritizing ${leverageTarget}.`
+            };
+        case 'ECONOMIC_COST':
+        case 'COST':
+            return {
+                headline: 'Buying a Rocket Fleet on a Lemonade Stand Budget',
+                analogy: 'Imagine planning a human mission to Mars with the money saved in your childhood piggy bank. The cost of purchasing electron microscopes, supercomputer clusters, petabyte storage, and electric power vastly exceeds standard scientific research budgets.',
+                simpleSummary: 'The project costs far more money than available research grants.',
+                whyItStalls: 'Total equipment acquisition, electrical power, and human labor costs exceed the available financial ceiling.',
+                whatToFixFirst: `Lower component costs through standardized hardware or seek national-scale consortium funding, prioritizing ${leverageTarget}.`
+            };
+        default: {
+            const dominantInfo = getFriendlyBottleneck(dominant);
+            return {
+                headline: 'System Highway Gridlock',
+                analogy: `One single part of the system (${dominantInfo.label}) is moving far slower than the rest, like a 5-lane highway funneling into a single narrow tollbooth. Everything upstream piles up behind it into a complete standstill.`,
+                simpleSummary: `The pipeline is stuck waiting on ${dominantInfo.label}.`,
+                whyItStalls: `System throughput is capped by operational limits in ${dominantInfo.label}.`,
+                whatToFixFirst: `Relieve the active constraint by prioritizing ${leverageTarget}.`
+            };
+        }
+    }
+}
+/**
+ * Generates unique, meaningful explanations for why each secondary parameter doesn't help.
+ */
+function getLowImpactExplanation(variableLabel, dominantLabel) {
+    const norm = variableLabel.toLowerCase();
+    if (norm.includes('compute') || norm.includes('flop')) {
+        return `Adding extra processing power leaves compute chips starved for data while ${dominantLabel} remains the gating bottleneck.`;
+    }
+    if (norm.includes('memory bandwidth') || norm.includes('ram')) {
+        return `Expanding memory transfer buses cannot accelerate the pipeline while upstream data throughput is throttled by ${dominantLabel}.`;
+    }
+    if (norm.includes('interconnect') || norm.includes('network')) {
+        return `Higher cross-node network bandwidth provides minimal gain because server nodes are already waiting on ${dominantLabel}.`;
+    }
+    if (norm.includes('storage') || norm.includes('disk')) {
+        return `Adding more archive disk capacity provides storage headroom, but does not solve active throughput limits in ${dominantLabel}.`;
+    }
+    if (norm.includes('power') || norm.includes('watt')) {
+        return `Increasing electrical power headroom provides zero speedup since hardware is already throttled by ${dominantLabel} rather than power limits.`;
+    }
+    if (norm.includes('imaging rate') || norm.includes('machine') || norm.includes('instrument')) {
+        return `Accelerating or multiplying imaging instruments cannot speed up completion while downstream processing is stalled by ${dominantLabel}.`;
+    }
+    if (norm.includes('proofreading') || norm.includes('segmentation')) {
+        return `Faster proofreading yields negligible overall speedup because total timeline is dominated by ${dominantLabel}.`;
+    }
+    if (norm.includes('budget') || norm.includes('cost') || norm.includes('economic')) {
+        return `Expanding capital budget cannot overcome the fundamental physical and hardware ceilings imposed by ${dominantLabel}.`;
+    }
+    return `Yields minimal performance gain because system throughput remains primarily gated by ${dominantLabel}.`;
 }
 /**
  * Deterministic string hash function for cross-platform caching (Node.js and Browser).
@@ -232,12 +366,30 @@ function generateGroundedFallback(request, status = 'unavailable', errorMessage)
         request.provenance_notice.includes('HUMAN-SCALE');
     const dominantInfo = getFriendlyBottleneck(dominant);
     const secondInfo = getFriendlyBottleneck(second);
-    const rawDataTb = (request.calculated_metrics.raw_data_bytes || 0) / 1e12;
-    const compressedTb = (request.calculated_metrics.compressed_data_bytes || 0) / 1e12;
-    const totalCostM = (request.calculated_metrics.total_estimated_cost_usd || 0) / 1e6;
-    const memTbS = request.calculated_metrics.memory_traffic_tb_s || 0;
-    const compPflops = request.calculated_metrics.compute_demand_pflops || 0;
-    const acqYears = request.calculated_metrics.acquisition_time_years || 0;
+    const rawBytes = Number(request.calculated_metrics.raw_data_bytes ?? request.calculated_metrics.rawDataBytes ?? 0);
+    const compressedBytes = Number(request.calculated_metrics.compressed_data_bytes ?? request.calculated_metrics.compressedDataBytes ?? 0);
+    const costUsd = Number(request.calculated_metrics.total_estimated_cost_usd ?? request.calculated_metrics.totalEstimatedCostUsd ?? 0);
+    const memTbS = Number(request.calculated_metrics.memory_traffic_tb_s ?? request.calculated_metrics.memoryTrafficTbS ?? 0);
+    const compFlops = Number(request.calculated_metrics.compute_demand_flops ??
+        request.calculated_metrics.computeDemandFlops ??
+        (Number(request.calculated_metrics.compute_demand_pflops ?? request.calculated_metrics.computeDemandPflops ?? 0) * 1e15));
+    const acqYears = Number(request.calculated_metrics.acquisition_time_years ?? request.calculated_metrics.acquisitionTimeYears ?? 0);
+    const acqDays = acqYears * 365.25;
+    const formattedRaw = (0, equations_1.formatBytes)(rawBytes);
+    const formattedCompressed = (0, equations_1.formatBytes)(compressedBytes);
+    const formattedCost = (0, equations_1.formatCurrency)(costUsd);
+    const formattedBandwidth = (0, equations_1.formatBandwidth)(memTbS);
+    const formattedCompute = (0, equations_1.formatComputeFlops)(compFlops);
+    const formattedAcquisitionTime = acqYears >= 1.0
+        ? `${acqYears.toFixed(2)} years`
+        : acqDays >= 1.0
+            ? `${acqDays.toFixed(1)} days`
+            : `${Math.max(1, Math.round(acqDays * 24))} hours`;
+    const capacityStatus = dominantPressure > 100
+        ? `exceeds allowable capacity by **${(dominantPressure - 100 < 0.1 ? '<0.1%' : `${(dominantPressure - 100).toFixed(1)}%`)}**`
+        : dominantPressure >= 99
+            ? `is operating at full capacity (**${dominantPressure.toFixed(1)}%** of allowable ceiling)`
+            : `is operating as the primary ceiling at **${dominantPressure.toFixed(1)}%** load`;
     const scenarioDisplayName = request.scenario
         ? `${request.scenario} (${request.scenario_id})`
         : request.scenario_id;
@@ -246,17 +398,17 @@ function generateGroundedFallback(request, status = 'unavailable', errorMessage)
         `💡 **What this means:** ${dominantInfo.analogy}\n\n` +
         `The next closest obstacle is **${secondInfo.label}** (\`${second}\`) at **${secondPressure.toFixed(1)}%**.`;
     const why = `Under the current setup for **${scenarioDisplayName}**, the system pushes past maximum operational thresholds in **${dominantInfo.label}** (\`${dominant}\`):\n\n` +
-        `• 🔬 **Microscope Imaging:** Requires **${acqYears.toFixed(2)} years** of continuous scanning time for this tissue volume.\n` +
-        `• 💾 **Storage Demand:** Generates **${rawDataTb.toFixed(2)} TB** of raw image data (**${compressedTb.toFixed(2)} TB** compressed).\n` +
-        `• ⚡ **Real-Time Simulation:** Demands **${memTbS.toFixed(2)} TB/s** memory transfer speed and **${compPflops.toFixed(3)} PFLOPS** of compute power.\n` +
-        `• 💰 **Estimated Budget:** Projected infrastructure cost is **$${totalCostM.toFixed(2)}M**.\n\n` +
-        `Because ${dominantInfo.label} exceeds allowable capacity by **${Math.max(0, dominantPressure - 100).toFixed(1)}%**, the entire pipeline stalls here first before other components can run at full speed.`;
+        `• 🔬 **Microscope Imaging:** Requires **${formattedAcquisitionTime}** of continuous scanning time for this tissue volume.\n` +
+        `• 💾 **Storage Demand:** Generates **${formattedRaw}** of raw image data (**${formattedCompressed}** compressed).\n` +
+        `• ⚡ **Real-Time Simulation:** Demands **${formattedBandwidth}** memory transfer speed and **${formattedCompute}** of compute power.\n` +
+        `• 💰 **Estimated Budget:** Projected infrastructure cost is **${formattedCost}**.\n\n` +
+        `Because ${dominantInfo.label} ${capacityStatus}, the entire pipeline stalls here first before other components can run at full speed.`;
     const whatImprovementMattersMost = `The highest-impact breakthrough for this setup is **${highestLev.toUpperCase()}**.\n\n` +
         `🚀 **Why it matters:** Improving this parameter yields the steepest performance gain and directly relieves pressure on the active bottleneck (${dominantInfo.label}).`;
     const lowLeverageList = request.sensitivity.low_leverage_improvements || [];
     const whatDoesNotHelpMuch = lowLeverageList.length > 0
         ? `Upgrading the following areas right now will provide **almost no speedup** because the system remains completely blocked by **${dominantInfo.label}**:\n\n` +
-            lowLeverageList.map((item) => `• **${item}**: System progress remains gated until ${dominantInfo.label} is improved first.`).join('\n')
+            lowLeverageList.map((item) => `• **${item}**: ${getLowImpactExplanation(item, dominantInfo.label)}`).join('\n')
         : `All tested parameters currently provide measurable benefits across the active operating range.`;
     const transitions = request.sensitivity.transitions || [];
     const whereDidTheBottleneckMove = transitions.length > 0
@@ -278,16 +430,18 @@ function generateGroundedFallback(request, status = 'unavailable', errorMessage)
         'Validating supercomputer node network latency during large-scale synchronized neural state exchanges.'
     ];
     const bottomLine = `The numbers show that ${dominantInfo.label} is the active bottleneck. Investing in other areas without solving this first yields very little real-world progress.`;
+    const eli5 = generateEli5(dominant, request, highestLev);
     const structuredOutput = {
         summary,
         dominant_bottleneck_explanation: whatLimits,
         why_it_matters: why,
         highest_leverage_improvement: whatImprovementMattersMost,
-        low_leverage_improvements: lowLeverageList,
+        low_leverage_improvements: lowLeverageList.map((item) => `${item}: ${getLowImpactExplanation(item, dominantInfo.label)}`),
         bottleneck_transition: whereDidTheBottleneckMove,
         uncertainties,
         empirical_validation_needed: empiricalValidation,
-        bottom_line: bottomLine
+        bottom_line: bottomLine,
+        eli5
     };
     const markdown = [
         `### WHAT LIMITS THIS SCENARIO?`,
@@ -314,6 +468,7 @@ function generateGroundedFallback(request, status = 'unavailable', errorMessage)
         labeledBadge: 'AI INTERPRETATION',
         status,
         errorMessage,
+        eli5,
         sections: {
             whatLimitsThisScenario: whatLimits,
             why,
@@ -334,7 +489,7 @@ function generateGroundedFallback(request, status = 'unavailable', errorMessage)
  * Attempts single repair if initial JSON parsing fails.
  * Falls back to markdown section parsing if repair fails.
  */
-function repairAndParseNemotronResponse(rawContent, modelIdentifier = 'nvidia/nemotron-3-super-120b-a12b:free') {
+function repairAndParseNemotronResponse(rawContent, modelIdentifier = 'nvidia/nemotron-3-super-120b-a12b:free', request) {
     let structured = null;
     // 1. Direct JSON parse attempt
     try {
@@ -360,6 +515,30 @@ function repairAndParseNemotronResponse(rawContent, modelIdentifier = 'nvidia/ne
         }
     }
     if (structured) {
+        const dominantKey = request?.dominant_bottleneck ||
+            (rawContent.includes('STORAGE') ? 'STORAGE' :
+                rawContent.includes('ACQUISITION') ? 'ACQUISITION' :
+                    rawContent.includes('COMPUTE') ? 'COMPUTE' :
+                        rawContent.includes('POWER') ? 'POWER' :
+                            rawContent.includes('INTERCONNECT') ? 'INTERCONNECT' :
+                                rawContent.includes('RECONSTRUCTION') ? 'RECONSTRUCTION' :
+                                    rawContent.includes('PROOFREADING') ? 'MANUAL_PROOFREADING' :
+                                        rawContent.includes('COST') ? 'ECONOMIC_COST' : 'MEMORY_BANDWIDTH');
+        const eli5 = structured.eli5 || generateEli5(dominantKey, request || {
+            project: 'Z-WBE Bottleneck Lab',
+            scenario_id: 'scenario',
+            scale: 'scale',
+            provenance_notice: '',
+            assumptions: {},
+            calculated_metrics: {},
+            pressure_vector: {},
+            dominant_bottleneck: dominantKey,
+            secondary_bottleneck: 'COMPUTE',
+            sensitivity: {},
+            highest_leverage_variable: structured.highest_leverage_improvement || 'Primary Lever',
+            limitations: [],
+            scientific_status: 'research'
+        }, structured.highest_leverage_improvement);
         const whatLimits = structured.dominant_bottleneck_explanation || structured.summary || 'See full report.';
         const why = structured.why_it_matters || 'See full report.';
         const whatImprovement = structured.highest_leverage_improvement || 'See sensitivity analysis.';
@@ -395,6 +574,7 @@ function repairAndParseNemotronResponse(rawContent, modelIdentifier = 'nvidia/ne
             isAIGenerated: true,
             labeledBadge: 'AI INTERPRETATION',
             status: 'ok',
+            eli5,
             sections: {
                 whatLimitsThisScenario: whatLimits,
                 why,
@@ -406,7 +586,10 @@ function repairAndParseNemotronResponse(rawContent, modelIdentifier = 'nvidia/ne
                 whatNeedsRealExperimentalEvidence: empirical,
                 whatWouldNeedEmpiricalValidation: empirical
             },
-            structuredOutput: structured,
+            structuredOutput: {
+                ...structured,
+                eli5
+            },
             markdown
         };
     }
@@ -467,12 +650,29 @@ function repairAndParseNemotronResponse(rawContent, modelIdentifier = 'nvidia/ne
     const whatNeedsRealExperimentalEvidence = extractSection('WHAT NEEDS REAL EXPERIMENTAL EVIDENCE\\??', []) ||
         extractSection('WHAT WOULD NEED EMPIRICAL VALIDATION\\??', []) ||
         'High-throughput imaging and continuous memory bus throughput require physical laboratory validation.';
+    const fallbackDominantKey = request?.dominant_bottleneck || 'MEMORY_BANDWIDTH';
+    const fallbackEli5 = generateEli5(fallbackDominantKey, request || {
+        project: 'Z-WBE Bottleneck Lab',
+        scenario_id: 'scenario',
+        scale: 'scale',
+        provenance_notice: '',
+        assumptions: {},
+        calculated_metrics: {},
+        pressure_vector: {},
+        dominant_bottleneck: fallbackDominantKey,
+        secondary_bottleneck: 'COMPUTE',
+        sensitivity: {},
+        highest_leverage_variable: whatImprovementMattersMost || 'Primary Lever',
+        limitations: [],
+        scientific_status: 'research'
+    }, whatImprovementMattersMost);
     return {
         source: 'OPENROUTER_NEMOTRON_3_SUPER',
         modelIdentifier,
         isAIGenerated: true,
         labeledBadge: 'AI INTERPRETATION',
         status: 'ok',
+        eli5: fallbackEli5,
         sections: {
             whatLimitsThisScenario,
             why,

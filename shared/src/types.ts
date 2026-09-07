@@ -203,6 +203,14 @@ export interface NemotronInputSchema {
 
 export type GroundingContractRequest = NemotronInputSchema;
 
+export interface Eli5Explanation {
+  headline: string;
+  analogy: string;
+  simpleSummary: string;
+  whyItStalls: string;
+  whatToFixFirst: string;
+}
+
 export interface NemotronStructuredOutput {
   summary: string;
   dominant_bottleneck_explanation: string;
@@ -213,6 +221,7 @@ export interface NemotronStructuredOutput {
   uncertainties: string[];
   empirical_validation_needed: string[];
   bottom_line: string;
+  eli5?: Eli5Explanation;
 }
 
 export interface GroundingContractResponse {
@@ -223,6 +232,7 @@ export interface GroundingContractResponse {
   status: 'ok' | 'unavailable' | 'rate_limited' | 'temporarily_unavailable';
   errorMessage?: string;
   fromCache?: boolean;
+  eli5?: Eli5Explanation;
   sections: {
     whatLimitsThisScenario: string;
     why: string;

@@ -80,7 +80,7 @@ export const WorkflowStepper: React.FC<WorkflowStepperProps> = ({
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      const yOffset = -130; // offset for sticky header and stepper bar
+      const yOffset = -80; // offset for 64px sticky header with comfortable 16px margin
       const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: y, behavior: 'smooth' });
     }
@@ -89,7 +89,7 @@ export const WorkflowStepper: React.FC<WorkflowStepperProps> = ({
   const activeIndex = steps.findIndex(s => s.id === activeSection);
 
   return (
-    <div className="sticky top-16 z-20 bg-white/90 backdrop-blur-md border-y border-slate-200/80 shadow-xs mb-6 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 py-2.5 transition-all">
+    <div className="bg-white border-y border-slate-200/80 shadow-xs mb-6 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 py-2.5 transition-all">
       <div className="max-w-[1600px] mx-auto flex items-center justify-between gap-3 overflow-x-auto no-scrollbar">
         {/* Step Items Ribbon */}
         <div className="flex items-center space-x-2 sm:space-x-3 min-w-max">

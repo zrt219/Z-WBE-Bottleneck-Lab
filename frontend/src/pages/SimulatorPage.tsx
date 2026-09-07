@@ -601,7 +601,7 @@ export const SimulatorPage: React.FC = () => {
         className="scroll-mt-32"
       >
         <div id="tour-nemotron-interpretation">
-          <div id="interpretation-layer">
+          <div id="interpretation-layer" className="scroll-mt-24">
             <NemotronInterpretation
               interpretation={interpretation}
               groundingRequest={groundingPayload}
