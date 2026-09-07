@@ -31,16 +31,16 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
     onChange(updated);
   };
 
-  const tabs: Array<{ id: TabKey; label: string; shortLabel: string; icon: React.FC<{ className?: string }> }> = [
-    { id: 'acquisition', label: 'Acquisition', shortLabel: 'Acq', icon: Camera },
-    { id: 'reconstruction', label: 'Recon', shortLabel: 'Recon', icon: Database },
-    { id: 'neuralModel', label: 'Neural', shortLabel: 'Neural', icon: Activity },
-    { id: 'hardware', label: 'Hardware', shortLabel: 'HW', icon: Cpu },
-    { id: 'economics', label: 'Economics', shortLabel: 'Econ', icon: DollarSign }
+  const tabs: Array<{ id: TabKey; label: string; icon: React.FC<{ className?: string }> }> = [
+    { id: 'acquisition', label: 'Acquisition', icon: Camera },
+    { id: 'reconstruction', label: 'Reconstruction', icon: Database },
+    { id: 'neuralModel', label: 'Neural Model', icon: Activity },
+    { id: 'hardware', label: 'Hardware', icon: Cpu },
+    { id: 'economics', label: 'Economics', icon: DollarSign }
   ];
 
   return (
-    <div className="bg-white border border-slate-200/90 rounded-2xl p-5 shadow-card space-y-4">
+    <div id="tour-assumption-controls" className="h-full bg-white border border-slate-200/90 rounded-2xl p-5 shadow-card space-y-4 flex flex-col">
       <div className="flex items-center justify-between border-b border-slate-100 pb-3">
         <div className="flex items-center space-x-2">
           <div className="w-7 h-7 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center">
@@ -59,8 +59,8 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
         </span>
       </div>
 
-      {/* Tabs */}
-      <div className="grid grid-cols-5 gap-1 bg-slate-100/80 p-1 rounded-xl border border-slate-200/80 shadow-inner">
+      {/* Category Tabs: Smooth horizontal scrollable pill bar with full legible titles */}
+      <div className="flex items-center gap-1.5 overflow-x-auto p-1.5 bg-slate-100/90 rounded-xl border border-slate-200/80 shadow-inner scrollbar-none">
         {tabs.map((t) => {
           const Icon = t.icon;
           const isActive = activeTab === t.id;
@@ -68,15 +68,14 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
             <button
               key={t.id}
               onClick={() => setActiveTab(t.id)}
-              className={`flex flex-col sm:flex-row items-center justify-center space-y-0.5 sm:space-y-0 sm:space-x-1.5 py-1.5 px-1 rounded-lg text-xs font-semibold transition-all duration-150 cursor-pointer ${
+              className={`flex items-center justify-center space-x-1.5 py-2 px-3.5 rounded-lg text-xs font-semibold whitespace-nowrap transition-all duration-150 cursor-pointer shrink-0 ${
                 isActive
-                  ? 'bg-white text-blue-900 shadow-xs ring-1 ring-slate-200 font-bold'
-                  : 'text-slate-600 hover:text-slate-900 hover:bg-white/50'
+                  ? 'bg-white text-blue-900 shadow-xs ring-1 ring-slate-200/90 font-bold'
+                  : 'text-slate-600 hover:text-slate-900 hover:bg-white/60'
               }`}
             >
-              <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-blue-600' : 'text-slate-400'}`} />
-              <span className="text-[11px] truncate hidden md:inline lg:hidden xl:inline">{t.label}</span>
-              <span className="text-[11px] truncate md:hidden lg:inline xl:hidden">{t.shortLabel}</span>
+              <Icon className={`w-3.5 h-3.5 shrink-0 ${isActive ? 'text-blue-600' : 'text-slate-400'}`} />
+              <span>{t.label}</span>
             </button>
           );
         })}
@@ -90,17 +89,18 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
               label="Tissue Volume"
               unit="mm³"
               description="Target anatomical biological tissue sample volume"
+              tooltipKey="tissueVolumeMm3"
               value={assumptions.acquisition.tissueVolumeMm3}
               min={0.0001}
               max={1500000}
               step={assumptions.acquisition.tissueVolumeMm3 > 10 ? 1 : 0.001}
               onChange={(v) => updateNested('acquisition', 'tissueVolumeMm3', v)}
             />
-            <div className="grid grid-cols-3 gap-2">
+            <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-1 gap-2.5">
               <ControlField
                 label="Voxel X"
                 unit="nm"
-                compact
+                tooltipKey="voxelResXNm"
                 value={assumptions.acquisition.voxelResXNm}
                 min={2}
                 max={50}
@@ -110,7 +110,7 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
               <ControlField
                 label="Voxel Y"
                 unit="nm"
-                compact
+                tooltipKey="voxelResYNm"
                 value={assumptions.acquisition.voxelResYNm}
                 min={2}
                 max={50}
@@ -120,7 +120,7 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
               <ControlField
                 label="Voxel Z"
                 unit="nm"
-                compact
+                tooltipKey="voxelResZNm"
                 value={assumptions.acquisition.voxelResZNm}
                 min={2}
                 max={100}
@@ -128,11 +128,11 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
                 onChange={(v) => updateNested('acquisition', 'voxelResZNm', v)}
               />
             </div>
-            <div className="grid grid-cols-2 gap-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-1 gap-2.5">
               <ControlField
                 label="Bits Per Voxel"
                 unit="bits"
-                compact
+                tooltipKey="bitsPerVoxel"
                 value={assumptions.acquisition.bitsPerVoxel}
                 min={4}
                 max={16}
@@ -142,7 +142,7 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
               <ControlField
                 label="Compression"
                 unit="x"
-                compact
+                tooltipKey="compressionRatio"
                 value={assumptions.acquisition.compressionRatio}
                 min={1}
                 max={10}
@@ -154,17 +154,18 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
               label="Imaging Rate Per Machine"
               unit="mm³/year"
               description="Beam throughput rate per multi-beam electron microscope"
+              tooltipKey="imagingRatePerMachineMm3Year"
               value={assumptions.acquisition.imagingRatePerMachineMm3Year}
               min={0.01}
               max={50}
               step={0.05}
               onChange={(v) => updateNested('acquisition', 'imagingRatePerMachineMm3Year', v)}
             />
-            <div className="grid grid-cols-2 gap-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-1 gap-2.5">
               <ControlField
                 label="Instrument Count"
                 unit="units"
-                compact
+                tooltipKey="machineCount"
                 value={assumptions.acquisition.machineCount}
                 min={1}
                 max={200}
@@ -174,7 +175,7 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
               <ControlField
                 label="Utilization Duty"
                 unit="fraction"
-                compact
+                tooltipKey="utilization"
                 value={assumptions.acquisition.utilization}
                 min={0.1}
                 max={1.0}
@@ -191,6 +192,7 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
               label="Raw Segmentation Accuracy"
               unit="fraction"
               description="Automated AI volumetric segmentation accuracy before human review"
+              tooltipKey="rawSegmentationAccuracy"
               value={assumptions.reconstruction.rawSegmentationAccuracy}
               min={0.8}
               max={0.999}
@@ -201,6 +203,7 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
               label="Proofreading Speedup"
               unit="x"
               description="Multiplier from automated assistive proofreading tools"
+              tooltipKey="proofreadingMultiplier"
               value={assumptions.reconstruction.proofreadingMultiplier}
               min={1}
               max={200}
@@ -211,6 +214,7 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
               label="Automated Throughput"
               unit="mm³/year"
               description="AI segmentation cluster pipeline throughput"
+              tooltipKey="automatedThroughputMm3Year"
               value={assumptions.reconstruction.automatedThroughputMm3Year}
               min={0.05}
               max={50000}
@@ -221,6 +225,7 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
               label="Manual Proofreading Burden"
               unit="hrs/mm³"
               description="Expert manual proofreading time required per mm³"
+              tooltipKey="manualProofreadingHoursPerMm3"
               value={assumptions.reconstruction.manualProofreadingHoursPerMm3}
               min={100}
               max={100000}
@@ -236,6 +241,7 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
               label="Neuron Count"
               unit="cells"
               description="Total biologically modeled neurons"
+              tooltipKey="neuronCount"
               value={assumptions.neuralModel.neuronCount}
               min={100}
               max={1e11}
@@ -246,6 +252,7 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
               label="Synapse Count"
               unit="synapses"
               description="Total synaptic junctions"
+              tooltipKey="synapseCount"
               value={assumptions.neuralModel.synapseCount}
               min={1000}
               max={2e14}
@@ -256,17 +263,18 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
               label="Average Firing Rate"
               unit="Hz"
               description="Mean action potential firing frequency"
+              tooltipKey="averageFiringRateHz"
               value={assumptions.neuralModel.averageFiringRateHz}
               min={0.5}
               max={50}
               step={0.5}
               onChange={(v) => updateNested('neuralModel', 'averageFiringRateHz', v)}
             />
-            <div className="grid grid-cols-2 gap-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-1 gap-2.5">
               <ControlField
                 label="State Per Neuron"
                 unit="bytes"
-                compact
+                tooltipKey="bytesPerNeuron"
                 value={assumptions.neuralModel.bytesPerNeuron}
                 min={64}
                 max={16384}
@@ -276,7 +284,7 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
               <ControlField
                 label="State Per Synapse"
                 unit="bytes"
-                compact
+                tooltipKey="bytesPerSynapse"
                 value={assumptions.neuralModel.bytesPerSynapse}
                 min={4}
                 max={256}
@@ -284,11 +292,11 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
                 onChange={(v) => updateNested('neuralModel', 'bytesPerSynapse', v)}
               />
             </div>
-            <div className="grid grid-cols-2 gap-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-1 gap-2.5">
               <ControlField
                 label="Ops / Neuron Update"
                 unit="FLOP"
-                compact
+                tooltipKey="computeOpsPerNeuronUpdate"
                 value={assumptions.neuralModel.computeOpsPerNeuronUpdate}
                 min={50}
                 max={5000}
@@ -298,7 +306,7 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
               <ControlField
                 label="Ops / Synapse Event"
                 unit="FLOP"
-                compact
+                tooltipKey="computeOpsPerSynapticEvent"
                 value={assumptions.neuralModel.computeOpsPerSynapticEvent}
                 min={10}
                 max={500}
@@ -310,6 +318,7 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
               label="Simulation Step Rate"
               unit="Hz"
               description="Numerical integration step frequency"
+              tooltipKey="neuronUpdateRateHz"
               value={assumptions.neuralModel.neuronUpdateRateHz}
               min={100}
               max={10000}
@@ -325,6 +334,7 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
               label="Compute Throughput"
               unit="PFLOPS"
               description="Dedicated compute cluster throughput capacity"
+              tooltipKey="computeThroughputPflops"
               value={assumptions.hardware.computeThroughputPflops}
               min={0.001}
               max={2000}
@@ -335,6 +345,7 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
               label="Memory Bandwidth"
               unit="TB/s"
               description="Aggregate high-bandwidth memory (HBM) bandwidth"
+              tooltipKey="memoryBandwidthTbS"
               value={assumptions.hardware.memoryBandwidthTbS}
               min={0.05}
               max={50000}
@@ -345,6 +356,7 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
               label="Interconnect Bandwidth"
               unit="TB/s"
               description="Cluster fabric interconnect bisection bandwidth"
+              tooltipKey="interconnectBandwidthTbS"
               value={assumptions.hardware.interconnectBandwidthTbS}
               min={0.01}
               max={20000}
@@ -355,6 +367,7 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
               label="Storage Capacity"
               unit="PB"
               description="Hot Tier-1 storage capacity"
+              tooltipKey="storageCapacityPb"
               value={assumptions.hardware.storageCapacityPb}
               min={0.01}
               max={50000}
@@ -365,6 +378,7 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
               label="Power Budget"
               unit="MW"
               description="Facility power and cooling ceiling"
+              tooltipKey="powerBudgetMw"
               value={assumptions.hardware.powerBudgetMw}
               min={0.001}
               max={200}
@@ -380,6 +394,7 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
               label="Imaging Instrument Cost / Yr"
               unit="$/yr"
               description="Amortized cost + maintenance per EM instrument"
+              tooltipKey="imagingInstrumentCostPerYear"
               value={assumptions.economics.imagingInstrumentCostPerYear}
               min={50000}
               max={2000000}
@@ -390,6 +405,7 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
               label="Storage Cost / TB / Yr"
               unit="$/TB/yr"
               description="Annual high-durability storage cost"
+              tooltipKey="storageCostPerTbYear"
               value={assumptions.economics.storageCostPerTbYear}
               min={2}
               max={100}
@@ -400,6 +416,7 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
               label="Compute Cost / PFLOP / Yr"
               unit="$/PFLOP/yr"
               description="Amortized GPU cluster compute cost"
+              tooltipKey="computeCostPerPflopYear"
               value={assumptions.economics.computeCostPerPflopYear}
               min={10000}
               max={500000}
@@ -410,6 +427,7 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
               label="Energy Cost / MWh"
               unit="$/MWh"
               description="Facility electricity unit tariff"
+              tooltipKey="energyCostPerMwh"
               value={assumptions.economics.energyCostPerMwh}
               min={40}
               max={400}
@@ -420,17 +438,18 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
               label="Human Proofreading Rate"
               unit="$/hr"
               description="Loaded labor cost per manual proofreader hour"
+              tooltipKey="humanProofreadingHourlyRate"
               value={assumptions.economics.humanProofreadingHourlyRate}
               min={15}
               max={150}
               step={5}
               onChange={(v) => updateNested('economics', 'humanProofreadingHourlyRate', v)}
             />
-            <div className="grid grid-cols-2 gap-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-1 gap-2.5">
               <ControlField
                 label="Target Timeline"
                 unit="years"
-                compact
+                tooltipKey="targetTimelineYears"
                 value={assumptions.economics.targetTimelineYears}
                 min={0.1}
                 max={10}
@@ -440,7 +459,7 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
               <ControlField
                 label="Budget Ceiling"
                 unit="USD"
-                compact
+                tooltipKey="budgetCeilingUsd"
                 value={assumptions.economics.budgetCeilingUsd}
                 min={100000}
                 max={2000000000}
@@ -463,8 +482,8 @@ interface ControlFieldProps {
   min: number;
   max: number;
   step: number;
-  compact?: boolean;
   onChange: (val: number) => void;
+  tooltipKey?: string;
 }
 
 const ControlField: React.FC<ControlFieldProps> = ({
@@ -475,9 +494,11 @@ const ControlField: React.FC<ControlFieldProps> = ({
   min,
   max,
   step,
-  compact = false,
-  onChange
+  onChange,
+  tooltipKey
 }) => {
+  const tooltipInfo = tooltipKey ? ASSUMPTION_TOOLTIPS[tooltipKey] : undefined;
+
   const handleStep = (direction: 'up' | 'down') => {
     let nextVal = direction === 'up' ? value + step : value - step;
     if (nextVal < min) nextVal = min;
@@ -496,77 +517,44 @@ const ControlField: React.FC<ControlFieldProps> = ({
     return val.toString();
   };
 
-  if (compact) {
-    return (
-      <div className="p-2.5 rounded-xl bg-slate-50/70 border border-slate-200/80 hover:border-slate-300/90 transition-all duration-150 space-y-1.5 shadow-xs hover:bg-slate-50/90 overflow-hidden">
-        <div className="flex items-center justify-between">
-          <span className="font-bold text-slate-800 text-[11px] truncate" title={label}>{label}</span>
-          {description && (
-            <span title={description} className="text-slate-400 hover:text-slate-600 cursor-help shrink-0">
-              <Info className="w-3 h-3" />
-            </span>
-          )}
-        </div>
-        <div className="flex items-center justify-between gap-1">
-          <button
-            onClick={() => handleStep('down')}
-            className="w-5 h-5 rounded-md bg-white hover:bg-slate-100 active:bg-slate-200 border border-slate-200 text-slate-600 flex items-center justify-center text-[10px] cursor-pointer shadow-xs transition-colors shrink-0"
-            title="Step down"
-          >
-            <Minus className="w-2.5 h-2.5" />
-          </button>
-          <div className="flex-1 min-w-0 flex items-center justify-center space-x-0.5 font-mono text-[10.5px] font-bold text-slate-900 bg-white py-0.5 px-1 rounded-md border border-slate-200 shadow-xs">
-            <span className="truncate">{formatDisplay(value)}</span>
-            <span className="text-[8.5px] font-semibold text-slate-400 shrink-0">{unit}</span>
-          </div>
-          <button
-            onClick={() => handleStep('up')}
-            className="w-5 h-5 rounded-md bg-white hover:bg-slate-100 active:bg-slate-200 border border-slate-200 text-slate-600 flex items-center justify-center text-[10px] cursor-pointer shadow-xs transition-colors shrink-0"
-            title="Step up"
-          >
-            <Plus className="w-2.5 h-2.5" />
-          </button>
-        </div>
-        <input
-          type="range"
-          min={min}
-          max={max}
-          step={step}
-          value={value}
-          onChange={(e) => onChange(parseFloat(e.target.value))}
-          className="w-full cursor-pointer mt-0.5"
-        />
-      </div>
-    );
-  }
-
   return (
-    <div className="p-3 rounded-xl bg-slate-50/70 border border-slate-200/80 hover:border-slate-300/90 transition-all duration-150 space-y-2 shadow-xs hover:bg-slate-50/90">
-      <div className="flex items-center justify-between">
-        <div className="flex items-center space-x-1.5">
-          <span className="font-bold text-slate-800 text-[11px]">{label}</span>
-          {description && (
-            <span title={description} className="text-slate-400 hover:text-slate-600 cursor-help">
-              <Info className="w-3.5 h-3.5" />
+    <div className="p-3 sm:p-3.5 rounded-xl bg-slate-50/70 border border-slate-200/80 hover:border-slate-300/90 transition-all duration-150 space-y-2.5 shadow-xs hover:bg-slate-50/90">
+      <div className="flex items-center justify-between gap-2">
+        <div className="flex items-center space-x-1.5 min-w-0">
+          <Tooltip
+            info={tooltipInfo}
+            title={tooltipInfo?.title || label}
+            unit={tooltipInfo?.unit || unit}
+            description={tooltipInfo?.description || description}
+            baseline={tooltipInfo?.baseline}
+            impact={tooltipInfo?.impact}
+          >
+            <span className="font-bold text-slate-800 text-xs truncate cursor-help border-b border-dotted border-slate-300 hover:text-blue-600 transition-colors">
+              {label}
             </span>
-          )}
+            <span className="text-slate-400 hover:text-blue-600 cursor-help shrink-0 ml-1">
+              <Info className="w-3.5 h-3.5 inline" />
+            </span>
+          </Tooltip>
         </div>
         <div className="flex items-center space-x-1.5 shrink-0">
           <button
             onClick={() => handleStep('down')}
-            className="w-5 h-5 rounded-md bg-white hover:bg-slate-100 active:bg-slate-200 border border-slate-200 text-slate-600 flex items-center justify-center text-[10px] cursor-pointer shadow-xs transition-colors"
+            className="w-6 h-6 rounded-lg bg-white hover:bg-slate-100 active:bg-slate-200 border border-slate-200 text-slate-600 flex items-center justify-center cursor-pointer shadow-xs transition-colors shrink-0"
             title="Step down"
+            aria-label={`Decrease ${label}`}
           >
             <Minus className="w-3 h-3" />
           </button>
-          <div className="flex items-center space-x-1 font-mono text-[11px] font-bold text-slate-900 bg-white px-2.5 py-0.5 rounded-md border border-slate-200 shadow-xs min-w-[70px] justify-center">
+          <div className="flex items-center space-x-1 font-mono text-[11px] font-bold text-slate-900 bg-white px-2.5 py-1 rounded-lg border border-slate-200 shadow-xs min-w-[72px] justify-center shrink-0">
             <span>{formatDisplay(value)}</span>
-            <span className="text-[9px] font-semibold text-slate-400">{unit}</span>
+            <span className="text-[9px] font-semibold text-slate-400 shrink-0">{unit}</span>
           </div>
           <button
             onClick={() => handleStep('up')}
-            className="w-5 h-5 rounded-md bg-white hover:bg-slate-100 active:bg-slate-200 border border-slate-200 text-slate-600 flex items-center justify-center text-[10px] cursor-pointer shadow-xs transition-colors"
+            className="w-6 h-6 rounded-lg bg-white hover:bg-slate-100 active:bg-slate-200 border border-slate-200 text-slate-600 flex items-center justify-center cursor-pointer shadow-xs transition-colors shrink-0"
             title="Step up"
+            aria-label={`Increase ${label}`}
           >
             <Plus className="w-3 h-3" />
           </button>
@@ -579,7 +567,8 @@ const ControlField: React.FC<ControlFieldProps> = ({
         step={step}
         value={value}
         onChange={(e) => onChange(parseFloat(e.target.value))}
-        className="w-full cursor-pointer"
+        className="w-full cursor-pointer mt-1 accent-blue-600"
+        aria-label={label}
       />
     </div>
   );

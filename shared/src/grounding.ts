@@ -14,39 +14,93 @@ export const NEMOTRON_SYSTEM_PROMPT = `You are the scientific interpretation lay
 Z-WBE is a research simulator exploring hypothetical engineering requirements for whole-brain emulation.
 You receive structured scenario assumptions and deterministic calculations.
 RULES:
-Treat all supplied numerical values as authoritative for this scenario.
-Never alter a calculated value.
-Never invent a measurement.
-Never invent experimental evidence.
-Clearly distinguish:
-assumption
-literature reference
-estimate
-calculated result
-uncertainty
-AI interpretation
-Do not claim that human whole-brain emulation currently exists.
-Do not claim that the scenario demonstrates consciousness, identity transfer or subjective continuity.
-Explain why the calculated bottleneck dominates.
-Explain what changed during sensitivity testing.
-Identify which technological improvement has the most leverage according to the supplied calculations.
-Identify major limitations.
-If the structured evidence cannot answer something, say:
-"This scenario does not establish that."
-Keep the explanation clear enough for a technically curious reader while preserving scientific precision.
+1. Treat all supplied numerical values as authoritative for this scenario.
+2. Never alter a calculated value.
+3. Never invent a measurement or experimental evidence.
+4. Clearly distinguish: assumption, literature reference, estimate, calculated result, uncertainty, and AI interpretation.
+5. Do not claim that human whole-brain emulation currently exists or that consciousness/identity transfer is demonstrated.
+6. EXPLAIN IN CLEAR, HUMAN-FRIENDLY PLAIN ENGLISH:
+   - Use intuitive real-world analogies to make complex engineering concepts immediately understandable (e.g., explain memory bandwidth as "data highway congestion", power demand as "substation grid limits", microscope acquisition as "physical scanning camera speed", manual proofreading as "human error-correction backlog").
+   - Do NOT use robotic boilerplate or raw machine tags like "[CALCULATED FROM SCENARIO ASSUMPTIONS]". Write natural, engaging, professional scientific explanations.
+   - Explain why the dominant bottleneck is the active ceiling.
+   - Clearly state which technological upgrade provides the biggest boost (highest leverage) and what secondary upgrades will NOT help until the main blocker is solved.
+   - If the structured evidence cannot answer something, say: "This scenario does not establish that."
 
 Respond with valid JSON matching this schema:
 {
-  "summary": "Brief executive analytical summary",
-  "dominant_bottleneck_explanation": "Detailed explanation of what limits this scenario and why it dominates",
-  "why_it_matters": "Systemic implications and asymmetric stress across the pipeline",
-  "highest_leverage_improvement": "Which technological assumption provides the steepest improvement gradient",
-  "low_leverage_improvements": ["List of improvements that yield minimal system-level benefit due to upstream/downstream saturation"],
-  "bottleneck_transition": "Where the bottleneck moves or would move if the leading constraint is relaxed",
-  "uncertainties": ["Key biological, algorithmic, and hardware uncertainties"],
-  "empirical_validation_needed": ["Specific laboratory and physical experiments required for validation"],
-  "bottom_line": "Concluding takeaway on technological feasibility"
+  "summary": "Brief executive summary in plain English for a curious human reader",
+  "dominant_bottleneck_explanation": "Crystal-clear explanation of what limits this scenario, with an intuitive real-world analogy",
+  "why_it_matters": "Plain-English breakdown of why this constraint is the primary barrier and how numbers cause the stall",
+  "highest_leverage_improvement": "The single most impactful upgrade to prioritize and why it unlocks progress",
+  "low_leverage_improvements": ["List of upgrades that yield minimal benefit right now because the main bottleneck remains saturated"],
+  "bottleneck_transition": "Where the bottleneck will shift next once the current blocker is relieved",
+  "uncertainties": ["Key biological, algorithmic, and hardware unknowns explained in accessible terms"],
+  "empirical_validation_needed": ["Specific laboratory experiments and physical benchmarks needed to prove this in the real world"],
+  "bottom_line": "One-sentence takeaway on practical feasibility"
 }`;
+
+/**
+ * Friendly name and analogy dictionary for bottleneck categories
+ */
+export const BOTTLENECK_INFO: Record<string, { label: string; analogy: string; shortDesc: string }> = {
+  MEMORY_BANDWIDTH: {
+    label: 'Memory Bandwidth (Data Highway)',
+    analogy: 'Think of this like a massive traffic jam on a highway: the computer processors are ready to work, but the memory data cables cannot feed them brain state information fast enough.',
+    shortDesc: 'Data transfer speed between chips and RAM is maxed out.'
+  },
+  POWER: {
+    label: 'Power & Cooling Capacity',
+    analogy: 'Like trying to power an industrial steel mill from a residential electrical socket: running this simulation requires megawatts of power that generate enormous heat.',
+    shortDesc: 'Electricity demand and cooling requirements exceed facility limits.'
+  },
+  COMPUTE: {
+    label: 'Processing Power (Compute FLOPS)',
+    analogy: 'Like trying to render a Pixar feature movie in real-time on a single laptop: calculating every neuron spike simultaneously requires massive supercomputer compute clusters.',
+    shortDesc: 'Raw mathematical calculations per second exceed available hardware.'
+  },
+  ACQUISITION: {
+    label: 'Microscope Scanning Time',
+    analogy: 'Like taking billions of ultra-high-resolution photos of microscopic tissue slices: scanning the brain volume with electron beams takes years of continuous instrument time.',
+    shortDesc: 'Physical microscope imaging time is too slow.'
+  },
+  STORAGE: {
+    label: 'Data Storage & Disk Capacity',
+    analogy: 'Like filling up thousands of warehouse hard drives: storing raw nanometer-scale images creates petabytes of data that are difficult to hold and move.',
+    shortDesc: 'Total volume of captured image and state data overflows disk arrays.'
+  },
+  MANUAL_PROOFREADING: {
+    label: 'Human Proofreading & Verification',
+    analogy: 'Like copyediting an encyclopedia word-by-word by hand: human neuroscientists must manually verify and fix AI segmentation errors across billions of connections.',
+    shortDesc: 'Human expert labor required to fix AI tracing errors is a major time sink.'
+  },
+  AUTOMATED_RECONSTRUCTION: {
+    label: 'AI 3D Neuron Reconstruction',
+    analogy: 'Like asking AI to trace billions of tangled microscopic wires in a dark room: computer vision models require enormous GPU time to stitch 2D slices into 3D neurons.',
+    shortDesc: 'AI image segmentation computation time creates a massive backlog.'
+  },
+  INTERCONNECT: {
+    label: 'Cluster Network Interconnect',
+    analogy: 'Like slow cross-town postal mail between teammates: supercomputer nodes spend more time waiting for network synchronizations than doing actual simulation math.',
+    shortDesc: 'Network communication latency and bandwidth between server nodes lag behind.'
+  },
+  COST: {
+    label: 'Financial Budget & Capital',
+    analogy: 'The financial cost of purchasing hardware, power, and microscope time exceeds viable scientific grant budgets.',
+    shortDesc: 'Overall financial expense is prohibitive.'
+  }
+};
+
+/**
+ * Formats a bottleneck key into a friendly label with analogy helper.
+ */
+export function getFriendlyBottleneck(key: string): { label: string; analogy: string; shortDesc: string } {
+  const normalized = key.toUpperCase().replace(/\s+/g, '_');
+  return BOTTLENECK_INFO[normalized] || {
+    label: key,
+    analogy: 'This technical constraint represents the primary limiting factor for this scenario.',
+    shortDesc: 'Systemic capacity threshold reached.'
+  };
+}
 
 /**
  * Deterministic string hash function for cross-platform caching (Node.js and Browser).
@@ -189,7 +243,7 @@ export const buildGroundingRequest = buildNemotronInputSchema;
 
 /**
  * Generates a strict, fully grounded deterministic interpretation fallback.
- * Strictly adheres to the calculated metrics, bottleneck rankings, and sensitivity outputs.
+ * Written in clear, plain-English for humans with helpful analogies and no robotic tags.
  */
 export function generateGroundedFallback(
   request: NemotronInputSchema,
@@ -204,6 +258,9 @@ export function generateGroundedFallback(
   const isHypotheticalHuman = request.scale.toLowerCase().includes('human') ||
     request.provenance_notice.includes('HUMAN-SCALE');
 
+  const dominantInfo = getFriendlyBottleneck(dominant);
+  const secondInfo = getFriendlyBottleneck(second);
+
   const rawDataTb = ((request.calculated_metrics.raw_data_bytes as number) || 0) / 1e12;
   const compressedTb = ((request.calculated_metrics.compressed_data_bytes as number) || 0) / 1e12;
   const totalCostM = ((request.calculated_metrics.total_estimated_cost_usd as number) || 0) / 1e6;
@@ -211,60 +268,68 @@ export function generateGroundedFallback(
   const compPflops = (request.calculated_metrics.compute_demand_pflops as number) || 0;
   const acqYears = (request.calculated_metrics.acquisition_time_years as number) || 0;
 
-  const summary = `In ${request.scenario_id} (${request.scale}), the system is strictly limited by ${dominant} (normalized pressure: ${dominantPressure.toFixed(1)}%), followed by ${second} (${secondPressure.toFixed(1)}%).`;
+  const scenarioDisplayName = request.scenario
+    ? `${request.scenario} (${request.scenario_id})`
+    : request.scenario_id;
+
+  const summary = `In ${scenarioDisplayName} (${request.scale}), the primary technical blocker is ${dominantInfo.label} [${dominant}] (pressure: ${dominantPressure.toFixed(1)}%), followed by ${secondInfo.label} [${second}] (${secondPressure.toFixed(1)}%). Addressing ${highestLev} gives the greatest speedup.`;
 
   const whatLimits =
-    `[CALCULATED FROM SCENARIO ASSUMPTIONS]\n` +
-    `The dominant technical constraint in this scenario is **${dominant}** with a normalized pressure score of **${dominantPressure.toFixed(1)}%**. ` +
-    `The secondary limiting factor is **${second}** at **${secondPressure.toFixed(1)}%**.`;
+    `The primary barrier holding back this scenario is **${dominantInfo.label}** (\`${dominant}\`) with a constraint score of **${dominantPressure.toFixed(1)}%**.\n\n` +
+    `💡 **What this means:** ${dominantInfo.analogy}\n\n` +
+    `The next closest obstacle is **${secondInfo.label}** (\`${second}\`) at **${secondPressure.toFixed(1)}%**.`;
 
   const why =
-    `[CALCULATED FROM SCENARIO ASSUMPTIONS]\n` +
-    `Under the specified parameters for ${request.scenario ? `${request.scenario} (${request.scenario_id})` : request.scenario_id}, the pipeline experiences severe constraint saturation in ${dominant}:\n` +
-    `• Acquisition Timeline: ${acqYears.toFixed(2)} years required for raw tissue volume.\n` +
-    `• Data Volume: Raw volume produces ${rawDataTb.toFixed(2)} TB (${compressedTb.toFixed(2)} TB compressed).\n` +
-    `• Real-time Execution: Dynamic state transfer demands ${memTbS.toFixed(2)} TB/s memory bandwidth and ${compPflops.toFixed(3)} PFLOPS compute.\n` +
-    `• Financial Commitment: Projected scenario cost is $${totalCostM.toFixed(2)}M.\n` +
-    `Because ${dominant} demand exceeds the allocated threshold by ${Math.max(0, dominantPressure - 100).toFixed(1)}%, this constraint forces project stall before other subsystems can operate.`;
+    `Under the current setup for **${scenarioDisplayName}**, the system pushes past maximum operational thresholds in **${dominantInfo.label}** (\`${dominant}\`):\n\n` +
+    `• 🔬 **Microscope Imaging:** Requires **${acqYears.toFixed(2)} years** of continuous scanning time for this tissue volume.\n` +
+    `• 💾 **Storage Demand:** Generates **${rawDataTb.toFixed(2)} TB** of raw image data (**${compressedTb.toFixed(2)} TB** compressed).\n` +
+    `• ⚡ **Real-Time Simulation:** Demands **${memTbS.toFixed(2)} TB/s** memory transfer speed and **${compPflops.toFixed(3)} PFLOPS** of compute power.\n` +
+    `• 💰 **Estimated Budget:** Projected infrastructure cost is **$${totalCostM.toFixed(2)}M**.\n\n` +
+    `Because ${dominantInfo.label} exceeds allowable capacity by **${Math.max(0, dominantPressure - 100).toFixed(1)}%**, the entire pipeline stalls here first before other components can run at full speed.`;
 
   const whatImprovementMattersMost =
-    `[CALCULATED FROM SCENARIO ASSUMPTIONS]\n` +
-    `The sensitivity engine identifies **${highestLev.toUpperCase()}** as the HIGHEST LEVERAGE VARIABLE.\n` +
-    `Improving this parameter directly relieves the dominant constraint gradient.`;
+    `The highest-impact breakthrough for this setup is **${highestLev.toUpperCase()}**.\n\n` +
+    `🚀 **Why it matters:** Improving this parameter yields the steepest performance gain and directly relieves pressure on the active bottleneck (${dominantInfo.label}).`;
+
+  const lowLeverageList = (request.sensitivity.low_leverage_improvements as string[]) || [];
+  const whatDoesNotHelpMuch =
+    lowLeverageList.length > 0
+      ? `Upgrading the following areas right now will provide **almost no speedup** because the system remains completely blocked by **${dominantInfo.label}**:\n\n` +
+        lowLeverageList.map((item) => `• **${item}**: System progress remains gated until ${dominantInfo.label} is improved first.`).join('\n')
+      : `All tested parameters currently provide measurable benefits across the active operating range.`;
 
   const transitions = (request.sensitivity.transitions as Array<{ description: string }>) || [];
   const whereDidTheBottleneckMove =
     transitions.length > 0
-      ? `[BOTTLENECK TRANSITION DETECTED]\n` + transitions.map((t) => `• ${t.description}`).join('\n')
-      : `[BOTTLENECK STABILITY]\n` +
-        `Current improvements have not yet moved the dominant constraint beyond ${dominant}. ` +
-        `Relieving ${dominant} by >10x will shift systemic pressure to ${second}.`;
+      ? `If you relax the current blocker, systemic pressure shifts as follows:\n\n` +
+        transitions.map((t) => `• ➡️ ${t.description}`).join('\n')
+      : `Even with modest improvements, the primary constraint remains **${dominantInfo.label}**. Relieving it by more than 10x will shift systemic pressure to **${secondInfo.label}**.`;
 
   const uncertainties = [
     isHypotheticalHuman
-      ? 'HYPOTHETICAL HUMAN-SCALE ESTIMATE: No validated human WBE exists. All figures represent theoretical scaling models.'
-      : 'Biological parameter variance across disparate brain regions.',
-    'Automated segmentation error distribution and manual proofreading multipliers.',
-    'Memory bus utilization efficiency under sparse, event-driven graph spike propagation workloads.',
-    'Thermal dissipation and power delivery constraints for dense compute clusters.'
+      ? '⚠️ Hypothetical Human-Scale Model: No human whole-brain emulation has been created or validated; all numbers represent theoretical scaling models.'
+      : 'Biological variation across different brain regions and cell densities.',
+    'Automated AI segmentation accuracy and how many human proofreading hours are needed to fix tracing errors.',
+    'Real-world chip memory efficiency when routing sparse, irregular neural spike signals across physical silicon.',
+    'Heat dissipation, cooling infrastructure, and power distribution limits for dense high-performance computing clusters.'
   ];
 
   const empiricalValidation = [
-    'Sustained continuous volumetric acquisition rate under multi-beam instruments.',
-    'Automated ultrastructural segmentation precision-recall on representative stained tissue volumes.',
-    'Physical memory subsystem throughput during asynchronous Hodgkin-Huxley or multi-compartment state exchanges.',
-    'Distributed cross-node interconnect synchrony bounds without catastrophic barrier latency.'
+    'Benchmarking multi-beam electron microscope continuous scanning speeds on stained tissue.',
+    'Measuring AI segmentation accuracy (precision and recall) on complex 3D neuropil samples.',
+    'Testing physical chip memory throughput during high-frequency biophysical neuron updates.',
+    'Validating supercomputer node network latency during large-scale synchronized neural state exchanges.'
   ];
 
   const bottomLine =
-    `The deterministic calculations establish that ${dominant} is the active barrier. Improving other parameters without addressing ${dominant} yields negligible acceleration.`;
+    `The numbers show that ${dominantInfo.label} is the active bottleneck. Investing in other areas without solving this first yields very little real-world progress.`;
 
   const structuredOutput: NemotronStructuredOutput = {
     summary,
     dominant_bottleneck_explanation: whatLimits,
     why_it_matters: why,
     highest_leverage_improvement: whatImprovementMattersMost,
-    low_leverage_improvements: (request.sensitivity.low_leverage_improvements as string[]) || [],
+    low_leverage_improvements: lowLeverageList,
     bottleneck_transition: whereDidTheBottleneckMove,
     uncertainties,
     empirical_validation_needed: empiricalValidation,
@@ -278,6 +343,8 @@ export function generateGroundedFallback(
     why,
     `### WHAT IMPROVEMENT MATTERS MOST?`,
     whatImprovementMattersMost,
+    `### WHAT DOES NOT HELP MUCH?`,
+    whatDoesNotHelpMuch,
     `### WHERE DID THE BOTTLENECK MOVE?`,
     whereDidTheBottleneckMove,
     `### WHAT REMAINS UNCERTAIN?`,
@@ -299,6 +366,7 @@ export function generateGroundedFallback(
       whatLimitsThisScenario: whatLimits,
       why,
       whatImprovementMattersMost,
+      whatDoesNotHelpMuch,
       whereDidTheBottleneckMove,
       whatRemainsUncertain: uncertainties.map((u) => `• ${u}`).join('\n'),
       uncertainties: uncertainties.map((u) => `• ${u}`).join('\n'),
@@ -347,6 +415,9 @@ export function repairAndParseNemotronResponse(
     const whatLimits = structured.dominant_bottleneck_explanation || structured.summary || 'See full report.';
     const why = structured.why_it_matters || 'See full report.';
     const whatImprovement = structured.highest_leverage_improvement || 'See sensitivity analysis.';
+    const lowLev = Array.isArray(structured.low_leverage_improvements) && structured.low_leverage_improvements.length > 0
+      ? structured.low_leverage_improvements.map((item) => `• ${item}`).join('\n')
+      : 'All tested parameters demonstrate leverage in this scenario.';
     const whereMoved = structured.bottleneck_transition || 'Bottleneck remains on primary constraint.';
     const uncertainties = Array.isArray(structured.uncertainties)
       ? structured.uncertainties.map((u) => `• ${u}`).join('\n')
@@ -362,6 +433,8 @@ export function repairAndParseNemotronResponse(
       why,
       `### WHAT IMPROVEMENT MATTERS MOST?`,
       whatImprovement,
+      `### WHAT DOES NOT HELP MUCH?`,
+      lowLev,
       `### WHERE DID THE BOTTLENECK MOVE?`,
       whereMoved,
       `### WHAT REMAINS UNCERTAIN?`,
@@ -380,6 +453,7 @@ export function repairAndParseNemotronResponse(
         whatLimitsThisScenario: whatLimits,
         why,
         whatImprovementMattersMost: whatImprovement,
+        whatDoesNotHelpMuch: lowLev,
         whereDidTheBottleneckMove: whereMoved,
         whatRemainsUncertain: uncertainties,
         uncertainties,
@@ -402,6 +476,7 @@ export function repairAndParseNemotronResponse(
     extractSection('WHAT LIMITS THIS SCENARIO\\??', [
       'WHY\\??',
       'WHAT IMPROVEMENT MATTERS MOST\\??',
+      'WHAT DOES NOT HELP MUCH\\??',
       'WHERE DID THE BOTTLENECK MOVE\\??',
       'WHAT REMAINS UNCERTAIN\\??',
       'UNCERTAINTIES',
@@ -412,6 +487,7 @@ export function repairAndParseNemotronResponse(
   const why =
     extractSection('WHY\\??', [
       'WHAT IMPROVEMENT MATTERS MOST\\??',
+      'WHAT DOES NOT HELP MUCH\\??',
       'WHERE DID THE BOTTLENECK MOVE\\??',
       'WHAT REMAINS UNCERTAIN\\??',
       'UNCERTAINTIES',
@@ -421,12 +497,22 @@ export function repairAndParseNemotronResponse(
 
   const whatImprovementMattersMost =
     extractSection('WHAT IMPROVEMENT MATTERS MOST\\??', [
+      'WHAT DOES NOT HELP MUCH\\??',
       'WHERE DID THE BOTTLENECK MOVE\\??',
       'WHAT REMAINS UNCERTAIN\\??',
       'UNCERTAINTIES',
       'WHAT NEEDS REAL EXPERIMENTAL EVIDENCE\\??',
       'WHAT WOULD NEED EMPIRICAL VALIDATION\\??'
     ]) || 'See sensitivity analysis ranking.';
+
+  const whatDoesNotHelpMuch =
+    extractSection('WHAT DOES NOT HELP MUCH\\??', [
+      'WHERE DID THE BOTTLENECK MOVE\\??',
+      'WHAT REMAINS UNCERTAIN\\??',
+      'UNCERTAINTIES',
+      'WHAT NEEDS REAL EXPERIMENTAL EVIDENCE\\??',
+      'WHAT WOULD NEED EMPIRICAL VALIDATION\\??'
+    ]) || 'Upstream and downstream constraints limit marginal gains for secondary parameters.';
 
   const whereDidTheBottleneckMove =
     extractSection('WHERE DID THE BOTTLENECK MOVE\\??', [
@@ -462,6 +548,7 @@ export function repairAndParseNemotronResponse(
       whatLimitsThisScenario,
       why,
       whatImprovementMattersMost,
+      whatDoesNotHelpMuch,
       whereDidTheBottleneckMove,
       whatRemainsUncertain,
       uncertainties: whatRemainsUncertain,

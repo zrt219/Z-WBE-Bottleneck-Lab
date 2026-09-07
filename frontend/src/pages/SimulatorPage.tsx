@@ -10,6 +10,7 @@ import {
   buildNemotronInputSchema,
   generateGroundedFallback
 } from '@z-wbe/shared';
+import { encodeScenarioToUrl, decodeScenarioFromUrl } from '../utils/urlParams';
 import { PresetSelector } from '../components/PresetSelector';
 import { AssumptionControls } from '../components/AssumptionControls';
 import { WbePipelineMap } from '../components/WbePipelineMap';
@@ -19,11 +20,15 @@ import { SensitivityLab } from '../components/SensitivityLab';
 import { NemotronInterpretation } from '../components/NemotronInterpretation';
 import { CompareScenariosModal } from '../components/CompareScenariosModal';
 import { GpuExplorationMap } from '../components/GpuExplorationMap';
-import { GitCompare, RotateCcw } from 'lucide-react';
+import { GitCompare, RotateCcw, Share2, Check } from 'lucide-react';
 
 export const SimulatorPage: React.FC = () => {
-  // Local storage persistence
+  // Check URL query parameters first, then localStorage persistence
   const [assumptions, setAssumptions] = useState<ScenarioAssumptions>(() => {
+    if (typeof window !== 'undefined' && window.location.search) {
+      const fromUrl = decodeScenarioFromUrl(window.location.search);
+      if (fromUrl) return fromUrl;
+    }
     const saved = localStorage.getItem('zwbe_assumptions');
     if (saved) {
       try {
@@ -38,6 +43,7 @@ export const SimulatorPage: React.FC = () => {
   const [baselineAssumptions, setBaselineAssumptions] = useState<ScenarioAssumptions>(assumptions);
   const [isCompareOpen, setIsCompareOpen] = useState(false);
   const [bottleneckMovedBanner, setBottleneckMovedBanner] = useState(false);
+  const [copiedLink, setCopiedLink] = useState(false);
 
   // Nemotron Interpretation State
   const [interpretation, setInterpretation] = useState<GroundingContractResponse | null>(null);
@@ -62,9 +68,14 @@ export const SimulatorPage: React.FC = () => {
       .catch(() => {});
   }, []);
 
-  // Persist to localStorage
+  // Real-time URL query parameter & localStorage sync
   useEffect(() => {
-    localStorage.setItem('zwbe_assumptions', JSON.stringify(assumptions));
+    if (typeof window !== 'undefined') {
+      const query = encodeScenarioToUrl(assumptions);
+      const newUrl = `${window.location.pathname}?${query}`;
+      window.history.replaceState(null, '', newUrl);
+      localStorage.setItem('zwbe_assumptions', JSON.stringify(assumptions));
+    }
   }, [assumptions]);
 
   const handleSelectPreset = (preset: ScenarioAssumptions) => {
@@ -191,7 +202,7 @@ export const SimulatorPage: React.FC = () => {
   };
 
   return (
-    <div className="space-y-6 pb-16">
+    <div className="space-y-8 pb-20">
       {/* Top Controls: Preset selector, hero trigger, compare button */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-3">
         <PresetSelector
@@ -202,41 +213,64 @@ export const SimulatorPage: React.FC = () => {
         />
       </div>
 
-      <div className="flex items-center justify-end space-x-2">
+      <div className="flex flex-wrap items-center justify-end gap-2.5">
+        <button
+          onClick={() => {
+            if (typeof window !== 'undefined') {
+              navigator.clipboard.writeText(window.location.href);
+              setCopiedLink(true);
+              setTimeout(() => setCopiedLink(false), 2000);
+            }
+          }}
+          className="flex items-center space-x-2 px-3.5 py-2 rounded-xl border border-indigo-200 bg-indigo-50/60 hover:bg-indigo-100/70 text-xs font-semibold text-indigo-800 shadow-xs hover:shadow transition-all cursor-pointer"
+          title="Copy permalink with active parameters to clipboard"
+        >
+          {copiedLink ? (
+            <>
+              <Check className="w-4 h-4 text-emerald-600 shrink-0" />
+              <span className="text-emerald-700 font-bold">Link Copied to Clipboard!</span>
+            </>
+          ) : (
+            <>
+              <Share2 className="w-4 h-4 text-indigo-600 shrink-0" />
+              <span>Share Scenario Link</span>
+            </>
+          )}
+        </button>
         <button
           onClick={() => {
             setBaselineAssumptions(assumptions);
             setIsCompareOpen(true);
           }}
-          className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg border border-slate-300 bg-white hover:bg-slate-50 text-xs font-semibold text-slate-700 shadow-xs transition-colors"
+          className="flex items-center space-x-2 px-4 py-2 rounded-xl border border-slate-300 bg-white hover:bg-slate-50 text-xs font-semibold text-slate-700 shadow-xs hover:shadow transition-all cursor-pointer"
         >
-          <GitCompare className="w-3.5 h-3.5 text-blue-600" />
+          <GitCompare className="w-4 h-4 text-blue-600 shrink-0" />
           <span>Compare Scenarios (Baseline vs Modified)</span>
         </button>
         <button
           onClick={() => handleSelectPreset(PRESET_DROSOPHILA)}
-          className="flex items-center space-x-1 px-2.5 py-1.5 rounded-lg border border-slate-200 bg-white hover:bg-slate-50 text-xs text-slate-500 hover:text-slate-700 transition-colors"
+          className="flex items-center space-x-1.5 px-3.5 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-xs font-semibold text-slate-600 hover:text-slate-800 shadow-xs transition-colors cursor-pointer"
           title="Reset to default preset"
         >
-          <RotateCcw className="w-3.5 h-3.5" />
+          <RotateCcw className="w-3.5 h-3.5 shrink-0" />
           <span>Reset</span>
         </button>
       </div>
 
-      {/* Main 3-Column Layout: Left (Assumptions), Center (WBE Pipeline), Right (Dominant Bottleneck) */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 items-start">
-        {/* Left: Assumptions Controls (4 cols) */}
-        <div className="lg:col-span-4">
+      {/* Main 3-Column Layout: Equal-width 1:1:1 Grid, Full-height stretched */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
+        {/* Left: Assumptions Controls (1/3 width) */}
+        <div className="w-full flex flex-col">
           <AssumptionControls assumptions={assumptions} onChange={setAssumptions} />
         </div>
 
-        {/* Center: WBE Pipeline Stages (5 cols) */}
-        <div className="lg:col-span-5">
+        {/* Center: WBE Pipeline Stages (1/3 width) */}
+        <div className="w-full flex flex-col">
           <WbePipelineMap bottleneck={bottleneck} metrics={metrics} />
         </div>
 
-        {/* Right: Dominant Bottleneck & Trigger (3 cols) */}
-        <div className="lg:col-span-3">
+        {/* Right: Dominant Bottleneck & Trigger (1/3 width) */}
+        <div className="w-full flex flex-col">
           <DominantBottleneckCard
             bottleneck={bottleneck}
             onExplainClick={() => handleExplainScenario(assumptions)}

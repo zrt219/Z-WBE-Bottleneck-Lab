@@ -99,12 +99,12 @@ export const PresetSelector: React.FC<PresetSelectorProps> = ({
     (preset.scaleId === 'custom' && currentAssumptions.scaleId === 'custom');
 
   return (
-    <div className="bg-white border border-slate-200/90 rounded-2xl p-5 shadow-card space-y-5">
+    <div className="bg-white border border-slate-200/90 rounded-2xl p-5 sm:p-6 shadow-card space-y-6">
       {/* Human Scale Warning Banner (Never display HUMAN WBE ACHIEVED!) */}
       {currentAssumptions.isHypotheticalHumanScale && (
-        <div className="bg-amber-50/90 border border-amber-300/80 p-3.5 rounded-xl flex items-center justify-between shadow-xs">
-          <div className="flex items-center space-x-3">
-            <div className="w-8 h-8 rounded-lg bg-amber-100 text-amber-800 flex items-center justify-center shrink-0">
+        <div className="bg-amber-50/90 border border-amber-300/80 p-4 rounded-xl flex items-center justify-between shadow-xs">
+          <div className="flex items-center space-x-3.5">
+            <div className="w-9 h-9 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center shrink-0">
               <AlertTriangle className="w-4 h-4 text-amber-700" />
             </div>
             <div>
@@ -129,7 +129,7 @@ export const PresetSelector: React.FC<PresetSelectorProps> = ({
 
       {/* Hero "Bottleneck Moved" Banner */}
       {bottleneckMovedBanner && (
-        <div className="bg-gradient-to-r from-emerald-50 via-teal-50 to-emerald-50 border-2 border-emerald-500 p-4 rounded-xl flex items-center justify-between shadow-glow-emerald animate-pulse">
+        <div className="bg-gradient-to-r from-emerald-50 via-teal-50 to-emerald-50 border-2 border-emerald-500 p-4 sm:p-5 rounded-xl flex items-center justify-between shadow-glow-emerald animate-pulse">
           <div className="flex items-center space-x-3.5">
             <div className="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center shrink-0 shadow-xs">
               <Zap className="w-5 h-5 text-emerald-100" />
@@ -156,25 +156,25 @@ export const PresetSelector: React.FC<PresetSelectorProps> = ({
 
       {/* Primary Scale Presets */}
       <div>
-        <div className="flex items-center justify-between mb-2.5">
+        <div className="flex items-center justify-between mb-3">
           <div className="flex items-center space-x-1.5">
             <Layers className="w-4 h-4 text-blue-600" />
             <span className="text-xs font-bold uppercase tracking-wider text-slate-700">
               1. Biological Scale Benchmark
             </span>
           </div>
-          <span className="text-[11px] text-slate-500 font-mono bg-slate-50 px-2 py-0.5 rounded-md border border-slate-200">
+          <span className="text-[11px] text-slate-500 font-mono bg-slate-50 px-2.5 py-1 rounded-md border border-slate-200">
             Active: <span className="font-bold text-slate-800">{currentAssumptions.name}</span>
           </span>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-5 gap-2.5">
+        <div className="grid grid-cols-2 sm:grid-cols-5 gap-3">
           {scalePresets.map((scale) => {
             const active = isCurrentPreset(scale.preset);
             return (
               <button
                 key={scale.id}
                 onClick={() => onSelectPreset(scale.preset)}
-                className={`text-left p-3 rounded-xl border transition-all duration-150 relative cursor-pointer ${
+                className={`text-left p-3.5 sm:p-4 rounded-xl border transition-all duration-150 relative cursor-pointer ${
                   active
                     ? 'border-blue-600 bg-blue-50/60 text-blue-950 shadow-xs ring-2 ring-blue-600/30'
                     : 'border-slate-200 bg-white hover:border-slate-300 hover:bg-slate-50/70 text-slate-700 shadow-xs'
@@ -205,7 +205,7 @@ export const PresetSelector: React.FC<PresetSelectorProps> = ({
       </div>
 
       {/* Demo Presets & Hero Action */}
-      <div className="border-t border-slate-100 pt-4 space-y-3">
+      <div className="border-t border-slate-100 pt-5 space-y-4">
         <div className="flex items-center justify-between">
           <span className="text-xs font-bold uppercase tracking-wider text-slate-700">
             2. Scenario Demonstrations & Empirical Stress Tests
@@ -215,14 +215,14 @@ export const PresetSelector: React.FC<PresetSelectorProps> = ({
           </span>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
           {demoPresets.map((demo) => {
             const active = isCurrentPreset(demo.preset);
             return (
               <button
                 key={demo.id}
                 onClick={() => onSelectPreset(demo.preset)}
-                className={`p-3 rounded-xl border text-left transition-all duration-150 cursor-pointer border-l-4 ${demo.accentColor} ${
+                className={`p-3.5 sm:p-4 rounded-xl border text-left transition-all duration-150 cursor-pointer border-l-4 ${demo.accentColor} ${
                   active
                     ? 'border-indigo-600 bg-indigo-50/70 text-indigo-950 ring-2 ring-indigo-600/30 shadow-xs'
                     : 'border-slate-200 bg-white hover:border-slate-300 hover:bg-slate-50/70 text-slate-700 shadow-xs'
@@ -230,11 +230,11 @@ export const PresetSelector: React.FC<PresetSelectorProps> = ({
               >
                 <div className="flex items-center justify-between">
                   <span className="font-bold text-xs text-slate-900">{demo.title}</span>
-                  <span className="text-[9px] font-mono font-semibold px-1.5 py-0.5 rounded bg-slate-100 text-slate-600 border border-slate-200">
+                  <span className="text-[9px] font-mono font-semibold px-2 py-0.5 rounded bg-slate-100 text-slate-600 border border-slate-200">
                     {demo.tag}
                   </span>
                 </div>
-                <p className="text-[11px] text-slate-500 mt-1 leading-snug">
+                <p className="text-[11px] text-slate-500 mt-1.5 leading-snug">
                   {demo.subtitle}
                 </p>
               </button>
@@ -242,16 +242,16 @@ export const PresetSelector: React.FC<PresetSelectorProps> = ({
           })}
         </div>
 
-        {/* Hero Demo Question: Editorial Whitescape with subtle blue/indigo wash */}
-        <div className="relative overflow-hidden bg-gradient-to-br from-blue-50/70 via-indigo-50/40 to-sky-50/60 rounded-2xl p-5 border border-blue-200/90 shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        {/* Hero Demo Question: Editorial Whitespace with subtle blue/indigo wash */}
+        <div className="relative overflow-hidden bg-gradient-to-br from-blue-50/70 via-indigo-50/40 to-sky-50/60 rounded-2xl p-5 sm:p-6 border border-blue-200/90 shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-5">
           <div className="space-y-1.5 relative z-10">
             <div className="flex items-center space-x-2">
-              <span className="inline-flex items-center space-x-1 text-[10px] font-mono uppercase tracking-wider text-blue-800 font-extrabold bg-blue-100/90 px-2.5 py-0.5 rounded-full border border-blue-300 shadow-xs">
+              <span className="inline-flex items-center space-x-1.5 text-[10px] font-mono uppercase tracking-wider text-blue-800 font-extrabold bg-blue-100/90 px-2.5 py-0.5 rounded-full border border-blue-300 shadow-xs">
                 <Sparkles className="w-3 h-3 text-blue-600 animate-pulse" />
                 <span>Hero Demonstration</span>
               </span>
             </div>
-            <p className="text-sm sm:text-base font-extrabold text-slate-900 tracking-tight">
+            <p className="text-base sm:text-lg font-extrabold text-slate-900 tracking-tight">
               "What happens if imaging becomes 100x faster?"
             </p>
             <p className="text-xs text-slate-600 max-w-xl leading-relaxed">
@@ -263,7 +263,7 @@ export const PresetSelector: React.FC<PresetSelectorProps> = ({
               const accelerated = applyImaging100xDemo(currentAssumptions);
               onHeroDemoTrigger(accelerated);
             }}
-            className="flex items-center justify-center space-x-2 px-5 py-3 bg-blue-600 hover:bg-blue-500 active:bg-blue-700 text-white rounded-xl text-xs font-bold tracking-wide uppercase transition-all duration-150 shrink-0 shadow-sm hover:shadow-md cursor-pointer hover:scale-[1.02] active:scale-[0.98]"
+            className="flex items-center justify-center space-x-2 px-6 py-3.5 bg-blue-600 hover:bg-blue-500 active:bg-blue-700 text-white rounded-xl text-xs font-bold tracking-wide uppercase transition-all duration-150 shrink-0 shadow-sm hover:shadow-md cursor-pointer hover:scale-[1.02] active:scale-[0.98]"
           >
             <span>Run 100x Imaging Acceleration</span>
             <ArrowRight className="w-4 h-4" />

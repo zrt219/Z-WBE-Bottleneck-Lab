@@ -92,7 +92,7 @@ export const ResultStrip: React.FC<ResultStripProps> = ({ metrics }) => {
   ];
 
   return (
-    <div className="bg-white border border-slate-200/90 rounded-2xl p-5 shadow-card space-y-4">
+    <div className="bg-white border border-slate-200/90 rounded-2xl p-5 sm:p-6 shadow-card space-y-4">
       <div className="flex items-center justify-between border-b border-slate-100 pb-3">
         <div className="flex items-center space-x-2">
           <span className="text-xs font-bold uppercase tracking-wider text-slate-900">
@@ -104,33 +104,33 @@ export const ResultStrip: React.FC<ResultStripProps> = ({ metrics }) => {
         </span>
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-7 gap-3 sm:gap-3.5">
         {cards.map((card, idx) => {
           const Icon = card.icon;
           return (
             <div
               key={idx}
               className={`p-3.5 rounded-xl bg-slate-50/70 border border-slate-200/80 border-t-2 ${card.accentBorder} hover:border-slate-300 hover:bg-white transition-all duration-150 shadow-xs hover:shadow-sm flex flex-col justify-between group ${
-                idx === cards.length - 1 ? 'col-span-2 sm:col-span-2 lg:col-span-1' : ''
+                idx === cards.length - 1 ? 'col-span-2 sm:col-span-3 md:col-span-2 xl:col-span-1' : ''
               }`}
             >
-              <div className="flex items-center space-x-1.5 mb-2">
-                <div className={`w-5 h-5 rounded-md flex items-center justify-center ${card.iconBg} shadow-xs`}>
-                  <Icon className="w-3 h-3" />
-                </div>
-                <span className="text-[9px] font-bold uppercase tracking-wider text-slate-600 truncate">
+              <div className="flex items-start justify-between gap-1.5 mb-2">
+                <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-tight text-slate-700 leading-snug">
                   {card.label}
                 </span>
+                <div className={`w-6 h-6 rounded-md flex items-center justify-center ${card.iconBg} shadow-xs shrink-0`}>
+                  <Icon className="w-3.5 h-3.5" />
+                </div>
               </div>
-              <div>
+              <div className="mt-1">
                 <div
-                  className="text-sm font-black font-mono text-slate-900 truncate tracking-tight group-hover:text-blue-600 transition-colors"
+                  className="text-sm sm:text-base font-black font-mono text-slate-900 tracking-tight group-hover:text-blue-600 transition-colors break-words"
                   title={card.value}
                 >
                   {card.value}
                 </div>
                 <div
-                  className="text-[9px] text-slate-500 font-mono truncate mt-0.5"
+                  className="text-[10px] text-slate-500 font-mono leading-tight mt-0.5 break-words"
                   title={card.subtext}
                 >
                   {card.subtext}

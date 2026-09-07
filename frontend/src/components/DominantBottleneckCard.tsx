@@ -27,11 +27,11 @@ export const DominantBottleneckCard: React.FC<DominantBottleneckCardProps> = ({
   };
 
   return (
-    <div className="bg-white border border-slate-200/90 rounded-2xl p-5 shadow-card flex flex-col justify-between space-y-4">
-      <div className="space-y-3.5">
-        <div className="flex items-center justify-between border-b border-slate-100 pb-3">
-          <div className="flex items-center space-x-2">
-            <div className="w-7 h-7 rounded-lg bg-rose-50 text-rose-600 flex items-center justify-center">
+    <div className="h-full bg-white border border-slate-200/90 rounded-2xl p-5 sm:p-6 shadow-card flex flex-col justify-between space-y-5">
+      <div className="space-y-4">
+        <div className="flex items-center justify-between border-b border-slate-100 pb-3.5">
+          <div className="flex items-center space-x-2.5">
+            <div className="w-8 h-8 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center shrink-0">
               <AlertTriangle className="w-4 h-4 text-rose-600" />
             </div>
             <div>
@@ -41,18 +41,18 @@ export const DominantBottleneckCard: React.FC<DominantBottleneckCardProps> = ({
               <p className="text-[10px] text-slate-500 font-mono">Dynamic Critical Ceiling</p>
             </div>
           </div>
-          <span className="text-[9px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-slate-100 text-slate-700 border border-slate-200">
+          <span className="text-[9px] font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-slate-100 text-slate-700 border border-slate-200 shrink-0 whitespace-nowrap">
             DETERMINISTIC
           </span>
         </div>
 
         {/* Primary Bottleneck Callout */}
-        <div className="p-4 rounded-xl bg-gradient-to-br from-rose-50/80 via-rose-50/30 to-white border border-rose-200/90 shadow-xs space-y-2.5 relative overflow-hidden">
-          <div className="flex items-baseline justify-between">
-            <span className="text-[10px] font-mono font-extrabold text-rose-700 uppercase tracking-wide bg-rose-100 px-2.5 py-0.5 rounded-full border border-rose-300 shadow-xs">
+        <div className="p-4 sm:p-5 rounded-xl bg-gradient-to-br from-rose-50/80 via-rose-50/30 to-white border border-rose-200/90 shadow-xs space-y-3 relative">
+          <div className="flex items-center justify-between gap-2">
+            <span className="text-[10px] font-mono font-extrabold text-rose-700 uppercase tracking-wide bg-rose-100 px-2.5 py-0.5 rounded-full border border-rose-300 shadow-xs shrink-0 whitespace-nowrap">
               #1 Limiting Constraint
             </span>
-            <span className="font-mono font-black text-xl text-rose-600 tracking-tight">
+            <span className="font-mono font-black text-lg sm:text-xl text-rose-600 tracking-tight shrink-0 whitespace-nowrap">
               {dominantPressure.score > 999 ? '>999%' : `${dominantPressure.score.toFixed(1)}%`}
             </span>
           </div>
@@ -65,23 +65,23 @@ export const DominantBottleneckCard: React.FC<DominantBottleneckCardProps> = ({
             {dominantPressure.summary}
           </p>
 
-          <div className="text-[10px] font-mono text-rose-950 bg-rose-100/70 p-2.5 rounded-lg border border-rose-200 space-y-1 shadow-xs">
+          <div className="text-[10px] font-mono text-rose-950 bg-rose-100/70 p-3 rounded-lg border border-rose-200 space-y-1 shadow-xs">
             <div><strong className="text-rose-900">Demand:</strong> {dominantPressure.demandFormatted}</div>
             <div><strong className="text-rose-900">Ceiling:</strong> {dominantPressure.capacityFormatted}</div>
           </div>
         </div>
 
         {/* Secondary Bottleneck & Separation Margin */}
-        <div className="p-3.5 rounded-xl bg-slate-50/80 border border-slate-200/80 space-y-2.5 shadow-xs">
-          <div className="flex items-center justify-between text-xs">
-            <span className="font-medium text-slate-500">Secondary Bottleneck:</span>
-            <span className="font-bold text-slate-800 font-mono">
-              {formatBottleneckName(second)} ({secondPressure.score.toFixed(1)}%)
+        <div className="p-4 rounded-xl bg-slate-50/80 border border-slate-200/80 space-y-3 shadow-xs">
+          <div className="flex flex-col xl:flex-row xl:items-center justify-between gap-1 text-xs">
+            <span className="font-medium text-slate-500 shrink-0">Secondary Bottleneck:</span>
+            <span className="font-bold text-slate-800 font-mono text-left xl:text-right">
+              {formatBottleneckName(second)} <span className="text-slate-500 font-normal">({secondPressure.score.toFixed(1)}%)</span>
             </span>
           </div>
-          <div className="flex items-center justify-between text-xs">
+          <div className="flex items-center justify-between gap-2 text-xs">
             <span className="font-medium text-slate-500">Separation Margin:</span>
-            <span className="font-mono font-bold text-blue-700 bg-blue-50 px-2.5 py-0.5 rounded-md border border-blue-200 text-[11px] shadow-xs">
+            <span className="font-mono font-bold text-blue-700 bg-blue-50 px-2.5 py-0.5 rounded-md border border-blue-200 text-[11px] shadow-xs shrink-0">
               +{bottleneck.margin.toFixed(1)} pts
             </span>
           </div>
@@ -97,14 +97,14 @@ export const DominantBottleneckCard: React.FC<DominantBottleneckCardProps> = ({
       </div>
 
       {/* Action Button: EXPLAIN THIS SCENARIO */}
-      <div className="pt-3 border-t border-slate-100 space-y-2">
+      <div className="pt-3.5 border-t border-slate-100 space-y-2.5">
         <button
           onClick={onExplainClick}
           disabled={isLoadingExplanation}
           data-testid="explain-scenario-button"
           aria-label="Explain this scenario"
           title="Explain this scenario"
-          className="w-full py-3 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 active:bg-slate-950 text-white text-xs font-bold uppercase tracking-wider flex items-center justify-center space-x-2 transition-all duration-150 shadow-sm hover:shadow-md hover:scale-[1.01] active:scale-[0.99] disabled:opacity-50 cursor-pointer"
+          className="w-full py-3.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 active:bg-slate-950 text-white text-xs font-bold uppercase tracking-wider flex items-center justify-center space-x-2 transition-all duration-150 shadow-sm hover:shadow-md hover:scale-[1.01] active:scale-[0.99] disabled:opacity-50 cursor-pointer"
         >
           {isLoadingExplanation ? (
             <>
@@ -123,7 +123,7 @@ export const DominantBottleneckCard: React.FC<DominantBottleneckCardProps> = ({
         {hasInterpretation && onScrollToInterpretation && (
           <button
             onClick={onScrollToInterpretation}
-            className="w-full py-1.5 px-3 rounded-lg bg-blue-50 hover:bg-blue-100 text-blue-700 text-[11px] font-semibold flex items-center justify-center space-x-1 transition-colors cursor-pointer border border-blue-200/80"
+            className="w-full py-2 px-3 rounded-lg bg-blue-50 hover:bg-blue-100 text-blue-700 text-xs font-semibold flex items-center justify-center space-x-1 transition-colors cursor-pointer border border-blue-200/80"
           >
             <span>✓ Interpretation generated • View Analysis ↓</span>
           </button>

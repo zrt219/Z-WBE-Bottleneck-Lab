@@ -11,7 +11,7 @@ export const App: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col bg-[#f8fafc] text-slate-900 bg-scientific-grid selection:bg-blue-100 selection:text-blue-900">
       <Header />
-      <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-12">
+      <main className="flex-1 max-w-[1600px] w-full mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-12">
         <Routes>
           <Route path="/" element={<SimulatorPage />} />
           <Route path="/methodology" element={<MethodologyPage />} />
@@ -21,7 +21,7 @@ export const App: React.FC = () => {
       </main>
 
       <footer className="border-t border-slate-200/80 bg-white/90 backdrop-blur-md py-6 text-xs text-slate-500 font-mono">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3">
           <div className="flex items-center space-x-2">
             <span className="font-semibold text-slate-800">
               Z-WBE Bottleneck Lab

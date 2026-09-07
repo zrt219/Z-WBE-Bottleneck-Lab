@@ -198,7 +198,7 @@ export const GpuExplorationMap: React.FC = () => {
                 key={idx}
                 className="p-2.5 rounded-xl bg-slate-50/90 border border-slate-200/90 flex items-center justify-between text-xs font-mono shadow-xs"
               >
-                <div className="truncate mr-2">
+                <div className="min-w-0 mr-2">
                   <span className="font-sans font-bold text-slate-900 block text-[11px]">
                     {corr.parameter}
                   </span>

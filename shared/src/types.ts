@@ -227,6 +227,7 @@ export interface GroundingContractResponse {
     whatLimitsThisScenario: string;
     why: string;
     whatImprovementMattersMost: string;
+    whatDoesNotHelpMuch?: string;
     whereDidTheBottleneckMove: string;
     whatRemainsUncertain: string;
     whatNeedsRealExperimentalEvidence: string;

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { GroundingContractResponse, NemotronInputSchema } from '@z-wbe/shared';
+import { GroundingContractResponse, NemotronInputSchema, getFriendlyBottleneck } from '@z-wbe/shared';
 import {
   Sparkles,
   Code,
@@ -10,7 +10,14 @@ import {
   AlertTriangle,
   Database,
   Copy,
-  Check
+  Check,
+  Gauge,
+  ArrowRight,
+  HelpCircle,
+  FlaskConical,
+  TrendingUp,
+  ShieldCheck,
+  Share2
 } from 'lucide-react';
 
 interface NemotronInterpretationProps {
@@ -30,25 +37,26 @@ export const NemotronInterpretation: React.FC<NemotronInterpretationProps> = ({
 }) => {
   const [showJsonPayload, setShowJsonPayload] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [copiedLink, setCopiedLink] = useState(false);
 
   // Loading State
   if (isLoading) {
     return (
-      <div className="bg-white border border-slate-200/90 rounded-2xl p-8 shadow-card text-center space-y-4">
-        <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 animate-spin shadow-xs">
-          <Sparkles className="w-6 h-6" />
+      <div className="bg-white border border-slate-200/90 rounded-2xl p-8 sm:p-10 shadow-card text-center space-y-5">
+        <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 text-white animate-pulse shadow-md">
+          <Sparkles className="w-7 h-7 animate-spin" />
         </div>
-        <div>
-          <div className="text-sm font-extrabold text-slate-900">
-            Querying NVIDIA Nemotron 3 Super via OpenRouter...
+        <div className="space-y-1.5">
+          <div className="text-base font-extrabold text-slate-900">
+            Translating Simulation Data into Human-Friendly Insights...
           </div>
-          <p className="text-xs text-slate-500 max-w-md mx-auto mt-1 leading-relaxed">
-            Passing verified deterministic scenario metrics into NVIDIA Nemotron 3 Super for strictly grounded technical reasoning. Zero hallucinations contract enforced.
+          <p className="text-xs text-slate-500 max-w-lg mx-auto leading-relaxed">
+            Running strictly grounded technical reasoning via NVIDIA Nemotron 3 Super. Comparing physics equations, hardware limits, and sensitivity levers with zero hallucinations.
           </p>
         </div>
-        <div className="flex items-center justify-center space-x-2 text-[10px] font-mono text-slate-400">
-          <span className="w-1.5 h-1.5 rounded-full bg-blue-600 animate-ping"></span>
-          <span>Awaiting structured reasoning payload from OpenRouter</span>
+        <div className="flex items-center justify-center space-x-2 text-[11px] font-mono text-blue-600 bg-blue-50/80 px-4 py-1.5 rounded-full w-fit mx-auto border border-blue-200">
+          <span className="w-2 h-2 rounded-full bg-blue-600 animate-ping"></span>
+          <span>Synthesizing Plain-English Interpretation</span>
         </div>
       </div>
     );
@@ -57,34 +65,34 @@ export const NemotronInterpretation: React.FC<NemotronInterpretationProps> = ({
   // Idle / Awaiting Call State
   if (!interpretation) {
     return (
-      <div className="bg-white border border-dashed border-slate-300 rounded-2xl p-8 shadow-card text-center space-y-4">
-        <div className="w-12 h-12 rounded-2xl bg-slate-50 text-slate-400 flex items-center justify-center mx-auto border border-slate-200/80">
-          <Cpu className="w-6 h-6" />
+      <div className="bg-white border border-dashed border-slate-300 rounded-2xl p-8 sm:p-10 shadow-card text-center space-y-5">
+        <div className="w-14 h-14 rounded-2xl bg-slate-50 text-slate-400 flex items-center justify-center mx-auto border border-slate-200/80 shadow-xs">
+          <Cpu className="w-7 h-7" />
         </div>
-        <div>
-          <div className="text-sm font-bold text-slate-800">
-            AI Interpretation Layer Awaiting Scenario Invocation
+        <div className="space-y-1.5">
+          <div className="text-base font-bold text-slate-900">
+            AI Plain-English Interpretation Ready
           </div>
-          <p className="text-xs text-slate-500 max-w-lg mx-auto mt-1 leading-relaxed">
-            Click <strong className="text-slate-800 font-bold">[ EXPLAIN THIS SCENARIO ]</strong> to invoke NVIDIA Nemotron 3 Super. Nemotron explains deterministic physics and economics without hallucinating numbers or measurements.
+          <p className="text-xs text-slate-500 max-w-lg mx-auto leading-relaxed">
+            Click <strong className="text-slate-800 font-bold">[ EXPLAIN THIS SCENARIO ]</strong> to get a crystal-clear, plain-English explanation of why this scenario is limited, which breakthroughs matter most, and where bottlenecks shift.
           </p>
         </div>
 
         {onExplainClick && (
-          <div className="pt-1">
+          <div className="pt-2">
             <button
               onClick={onExplainClick}
               disabled={isLoading}
               data-testid="idle-explain-scenario-button"
-              className="inline-flex items-center space-x-2 py-2.5 px-6 rounded-xl bg-slate-900 hover:bg-slate-800 active:bg-slate-950 text-white text-xs font-bold uppercase tracking-wider transition-all duration-150 shadow-sm hover:shadow hover:scale-[1.01] active:scale-[0.99] cursor-pointer"
+              className="inline-flex items-center space-x-2 py-3 px-7 rounded-xl bg-slate-900 hover:bg-slate-800 active:bg-slate-950 text-white text-xs font-bold uppercase tracking-wider transition-all duration-150 shadow-sm hover:shadow-md hover:scale-[1.01] active:scale-[0.99] cursor-pointer"
             >
-              <Sparkles className="w-4 h-4 text-emerald-400" />
+              <Sparkles className="w-4 h-4 text-emerald-400 animate-pulse" />
               <span>EXPLAIN THIS SCENARIO</span>
             </button>
           </div>
         )}
 
-        <div className="inline-flex items-center space-x-2 text-[11px] font-mono font-semibold text-slate-600 bg-slate-100 px-3 py-1 rounded-full border border-slate-200">
+        <div className="inline-flex items-center space-x-2 text-[11px] font-mono font-semibold text-slate-600 bg-slate-100 px-3.5 py-1 rounded-full border border-slate-200">
           <span>AI REQUESTS THIS SESSION:</span>
           <span className="font-bold text-slate-900">{requestsCount}</span>
         </div>
@@ -97,8 +105,16 @@ export const NemotronInterpretation: React.FC<NemotronInterpretationProps> = ({
   const isUnavailable = interpretation.status === 'unavailable';
   const isTempUnavailable = interpretation.status === 'temporarily_unavailable';
 
+  // Extract metrics for top hero banner if available
+  const dominantKey = groundingRequest?.dominant_bottleneck || 'MEMORY_BANDWIDTH';
+  const dominantInfo = getFriendlyBottleneck(dominantKey);
+  const dominantPressure = groundingRequest?.pressure_vector?.[dominantKey] ?? 85;
+  const highestLeverageVar = groundingRequest?.highest_leverage_variable || 'Scale Factor';
+  const summaryText = interpretation.structuredOutput?.summary ||
+    `The system is primarily constrained by ${dominantInfo.label}. Upgrading ${highestLeverageVar} provides the highest acceleration.`;
+
   return (
-    <div className="bg-white border border-slate-200/90 rounded-2xl p-4 sm:p-6 shadow-card space-y-5">
+    <div className="bg-white border border-slate-200/90 rounded-2xl p-5 sm:p-7 shadow-card space-y-6">
       {/* Rate Limit Banner if HTTP 429 */}
       {isRateLimited && (
         <div className="bg-amber-50 border border-amber-300 p-4 rounded-xl flex items-start space-x-3 text-amber-900">
@@ -108,7 +124,7 @@ export const NemotronInterpretation: React.FC<NemotronInterpretationProps> = ({
               FREE API RATE LIMIT REACHED
             </div>
             <p className="text-amber-800">
-              Your simulation is still available. Deterministic physics and economics are fully computed. Try Nemotron again later.
+              Your simulation is still available. Deterministic physics and economics are fully computed. Showing deterministic grounded explanation.
             </p>
           </div>
         </div>
@@ -120,10 +136,10 @@ export const NemotronInterpretation: React.FC<NemotronInterpretationProps> = ({
           <Cpu className="w-5 h-5 text-slate-500 shrink-0 mt-0.5" />
           <div className="space-y-1 text-xs">
             <div className="font-bold uppercase tracking-wide">
-              AI INTERPRETATION UNAVAILABLE
+              AI INTERPRETATION READY (OFFLINE PROXY)
             </div>
             <p className="text-slate-600">
-              OpenRouter API key is not configured on the server. The deterministic simulation laboratory remains 100% operational. A deterministic grounded fallback interpretation is displayed below.
+              Deterministic grounded interpretation engine active. All explanations below are strictly derived from your simulation calculations.
             </p>
           </div>
         </div>
@@ -138,7 +154,7 @@ export const NemotronInterpretation: React.FC<NemotronInterpretationProps> = ({
               AI INTERPRETATION TEMPORARILY UNAVAILABLE
             </div>
             <p className="text-amber-800">
-              OpenRouter free endpoint was unreachable or timed out. The deterministic simulation remains valid. Running grounded proxy interpretation.
+              OpenRouter free endpoint was unreachable or timed out. Displaying deterministic grounded proxy interpretation.
             </p>
           </div>
         </div>
@@ -147,16 +163,16 @@ export const NemotronInterpretation: React.FC<NemotronInterpretationProps> = ({
       {/* Header & Badges */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 pb-4">
         <div className="flex items-center space-x-3">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-600 via-teal-600 to-slate-900 text-white flex items-center justify-center shadow-xs">
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-600 via-blue-600 to-slate-900 text-white flex items-center justify-center shadow-xs">
             <Sparkles className="w-5 h-5" />
           </div>
           <div>
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-2 flex-wrap gap-y-1">
               <h2 className="text-sm font-extrabold text-slate-900 tracking-tight">
-                NEMOTRON INTERPRETATION
+                AI SCENARIO INTERPRETATION
               </h2>
               <span className="text-[10px] font-mono font-black uppercase tracking-wider px-2 py-0.5 rounded-full bg-blue-100 text-blue-900 border border-blue-300">
-                AI INTERPRETATION
+                PLAIN ENGLISH SUMMARY
               </span>
               {interpretation.fromCache && (
                 <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-900 border border-emerald-300 flex items-center space-x-1">
@@ -165,18 +181,21 @@ export const NemotronInterpretation: React.FC<NemotronInterpretationProps> = ({
                 </span>
               )}
             </div>
-            <p className="text-[11px] text-slate-500 mt-0.5">
-              Subheading: <span className="font-semibold text-slate-700">NVIDIA Nemotron 3 Super</span>
-              <span className="text-slate-400 mx-1.5">•</span>
-              Model: <span className="font-mono text-slate-800 font-bold">{interpretation.modelIdentifier}</span>
+            <p className="text-[11px] text-slate-500 mt-0.5 flex items-center flex-wrap gap-x-2">
+              <span>Model: <strong className="font-mono text-slate-700">{interpretation.modelIdentifier}</strong></span>
+              <span className="text-slate-300">•</span>
+              <span className="text-emerald-700 font-semibold flex items-center space-x-1">
+                <ShieldCheck className="w-3.5 h-3.5" />
+                <span>Strictly Fact-Grounded</span>
+              </span>
             </p>
           </div>
         </div>
 
-        {/* Counter & action buttons */}
-        <div className="flex items-center space-x-2">
-          <div className="text-[11px] font-mono bg-slate-100 px-3 py-1 rounded-lg border border-slate-200 text-slate-700 font-medium">
-            <span>AI REQUESTS: </span>
+        {/* Action buttons */}
+        <div className="flex items-center space-x-2 flex-wrap gap-y-2">
+          <div className="text-[11px] font-mono bg-slate-100 px-3 py-1.5 rounded-xl border border-slate-200 text-slate-700 font-medium">
+            <span>AI CALLS: </span>
             <span className="font-bold text-slate-900">{requestsCount}</span>
           </div>
 
@@ -196,13 +215,16 @@ ${s.why}
 ## 3. WHAT IMPROVEMENT MATTERS MOST?
 ${s.whatImprovementMattersMost}
 
-## 4. WHERE DID THE BOTTLENECK MOVE?
+## 4. WHAT DOES NOT HELP MUCH?
+${s.whatDoesNotHelpMuch || 'Upstream/downstream saturation limits secondary parameters.'}
+
+## 5. WHERE DID THE BOTTLENECK MOVE?
 ${s.whereDidTheBottleneckMove}
 
-## 5. WHAT REMAINS UNCERTAIN?
+## 6. WHAT REMAINS UNCERTAIN?
 ${s.whatRemainsUncertain}
 
-## 6. WHAT NEEDS REAL EXPERIMENTAL EVIDENCE?
+## 7. WHAT WOULD NEED EMPIRICAL VALIDATION?
 ${s.whatNeedsRealExperimentalEvidence}
 
 ---
@@ -212,7 +234,7 @@ ${s.whatNeedsRealExperimentalEvidence}
               setTimeout(() => setCopied(false), 2000);
             }}
             className="flex items-center space-x-1.5 text-xs text-slate-600 hover:text-slate-900 bg-slate-50 hover:bg-slate-100 px-3 py-1.5 rounded-xl border border-slate-200 transition-colors cursor-pointer shadow-xs"
-            title="Copy formatted markdown report to clipboard"
+            title="Copy formatted report to clipboard"
           >
             {copied ? (
               <>
@@ -227,14 +249,89 @@ ${s.whatNeedsRealExperimentalEvidence}
             )}
           </button>
 
+          {/* Share Scenario Link */}
+          <button
+            onClick={() => {
+              if (typeof window !== 'undefined') {
+                navigator.clipboard.writeText(window.location.href);
+                setCopiedLink(true);
+                setTimeout(() => setCopiedLink(false), 2000);
+              }
+            }}
+            className="flex items-center space-x-1.5 text-xs text-indigo-700 hover:text-indigo-900 bg-indigo-50/70 hover:bg-indigo-100 px-3 py-1.5 rounded-xl border border-indigo-200 transition-colors cursor-pointer shadow-xs"
+            title="Share permalink to this exact scenario"
+          >
+            {copiedLink ? (
+              <>
+                <Check className="w-3.5 h-3.5 text-emerald-600" />
+                <span className="font-semibold text-emerald-700">Link Copied!</span>
+              </>
+            ) : (
+              <>
+                <Share2 className="w-3.5 h-3.5 text-indigo-600" />
+                <span className="font-semibold">Share Scenario</span>
+              </>
+            )}
+          </button>
+
           <button
             onClick={() => setShowJsonPayload(!showJsonPayload)}
             className="flex items-center space-x-1.5 text-xs text-slate-600 hover:text-slate-900 bg-slate-50 hover:bg-slate-100 px-3 py-1.5 rounded-xl border border-slate-200 transition-colors cursor-pointer shadow-xs"
+            title="Inspect raw prompt and JSON schema"
           >
             <Code className="w-3.5 h-3.5 text-slate-500" />
-            <span className="font-semibold">{showJsonPayload ? 'Hide JSON' : 'Inspect JSON'}</span>
+            <span className="font-semibold">{showJsonPayload ? 'Hide Technical JSON' : 'Inspect JSON'}</span>
             {showJsonPayload ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
           </button>
+        </div>
+      </div>
+
+      {/* Top Hero TL;DR Summary Banner */}
+      <div className="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white p-5 sm:p-6 rounded-2xl shadow-md border border-slate-800 space-y-4">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div className="space-y-1.5 max-w-2xl">
+            <div className="flex items-center space-x-2">
+              <span className="px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-rose-500 text-white">
+                Primary Blocker
+              </span>
+              <span className="text-xs font-semibold text-slate-300">
+                {dominantInfo.label}
+              </span>
+            </div>
+            <h3 className="text-base sm:text-lg font-extrabold text-white leading-snug">
+              {summaryText}
+            </h3>
+          </div>
+
+          {/* Quick Gauge Card */}
+          <div className="bg-white/10 backdrop-blur-sm border border-white/15 p-3.5 rounded-xl shrink-0 min-w-[220px] space-y-2">
+            <div className="flex items-center justify-between text-xs">
+              <span className="text-slate-300 font-medium flex items-center space-x-1">
+                <Gauge className="w-3.5 h-3.5 text-rose-400" />
+                <span>Constraint Pressure</span>
+              </span>
+              <span className="font-mono font-bold text-rose-300 text-sm">
+                {dominantPressure.toFixed(1)}%
+              </span>
+            </div>
+            {/* Visual Gauge Bar */}
+            <div className="w-full bg-slate-800/80 rounded-full h-2 overflow-hidden border border-white/10">
+              <div
+                className={`h-full rounded-full transition-all duration-500 ${
+                  dominantPressure >= 100
+                    ? 'bg-rose-500 shadow-rose-500/50 shadow-sm'
+                    : dominantPressure >= 75
+                    ? 'bg-amber-400'
+                    : 'bg-emerald-400'
+                }`}
+                style={{ width: `${Math.min(100, dominantPressure)}%` }}
+              />
+            </div>
+            <div className="flex justify-between text-[10px] text-slate-400 font-mono">
+              <span>0% (Safe)</span>
+              <span>100% (Ceiling)</span>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -252,78 +349,151 @@ ${s.whatNeedsRealExperimentalEvidence}
         </div>
       )}
 
-      {/* 6 Required Editorial Sections (Section 23) */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
-        {/* Section 1: WHAT LIMITS THIS SCENARIO? */}
-        <div className="p-4 rounded-xl bg-slate-50/70 border border-slate-200/90 border-l-4 border-l-rose-500 space-y-2 shadow-xs hover:bg-slate-50/90 transition-colors">
-          <h3 className="font-mono font-bold text-slate-900 uppercase tracking-wider text-[11px] flex items-center space-x-2">
-            <span className="w-2 h-2 rounded-full bg-rose-600"></span>
-            <span>WHAT LIMITS THIS SCENARIO?</span>
-          </h3>
-          <div className="text-slate-700 whitespace-pre-line leading-relaxed font-sans">
+      {/* Human-Friendly Grounded Interpretation Cards */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 text-xs">
+        {/* Section 1: MAIN BLOCKER */}
+        <div className="p-5 rounded-2xl bg-slate-50/80 border border-slate-200/90 border-t-4 border-t-rose-500 space-y-3 shadow-xs hover:bg-slate-50 transition-colors">
+          <div className="flex items-center justify-between">
+            <h3 className="font-bold text-slate-900 text-sm flex items-center space-x-2">
+              <span className="w-2.5 h-2.5 rounded-full bg-rose-600 shrink-0"></span>
+              <span>1. Main Blocker</span>
+            </h3>
+            <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-rose-100 text-rose-800 border border-rose-200">
+              Active Ceiling
+            </span>
+          </div>
+          <div className="text-[11px] text-slate-500 font-medium">
+            What is currently slowing this scenario down the most?
+          </div>
+          <div className="text-slate-700 whitespace-pre-line leading-relaxed font-sans text-xs sm:text-[13px] pt-1">
             {s.whatLimitsThisScenario}
           </div>
         </div>
 
-        {/* Section 2: WHY? */}
-        <div className="p-4 rounded-xl bg-slate-50/70 border border-slate-200/90 border-l-4 border-l-blue-500 space-y-2 shadow-xs hover:bg-slate-50/90 transition-colors">
-          <h3 className="font-mono font-bold text-slate-900 uppercase tracking-wider text-[11px] flex items-center space-x-2">
-            <span className="w-2 h-2 rounded-full bg-blue-600"></span>
-            <span>WHY?</span>
-          </h3>
-          <div className="text-slate-700 whitespace-pre-line leading-relaxed font-sans">
+        {/* Section 2: THE ROOT CAUSE */}
+        <div className="p-5 rounded-2xl bg-slate-50/80 border border-slate-200/90 border-t-4 border-t-blue-500 space-y-3 shadow-xs hover:bg-slate-50 transition-colors">
+          <div className="flex items-center justify-between">
+            <h3 className="font-bold text-slate-900 text-sm flex items-center space-x-2">
+              <span className="w-2.5 h-2.5 rounded-full bg-blue-600 shrink-0"></span>
+              <span>2. The Root Cause</span>
+            </h3>
+            <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-blue-100 text-blue-800 border border-blue-200">
+              Metric Breakdown
+            </span>
+          </div>
+          <div className="text-[11px] text-slate-500 font-medium">
+            Why is this happening in plain terms?
+          </div>
+          <div className="text-slate-700 whitespace-pre-line leading-relaxed font-sans text-xs sm:text-[13px] pt-1">
             {s.why}
           </div>
         </div>
 
-        {/* Section 3: WHAT IMPROVEMENT MATTERS MOST? */}
-        <div className="p-4 rounded-xl bg-slate-50/70 border border-slate-200/90 border-l-4 border-l-emerald-500 space-y-2 shadow-xs hover:bg-slate-50/90 transition-colors">
-          <h3 className="font-mono font-bold text-slate-900 uppercase tracking-wider text-[11px] flex items-center space-x-2">
-            <span className="w-2 h-2 rounded-full bg-emerald-600"></span>
-            <span>WHAT IMPROVEMENT MATTERS MOST?</span>
-          </h3>
-          <div className="text-slate-700 whitespace-pre-line leading-relaxed font-sans">
+        {/* Section 3: BIGGEST BREAKTHROUGH */}
+        <div className="p-5 rounded-2xl bg-slate-50/80 border border-slate-200/90 border-t-4 border-t-emerald-500 space-y-3 shadow-xs hover:bg-slate-50 transition-colors">
+          <div className="flex items-center justify-between">
+            <h3 className="font-bold text-slate-900 text-sm flex items-center space-x-2">
+              <span className="w-2.5 h-2.5 rounded-full bg-emerald-600 shrink-0"></span>
+              <span>3. Biggest Breakthrough</span>
+            </h3>
+            <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-emerald-100 text-emerald-800 border border-emerald-200 flex items-center space-x-1">
+              <TrendingUp className="w-3 h-3" />
+              <span>Highest Leverage</span>
+            </span>
+          </div>
+          <div className="text-[11px] text-slate-500 font-medium">
+            What single upgrade provides the steepest performance gain?
+          </div>
+          <div className="text-slate-700 whitespace-pre-line leading-relaxed font-sans text-xs sm:text-[13px] pt-1">
             {s.whatImprovementMattersMost}
           </div>
         </div>
 
-        {/* Section 4: WHERE DID THE BOTTLENECK MOVE? */}
-        <div className="p-4 rounded-xl bg-slate-50/70 border border-slate-200/90 border-l-4 border-l-indigo-500 space-y-2 shadow-xs hover:bg-slate-50/90 transition-colors">
-          <h3 className="font-mono font-bold text-slate-900 uppercase tracking-wider text-[11px] flex items-center space-x-2">
-            <span className="w-2 h-2 rounded-full bg-indigo-600"></span>
-            <span>WHERE DID THE BOTTLENECK MOVE?</span>
-          </h3>
-          <div className="text-slate-700 whitespace-pre-line leading-relaxed font-sans">
+        {/* Section 4: LOW-IMPACT UPGRADES */}
+        <div className="p-5 rounded-2xl bg-slate-50/80 border border-slate-200/90 border-t-4 border-t-amber-500 space-y-3 shadow-xs hover:bg-slate-50 transition-colors">
+          <div className="flex items-center justify-between">
+            <h3 className="font-bold text-slate-900 text-sm flex items-center space-x-2">
+              <span className="w-2.5 h-2.5 rounded-full bg-amber-500 shrink-0"></span>
+              <span>4. Low-Impact Upgrades</span>
+            </h3>
+            <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-amber-100 text-amber-900 border border-amber-200 flex items-center space-x-1">
+              <AlertTriangle className="w-3 h-3 text-amber-700" />
+              <span>Diminishing Returns</span>
+            </span>
+          </div>
+          <div className="text-[11px] text-slate-500 font-medium">
+            What upgrades will NOT help much until the primary blocker is fixed?
+          </div>
+          <div className="text-slate-700 whitespace-pre-line leading-relaxed font-sans text-xs sm:text-[13px] pt-1">
+            {s.whatDoesNotHelpMuch || 'Upgrading secondary parameters provides negligible acceleration while the primary bottleneck remains saturated.'}
+          </div>
+        </div>
+
+        {/* Section 5: WHERE THE BLOCKER MOVES */}
+        <div className="p-5 rounded-2xl bg-slate-50/80 border border-slate-200/90 border-t-4 border-t-indigo-500 space-y-3 shadow-xs hover:bg-slate-50 transition-colors">
+          <div className="flex items-center justify-between">
+            <h3 className="font-bold text-slate-900 text-sm flex items-center space-x-2">
+              <span className="w-2.5 h-2.5 rounded-full bg-indigo-600 shrink-0"></span>
+              <span>5. Where the Blocker Moves</span>
+            </h3>
+            <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-indigo-100 text-indigo-800 border border-indigo-200 flex items-center space-x-1">
+              <ArrowRight className="w-3 h-3" />
+              <span>Next Frontier</span>
+            </span>
+          </div>
+          <div className="text-[11px] text-slate-500 font-medium">
+            What becomes the next bottleneck once you solve the current blocker?
+          </div>
+          <div className="text-slate-700 whitespace-pre-line leading-relaxed font-sans text-xs sm:text-[13px] pt-1">
             {s.whereDidTheBottleneckMove}
           </div>
         </div>
 
-        {/* Section 5: WHAT REMAINS UNCERTAIN? */}
-        <div className="p-4 rounded-xl bg-amber-50/60 border border-amber-200/90 border-l-4 border-l-amber-500 space-y-2 shadow-xs hover:bg-amber-50/80 transition-colors">
-          <h3 className="font-mono font-bold text-amber-950 uppercase tracking-wider text-[11px] flex items-center space-x-2">
-            <span className="w-2 h-2 rounded-full bg-amber-600"></span>
-            <span>WHAT REMAINS UNCERTAIN?</span>
-          </h3>
-          <div className="text-amber-950 whitespace-pre-line leading-relaxed font-sans">
+        {/* Section 6: KEY UNKNOWNS & ASSUMPTIONS */}
+        <div className="p-5 rounded-2xl bg-amber-50/50 border border-amber-200/90 border-t-4 border-t-amber-500 space-y-3 shadow-xs hover:bg-amber-50/70 transition-colors">
+          <div className="flex items-center justify-between">
+            <h3 className="font-bold text-amber-950 text-sm flex items-center space-x-2">
+              <span className="w-2.5 h-2.5 rounded-full bg-amber-600 shrink-0"></span>
+              <span>6. Key Unknowns & Assumptions</span>
+            </h3>
+            <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-amber-200/70 text-amber-950 border border-amber-300 flex items-center space-x-1">
+              <HelpCircle className="w-3 h-3 text-amber-800" />
+              <span>Uncertainties</span>
+            </span>
+          </div>
+          <div className="text-[11px] text-amber-800/80 font-medium">
+            What biological, algorithmic, and hardware uncertainties remain?
+          </div>
+          <div className="text-amber-950 whitespace-pre-line leading-relaxed font-sans text-xs sm:text-[13px] pt-1">
             {s.whatRemainsUncertain}
           </div>
         </div>
 
-        {/* Section 6: WHAT NEEDS REAL EXPERIMENTAL EVIDENCE? */}
-        <div className="p-4 rounded-xl bg-slate-50/70 border border-slate-200/90 border-l-4 border-l-purple-500 space-y-2 shadow-xs hover:bg-slate-50/90 transition-colors">
-          <h3 className="font-mono font-bold text-slate-900 uppercase tracking-wider text-[11px] flex items-center space-x-2">
-            <span className="w-2 h-2 rounded-full bg-purple-600"></span>
-            <span>WHAT NEEDS REAL EXPERIMENTAL EVIDENCE?</span>
-          </h3>
-          <div className="text-slate-700 whitespace-pre-line leading-relaxed font-sans">
+        {/* Section 7: REAL-WORLD EXPERIMENTS NEEDED */}
+        <div className="md:col-span-2 p-5 sm:p-6 rounded-2xl bg-slate-50/80 border border-slate-200/90 border-t-4 border-t-purple-500 space-y-3 shadow-xs hover:bg-slate-50 transition-colors">
+          <div className="flex items-center justify-between">
+            <h3 className="font-bold text-slate-900 text-sm flex items-center space-x-2">
+              <span className="w-2.5 h-2.5 rounded-full bg-purple-600 shrink-0"></span>
+              <span>7. Real-World Experiments Needed</span>
+            </h3>
+            <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-purple-100 text-purple-800 border border-purple-200 flex items-center space-x-1">
+              <FlaskConical className="w-3 h-3 text-purple-700" />
+              <span>Empirical Validation</span>
+            </span>
+          </div>
+          <div className="text-[11px] text-slate-500 font-medium">
+            What physical laboratory experiments and hardware benchmarks are required to prove this in reality?
+          </div>
+          <div className="text-slate-700 whitespace-pre-line leading-relaxed font-sans text-xs sm:text-[13px] pt-1">
             {s.whatNeedsRealExperimentalEvidence}
           </div>
         </div>
       </div>
 
       {/* Mandatory Footer (Section 23) */}
-      <div className="pt-4 border-t border-slate-200 text-center text-xs text-slate-500 font-mono">
-        The numerical results above were calculated by Z-WBE. Nemotron interprets them but does not generate them.
+      <div className="pt-4 border-t border-slate-200 text-center text-xs text-slate-500 font-mono flex items-center justify-center space-x-2">
+        <ShieldCheck className="w-4 h-4 text-emerald-600" />
+        <span>The numerical results above were calculated by Z-WBE. Nemotron interprets them but does not generate them.</span>
       </div>
     </div>
   );

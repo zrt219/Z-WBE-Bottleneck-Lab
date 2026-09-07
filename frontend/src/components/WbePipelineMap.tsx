@@ -151,8 +151,8 @@ export const WbePipelineMap: React.FC<WbePipelineMapProps> = ({ bottleneck, metr
   };
 
   return (
-    <div className="bg-white border border-slate-200/90 rounded-2xl p-5 shadow-card space-y-4">
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-100 pb-3">
+    <div className="h-full bg-white border border-slate-200/90 rounded-2xl p-5 sm:p-6 shadow-card space-y-5 flex flex-col">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 border-b border-slate-100 pb-3.5">
         <div>
           <h2 className="text-xs font-bold uppercase tracking-wider text-slate-900 flex items-center space-x-1.5">
             <span>WBE End-to-End Pipeline</span>
@@ -161,16 +161,16 @@ export const WbePipelineMap: React.FC<WbePipelineMapProps> = ({ bottleneck, metr
             6 canonical technical stages. Stage with active constraint ceiling is highlighted.
           </p>
         </div>
-        <div className="flex flex-wrap items-center gap-1.5 text-[10px] font-mono">
-          <span className="flex items-center space-x-1 text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-lg border border-emerald-200 shadow-xs font-semibold">
+        <div className="flex flex-wrap items-center gap-2 text-[10px] font-mono">
+          <span className="flex items-center space-x-1.5 text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-lg border border-emerald-200 shadow-xs font-semibold">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
             <span>&lt;40% Feasible</span>
           </span>
-          <span className="flex items-center space-x-1 text-amber-700 bg-amber-50 px-2.5 py-1 rounded-lg border border-amber-200 shadow-xs font-semibold">
+          <span className="flex items-center space-x-1.5 text-amber-700 bg-amber-50 px-2.5 py-1 rounded-lg border border-amber-200 shadow-xs font-semibold">
             <span className="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
             <span>40-70% Load</span>
           </span>
-          <span className="flex items-center space-x-1 text-rose-700 bg-rose-50 px-2.5 py-1 rounded-lg border border-rose-200 shadow-xs font-semibold">
+          <span className="flex items-center space-x-1.5 text-rose-700 bg-rose-50 px-2.5 py-1 rounded-lg border border-rose-200 shadow-xs font-semibold">
             <span className="w-1.5 h-1.5 rounded-full bg-rose-600"></span>
             <span>&gt;70% Ceiling</span>
           </span>
@@ -178,13 +178,13 @@ export const WbePipelineMap: React.FC<WbePipelineMapProps> = ({ bottleneck, metr
       </div>
 
       {/* Pipeline Stages Vertical Flow */}
-      <div className="space-y-3">
+      <div className="space-y-3.5">
         {stages.map((stage, idx) => {
           const sev = getSeverity(stage.pressureScore);
           return (
             <div key={stage.id} className="relative">
               <div
-                className={`p-4 rounded-xl border transition-all duration-200 relative ${
+                className={`p-4 sm:p-4.5 rounded-xl border transition-all duration-200 relative ${
                   stage.isDominant
                     ? 'border-rose-500 bg-rose-50/40 ring-2 ring-rose-500/30 shadow-md'
                     : stage.isSecond
@@ -234,7 +234,7 @@ export const WbePipelineMap: React.FC<WbePipelineMapProps> = ({ bottleneck, metr
                 </div>
 
                 {/* Pressure progress bar */}
-                <div className="mt-3 w-full bg-slate-100 rounded-full h-2 overflow-hidden border border-slate-200/50">
+                <div className="mt-3.5 w-full bg-slate-100 rounded-full h-2 overflow-hidden border border-slate-200/50">
                   <div
                     className={`h-full rounded-full transition-all duration-300 ${sev.bar}`}
                     style={{ width: `${Math.min(100, Math.max(4, stage.pressureScore))}%` }}
@@ -242,13 +242,15 @@ export const WbePipelineMap: React.FC<WbePipelineMapProps> = ({ bottleneck, metr
                 </div>
 
                 {/* Demand vs Capacity context chips */}
-                <div className="mt-2.5 flex flex-wrap items-center justify-between gap-1.5 text-[10px] text-slate-500 font-mono">
-                  <span className="bg-slate-50/90 px-2.5 py-1 rounded-lg border border-slate-200/90 shadow-xs">
-                    Demand: <strong className="text-slate-800 font-semibold">{stage.demandFormatted}</strong>
-                  </span>
-                  <span className="bg-slate-50/90 px-2.5 py-1 rounded-lg border border-slate-200/90 shadow-xs">
-                    Basis: <strong className="text-slate-800 font-semibold">{stage.capacityFormatted}</strong>
-                  </span>
+                <div className="mt-3 grid grid-cols-1 xl:grid-cols-2 gap-2 text-[10px] text-slate-500 font-mono">
+                  <div className="bg-slate-50/90 px-3 py-1.5 rounded-lg border border-slate-200/90 shadow-xs flex items-center justify-between xl:justify-start gap-1">
+                    <span className="shrink-0">Demand:</span>
+                    <strong className="text-slate-800 font-semibold truncate" title={stage.demandFormatted}>{stage.demandFormatted}</strong>
+                  </div>
+                  <div className="bg-slate-50/90 px-3 py-1.5 rounded-lg border border-slate-200/90 shadow-xs flex items-center justify-between xl:justify-end gap-1">
+                    <span className="shrink-0">Basis:</span>
+                    <strong className="text-slate-800 font-semibold truncate xl:text-right" title={stage.capacityFormatted}>{stage.capacityFormatted}</strong>
+                  </div>
                 </div>
               </div>
 
