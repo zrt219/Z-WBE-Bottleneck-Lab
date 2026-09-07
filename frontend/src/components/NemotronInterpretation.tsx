@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { GroundingContractResponse, NemotronInputSchema, getFriendlyBottleneck } from '@z-wbe/shared';
+import {
+  GroundingContractResponse,
+  NemotronInputSchema,
+  getFriendlyBottleneck,
+  sanitizeUserProse,
+  cleanScenarioProse
+} from '@z-wbe/shared';
 import {
   Sparkles,
   Code,
@@ -83,6 +89,73 @@ interface FormattedMarkdownSectionProps {
   variant?: 'default' | 'metrics' | 'low-impact' | 'transitions' | 'uncertainties' | 'experiments';
 }
 
+type SectionItem =
+  | { type: 'callout'; emoji: string; text: string }
+  | { type: 'bullet'; items: string[] }
+  | { type: 'numbered'; items: string[] }
+  | { type: 'paragraph'; text: string };
+
+function parseMarkdownToItems(content: string): SectionItem[] {
+  if (!content) return [];
+  const lines = content.split('\n').map((l) => l.trim()).filter(Boolean);
+  const items: SectionItem[] = [];
+  let currentBullets: string[] = [];
+  let currentNumbered: string[] = [];
+  let currentParagraphLines: string[] = [];
+
+  const flushParagraph = () => {
+    if (currentParagraphLines.length > 0) {
+      items.push({ type: 'paragraph', text: currentParagraphLines.join(' ') });
+      currentParagraphLines = [];
+    }
+  };
+
+  const flushBullets = () => {
+    if (currentBullets.length > 0) {
+      items.push({ type: 'bullet', items: currentBullets });
+      currentBullets = [];
+    }
+  };
+
+  const flushNumbered = () => {
+    if (currentNumbered.length > 0) {
+      items.push({ type: 'numbered', items: currentNumbered });
+      currentNumbered = [];
+    }
+  };
+
+  for (const line of lines) {
+    if (line.startsWith('💡') || line.startsWith('🚀') || line.startsWith('⚠️')) {
+      flushParagraph();
+      flushBullets();
+      flushNumbered();
+      items.push({
+        type: 'callout',
+        emoji: line.slice(0, 2).trim(),
+        text: line.slice(2).trim()
+      });
+    } else if (/^[•\-\*]/.test(line)) {
+      flushParagraph();
+      flushNumbered();
+      currentBullets.push(line.replace(/^[•\-\*]\s*/, '').trim());
+    } else if (/^\d+\.\s*/.test(line)) {
+      flushParagraph();
+      flushBullets();
+      currentNumbered.push(line.replace(/^\d+\.\s*/, '').trim());
+    } else {
+      flushBullets();
+      flushNumbered();
+      currentParagraphLines.push(line);
+    }
+  }
+
+  flushParagraph();
+  flushBullets();
+  flushNumbered();
+
+  return items;
+}
+
 /**
  * Renders structured scientific markdown blocks into sleek dashboard cards,
  * replacing raw asterisks, backticks, and bullet points with rich visual styling.
@@ -93,19 +166,14 @@ const FormattedMarkdownSection: React.FC<FormattedMarkdownSectionProps> = ({
 }) => {
   if (!content) return null;
 
-  const blocks = content.split(/\n{2,}/).map((b) => b.trim()).filter(Boolean);
+  const items = parseMarkdownToItems(content);
 
   return (
     <div className="space-y-3">
-      {blocks.map((block, bIdx) => {
-        const lines = block.split('\n').map((l) => l.trim()).filter(Boolean);
-
-        // Callout boxes (e.g. 💡 **What this means:** or 🚀 **Why it matters:**)
-        if (block.startsWith('💡') || block.startsWith('🚀') || block.startsWith('⚠️')) {
-          const emoji = block.slice(0, 2).trim();
-          const rest = block.slice(2).trim();
-          const isRocket = emoji === '🚀';
-          const isWarning = emoji === '⚠️';
+      {items.map((item, idx) => {
+        if (item.type === 'callout') {
+          const isRocket = item.emoji === '🚀';
+          const isWarning = item.emoji === '⚠️';
           const bgClass = isRocket
             ? 'bg-emerald-50/80 border-emerald-200/90 text-emerald-950'
             : isWarning
@@ -114,25 +182,28 @@ const FormattedMarkdownSection: React.FC<FormattedMarkdownSectionProps> = ({
 
           return (
             <div
-              key={bIdx}
+              key={idx}
               className={`p-3.5 rounded-xl border flex items-start space-x-2.5 text-xs leading-relaxed shadow-2xs ${bgClass}`}
             >
-              <span className="text-base shrink-0 mt-0.5">{emoji}</span>
-              <div className="flex-1 font-sans">{renderInlineText(rest)}</div>
+              <span className="text-base shrink-0 mt-0.5">{item.emoji}</span>
+              <div className="flex-1 font-sans">{renderInlineText(item.text)}</div>
             </div>
           );
         }
 
-        // Bullet block (lines starting with •, -, or *)
-        const isBulletBlock = lines.every((line) => /^[•\-\*]/.test(line));
-        if (isBulletBlock && lines.length > 0) {
+        if (item.type === 'bullet') {
           return (
-            <div key={bIdx} className="space-y-2">
-              {lines.map((line, lIdx) => {
-                const clean = line.replace(/^[•\-\*]\s*/, '').trim();
+            <div key={idx} className="space-y-2">
+              {item.items.map((clean, lIdx) => {
+                // Check if line represents a transition arrow
+                const isTransitionArrow = clean.startsWith('➡️') || clean.startsWith('->');
+                const cleanText = isTransitionArrow
+                  ? clean.replace(/^(?:➡️|->)\s*/, '').trim()
+                  : clean;
 
-                // Check for "**Title**: Description" or "Emoji **Title:** Description"
-                const titleMatch = clean.match(/^([^\w\s]*\s*\*\*.*?\*\*[:]?)\s*(.*)$/);
+                // Check for "**Title**: Description" or "Title: Description" or "Emoji **Title:** Description"
+                const titleMatch = cleanText.match(/^([^\w\s]*\s*(?:\*\*[^*]+?\*\*|[A-Za-z0-9\s/&()\-]+?)[:：])\s*(.*)$/);
+
                 if (titleMatch) {
                   const rawTitle = titleMatch[1];
                   const desc = titleMatch[2];
@@ -142,9 +213,11 @@ const FormattedMarkdownSection: React.FC<FormattedMarkdownSectionProps> = ({
                       key={lIdx}
                       className={`p-3 rounded-xl border transition-all ${
                         variant === 'low-impact'
-                          ? 'bg-amber-50/50 border-amber-200/80 hover:bg-amber-50/80'
+                          ? 'bg-amber-50/60 border-amber-200/80 hover:bg-amber-50/90'
                           : variant === 'metrics'
                           ? 'bg-white border-slate-200/90 shadow-2xs hover:border-blue-300'
+                          : variant === 'transitions'
+                          ? 'bg-indigo-50/40 border-indigo-200/80 hover:bg-indigo-50/70 shadow-2xs'
                           : 'bg-white border-slate-200/80 shadow-2xs hover:border-slate-300'
                       }`}
                     >
@@ -162,6 +235,16 @@ const FormattedMarkdownSection: React.FC<FormattedMarkdownSectionProps> = ({
                             Metric
                           </span>
                         )}
+                        {variant === 'transitions' && (
+                          <span className="text-[9.5px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-indigo-100 text-indigo-900 border border-indigo-200 shrink-0">
+                            Shift
+                          </span>
+                        )}
+                        {variant === 'uncertainties' && (
+                          <span className="text-[9.5px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-amber-100 text-amber-900 border border-amber-300 shrink-0">
+                            Risk Factor
+                          </span>
+                        )}
                       </div>
                       {desc && (
                         <div className="text-[11.5px] text-slate-600 leading-relaxed mt-1">
@@ -172,14 +255,51 @@ const FormattedMarkdownSection: React.FC<FormattedMarkdownSectionProps> = ({
                   );
                 }
 
-                // Plain bullet line
+                // Transition item without colon
+                if (variant === 'transitions' || isTransitionArrow) {
+                  return (
+                    <div
+                      key={lIdx}
+                      className="flex items-start space-x-2.5 p-3 rounded-xl bg-indigo-50/40 border border-indigo-200/80 text-[12px] text-indigo-950 leading-relaxed shadow-2xs hover:bg-indigo-50/70 transition-colors"
+                    >
+                      <ArrowRight className="w-4 h-4 text-indigo-600 shrink-0 mt-0.5" />
+                      <div className="flex-1 font-sans">{renderInlineText(cleanText)}</div>
+                      <span className="text-[9.5px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-indigo-100 text-indigo-900 border border-indigo-200 shrink-0">
+                        Shift
+                      </span>
+                    </div>
+                  );
+                }
+
+                // Uncertainties item without colon
+                if (variant === 'uncertainties') {
+                  const isHypothetical = clean.includes('Hypothetical') || clean.startsWith('⚠️');
+                  return (
+                    <div
+                      key={lIdx}
+                      className={`flex items-start space-x-2.5 p-3 rounded-xl border text-[12px] leading-relaxed shadow-2xs ${
+                        isHypothetical
+                          ? 'bg-amber-100/70 border-amber-300 text-amber-950 font-medium'
+                          : 'bg-white border-amber-200/80 text-slate-800'
+                      }`}
+                    >
+                      <HelpCircle className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
+                      <div className="flex-1 font-sans">{renderInlineText(clean)}</div>
+                      <span className="text-[9.5px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-amber-200/80 text-amber-950 border border-amber-300 shrink-0">
+                        Unknown
+                      </span>
+                    </div>
+                  );
+                }
+
+                // Standard bullet line styled as card
                 return (
                   <div
                     key={lIdx}
-                    className="flex items-start space-x-2.5 p-2.5 rounded-xl bg-white border border-slate-200/80 text-[12px] text-slate-700 leading-relaxed shadow-2xs"
+                    className="flex items-start space-x-2.5 p-2.5 rounded-xl bg-white border border-slate-200/80 text-[12px] text-slate-700 leading-relaxed shadow-2xs hover:border-slate-300 transition-colors"
                   >
-                    <span className="w-1.5 h-1.5 rounded-full bg-slate-400 mt-1.5 shrink-0" />
-                    <div className="flex-1">{renderInlineText(clean)}</div>
+                    <span className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-1.5 shrink-0" />
+                    <div className="flex-1 font-sans">{renderInlineText(clean)}</div>
                   </div>
                 );
               })}
@@ -187,36 +307,33 @@ const FormattedMarkdownSection: React.FC<FormattedMarkdownSectionProps> = ({
           );
         }
 
-        // Numbered block (e.g. "1. Benchmarking...")
-        const isNumberedBlock = lines.every((line) => /^\d+\./.test(line));
-        if (isNumberedBlock && lines.length > 0) {
+        if (item.type === 'numbered') {
           return (
-            <div key={bIdx} className="space-y-2">
-              {lines.map((line, lIdx) => {
-                const match = line.match(/^(\d+)\.\s*(.*)$/);
-                const num = match ? match[1] : `${lIdx + 1}`;
-                const text = match ? match[2] : line;
-
-                return (
-                  <div
-                    key={lIdx}
-                    className="flex items-start space-x-3 p-3 rounded-xl bg-white border border-slate-200/80 shadow-2xs text-[12px] text-slate-700 leading-relaxed hover:border-purple-200 transition-colors"
-                  >
-                    <span className="flex items-center justify-center w-5 h-5 rounded-full bg-purple-100 text-purple-800 text-[11px] font-mono font-bold shrink-0 mt-0.5 border border-purple-200">
-                      {num}
+            <div key={idx} className="space-y-2">
+              {item.items.map((text, lIdx) => (
+                <div
+                  key={lIdx}
+                  className="flex items-start space-x-3 p-3 rounded-xl bg-white border border-slate-200/80 shadow-2xs text-[12px] text-slate-700 leading-relaxed hover:border-purple-200 transition-colors"
+                >
+                  <span className="flex items-center justify-center w-5 h-5 rounded-full bg-purple-100 text-purple-800 text-[11px] font-mono font-bold shrink-0 mt-0.5 border border-purple-200">
+                    {lIdx + 1}
+                  </span>
+                  <div className="flex-1 font-sans">{renderInlineText(text)}</div>
+                  {variant === 'experiments' && (
+                    <span className="text-[9.5px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-purple-100 text-purple-900 border border-purple-200 shrink-0">
+                      Protocol
                     </span>
-                    <div className="flex-1">{renderInlineText(text)}</div>
-                  </div>
-                );
-              })}
+                  )}
+                </div>
+              ))}
             </div>
           );
         }
 
-        // Standard lead paragraph
+        // Paragraph
         return (
-          <p key={bIdx} className="text-slate-700 leading-relaxed font-sans text-xs sm:text-[12.5px]">
-            {renderInlineText(block)}
+          <p key={idx} className="text-slate-700 leading-relaxed font-sans text-xs sm:text-[12.5px]">
+            {renderInlineText(item.text)}
           </p>
         );
       })}
@@ -310,9 +427,23 @@ export const NemotronInterpretation: React.FC<NemotronInterpretationProps> = ({
   const dominantKey = groundingRequest?.dominant_bottleneck || 'MEMORY_BANDWIDTH';
   const dominantInfo = getFriendlyBottleneck(dominantKey);
   const dominantPressure = groundingRequest?.pressure_vector?.[dominantKey] ?? 85;
-  const highestLeverageVar = groundingRequest?.highest_leverage_variable || 'Scale Factor';
-  const summaryText = interpretation.structuredOutput?.summary ||
-    `The system is primarily constrained by ${dominantInfo.label}. Upgrading ${highestLeverageVar} provides the highest acceleration.`;
+
+  const secondaryKey = groundingRequest?.secondary_bottleneck ||
+    (dominantKey === 'ACQUISITION' ? 'MEMORY_BANDWIDTH' : dominantKey === 'MEMORY_BANDWIDTH' ? 'STORAGE' : 'COMPUTE');
+  const secondInfo = getFriendlyBottleneck(secondaryKey);
+  const secondPressure = groundingRequest?.pressure_vector?.[secondaryKey] ?? 0;
+
+  const rawHighestLev = groundingRequest?.highest_leverage_variable || 'Scale Factor';
+  const highestLeverageVar = rawHighestLev.replace(/_/g, ' ');
+
+  // Clean scenario name: exactly once, no triplicate parentheses or redundant IDs
+  const rawScenarioName = groundingRequest?.scenario || groundingRequest?.scale || groundingRequest?.scenario_id || 'Active Scenario';
+  const cleanScenarioName = rawScenarioName.replace(/\s*\([^)]*\)\s*\([^)]*\)$/, '').trim();
+
+  // Clean summary text: strip duplicate parentheses and raw bracketed CAPS
+  const rawSummaryText = interpretation.structuredOutput?.summary ||
+    `In ${cleanScenarioName}, the primary technical blocker is ${dominantInfo.label} (pressure: ${dominantPressure.toFixed(1)}%), followed by ${secondInfo.label} (${secondPressure.toFixed(1)}%). Addressing ${highestLeverageVar} gives the greatest speedup.`;
+  const cleanedSummaryText = cleanScenarioProse(sanitizeUserProse(rawSummaryText));
 
   // Tailored ELI5 details with robust fallback
   const eli5 = interpretation.eli5 || {
@@ -322,6 +453,9 @@ export const NemotronInterpretation: React.FC<NemotronInterpretationProps> = ({
     whyItStalls: `Operational limits in ${dominantInfo.label} prevent the rest of the simulation from running at full speed.`,
     whatToFixFirst: `Upgrade ${highestLeverageVar} to unlock the biggest performance boost.`
   };
+
+  const takeHomePoint = interpretation.structuredOutput?.bottom_line ||
+    `No matter how much you optimize other areas, overall progress remains gated by ${dominantInfo.label}. Focusing on ${highestLeverageVar} provides the fastest breakthrough.`;
 
   return (
     <div id="tour-nemotron-interpretation" className="bg-white border border-slate-200/90 rounded-2xl p-5 sm:p-7 shadow-card space-y-6">
@@ -601,50 +735,144 @@ ${s.whatNeedsRealExperimentalEvidence}
         </div>
       </div>
 
-      {/* Top Hero TL;DR Summary Banner */}
-      <div className="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white p-5 sm:p-6 rounded-2xl shadow-md border border-slate-800 space-y-4">
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-          <div className="space-y-1.5 max-w-2xl">
-            <div className="flex items-center space-x-2">
-              <span className="px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-rose-500 text-white">
-                Primary Blocker
-              </span>
-              <span className="text-xs font-semibold text-slate-300">
-                {dominantInfo.label}
-              </span>
+      {/* Top Hero Executive Blocker Banner */}
+      <div className="bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950 text-white p-5 sm:p-7 rounded-2xl shadow-xl border border-slate-800 space-y-4">
+        {/* Top Header: Category Tag & Clean Scenario Badge */}
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800/80 pb-3.5">
+          <div className="flex flex-wrap items-center gap-2.5">
+            <span className="px-3 py-1 rounded-full text-[10.5px] font-black uppercase tracking-wider bg-rose-600 text-white shadow-2xs flex items-center space-x-1.5">
+              <AlertTriangle className="w-3.5 h-3.5" />
+              <span>Primary Technical Blocker</span>
+            </span>
+
+            {/* Clean Scenario Badge */}
+            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-slate-800/90 border border-slate-700/80 text-slate-200 text-xs shadow-2xs">
+              <span className="w-2 h-2 rounded-full bg-emerald-400 shrink-0" />
+              <span className="text-slate-400 font-mono text-[10px] uppercase tracking-wider font-semibold">Scenario</span>
+              <span className="font-bold text-white tracking-tight">{cleanScenarioName}</span>
             </div>
-            <h3 className="text-base sm:text-lg font-extrabold text-white leading-snug">
-              {summaryText}
-            </h3>
           </div>
 
-          {/* Quick Gauge Card */}
-          <div className="bg-white/10 backdrop-blur-sm border border-white/15 p-3.5 rounded-xl shrink-0 min-w-[220px] space-y-2">
-            <div className="flex items-center justify-between text-xs">
-              <span className="text-slate-300 font-medium flex items-center space-x-1">
-                <Gauge className="w-3.5 h-3.5 text-rose-400" />
-                <span>Constraint Pressure</span>
-              </span>
-              <span className="font-mono font-bold text-rose-300 text-sm">
-                {dominantPressure.toFixed(1)}%
-              </span>
+          <div className="text-[11px] font-mono text-slate-400 flex items-center space-x-2">
+            <ShieldCheck className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+            <span>Executive Synthesis</span>
+            <span className="text-slate-600">•</span>
+            <span className="text-emerald-400/90 font-mono text-[10.5px]">Zero Hallucination</span>
+          </div>
+        </div>
+
+        {/* Executive Summary Lead Text */}
+        <div className="text-sm sm:text-[14px] text-slate-200 leading-relaxed font-sans border-l-2 border-indigo-500/80 pl-3.5 py-0.5">
+          {renderInlineText(cleanedSummaryText)}
+        </div>
+
+        {/* 3 Executive Constraint & Intervention Cards with Clear Hierarchy */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5 pt-1">
+          {/* Card 1: #1 Dominant Constraint Card with pressure score */}
+          <div className="p-4 rounded-xl bg-slate-900/95 border-2 border-rose-500/80 shadow-md space-y-3 flex flex-col justify-between">
+            <div className="space-y-1.5">
+              <div className="flex items-center justify-between">
+                <span className="text-[9.5px] font-mono font-black uppercase tracking-wider px-2 py-0.5 rounded bg-rose-500 text-white shadow-2xs">
+                  #1 Dominant Constraint
+                </span>
+                <span
+                  className={`text-[9.5px] font-mono font-bold px-2 py-0.5 rounded-full border ${
+                    dominantPressure > 100
+                      ? 'bg-rose-950 text-rose-300 border-rose-800'
+                      : 'bg-amber-950 text-amber-300 border-amber-800'
+                  }`}
+                >
+                  {dominantPressure > 100 ? 'Ceiling Exceeded' : 'Active Ceiling'}
+                </span>
+              </div>
+              <div className="text-sm sm:text-base font-extrabold text-white tracking-tight leading-snug">
+                {dominantInfo.label}
+              </div>
+              <div className="text-[11px] text-slate-300 leading-snug line-clamp-2">
+                {dominantInfo.shortDesc}
+              </div>
             </div>
-            {/* Visual Gauge Bar */}
-            <div className="w-full bg-slate-800/80 rounded-full h-2 overflow-hidden border border-white/10">
-              <div
-                className={`h-full rounded-full transition-all duration-500 ${
-                  dominantPressure >= 100
-                    ? 'bg-rose-500 shadow-rose-500/50 shadow-sm'
-                    : dominantPressure >= 75
-                    ? 'bg-amber-400'
-                    : 'bg-emerald-400'
-                }`}
-                style={{ width: `${Math.min(100, dominantPressure)}%` }}
-              />
+
+            <div className="pt-2 border-t border-slate-800 space-y-1.5">
+              <div className="flex items-center justify-between text-xs">
+                <span className="text-[10.5px] font-mono text-slate-400 flex items-center space-x-1">
+                  <Gauge className="w-3 h-3 text-rose-400" />
+                  <span>Pressure Score</span>
+                </span>
+                <span className="font-mono font-black text-sm text-rose-400">
+                  {dominantPressure > 999 ? '>999%' : `${dominantPressure.toFixed(1)}%`}
+                </span>
+              </div>
+              <div className="w-full bg-slate-800 rounded-full h-1.5 overflow-hidden">
+                <div
+                  className="bg-rose-500 h-full rounded-full transition-all duration-500"
+                  style={{ width: `${Math.min(100, dominantPressure)}%` }}
+                />
+              </div>
             </div>
-            <div className="flex justify-between text-[10px] text-slate-400 font-mono">
-              <span>0% (Safe)</span>
-              <span>100% (Ceiling)</span>
+          </div>
+
+          {/* Card 2: #2 Secondary Constraint Card */}
+          <div className="p-4 rounded-xl bg-slate-900/95 border border-slate-700/90 shadow-md space-y-3 flex flex-col justify-between hover:border-slate-600 transition-colors">
+            <div className="space-y-1.5">
+              <div className="flex items-center justify-between">
+                <span className="text-[9.5px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700">
+                  #2 Secondary Constraint
+                </span>
+                <span className="text-[9.5px] font-mono font-semibold px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700">
+                  Next Limit
+                </span>
+              </div>
+              <div className="text-sm sm:text-base font-bold text-slate-100 tracking-tight leading-snug">
+                {secondInfo.label}
+              </div>
+              <div className="text-[11px] text-slate-400 leading-snug line-clamp-2">
+                {secondInfo.shortDesc}
+              </div>
+            </div>
+
+            <div className="pt-2 border-t border-slate-800 space-y-1">
+              <div className="flex items-center justify-between text-xs">
+                <span className="text-[10.5px] font-mono text-slate-400">Secondary Pressure</span>
+                <span className="font-mono font-bold text-sm text-slate-200">
+                  {secondPressure.toFixed(1)}%
+                </span>
+              </div>
+              <div className="flex items-center justify-between text-[10px] font-mono text-slate-400">
+                <span>Separation Margin</span>
+                <span className="text-indigo-300 font-semibold">
+                  +{Math.max(0, dominantPressure - secondPressure).toFixed(1)} pts
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* Card 3: Highest-Leverage Intervention Highlight */}
+          <div className="p-4 rounded-xl bg-gradient-to-br from-emerald-950/40 via-slate-900 to-teal-950/30 border border-emerald-500/50 shadow-md space-y-3 flex flex-col justify-between hover:border-emerald-400 transition-colors">
+            <div className="space-y-1.5">
+              <div className="flex items-center justify-between">
+                <span className="text-[9.5px] font-mono font-black uppercase tracking-wider px-2 py-0.5 rounded bg-emerald-500 text-slate-950 shadow-2xs flex items-center space-x-1">
+                  <TrendingUp className="w-3 h-3" />
+                  <span>Highest-Leverage Fix</span>
+                </span>
+                <span className="text-[9.5px] font-mono font-bold px-2 py-0.5 rounded-full bg-emerald-950/80 text-emerald-300 border border-emerald-700">
+                  Max Speedup
+                </span>
+              </div>
+              <div className="text-sm sm:text-base font-extrabold text-emerald-200 tracking-tight leading-snug">
+                {highestLeverageVar}
+              </div>
+              <div className="text-[11px] text-emerald-100/80 leading-snug line-clamp-2">
+                Yields the steepest acceleration and directly relieves pressure on {dominantInfo.label}.
+              </div>
+            </div>
+
+            <div className="pt-2 border-t border-emerald-900/60 flex items-center justify-between text-[10.5px] font-mono text-emerald-300">
+              <span className="flex items-center space-x-1">
+                <Sparkles className="w-3 h-3 text-emerald-400" />
+                <span>Priority Action</span>
+              </span>
+              <span className="font-bold text-emerald-200">Primary Lever</span>
             </div>
           </div>
         </div>
@@ -703,7 +931,7 @@ ${s.whatNeedsRealExperimentalEvidence}
               <div className="pt-2 border-t border-amber-200/60 flex items-center space-x-2 text-xs text-amber-950/90 font-medium">
                 <Lightbulb className="w-4 h-4 text-amber-600 shrink-0" />
                 <span>
-                  <strong>The take-home point:</strong> No matter how fast our processors or AI are, the entire project is bottlenecked by physical scanning and storage arrays.
+                  <strong>The take-home point:</strong> {takeHomePoint}
                 </span>
               </div>
             </div>
@@ -802,14 +1030,19 @@ ${s.whatNeedsRealExperimentalEvidence}
             {/* Section 1: MAIN BLOCKER */}
             <div className="h-full p-5 sm:p-6 rounded-2xl bg-slate-50/80 border border-slate-200/90 border-t-4 border-t-rose-500 flex flex-col justify-between space-y-3 shadow-xs hover:bg-slate-50 transition-colors">
               <div>
-                <div className="flex items-center justify-between min-h-[28px]">
+                <div className="flex items-center justify-between min-h-[28px] gap-2">
                   <h3 className="font-bold text-slate-900 text-sm flex items-center space-x-2">
                     <span className="w-2.5 h-2.5 rounded-full bg-rose-600 shrink-0"></span>
                     <span>1. Main Blocker</span>
                   </h3>
-                  <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-rose-100 text-rose-800 border border-rose-200">
-                    Active Ceiling
-                  </span>
+                  <div className="flex items-center space-x-1.5 flex-wrap gap-y-1 justify-end">
+                    <span className="text-[9.5px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-slate-200/80 text-slate-700 border border-slate-300">
+                      Primary Blocker
+                    </span>
+                    <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-rose-100 text-rose-800 border border-rose-200">
+                      Active Ceiling
+                    </span>
+                  </div>
                 </div>
                 <div className="text-[11px] text-slate-500 font-medium min-h-[34px] flex items-center mt-1">
                   What is currently slowing this scenario down the most?
@@ -823,14 +1056,19 @@ ${s.whatNeedsRealExperimentalEvidence}
             {/* Section 2: THE ROOT CAUSE */}
             <div className="h-full p-5 sm:p-6 rounded-2xl bg-slate-50/80 border border-slate-200/90 border-t-4 border-t-blue-500 flex flex-col justify-between space-y-3 shadow-xs hover:bg-slate-50 transition-colors">
               <div>
-                <div className="flex items-center justify-between min-h-[28px]">
+                <div className="flex items-center justify-between min-h-[28px] gap-2">
                   <h3 className="font-bold text-slate-900 text-sm flex items-center space-x-2">
                     <span className="w-2.5 h-2.5 rounded-full bg-blue-600 shrink-0"></span>
                     <span>2. The Root Cause</span>
                   </h3>
-                  <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-blue-100 text-blue-800 border border-blue-200">
-                    Metric Breakdown
-                  </span>
+                  <div className="flex items-center space-x-1.5 flex-wrap gap-y-1 justify-end">
+                    <span className="text-[9.5px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-slate-200/80 text-slate-700 border border-slate-300">
+                      Telemetry & Physics
+                    </span>
+                    <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-blue-100 text-blue-800 border border-blue-200">
+                      Metric Breakdown
+                    </span>
+                  </div>
                 </div>
                 <div className="text-[11px] text-slate-500 font-medium min-h-[34px] flex items-center mt-1">
                   Why is this happening in plain quantitative terms?
@@ -844,15 +1082,20 @@ ${s.whatNeedsRealExperimentalEvidence}
             {/* Section 3: BIGGEST BREAKTHROUGH */}
             <div className="h-full p-5 sm:p-6 rounded-2xl bg-slate-50/80 border border-slate-200/90 border-t-4 border-t-emerald-500 flex flex-col justify-between space-y-3 shadow-xs hover:bg-slate-50 transition-colors">
               <div>
-                <div className="flex items-center justify-between min-h-[28px]">
+                <div className="flex items-center justify-between min-h-[28px] gap-2">
                   <h3 className="font-bold text-slate-900 text-sm flex items-center space-x-2">
                     <span className="w-2.5 h-2.5 rounded-full bg-emerald-600 shrink-0"></span>
                     <span>3. Biggest Breakthrough</span>
                   </h3>
-                  <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-emerald-100 text-emerald-800 border border-emerald-200 flex items-center space-x-1">
-                    <TrendingUp className="w-3 h-3" />
-                    <span>Highest Leverage</span>
-                  </span>
+                  <div className="flex items-center space-x-1.5 flex-wrap gap-y-1 justify-end">
+                    <span className="text-[9.5px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-slate-200/80 text-slate-700 border border-slate-300">
+                      Sensitivity Levers
+                    </span>
+                    <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-emerald-100 text-emerald-800 border border-emerald-200 flex items-center space-x-1">
+                      <TrendingUp className="w-3 h-3" />
+                      <span>Highest Leverage</span>
+                    </span>
+                  </div>
                 </div>
                 <div className="text-[11px] text-slate-500 font-medium min-h-[34px] flex items-center mt-1">
                   What single upgrade provides the steepest performance gain?
@@ -866,15 +1109,20 @@ ${s.whatNeedsRealExperimentalEvidence}
             {/* Section 4: LOW-IMPACT UPGRADES */}
             <div className="h-full p-5 sm:p-6 rounded-2xl bg-slate-50/80 border border-slate-200/90 border-t-4 border-t-amber-500 flex flex-col justify-between space-y-3 shadow-xs hover:bg-slate-50 transition-colors">
               <div>
-                <div className="flex items-center justify-between min-h-[28px]">
+                <div className="flex items-center justify-between min-h-[28px] gap-2">
                   <h3 className="font-bold text-slate-900 text-sm flex items-center space-x-2">
                     <span className="w-2.5 h-2.5 rounded-full bg-amber-500 shrink-0"></span>
                     <span>4. Low-Impact Upgrades</span>
                   </h3>
-                  <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-amber-100 text-amber-900 border border-amber-200 flex items-center space-x-1">
-                    <AlertTriangle className="w-3 h-3 text-amber-700" />
-                    <span>Diminishing Returns</span>
-                  </span>
+                  <div className="flex items-center space-x-1.5 flex-wrap gap-y-1 justify-end">
+                    <span className="text-[9.5px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-slate-200/80 text-slate-700 border border-slate-300">
+                      Low Leverage
+                    </span>
+                    <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-amber-100 text-amber-900 border border-amber-200 flex items-center space-x-1">
+                      <AlertTriangle className="w-3 h-3 text-amber-700" />
+                      <span>Diminishing Returns</span>
+                    </span>
+                  </div>
                 </div>
                 <div className="text-[11px] text-slate-500 font-medium min-h-[34px] flex items-center mt-1">
                   What upgrades will NOT help much until the primary blocker is fixed?
@@ -891,15 +1139,20 @@ ${s.whatNeedsRealExperimentalEvidence}
             {/* Section 5: WHERE THE BLOCKER MOVES */}
             <div className="h-full p-5 sm:p-6 rounded-2xl bg-slate-50/80 border border-slate-200/90 border-t-4 border-t-indigo-500 flex flex-col justify-between space-y-3 shadow-xs hover:bg-slate-50 transition-colors">
               <div>
-                <div className="flex items-center justify-between min-h-[28px]">
+                <div className="flex items-center justify-between min-h-[28px] gap-2">
                   <h3 className="font-bold text-slate-900 text-sm flex items-center space-x-2">
                     <span className="w-2.5 h-2.5 rounded-full bg-indigo-600 shrink-0"></span>
                     <span>5. Where the Blocker Moves</span>
                   </h3>
-                  <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-indigo-100 text-indigo-800 border border-indigo-200 flex items-center space-x-1">
-                    <ArrowRight className="w-3 h-3" />
-                    <span>Next Frontier</span>
-                  </span>
+                  <div className="flex items-center space-x-1.5 flex-wrap gap-y-1 justify-end">
+                    <span className="text-[9.5px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-slate-200/80 text-slate-700 border border-slate-300">
+                      Pipeline Dynamics
+                    </span>
+                    <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-indigo-100 text-indigo-800 border border-indigo-200 flex items-center space-x-1">
+                      <ArrowRight className="w-3 h-3" />
+                      <span>Next Frontier</span>
+                    </span>
+                  </div>
                 </div>
                 <div className="text-[11px] text-slate-500 font-medium min-h-[34px] flex items-center mt-1">
                   What becomes the next bottleneck once you solve the current blocker?
@@ -913,15 +1166,20 @@ ${s.whatNeedsRealExperimentalEvidence}
             {/* Section 6: KEY UNKNOWNS & ASSUMPTIONS */}
             <div className="h-full p-5 sm:p-6 rounded-2xl bg-amber-50/50 border border-amber-200/90 border-t-4 border-t-amber-500 flex flex-col justify-between space-y-3 shadow-xs hover:bg-amber-50/70 transition-colors">
               <div>
-                <div className="flex items-center justify-between min-h-[28px]">
+                <div className="flex items-center justify-between min-h-[28px] gap-2">
                   <h3 className="font-bold text-amber-950 text-sm flex items-center space-x-2">
                     <span className="w-2.5 h-2.5 rounded-full bg-amber-600 shrink-0"></span>
                     <span>6. Key Unknowns & Assumptions</span>
                   </h3>
-                  <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-amber-200/70 text-amber-950 border border-amber-300 flex items-center space-x-1">
-                    <HelpCircle className="w-3 h-3 text-amber-800" />
-                    <span>Uncertainties</span>
-                  </span>
+                  <div className="flex items-center space-x-1.5 flex-wrap gap-y-1 justify-end">
+                    <span className="text-[9.5px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-amber-200/60 text-amber-950 border border-amber-300">
+                      Model Limitations
+                    </span>
+                    <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-amber-200/70 text-amber-950 border border-amber-300 flex items-center space-x-1">
+                      <HelpCircle className="w-3 h-3 text-amber-800" />
+                      <span>Uncertainties</span>
+                    </span>
+                  </div>
                 </div>
                 <div className="text-[11px] text-amber-800/80 font-medium min-h-[34px] flex items-center mt-1">
                   What biological, algorithmic, and hardware uncertainties remain?
@@ -935,15 +1193,20 @@ ${s.whatNeedsRealExperimentalEvidence}
             {/* Section 7: REAL-WORLD EXPERIMENTS NEEDED */}
             <div className="md:col-span-2 p-5 sm:p-6 rounded-2xl bg-slate-50/80 border border-slate-200/90 border-t-4 border-t-purple-500 flex flex-col justify-between space-y-3 shadow-xs hover:bg-slate-50 transition-colors">
               <div>
-                <div className="flex items-center justify-between min-h-[28px]">
+                <div className="flex items-center justify-between min-h-[28px] gap-2">
                   <h3 className="font-bold text-slate-900 text-sm flex items-center space-x-2">
                     <span className="w-2.5 h-2.5 rounded-full bg-purple-600 shrink-0"></span>
                     <span>7. Real-World Experiments Needed</span>
                   </h3>
-                  <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-purple-100 text-purple-800 border border-purple-200 flex items-center space-x-1">
-                    <FlaskConical className="w-3 h-3 text-purple-700" />
-                    <span>Empirical Validation</span>
-                  </span>
+                  <div className="flex items-center space-x-1.5 flex-wrap gap-y-1 justify-end">
+                    <span className="text-[9.5px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-slate-200/80 text-slate-700 border border-slate-300">
+                      Lab Verification
+                    </span>
+                    <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-purple-100 text-purple-800 border border-purple-200 flex items-center space-x-1">
+                      <FlaskConical className="w-3 h-3 text-purple-700" />
+                      <span>Empirical Validation</span>
+                    </span>
+                  </div>
                 </div>
                 <div className="text-[11px] text-slate-500 font-medium min-h-[28px] flex items-center mt-1">
                   What physical laboratory experiments and hardware benchmarks are required to prove this in reality?

@@ -2,6 +2,7 @@ import { describe, it, expect } from 'vitest';
 import {
   generateEli5,
   getLowImpactExplanation,
+  getFriendlyBottleneck,
   generateGroundedFallback,
   repairAndParseNemotronResponse,
   buildNemotronInputSchema,
@@ -133,5 +134,17 @@ Imaging Rate Per Instrument
     const parsedFallback = repairAndParseNemotronResponse(rawMarkdown);
     expect(parsedFallback.eli5).toBeDefined();
     expect(parsedFallback.eli5?.headline).toBeTruthy();
+  });
+
+  it('getFriendlyBottleneck formats all 8 bottleneck dimensions into friendly, non-raw labels', () => {
+    for (const dim of dimensions) {
+      const info = getFriendlyBottleneck(dim);
+      expect(info.label).toBeTruthy();
+      expect(info.label).not.toBe(dim); // Must NOT be raw enum like 'ECONOMIC_COST' or 'RECONSTRUCTION'
+      expect(info.analogy).toBeTruthy();
+      expect(info.shortDesc).toBeTruthy();
+    }
+    expect(getFriendlyBottleneck('ECONOMIC_COST').label).toBe('Financial Budget & Capital');
+    expect(getFriendlyBottleneck('RECONSTRUCTION').label).toBe('Neuron Reconstruction & Proofreading');
   });
 });

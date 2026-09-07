@@ -69,7 +69,7 @@ export const Header: React.FC<HeaderProps> = ({ onStartTutorial, onOneClickDemo 
                   <span className="font-extrabold text-slate-900 text-xs sm:text-sm tracking-tight group-hover:text-blue-600 transition-colors font-mono whitespace-nowrap">
                     Z-WBE BOTTLENECK LAB
                   </span>
-                  <span className="text-[10px] font-mono text-slate-500 font-semibold px-1.5 py-0.5 rounded-md bg-slate-100 border border-slate-200 hidden sm:inline shrink-0">
+                  <span className="text-[10px] font-mono text-slate-500 font-semibold px-1.5 py-0.5 rounded-md bg-slate-100 border border-slate-200 hidden xl:inline shrink-0">
                     v1.0
                   </span>
                 </div>
@@ -77,7 +77,7 @@ export const Header: React.FC<HeaderProps> = ({ onStartTutorial, onOneClickDemo 
             </div>
 
             {/* Segmented Navigation Links (Desktop lg+) - Centered in flex flow, ZERO overlap */}
-            <nav className="hidden lg:flex items-center space-x-1 bg-slate-100/90 p-1 rounded-xl border border-slate-200 shadow-inner mx-auto shrink-0">
+            <nav className="hidden lg:flex items-center space-x-0.5 xl:space-x-1 bg-slate-100/90 p-1 rounded-xl border border-slate-200 shadow-inner mx-auto shrink-0">
               {navItems.map((item) => {
                 const Icon = item.icon;
                 const isActive = item.path === '/' ? location.pathname === '/' : location.pathname.startsWith(item.path);
@@ -85,14 +85,23 @@ export const Header: React.FC<HeaderProps> = ({ onStartTutorial, onOneClickDemo 
                   <Link
                     key={item.path}
                     to={item.path}
-                    className={`flex items-center space-x-1.5 px-3.5 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap transition-all duration-150 ${
+                    className={`flex items-center space-x-1.5 px-2.5 xl:px-3.5 py-1 xl:py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap transition-all duration-150 ${
                       isActive
                         ? 'bg-white text-slate-900 shadow-sm border border-slate-200/90 font-bold scale-[1.02]'
                         : 'text-slate-600 hover:text-slate-900 hover:bg-white/70'
                     }`}
                   >
                     <Icon className={`w-3.5 h-3.5 shrink-0 ${isActive ? 'text-blue-600' : 'text-slate-400'}`} />
-                    <span>{item.label}</span>
+                    <span>
+                      {item.path === '/about' ? (
+                        <>
+                          <span className="xl:hidden">About</span>
+                          <span className="hidden xl:inline">About &amp; Contest</span>
+                        </>
+                      ) : (
+                        item.label
+                      )}
+                    </span>
                   </Link>
                 );
               })}
@@ -104,7 +113,7 @@ export const Header: React.FC<HeaderProps> = ({ onStartTutorial, onOneClickDemo 
               <button
                 onClick={handleOneClickDemo}
                 data-testid="header-one-click-demo-button"
-                className="hidden sm:flex items-center space-x-1.5 px-3.5 py-1.5 rounded-lg bg-gradient-to-r from-emerald-50 via-teal-50 to-emerald-100 hover:from-emerald-100 hover:to-teal-200 active:from-emerald-200 active:to-teal-300 text-emerald-900 border border-emerald-300 font-bold text-xs shadow-xs hover:shadow-sm transition-all cursor-pointer shrink-0 active:scale-95"
+                className="hidden xl:flex items-center space-x-1.5 px-3.5 py-1.5 rounded-lg bg-gradient-to-r from-emerald-50 via-teal-50 to-emerald-100 hover:from-emerald-100 hover:to-teal-200 active:from-emerald-200 active:to-teal-300 text-emerald-900 border border-emerald-300 font-bold text-xs shadow-xs hover:shadow-sm transition-all cursor-pointer shrink-0 active:scale-95"
                 title="Run 1-Click Hero Demo (100x Acceleration + Instant Grounded AI Explanation)"
               >
                 <Zap className="w-3.5 h-3.5 text-emerald-600 fill-emerald-600 shrink-0" />
@@ -114,7 +123,7 @@ export const Header: React.FC<HeaderProps> = ({ onStartTutorial, onOneClickDemo 
               {/* Guided Tour Walkthrough Button */}
               <button
                 onClick={handleStartTutorial}
-                className="hidden md:flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-gradient-to-b from-blue-50 to-blue-100 hover:from-blue-100 hover:to-blue-200 text-blue-900 border border-blue-200 font-bold text-xs shadow-xs hover:shadow-sm transition-all cursor-pointer shrink-0 active:scale-95"
+                className="hidden xl:flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-gradient-to-b from-blue-50 to-blue-100 hover:from-blue-100 hover:to-blue-200 text-blue-900 border border-blue-200 font-bold text-xs shadow-xs hover:shadow-sm transition-all cursor-pointer shrink-0 active:scale-95"
                 title="Start Interactive Guided Tour"
               >
                 <Compass className="w-3.5 h-3.5 text-blue-600 shrink-0" />
@@ -199,7 +208,7 @@ export const Header: React.FC<HeaderProps> = ({ onStartTutorial, onOneClickDemo 
       </div>
 
       {/* Mobile & Tablet Responsive Navigation Strip (<lg) - Natural page flow */}
-      <div className="flex lg:hidden items-center justify-start sm:justify-center border-b border-slate-200/70 bg-white/95 px-3 py-2 overflow-x-auto gap-1.5 shadow-xs">
+      <div className="flex lg:hidden items-center justify-start w-full max-w-full border-b border-slate-200/70 bg-white/95 px-3 py-2 overflow-x-auto gap-1.5 shadow-xs">
         <button
           onClick={() => setIsContestModalOpen(true)}
           className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-bold whitespace-nowrap shrink-0 bg-blue-50 text-blue-900 border border-blue-200 shadow-xs cursor-pointer"

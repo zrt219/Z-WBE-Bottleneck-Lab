@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { BottleneckResult } from '@z-wbe/shared';
+import { BottleneckResult, getFriendlyBottleneck } from '@z-wbe/shared';
 import { AlertTriangle, Sparkles, Loader2, ShieldCheck, ArrowUpRight, Info, Zap, Check } from 'lucide-react';
 import { Tooltip } from './Tooltip';
 import { BOTTLENECK_DIMENSION_TOOLTIPS } from '../data/tooltipData';
@@ -29,13 +29,13 @@ export const DominantBottleneckCard: React.FC<DominantBottleneckCardProps> = ({
   const isBioAcquisition = dominant === 'ACQUISITION' || dominant === 'RECONSTRUCTION';
 
   const formatBottleneckName = (dim: string) => {
-    return dim.replace('_', ' ');
+    return getFriendlyBottleneck(dim).label;
   };
 
   return (
     <div id="tour-bottleneck-card" className="h-full bg-white border border-slate-200/90 rounded-2xl p-5 sm:p-6 shadow-card flex flex-col justify-between space-y-4 sm:space-y-5">
       <div className="space-y-4">
-        <div className="flex items-center justify-between border-b border-slate-100 pb-3.5 min-h-[52px]">
+        <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 pb-3.5 min-h-[52px]">
           <div className="flex items-center space-x-2.5">
             <div className="w-8 h-8 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center shrink-0 shadow-xs">
               <AlertTriangle className="w-4 h-4 text-rose-600" />
@@ -48,7 +48,8 @@ export const DominantBottleneckCard: React.FC<DominantBottleneckCardProps> = ({
             </div>
           </div>
           <span className="text-[9px] font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-slate-100 text-slate-700 border border-slate-200 shrink-0 whitespace-nowrap shadow-xs">
-            CALCULATED FROM SCENARIO ASSUMPTIONS
+            <span className="hidden xl:inline">CALCULATED FROM SCENARIO ASSUMPTIONS</span>
+            <span className="xl:hidden">CALCULATED</span>
           </span>
         </div>
 
@@ -74,6 +75,12 @@ export const DominantBottleneckCard: React.FC<DominantBottleneckCardProps> = ({
               }`}
             >
               {dominantPressure.score > 999 ? '>999%' : `${dominantPressure.score.toFixed(1)}%`}
+            </span>
+          </div>
+
+          <div className="flex items-center space-x-2">
+            <span className="text-[10px] font-mono font-black uppercase tracking-wider px-2 py-0.5 rounded bg-slate-900 text-white shadow-2xs">
+              #1 DOMINANT CONSTRAINT
             </span>
           </div>
 
@@ -103,7 +110,12 @@ export const DominantBottleneckCard: React.FC<DominantBottleneckCardProps> = ({
         {/* Secondary Bottleneck & Separation Margin */}
         <div className="p-4 rounded-xl bg-slate-50/80 border border-slate-200/80 space-y-3 shadow-xs">
           <div className="flex flex-col xl:flex-row xl:items-center justify-between gap-1 text-xs">
-            <span className="font-medium text-slate-500 shrink-0">Secondary Bottleneck:</span>
+            <div className="flex items-center space-x-1.5">
+              <span className="text-[9.5px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-slate-200 text-slate-800">
+                #2 SECONDARY
+              </span>
+              <span className="font-medium text-slate-500 shrink-0">Constraint:</span>
+            </div>
             <Tooltip info={BOTTLENECK_DIMENSION_TOOLTIPS[second]}>
               <span className="font-bold text-slate-800 font-mono text-left xl:text-right cursor-help border-b border-dotted border-slate-300 hover:text-blue-600 transition-colors inline-flex items-center space-x-1">
                 <span>{formatBottleneckName(second)}</span>

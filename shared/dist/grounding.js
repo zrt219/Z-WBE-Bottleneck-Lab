@@ -2,6 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.buildGroundingRequest = exports.BOTTLENECK_INFO = exports.NEMOTRON_SYSTEM_PROMPT = exports.PROMPT_VERSION = void 0;
 exports.getFriendlyBottleneck = getFriendlyBottleneck;
+exports.sanitizeUserProse = sanitizeUserProse;
+exports.cleanScenarioProse = cleanScenarioProse;
 exports.generateEli5 = generateEli5;
 exports.getLowImpactExplanation = getLowImpactExplanation;
 exports.scenarioHash = scenarioHash;
@@ -21,7 +23,8 @@ RULES:
 5. Do not claim that human whole-brain emulation currently exists or that consciousness/identity transfer is demonstrated.
 6. EXPLAIN IN CLEAR, HUMAN-FRIENDLY PLAIN ENGLISH:
    - Use intuitive real-world analogies to make complex engineering concepts immediately understandable (e.g., explain memory bandwidth as "data highway congestion", power demand as "substation grid limits", microscope acquisition as "physical scanning camera speed", manual proofreading as "human error-correction backlog").
-   - Do NOT use robotic boilerplate or raw machine tags like "[CALCULATED FROM SCENARIO ASSUMPTIONS]". Write natural, engaging, professional scientific explanations.
+   - Do NOT use robotic boilerplate, duplicate parentheses, or raw machine tags like "[CALCULATED FROM SCENARIO ASSUMPTIONS]" or raw bracketed code enums like "[ACQUISITION]", "[MEMORY_BANDWIDTH]", "[STORAGE]". Refer to constraints using clean human labels (e.g., "Acquisition Throughput", "Memory Bandwidth", "Storage Capacity").
+   - Mention the scenario title cleanly once without duplicate parentheses or repeating the scale.
    - Explain why the dominant bottleneck is the active ceiling.
    - Clearly state which technological upgrade provides the biggest boost (highest leverage) and what secondary upgrades will NOT help until the main blocker is solved.
    - If the structured evidence cannot answer something, say: "This scenario does not establish that."
@@ -79,6 +82,11 @@ exports.BOTTLENECK_INFO = {
         analogy: 'Like copyediting an encyclopedia word-by-word by hand: human neuroscientists must manually verify and fix AI segmentation errors across billions of connections.',
         shortDesc: 'Human expert labor required to fix AI tracing errors is a major time sink.'
     },
+    RECONSTRUCTION: {
+        label: 'Neuron Reconstruction & Proofreading',
+        analogy: 'Like tracing billions of tangled wires and proofreading an encyclopedia by hand: AI segmentation computation and human proofreading hours create an enormous bottleneck.',
+        shortDesc: 'AI image segmentation and human proofreading hours exceed throughput limits.'
+    },
     AUTOMATED_RECONSTRUCTION: {
         label: 'AI 3D Neuron Reconstruction',
         analogy: 'Like asking AI to trace billions of tangled microscopic wires in a dark room: computer vision models require enormous GPU time to stitch 2D slices into 3D neurons.',
@@ -93,6 +101,11 @@ exports.BOTTLENECK_INFO = {
         label: 'Financial Budget & Capital',
         analogy: 'The financial cost of purchasing hardware, power, and microscope time exceeds viable scientific grant budgets.',
         shortDesc: 'Overall financial expense is prohibitive.'
+    },
+    ECONOMIC_COST: {
+        label: 'Financial Budget & Capital',
+        analogy: 'The financial cost of purchasing hardware, power, and microscope time exceeds viable scientific grant budgets.',
+        shortDesc: 'Overall financial expense is prohibitive.'
     }
 };
 /**
@@ -100,11 +113,57 @@ exports.BOTTLENECK_INFO = {
  */
 function getFriendlyBottleneck(key) {
     const normalized = key.toUpperCase().replace(/\s+/g, '_');
+    if (normalized === 'ECONOMIC_COST' && (exports.BOTTLENECK_INFO.ECONOMIC_COST || exports.BOTTLENECK_INFO.COST)) {
+        return exports.BOTTLENECK_INFO.ECONOMIC_COST || exports.BOTTLENECK_INFO.COST;
+    }
+    if (normalized === 'RECONSTRUCTION' && (exports.BOTTLENECK_INFO.RECONSTRUCTION || exports.BOTTLENECK_INFO.AUTOMATED_RECONSTRUCTION)) {
+        return exports.BOTTLENECK_INFO.RECONSTRUCTION || exports.BOTTLENECK_INFO.AUTOMATED_RECONSTRUCTION;
+    }
     return exports.BOTTLENECK_INFO[normalized] || {
         label: key,
         analogy: 'This technical constraint represents the primary limiting factor for this scenario.',
         shortDesc: 'Systemic capacity threshold reached.'
     };
+}
+/**
+ * Strips raw internal code enums like [ACQUISITION], [MEMORY_BANDWIDTH], [STORAGE]
+ * from user prose and replaces them with clean human-readable labels or removes them if redundant.
+ */
+function sanitizeUserProse(text) {
+    if (!text)
+        return '';
+    return text
+        // Replace bracketed enums preceded by human label (e.g. "Acquisition Throughput [ACQUISITION]") -> "Acquisition Throughput"
+        .replace(/([A-Za-z0-9\s&]+?)\s*\[([A-Z_]{3,30})\]/g, (_match, prefix, enumName) => {
+        const friendly = getFriendlyBottleneck(enumName);
+        if (friendly && prefix.trim().toLowerCase().includes(friendly.label.toLowerCase().slice(0, 5))) {
+            return prefix.trim();
+        }
+        return `${prefix.trim()} ${friendly ? friendly.label : enumName}`;
+    })
+        // Replace standalone bracketed enums like "[ACQUISITION]" -> "Acquisition Throughput"
+        .replace(/\[([A-Z_]{3,30})\]/g, (_match, enumName) => {
+        const friendly = getFriendlyBottleneck(enumName);
+        return friendly ? friendly.label : enumName;
+    })
+        // Clean up excessive whitespace
+        .replace(/[ \t]{2,}/g, ' ')
+        // Clean up empty parentheses
+        .replace(/\s*\(\s*\)/g, '')
+        .trim();
+}
+/**
+ * Removes duplicate or triplicate parenthesized scenario identifiers or scales.
+ * E.g., "In Mouse Circuit Scale (10 mm³ cortical column) (mouse-circuit) (Mouse Circuit (10 mm³)),"
+ * becomes "In Mouse Circuit Scale (10 mm³ cortical column),"
+ */
+function cleanScenarioProse(text) {
+    if (!text)
+        return '';
+    let cleaned = text;
+    // Match "In ScenarioTitle (...) (...)," and retain only the primary scenario title
+    cleaned = cleaned.replace(/In\s+([^,\n]+?)(?:\s*\((?:[a-z0-9_-]+|[A-Za-z0-9\s()³µ².-]+)\)){2,}\s*,/i, (_full, title) => `In ${title.trim()},`);
+    return cleaned;
 }
 /**
  * Tailored real-world ELI5 analogies for each dominant bottleneck dimension.
@@ -390,14 +449,16 @@ function generateGroundedFallback(request, status = 'unavailable', errorMessage)
         : dominantPressure >= 99
             ? `is operating at full capacity (**${dominantPressure.toFixed(1)}%** of allowable ceiling)`
             : `is operating as the primary ceiling at **${dominantPressure.toFixed(1)}%** load`;
-    const scenarioDisplayName = request.scenario
-        ? `${request.scenario} (${request.scenario_id})`
-        : request.scenario_id;
-    const summary = `In ${scenarioDisplayName} (${request.scale}), the primary technical blocker is ${dominantInfo.label} [${dominant}] (pressure: ${dominantPressure.toFixed(1)}%), followed by ${secondInfo.label} [${second}] (${secondPressure.toFixed(1)}%). Addressing ${highestLev} gives the greatest speedup.`;
+    // Clean scenario display name: print cleanly exactly once without duplicate parentheses or repeated IDs/scales
+    const cleanScenarioTitle = request.scenario || request.scale || request.scenario_id;
+    const summary = `In ${cleanScenarioTitle}, the primary technical blocker is ${dominantInfo.label} (pressure: ${dominantPressure.toFixed(1)}%), followed by ${secondInfo.label} (${secondPressure.toFixed(1)}%). Addressing ${highestLev} gives the greatest speedup.`;
     const whatLimits = `The primary barrier holding back this scenario is **${dominantInfo.label}** (\`${dominant}\`) with a constraint score of **${dominantPressure.toFixed(1)}%**.\n\n` +
         `💡 **What this means:** ${dominantInfo.analogy}\n\n` +
         `The next closest obstacle is **${secondInfo.label}** (\`${second}\`) at **${secondPressure.toFixed(1)}%**.`;
-    const why = `Under the current setup for **${scenarioDisplayName}**, the system pushes past maximum operational thresholds in **${dominantInfo.label}** (\`${dominant}\`):\n\n` +
+    const scenarioIdRef = request.scenario && request.scenario !== request.scenario_id
+        ? ` (\`${request.scenario_id}\`)`
+        : '';
+    const why = `Under the current setup for **${cleanScenarioTitle}**${scenarioIdRef}, the system pushes past maximum operational thresholds in **${dominantInfo.label}** (\`${dominant}\`):\n\n` +
         `• 🔬 **Microscope Imaging:** Requires **${formattedAcquisitionTime}** of continuous scanning time for this tissue volume.\n` +
         `• 💾 **Storage Demand:** Generates **${formattedRaw}** of raw image data (**${formattedCompressed}** compressed).\n` +
         `• ⚡ **Real-Time Simulation:** Demands **${formattedBandwidth}** memory transfer speed and **${formattedCompute}** of compute power.\n` +
@@ -539,13 +600,17 @@ function repairAndParseNemotronResponse(rawContent, modelIdentifier = 'nvidia/ne
             limitations: [],
             scientific_status: 'research'
         }, structured.highest_leverage_improvement);
-        const whatLimits = structured.dominant_bottleneck_explanation || structured.summary || 'See full report.';
-        const why = structured.why_it_matters || 'See full report.';
-        const whatImprovement = structured.highest_leverage_improvement || 'See sensitivity analysis.';
+        const rawSummary = structured.summary || structured.dominant_bottleneck_explanation || 'Simulation constrained by critical ceiling.';
+        const cleanSummary = cleanScenarioProse(sanitizeUserProse(rawSummary));
+        structured.summary = cleanSummary;
+        const rawWhatLimits = structured.dominant_bottleneck_explanation || structured.summary || 'See full report.';
+        const whatLimits = cleanScenarioProse(sanitizeUserProse(rawWhatLimits));
+        const why = cleanScenarioProse(sanitizeUserProse(structured.why_it_matters || 'See full report.'));
+        const whatImprovement = sanitizeUserProse(structured.highest_leverage_improvement || 'See sensitivity analysis.');
         const lowLev = Array.isArray(structured.low_leverage_improvements) && structured.low_leverage_improvements.length > 0
-            ? structured.low_leverage_improvements.map((item) => `• ${item}`).join('\n')
+            ? structured.low_leverage_improvements.map((item) => `• ${sanitizeUserProse(item)}`).join('\n')
             : 'All tested parameters demonstrate leverage in this scenario.';
-        const whereMoved = structured.bottleneck_transition || 'Bottleneck remains on primary constraint.';
+        const whereMoved = sanitizeUserProse(structured.bottleneck_transition || 'Bottleneck remains on primary constraint.');
         const uncertainties = Array.isArray(structured.uncertainties)
             ? structured.uncertainties.map((u) => `• ${u}`).join('\n')
             : String(structured.uncertainties || 'Theoretical scaling assumptions apply.');

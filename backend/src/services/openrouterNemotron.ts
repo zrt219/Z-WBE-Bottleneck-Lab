@@ -195,7 +195,7 @@ export async function explainScenarioWithNemotron(
       }
 
       // Parse output with server-side validation and 1 repair attempt
-      const parsed = repairAndParseNemotronResponse(content, modelSlug);
+      const parsed = repairAndParseNemotronResponse(content, modelSlug, request);
 
       // Store in deterministic cache
       if (hashKey) {

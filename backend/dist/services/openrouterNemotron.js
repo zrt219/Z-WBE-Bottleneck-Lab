@@ -142,7 +142,7 @@ async function explainScenarioWithNemotron(request, assumptions, metrics) {
                 break;
             }
             // Parse output with server-side validation and 1 repair attempt
-            const parsed = (0, shared_1.repairAndParseNemotronResponse)(content, modelSlug);
+            const parsed = (0, shared_1.repairAndParseNemotronResponse)(content, modelSlug, request);
             // Store in deterministic cache
             if (hashKey) {
                 interpretationCache.set(hashKey, {
