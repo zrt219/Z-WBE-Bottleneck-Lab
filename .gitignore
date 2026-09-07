@@ -1,0 +1,13 @@
+node_modules
+dist
+# Environment variables and secrets
+.env
+.env.local
+.env.*.local
+local.env
+*.env
+
+*.log
+.DS_Store
+nyc_taxi_data/
+

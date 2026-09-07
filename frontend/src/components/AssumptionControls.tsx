@@ -1,0 +1,588 @@
+import React, { useState } from 'react';
+import { ScenarioAssumptions } from '@z-wbe/shared';
+import { Sliders, Camera, Cpu, Database, DollarSign, Activity, Plus, Minus, Info } from 'lucide-react';
+
+interface AssumptionControlsProps {
+  assumptions: ScenarioAssumptions;
+  onChange: (updated: ScenarioAssumptions) => void;
+}
+
+type TabKey = 'acquisition' | 'reconstruction' | 'neuralModel' | 'hardware' | 'economics';
+
+export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumptions, onChange }) => {
+  const [activeTab, setActiveTab] = useState<TabKey>('acquisition');
+
+  const updateNested = <K extends keyof ScenarioAssumptions>(
+    category: K,
+    field: keyof ScenarioAssumptions[K],
+    value: number
+  ) => {
+    const updated = {
+      ...assumptions,
+      scaleId: 'custom' as const,
+      scaleLabel: assumptions.scaleLabel.includes('Custom')
+        ? assumptions.scaleLabel
+        : `${assumptions.scaleLabel} (Customized)`,
+      [category]: {
+        ...(assumptions[category] as object),
+        [field]: value
+      }
+    };
+    onChange(updated);
+  };
+
+  const tabs: Array<{ id: TabKey; label: string; shortLabel: string; icon: React.FC<{ className?: string }> }> = [
+    { id: 'acquisition', label: 'Acquisition', shortLabel: 'Acq', icon: Camera },
+    { id: 'reconstruction', label: 'Recon', shortLabel: 'Recon', icon: Database },
+    { id: 'neuralModel', label: 'Neural', shortLabel: 'Neural', icon: Activity },
+    { id: 'hardware', label: 'Hardware', shortLabel: 'HW', icon: Cpu },
+    { id: 'economics', label: 'Economics', shortLabel: 'Econ', icon: DollarSign }
+  ];
+
+  return (
+    <div className="bg-white border border-slate-200/90 rounded-2xl p-5 shadow-card space-y-4">
+      <div className="flex items-center justify-between border-b border-slate-100 pb-3">
+        <div className="flex items-center space-x-2">
+          <div className="w-7 h-7 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center">
+            <Sliders className="w-4 h-4" />
+          </div>
+          <div>
+            <h2 className="text-xs font-bold uppercase tracking-wider text-slate-900">
+              Scenario Assumptions
+            </h2>
+            <p className="text-[10px] text-slate-500 font-mono">Independent Variable Controls</p>
+          </div>
+        </div>
+        <span className="text-[10px] font-mono text-emerald-700 font-semibold bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200 flex items-center space-x-1 shadow-xs">
+          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span>Live Deterministic</span>
+        </span>
+      </div>
+
+      {/* Tabs */}
+      <div className="grid grid-cols-5 gap-1 bg-slate-100/80 p-1 rounded-xl border border-slate-200/80 shadow-inner">
+        {tabs.map((t) => {
+          const Icon = t.icon;
+          const isActive = activeTab === t.id;
+          return (
+            <button
+              key={t.id}
+              onClick={() => setActiveTab(t.id)}
+              className={`flex flex-col sm:flex-row items-center justify-center space-y-0.5 sm:space-y-0 sm:space-x-1.5 py-1.5 px-1 rounded-lg text-xs font-semibold transition-all duration-150 cursor-pointer ${
+                isActive
+                  ? 'bg-white text-blue-900 shadow-xs ring-1 ring-slate-200 font-bold'
+                  : 'text-slate-600 hover:text-slate-900 hover:bg-white/50'
+              }`}
+            >
+              <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-blue-600' : 'text-slate-400'}`} />
+              <span className="text-[11px] truncate hidden md:inline lg:hidden xl:inline">{t.label}</span>
+              <span className="text-[11px] truncate md:hidden lg:inline xl:hidden">{t.shortLabel}</span>
+            </button>
+          );
+        })}
+      </div>
+
+      {/* Tab Panels */}
+      <div className="space-y-3 text-xs pt-1">
+        {activeTab === 'acquisition' && (
+          <>
+            <ControlField
+              label="Tissue Volume"
+              unit="mm³"
+              description="Target anatomical biological tissue sample volume"
+              value={assumptions.acquisition.tissueVolumeMm3}
+              min={0.0001}
+              max={1500000}
+              step={assumptions.acquisition.tissueVolumeMm3 > 10 ? 1 : 0.001}
+              onChange={(v) => updateNested('acquisition', 'tissueVolumeMm3', v)}
+            />
+            <div className="grid grid-cols-3 gap-2">
+              <ControlField
+                label="Voxel X"
+                unit="nm"
+                compact
+                value={assumptions.acquisition.voxelResXNm}
+                min={2}
+                max={50}
+                step={1}
+                onChange={(v) => updateNested('acquisition', 'voxelResXNm', v)}
+              />
+              <ControlField
+                label="Voxel Y"
+                unit="nm"
+                compact
+                value={assumptions.acquisition.voxelResYNm}
+                min={2}
+                max={50}
+                step={1}
+                onChange={(v) => updateNested('acquisition', 'voxelResYNm', v)}
+              />
+              <ControlField
+                label="Voxel Z"
+                unit="nm"
+                compact
+                value={assumptions.acquisition.voxelResZNm}
+                min={2}
+                max={100}
+                step={1}
+                onChange={(v) => updateNested('acquisition', 'voxelResZNm', v)}
+              />
+            </div>
+            <div className="grid grid-cols-2 gap-2">
+              <ControlField
+                label="Bits Per Voxel"
+                unit="bits"
+                compact
+                value={assumptions.acquisition.bitsPerVoxel}
+                min={4}
+                max={16}
+                step={1}
+                onChange={(v) => updateNested('acquisition', 'bitsPerVoxel', v)}
+              />
+              <ControlField
+                label="Compression"
+                unit="x"
+                compact
+                value={assumptions.acquisition.compressionRatio}
+                min={1}
+                max={10}
+                step={0.1}
+                onChange={(v) => updateNested('acquisition', 'compressionRatio', v)}
+              />
+            </div>
+            <ControlField
+              label="Imaging Rate Per Machine"
+              unit="mm³/year"
+              description="Beam throughput rate per multi-beam electron microscope"
+              value={assumptions.acquisition.imagingRatePerMachineMm3Year}
+              min={0.01}
+              max={50}
+              step={0.05}
+              onChange={(v) => updateNested('acquisition', 'imagingRatePerMachineMm3Year', v)}
+            />
+            <div className="grid grid-cols-2 gap-2">
+              <ControlField
+                label="Instrument Count"
+                unit="units"
+                compact
+                value={assumptions.acquisition.machineCount}
+                min={1}
+                max={200}
+                step={1}
+                onChange={(v) => updateNested('acquisition', 'machineCount', v)}
+              />
+              <ControlField
+                label="Utilization Duty"
+                unit="fraction"
+                compact
+                value={assumptions.acquisition.utilization}
+                min={0.1}
+                max={1.0}
+                step={0.05}
+                onChange={(v) => updateNested('acquisition', 'utilization', v)}
+              />
+            </div>
+          </>
+        )}
+
+        {activeTab === 'reconstruction' && (
+          <>
+            <ControlField
+              label="Raw Segmentation Accuracy"
+              unit="fraction"
+              description="Automated AI volumetric segmentation accuracy before human review"
+              value={assumptions.reconstruction.rawSegmentationAccuracy}
+              min={0.8}
+              max={0.999}
+              step={0.001}
+              onChange={(v) => updateNested('reconstruction', 'rawSegmentationAccuracy', v)}
+            />
+            <ControlField
+              label="Proofreading Speedup"
+              unit="x"
+              description="Multiplier from automated assistive proofreading tools"
+              value={assumptions.reconstruction.proofreadingMultiplier}
+              min={1}
+              max={200}
+              step={1}
+              onChange={(v) => updateNested('reconstruction', 'proofreadingMultiplier', v)}
+            />
+            <ControlField
+              label="Automated Throughput"
+              unit="mm³/year"
+              description="AI segmentation cluster pipeline throughput"
+              value={assumptions.reconstruction.automatedThroughputMm3Year}
+              min={0.05}
+              max={50000}
+              step={1}
+              onChange={(v) => updateNested('reconstruction', 'automatedThroughputMm3Year', v)}
+            />
+            <ControlField
+              label="Manual Proofreading Burden"
+              unit="hrs/mm³"
+              description="Expert manual proofreading time required per mm³"
+              value={assumptions.reconstruction.manualProofreadingHoursPerMm3}
+              min={100}
+              max={100000}
+              step={100}
+              onChange={(v) => updateNested('reconstruction', 'manualProofreadingHoursPerMm3', v)}
+            />
+          </>
+        )}
+
+        {activeTab === 'neuralModel' && (
+          <>
+            <ControlField
+              label="Neuron Count"
+              unit="cells"
+              description="Total biologically modeled neurons"
+              value={assumptions.neuralModel.neuronCount}
+              min={100}
+              max={1e11}
+              step={1000}
+              onChange={(v) => updateNested('neuralModel', 'neuronCount', v)}
+            />
+            <ControlField
+              label="Synapse Count"
+              unit="synapses"
+              description="Total synaptic junctions"
+              value={assumptions.neuralModel.synapseCount}
+              min={1000}
+              max={2e14}
+              step={10000}
+              onChange={(v) => updateNested('neuralModel', 'synapseCount', v)}
+            />
+            <ControlField
+              label="Average Firing Rate"
+              unit="Hz"
+              description="Mean action potential firing frequency"
+              value={assumptions.neuralModel.averageFiringRateHz}
+              min={0.5}
+              max={50}
+              step={0.5}
+              onChange={(v) => updateNested('neuralModel', 'averageFiringRateHz', v)}
+            />
+            <div className="grid grid-cols-2 gap-2">
+              <ControlField
+                label="State Per Neuron"
+                unit="bytes"
+                compact
+                value={assumptions.neuralModel.bytesPerNeuron}
+                min={64}
+                max={16384}
+                step={64}
+                onChange={(v) => updateNested('neuralModel', 'bytesPerNeuron', v)}
+              />
+              <ControlField
+                label="State Per Synapse"
+                unit="bytes"
+                compact
+                value={assumptions.neuralModel.bytesPerSynapse}
+                min={4}
+                max={256}
+                step={4}
+                onChange={(v) => updateNested('neuralModel', 'bytesPerSynapse', v)}
+              />
+            </div>
+            <div className="grid grid-cols-2 gap-2">
+              <ControlField
+                label="Ops / Neuron Update"
+                unit="FLOP"
+                compact
+                value={assumptions.neuralModel.computeOpsPerNeuronUpdate}
+                min={50}
+                max={5000}
+                step={50}
+                onChange={(v) => updateNested('neuralModel', 'computeOpsPerNeuronUpdate', v)}
+              />
+              <ControlField
+                label="Ops / Synapse Event"
+                unit="FLOP"
+                compact
+                value={assumptions.neuralModel.computeOpsPerSynapticEvent}
+                min={10}
+                max={500}
+                step={5}
+                onChange={(v) => updateNested('neuralModel', 'computeOpsPerSynapticEvent', v)}
+              />
+            </div>
+            <ControlField
+              label="Simulation Step Rate"
+              unit="Hz"
+              description="Numerical integration step frequency"
+              value={assumptions.neuralModel.neuronUpdateRateHz}
+              min={100}
+              max={10000}
+              step={100}
+              onChange={(v) => updateNested('neuralModel', 'neuronUpdateRateHz', v)}
+            />
+          </>
+        )}
+
+        {activeTab === 'hardware' && (
+          <>
+            <ControlField
+              label="Compute Throughput"
+              unit="PFLOPS"
+              description="Dedicated compute cluster throughput capacity"
+              value={assumptions.hardware.computeThroughputPflops}
+              min={0.001}
+              max={2000}
+              step={0.1}
+              onChange={(v) => updateNested('hardware', 'computeThroughputPflops', v)}
+            />
+            <ControlField
+              label="Memory Bandwidth"
+              unit="TB/s"
+              description="Aggregate high-bandwidth memory (HBM) bandwidth"
+              value={assumptions.hardware.memoryBandwidthTbS}
+              min={0.05}
+              max={50000}
+              step={1}
+              onChange={(v) => updateNested('hardware', 'memoryBandwidthTbS', v)}
+            />
+            <ControlField
+              label="Interconnect Bandwidth"
+              unit="TB/s"
+              description="Cluster fabric interconnect bisection bandwidth"
+              value={assumptions.hardware.interconnectBandwidthTbS}
+              min={0.01}
+              max={20000}
+              step={1}
+              onChange={(v) => updateNested('hardware', 'interconnectBandwidthTbS', v)}
+            />
+            <ControlField
+              label="Storage Capacity"
+              unit="PB"
+              description="Hot Tier-1 storage capacity"
+              value={assumptions.hardware.storageCapacityPb}
+              min={0.01}
+              max={50000}
+              step={1}
+              onChange={(v) => updateNested('hardware', 'storageCapacityPb', v)}
+            />
+            <ControlField
+              label="Power Budget"
+              unit="MW"
+              description="Facility power and cooling ceiling"
+              value={assumptions.hardware.powerBudgetMw}
+              min={0.001}
+              max={200}
+              step={0.1}
+              onChange={(v) => updateNested('hardware', 'powerBudgetMw', v)}
+            />
+          </>
+        )}
+
+        {activeTab === 'economics' && (
+          <>
+            <ControlField
+              label="Imaging Instrument Cost / Yr"
+              unit="$/yr"
+              description="Amortized cost + maintenance per EM instrument"
+              value={assumptions.economics.imagingInstrumentCostPerYear}
+              min={50000}
+              max={2000000}
+              step={25000}
+              onChange={(v) => updateNested('economics', 'imagingInstrumentCostPerYear', v)}
+            />
+            <ControlField
+              label="Storage Cost / TB / Yr"
+              unit="$/TB/yr"
+              description="Annual high-durability storage cost"
+              value={assumptions.economics.storageCostPerTbYear}
+              min={2}
+              max={100}
+              step={1}
+              onChange={(v) => updateNested('economics', 'storageCostPerTbYear', v)}
+            />
+            <ControlField
+              label="Compute Cost / PFLOP / Yr"
+              unit="$/PFLOP/yr"
+              description="Amortized GPU cluster compute cost"
+              value={assumptions.economics.computeCostPerPflopYear}
+              min={10000}
+              max={500000}
+              step={5000}
+              onChange={(v) => updateNested('economics', 'computeCostPerPflopYear', v)}
+            />
+            <ControlField
+              label="Energy Cost / MWh"
+              unit="$/MWh"
+              description="Facility electricity unit tariff"
+              value={assumptions.economics.energyCostPerMwh}
+              min={40}
+              max={400}
+              step={5}
+              onChange={(v) => updateNested('economics', 'energyCostPerMwh', v)}
+            />
+            <ControlField
+              label="Human Proofreading Rate"
+              unit="$/hr"
+              description="Loaded labor cost per manual proofreader hour"
+              value={assumptions.economics.humanProofreadingHourlyRate}
+              min={15}
+              max={150}
+              step={5}
+              onChange={(v) => updateNested('economics', 'humanProofreadingHourlyRate', v)}
+            />
+            <div className="grid grid-cols-2 gap-2">
+              <ControlField
+                label="Target Timeline"
+                unit="years"
+                compact
+                value={assumptions.economics.targetTimelineYears}
+                min={0.1}
+                max={10}
+                step={0.1}
+                onChange={(v) => updateNested('economics', 'targetTimelineYears', v)}
+              />
+              <ControlField
+                label="Budget Ceiling"
+                unit="USD"
+                compact
+                value={assumptions.economics.budgetCeilingUsd}
+                min={100000}
+                max={2000000000}
+                step={100000}
+                onChange={(v) => updateNested('economics', 'budgetCeilingUsd', v)}
+              />
+            </div>
+          </>
+        )}
+      </div>
+    </div>
+  );
+};
+
+interface ControlFieldProps {
+  label: string;
+  unit: string;
+  description?: string;
+  value: number;
+  min: number;
+  max: number;
+  step: number;
+  compact?: boolean;
+  onChange: (val: number) => void;
+}
+
+const ControlField: React.FC<ControlFieldProps> = ({
+  label,
+  unit,
+  description,
+  value,
+  min,
+  max,
+  step,
+  compact = false,
+  onChange
+}) => {
+  const handleStep = (direction: 'up' | 'down') => {
+    let nextVal = direction === 'up' ? value + step : value - step;
+    if (nextVal < min) nextVal = min;
+    if (nextVal > max) nextVal = max;
+    // Round to avoid float precision issues
+    const decimals = step.toString().split('.')[1]?.length || 0;
+    onChange(Number(nextVal.toFixed(decimals)));
+  };
+
+  const formatDisplay = (val: number) => {
+    if (val >= 1e9) return (val / 1e9).toLocaleString(undefined, { maximumFractionDigits: 2 }) + 'B';
+    if (val >= 1e6) return (val / 1e6).toLocaleString(undefined, { maximumFractionDigits: 2 }) + 'M';
+    if (val > 1000) return val.toLocaleString();
+    if (val < 0.01) return val.toFixed(4);
+    if (val < 1) return val.toFixed(3);
+    return val.toString();
+  };
+
+  if (compact) {
+    return (
+      <div className="p-2.5 rounded-xl bg-slate-50/70 border border-slate-200/80 hover:border-slate-300/90 transition-all duration-150 space-y-1.5 shadow-xs hover:bg-slate-50/90 overflow-hidden">
+        <div className="flex items-center justify-between">
+          <span className="font-bold text-slate-800 text-[11px] truncate" title={label}>{label}</span>
+          {description && (
+            <span title={description} className="text-slate-400 hover:text-slate-600 cursor-help shrink-0">
+              <Info className="w-3 h-3" />
+            </span>
+          )}
+        </div>
+        <div className="flex items-center justify-between gap-1">
+          <button
+            onClick={() => handleStep('down')}
+            className="w-5 h-5 rounded-md bg-white hover:bg-slate-100 active:bg-slate-200 border border-slate-200 text-slate-600 flex items-center justify-center text-[10px] cursor-pointer shadow-xs transition-colors shrink-0"
+            title="Step down"
+          >
+            <Minus className="w-2.5 h-2.5" />
+          </button>
+          <div className="flex-1 min-w-0 flex items-center justify-center space-x-0.5 font-mono text-[10.5px] font-bold text-slate-900 bg-white py-0.5 px-1 rounded-md border border-slate-200 shadow-xs">
+            <span className="truncate">{formatDisplay(value)}</span>
+            <span className="text-[8.5px] font-semibold text-slate-400 shrink-0">{unit}</span>
+          </div>
+          <button
+            onClick={() => handleStep('up')}
+            className="w-5 h-5 rounded-md bg-white hover:bg-slate-100 active:bg-slate-200 border border-slate-200 text-slate-600 flex items-center justify-center text-[10px] cursor-pointer shadow-xs transition-colors shrink-0"
+            title="Step up"
+          >
+            <Plus className="w-2.5 h-2.5" />
+          </button>
+        </div>
+        <input
+          type="range"
+          min={min}
+          max={max}
+          step={step}
+          value={value}
+          onChange={(e) => onChange(parseFloat(e.target.value))}
+          className="w-full cursor-pointer mt-0.5"
+        />
+      </div>
+    );
+  }
+
+  return (
+    <div className="p-3 rounded-xl bg-slate-50/70 border border-slate-200/80 hover:border-slate-300/90 transition-all duration-150 space-y-2 shadow-xs hover:bg-slate-50/90">
+      <div className="flex items-center justify-between">
+        <div className="flex items-center space-x-1.5">
+          <span className="font-bold text-slate-800 text-[11px]">{label}</span>
+          {description && (
+            <span title={description} className="text-slate-400 hover:text-slate-600 cursor-help">
+              <Info className="w-3.5 h-3.5" />
+            </span>
+          )}
+        </div>
+        <div className="flex items-center space-x-1.5 shrink-0">
+          <button
+            onClick={() => handleStep('down')}
+            className="w-5 h-5 rounded-md bg-white hover:bg-slate-100 active:bg-slate-200 border border-slate-200 text-slate-600 flex items-center justify-center text-[10px] cursor-pointer shadow-xs transition-colors"
+            title="Step down"
+          >
+            <Minus className="w-3 h-3" />
+          </button>
+          <div className="flex items-center space-x-1 font-mono text-[11px] font-bold text-slate-900 bg-white px-2.5 py-0.5 rounded-md border border-slate-200 shadow-xs min-w-[70px] justify-center">
+            <span>{formatDisplay(value)}</span>
+            <span className="text-[9px] font-semibold text-slate-400">{unit}</span>
+          </div>
+          <button
+            onClick={() => handleStep('up')}
+            className="w-5 h-5 rounded-md bg-white hover:bg-slate-100 active:bg-slate-200 border border-slate-200 text-slate-600 flex items-center justify-center text-[10px] cursor-pointer shadow-xs transition-colors"
+            title="Step up"
+          >
+            <Plus className="w-3 h-3" />
+          </button>
+        </div>
+      </div>
+      <input
+        type="range"
+        min={min}
+        max={max}
+        step={step}
+        value={value}
+        onChange={(e) => onChange(parseFloat(e.target.value))}
+        className="w-full cursor-pointer"
+      />
+    </div>
+  );
+};
+
+

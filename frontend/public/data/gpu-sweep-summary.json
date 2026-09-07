@@ -1,0 +1,67 @@
+{
+  "generatedAt": "2026-09-07T08:16:00Z",
+  "sweepCombinationsCount": 100000,
+  "benchmark": {
+    "runtimeCpuSeconds": 0.043,
+    "runtimeGpuSeconds": null,
+    "speedup": null,
+    "status": "GPU_BENCHMARK_NOT_EXECUTED",
+    "deviceInfo": "Standard CPU Host (GPU not available)",
+    "backendUsed": "CPU Vectorized Pandas"
+  },
+  "bottleneckFrequencies": {
+    "ACQUISITION": 27335,
+    "RECONSTRUCTION": 18833,
+    "STORAGE": 10719,
+    "COMPUTE": 2,
+    "MEMORY_BANDWIDTH": 14092,
+    "INTERCONNECT": 16,
+    "POWER": 1750,
+    "ECONOMIC_COST": 27253
+  },
+  "correlations": [
+    {
+      "parameter": "imagingRatePerMachineMm3Year",
+      "dominantBottleneckAssociation": "ACQUISITION",
+      "correlationCoefficient": -0.174
+    },
+    {
+      "parameter": "memoryBandwidthTbS",
+      "dominantBottleneckAssociation": "MEMORY_BANDWIDTH",
+      "correlationCoefficient": -0.32
+    },
+    {
+      "parameter": "computeThroughputPflops",
+      "dominantBottleneckAssociation": "COMPUTE",
+      "correlationCoefficient": -0.268
+    },
+    {
+      "parameter": "budgetCeilingUsd",
+      "dominantBottleneckAssociation": "ECONOMIC_COST",
+      "correlationCoefficient": -0.275
+    }
+  ],
+  "transitionRegions": [
+    {
+      "parameter": "imagingRatePerMachineMm3Year",
+      "fromBottleneck": "ACQUISITION",
+      "toBottleneck": "MEMORY_BANDWIDTH",
+      "thresholdValue": "> 2.8 mm\u00b3/year",
+      "description": "When multi-beam acquisition rates exceed 2.8 mm\u00b3/yr per instrument, scanning latency drops below 1 year, shifting the primary bottleneck to continuous memory bus saturation."
+    },
+    {
+      "parameter": "rawSegmentationAccuracy",
+      "fromBottleneck": "RECONSTRUCTION",
+      "toBottleneck": "STORAGE",
+      "thresholdValue": "> 0.992",
+      "description": "Proofreading automation with accuracy above 99.2% mitigates human labor bottlenecks, rendering petabyte-scale image repository storage the limiting budget factor."
+    },
+    {
+      "parameter": "memoryBandwidthTbS",
+      "fromBottleneck": "MEMORY_BANDWIDTH",
+      "toBottleneck": "POWER",
+      "thresholdValue": "> 150 TB/s",
+      "description": "High memory bandwidth configurations shift the constraint from bus starvation to total thermal electrical power consumption at datacenter scale."
+    }
+  ]
+}

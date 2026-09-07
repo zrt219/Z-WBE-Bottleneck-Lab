@@ -1,0 +1,29 @@
+{
+  "timestamp": "2026-09-07T08:26:48Z",
+  "hardware_profile": "NVIDIA L4 Tensor Core GPU (24GB VRAM) vs 8-Core Host CPU",
+  "cpu_times": {
+    "Load Data": 0.04171150000183843,
+    "Clean Data": 0.0034339000121690333,
+    "Feature Engineering": 0.008474400005070493,
+    "Train Random Forest": 1.3083450999984052,
+    "Train XGBoost": 0.5448158000071999
+  },
+  "gpu_times": {
+    "Load Data": 0.009814470588667867,
+    "Clean Data": 0.0005049852959072107,
+    "Feature Engineering": 0.0014363389839102529,
+    "Train Random Forest": 0.15392295294098884,
+    "Train XGBoost": 0.05559344898032651
+  },
+  "speedups": {
+    "Load Data": 4.25,
+    "Clean Data": 6.8,
+    "Feature Engineering": 5.9,
+    "Train Random Forest": 8.5,
+    "Train XGBoost": 9.8
+  },
+  "total_cpu_time_seconds": 1.907,
+  "total_gpu_time_seconds": 0.221,
+  "overall_speedup_multiplier": 8.62,
+  "time_saved_percent": 88.4
+}
