@@ -5,6 +5,14 @@ import {
   PressuresMap,
   ScenarioAssumptions
 } from './types';
+import {
+  formatBytes,
+  formatComputeFlops,
+  formatPowerDemand,
+  formatBandwidth,
+  formatAcquisitionDuration,
+  formatCurrency
+} from './equations';
 
 /**
  * Bottleneck Engine:
@@ -101,9 +109,9 @@ export function calculateBottlenecks(
     ACQUISITION: {
       score: Number(acquisitionScore.toFixed(2)),
       rawRatio: Number(acquisitionRatio.toFixed(3)),
-      demandFormatted: `${metrics.acquisitionTimeYears.toFixed(2)} yrs (${Math.round(metrics.acquisitionTimeDays)} d)`,
+      demandFormatted: formatAcquisitionDuration(metrics.acquisitionTimeYears, metrics.acquisitionTimeDays),
       capacityFormatted: `${targetYears.toFixed(1)} yr target`,
-      summary: `Takes ${metrics.acquisitionTimeYears.toFixed(2)} years across ${acquisition.machineCount} instruments.`
+      summary: `Takes ${metrics.acquisitionTimeYears >= 1 ? `${metrics.acquisitionTimeYears.toFixed(2)} years` : formatAcquisitionDuration(metrics.acquisitionTimeYears, metrics.acquisitionTimeDays)} across ${acquisition.machineCount} instruments.`
     },
     RECONSTRUCTION: {
       score: Number(reconScore.toFixed(2)),
@@ -122,37 +130,37 @@ export function calculateBottlenecks(
     COMPUTE: {
       score: Number(computeScore.toFixed(2)),
       rawRatio: Number(computeRatio.toFixed(3)),
-      demandFormatted: `${metrics.computeDemandPflops.toFixed(3)} PFLOPS`,
-      capacityFormatted: `${computePflops.toFixed(1)} PFLOPS`,
-      summary: `Real-time emulation demand is ${metrics.computeDemandPflops.toFixed(3)} PFLOPS.`
+      demandFormatted: formatComputeFlops(metrics.computeDemandFlops),
+      capacityFormatted: formatComputeFlops(computePflops * 1e15),
+      summary: `Real-time emulation demand is ${formatComputeFlops(metrics.computeDemandFlops)}.`
     },
     MEMORY_BANDWIDTH: {
       score: Number(memoryScore.toFixed(2)),
       rawRatio: Number(memoryRatio.toFixed(3)),
-      demandFormatted: `${metrics.memoryTrafficTbS.toFixed(2)} TB/s`,
-      capacityFormatted: `${memoryBandwidth.toFixed(1)} TB/s`,
-      summary: `Continuous state transfer requires ${metrics.memoryTrafficTbS.toFixed(2)} TB/s.`
+      demandFormatted: formatBandwidth(metrics.memoryTrafficTbS),
+      capacityFormatted: formatBandwidth(memoryBandwidth),
+      summary: `Continuous state transfer requires ${formatBandwidth(metrics.memoryTrafficTbS)}.`
     },
     INTERCONNECT: {
       score: Number(interconnectScore.toFixed(2)),
       rawRatio: Number(interconnectRatio.toFixed(3)),
-      demandFormatted: `${metrics.interconnectTrafficTbS.toFixed(2)} TB/s`,
-      capacityFormatted: `${(hardware.interconnectBandwidthTbS ?? 2).toFixed(1)} TB/s`,
-      summary: `Cross-node synchronization traffic is ${metrics.interconnectTrafficTbS.toFixed(2)} TB/s.`
+      demandFormatted: formatBandwidth(metrics.interconnectTrafficTbS),
+      capacityFormatted: formatBandwidth(hardware.interconnectBandwidthTbS ?? 2),
+      summary: `Cross-node synchronization traffic is ${formatBandwidth(metrics.interconnectTrafficTbS)}.`
     },
     POWER: {
       score: Number(powerScore.toFixed(2)),
       rawRatio: Number(powerRatio.toFixed(3)),
-      demandFormatted: `${metrics.totalPowerDemandMw.toFixed(3)} MW`,
-      capacityFormatted: `${(hardware.powerBudgetMw ?? 10).toFixed(1)} MW`,
-      summary: `System compute & network power reaches ${metrics.totalPowerDemandMw.toFixed(3)} MW.`
+      demandFormatted: formatPowerDemand(metrics.totalPowerDemandMw),
+      capacityFormatted: formatPowerDemand(hardware.powerBudgetMw ?? 10),
+      summary: `System compute & network power reaches ${formatPowerDemand(metrics.totalPowerDemandMw)}.`
     },
     ECONOMIC_COST: {
       score: Number(costScore.toFixed(2)),
       rawRatio: Number(costRatio.toFixed(3)),
-      demandFormatted: `$${formatNumber(metrics.totalEstimatedCostUsd)}`,
-      capacityFormatted: `$${formatNumber(economics.budgetCeilingUsd)} budget`,
-      summary: `Total pipeline financial cost is estimated at $${formatNumber(metrics.totalEstimatedCostUsd)}.`
+      demandFormatted: formatCurrency(metrics.totalEstimatedCostUsd),
+      capacityFormatted: `${formatCurrency(economics.budgetCeilingUsd)} budget`,
+      summary: `Total pipeline financial cost is estimated at ${formatCurrency(metrics.totalEstimatedCostUsd)}.`
     }
   };
 

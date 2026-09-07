@@ -42,7 +42,7 @@ export const DominantBottleneckCard: React.FC<DominantBottleneckCardProps> = ({
             </div>
           </div>
           <span className="text-[9px] font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-slate-100 text-slate-700 border border-slate-200 shrink-0 whitespace-nowrap">
-            DETERMINISTIC
+            CALCULATED FROM SCENARIO ASSUMPTIONS
           </span>
         </div>
 

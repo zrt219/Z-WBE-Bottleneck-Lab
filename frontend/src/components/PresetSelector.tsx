@@ -37,13 +37,13 @@ export const PresetSelector: React.FC<PresetSelectorProps> = ({
     {
       id: 'small-neural-system',
       label: 'Small Neural System',
-      description: '10k neurons / 1M synapses',
+      description: '302 neurons / 7.5k synapses',
       preset: PRESET_SMALL_NEURAL_SYSTEM
     },
     {
       id: 'drosophila',
       label: 'Drosophila-Scale',
-      description: '135k neurons / 50M synapses',
+      description: '140k neurons / 50M synapses',
       preset: PRESET_DROSOPHILA
     },
     {
@@ -55,9 +55,9 @@ export const PresetSelector: React.FC<PresetSelectorProps> = ({
     {
       id: 'human-scale',
       label: 'Human-Scale Estimate',
-      description: '86B neurons / 100T synapses',
+      description: '86B neurons / 150T synapses',
       preset: PRESET_HUMAN_SCALE,
-      warning: 'HYPOTHETICAL BENCHMARK'
+      warning: 'ESTIMATE / HYPOTHETICAL SCALE'
     },
     {
       id: 'custom',
@@ -99,7 +99,7 @@ export const PresetSelector: React.FC<PresetSelectorProps> = ({
     (preset.scaleId === 'custom' && currentAssumptions.scaleId === 'custom');
 
   return (
-    <div className="bg-white border border-slate-200/90 rounded-2xl p-5 sm:p-6 shadow-card space-y-6">
+    <div id="tour-preset-selector" className="bg-white border border-slate-200/90 rounded-2xl p-5 sm:p-6 shadow-card space-y-6">
       {/* Human Scale Warning Banner (Never display HUMAN WBE ACHIEVED!) */}
       {currentAssumptions.isHypotheticalHumanScale && (
         <div className="bg-amber-50/90 border border-amber-300/80 p-4 rounded-xl flex items-center justify-between shadow-xs">
@@ -243,7 +243,7 @@ export const PresetSelector: React.FC<PresetSelectorProps> = ({
         </div>
 
         {/* Hero Demo Question: Editorial Whitespace with subtle blue/indigo wash */}
-        <div className="relative overflow-hidden bg-gradient-to-br from-blue-50/70 via-indigo-50/40 to-sky-50/60 rounded-2xl p-5 sm:p-6 border border-blue-200/90 shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-5">
+        <div id="tour-hero-demo" className="relative overflow-hidden bg-gradient-to-br from-blue-50/70 via-indigo-50/40 to-sky-50/60 rounded-2xl p-5 sm:p-6 border border-blue-200/90 shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-5">
           <div className="space-y-1.5 relative z-10">
             <div className="flex items-center space-x-2">
               <span className="inline-flex items-center space-x-1.5 text-[10px] font-mono uppercase tracking-wider text-blue-800 font-extrabold bg-blue-100/90 px-2.5 py-0.5 rounded-full border border-blue-300 shadow-xs">

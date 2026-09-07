@@ -300,3 +300,56 @@ export function calculateAllMetrics(assumptions: ScenarioAssumptions): Calculate
     totalEstimatedCostUsd
   };
 }
+
+/**
+ * Dynamic scientific formatters that prevent underflow/overflow artifacts (e.g. 0.00 PFLOPS, 0.00 MW, 0 days).
+ */
+export function formatBytes(bytes: number): string {
+  if (!isFinite(bytes) || bytes <= 0) return '0 B';
+  const units = ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB'];
+  const i = Math.floor(Math.log(bytes) / Math.log(1024));
+  const clampedI = Math.min(units.length - 1, Math.max(0, i));
+  return `${(bytes / Math.pow(1024, clampedI)).toFixed(2)} ${units[clampedI]}`;
+}
+
+export function formatComputeFlops(flops: number): string {
+  if (!isFinite(flops) || flops <= 0) return '0 FLOPS';
+  if (flops >= 1e18) return `${(flops / 1e18).toFixed(2)} EFLOPS`;
+  if (flops >= 1e15) return `${(flops / 1e15).toFixed(2)} PFLOPS`;
+  if (flops >= 1e12) return `${(flops / 1e12).toFixed(2)} TFLOPS`;
+  if (flops >= 1e9) return `${(flops / 1e9).toFixed(2)} GFLOPS`;
+  if (flops >= 1e6) return `${(flops / 1e6).toFixed(2)} MFLOPS`;
+  if (flops >= 1e3) return `${(flops / 1e3).toFixed(1)} kFLOPS`;
+  return `${flops.toFixed(0)} FLOPS`;
+}
+
+export function formatPowerDemand(mw: number): string {
+  if (!isFinite(mw) || mw <= 0) return '0 W';
+  if (mw >= 1.0) return `${mw.toFixed(2)} MW`;
+  if (mw >= 0.001) return `${(mw * 1000).toFixed(1)} kW`;
+  return `${(mw * 1e6).toFixed(1)} W`;
+}
+
+export function formatBandwidth(tbS: number): string {
+  if (!isFinite(tbS) || tbS <= 0) return '0 B/s';
+  if (tbS >= 1.0) return `${tbS.toFixed(2)} TB/s`;
+  if (tbS >= 0.001) return `${(tbS * 1000).toFixed(1)} GB/s`;
+  return `${(tbS * 1e6).toFixed(1)} MB/s`;
+}
+
+export function formatAcquisitionDuration(years: number, days: number): string {
+  if (!isFinite(years) || years <= 0) return '0 hrs';
+  if (years >= 1.0) return `${years.toFixed(2)} yrs (${Math.round(days).toLocaleString()} d)`;
+  if (days >= 1.0) return `${days.toFixed(1)} days (${(days * 24).toFixed(0)} hrs)`;
+  const hours = days * 24;
+  if (hours >= 1.0) return `${hours.toFixed(1)} hrs`;
+  return `${(hours * 60).toFixed(0)} mins`;
+}
+
+export function formatCurrency(amount: number): string {
+  if (!isFinite(amount) || amount <= 0) return '$0';
+  if (amount >= 1e9) return `$${(amount / 1e9).toFixed(2)}B`;
+  if (amount >= 1e6) return `$${(amount / 1e6).toFixed(2)}M`;
+  if (amount >= 1e3) return `$${(amount / 1e3).toFixed(1)}k`;
+  return `$${amount.toFixed(0)}`;
+}

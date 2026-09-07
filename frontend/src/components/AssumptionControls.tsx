@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { ScenarioAssumptions } from '@z-wbe/shared';
 import { Sliders, Camera, Cpu, Database, DollarSign, Activity, Plus, Minus, Info } from 'lucide-react';
+import { Tooltip } from './Tooltip';
+import { ASSUMPTION_TOOLTIPS } from '../data/tooltipData';
 
 interface AssumptionControlsProps {
   assumptions: ScenarioAssumptions;

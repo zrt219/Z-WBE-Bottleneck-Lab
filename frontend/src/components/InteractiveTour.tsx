@@ -44,7 +44,7 @@ const TOUR_STEPS: TourStep[] = [
     title: 'Biological Scale Presets',
     badge: 'Step 2 of 6 • Orders of Magnitude',
     description:
-      'Start by selecting an organism preset. Observe how complexity explodes across orders of magnitude: from C. elegans (302 neurons, 0.0001 mm³) to Drosophila (130k neurons, 0.15 mm³), Mouse (70M neurons, 10 mm³), up to Human (86B neurons, 1,300,000 mm³).',
+      'Start by selecting an organism preset. Observe how complexity explodes across orders of magnitude: from C. elegans (302 neurons, 0.0005 mm³) to Drosophila (140k neurons, 0.15 mm³), Mouse Circuit (10M neurons, 10 mm³), up to Human (86B neurons, 1,200,000 mm³).',
     takeaway: 'Notice how data volumes scale cubically while synaptic routing scales with network graph density.'
   },
   {
