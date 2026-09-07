@@ -6,7 +6,7 @@
 [![NVIDIA Nemotron 3 Super](https://img.shields.io/badge/NVIDIA-Nemotron%203%20Super%20120B-76B900?logo=nvidia&logoColor=white)](https://openrouter.ai/models/nvidia/nemotron-3-super-120b-a12b:free)
 [![NVIDIA RAPIDS](https://img.shields.io/badge/NVIDIA-RAPIDS%20cuDF-76B900?logo=nvidia&logoColor=white)](https://rapids.ai)
 [![Vercel Deployment](https://img.shields.io/badge/Vercel-Fullstack%20Deploy-000000?logo=vercel&logoColor=white)](https://vercel.com)
-[![Tests: 61 Passed](https://img.shields.io/badge/Vitest-61%20Passing-brightgreen?logo=vitest&logoColor=white)](https://vitest.dev)
+[![Tests: 64 Passed](https://img.shields.io/badge/Vitest-64%20Passing-brightgreen?logo=vitest&logoColor=white)](https://vitest.dev)
 [![TypeScript Monorepo](https://img.shields.io/badge/TypeScript-Strict%20Monorepo-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
@@ -338,7 +338,7 @@ The project enforces continuous verification across mathematical precision, secu
 npm test
 ```
 
-### Verified Test Suites (61/61 Passing)
+### Verified Test Suites (64/64 Passing)
 1. **`shared/tests/equations.test.ts` (19 tests)**:
    * Validates voxel counts, compression ratios, and scan durations across scales.
    * Verifies state memory footprints, PFLOPS, memory bandwidth, and interconnect formulas.
@@ -348,12 +348,14 @@ npm test
    * Verifies the 100× imaging hero demo bottleneck transition.
 3. **`shared/tests/sensitivity.test.ts` (5 tests)**:
    * Asserts 0.5×, 1×, 2×, 10×, and 100× local perturbations and highest-leverage variable isolation.
-4. **`tests/security.test.ts` (6 tests)**:
+4. **`tests/heroDemo.test.ts` (3 tests)**:
+   * Validates end-to-end 1-click 100× imaging acceleration, Amdahl constraint shifts, and grounded fallback schemas.
+5. **`tests/security.test.ts` (6 tests)**:
    * Asserts zero exposure of `OPENROUTER_API_KEY` in frontend source bundles.
    * Verifies `.env.example` placeholders and checks for absence of legacy endpoints.
-5. **`tests/urlParams.test.ts` (4 tests)**:
+6. **`tests/urlParams.test.ts` (4 tests)**:
    * Validates URL serialization, deserialization, and state persistence.
-6. **`backend/tests/api.test.ts` (21 tests)**:
+7. **`backend/tests/api.test.ts` (21 tests)**:
    * Validates OpenRouter input/output schemas, deterministic FNV-1a caching (`scenarioHash`), HTTP 429 rate limit banners, and 500 error single-retry fallback logic.
 
 ---
