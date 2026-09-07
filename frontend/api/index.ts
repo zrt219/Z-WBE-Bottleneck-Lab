@@ -151,7 +151,7 @@ export default async function handler(req: any, res: any) {
 
       const data = await openRouterRes.json();
       const rawContent = data.choices?.[0]?.message?.content || '';
-      const interpretation = repairAndParseNemotronResponse(rawContent, groundingRequest);
+      const interpretation = repairAndParseNemotronResponse(rawContent, model, groundingRequest);
       cache.set(hash, interpretation);
 
       return res.status(200).json({
