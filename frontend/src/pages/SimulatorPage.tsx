@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import {
   ScenarioAssumptions,
   PRESET_DROSOPHILA,
@@ -25,8 +26,9 @@ import { InteractiveTour } from '../components/InteractiveTour';
 import { MobileStickyActionBar } from '../components/MobileStickyActionBar';
 import { WorkflowStepper } from '../components/WorkflowStepper';
 import { useAccessibility } from '../context/AccessibilityContext';
-import { GitCompare, RotateCcw, Share2, Check, Compass, ArrowRight, ChevronDown, ChevronUp, Sliders, Layers } from 'lucide-react';
+import { GitCompare, RotateCcw, Share2, Check, Compass, ArrowRight, ChevronDown, ChevronUp, Sliders, Layers, Award, Sparkles, CheckCircle2 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { ContestBadgesModal } from '../components/ContestBadgesModal';
 
 export const SimulatorPage: React.FC = () => {
   const { announce } = useAccessibility();
@@ -52,6 +54,7 @@ export const SimulatorPage: React.FC = () => {
   const [bottleneckMovedBanner, setBottleneckMovedBanner] = useState(false);
   const [copiedLink, setCopiedLink] = useState(false);
   const [isResetting, setIsResetting] = useState(false);
+  const [isContestModalOpen, setIsContestModalOpen] = useState(false);
 
   // Mobile Collapsible Accordion States (collapsed by default on mobile)
   const [isAssumptionsExpanded, setIsAssumptionsExpanded] = useState(false);
@@ -294,6 +297,54 @@ export const SimulatorPage: React.FC = () => {
 
   return (
     <div className="space-y-8 pb-32 lg:pb-20">
+      {/* Google Cloud × NVIDIA Verified Credentials Card */}
+      <div className="rounded-2xl border border-blue-200/80 bg-gradient-to-r from-blue-50/70 via-indigo-50/50 to-slate-50/80 p-4 sm:p-5 shadow-xs flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div className="flex items-start sm:items-center space-x-3.5 min-w-0">
+          <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-600 text-white flex items-center justify-center shrink-0 shadow-sm ring-2 ring-blue-400/30">
+            <Award className="w-5 h-5 text-white" />
+          </div>
+          <div className="space-y-1 min-w-0">
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="inline-flex items-center space-x-1.5 px-2.5 py-0.5 rounded-md bg-blue-100/90 text-blue-950 font-mono text-[10px] font-extrabold uppercase border border-blue-300/80">
+                <Sparkles className="w-3 h-3 text-blue-600" />
+                <span>Google Cloud × NVIDIA Developer Challenge 2026</span>
+              </span>
+              <span className="text-[11px] font-mono text-emerald-700 font-semibold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
+                Official Submission
+              </span>
+            </div>
+            <div className="text-xs sm:text-sm font-bold text-slate-900 truncate">
+              Built with NVIDIA Nemotron 3 Super (Free on OpenRouter) &amp; NVIDIA RAPIDS cuDF
+            </div>
+            <div className="flex flex-wrap items-center gap-2 text-[11px] text-slate-600">
+              <span className="inline-flex items-center space-x-1 font-semibold text-emerald-700">
+                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
+                <span>4 Verified Learning Pathways (Sep 7, 2026)</span>
+              </span>
+              <span className="text-slate-300 hidden sm:inline">•</span>
+              <span className="hidden sm:inline text-slate-500">Google Cloud Run Microservice Host</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex items-center space-x-2 shrink-0 self-end md:self-auto">
+          <Link
+            to="/about"
+            className="hidden sm:inline-flex items-center space-x-1 px-3 py-2 rounded-xl bg-white/90 hover:bg-white text-slate-700 hover:text-slate-900 text-xs font-bold border border-blue-200 shadow-2xs hover:shadow-xs transition-all"
+          >
+            <Compass className="w-3.5 h-3.5 text-blue-600" />
+            <span>Full Dossier</span>
+          </Link>
+          <button
+            onClick={() => setIsContestModalOpen(true)}
+            className="flex items-center space-x-1.5 px-3.5 py-2 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 active:scale-95 text-white text-xs font-bold shadow-xs hover:shadow-sm transition-all cursor-pointer"
+          >
+            <Award className="w-3.5 h-3.5 text-blue-200" />
+            <span>Inspect Verified Credentials</span>
+          </button>
+        </div>
+      </div>
+
       {/* Interactive 4-Stage Workflow Stepper Ribbon */}
       <WorkflowStepper
         activePresetName={assumptions.name || 'Drosophila'}
@@ -601,6 +652,12 @@ export const SimulatorPage: React.FC = () => {
           const el = document.getElementById('interpretation-layer');
           if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }}
+      />
+
+      {/* Contest Badges & Golden Ticket Modal */}
+      <ContestBadgesModal
+        isOpen={isContestModalOpen}
+        onClose={() => setIsContestModalOpen(false)}
       />
     </div>
   );

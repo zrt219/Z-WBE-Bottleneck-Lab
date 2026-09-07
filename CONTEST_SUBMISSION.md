@@ -120,23 +120,30 @@ Whole-brain emulation is often discussed as if it depends on a single breakthrou
 
 ---
 
-## 10. What Was Learned (Four GTC Learning Pathways)
+## 10. What Was Learned (Four GTC Learning Pathways) & Verified Credentials
 
-### 1. Intro to Inference
-* **Learned**: Latency vs throughput trade-offs, time-to-first-token (TTFT), KV cache memory dynamics, model serving architectures, and prompt token efficiency.
-* **Applied**: Structured scenario inputs into compact JSON (~15 key numerical metrics) rather than verbose text dumps, keeping response times under 4 seconds. Implemented deterministic FNV-1a caching to eliminate redundant queries.
+* **Google Developers Public Profile**: [developers.google.com/profile/u/110918189625880989910](https://developers.google.com/profile/u/110918189625880989910) (User ID: `110918189625880989910`)
+* **Verification Timestamp**: All badges earned and verified on **September 7, 2026**
 
-### 2. Deploy NVIDIA NIM on GKE
+### 1. [Deploy Faster Generative AI Models with NVIDIA NIM on GKE](https://developers.google.com/profile/badges/playlists/nvidia-deploy-with-gen-ai?u=110918189625880989910)
+* **Public Badge Credential**: [Verified Badge Playlist](https://developers.google.com/profile/badges/playlists/nvidia-deploy-with-gen-ai?u=110918189625880989910) • [Official Pathway](https://developers.google.com/learn/pathways/deploy-faster-gen-ai-models-nvidia-gke)
 * **Learned**: Production GPU infrastructure orchestration, containerized inference microservices, Google Kubernetes Engine (GKE), and the NVIDIA model serving architecture.
 * **Applied & Clarified**: While GKE and NIM provide enterprise self-hosted infrastructure, this contest application intentionally accesses **NVIDIA Nemotron 3 Super through OpenRouter** rather than self-hosting NIM. This achieves zero-weight-download serverless deployment on Google Cloud Run while still leveraging NVIDIA frontier foundation weights.
 
-### 3. Speed Up Data Analytics on GPUs
+### 2. [Speed Up Data Analytics on GPUs](https://developers.google.com/profile/badges/playlists/speed-up-data-analytics-GPUs?u=110918189625880989910)
+* **Public Badge Credential**: [Verified Badge Playlist](https://developers.google.com/profile/badges/playlists/speed-up-data-analytics-GPUs?u=110918189625880989910) • [Official Pathway](https://developers.google.com/learn/pathways/speed-up-data-analytics-GPUs)
 * **Learned**: NVIDIA RAPIDS, cuDF dataframe acceleration, GPU memory bandwidth utilization, and high-throughput parameter exploration.
 * **Applied**: Developed the 100,000-scenario Monte Carlo parameter sweep using `%load_ext cudf.pandas` to benchmark GPU cuDF vs CPU pandas.
 
-### 4. Accelerated Machine Learning
+### 3. [Accelerated Machine Learning with Google Cloud and NVIDIA](https://developers.google.com/profile/badges/playlists/accelerated-machine-learning-with-google-cloud-and-nvidia?u=110918189625880989910)
+* **Public Badge Credential**: [Verified Badge Playlist](https://developers.google.com/profile/badges/playlists/accelerated-machine-learning-with-google-cloud-and-nvidia?u=110918189625880989910) • [Official Pathway](https://developers.google.com/learn/pathways/accelerated-machine-learning-with-google-cloud-and-nvidia)
 * **Applied Where Genuinely Used**: Used GPU-accelerated array and dataframe processing for multidimensional correlation calculations and threshold boundary discovery across the 100,000-scenario dataset.
 * **Strict Integrity**: Did *not* falsely claim execution of cuML or XGBoost models, as the scenario sweep is an analytical parameter space exploration rather than a supervised learning task.
+
+### 4. [Intro to Inference: How to Run AI Models on a GPU](https://developers.google.com/learn/pathways/ai-models-on-gpu-intro)
+* **Official Pathway**: [Intro to Inference Pathway](https://developers.google.com/learn/pathways/ai-models-on-gpu-intro)
+* **Learned**: Latency vs throughput trade-offs, time-to-first-token (TTFT), KV cache memory dynamics, model serving architectures, and prompt token efficiency.
+* **Applied**: Structured scenario inputs into compact JSON (~15 key numerical metrics) rather than verbose text dumps, keeping response times under 4 seconds. Implemented deterministic FNV-1a caching to eliminate redundant queries.
 
 ---
 
@@ -237,7 +244,7 @@ cc @googledevs @NVIDIAAI
 
 - [x] **Typecheck passes**: `npm run typecheck` passes across `shared`, `backend`, and `frontend` with 0 errors.
 - [x] **Lint passes**: `npm run lint` passes cleanly.
-- [x] **Unit tests pass**: 71 tests passing across `equations`, `bottlenecks`, `sensitivity`, `security`, `urlParams`, `heroDemo`, `accessibility`, and `api`.
+- [x] **Unit tests pass**: 77 tests passing across `equations`, `bottlenecks`, `sensitivity`, `security`, `urlParams`, `heroDemo`, `accessibility`, `api`, and `contest`.
 - [x] **Production build passes**: `npm run build` bundles `shared`, `backend`, and `frontend` into production assets cleanly.
 - [x] **OpenRouter key is server-side**: Key is never exposed to client bundles, never prefixed with `VITE_`, never sent to the browser.
 - [x] **No Gemma references remain**: Legacy Gemma files purged, zero active dependencies.

@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Activity, Compass, BookOpen, Layers, Zap, Cloud, Github, Eye, GraduationCap } from 'lucide-react';
+import { Activity, Compass, BookOpen, Layers, Zap, Cloud, Github, Eye, GraduationCap, Award } from 'lucide-react';
 import { useAccessibility } from '../context/AccessibilityContext';
 import { AccessibilityModal } from './AccessibilityModal';
+import { ContestBadgesModal } from './ContestBadgesModal';
 
 interface HeaderProps {
   onStartTutorial?: () => void;
@@ -12,6 +13,13 @@ interface HeaderProps {
 export const Header: React.FC<HeaderProps> = ({ onStartTutorial, onOneClickDemo }) => {
   const location = useLocation();
   const { openModal, isModalOpen } = useAccessibility();
+  const [isContestModalOpen, setIsContestModalOpen] = useState(false);
+
+  useEffect(() => {
+    const handleOpenContest = () => setIsContestModalOpen(true);
+    window.addEventListener('zwbe:open-contest-modal', handleOpenContest);
+    return () => window.removeEventListener('zwbe:open-contest-modal', handleOpenContest);
+  }, []);
 
   const handleStartTutorial = () => {
     if (onStartTutorial) {
@@ -144,12 +152,17 @@ export const Header: React.FC<HeaderProps> = ({ onStartTutorial, onOneClickDemo 
         {/* Dedicated Telemetry & Contest Status Sub-Bar */}
         <div className="border-t border-slate-200/80 bg-slate-50/95 backdrop-blur-xs py-1.5 px-4 sm:px-6 lg:px-8">
           <div className="max-w-[1600px] mx-auto flex flex-wrap items-center justify-between gap-y-1.5 gap-x-4 text-[11px] font-mono">
-            {/* Left: Golden Ticket Recognition */}
+            {/* Left: Verified Credentials Recognition - Interactive Modal Launcher */}
             <div className="flex items-center space-x-2 shrink-0">
-              <span className="inline-flex items-center space-x-1.5 px-2.5 py-0.5 rounded-full bg-gradient-to-r from-amber-50 to-orange-50 text-amber-900 border border-amber-300/90 font-bold uppercase text-[10px] shadow-2xs">
-                <span className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse shrink-0"></span>
-                <span>GTC 2026 Golden Ticket</span>
-              </span>
+              <button
+                onClick={() => setIsContestModalOpen(true)}
+                className="inline-flex items-center space-x-1.5 px-2.5 py-0.5 rounded-full bg-gradient-to-r from-blue-50 via-indigo-50 to-blue-100 hover:from-blue-100 hover:to-indigo-200 text-blue-950 border border-blue-300 font-bold uppercase text-[10px] shadow-2xs hover:shadow-xs transition-all cursor-pointer active:scale-95"
+                title="Click to view verified Google Cloud & NVIDIA developer credentials and learning pathways"
+              >
+                <Award className="w-3 h-3 text-blue-700 shrink-0" />
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse shrink-0"></span>
+                <span>🏅 Verified Credentials</span>
+              </button>
               <span className="text-slate-300 hidden sm:inline">|</span>
               <span className="text-slate-500 hidden sm:inline text-[11px]">Whole-Brain Emulation Demonstrator</span>
             </div>
@@ -186,6 +199,14 @@ export const Header: React.FC<HeaderProps> = ({ onStartTutorial, onOneClickDemo 
       {/* Mobile & Tablet Responsive Navigation Strip (<lg) */}
       <div className="flex lg:hidden items-center justify-start sm:justify-center border-t border-slate-200/70 bg-white/95 px-3 py-2 overflow-x-auto gap-1.5 shadow-xs">
         <button
+          onClick={() => setIsContestModalOpen(true)}
+          className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-bold whitespace-nowrap shrink-0 bg-blue-50 text-blue-900 border border-blue-200 shadow-xs cursor-pointer"
+          title="View Verified Credentials"
+        >
+          <Award className="w-3.5 h-3.5 text-blue-700 shrink-0" />
+          <span>🏅 Credentials</span>
+        </button>
+        <button
           onClick={openModal}
           className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-bold whitespace-nowrap shrink-0 bg-slate-100 text-slate-700 border border-slate-200 shadow-xs cursor-pointer"
           aria-label="Accessibility Settings"
@@ -215,10 +236,10 @@ export const Header: React.FC<HeaderProps> = ({ onStartTutorial, onOneClickDemo 
               key={item.path}
               to={item.path}
               className={`flex items-center space-x-1.5 px-3.5 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap shrink-0 transition-colors ${
-                isActive
-                  ? 'bg-blue-50 text-blue-700 font-bold border border-blue-200/80 shadow-xs'
-                  : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
-              }`}
+              isActive
+                ? 'bg-blue-50 text-blue-700 font-bold border border-blue-200/80 shadow-xs'
+                : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
+            }`}
             >
               <Icon className={`w-3.5 h-3.5 shrink-0 ${isActive ? 'text-blue-600' : 'text-slate-400'}`} />
               <span>{item.label}</span>
@@ -230,6 +251,9 @@ export const Header: React.FC<HeaderProps> = ({ onStartTutorial, onOneClickDemo 
 
     {/* Accessibility Settings Modal Dialog */}
     <AccessibilityModal />
+
+    {/* Official Google Cloud × NVIDIA Verified Credentials Modal */}
+    <ContestBadgesModal isOpen={isContestModalOpen} onClose={() => setIsContestModalOpen(false)} />
   </>
 );
 };

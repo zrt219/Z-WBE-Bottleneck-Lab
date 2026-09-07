@@ -35,12 +35,12 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
     onChange(updated);
   };
 
-  const tabs: Array<{ id: TabKey; label: string; icon: React.FC<{ className?: string }> }> = [
-    { id: 'acquisition', label: 'Acquisition', icon: Camera },
-    { id: 'reconstruction', label: 'Reconstruction', icon: Database },
-    { id: 'neuralModel', label: 'Neural Model', icon: Activity },
-    { id: 'hardware', label: 'Hardware', icon: Cpu },
-    { id: 'economics', label: 'Economics', icon: DollarSign }
+  const tabs: Array<{ id: TabKey; label: string; shortLabel: string; icon: React.FC<{ className?: string }> }> = [
+    { id: 'acquisition', label: 'Acquisition', shortLabel: 'Acquis.', icon: Camera },
+    { id: 'reconstruction', label: 'Reconstruction', shortLabel: 'Recon.', icon: Database },
+    { id: 'neuralModel', label: 'Neural Model', shortLabel: 'Neural', icon: Activity },
+    { id: 'hardware', label: 'Hardware', shortLabel: 'Hardw.', icon: Cpu },
+    { id: 'economics', label: 'Economics', shortLabel: 'Econ.', icon: DollarSign }
   ];
 
   return (
@@ -64,8 +64,8 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
           </span>
         </div>
 
-      {/* Category Tabs: Smooth horizontal scrollable pill bar with zero visible scrollbar and Framer Motion sliding pill */}
-      <div className="flex items-center gap-1 overflow-x-auto p-1.5 bg-slate-100/90 rounded-xl border border-slate-200/80 shadow-inner no-scrollbar scrollbar-none">
+      {/* Category Tabs: Responsive 5-column grid with zero cut-off buttons and Framer Motion sliding pill */}
+      <div className="grid grid-cols-5 gap-1 p-1 bg-slate-100/90 rounded-xl border border-slate-200/80 shadow-inner">
         {tabs.map((t) => {
           const Icon = t.icon;
           const isActive = activeTab === t.id;
@@ -73,7 +73,8 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
             <button
               key={t.id}
               onClick={() => setActiveTab(t.id)}
-              className={`relative flex items-center justify-center space-x-1.5 py-2 px-3 rounded-lg text-xs font-semibold whitespace-nowrap transition-colors duration-150 cursor-pointer shrink-0 ${
+              title={t.label}
+              className={`relative flex items-center justify-center py-2 px-1 rounded-lg text-[11px] font-semibold transition-colors duration-150 cursor-pointer w-full text-center ${
                 isActive ? 'text-blue-950 font-bold' : 'text-slate-600 hover:text-slate-900'
               }`}
             >
@@ -84,17 +85,20 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
                   transition={{ type: 'spring', bounce: 0.2, duration: 0.35 }}
                 />
               )}
-              <span className="relative z-10 flex items-center space-x-1.5">
+              <span className="relative z-10 flex flex-col 2xl:flex-row items-center justify-center gap-0.5 2xl:gap-1.5 w-full min-w-0">
                 <Icon className={`w-3.5 h-3.5 shrink-0 ${isActive ? 'text-blue-600' : 'text-slate-400'}`} />
-                <span>{t.label}</span>
+                <span className="truncate text-center">
+                  <span className="hidden 2xl:inline">{t.label}</span>
+                  <span className="2xl:hidden">{t.shortLabel}</span>
+                </span>
               </span>
             </button>
           );
         })}
       </div>
 
-      {/* Tab Panels (Solid and instant without see-through fade) */}
-      <div className="space-y-2.5 text-xs pt-1 flex-1 overflow-y-auto pr-1 max-h-[580px] lg:max-h-[640px] scrollbar-thin">
+      {/* Tab Panels (Solid and instant without see-through fade, zero scrollbar) */}
+      <div className="space-y-2.5 text-xs pt-1 flex-1 overflow-y-auto pr-1 max-h-[580px] lg:max-h-[640px] no-scrollbar scrollbar-none">
         {activeTab === 'acquisition' && (
           <>
             <ControlField
@@ -555,7 +559,7 @@ const ControlField: React.FC<ControlFieldProps> = ({
   };
 
   return (
-    <div className="h-full min-h-[96px] p-3 sm:p-3.5 rounded-xl bg-slate-50/70 border border-slate-200/80 hover:border-slate-300/90 transition-all duration-150 space-y-2.5 shadow-xs hover:bg-slate-50/90 flex flex-col justify-between">
+    <div className="p-3 sm:p-3.5 rounded-xl bg-slate-50/70 border border-slate-200/80 hover:border-slate-300/90 transition-all duration-150 space-y-2.5 shadow-xs hover:bg-slate-50/90">
       <div className="flex items-center justify-between gap-2 min-h-[30px]">
         <div className="flex items-center space-x-1.5 min-w-0">
           <Tooltip
