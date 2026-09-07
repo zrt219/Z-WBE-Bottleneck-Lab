@@ -6,6 +6,7 @@ import { MethodologyPage } from './pages/MethodologyPage';
 import { ArchitecturePage } from './pages/ArchitecturePage';
 import { AboutPage } from './pages/AboutPage';
 import { InteractiveTour } from './components/InteractiveTour';
+import { AccessibilityProvider } from './context/AccessibilityContext';
 import { Cpu, ShieldCheck, Sparkles } from 'lucide-react';
 
 export const App: React.FC = () => {
@@ -38,16 +39,17 @@ export const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#f8fafc] text-slate-900 bg-scientific-grid selection:bg-blue-100 selection:text-blue-900">
-      <Header onStartTutorial={() => setIsTourOpen(true)} />
-      <main className="flex-1 max-w-[1600px] w-full mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-12">
-        <Routes>
-          <Route path="/" element={<SimulatorPage />} />
-          <Route path="/methodology" element={<MethodologyPage />} />
-          <Route path="/architecture" element={<ArchitecturePage />} />
-          <Route path="/about" element={<AboutPage />} />
-        </Routes>
-      </main>
+    <AccessibilityProvider>
+      <div className="min-h-screen flex flex-col bg-[#f8fafc] text-slate-900 bg-scientific-grid selection:bg-blue-100 selection:text-blue-900">
+        <Header onStartTutorial={() => setIsTourOpen(true)} />
+        <main id="main-simulator-content" tabIndex={-1} className="flex-1 max-w-[1600px] w-full mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-12 focus:outline-hidden">
+          <Routes>
+            <Route path="/" element={<SimulatorPage />} />
+            <Route path="/methodology" element={<MethodologyPage />} />
+            <Route path="/architecture" element={<ArchitecturePage />} />
+            <Route path="/about" element={<AboutPage />} />
+          </Routes>
+        </main>
 
       <InteractiveTour
         isOpen={isTourOpen}
@@ -88,6 +90,7 @@ export const App: React.FC = () => {
         </div>
       </footer>
     </div>
-  );
+  </AccessibilityProvider>
+);
 };
 

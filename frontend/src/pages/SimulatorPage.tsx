@@ -22,9 +22,11 @@ import { NemotronInterpretation } from '../components/NemotronInterpretation';
 import { CompareScenariosModal } from '../components/CompareScenariosModal';
 import { GpuExplorationMap } from '../components/GpuExplorationMap';
 import { InteractiveTour } from '../components/InteractiveTour';
+import { useAccessibility } from '../context/AccessibilityContext';
 import { GitCompare, RotateCcw, Share2, Check, Compass, ArrowRight, Zap } from 'lucide-react';
 
 export const SimulatorPage: React.FC = () => {
+  const { announce } = useAccessibility();
   // Check URL query parameters first, then localStorage persistence
   const [assumptions, setAssumptions] = useState<ScenarioAssumptions>(() => {
     if (typeof window !== 'undefined' && window.location.search) {
@@ -100,6 +102,8 @@ export const SimulatorPage: React.FC = () => {
     setBaselineAssumptions(preset);
     setBottleneckMovedBanner(false);
     setInterpretation(null);
+    const quickBottleneck = calculateBottlenecks(preset, calculateAllMetrics(preset));
+    announce(`Loaded ${preset.scaleLabel} preset. Dominant bottleneck: ${quickBottleneck.dominantBottleneck}.`);
   };
 
   const handleHeroDemoTrigger = (accelerated: ScenarioAssumptions) => {
@@ -112,6 +116,9 @@ export const SimulatorPage: React.FC = () => {
 
     if (newBottleneck.dominantBottleneck !== prevBottleneck) {
       setBottleneckMovedBanner(true);
+      announce(`100x imaging acceleration applied. The bottleneck moved from ${prevBottleneck} to ${newBottleneck.dominantBottleneck}!`);
+    } else {
+      announce(`100x imaging acceleration applied. Current bottleneck remains ${newBottleneck.dominantBottleneck}.`);
     }
     // Per Section 5 & 37: Do NOT automatically call Nemotron.
     // Recalculate instantly and show "THE BOTTLENECK MOVED".
@@ -132,10 +139,33 @@ export const SimulatorPage: React.FC = () => {
 
     // 3. Mark the constraint shift banner
     setBottleneckMovedBanner(true);
+    announce('Running 1-Click Hero Demo: 100x acceleration + requesting grounded Nemotron explanation...');
 
     // 4. Automatically trigger Nemotron/grounded interpretation
     await handleExplainScenario(accelerated);
   };
+
+  // Listen to keyboard shortcuts: Alt+H (100x Demo), Alt+E (Explain), Alt+C (Compare)
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (['INPUT', 'TEXTAREA', 'SELECT'].includes((e.target as HTMLElement)?.tagName)) {
+        return;
+      }
+      if (e.altKey && (e.key === 'h' || e.key === 'H')) {
+        e.preventDefault();
+        handleOneClickDemo();
+      } else if (e.altKey && (e.key === 'e' || e.key === 'E')) {
+        e.preventDefault();
+        handleExplainScenario(assumptions);
+      } else if (e.altKey && (e.key === 'c' || e.key === 'C')) {
+        e.preventDefault();
+        setIsCompareOpen((prev) => !prev);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [assumptions]);
 
   // Listen to global one-click demo events from Header or other navigation components
   useEffect(() => {
@@ -244,6 +274,7 @@ export const SimulatorPage: React.FC = () => {
       }
     } finally {
       setIsLoadingExplanation(false);
+      announce('Scientific interpretation ready. Focused on interpretation layer.');
       setTimeout(() => {
         const el = document.getElementById('interpretation-layer');
         if (el) {

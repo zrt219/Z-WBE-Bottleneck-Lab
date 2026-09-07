@@ -3,6 +3,7 @@ import { ScenarioAssumptions } from '@z-wbe/shared';
 import { Sliders, Camera, Cpu, Database, DollarSign, Activity, Plus, Minus, Info } from 'lucide-react';
 import { Tooltip } from './Tooltip';
 import { ASSUMPTION_TOOLTIPS } from '../data/tooltipData';
+import { useAccessibility } from '../context/AccessibilityContext';
 
 interface AssumptionControlsProps {
   assumptions: ScenarioAssumptions;
@@ -514,6 +515,8 @@ const ControlField: React.FC<ControlFieldProps> = ({
 }) => {
   const tooltipInfo = tooltipKey ? ASSUMPTION_TOOLTIPS[tooltipKey] : undefined;
 
+  const { settings } = useAccessibility();
+
   const handleStep = (direction: 'up' | 'down') => {
     let nextVal = direction === 'up' ? value + step : value - step;
     if (nextVal < min) nextVal = min;
@@ -555,7 +558,7 @@ const ControlField: React.FC<ControlFieldProps> = ({
         <div className="flex items-center space-x-1.5 shrink-0">
           <button
             onClick={() => handleStep('down')}
-            className="w-6 h-6 rounded-lg bg-white hover:bg-slate-100 active:bg-slate-200 border border-slate-200 text-slate-600 flex items-center justify-center cursor-pointer shadow-xs transition-colors shrink-0"
+            className={`${settings.largeTargets ? 'w-8 h-8' : 'w-6 h-6'} rounded-lg bg-white hover:bg-slate-100 active:bg-slate-200 border border-slate-200 text-slate-600 flex items-center justify-center cursor-pointer shadow-xs transition-colors shrink-0`}
             title="Step down"
             aria-label={`Decrease ${label}`}
           >
@@ -567,7 +570,7 @@ const ControlField: React.FC<ControlFieldProps> = ({
           </div>
           <button
             onClick={() => handleStep('up')}
-            className="w-6 h-6 rounded-lg bg-white hover:bg-slate-100 active:bg-slate-200 border border-slate-200 text-slate-600 flex items-center justify-center cursor-pointer shadow-xs transition-colors shrink-0"
+            className={`${settings.largeTargets ? 'w-8 h-8' : 'w-6 h-6'} rounded-lg bg-white hover:bg-slate-100 active:bg-slate-200 border border-slate-200 text-slate-600 flex items-center justify-center cursor-pointer shadow-xs transition-colors shrink-0`}
             title="Step up"
             aria-label={`Increase ${label}`}
           >
@@ -575,16 +578,36 @@ const ControlField: React.FC<ControlFieldProps> = ({
           </button>
         </div>
       </div>
-      <input
-        type="range"
-        min={min}
-        max={max}
-        step={step}
-        value={value}
-        onChange={(e) => onChange(parseFloat(e.target.value))}
-        className="w-full cursor-pointer mt-1 accent-blue-600"
-        aria-label={label}
-      />
+
+      {settings.simplifiedInputs ? (
+        <div className="flex items-center space-x-2 pt-0.5">
+          <input
+            type="number"
+            min={min}
+            max={max}
+            step={step}
+            value={value}
+            onChange={(e) => {
+              const val = parseFloat(e.target.value);
+              if (!isNaN(val)) onChange(val);
+            }}
+            className="w-full px-2.5 py-1 rounded-lg border border-slate-300 font-mono text-xs font-bold text-slate-900 bg-white focus:border-blue-600 focus:ring-2 focus:ring-blue-100 focus:outline-hidden"
+            aria-label={`${label} direct input (${unit})`}
+          />
+          <span className="text-[10px] font-bold font-mono text-slate-400 shrink-0">{unit}</span>
+        </div>
+      ) : (
+        <input
+          type="range"
+          min={min}
+          max={max}
+          step={step}
+          value={value}
+          onChange={(e) => onChange(parseFloat(e.target.value))}
+          className="w-full cursor-pointer mt-1 accent-blue-600"
+          aria-label={label}
+        />
+      )}
     </div>
   );
 };

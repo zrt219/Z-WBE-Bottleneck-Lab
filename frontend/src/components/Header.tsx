@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Activity, Compass, BookOpen, Layers, Zap, Cloud, Github } from 'lucide-react';
+import { Activity, Compass, BookOpen, Layers, Zap, Cloud, Github, Eye } from 'lucide-react';
+import { useAccessibility } from '../context/AccessibilityContext';
+import { AccessibilityModal } from './AccessibilityModal';
 
 interface HeaderProps {
   onStartTutorial?: () => void;
@@ -9,6 +11,7 @@ interface HeaderProps {
 
 export const Header: React.FC<HeaderProps> = ({ onStartTutorial, onOneClickDemo }) => {
   const location = useLocation();
+  const { openModal, isModalOpen } = useAccessibility();
 
   const handleStartTutorial = () => {
     if (onStartTutorial) {
@@ -34,9 +37,18 @@ export const Header: React.FC<HeaderProps> = ({ onStartTutorial, onOneClickDemo 
   ];
 
   return (
-    <header className="border-b border-slate-200/80 bg-white/95 backdrop-blur-md sticky top-0 z-40 shadow-xs">
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 gap-x-3 sm:gap-x-4 lg:gap-x-6">
+    <>
+      {/* WCAG Accessible Skip Link */}
+      <a
+        href="#main-simulator-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:px-4 focus:py-2 focus:bg-blue-700 focus:text-white focus:font-bold focus:text-sm focus:rounded-xl focus:shadow-2xl focus:ring-4 focus:ring-blue-300 transition-all"
+      >
+        Skip to main content
+      </a>
+
+      <header className="border-b border-slate-200/80 bg-white/95 backdrop-blur-md sticky top-0 z-40 shadow-xs">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16 gap-x-3 sm:gap-x-4 lg:gap-x-6">
           {/* Brand & Logo Lockup */}
           <div className="flex items-center space-x-3 shrink-0">
             <Link to="/" className="flex items-center space-x-2.5 group shrink-0">
@@ -126,6 +138,20 @@ export const Header: React.FC<HeaderProps> = ({ onStartTutorial, onOneClickDemo 
               <span>Tutorial</span>
             </button>
 
+            {/* Accessibility & Readability Settings Toggle */}
+            <button
+              onClick={openModal}
+              data-testid="header-accessibility-button"
+              className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 active:bg-slate-300 text-slate-700 hover:text-slate-900 border border-slate-300/80 font-bold text-xs shadow-2xs transition-all cursor-pointer shrink-0"
+              title="Accessibility & Readability Settings (Alt+A)"
+              aria-haspopup="dialog"
+              aria-expanded={isModalOpen}
+              aria-label="Open Accessibility & Readability Settings (Alt+A)"
+            >
+              <Eye className="w-3.5 h-3.5 text-slate-700 shrink-0" />
+              <span>A11y</span>
+            </button>
+
             {/* GitHub Repo Link (always visible) */}
             <a
               href="https://github.com/zhane/z-wbe-bottleneck-lab"
@@ -143,6 +169,14 @@ export const Header: React.FC<HeaderProps> = ({ onStartTutorial, onOneClickDemo 
 
       {/* Mobile & Tablet Responsive Navigation Strip (<lg) */}
       <div className="flex lg:hidden items-center justify-start sm:justify-center border-t border-slate-200/70 bg-white/95 px-3 py-2 overflow-x-auto gap-1.5 shadow-xs">
+        <button
+          onClick={openModal}
+          className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-bold whitespace-nowrap shrink-0 bg-slate-100 text-slate-700 border border-slate-200 shadow-xs cursor-pointer"
+          aria-label="Accessibility Settings"
+        >
+          <Eye className="w-3.5 h-3.5 text-slate-700 shrink-0" />
+          <span>A11y</span>
+        </button>
         <button
           onClick={handleOneClickDemo}
           className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-bold whitespace-nowrap shrink-0 bg-emerald-50 text-emerald-800 border border-emerald-300 shadow-xs cursor-pointer"
@@ -177,6 +211,10 @@ export const Header: React.FC<HeaderProps> = ({ onStartTutorial, onOneClickDemo 
         })}
       </div>
     </header>
-  );
+
+    {/* Accessibility Settings Modal Dialog */}
+    <AccessibilityModal />
+  </>
+);
 };
 
