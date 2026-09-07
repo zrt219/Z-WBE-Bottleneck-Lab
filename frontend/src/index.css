@@ -34,6 +34,20 @@ body {
   background: #94a3b8;
 }
 
+/* Force hide scrollbars completely across Chrome, Edge, Safari, Firefox */
+.no-scrollbar::-webkit-scrollbar,
+.scrollbar-none::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.no-scrollbar,
+.scrollbar-none {
+  -ms-overflow-style: none !important; /* IE and Edge */
+  scrollbar-width: none !important; /* Firefox */
+}
+
 .mono-metric {
   font-family: 'JetBrains Mono', monospace;
   font-feature-settings: "tnum" 1, "zero" 1;
