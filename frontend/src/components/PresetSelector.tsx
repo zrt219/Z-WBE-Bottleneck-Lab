@@ -176,10 +176,10 @@ export const PresetSelector: React.FC<PresetSelectorProps> = ({
               <button
                 key={scale.id}
                 onClick={() => onSelectPreset(scale.preset)}
-                className={`min-w-[160px] sm:min-w-0 snap-start flex-1 text-left p-3 sm:p-4 rounded-xl border transition-all duration-150 relative cursor-pointer min-h-[44px] ${
+                className={`min-w-[170px] sm:min-w-0 snap-start flex-1 text-left p-3.5 sm:p-4 rounded-xl transition-all duration-200 relative cursor-pointer min-h-[48px] ${
                   active
-                    ? 'border-blue-600 bg-blue-50/60 text-blue-950 shadow-xs ring-2 ring-blue-600/30'
-                    : 'border-slate-200 bg-white hover:border-slate-300 hover:bg-slate-50/70 text-slate-700 shadow-xs'
+                    ? 'border-2 border-blue-600 bg-gradient-to-b from-blue-50/90 via-blue-50/40 to-indigo-50/50 text-blue-950 shadow-md shadow-blue-500/10 ring-2 ring-blue-500/20 -translate-y-0.5'
+                    : 'border border-slate-200/90 bg-gradient-to-b from-white to-slate-50/80 hover:border-blue-300 hover:bg-white text-slate-800 shadow-sm hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 active:shadow-xs'
                 }`}
               >
                 <div className="flex items-start justify-between">
@@ -187,7 +187,7 @@ export const PresetSelector: React.FC<PresetSelectorProps> = ({
                     {scale.label}
                   </span>
                   {active && (
-                    <span className="w-4 h-4 rounded-full bg-blue-600 text-white flex items-center justify-center shrink-0 ml-1">
+                    <span className="w-4 h-4 rounded-full bg-blue-600 text-white flex items-center justify-center shrink-0 ml-1 shadow-xs">
                       <Check className="w-2.5 h-2.5" />
                     </span>
                   )}
@@ -196,7 +196,7 @@ export const PresetSelector: React.FC<PresetSelectorProps> = ({
                   {scale.description}
                 </div>
                 {scale.warning && (
-                  <span className="inline-block mt-1.5 text-[9px] font-mono font-bold text-amber-800 bg-amber-100/90 px-1.5 py-0.5 rounded border border-amber-200">
+                  <span className="inline-block mt-1.5 text-[9px] font-mono font-bold text-amber-800 bg-amber-100/90 px-1.5 py-0.5 rounded border border-amber-200 shadow-2xs">
                     {scale.warning}
                   </span>
                 )}
@@ -207,12 +207,12 @@ export const PresetSelector: React.FC<PresetSelectorProps> = ({
       </div>
 
       {/* Demo Presets & Hero Action */}
-      <div className="border-t border-slate-100 pt-5 space-y-4">
+      <div className="border-t border-slate-150 pt-5 space-y-4">
         <div className="flex items-center justify-between">
           <span className="text-xs font-bold uppercase tracking-wider text-slate-700">
             2. Scenario Demonstrations & Empirical Stress Tests
           </span>
-          <span className="text-[10px] font-mono text-slate-400">
+          <span className="text-[10px] font-mono text-slate-400 font-semibold">
             SCENARIO MODELING — DETERMINISTIC EQUATIONS
           </span>
         </div>
@@ -224,15 +224,15 @@ export const PresetSelector: React.FC<PresetSelectorProps> = ({
               <button
                 key={demo.id}
                 onClick={() => onSelectPreset(demo.preset)}
-                className={`min-w-[240px] sm:min-w-0 snap-start flex-1 p-3.5 sm:p-4 rounded-xl border text-left transition-all duration-150 cursor-pointer border-l-4 min-h-[44px] ${demo.accentColor} ${
+                className={`min-w-[240px] sm:min-w-0 snap-start flex-1 p-4 rounded-xl text-left transition-all duration-200 cursor-pointer border-l-4 min-h-[48px] ${demo.accentColor} ${
                   active
-                    ? 'border-indigo-600 bg-indigo-50/70 text-indigo-950 ring-2 ring-indigo-600/30 shadow-xs'
-                    : 'border-slate-200 bg-white hover:border-slate-300 hover:bg-slate-50/70 text-slate-700 shadow-xs'
+                    ? 'border-t-2 border-r-2 border-b-2 border-indigo-600 bg-gradient-to-b from-indigo-50/90 via-indigo-50/40 to-blue-50/50 text-indigo-950 ring-2 ring-indigo-500/20 shadow-md shadow-indigo-500/10 -translate-y-0.5'
+                    : 'border border-slate-200/90 bg-gradient-to-b from-white to-slate-50/80 hover:border-slate-300 hover:bg-white text-slate-800 shadow-sm hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 active:shadow-xs'
                 }`}
               >
                 <div className="flex items-center justify-between">
                   <span className="font-bold text-xs text-slate-900">{demo.title}</span>
-                  <span className="text-[9px] font-mono font-semibold px-2 py-0.5 rounded bg-slate-100 text-slate-600 border border-slate-200">
+                  <span className="text-[9px] font-mono font-bold px-2 py-0.5 rounded-md bg-slate-100/90 text-slate-700 border border-slate-200/80 shadow-2xs">
                     {demo.tag}
                   </span>
                 </div>
@@ -245,7 +245,7 @@ export const PresetSelector: React.FC<PresetSelectorProps> = ({
         </div>
 
         {/* Hero Demo Question: Editorial Whitespace with subtle blue/indigo wash */}
-        <div id="tour-hero-demo" className="relative overflow-hidden bg-gradient-to-br from-blue-50/70 via-indigo-50/40 to-sky-50/60 rounded-2xl p-5 sm:p-6 border border-blue-200/90 shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-5">
+        <div id="tour-hero-demo" className="relative overflow-hidden bg-gradient-to-br from-blue-50/90 via-indigo-50/60 to-sky-50/80 rounded-2xl p-5 sm:p-6 border border-blue-200/90 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-5">
           <div className="space-y-1.5 relative z-10">
             <div className="flex items-center space-x-2">
               <span className="inline-flex items-center space-x-1.5 text-[10px] font-mono uppercase tracking-wider text-blue-800 font-extrabold bg-blue-100/90 px-2.5 py-0.5 rounded-full border border-blue-300 shadow-xs">
@@ -254,7 +254,7 @@ export const PresetSelector: React.FC<PresetSelectorProps> = ({
               </span>
             </div>
             <p className="text-base sm:text-lg font-extrabold text-slate-900 tracking-tight">
-              "What happens if imaging becomes 100x faster?"
+              &quot;What happens if imaging becomes 100x faster?&quot;
             </p>
             <p className="text-xs text-slate-600 max-w-xl leading-relaxed">
               Instantly accelerates acquisition rate 100x to test if the dominant constraint shifts to memory bandwidth, real-time compute, or proofreading costs.
@@ -265,11 +265,11 @@ export const PresetSelector: React.FC<PresetSelectorProps> = ({
               <button
                 onClick={onOneClickDemo}
                 data-testid="hero-one-click-demo-button"
-                className="flex items-center justify-center space-x-2 px-5 py-3.5 bg-gradient-to-r from-emerald-600 via-teal-600 to-blue-600 hover:from-emerald-500 hover:via-teal-500 hover:to-blue-500 text-white rounded-xl text-xs font-extrabold tracking-wide uppercase transition-all duration-150 shadow-sm hover:shadow-md cursor-pointer hover:scale-[1.02] active:scale-[0.98]"
+                className="flex items-center justify-center space-x-2 px-6 py-3.5 bg-gradient-to-r from-emerald-600 via-teal-600 to-blue-600 hover:from-emerald-500 hover:via-teal-500 hover:to-blue-500 active:from-emerald-700 active:to-blue-700 text-white rounded-xl text-xs font-black tracking-wide uppercase transition-all duration-150 shadow-md shadow-emerald-700/25 hover:shadow-lg hover:shadow-emerald-700/35 border border-emerald-400/30 cursor-pointer hover:scale-[1.02] active:scale-[0.98]"
                 title="Accelerate imaging 100x and automatically generate grounded AI explanation in one click"
               >
                 <Zap className="w-4 h-4 text-amber-300 fill-amber-300 animate-pulse" />
-                <span>⚡ 1-Click Demo & Explain</span>
+                <span>⚡ 1-Click Demo &amp; Explain</span>
               </button>
             )}
             <button
@@ -277,11 +277,11 @@ export const PresetSelector: React.FC<PresetSelectorProps> = ({
                 const accelerated = applyImaging100xDemo(currentAssumptions);
                 onHeroDemoTrigger(accelerated);
               }}
-              className="flex items-center justify-center space-x-2 px-4 py-3.5 bg-white hover:bg-slate-50 border border-slate-300 text-slate-700 rounded-xl text-xs font-bold tracking-wide uppercase transition-all duration-150 shadow-2xs hover:shadow cursor-pointer hover:scale-[1.01] active:scale-[0.99]"
+              className="flex items-center justify-center space-x-2 px-5 py-3.5 bg-gradient-to-b from-white to-slate-50 hover:to-slate-100 active:from-slate-100 border border-slate-300 text-slate-800 font-bold rounded-xl text-xs tracking-wide uppercase transition-all duration-150 shadow-sm hover:shadow-md cursor-pointer hover:scale-[1.01] active:scale-[0.99]"
               title="Shift parameters only without auto-running explanation"
             >
               <span>Shift Params Only</span>
-              <ArrowRight className="w-3.5 h-3.5 text-slate-400" />
+              <ArrowRight className="w-3.5 h-3.5 text-slate-500" />
             </button>
           </div>
         </div>
