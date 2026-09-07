@@ -12,3 +12,6 @@ local.env
 .DS_Store
 nyc_taxi_data/
 
+
+.vercel
+.env*

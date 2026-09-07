@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Activity, Compass, BookOpen, Layers, Zap, Cloud, Github, Eye } from 'lucide-react';
+import { Activity, Compass, BookOpen, Layers, Zap, Cloud, Github, Eye, GraduationCap } from 'lucide-react';
 import { useAccessibility } from '../context/AccessibilityContext';
 import { AccessibilityModal } from './AccessibilityModal';
 
@@ -31,6 +31,7 @@ export const Header: React.FC<HeaderProps> = ({ onStartTutorial, onOneClickDemo 
 
   const navItems = [
     { label: 'Simulator', path: '/', icon: Activity },
+    { label: 'Tutorials', path: '/tutorials', icon: GraduationCap },
     { label: 'Methodology', path: '/methodology', icon: BookOpen },
     { label: 'Architecture', path: '/architecture', icon: Layers },
     { label: 'About & Contest', path: '/about', icon: Compass }
@@ -78,7 +79,7 @@ export const Header: React.FC<HeaderProps> = ({ onStartTutorial, onOneClickDemo 
             <nav className="hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center space-x-1 bg-slate-100/90 p-1 rounded-xl border border-slate-200/90 shadow-inner z-10">
               {navItems.map((item) => {
                 const Icon = item.icon;
-                const isActive = location.pathname === item.path;
+                const isActive = item.path === '/' ? location.pathname === '/' : location.pathname.startsWith(item.path);
                 return (
                   <Link
                     key={item.path}
@@ -193,7 +194,7 @@ export const Header: React.FC<HeaderProps> = ({ onStartTutorial, onOneClickDemo 
         </button>
         {navItems.map((item) => {
           const Icon = item.icon;
-          const isActive = location.pathname === item.path;
+          const isActive = item.path === '/' ? location.pathname === '/' : location.pathname.startsWith(item.path);
           return (
             <Link
               key={item.path}

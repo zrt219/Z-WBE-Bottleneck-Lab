@@ -1,5 +1,5 @@
 import {
-  ALL_PRESETS,
+  PRESET_DROSOPHILA,
   calculateAllMetrics,
   calculateBottlenecks,
   runSensitivityAnalysis,
@@ -54,54 +54,61 @@ export default async function handler(req: any, res: any) {
       return res.status(405).json({ error: 'Method Not Allowed' });
     }
 
-    const { assumptions, metrics, bottleneck, sensitivity } = req.body || {};
-
-    const activeAssumptions = assumptions || ALL_PRESETS.drosophila;
-    const activeMetrics = metrics || calculateAllMetrics(activeAssumptions);
-    const activeBottleneck = bottleneck || calculateBottlenecks(activeAssumptions, activeMetrics);
-    const activeSensitivity = sensitivity || runSensitivityAnalysis(activeAssumptions);
-
-    const groundingRequest = buildNemotronInputSchema(
-      activeAssumptions,
-      activeMetrics,
-      activeBottleneck,
-      activeSensitivity
-    );
-
-    const apiKey = process.env.OPENROUTER_API_KEY;
-    const model = process.env.OPENROUTER_MODEL || 'nvidia/nemotron-3-super-120b-a12b:free';
-
-    if (!apiKey || apiKey.includes('placeholder')) {
-      const fallback = generateGroundedFallback(
-        groundingRequest,
-        'unavailable',
-        'AI INTERPRETATION UNAVAILABLE\nOpenRouter API key is not configured on the server.\nThe deterministic simulation laboratory remains 100% operational.'
-      );
-      return res.status(200).json({
-        enabled: false,
-        modelIdentifier: model,
-        requestsThisSession: sessionRequests,
-        status: 'unavailable',
-        interpretation: fallback,
-        groundingRequest
-      });
+    let parsedBody = req.body;
+    if (typeof parsedBody === 'string') {
+      try {
+        parsedBody = JSON.parse(parsedBody);
+      } catch {}
     }
 
-    const hash = scenarioHash(model, '2026-03-gtc-nemotron-v1', activeAssumptions, activeMetrics);
-    if (cache.has(hash)) {
-      return res.status(200).json({
-        enabled: true,
-        modelIdentifier: model,
-        fromCache: true,
-        requestsThisSession: sessionRequests,
-        status: 'ok',
-        interpretation: cache.get(hash),
-        groundingRequest
-      });
-    }
-
-    sessionRequests += 1;
     try {
+      const { assumptions, metrics, bottleneck, sensitivity } = parsedBody || {};
+
+      const activeAssumptions = assumptions || PRESET_DROSOPHILA;
+      const activeMetrics = metrics || calculateAllMetrics(activeAssumptions);
+      const activeBottleneck = bottleneck || calculateBottlenecks(activeAssumptions, activeMetrics);
+      const activeSensitivity = sensitivity || runSensitivityAnalysis(activeAssumptions);
+
+      const groundingRequest = buildNemotronInputSchema(
+        activeAssumptions,
+        activeMetrics,
+        activeBottleneck,
+        activeSensitivity
+      );
+
+      const apiKey = process.env.OPENROUTER_API_KEY;
+      const model = process.env.OPENROUTER_MODEL || 'nvidia/nemotron-3-super-120b-a12b:free';
+
+      if (!apiKey || apiKey.includes('placeholder')) {
+        const fallback = generateGroundedFallback(
+          groundingRequest,
+          'unavailable',
+          'AI INTERPRETATION UNAVAILABLE\nOpenRouter API key is not configured on the server.\nThe deterministic simulation laboratory remains 100% operational.'
+        );
+        return res.status(200).json({
+          enabled: false,
+          modelIdentifier: model,
+          requestsThisSession: sessionRequests,
+          status: 'unavailable',
+          interpretation: fallback,
+          groundingRequest
+        });
+      }
+
+      const hash = scenarioHash(model, '2026-03-gtc-nemotron-v1', activeAssumptions, activeMetrics);
+      if (cache.has(hash)) {
+        return res.status(200).json({
+          enabled: true,
+          modelIdentifier: model,
+          fromCache: true,
+          requestsThisSession: sessionRequests,
+          status: 'ok',
+          interpretation: cache.get(hash),
+          groundingRequest
+        });
+      }
+
+      sessionRequests += 1;
       const payload = {
         model,
         messages: [
@@ -157,19 +164,24 @@ export default async function handler(req: any, res: any) {
         groundingRequest
       });
     } catch (err: any) {
+      console.error('[API Explain Handler Error]', err);
+      const safeMetrics = calculateAllMetrics(PRESET_DROSOPHILA);
+      const safeBottleneck = calculateBottlenecks(PRESET_DROSOPHILA, safeMetrics);
+      const safeSensitivity = runSensitivityAnalysis(PRESET_DROSOPHILA);
+      const safePayload = buildNemotronInputSchema(PRESET_DROSOPHILA, safeMetrics, safeBottleneck, safeSensitivity);
       const fallback = generateGroundedFallback(
-        groundingRequest,
+        safePayload,
         'temporarily_unavailable',
         'AI INTERPRETATION TEMPORARILY UNAVAILABLE\nThe deterministic simulation remains valid.'
       );
       return res.status(200).json({
         enabled: true,
-        modelIdentifier: model,
+        modelIdentifier: process.env.OPENROUTER_MODEL || 'nvidia/nemotron-3-super-120b-a12b:free',
         requestsThisSession: sessionRequests,
         status: 'temporarily_unavailable',
-        errorMessage: err.message,
+        errorMessage: err?.message || 'Calculation completed with fallback',
         interpretation: fallback,
-        groundingRequest
+        groundingRequest: safePayload
       });
     }
   }
