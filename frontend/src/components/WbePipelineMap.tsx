@@ -204,15 +204,12 @@ export const WbePipelineMap: React.FC<WbePipelineMapProps> = ({ bottleneck, metr
                 }`}
               >
                 {stage.isDominant && (
-                  <motion.div
-                    initial={{ scale: 0.85, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    transition={{ type: 'spring', bounce: 0.3 }}
-                    className="absolute -top-3 right-4 bg-rose-600 text-white font-mono text-[9px] font-black uppercase tracking-wider px-3 py-0.5 rounded-full shadow-sm flex items-center space-x-1 animate-pulse ring-2 ring-white"
+                  <div
+                    className="absolute -top-3 right-4 bg-rose-600 text-white font-mono text-[9px] font-black uppercase tracking-wider px-3 py-0.5 rounded-full shadow-sm flex items-center space-x-1 ring-2 ring-white opacity-100"
                   >
-                    <AlertOctagon className="w-3 h-3" />
+                    <AlertOctagon className="w-3 h-3 text-white shrink-0" />
                     <span>#1 DOMINANT BOTTLENECK</span>
-                  </motion.div>
+                  </div>
                 )}
 
                 <div className="flex items-center justify-between">

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { ScenarioAssumptions } from '@z-wbe/shared';
 import { Sliders, Camera, Cpu, Database, DollarSign, Activity, Plus, Minus, Info } from 'lucide-react';
 import { Tooltip } from './Tooltip';
@@ -92,16 +92,8 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
         })}
       </div>
 
-      {/* Tab Panels with smooth AnimatePresence transition */}
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={activeTab}
-          initial={{ opacity: 0, y: 5 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -4 }}
-          transition={{ duration: 0.16, ease: 'easeOut' }}
-          className="space-y-3 text-xs pt-1"
-        >
+      {/* Tab Panels (Solid and instant without see-through fade) */}
+      <div className="space-y-3 text-xs pt-1">
         {activeTab === 'acquisition' && (
           <>
             <ControlField
@@ -501,8 +493,7 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
             </div>
           </>
         )}
-        </motion.div>
-      </AnimatePresence>
+      </div>
     </div>
   );
 };

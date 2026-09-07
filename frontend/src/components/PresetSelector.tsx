@@ -131,7 +131,7 @@ export const PresetSelector: React.FC<PresetSelectorProps> = ({
 
       {/* Hero "Bottleneck Moved" Banner */}
       {bottleneckMovedBanner && (
-        <div className="bg-gradient-to-r from-emerald-50 via-teal-50 to-emerald-50 border-2 border-emerald-500 p-4 sm:p-5 rounded-xl flex items-center justify-between shadow-glow-emerald animate-pulse">
+        <div className="bg-gradient-to-r from-emerald-50 via-teal-50 to-emerald-50 border-2 border-emerald-500 p-4 sm:p-5 rounded-xl flex items-center justify-between shadow-glow-emerald">
           <div className="flex items-center space-x-3.5">
             <div className="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center shrink-0 shadow-xs">
               <Zap className="w-5 h-5 text-emerald-100" />
