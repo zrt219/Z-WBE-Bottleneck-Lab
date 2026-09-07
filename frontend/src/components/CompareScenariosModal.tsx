@@ -3,7 +3,13 @@ import {
   ScenarioAssumptions,
   calculateAllMetrics,
   calculateBottlenecks,
-  runSensitivityAnalysis
+  runSensitivityAnalysis,
+  formatBytes,
+  formatComputeFlops,
+  formatBandwidth,
+  formatPowerDemand,
+  formatCurrency,
+  formatAcquisitionDuration
 } from '@z-wbe/shared';
 import { GitCompare, X, TrendingUp, TrendingDown, Minus, Check } from 'lucide-react';
 
@@ -70,44 +76,44 @@ export const CompareScenariosModal: React.FC<CompareScenariosModalProps> = ({
   const rows = [
     {
       metric: 'Acquisition Time',
-      base: `${mBase.acquisitionTimeYears.toFixed(2)} yrs`,
-      mod: `${mMod.acquisitionTimeYears.toFixed(2)} yrs`,
+      base: formatAcquisitionDuration(mBase.acquisitionTimeYears, mBase.acquisitionTimeDays),
+      mod: formatAcquisitionDuration(mMod.acquisitionTimeYears, mMod.acquisitionTimeDays),
       delta: formatDelta(mBase.acquisitionTimeYears, mMod.acquisitionTimeYears, 'yrs', true)
     },
     {
       metric: 'Raw Image Data',
-      base: `${(mBase.rawDataBytes / 1e12).toFixed(2)} TB`,
-      mod: `${(mMod.rawDataBytes / 1e12).toFixed(2)} TB`,
+      base: formatBytes(mBase.rawDataBytes),
+      mod: formatBytes(mMod.rawDataBytes),
       delta: formatDelta(mBase.rawDataBytes / 1e12, mMod.rawDataBytes / 1e12, 'TB', true)
     },
     {
       metric: 'Model State Storage',
-      base: `${(mBase.modelStateBytes / 1e12).toFixed(2)} TB`,
-      mod: `${(mMod.modelStateBytes / 1e12).toFixed(2)} TB`,
+      base: formatBytes(mBase.modelStateBytes),
+      mod: formatBytes(mMod.modelStateBytes),
       delta: formatDelta(mBase.modelStateBytes / 1e12, mMod.modelStateBytes / 1e12, 'TB', true)
     },
     {
       metric: 'Real-time Compute',
-      base: `${mBase.computeDemandPflops.toFixed(2)} PFLOPS`,
-      mod: `${mMod.computeDemandPflops.toFixed(2)} PFLOPS`,
+      base: formatComputeFlops(mBase.computeDemandFlops),
+      mod: formatComputeFlops(mMod.computeDemandFlops),
       delta: formatDelta(mBase.computeDemandPflops, mMod.computeDemandPflops, 'PFLOPS', true)
     },
     {
       metric: 'Memory Bandwidth',
-      base: `${mBase.memoryTrafficTbS.toFixed(2)} TB/s`,
-      mod: `${mMod.memoryTrafficTbS.toFixed(2)} TB/s`,
+      base: formatBandwidth(mBase.memoryTrafficTbS),
+      mod: formatBandwidth(mMod.memoryTrafficTbS),
       delta: formatDelta(mBase.memoryTrafficTbS, mMod.memoryTrafficTbS, 'TB/s', true)
     },
     {
       metric: 'Power Demand',
-      base: `${mBase.totalPowerDemandMw.toFixed(2)} MW`,
-      mod: `${mMod.totalPowerDemandMw.toFixed(2)} MW`,
+      base: formatPowerDemand(mBase.totalPowerDemandMw),
+      mod: formatPowerDemand(mMod.totalPowerDemandMw),
       delta: formatDelta(mBase.totalPowerDemandMw, mMod.totalPowerDemandMw, 'MW', true)
     },
     {
       metric: 'Total Estimated Cost',
-      base: `$${(mBase.totalEstimatedCostUsd / 1e6).toFixed(2)}M`,
-      mod: `$${(mMod.totalEstimatedCostUsd / 1e6).toFixed(2)}M`,
+      base: formatCurrency(mBase.totalEstimatedCostUsd),
+      mod: formatCurrency(mMod.totalEstimatedCostUsd),
       delta: formatDelta(mBase.totalEstimatedCostUsd / 1e6, mMod.totalEstimatedCostUsd / 1e6, '$M', true)
     },
     {

@@ -1,6 +1,8 @@
 import React from 'react';
 import { BottleneckResult } from '@z-wbe/shared';
-import { AlertTriangle, Sparkles, Loader2, ShieldCheck, ArrowUpRight } from 'lucide-react';
+import { AlertTriangle, Sparkles, Loader2, ShieldCheck, ArrowUpRight, Info } from 'lucide-react';
+import { Tooltip } from './Tooltip';
+import { BOTTLENECK_DIMENSION_TOOLTIPS } from '../data/tooltipData';
 
 interface DominantBottleneckCardProps {
   bottleneck: BottleneckResult;
@@ -27,7 +29,7 @@ export const DominantBottleneckCard: React.FC<DominantBottleneckCardProps> = ({
   };
 
   return (
-    <div className="h-full bg-white border border-slate-200/90 rounded-2xl p-5 sm:p-6 shadow-card flex flex-col justify-between space-y-5">
+    <div id="tour-bottleneck-card" className="h-full bg-white border border-slate-200/90 rounded-2xl p-5 sm:p-6 shadow-card flex flex-col justify-between space-y-5">
       <div className="space-y-4">
         <div className="flex items-center justify-between border-b border-slate-100 pb-3.5">
           <div className="flex items-center space-x-2.5">
@@ -58,7 +60,12 @@ export const DominantBottleneckCard: React.FC<DominantBottleneckCardProps> = ({
           </div>
 
           <div className="text-base font-extrabold text-slate-900 tracking-tight">
-            {formatBottleneckName(dominant)}
+            <Tooltip info={BOTTLENECK_DIMENSION_TOOLTIPS[dominant]}>
+              <span className="cursor-help border-b border-dotted border-slate-400 hover:text-blue-600 transition-colors inline-flex items-center space-x-1">
+                <span>{formatBottleneckName(dominant)}</span>
+                <Info className="w-3.5 h-3.5 text-slate-400" />
+              </span>
+            </Tooltip>
           </div>
 
           <p className="text-xs text-slate-600 leading-relaxed font-sans">
@@ -75,9 +82,13 @@ export const DominantBottleneckCard: React.FC<DominantBottleneckCardProps> = ({
         <div className="p-4 rounded-xl bg-slate-50/80 border border-slate-200/80 space-y-3 shadow-xs">
           <div className="flex flex-col xl:flex-row xl:items-center justify-between gap-1 text-xs">
             <span className="font-medium text-slate-500 shrink-0">Secondary Bottleneck:</span>
-            <span className="font-bold text-slate-800 font-mono text-left xl:text-right">
-              {formatBottleneckName(second)} <span className="text-slate-500 font-normal">({secondPressure.score.toFixed(1)}%)</span>
-            </span>
+            <Tooltip info={BOTTLENECK_DIMENSION_TOOLTIPS[second]}>
+              <span className="font-bold text-slate-800 font-mono text-left xl:text-right cursor-help border-b border-dotted border-slate-300 hover:text-blue-600 transition-colors inline-flex items-center space-x-1">
+                <span>{formatBottleneckName(second)}</span>
+                <span className="text-slate-500 font-normal">({secondPressure.score.toFixed(1)}%)</span>
+                <Info className="w-3 h-3 text-slate-400" />
+              </span>
+            </Tooltip>
           </div>
           <div className="flex items-center justify-between gap-2 text-xs">
             <span className="font-medium text-slate-500">Separation Margin:</span>
@@ -99,6 +110,7 @@ export const DominantBottleneckCard: React.FC<DominantBottleneckCardProps> = ({
       {/* Action Button: EXPLAIN THIS SCENARIO */}
       <div className="pt-3.5 border-t border-slate-100 space-y-2.5">
         <button
+          id="tour-explain-button"
           onClick={onExplainClick}
           disabled={isLoadingExplanation}
           data-testid="explain-scenario-button"

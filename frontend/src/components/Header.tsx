@@ -2,8 +2,20 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Activity, Compass, BookOpen, Layers, Zap, Cloud, Github } from 'lucide-react';
 
-export const Header: React.FC = () => {
+interface HeaderProps {
+  onStartTutorial?: () => void;
+}
+
+export const Header: React.FC<HeaderProps> = ({ onStartTutorial }) => {
   const location = useLocation();
+
+  const handleStartTutorial = () => {
+    if (onStartTutorial) {
+      onStartTutorial();
+    } else {
+      window.dispatchEvent(new CustomEvent('zwbe:start-tour'));
+    }
+  };
 
   const navItems = [
     { label: 'Simulator', path: '/', icon: Activity },
@@ -84,6 +96,16 @@ export const Header: React.FC = () => {
               <span>Cloud Run</span>
             </div>
 
+            {/* Interactive Tutorial Button */}
+            <button
+              onClick={handleStartTutorial}
+              className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-blue-50 hover:bg-blue-100 active:bg-blue-200 text-blue-700 hover:text-blue-900 border border-blue-200/90 font-bold text-xs shadow-2xs transition-all cursor-pointer shrink-0"
+              title="Start Interactive Tutorial & Walkthrough"
+            >
+              <Compass className="w-3.5 h-3.5 text-blue-600 shrink-0" />
+              <span>Tutorial</span>
+            </button>
+
             {/* GitHub Repo Link (always visible) */}
             <a
               href="https://github.com/zhane/z-wbe-bottleneck-lab"
@@ -101,6 +123,13 @@ export const Header: React.FC = () => {
 
       {/* Mobile & Tablet Responsive Navigation Strip (<lg) */}
       <div className="flex lg:hidden items-center justify-start sm:justify-center border-t border-slate-200/70 bg-white/95 px-3 py-2 overflow-x-auto gap-1 shadow-xs">
+        <button
+          onClick={handleStartTutorial}
+          className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-bold whitespace-nowrap shrink-0 bg-blue-50 text-blue-700 border border-blue-200 shadow-xs cursor-pointer"
+        >
+          <Compass className="w-3.5 h-3.5 text-blue-600 shrink-0" />
+          <span>Tutorial</span>
+        </button>
         {navItems.map((item) => {
           const Icon = item.icon;
           const isActive = location.pathname === item.path;

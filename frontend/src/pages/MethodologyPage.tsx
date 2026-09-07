@@ -187,10 +187,42 @@ export const MethodologyPage: React.FC = () => {
           </div>
 
           <div className="p-3 rounded-lg bg-slate-50 border border-slate-200 space-y-1">
-            <span className="text-slate-500 text-[10px] uppercase font-bold">8. Normalized Pressure</span>
+            <span className="text-slate-500 text-[10px] uppercase font-bold">8. Normalized Constraint Pressure</span>
             <div className="text-slate-900 font-bold">Pressure_i = (Demand_i / Capacity_i) * 100</div>
             <p className="text-[11px] font-sans text-slate-500">
               Dimensionless score where 100% indicates constraint saturation.
+            </p>
+          </div>
+
+          <div className="p-3 rounded-lg bg-slate-50 border border-slate-200 space-y-1">
+            <span className="text-slate-500 text-[10px] uppercase font-bold">9. Manual Proofreading Burden</span>
+            <div className="text-slate-900 font-bold">H_proof = (V * H_base * ((1 - Acc) / 0.02)) / S_proof</div>
+            <p className="text-[11px] font-sans text-slate-500">
+              Person-hours required to correct segmentation merge and split errors across the volume.
+            </p>
+          </div>
+
+          <div className="p-3 rounded-lg bg-slate-50 border border-slate-200 space-y-1">
+            <span className="text-slate-500 text-[10px] uppercase font-bold">10. Interconnect Bandwidth</span>
+            <div className="text-slate-900 font-bold">B_interconnect = Synapses * ν_fire * f_cross * bytes_spike</div>
+            <p className="text-[11px] font-sans text-slate-500">
+              Cross-partition node fabric bandwidth for continuous spike synchronization.
+            </p>
+          </div>
+
+          <div className="p-3 rounded-lg bg-slate-50 border border-slate-200 space-y-1">
+            <span className="text-slate-500 text-[10px] uppercase font-bold">11. Total Power Demand</span>
+            <div className="text-slate-900 font-bold">P_total = (P_compute + P_memory_network) * PUE</div>
+            <p className="text-[11px] font-sans text-slate-500">
+              Facility electricity consumption across compute clusters, memory buses, and cooling.
+            </p>
+          </div>
+
+          <div className="p-3 rounded-lg bg-slate-50 border border-slate-200 space-y-1">
+            <span className="text-slate-500 text-[10px] uppercase font-bold">12. Total Pipeline Cost</span>
+            <div className="text-slate-900 font-bold">C_total = C_imaging + (C_storage + C_compute + C_energy) * T + C_proof</div>
+            <p className="text-[11px] font-sans text-slate-500">
+              Aggregated capital and operational expenditures across the full project lifecycle.
             </p>
           </div>
         </div>

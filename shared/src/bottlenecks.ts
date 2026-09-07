@@ -40,13 +40,7 @@ function formatNumber(num: number, decimals: number = 2): string {
   return num.toFixed(decimals);
 }
 
-function formatBytes(bytes: number): string {
-  if (!isFinite(bytes) || bytes <= 0) return '0 B';
-  const units = ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB'];
-  const i = Math.floor(Math.log(bytes) / Math.log(1024));
-  const clampedI = Math.min(units.length - 1, Math.max(0, i));
-  return `${(bytes / Math.pow(1024, clampedI)).toFixed(2)} ${units[clampedI]}`;
-}
+
 
 export function calculateBottlenecks(
   assumptions: ScenarioAssumptions,

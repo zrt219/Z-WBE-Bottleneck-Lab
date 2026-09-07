@@ -1,6 +1,15 @@
 import React from 'react';
-import { BottleneckResult, CalculatedMetrics } from '@z-wbe/shared';
-import { ShieldCheck, Camera, Database, Cpu, Play, CheckCircle, AlertOctagon, ArrowDown } from 'lucide-react';
+import {
+  BottleneckResult,
+  CalculatedMetrics,
+  formatBytes,
+  formatComputeFlops,
+  formatBandwidth,
+  formatPowerDemand
+} from '@z-wbe/shared';
+import { ShieldCheck, Camera, Database, Cpu, Play, CheckCircle, AlertOctagon, ArrowDown, Info } from 'lucide-react';
+import { Tooltip } from './Tooltip';
+import { PIPELINE_STAGE_TOOLTIPS } from '../data/tooltipData';
 
 interface WbePipelineMapProps {
   bottleneck: BottleneckResult;
@@ -91,7 +100,7 @@ export const WbePipelineMap: React.FC<WbePipelineMapProps> = ({ bottleneck, metr
       description: 'Channel inference, synaptic polarity, biophysical state mapping',
       icon: Cpu,
       pressureScore: functionalizationScore,
-      demandFormatted: `Model: ${(metrics.modelStateBytes / 1e12).toFixed(2)} TB state`,
+      demandFormatted: `Model: ${formatBytes(metrics.modelStateBytes)} state`,
       capacityFormatted: 'Biophysical graph synthesis',
       isDominant: bottleneck.dominantBottleneck === 'STORAGE',
       isSecond: bottleneck.secondBottleneck === 'STORAGE'
@@ -103,8 +112,8 @@ export const WbePipelineMap: React.FC<WbePipelineMapProps> = ({ bottleneck, metr
       description: 'Real-time numerical simulation (compute, memory, power)',
       icon: Play,
       pressureScore: executionScore,
-      demandFormatted: `${metrics.computeDemandPflops.toFixed(2)} PFLOPS / ${metrics.memoryTrafficTbS.toFixed(1)} TB/s`,
-      capacityFormatted: `${metrics.totalPowerDemandMw.toFixed(2)} MW demand`,
+      demandFormatted: `${formatComputeFlops(metrics.computeDemandFlops)} / ${formatBandwidth(metrics.memoryTrafficTbS)}`,
+      capacityFormatted: `${formatPowerDemand(metrics.totalPowerDemandMw)} demand`,
       isDominant: ['COMPUTE', 'MEMORY_BANDWIDTH', 'INTERCONNECT', 'POWER'].includes(bottleneck.dominantBottleneck),
       isSecond: ['COMPUTE', 'MEMORY_BANDWIDTH', 'INTERCONNECT', 'POWER'].includes(bottleneck.secondBottleneck)
     },
@@ -151,7 +160,7 @@ export const WbePipelineMap: React.FC<WbePipelineMapProps> = ({ bottleneck, metr
   };
 
   return (
-    <div className="h-full bg-white border border-slate-200/90 rounded-2xl p-5 sm:p-6 shadow-card space-y-5 flex flex-col">
+    <div id="tour-pipeline-map" className="h-full bg-white border border-slate-200/90 rounded-2xl p-5 sm:p-6 shadow-card space-y-5 flex flex-col">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 border-b border-slate-100 pb-3.5">
         <div>
           <h2 className="text-xs font-bold uppercase tracking-wider text-slate-900 flex items-center space-x-1.5">
@@ -181,6 +190,7 @@ export const WbePipelineMap: React.FC<WbePipelineMapProps> = ({ bottleneck, metr
       <div className="space-y-3.5">
         {stages.map((stage, idx) => {
           const sev = getSeverity(stage.pressureScore);
+          const stageTooltip = PIPELINE_STAGE_TOOLTIPS[stage.id.toLowerCase()];
           return (
             <div key={stage.id} className="relative">
               <div
@@ -212,9 +222,12 @@ export const WbePipelineMap: React.FC<WbePipelineMapProps> = ({ bottleneck, metr
                     </div>
                     <div>
                       <div className="flex items-center space-x-2">
-                        <span className="font-extrabold text-xs text-slate-900 tracking-tight">
-                          {stage.name}
-                        </span>
+                        <Tooltip info={stageTooltip}>
+                          <span className="font-extrabold text-xs text-slate-900 tracking-tight cursor-help border-b border-dotted border-slate-300 hover:text-blue-600 transition-colors flex items-center space-x-1">
+                            <span>{stage.name}</span>
+                            <Info className="w-3 h-3 text-slate-400 hover:text-blue-600 shrink-0" />
+                          </span>
+                        </Tooltip>
                         <span className={`text-[9px] font-mono font-bold px-2 py-0.5 rounded-md border ${sev.bg}`}>
                           {sev.label}
                         </span>

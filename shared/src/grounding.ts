@@ -481,8 +481,7 @@ export function repairAndParseNemotronResponse(
       'WHAT REMAINS UNCERTAIN\\??',
       'UNCERTAINTIES',
       'WHAT NEEDS REAL EXPERIMENTAL EVIDENCE\\??',
-      'WHAT WOULD NEED EMPIRICAL VALIDATION\\??'
-    ]) || rawContent.slice(0, 300);
+    ]) || (rawContent.trim() ? rawContent.trim() : 'Calculated from deterministic scenario metrics.');
 
   const why =
     extractSection('WHY\\??', [

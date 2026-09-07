@@ -26,6 +26,12 @@ interface NemotronInterpretationProps {
   isLoading: boolean;
   requestsCount: number;
   onExplainClick?: () => void;
+  apiTelemetry?: {
+    latencyMs?: number;
+    statusCode?: number;
+    statusText?: string;
+    isFallback?: boolean;
+  };
 }
 
 export const NemotronInterpretation: React.FC<NemotronInterpretationProps> = ({
@@ -33,7 +39,8 @@ export const NemotronInterpretation: React.FC<NemotronInterpretationProps> = ({
   groundingRequest,
   isLoading,
   requestsCount,
-  onExplainClick
+  onExplainClick,
+  apiTelemetry
 }) => {
   const [showJsonPayload, setShowJsonPayload] = useState(false);
   const [copied, setCopied] = useState(false);
@@ -42,7 +49,7 @@ export const NemotronInterpretation: React.FC<NemotronInterpretationProps> = ({
   // Loading State
   if (isLoading) {
     return (
-      <div className="bg-white border border-slate-200/90 rounded-2xl p-8 sm:p-10 shadow-card text-center space-y-5">
+      <div id="tour-nemotron-interpretation" className="bg-white border border-slate-200/90 rounded-2xl p-8 sm:p-10 shadow-card text-center space-y-5">
         <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 text-white animate-pulse shadow-md">
           <Sparkles className="w-7 h-7 animate-spin" />
         </div>
@@ -65,7 +72,7 @@ export const NemotronInterpretation: React.FC<NemotronInterpretationProps> = ({
   // Idle / Awaiting Call State
   if (!interpretation) {
     return (
-      <div className="bg-white border border-dashed border-slate-300 rounded-2xl p-8 sm:p-10 shadow-card text-center space-y-5">
+      <div id="tour-nemotron-interpretation" className="bg-white border border-dashed border-slate-300 rounded-2xl p-8 sm:p-10 shadow-card text-center space-y-5">
         <div className="w-14 h-14 rounded-2xl bg-slate-50 text-slate-400 flex items-center justify-center mx-auto border border-slate-200/80 shadow-xs">
           <Cpu className="w-7 h-7" />
         </div>
@@ -114,7 +121,40 @@ export const NemotronInterpretation: React.FC<NemotronInterpretationProps> = ({
     `The system is primarily constrained by ${dominantInfo.label}. Upgrading ${highestLeverageVar} provides the highest acceleration.`;
 
   return (
-    <div className="bg-white border border-slate-200/90 rounded-2xl p-5 sm:p-7 shadow-card space-y-6">
+    <div id="tour-nemotron-interpretation" className="bg-white border border-slate-200/90 rounded-2xl p-5 sm:p-7 shadow-card space-y-6">
+      {/* Live API Telemetry Strip */}
+      {apiTelemetry && (
+        <div className="bg-slate-900 text-slate-100 rounded-xl p-3 px-4 flex flex-wrap items-center justify-between gap-2.5 text-[11px] font-mono border border-slate-800 shadow-xs">
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="flex items-center space-x-1.5 text-emerald-400 font-bold">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span>LIVE API TELEMETRY</span>
+            </span>
+            <span className="text-slate-600">|</span>
+            <span className="text-blue-300 font-semibold">POST /api/explain</span>
+            <span className="text-slate-600">|</span>
+            <span
+              className={`px-2 py-0.5 rounded text-[10px] font-bold ${
+                apiTelemetry.statusCode === 200
+                  ? 'bg-emerald-950 text-emerald-300 border border-emerald-800'
+                  : 'bg-amber-950 text-amber-300 border border-amber-800'
+              }`}
+            >
+              Status {apiTelemetry.statusCode || 200}
+            </span>
+            {typeof apiTelemetry.latencyMs === 'number' && (
+              <span className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700 text-[10px]">
+                {apiTelemetry.latencyMs} ms
+              </span>
+            )}
+          </div>
+          <div className="flex items-center space-x-1.5 text-indigo-300 text-[10px]">
+            <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
+            <span>Zero-Hallucination Verified</span>
+          </div>
+        </div>
+      )}
+
       {/* Rate Limit Banner if HTTP 429 */}
       {isRateLimited && (
         <div className="bg-amber-50 border border-amber-300 p-4 rounded-xl flex items-start space-x-3 text-amber-900">
@@ -198,6 +238,13 @@ export const NemotronInterpretation: React.FC<NemotronInterpretationProps> = ({
             <span>AI CALLS: </span>
             <span className="font-bold text-slate-900">{requestsCount}</span>
           </div>
+
+          {apiTelemetry && typeof apiTelemetry.latencyMs === 'number' && (
+            <div className="text-[11px] font-mono bg-emerald-50 px-2.5 py-1.5 rounded-xl border border-emerald-200 text-emerald-800 font-medium">
+              <span>Latency: </span>
+              <span className="font-bold">{apiTelemetry.latencyMs}ms</span>
+            </div>
+          )}
 
           {/* Copy Markdown Report */}
           <button

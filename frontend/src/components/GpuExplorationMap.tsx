@@ -110,13 +110,13 @@ export const GpuExplorationMap: React.FC = () => {
         <div className="p-3 rounded-xl bg-slate-50/80 border border-slate-200/80 shadow-xs">
           <span className="text-[10px] text-slate-400 uppercase font-semibold">CPU pandas Runtime</span>
           <div className="font-bold text-slate-900 mt-0.5 text-sm">
-            {b.runtimeCpuSeconds ? `${b.runtimeCpuSeconds.toFixed(2)}s` : 'N/A'}
+            {b.runtimeCpuSeconds ? `${b.runtimeCpuSeconds.toFixed(3)}s` : 'N/A'}
           </div>
         </div>
         <div className="p-3 rounded-xl bg-slate-50/80 border border-slate-200/80 shadow-xs">
           <span className="text-[10px] text-slate-400 uppercase font-semibold">cuDF GPU Runtime</span>
           <div className="font-bold text-emerald-700 mt-0.5 text-sm">
-            {b.runtimeGpuSeconds ? `${b.runtimeGpuSeconds.toFixed(2)}s` : 'N/A'}
+            {b.runtimeGpuSeconds ? `${b.runtimeGpuSeconds.toFixed(3)}s` : 'N/A'}
           </div>
         </div>
         <div className="p-3 rounded-xl bg-slate-50/80 border border-slate-200/80 shadow-xs">
@@ -142,7 +142,7 @@ export const GpuExplorationMap: React.FC = () => {
             const percent = (count / data.sweepCombinationsCount) * 100;
             return (
               <div key={dim} className="flex items-center space-x-2 sm:space-x-3 text-[11px] font-mono">
-                <span className="w-28 sm:w-40 shrink-0 truncate text-slate-800 font-sans text-xs font-bold">
+                <span className="w-36 sm:w-44 shrink-0 text-slate-800 font-sans text-xs font-bold leading-tight">
                   {dim.replace('_', ' ')}
                 </span>
                 <div className="flex-1 bg-slate-200/90 h-2.5 rounded-full overflow-hidden border border-slate-200/60">

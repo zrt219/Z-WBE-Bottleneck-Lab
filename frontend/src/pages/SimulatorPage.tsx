@@ -20,7 +20,8 @@ import { SensitivityLab } from '../components/SensitivityLab';
 import { NemotronInterpretation } from '../components/NemotronInterpretation';
 import { CompareScenariosModal } from '../components/CompareScenariosModal';
 import { GpuExplorationMap } from '../components/GpuExplorationMap';
-import { GitCompare, RotateCcw, Share2, Check } from 'lucide-react';
+import { InteractiveTour } from '../components/InteractiveTour';
+import { GitCompare, RotateCcw, Share2, Check, Compass, ArrowRight } from 'lucide-react';
 
 export const SimulatorPage: React.FC = () => {
   // Check URL query parameters first, then localStorage persistence
@@ -44,6 +45,21 @@ export const SimulatorPage: React.FC = () => {
   const [isCompareOpen, setIsCompareOpen] = useState(false);
   const [bottleneckMovedBanner, setBottleneckMovedBanner] = useState(false);
   const [copiedLink, setCopiedLink] = useState(false);
+
+  // Tutorial / Tour State
+  const [isTourOpen, setIsTourOpen] = useState(false);
+  const [showWelcomeBanner, setShowWelcomeBanner] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return !localStorage.getItem('zwbe_tour_completed');
+    }
+    return false;
+  });
+  const [apiTelemetry, setApiTelemetry] = useState<{
+    latencyMs?: number;
+    statusCode?: number;
+    statusText?: string;
+    isFallback?: boolean;
+  } | undefined>(undefined);
 
   // Nemotron Interpretation State
   const [interpretation, setInterpretation] = useState<GroundingContractResponse | null>(null);
@@ -104,6 +120,7 @@ export const SimulatorPage: React.FC = () => {
 
   const handleExplainScenario = async (targetAssumptions: ScenarioAssumptions = assumptions) => {
     setIsLoadingExplanation(true);
+    const startTime = performance.now();
     try {
       const targetMetrics = calculateAllMetrics(targetAssumptions);
       const targetBottleneck = calculateBottlenecks(targetAssumptions, targetMetrics);
@@ -168,6 +185,13 @@ export const SimulatorPage: React.FC = () => {
       }
     } catch (err) {
       console.warn('Error fetching explanation, running local grounded fallback:', err);
+      const elapsed = Math.round(performance.now() - startTime);
+      setApiTelemetry({
+        latencyMs: elapsed,
+        statusCode: 500,
+        statusText: 'Client-side fallback',
+        isFallback: true
+      });
       try {
         const safeAssumptions = { ...PRESET_DROSOPHILA, ...targetAssumptions };
         const safeMetrics = calculateAllMetrics(safeAssumptions);
@@ -203,8 +227,44 @@ export const SimulatorPage: React.FC = () => {
 
   return (
     <div className="space-y-8 pb-20">
+      {/* Optional Welcome & Tutorial Prompt Banner */}
+      {showWelcomeBanner && (
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-4 rounded-2xl bg-gradient-to-r from-blue-500/10 via-indigo-500/10 to-purple-500/10 border border-blue-200/80 shadow-xs">
+          <div className="flex items-center space-x-3">
+            <div className="w-8 h-8 rounded-xl bg-blue-600 text-white flex items-center justify-center shrink-0 shadow-xs">
+              <Compass className="w-4 h-4" />
+            </div>
+            <div>
+              <div className="text-xs font-bold text-slate-900">New to Z-WBE Bottleneck Lab?</div>
+              <div className="text-[11px] text-slate-600">Take a 60-second guided interactive walkthrough to see how Amdahl's Law shifts constraints.</div>
+            </div>
+          </div>
+          <div className="flex items-center space-x-2 shrink-0">
+            <button
+              onClick={() => {
+                setShowWelcomeBanner(false);
+                setIsTourOpen(true);
+              }}
+              className="flex items-center space-x-1.5 px-3 py-1.5 rounded-xl bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white font-bold text-xs shadow-xs transition-colors cursor-pointer"
+            >
+              <span>Start Walkthrough</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </button>
+            <button
+              onClick={() => {
+                setShowWelcomeBanner(false);
+                localStorage.setItem('zwbe_tour_completed', 'true');
+              }}
+              className="px-2.5 py-1.5 rounded-xl border border-slate-200 hover:bg-slate-100 text-slate-500 text-xs font-medium cursor-pointer"
+            >
+              Dismiss
+            </button>
+          </div>
+        </div>
+      )}
+
       {/* Top Controls: Preset selector, hero trigger, compare button */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-3">
+      <div id="tour-preset-selector" className="flex flex-col md:flex-row md:items-center justify-between gap-3">
         <PresetSelector
           currentAssumptions={assumptions}
           onSelectPreset={handleSelectPreset}
@@ -260,17 +320,17 @@ export const SimulatorPage: React.FC = () => {
       {/* Main 3-Column Layout: Equal-width 1:1:1 Grid, Full-height stretched */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
         {/* Left: Assumptions Controls (1/3 width) */}
-        <div className="w-full flex flex-col">
+        <div id="tour-assumption-controls" className="w-full flex flex-col">
           <AssumptionControls assumptions={assumptions} onChange={setAssumptions} />
         </div>
 
         {/* Center: WBE Pipeline Stages (1/3 width) */}
-        <div className="w-full flex flex-col">
+        <div id="tour-pipeline-map" className="w-full flex flex-col">
           <WbePipelineMap bottleneck={bottleneck} metrics={metrics} />
         </div>
 
         {/* Right: Dominant Bottleneck & Trigger (1/3 width) */}
-        <div className="w-full flex flex-col">
+        <div id="tour-explain-button" className="w-full flex flex-col">
           <DominantBottleneckCard
             bottleneck={bottleneck}
             onExplainClick={() => handleExplainScenario(assumptions)}
@@ -291,14 +351,17 @@ export const SimulatorPage: React.FC = () => {
       <SensitivityLab sensitivity={sensitivity} />
 
       {/* Nemotron Interpretation Layer */}
-      <div id="interpretation-layer" className="scroll-mt-24">
-        <NemotronInterpretation
-          interpretation={interpretation}
-          groundingRequest={groundingPayload}
-          isLoading={isLoadingExplanation}
-          requestsCount={requestsCount}
-          onExplainClick={() => handleExplainScenario(assumptions)}
-        />
+      <div id="tour-nemotron-interpretation" className="scroll-mt-24">
+        <div id="interpretation-layer">
+          <NemotronInterpretation
+            interpretation={interpretation}
+            groundingRequest={groundingPayload}
+            isLoading={isLoadingExplanation}
+            requestsCount={requestsCount}
+            onExplainClick={() => handleExplainScenario(assumptions)}
+            apiTelemetry={apiTelemetry}
+          />
+        </div>
       </div>
 
       {/* GPU Exploration Map */}
@@ -311,6 +374,16 @@ export const SimulatorPage: React.FC = () => {
         baseline={baselineAssumptions}
         modified={assumptions}
         onApplyModifiedAsBaseline={() => setBaselineAssumptions(assumptions)}
+      />
+
+      {/* Interactive Guided Tour */}
+      <InteractiveTour
+        isOpen={isTourOpen}
+        onClose={() => setIsTourOpen(false)}
+        onTriggerApiCall={() => handleExplainScenario(assumptions)}
+        isApiLoading={isLoadingExplanation}
+        hasInterpretation={Boolean(interpretation)}
+        apiTelemetry={apiTelemetry}
       />
     </div>
   );

@@ -102,6 +102,7 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
               <ControlField
                 label="Voxel X"
                 unit="nm"
+                description="Lateral beam scanning resolution along X-axis"
                 tooltipKey="voxelResXNm"
                 value={assumptions.acquisition.voxelResXNm}
                 min={2}
@@ -112,6 +113,7 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
               <ControlField
                 label="Voxel Y"
                 unit="nm"
+                description="Lateral beam scanning resolution along Y-axis"
                 tooltipKey="voxelResYNm"
                 value={assumptions.acquisition.voxelResYNm}
                 min={2}
@@ -122,6 +124,7 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
               <ControlField
                 label="Voxel Z"
                 unit="nm"
+                description="Axial physical sectioning thickness / milling depth along Z-axis"
                 tooltipKey="voxelResZNm"
                 value={assumptions.acquisition.voxelResZNm}
                 min={2}
@@ -134,6 +137,7 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
               <ControlField
                 label="Bits Per Voxel"
                 unit="bits"
+                description="Grayscale digitization bit depth per acquired voxel"
                 tooltipKey="bitsPerVoxel"
                 value={assumptions.acquisition.bitsPerVoxel}
                 min={4}
@@ -144,6 +148,7 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
               <ControlField
                 label="Compression"
                 unit="x"
+                description="Volumetric image dataset lossless compression ratio"
                 tooltipKey="compressionRatio"
                 value={assumptions.acquisition.compressionRatio}
                 min={1}
@@ -167,6 +172,7 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
               <ControlField
                 label="Instrument Count"
                 unit="units"
+                description="Number of parallel multi-beam electron microscopes operating in fleet"
                 tooltipKey="machineCount"
                 value={assumptions.acquisition.machineCount}
                 min={1}
@@ -177,6 +183,7 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
               <ControlField
                 label="Utilization Duty"
                 unit="fraction"
+                description="Effective beam uptime and sample exchange duty cycle (0.1–1.0)"
                 tooltipKey="utilization"
                 value={assumptions.acquisition.utilization}
                 min={0.1}
@@ -276,6 +283,7 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
               <ControlField
                 label="State Per Neuron"
                 unit="bytes"
+                description="Multi-compartment voltage, gating kinetics, and ion channel state memory"
                 tooltipKey="bytesPerNeuron"
                 value={assumptions.neuralModel.bytesPerNeuron}
                 min={64}
@@ -286,6 +294,7 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
               <ControlField
                 label="State Per Synapse"
                 unit="bytes"
+                description="Synaptic weight, vesicle reserve, neurotransmitter, and STDP state memory"
                 tooltipKey="bytesPerSynapse"
                 value={assumptions.neuralModel.bytesPerSynapse}
                 min={4}
@@ -298,20 +307,22 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
               <ControlField
                 label="Ops / Neuron Update"
                 unit="FLOP"
+                description="Floating-point operations per numerical differential update step per neuron"
                 tooltipKey="computeOpsPerNeuronUpdate"
                 value={assumptions.neuralModel.computeOpsPerNeuronUpdate}
-                min={50}
+                min={10}
                 max={5000}
-                step={50}
+                step={10}
                 onChange={(v) => updateNested('neuralModel', 'computeOpsPerNeuronUpdate', v)}
               />
               <ControlField
                 label="Ops / Synapse Event"
                 unit="FLOP"
+                description="FLOPs required to process a single spike arrival and conductance update"
                 tooltipKey="computeOpsPerSynapticEvent"
                 value={assumptions.neuralModel.computeOpsPerSynapticEvent}
-                min={10}
-                max={500}
+                min={5}
+                max={1000}
                 step={5}
                 onChange={(v) => updateNested('neuralModel', 'computeOpsPerSynapticEvent', v)}
               />
@@ -451,6 +462,7 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
               <ControlField
                 label="Target Timeline"
                 unit="years"
+                description="Target operational project duration for scanning and reconstruction"
                 tooltipKey="targetTimelineYears"
                 value={assumptions.economics.targetTimelineYears}
                 min={0.1}
@@ -461,6 +473,7 @@ export const AssumptionControls: React.FC<AssumptionControlsProps> = ({ assumpti
               <ControlField
                 label="Budget Ceiling"
                 unit="USD"
+                description="Total available capital budget ceiling in USD"
                 tooltipKey="budgetCeilingUsd"
                 value={assumptions.economics.budgetCeilingUsd}
                 min={100000}
