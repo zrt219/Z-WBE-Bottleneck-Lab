@@ -32,6 +32,7 @@
 | [`01_google_nvidia_golden_ticket_badges.png`](01_google_nvidia_golden_ticket_badges.png) | Static Image | **Contest Credential Proof**: Proves completion of all 4 official Google Cloud × NVIDIA learning pathways (NIM on GKE, Intro to Inference, GPU Data Analytics with RAPIDS cuDF, and Accelerated ML with cuML). |
 | [`02_hero_bottleneck_shift.gif`](02_hero_bottleneck_shift.gif)<br>*(or [`02b_hero_bottleneck_shift_static.png`](02b_hero_bottleneck_shift_static.png))* | Animated Demo / High-Res PNG | **Core Scientific Thesis**: The signature experiment. When microscopy acquisition is accelerated by 100×, the acquisition bottleneck instantly collapses and shifts to Memory Bandwidth in <1ms. |
 | [`03_tesla_t4_gpu_speedup.png`](03_tesla_t4_gpu_speedup.png) | Static Benchmark | **Empirical Hardware Evidence**: Measured 8.62× pipeline speedup on an NVIDIA Tesla T4 in Google Colab: 1.907 s CPU vs 0.221 s GPU. cudf.pandas provided zero-code-change GPU acceleration for supported pandas operations. |
+| [`60s_full_workflow_walkthrough.gif`](60s_full_workflow_walkthrough.gif)<br>*(or [`60s_full_workflow_walkthrough.mp4`](60s_full_workflow_walkthrough.mp4))* | 60-Second Full Walkthrough (GIF: 981 KB / MP4: 4.65 MB) | **End-to-End Judge-Grade Demo (60.0s)**: Full tutorial covering both the live interactive web lab (100× imaging shift, parameter sliders, Nemotron grounding, 100k GPU map) AND the Google Colab GPU workflow (Tesla T4, cudf.pandas, 8.62× benchmark). Tailored specifically for judge Asier Arranz's recommendation: *"a simple 60 second demo is better than a perfect presentation!"* |
 
 *Note: For multi-image carousels requiring the 4 official golden ticket cards, they are also provided in the [`golden-ticket-cards/`](golden-ticket-cards/) subfolder.*
 
@@ -40,8 +41,9 @@
 ## 💼 1. LinkedIn Master Launch Post
 
 **Recommended Media Attachments**:
-- Option A (Multi-Image Carousel): Attach `01_google_nvidia_golden_ticket_badges.png`, `02b_hero_bottleneck_shift_static.png`, and `03_tesla_t4_gpu_speedup.png` (or the 4 cards in `golden-ticket-cards/`).
-- Option B (Video/GIF): Attach `02_hero_bottleneck_shift.gif` as the lead animated demonstrator.
+- **Option A (60-Second Full Video/GIF Walkthrough — Highly Recommended by Judge Asier Arranz)**: Attach `60s_full_workflow_walkthrough.mp4` or `60s_full_workflow_walkthrough.gif`.
+- **Option B (Multi-Image Carousel)**: Attach `01_google_nvidia_golden_ticket_badges.png`, `02b_hero_bottleneck_shift_static.png`, and `03_tesla_t4_gpu_speedup.png` (or the 4 cards in `golden-ticket-cards/`).
+- **Option C (Signature 5-Second Shift GIF)**: Attach `02_hero_bottleneck_shift.gif`.
 
 ### 📋 Ready-to-Copy LinkedIn Caption
 
