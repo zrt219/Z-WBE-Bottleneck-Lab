@@ -17,7 +17,7 @@ Z-WBE Bottleneck Lab is a scientific web demonstrator addressing a fundamental q
 
 Z-WBE Bottleneck Lab is engineered as a decoupled full-stack scientific application with its live demonstrator deployed on Vercel with serverless edge delivery, alongside a production-ready containerized microservice architected for Google Cloud Run. Structured generative interpretation is powered by NVIDIA Nemotron 3 Super via OpenRouter, and large-scale parameter space exploration is accelerated via NVIDIA RAPIDS.
 
-The architecture strictly isolates deterministic computation from generative interpretation. The client (React 18, TypeScript, Vite, Tailwind CSS) lets users adjust 25+ parameters across tissue volume, multi-beam electron microscopy rates, automated segmentation accuracy, neural model biophysics, hardware specifications, and budgets. The backend (Node.js/Express on Google Cloud Run) executes rigorous analytical scaling equations to calculate physical data volumes, real-time simulation FLOPs, dynamic memory traffic, and thermal dissipation.
+The architecture strictly isolates deterministic computation from generative interpretation. The client (React 18, TypeScript, Vite, Tailwind CSS) lets users adjust 25+ parameters across tissue volume, multi-beam electron microscopy rates, automated segmentation accuracy, neural model biophysics, hardware specifications, and budgets. The backend (Node.js/Express, containerized for Google Cloud Run) executes rigorous analytical scaling equations to calculate physical data volumes, real-time simulation FLOPs, dynamic memory traffic, and thermal dissipation.
 
 The Bottleneck Engine evaluates normalized pressure scores across eight technical dimensions (Acquisition, Reconstruction, Storage, Compute, Memory Bandwidth, Interconnect, Power, Economics), deterministically ranking constraints. A sensitivity engine perturbs variables across 0.5x, 1x, 2x, 10x, and 100x multipliers to map phase transitions and identify highest-leverage parameters.
 
@@ -77,8 +77,9 @@ Whole-brain emulation is often discussed as if it depends on a single breakthrou
 ## 5. Google Cloud Role
 
 * **Google Cloud Run**: Serverless container configuration and Dockerfile provided for hosting the Node.js TypeScript microservice. Provides automatic scaling from zero, sub-second cold starts, and keeps the OpenRouter API key strictly server-side away from client bundles.
-* **Google Cloud Colab Enterprise**: High-performance compute environment used to run the 100,000-scenario Monte Carlo parameter sweep notebook with GPU acceleration.
-* **Google Artifact Registry**: Container image storage and versioning for repeatable continuous integration and deployment.
+* **Google Cloud Colab Enterprise**: High-performance compute environment used to run the Tesla T4 benchmark and the 100,000-scenario Monte Carlo parameter sweep notebook with GPU acceleration.
+* **Cloud Build & Artifact Registry**: Builds the multi-stage Dockerfile and manages immutable container image revisions.
+* **Secret Manager**: Externalized secret management provisioning credentials directly to Cloud Run without committing or exposing keys.
 * **Deployment Architecture**: Public demonstrator deployed on Vercel with serverless edge caching; backend microservice containerized and prepared for Google Cloud Run. OpenRouter brokers model inference to NVIDIA Nemotron 3 Super.
 
 ---
@@ -87,6 +88,7 @@ Whole-brain emulation is often discussed as if it depends on a single breakthrou
 
 * **NVIDIA Nemotron 3 Super (`nvidia/nemotron-3-super-120b-a12b:free`)**: 120B-parameter open hybrid Mamba-Transformer architecture serving as the scientific interpretation layer via OpenRouter.
 * **NVIDIA RAPIDS (`cudf.pandas`)**: Zero-code-change GPU acceleration for pandas workflows, evaluating 100,000 scenario combinations across 8 technical dimensions in parallel on GPU memory.
+* **NVIDIA Tesla T4 GPU**: Measured 8.62× end-to-end pipeline acceleration (88.4% execution time reduction) across tabular data loading, feature engineering, and model training in Google Cloud Colab Enterprise.
 
 ---
 

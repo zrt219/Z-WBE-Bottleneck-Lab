@@ -322,7 +322,7 @@ export const SimulatorPage: React.FC = () => {
                 <span>4 Verified Learning Pathways (Sep 7, 2026)</span>
               </span>
               <span className="text-slate-300 hidden sm:inline">•</span>
-              <span className="hidden sm:inline text-slate-500">Google Cloud Run Microservice Host</span>
+              <span className="hidden sm:inline text-slate-500">Cloud Run Container Architecture</span>
             </div>
           </div>
         </div>

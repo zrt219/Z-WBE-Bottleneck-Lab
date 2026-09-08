@@ -76,8 +76,8 @@ Submit before **September 10, 11:59 PM PST** at: **[forms.gle/pVjTK6H8Vx4WtFWs5]
 * **Live Demo URL**: `https://z-wbe-bottleneck-lab.vercel.app`
 * **GitHub Repository URL**: `https://github.com/zrt219/Z-WBE-Bottleneck-Lab`
 * **Open Model Used**: `NVIDIA Nemotron 3 Super (nvidia/nemotron-3-super-120b-a12b:free) via OpenRouter`
-* **Google Cloud Technologies Used**: `Google Cloud Run (serverless container hosting), Google Cloud Colab Enterprise (GPU notebook execution), Google Artifact Registry`
-* **NVIDIA Technologies Used**: `NVIDIA Nemotron 3 Super 120B (Mamba-Transformer hybrid open model), NVIDIA RAPIDS (cudf.pandas GPU acceleration)`
+* **Google Cloud Technologies Used**: `Google Cloud Run (serverless container hosting), Google Cloud Colab Enterprise (GPU notebook execution), Cloud Build, Artifact Registry, Secret Manager`
+* **NVIDIA Technologies Used**: `NVIDIA Nemotron 3 Super 120B (Mamba-Transformer hybrid open model), NVIDIA RAPIDS (cudf.pandas GPU acceleration), NVIDIA Tesla T4 GPU (empirical 8.62× pipeline acceleration)`
 * **Which Learning Pathways did you complete?**: 
   - *Speed Up Data Analytics on GPUs*
   - *Deploy Faster Generative AI Models with NVIDIA NIM on GKE*

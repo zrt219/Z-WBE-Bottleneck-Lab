@@ -76,7 +76,7 @@ export const ContestBadgesModal: React.FC<ContestBadgesModalProps> = ({ isOpen, 
                   <span>Architecture & Foundation Model Integration</span>
                 </div>
                 <p className="text-slate-700 leading-relaxed text-xs sm:text-sm">
-                  Z-WBE Bottleneck Lab was engineered for the Google Cloud × NVIDIA Developer Challenge, demonstrating rigorous epistemic decoupling: pure deterministic TypeScript scaling equations hosted on <strong>Google Cloud Run</strong> coupled with grounded scientific interpretation via <strong>NVIDIA Nemotron 3 Super 120B</strong> (free on OpenRouter) and large-scale parameter space exploration via <strong>NVIDIA RAPIDS</strong>.
+                  Z-WBE Bottleneck Lab was engineered for the Google Cloud × NVIDIA Developer Challenge, demonstrating rigorous epistemic decoupling: pure deterministic TypeScript scaling equations containerized for <strong>Google Cloud Run</strong> coupled with grounded scientific interpretation via <strong>NVIDIA Nemotron 3 Super 120B</strong> (free on OpenRouter) and large-scale parameter space exploration via <strong>NVIDIA RAPIDS</strong>.
                 </p>
               </div>
 

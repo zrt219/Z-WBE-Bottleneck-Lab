@@ -27,8 +27,8 @@ export const ArchitecturePage: React.FC = () => {
               Complete Inference & Simulation Flow
             </h2>
           </div>
-          <span className="text-[10px] font-mono text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
-            Deployed on Google Cloud Run
+          <span className="text-[10px] font-mono text-blue-700 bg-blue-50 px-2 py-0.5 rounded border border-blue-200">
+            Containerized for Google Cloud Run
           </span>
         </div>
 

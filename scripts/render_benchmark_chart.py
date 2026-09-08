@@ -22,10 +22,10 @@ x = np.arange(len(stages))
 width = 0.35
 
 rects1 = ax1.bar(x - width/2, cpu_times, width, label='CPU (Host 8-Core)', color='#64748b', edgecolor='#334155', linewidth=1.2)
-rects2 = ax1.bar(x + width/2, gpu_times, width, label='GPU (NVIDIA L4 24GB cuDF)', color='#10b981', edgecolor='#047857', linewidth=1.2)
+rects2 = ax1.bar(x + width/2, gpu_times, width, label='GPU (NVIDIA Tesla T4 cuDF)', color='#10b981', edgecolor='#047857', linewidth=1.2)
 
 ax1.set_ylabel('Execution Time (seconds, log scale)', fontsize=12, fontweight='bold', color='#1e293b')
-ax1.set_title('Pipeline Stage Execution Time (Lower is Better)\nNVIDIA L4 vs 8-Core Host CPU', fontsize=13, fontweight='bold', color='#0f172a', pad=12)
+ax1.set_title('Pipeline Stage Execution Time (Lower is Better)\nNVIDIA T4 GPU vs Host CPU', fontsize=13, fontweight='bold', color='#0f172a', pad=12)
 ax1.set_xticks(x)
 ax1.set_xticklabels(stages, rotation=15, ha='right', fontsize=10, fontweight='bold')
 ax1.set_yscale('log')
@@ -66,7 +66,7 @@ for i, spd in enumerate(all_speedups):
 ax2.set_xlim(0, max(all_speedups) * 1.25)
 
 # Overall Callout Box
-callout_text = f"Overall Speedup: {data['overall_speedup_multiplier']:.2f}x\nTotal Time Saved: {data['time_saved_percent']}%\nHardware: NVIDIA L4 Tensor Core"
+callout_text = f"Overall Speedup: {data['overall_speedup_multiplier']:.2f}x\nTotal Time Saved: {data['time_saved_percent']}%\nHardware: NVIDIA Tesla T4"
 fig.text(0.5, 0.02, callout_text, ha='center', fontsize=11, fontweight='bold',
          color='#0f172a', bbox=dict(boxstyle="round,pad=0.5", fc="#f8fafc", ec="#94a3b8", lw=1.5))
 

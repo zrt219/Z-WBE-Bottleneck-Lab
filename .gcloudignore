@@ -19,3 +19,6 @@ nyc_taxi_data/
 notebooks/.ipynb_checkpoints/
 *.pyc
 __pycache__/
+scratch/
+marketing ads/
+submission-kit/recordings/

@@ -33,7 +33,7 @@ export const AboutPage: React.FC = () => {
               Z-WBE Bottleneck Lab
             </h1>
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl font-medium">
-              A scientific web demonstrator addressing technological scaling constraints in Whole Brain Emulation. Built with open foundation models (<strong>NVIDIA Nemotron 3 Super 120B</strong>) on <strong>Google Cloud Run</strong> and accelerated with <strong>NVIDIA RAPIDS</strong>.
+              A scientific web demonstrator addressing technological scaling constraints in Whole Brain Emulation. Built with open foundation models (<strong>NVIDIA Nemotron 3 Super 120B</strong>), containerized for <strong>Google Cloud Run</strong>, and accelerated with <strong>NVIDIA RAPIDS</strong>.
             </p>
           </div>
 
@@ -57,7 +57,7 @@ export const AboutPage: React.FC = () => {
             <div className="p-3 rounded-xl bg-slate-800/60 border border-slate-700/60 backdrop-blur-xs">
               <div className="text-base">☁️</div>
               <div className="font-bold text-white mt-1">Cloud Native</div>
-              <div className="text-[11px] text-slate-400">Serverless Google Cloud Run microservice</div>
+              <div className="text-[11px] text-slate-400">Containerized Google Cloud Run microservice</div>
             </div>
           </div>
 

@@ -46,8 +46,8 @@ const isDirectExecution = process.argv[1] && (
 
 if (process.env.NODE_ENV !== 'test' && !process.env.VERCEL && isDirectExecution) {
   validateStartupEnvironment();
-  app.listen(config.port, () => {
-    console.log(`[Z-WBE Backend] Server listening on port ${config.port}`);
+  app.listen(config.port, '0.0.0.0', () => {
+    console.log(`[Z-WBE Backend] Server listening on 0.0.0.0:${config.port}`);
   });
 }
 

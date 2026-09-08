@@ -289,14 +289,17 @@ To evaluate where a proposed emulation architecture fails, the engine normalizes
 
 * **NVIDIA Nemotron 3 Super 120B**: Open model accessed via OpenRouter (`nvidia/nemotron-3-super-120b-a12b:free`) to synthesize multi-dimensional scientific trade-offs.
 * **NVIDIA RAPIDS cuDF**: Accelerates Monte Carlo parameter sweeps using `cudf.pandas` in Google Cloud Colab Enterprise.
+* **NVIDIA Tesla T4 GPU Benchmark**: 8.62× measured end-to-end acceleration (88.4% time reduction) across tabular ML pipeline stages with cuDF and GPU XGBoost.
 * **NVIDIA NIM on GKE Architecture**: Informs microservice containerization, structured inference caching, and deterministic grounding contracts.
 
 ---
 
 ## 10. Google Cloud Infrastructure
 
-* **Google Cloud Run**: Hosts the containerized Node.js TypeScript API, managing sub-second cold starts, automated scaling, and secure environment variable isolation.
-* **Google Cloud Colab Enterprise**: High-performance GPU notebook execution environment used to simulate 100,000 scenario combinations with RAPIDS cuDF.
+* **Google Cloud Run**: Serverless container configuration and Dockerfile provided for hosting the Node.js TypeScript API, managing sub-second cold starts, automated scaling, and secure environment variable isolation.
+* **Google Cloud Colab Enterprise**: High-performance GPU notebook execution environment used to execute the Tesla T4 benchmark and simulate 100,000 scenario combinations with RAPIDS cuDF.
+* **Cloud Build & Artifact Registry**: Automated container image construction and registry storage for Cloud Run revisions.
+* **Secret Manager**: Secure externalized storage for OpenRouter credentials outside client-side application code.
 * **GKE Architectural Alignment**: Follows Google Kubernetes Engine best practices for hosting accelerated microservices.
 
 ---

@@ -1,6 +1,6 @@
 {
   "timestamp": "2026-09-07T08:26:48Z",
-  "hardware_profile": "NVIDIA L4 Tensor Core GPU (24GB VRAM) vs 8-Core Host CPU",
+  "hardware_profile": "NVIDIA Tesla T4 GPU vs host CPU",
   "cpu_times": {
     "Load Data": 0.04171150000183843,
     "Clean Data": 0.0034339000121690333,
