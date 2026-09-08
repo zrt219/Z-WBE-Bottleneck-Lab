@@ -870,23 +870,48 @@ npm test
   * [Intro to Inference: How to Run AI Models on a GPU](https://developers.google.com/profile/badges/playlists/ai-models-on-gpu-intro?u=zhane) • [Pathway](https://developers.google.com/learn/pathways/ai-models-on-gpu-intro)
 
 <div align="center" style="margin-top: 16px; margin-bottom: 20px;">
-  <table width="100%" align="center">
-    <tr>
-      <td width="50%" align="center">
-        <a href="./public/images/google-nvidia-developer-badges.png">
-          <img src="./public/images/google-nvidia-developer-badges.png" alt="Google Cloud x NVIDIA 4/4 Complete Sweep Developer Badges" width="100%" style="border-radius: 8px; border: 1px solid #333;" />
-        </a><br />
-        <strong>4/4 Verified Google Cloud × NVIDIA Badges</strong>
-      </td>
-      <td width="50%" align="center">
-        <a href="./public/images/golden_ticket_speed_up_data_analytics.png">
-          <img src="./public/images/golden_ticket_speed_up_data_analytics.png" alt="NVIDIA GTC Berlin Golden Ticket Winner Card" width="100%" style="border-radius: 8px; border: 1px solid #333;" />
-        </a><br />
-        <strong>NVIDIA GTC Berlin Golden Ticket Pathway Card</strong>
-      </td>
-    </tr>
-  </table>
+  <a href="./public/images/google-nvidia-developer-badges.png">
+    <img src="./public/images/google-nvidia-developer-badges.png" alt="Google Cloud x NVIDIA 4/4 Complete Sweep Developer Badges" width="760" style="border-radius: 8px; border: 1px solid #333; box-shadow: 0 4px 16px rgba(0,0,0,0.15);" />
+  </a>
+  <p><strong>4/4 Verified Google Cloud × NVIDIA Learning Pathway Developer Badges</strong></p>
 </div>
+
+### 🎟️ Official Google Cloud × NVIDIA Golden Ticket Completion Cards (4/4 Complete Sweep)
+
+<table width="100%" align="center">
+  <tr>
+    <td width="50%" align="center">
+      <a href="./public/images/golden_ticket_nim_gke.png">
+        <img src="./public/images/golden_ticket_nim_gke.png" alt="Deploy Faster Generative AI Models with NVIDIA NIM on GKE - Golden Ticket" width="100%" style="border-radius: 8px; border: 1px solid #333;" />
+      </a><br />
+      <strong>1. Generative AI with NVIDIA NIM on GKE</strong><br />
+      <em>Deploy Faster Generative AI Models with NVIDIA NIM on GKE</em>
+    </td>
+    <td width="50%" align="center">
+      <a href="./public/images/golden_ticket_data_analytics.png">
+        <img src="./public/images/golden_ticket_data_analytics.png" alt="Speed Up Data Analytics on GPUs - Golden Ticket" width="100%" style="border-radius: 8px; border: 1px solid #333;" />
+      </a><br />
+      <strong>2. Speed Up Data Analytics on GPUs</strong><br />
+      <em>Accelerated Data Analytics with NVIDIA RAPIDS &amp; cuDF</em>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <a href="./public/images/golden_ticket_accelerated_ml.png">
+        <img src="./public/images/golden_ticket_accelerated_ml.png" alt="Accelerated Machine Learning with Google Cloud and NVIDIA - Golden Ticket" width="100%" style="border-radius: 8px; border: 1px solid #333;" />
+      </a><br />
+      <strong>3. Accelerated Machine Learning</strong><br />
+      <em>Accelerated Machine Learning with Google Cloud &amp; NVIDIA</em>
+    </td>
+    <td width="50%" align="center">
+      <a href="./public/images/golden_ticket_intro_inference.png">
+        <img src="./public/images/golden_ticket_intro_inference.png" alt="Intro to Inference: How to Run AI Models on a GPU - Golden Ticket" width="100%" style="border-radius: 8px; border: 1px solid #333;" />
+      </a><br />
+      <strong>4. Intro to Inference</strong><br />
+      <em>Intro to Inference: How to Run AI Models on a GPU</em>
+    </td>
+  </tr>
+</table>
 ---
 
 <div align="center">
