@@ -15,7 +15,7 @@ Z-WBE Bottleneck Lab is a scientific web demonstrator addressing a fundamental q
 
 ## 2. 250-Word Technical Description
 
-Z-WBE Bottleneck Lab is engineered as a decoupled full-stack scientific application deployed on Google Cloud Run with structured generative interpretation powered by NVIDIA Nemotron 3 Super via OpenRouter and large-scale parameter space exploration via NVIDIA RAPIDS.
+Z-WBE Bottleneck Lab is engineered as a decoupled full-stack scientific application with its live demonstrator deployed on Vercel with serverless edge delivery, alongside a production-ready containerized microservice architected for Google Cloud Run. Structured generative interpretation is powered by NVIDIA Nemotron 3 Super via OpenRouter, and large-scale parameter space exploration is accelerated via NVIDIA RAPIDS.
 
 The architecture strictly isolates deterministic computation from generative interpretation. The client (React 18, TypeScript, Vite, Tailwind CSS) lets users adjust 25+ parameters across tissue volume, multi-beam electron microscopy rates, automated segmentation accuracy, neural model biophysics, hardware specifications, and budgets. The backend (Node.js/Express on Google Cloud Run) executes rigorous analytical scaling equations to calculate physical data volumes, real-time simulation FLOPs, dynamic memory traffic, and thermal dissipation.
 
@@ -76,10 +76,10 @@ Whole-brain emulation is often discussed as if it depends on a single breakthrou
 
 ## 5. Google Cloud Role
 
-* **Google Cloud Run**: Serverless container execution hosting the Node.js TypeScript API and React frontend. Provides automatic scaling from zero, sub-second cold starts, and keeps the OpenRouter API key strictly server-side away from client bundles.
+* **Google Cloud Run**: Serverless container configuration and Dockerfile provided for hosting the Node.js TypeScript microservice. Provides automatic scaling from zero, sub-second cold starts, and keeps the OpenRouter API key strictly server-side away from client bundles.
 * **Google Cloud Colab Enterprise**: High-performance compute environment used to run the 100,000-scenario Monte Carlo parameter sweep notebook with GPU acceleration.
 * **Google Artifact Registry**: Container image storage and versioning for repeatable continuous integration and deployment.
-* **Truthful Architecture**: OpenRouter brokers model inference to NVIDIA Nemotron 3 Super; Google Cloud Run hosts the application service and deterministic compute layer.
+* **Deployment Architecture**: Public demonstrator deployed on Vercel with serverless edge caching; backend microservice containerized and prepared for Google Cloud Run. OpenRouter brokers model inference to NVIDIA Nemotron 3 Super.
 
 ---
 
@@ -150,7 +150,7 @@ Whole-brain emulation is often discussed as if it depends on a single breakthrou
 ## 11. Technical Innovation
 
 **Epistemological Decoupling of Deterministic Physics from Generative Reasoning.**  
-Unlike typical AI applications that prompt models to estimate or compute engineering values, Z-WBE Bottleneck Lab computes all physical, biological, and economic values using pure deterministic TypeScript algorithms. NVIDIA Nemotron 3 Super is deployed solely as an analytical reasoning interface over verified numbers, eliminating scientific hallucinations while delivering clear causal explanations.
+Unlike typical AI applications that prompt models to estimate or compute engineering values, Z-WBE Bottleneck Lab computes all physical, biological, and economic values using pure deterministic TypeScript algorithms. NVIDIA Nemotron 3 Super is deployed solely as an analytical reasoning interface over verified numbers, enforcing a strict grounding boundary while delivering clear causal explanations.
 
 ---
 
@@ -201,7 +201,7 @@ The debate surrounding Whole Brain Emulation (WBE) is often divided into isolate
 * **The Hero Demo Moment**: Testing *"What happens if imaging becomes 100x faster?"* demonstrates that eliminating microscopy barriers immediately shifts the dominant constraint to memory bandwidth.
 * **Session Counter & In-Memory Caching**: Tracks `AI REQUESTS THIS SESSION` to manage free quotas, with deterministic `scenarioHash` caching returning instant results.
 * **GPU Exploration Map**: 100,000-scenario Monte Carlo parameter sweep accelerated via NVIDIA RAPIDS `cudf.pandas` in Google Cloud Colab Enterprise.
-* **Cloud Native**: Scalable, zero-secret-leak backend hosted on **Google Cloud Run**.
+* **Architecture**: High-speed edge deployment on Vercel with containerized microservice ready for Google Cloud Run.
 
 Explore the live demonstrator, technical methodology, and open-source code:
 🌐 Live Lab: https://z-wbe-bottleneck-lab.vercel.app
@@ -221,10 +221,10 @@ Change the assumptions. See what fractures.
 
 Key highlights:
 ⚡ Deterministic scaling equations compute all metrics (FLOPs, TB/s, scan times, costs).
-🧠 NVIDIA Nemotron 3 Super 120B via @OpenRouter explains *why* bottlenecks shift—strictly grounded with zero hallucinations.
+🧠 NVIDIA Nemotron 3 Super 120B via @OpenRouter explains *why* bottlenecks shift—bound by a strict grounding contract.
 💥 The Hero Moment: What happens if imaging gets 100x faster? The bottleneck moves to memory bandwidth.
 📊 100,000 synthetic parameter sweep powered by NVIDIA RAPIDS cuDF & Google Cloud Colab.
-☁️ Deployed seamlessly on Google Cloud Run with zero client API key exposure.
+☁️ High-speed edge deployment on Vercel with containerized microservice ready for Google Cloud Run.
 
 🌐 Experience the live lab: https://z-wbe-bottleneck-lab.vercel.app
 💻 Code & Methodology: https://github.com/zrt219/Z-WBE-Bottleneck-Lab

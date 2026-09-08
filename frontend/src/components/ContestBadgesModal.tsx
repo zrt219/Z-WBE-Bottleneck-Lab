@@ -47,7 +47,7 @@ export const ContestBadgesModal: React.FC<ContestBadgesModalProps> = ({ isOpen, 
                 <div>
                   <div className="flex items-center space-x-2">
                     <span className="text-[11px] font-mono uppercase tracking-wider font-bold bg-blue-900/60 text-blue-200 px-2 py-0.5 rounded-full border border-blue-400/30">
-                      Official Submission
+                      Built for GTC 2026
                     </span>
                     <span className="text-[11px] font-mono text-slate-300">
                       Google Cloud × NVIDIA Developer Challenge 2026
@@ -291,7 +291,7 @@ export const ContestBadgesModal: React.FC<ContestBadgesModalProps> = ({ isOpen, 
                   </span>
                 </div>
                 <p className="text-slate-300 text-xs leading-relaxed">
-                  Z-WBE Bottleneck Lab uses the state-of-the-art open model <code className="font-mono text-amber-300 bg-slate-800 px-1.5 py-0.5 rounded">nvidia/nemotron-3-super-120b-a12b:free</code> to interpret complex biophysical and computational trade-offs. The model operates under a zero-hallucination Epistemic Grounding Contract: all numbers are calculated by deterministic code, while Nemotron explains the causal mechanics.
+                  Z-WBE Bottleneck Lab uses the state-of-the-art open model <code className="font-mono text-amber-300 bg-slate-800 px-1.5 py-0.5 rounded">nvidia/nemotron-3-super-120b-a12b:free</code> to interpret complex biophysical and computational trade-offs. The model operates under a strict Epistemic Grounding Contract: all numbers are calculated by deterministic code within a strict numerical boundary, while Nemotron explains the causal mechanics.
                 </p>
               </div>
 

@@ -24,7 +24,7 @@ export const AboutPage: React.FC = () => {
               <span>Google Cloud × NVIDIA Developer Challenge 2026</span>
             </span>
             <span className="inline-flex items-center space-x-1 px-3 py-1 rounded-full bg-emerald-950/70 text-emerald-300 border border-emerald-400/30 text-xs font-mono font-semibold">
-              <span>Official Submission</span>
+              <span>Built for GTC 2026</span>
             </span>
           </div>
 
@@ -201,7 +201,7 @@ export const AboutPage: React.FC = () => {
                 </span>
               </div>
               <p className="text-slate-600 leading-relaxed">
-                <strong>Architectural Impact:</strong> Unlocked GPU acceleration using NVIDIA RAPIDS <code className="font-mono bg-slate-200/70 px-1 py-0.5 rounded text-slate-900">cudf.pandas</code>. We executed a 100,000-scenario Monte Carlo parameter sweep in Google Cloud Colab Enterprise, accelerating multi-dimensional phase space analysis from 48 minutes down to 2.8 seconds.
+                <strong>Architectural Impact:</strong> Applied GPU acceleration using NVIDIA RAPIDS <code className="font-mono bg-slate-200/70 px-1 py-0.5 rounded text-slate-900">cudf.pandas</code> in Google Cloud Colab Enterprise, unlocking zero-code GPU parallel processing across a 100,000-scenario multi-dimensional parameter exploration sweep.
               </p>
               <div className="flex items-center space-x-3 text-[11px] font-mono pt-1">
                 <a

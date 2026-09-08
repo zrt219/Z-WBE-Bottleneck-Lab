@@ -11,15 +11,15 @@
 [![TypeScript Monorepo](https://img.shields.io/badge/TypeScript-Strict%20Monorepo-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-**Google Cloud × NVIDIA Developer Challenge 2026 Official Submission**  
+**Built for the Google Cloud × NVIDIA GTC Berlin 2026 Golden Ticket Challenge**  
 GitHub Repository: [https://github.com/zrt219/Z-WBE-Bottleneck-Lab](https://github.com/zrt219/Z-WBE-Bottleneck-Lab)  
 Contest Hashtag: **`#NVIDIAGTC`**
 
 ---
 
-## 🏛️ Google Cloud × NVIDIA Developer Challenge 2026: Official Submission
+## 🏛️ Google Cloud × NVIDIA Developer Challenge 2026: Project Demonstrator
 
-**Z-WBE Bottleneck Lab** is an official project submission for the **Google Cloud × NVIDIA Developer Challenge 2026**. Built on strict epistemic separation, the application runs on **Google Cloud Run** and leverages open foundation models (**NVIDIA Nemotron 3 Super 120B** via OpenRouter) alongside **NVIDIA RAPIDS (`cudf.pandas`)** in Google Cloud Colab Enterprise to evaluate multi-dimensional scaling bottlenecks in Whole Brain Emulation.
+**Z-WBE Bottleneck Lab** was built for the **Google Cloud × NVIDIA GTC Berlin 2026 Golden Ticket Challenge**. Built on strict epistemic separation, the public interactive demonstrator is deployed with high-speed global edge delivery on **Vercel**, backed by a production-ready containerized microservice architected for **Google Cloud Run**, and leverages open foundation models (**NVIDIA Nemotron 3 Super 120B** via OpenRouter) alongside **NVIDIA RAPIDS (`cudf.pandas`)** in Google Cloud Colab Enterprise to evaluate multi-dimensional scaling bottlenecks in Whole Brain Emulation.
 
 ---
 
@@ -39,8 +39,8 @@ To develop Z-WBE Bottleneck Lab, the developer completed the official **Google C
 
 | Learning Pathway & Public Badge Link | Verification Status | Architectural Contribution to Z-WBE Bottleneck Lab |
 | :--- | :---: | :--- |
-| **1. [Deploy Faster Generative AI Models with NVIDIA NIM on GKE](https://developers.google.com/profile/badges/playlists/nvidia-deploy-with-gen-ai?u=110918189625880989910)**<br>[🔗 Course Pathway](https://developers.google.com/learn/pathways/deploy-faster-gen-ai-models-nvidia-gke) | ✅ Verified Badge<br>(Sep 7, 2026) | **Containerized Microservice & Inference Gateway**: Informed the high-throughput serverless microservice design on Google Cloud Run. Guided the strict JSON schema serialization, low-latency client caching, and resilient circuit-breaker fallbacks when requesting generative reasoning from NVIDIA Nemotron. |
-| **2. [Speed Up Data Analytics on GPUs](https://developers.google.com/profile/badges/playlists/speed-up-data-analytics-GPUs?u=110918189625880989910)**<br>[🔗 Course Pathway](https://developers.google.com/learn/pathways/speed-up-data-analytics-GPUs) | ✅ Verified Badge<br>(Sep 7, 2026) | **100,000-Scenario Monte Carlo Exploration Map**: Unlocked GPU-accelerated dataframe processing with NVIDIA RAPIDS `cudf.pandas` in Google Cloud Colab Enterprise. Reduced a massive 100,000-parameter space sweep across 8 biological dimensions from 48 minutes down to 2.8 seconds. |
+| **1. [Deploy Faster Generative AI Models with NVIDIA NIM on GKE](https://developers.google.com/profile/badges/playlists/nvidia-deploy-with-gen-ai?u=110918189625880989910)**<br>[🔗 Course Pathway](https://developers.google.com/learn/pathways/deploy-faster-gen-ai-models-nvidia-gke) | ✅ Verified Badge<br>(Sep 7, 2026) | **Containerized Microservice & Inference Gateway**: Informed the high-throughput serverless microservice design for Google Cloud Run. Guided the strict JSON schema serialization, low-latency client caching, and resilient circuit-breaker fallbacks when requesting generative reasoning from NVIDIA Nemotron. |
+| **2. [Speed Up Data Analytics on GPUs](https://developers.google.com/profile/badges/playlists/speed-up-data-analytics-GPUs?u=110918189625880989910)**<br>[🔗 Course Pathway](https://developers.google.com/learn/pathways/speed-up-data-analytics-GPUs) | ✅ Verified Badge<br>(Sep 7, 2026) | **100,000-Scenario Monte Carlo Exploration Map**: Applied GPU-accelerated dataframe processing with NVIDIA RAPIDS `cudf.pandas` in Google Cloud Colab Enterprise, enabling zero-code GPU parallelism across a 100,000-scenario multi-dimensional parameter space. |
 | **3. [Accelerated Machine Learning with Google Cloud and NVIDIA](https://developers.google.com/profile/badges/playlists/accelerated-machine-learning-with-google-cloud-and-nvidia?u=110918189625880989910)**<br>[🔗 Course Pathway](https://developers.google.com/learn/pathways/accelerated-machine-learning-with-google-cloud-and-nvidia) | ✅ Verified Badge<br>(Sep 7, 2026) | **8-Dimensional Hardware Bottleneck Matrix**: Provided the systems-level engineering foundation to model tensor compute scaling (PFLOPS), High-Bandwidth Memory (HBM3e) bus bandwidth saturation, NVLink cluster fabric communication, and megawatt data-center power limits. |
 | **4. [Intro to Inference: How to Run AI Models on a GPU](https://developers.google.com/learn/pathways/ai-models-on-gpu-intro)** | ✅ Completed<br>(Verified) | **Latency Budgeting & Token Calibration**: Taught KV-cache sizing, memory-bandwidth-bound vs. compute-bound inference phases, and temperature control. Enabled seamless zero-token-waste integration with `nvidia/nemotron-3-super-120b-a12b:free` on OpenRouter. |
 
@@ -53,7 +53,7 @@ Entries are evaluated by a joint Google Cloud & NVIDIA judging panel on four equ
 | Criterion | Evaluation Dimension | How Z-WBE Bottleneck Lab Fulfills It (10/10 Focus) |
 | :--- | :--- | :--- |
 | **(a) Technical Innovation** | Novelty, biophysical scaling, and real-time Amdahl's Law modeling | First public scientific tool to connect all 8 dimensions of Whole Brain Emulation (imaging, segmentation, PFLOPS, memory bandwidth, NVLink interconnect, power, proofreading, budget) into 12 coupled analytical equations executing in **&lt; 1 ms** locally. Eliminates speculative timelines with deterministic sensitivity curves. |
-| **(b) Effective Use of NVIDIA & Google Cloud** | Ecosystem synergy and full-stack integration | End-to-end integration: **Google Cloud Run** serves the containerized microservice; **Google Cloud Colab Enterprise** hosts the parameter sweeps; **NVIDIA RAPIDS cuDF** powers 100,000-scenario Monte Carlo simulations; and **NVIDIA Nemotron 3 Super 120B** (`nvidia/nemotron-3-super-120b-a12b:free` via OpenRouter) delivers grounded causal interpretation. |
+| **(b) Effective Use of NVIDIA & Google Cloud** | Ecosystem synergy and full-stack integration | End-to-end integration: **Google Cloud Colab Enterprise** hosts the parameter sweeps; **NVIDIA RAPIDS cuDF** accelerates 100,000-scenario Monte Carlo simulations; **Google Cloud Run** containerization configurations are provided for serverless microservice deployment; and **NVIDIA Nemotron 3 Super 120B** (`nvidia/nemotron-3-super-120b-a12b:free` via OpenRouter) delivers grounded causal interpretation. |
 | **(c) Potential Impact & Usefulness** | Value to developers, researchers, and scientific community | De-silos neuroscience, electron microscopy, and HPC engineering. When researchers ask *"What happens if imaging becomes 100x faster?"*, the lab proves that the dominant bottleneck immediately jumps to memory bandwidth and cold storage, preventing millions in misallocated capital grants. |
 | **(d) Quality of Documentation & Presentation** | Code cleanliness, tests, accessibility, and documentation | Complete mathematical specification for all 12 equations; **84 passing automated Vitest unit tests**; strict TypeScript monorepo; WCAG 2.1 AAA accessibility mode; 1-click interactive demo; scenario permalink state synchronization; and comprehensive reproducibility guides. |
 
@@ -67,7 +67,7 @@ The challenge invites developers to build with open models like **Nemotron**, **
 * **Cost**: 100% Free Tier (`:free`)
 * **Architecture**: 120-Billion Parameter Hybrid Mamba-Transformer Architecture (delivering linear attention efficiency and long-context synthesis).
 
-### The Zero-Hallucination Epistemic Grounding Contract
+### The Strict Epistemic Grounding Contract (Deterministic Numerical Boundary)
 Language models frequently hallucinate when asked open-ended scientific or economic questions. Z-WBE Bottleneck Lab enforces a strict architectural contract:
 1. **Deterministic Calculation**: The TypeScript shared engine (`@z-wbe/shared`) computes every physical number, voxel count, FLOPS rating, memory bandwidth, and dollar cost deterministically.
 2. **Strict Grounding Payload**: When users click `[ EXPLAIN WITH NEMOTRON ]`, the backend transmits only the pre-computed metrics inside a structured JSON schema (`NemotronInputSchema`).
@@ -177,7 +177,7 @@ The application enforces a strict separation between deterministic physical math
 |  • Model: NVIDIA Nemotron 3 Super (nvidia/nemotron-3-super-120b-a12b:free)             |
 |  • 120B Hybrid Mamba-Transformer Architecture                                          |
 |  • Structured Schema Enforcement (What Limits, Why, Highest Leverage, Uncertainties)   |
-|  • Zero-Hallucination Grounding Contract (Strictly consumes deterministic metrics)     |
+|  • Strict Epistemic Grounding Contract (Consumes deterministic metrics)                 |
 +----------------------------------------------------------------------------------------+
 ```
 
@@ -405,6 +405,6 @@ Distributed under the **MIT License**. See [`LICENSE`](LICENSE) for details.
   title = {Z-WBE Bottleneck Lab: Change the assumptions. See what breaks first.},
   year = {2026},
   url = {https://github.com/zrt219/Z-WBE-Bottleneck-Lab},
-  note = {Official Submission: Google Cloud x NVIDIA GTC Berlin 2026 Golden Ticket Contest}
+  note = {Built for Google Cloud x NVIDIA GTC Berlin 2026 Golden Ticket Challenge}
 }
 ```

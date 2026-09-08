@@ -366,7 +366,7 @@ export const NemotronInterpretation: React.FC<NemotronInterpretationProps> = ({
             Translating Simulation Data into Human-Friendly Insights...
           </div>
           <p className="text-xs text-slate-500 max-w-lg mx-auto leading-relaxed">
-            Running strictly grounded technical reasoning via NVIDIA Nemotron 3 Super. Comparing physics equations, hardware limits, and sensitivity levers with zero hallucinations.
+            Running strictly grounded technical reasoning via NVIDIA Nemotron 3 Super. Comparing physics equations, hardware limits, and sensitivity levers under a strict grounding contract.
           </p>
         </div>
         <div className="flex items-center justify-center space-x-2 text-[11px] font-mono text-blue-600 bg-blue-50/80 px-4 py-1.5 rounded-full w-fit mx-auto border border-blue-200">
@@ -487,7 +487,7 @@ export const NemotronInterpretation: React.FC<NemotronInterpretationProps> = ({
           </div>
           <div className="flex items-center space-x-1.5 text-indigo-300 text-[10px]">
             <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
-            <span>Zero-Hallucination Verified</span>
+            <span>Strict Grounding Contract</span>
           </div>
         </div>
       )}
@@ -757,7 +757,7 @@ ${s.whatNeedsRealExperimentalEvidence}
             <ShieldCheck className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
             <span>Executive Synthesis</span>
             <span className="text-slate-600">•</span>
-            <span className="text-emerald-400/90 font-mono text-[10.5px]">Zero Hallucination</span>
+            <span className="text-emerald-400/90 font-mono text-[10.5px]">Deterministic Boundary</span>
           </div>
         </div>
 

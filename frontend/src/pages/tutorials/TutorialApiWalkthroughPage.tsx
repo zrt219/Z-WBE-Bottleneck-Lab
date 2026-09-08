@@ -148,7 +148,7 @@ export const TutorialApiWalkthroughPage: React.FC = () => {
         <p className="text-slate-600 text-sm sm:text-base mt-2 leading-relaxed">
           Learn how Z-WBE executes <strong>strictly grounded AI synthesis</strong>.
           By enforcing a mathematical contract between the deterministic physics engine and NVIDIA Nemotron 3 Super,
-          we eliminate AI hallucinations in high-stakes biophysical engineering.
+          we establish a deterministic numerical boundary for high-stakes biophysical engineering.
         </p>
       </div>
 
@@ -156,7 +156,7 @@ export const TutorialApiWalkthroughPage: React.FC = () => {
       <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5 space-y-4">
         <div className="flex items-center space-x-2 text-slate-900 font-bold text-sm">
           <ShieldCheck className="w-4 h-4 text-emerald-600" />
-          <span>The Zero-Hallucination Architecture</span>
+          <span>The Epistemic Grounding Architecture</span>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
@@ -362,7 +362,7 @@ export const TutorialApiWalkthroughPage: React.FC = () => {
                       </span>
                     </div>
                     <span className="text-[10px] font-mono bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-bold">
-                      Zero-Hallucination Verified
+                      Strict Grounding Contract
                     </span>
                   </div>
 

@@ -310,7 +310,7 @@ export const SimulatorPage: React.FC = () => {
                 <span>Google Cloud × NVIDIA Developer Challenge 2026</span>
               </span>
               <span className="text-[11px] font-mono text-emerald-700 font-semibold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
-                Official Submission
+                Built for GTC 2026
               </span>
             </div>
             <div className="text-xs sm:text-sm font-bold text-slate-900 truncate">

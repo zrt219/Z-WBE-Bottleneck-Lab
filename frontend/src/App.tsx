@@ -96,7 +96,7 @@ export const App: React.FC = () => {
             <span className="text-slate-300">×</span>
             <span className="flex items-center space-x-1 text-slate-600">
               <ShieldCheck className="w-3 h-3 text-indigo-600" />
-              <span>Zero-Hallucination Contract</span>
+              <span>Strict Grounding Contract</span>
             </span>
           </div>
         </div>

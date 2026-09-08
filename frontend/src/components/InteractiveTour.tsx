@@ -53,7 +53,7 @@ const TOUR_STEPS: TourStep[] = [
     badge: 'Step 3 of 6 • Deterministic Engine',
     description:
       'Explore 5 categories of physical parameters: Acquisition (beam rate, voxel resolution), Reconstruction (GPU inference, proofreading labor), Neural Model (synapse bits, firing rates), Hardware (HBM bandwidth, FP32 TFLOPS), and Economics ($/kWh, server CAPEX).',
-    takeaway: 'The mathematical simulation engine runs deterministically in sub-millisecond (<1ms) time on your browser with zero AI hallucinations.'
+    takeaway: 'The mathematical simulation engine runs deterministically in sub-millisecond (<1ms) time on your browser within a strict mathematical boundary.'
   },
   {
     targetId: 'tour-pipeline-map',
@@ -68,7 +68,7 @@ const TOUR_STEPS: TourStep[] = [
     title: 'The Real API Call: NVIDIA Nemotron 3 Super',
     badge: 'Step 5 of 6 • Live AI Execution',
     description:
-      'When you click [ EXPLAIN WITH NEMOTRON ], a live HTTP POST request is dispatched to /api/explain. The server routes your exact scenario to NVIDIA Nemotron 3 Super (120B) via OpenRouter, with a guaranteed Zero-Hallucination grounding contract.',
+      'When you click [ EXPLAIN WITH NEMOTRON ], a live HTTP POST request is dispatched to /api/explain. The server routes your exact scenario to NVIDIA Nemotron 3 Super (120B) via OpenRouter, bound by a strict Epistemic Grounding Contract.',
     takeaway: 'Click the button below to execute a real live API call and observe the telemetry latency and verified response payload.',
     actionText: 'Execute Live API Call Now',
     isApiCallStep: true
@@ -271,7 +271,7 @@ export const InteractiveTour: React.FC<InteractiveTourProps> = ({
                 <div className="text-[11px] text-slate-300 font-mono bg-slate-950 p-2.5 rounded-lg border border-slate-800 space-y-1">
                   <div className="text-slate-400">Endpoint: /api/explain</div>
                   <div>Model: nvidia/nemotron-3-super-120b-a12b:free</div>
-                  <div className="text-indigo-400">Grounding: Zero-Hallucination Contract Verifier</div>
+                  <div className="text-indigo-400">Grounding: Strict Epistemic Grounding Contract</div>
                 </div>
 
                 {/* API Action button & Telemetry */}
