@@ -436,6 +436,13 @@ To validate the real-world performance gains taught in the **Speed Up Data Analy
   <p><em>Empirical Benchmark: CPU vs NVIDIA Tesla T4 GPU Runtime across Tabular ML Pipeline Stages</em></p>
 </div>
 
+<div align="center" style="margin-top: 16px; margin-bottom: 24px;">
+  <a href="./public/colab-evidence/colab_t4_live_execution.gif">
+    <img src="./public/colab-evidence/colab_t4_live_execution.gif" alt="Google Colab Enterprise NVIDIA Tesla T4 Live Execution" width="760" style="border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.25); border: 1px solid #333;" />
+  </a>
+  <p><em>Live Execution in Google Colab Enterprise: Accelerated Data Science Pipeline with NVIDIA Tesla T4 & RAPIDS</em></p>
+</div>
+
 ### Google Cloud Colab Enterprise Runtime & Provenance Gallery
 
 All benchmark metrics were executed in Google Cloud Colab Enterprise with full reproducible telemetry and runtime logging:
@@ -491,9 +498,9 @@ All benchmark metrics were executed in Google Cloud Colab Enterprise with full r
   </tr>
   <tr>
     <td colspan="2" align="center">
-      <a href="./public/colab-evidence/07_github_notebook_code_provenance.png"><img src="./public/colab-evidence/07_github_notebook_code_provenance.png" alt="GitHub Repository Notebook Provenance" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
-      <strong>GitHub Repository Provenance & Notebook Versioning</strong><br />
-      <em>Committed and tracked notebook code synchronized directly with GitHub source repository.</em>
+      <a href="./public/colab-evidence/07_github_notebook_code_provenance.png"><img src="./public/colab-evidence/07_github_notebook_code_provenance.png" alt="Canonical Z-WBE GPU Lab & NVIDIA Tesla T4 Live Terminal" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
+      <strong>Canonical Z-WBE GPU Lab & NVIDIA Tesla T4 Live Terminal</strong><br />
+      <em>Deterministic scaling law model, 100,000-scenario sweep, and active <code>nvidia-smi</code> terminal showing Tesla T4 16GB.</em>
     </td>
   </tr>
 </table>
