@@ -9,10 +9,10 @@
 - Teardown of NVIDIA Nemotron 3 Super 120B grounding contract and server-side OpenRouter proxy shielding.
 - Published the Triad Sync architecture linking React frontend, Node backend, and Colab GPU lab.
 - Deep-dive into empirical Tesla T4 benchmark sub-steps: XGBoost (9.8×), Random Forest (8.5×), Cleaning (6.8×), Loading (4.25×).
-- Mapped 100,000 Monte Carlo scenarios in GPU memory using Latin Hypercube Sampling and cuDF.
+- Analyzed 100,000 deterministic parameter sweep scenarios in Google BigQuery Sandbox using GoogleSQL.
 
 ## 2. Technical Findings
-- Memory Bandwidth dominates 28.7% of all simulated parameter spaces—more than double the scenario space of raw compute (14.1%).
+- In BigQuery Sandbox, Acquisition and Economic Cost each account for 27.3% of scenarios, followed by Reconstruction (18.8%) and Memory Bandwidth (14.1%), while raw compute accounts for only 0.002%.
 - Dwell time has the highest correlation with project timeline delay (r = 0.88).
 - Parquet columnar ingest provides 4.25× speedup over CSV by streaming directly into GPU memory buffers.
 

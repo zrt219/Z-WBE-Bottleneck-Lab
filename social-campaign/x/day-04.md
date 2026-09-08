@@ -22,7 +22,7 @@
 - **Media**: `hero_bottleneck_shift.gif`
 - **Media Order**: Single Asset: hero_bottleneck_shift.gif
 - **Hashtags**: #NVIDIAGTC #AmdahlsLaw
-- **Mentions**: @GoogleDevs | @NVIDIAAI
+- **Mentions**: @googlecloud | @GoogleDevs | @NVIDIAAI
 - **Claims Verified**: YES - Amdahl's Law concept
 - **Manual Review Required**: NO
 
@@ -39,7 +39,7 @@ Making imaging infinitely fast only accelerates WBE until memory bandwidth stall
 Test the limit live: https://z-wbe-bottleneck-lab.vercel.app
 
 #NVIDIAGTC #AmdahlsLaw
-cc @GoogleDevs @NVIDIAAI
+cc @googlecloud @GoogleDevs @NVIDIAAI
 ```
 
 ---
@@ -93,12 +93,12 @@ Code: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Content Pillar**: Pillar D: Google Cloud / Colab
 - **Scheduled Time (MDT)**: 14:58 MDT
 - **Primary Destination URL**: https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
-- **Hook**: 100,000 scenarios mapped in GPU memory via NVIDIA cuDF:
+- **Hook**: 100,000 scenarios analyzed in Google BigQuery Sandbox:
 - **Post Summary**: Below 10x imaging speed: 98% acquisition-bound.
 - **Media**: `social_card_data_analytics.png, 02_imaging_wall_baseline.png, 07_github_notebook_code_provenance.png, ad_10.png`
 - **Media Order**: 1. social_card_data_analytics.png -> 2. 02_imaging_wall_baseline.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_10.png
-- **Hashtags**: #NVIDIAGTC #RAPIDS
-- **Mentions**: None
+- **Hashtags**: #NVIDIAGTC #BigQuery
+- **Mentions**: @googlecloud | @GoogleDevs | @NVIDIAAI
 - **Claims Verified**: YES - 100k scenario sweep phase transition
 - **Manual Review Required**: NO
 
@@ -112,13 +112,14 @@ Code: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 ### Post Copy
 
 ```markdown
-100,000 scenarios mapped in GPU memory via NVIDIA cuDF:
+100,000 scenarios analyzed in Google BigQuery Sandbox:
 Below 10x imaging speed: 98% acquisition-bound.
 Above 100x: 87% memory-bound.
 
-Run the Colab sweep: https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
+Explore: https://z-wbe-bottleneck-lab.vercel.app
 
-#NVIDIAGTC #RAPIDS
+#NVIDIAGTC #BigQuery
+cc @googlecloud @GoogleDevs @NVIDIAAI
 ```
 
 ---

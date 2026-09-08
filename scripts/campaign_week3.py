@@ -209,7 +209,7 @@ Physics dictates the Imaging Wall:
 https://z-wbe-bottleneck-lab.vercel.app
 
 #NVIDIAGTC #Physics
-cc @GoogleDevs @NVIDIAAI"""
+cc @googlecloud @GoogleDevs @NVIDIAAI"""
         },
         {
             "id": "buffer_x_d15_p2",
@@ -491,14 +491,14 @@ Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
                 "public/colab-evidence/06_colab_gpu_extensions_and_terminal.png",
                 "public/marketing/ad_05.png"
             ],
-            "text": """A nanometer scan of a CPU doesn't tell you the clock frequency or register voltage.
+            "text": """A nanometer scan of a CPU doesn't reveal clock frequency or register voltage.
 A connectome doesn't give you ion channel densities.
 
 That's the Functionalization problem.
 Explore: https://z-wbe-bottleneck-lab.vercel.app
 
 #NVIDIAGTC #Neuroscience
-cc @GoogleDevs @NVIDIAAI"""
+cc @googlecloud @GoogleDevs @NVIDIAAI"""
         },
         {
             "id": "buffer_x_d16_p2",
@@ -789,7 +789,7 @@ Compute + Memory + Interconnect.
 Explore: https://z-wbe-bottleneck-lab.vercel.app
 
 #NVIDIAGTC #Supercomputing
-cc @GoogleDevs @NVIDIAAI"""
+cc @googlecloud @GoogleDevs @NVIDIAAI"""
         },
         {
             "id": "buffer_x_d17_p2",
@@ -1372,7 +1372,7 @@ Validation must rely on pre-recorded dynamical benchmarks:
 https://z-wbe-bottleneck-lab.vercel.app
 
 #NVIDIAGTC #Neuroscience
-cc @GoogleDevs @NVIDIAAI"""
+cc @googlecloud @GoogleDevs @NVIDIAAI"""
         },
         {
             "id": "buffer_x_d19_p2",
@@ -1661,14 +1661,14 @@ Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
                 "public/marketing/ad_06.png"
             ],
             "text": """89 unit tests pass in 1.15s.
-12 deterministic physical equations.
+12 deterministic engineering equations.
 1-click Colab notebook on Tesla T4.
 100% open source (MIT).
 
 Inspect the code: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 #NVIDIAGTC #OpenSource
-cc @GoogleDevs @NVIDIAAI"""
+cc @googlecloud @GoogleDevs @NVIDIAAI"""
         },
         {
             "id": "buffer_x_d20_p2",
@@ -1786,9 +1786,9 @@ Over the past three consecutive weeks, we documented nearly every facet of this 
 - Explored all 6 macroscopic WBE stages (Preservation, Acquisition, Reconstruction, Functionalization, Execution, Validation).
 - Modeled all 8 physical constraint dimensions (Acquisition, Reconstruction, Storage, Compute, Memory, Interconnect, Power, Economics).
 - Demonstrated Amdahl's Law in action: Accelerating imaging by 100x instantly shifted the dominant bottleneck to Memory Bandwidth.
-- 8.62× measured T4 speedup on the Google/NVIDIA tabular ML benchmark (1.907 s CPU vs 0.221 s GPU). Separately, Z-WBE also includes a 100,000-scenario GPU parameter sweep.
-- Proved how to stop AI hallucinations in science using Epistemic Separation: pure TypeScript calculates the physics; NVIDIA Nemotron 3 Super 120B interprets the causal trade-offs under a strict grounding contract.
-- Mapped 100,000 Monte Carlo scenarios in GPU memory to identify global bottleneck phase transitions.
+- 8.62× measured T4 speedup on the Google/NVIDIA tabular ML benchmark (1.907 s CPU vs 0.221 s GPU). Separately, Z-WBE includes a deterministic 100,000-scenario parameter sweep stored and analyzed in Google BigQuery Sandbox.
+- Proved how to stop AI hallucinations in science using Epistemic Separation: pure TypeScript computes scenario-derived engineering quantities; NVIDIA Nemotron 3 Super 120B interprets causal trade-offs under a strict grounding contract.
+- Analyzed 100,000 deterministic scenarios with GoogleSQL in BigQuery Sandbox to identify global bottleneck phase transitions.
 - Completed all 4 official Google Cloud × NVIDIA learning pathways on Google Cloud Skills Boost.
 - Maintained 89 passing unit tests with 100% test pass rate in CI/CD.
 
@@ -1806,7 +1806,7 @@ GitHub Repository: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 Google Developer Profile: https://g.dev/zhane
 
 Mentions & Judges: @Google Cloud | @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Harvey | @Ray Harvey
-#NVIDIAGTC #GoogleCloud #NVIDIA #Nemotron #RAPIDS #cuDF #cuML #TeslaT4 #GoogleColab #CloudRun #BuildInPublic #OpenSource #ComputationalNeuroscience #SystemsEngineering #GTC2026"""
+#NVIDIAGTC #GoogleCloud #BigQuery #NVIDIA #Nemotron #RAPIDS #cuDF #cuML #TeslaT4 #GoogleColab #CloudRun #BuildInPublic #OpenSource #ComputationalNeuroscience #SystemsEngineering #GTC2026"""
         },
         {
             "id": "buffer_li_d21_p2",
@@ -1959,17 +1959,17 @@ Mentions & Judges: @Google Cloud | @Google for Developers | @NVIDIA AI | @Asier 
                 "public/data/cpu_vs_gpu_speedup.png",
                 "public/marketing/ad_10.png"
             ],
-            "text": """Day 21 of 21: Full Campaign Retrospective!
+            "text": """Day 21/21: Full Retrospective!
 220 posts.
 89 unit tests.
 8.62x GPU speedup on Tesla T4.
-100k scenarios mapped.
+100k BigQuery scenarios analyzed.
 Grounded AI interpretation.
 
-The sprint is complete: https://z-wbe-bottleneck-lab.vercel.app
+Explore: https://z-wbe-bottleneck-lab.vercel.app
 
 #NVIDIAGTC #BuildInPublic
-cc @GoogleDevs @NVIDIAAI @asierarranz"""
+cc @googlecloud @GoogleDevs @NVIDIAAI"""
         },
         {
             "id": "buffer_x_d21_p2",
@@ -2051,7 +2051,7 @@ Star the repo: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
                 "public/colab-evidence/08_colab_rapids_and_variable_inspector.png",
                 "public/marketing/ad_07.png"
             ],
-            "text": """Thank you to @GoogleDevs, @NVIDIAAI, @asierarranz, and the community for an incredible 21 days.
+            "text": """Thank you to @googlecloud, @GoogleDevs, @NVIDIAAI, and the community for an incredible 21 days.
 
 The campaign ends. The research continues.
 

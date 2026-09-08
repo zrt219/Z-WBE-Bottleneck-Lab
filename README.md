@@ -28,7 +28,7 @@ Key Repository Topics: `nvidia-gtc` `google-cloud` `google-cloud-run` `nvidia-ne
 
 ## 🏛️ Google Cloud × NVIDIA Developer Challenge 2026: Project Demonstrator
 
-**Z-WBE Bottleneck Lab** was built for the **Google Cloud × NVIDIA GTC Berlin 2026 Golden Ticket Challenge**. Built on strict epistemic separation, the public interactive demonstrator is deployed with high-speed global edge delivery on **Vercel**, backed by a production-ready containerized microservice architected for **Google Cloud Run**, and leverages open foundation models (**NVIDIA Nemotron 3 Super 120B** via OpenRouter) alongside **NVIDIA RAPIDS (`cudf.pandas`)** in Google Colab to evaluate multi-dimensional scaling bottlenecks in Whole Brain Emulation.
+**Z-WBE Bottleneck Lab** was built for the **Google Cloud × NVIDIA GTC Berlin 2026 Golden Ticket Challenge**. Built on strict epistemic separation, the public interactive demonstrator is deployed with high-speed global edge delivery on **Vercel**, backed by a Cloud Run-ready container architecture, and leverages open foundation models (**NVIDIA Nemotron 3 Super 120B** via OpenRouter), **NVIDIA RAPIDS (`cudf.pandas`)** in Google Colab for tabular GPU benchmarks, and **Google BigQuery Sandbox** to store and analyze 100,000 deterministic scenarios.
 
 ---
 
@@ -60,8 +60,8 @@ To develop Z-WBE Bottleneck Lab, the developer completed the official **Google C
 
 | Learning Pathway & Public Badge Link | Verification Status | Architectural Contribution to Z-WBE Bottleneck Lab |
 | :--- | :---: | :--- |
-| **1. [Deploy Faster Generative AI Models with NVIDIA NIM on GKE](https://developers.google.com/profile/badges/playlists/nvidia-deploy-with-gen-ai?u=zhane)**<br>[🔗 Course Pathway](https://developers.google.com/learn/pathways/deploy-faster-gen-ai-models-nvidia-gke) | ✅ Verified Badge<br>(Sep 7, 2026) | **Containerized Microservice & Inference Gateway**: Informed the high-throughput serverless microservice design for Google Cloud Run. Guided the strict JSON schema serialization, low-latency client caching, and resilient circuit-breaker fallbacks when requesting generative reasoning from NVIDIA Nemotron. |
-| **2. [Speed Up Data Analytics on GPUs](https://developers.google.com/profile/badges/playlists/speed-up-data-analytics-GPUs?u=zhane)**<br>[🔗 Course Pathway](https://developers.google.com/learn/pathways/speed-up-data-analytics-GPUs) | ✅ Verified Badge<br>(Sep 7, 2026) | **100,000-Scenario Monte Carlo Exploration Map**: Applied GPU-accelerated dataframe processing with NVIDIA RAPIDS `cudf.pandas` in Google Colab, enabling zero-code GPU parallelism across a 100,000-scenario multi-dimensional parameter space. |
+| **1. [Deploy Faster Generative AI Models with NVIDIA NIM on GKE](https://developers.google.com/profile/badges/playlists/nvidia-deploy-with-gen-ai?u=zhane)**<br>[🔗 Course Pathway](https://developers.google.com/learn/pathways/deploy-faster-gen-ai-models-nvidia-gke) | ✅ Verified Badge<br>(Sep 7, 2026) | **Containerized Microservice & Inference Gateway**: Informed the high-throughput serverless microservice design with Cloud Run-ready container architecture. Guided the strict JSON schema serialization, low-latency client caching, and resilient circuit-breaker fallbacks when requesting generative reasoning from NVIDIA Nemotron. |
+| **2. [Speed Up Data Analytics on GPUs](https://developers.google.com/profile/badges/playlists/speed-up-data-analytics-GPUs?u=zhane)**<br>[🔗 Course Pathway](https://developers.google.com/learn/pathways/speed-up-data-analytics-GPUs) | ✅ Verified Badge<br>(Sep 7, 2026) | **Accelerated Data Analytics & 100k Sweep**: Applied zero-code GPU acceleration with NVIDIA RAPIDS `cudf.pandas` in Google Colab (achieving 8.62× speedup on Tesla T4), paired with a deterministic 100,000-scenario parameter sweep stored and analyzed in Google BigQuery Sandbox. |
 | **3. [Accelerated Machine Learning with Google Cloud and NVIDIA](https://developers.google.com/profile/badges/playlists/accelerated-machine-learning-with-google-cloud-and-nvidia?u=110918189625880989910)**<br>[🔗 Course Pathway](https://developers.google.com/learn/pathways/accelerated-machine-learning-with-google-cloud-and-nvidia) | ✅ Verified Badge<br>(Sep 7, 2026) | **8-Dimensional Hardware Bottleneck Matrix**: Provided the systems-level engineering foundation to model tensor compute scaling (PFLOPS), High-Bandwidth Memory (HBM3e) bus bandwidth saturation, NVLink cluster fabric communication, and megawatt data-center power limits. |
 | **4. [Intro to Inference: How to Run AI Models on a GPU](https://developers.google.com/profile/badges/playlists/ai-models-on-gpu-intro?u=zhane)**<br>[🔗 Course Pathway](https://developers.google.com/learn/pathways/ai-models-on-gpu-intro) | ✅ Verified Badge<br>(Sep 7, 2026) | **Latency Budgeting & Token Calibration**: Taught KV-cache sizing, memory-bandwidth-bound vs. compute-bound inference phases, and temperature control. Enabled seamless zero-token-waste integration with `nvidia/nemotron-3-super-120b-a12b:free` on OpenRouter. |
 
@@ -246,8 +246,8 @@ All core interface views captured at 1920×1080 judge-grade resolution:
   <tr>
     <td width="50%" align="center">
       <a href="./public/screenshots/05_gpu_exploration_map.png"><img src="./public/screenshots/05_gpu_exploration_map.png" alt="GPU Exploration Map — 100,000 Scenario Sweep" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
-      <strong>05. 100,000-Scenario GPU Exploration Map</strong><br />
-      <em>Monte Carlo parameter sweep powered by NVIDIA RAPIDS cuDF showing global constraint phase transitions.</em>
+      <strong>05. 100,000-Scenario Exploration Map</strong><br />
+      <em>Deterministic 100,000-scenario parameter sweep analyzed in Google BigQuery Sandbox showing global constraint phase transitions.</em>
     </td>
     <td width="50%" align="center">
       <a href="./public/screenshots/06_architecture_evidence_view.png"><img src="./public/screenshots/06_architecture_evidence_view.png" alt="Architecture & Contest Evidence View" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
@@ -265,11 +265,11 @@ The application enforces a strict epistemic and architectural separation between
 
 ```mermaid
 flowchart TD
-    subgraph ClientLayer ["Client Layer (Vite + React 18 + TypeScript)"]
+    subgraph ClientLayer ["Client Layer (Vercel Live Application: Vite + React 18 + TypeScript)"]
         UI["Interactive Biophysical Dashboard"]
         SharedCalc["@z-wbe/shared Deterministic Engine<br/>12 Physical Scaling Equations (&lt;1ms Execution)"]
         PressureCalc["8-Dimensional Bottleneck Matrix<br/>Normalized Pressure Vector & Sensitivity Lab"]
-        SweepMap["GPU Exploration Map<br/>100,000 Monte Carlo Precomputed Scenarios"]
+        SweepMap["Scenario Exploration Map<br/>100,000 Precomputed Scenarios"]
         
         UI -->|"Biophysical Parameter Changes"| SharedCalc
         SharedCalc -->|"Computed Engineering Metrics"| PressureCalc
@@ -277,7 +277,7 @@ flowchart TD
         SweepMap -.->|"Visualized in UI"| UI
     end
 
-    subgraph EdgeLayer ["Edge & Backend Microservice (Express / Google Cloud Run / Vercel Edge)"]
+    subgraph EdgeLayer ["Serverless Edge Delivery (Vercel Edge Functions)"]
         ExplainRoute["POST /api/explain<br/>Explicit User Clicks Only"]
         SecretVault["Server-Side Secret Vault<br/>OPENROUTER_API_KEY Zero-Leak Boundary"]
         CacheStore["Deterministic Scenario Cache<br/>FNV-1a Hash (Model + Prompt + Metrics)"]
@@ -297,15 +297,28 @@ flowchart TD
         GroundingContract -->|"Structured JSON (Limits, Why, Leverage)"| ExplainRoute
     end
 
-    subgraph GPULayer ["Cloud GPU Analytics (Google Colab)"]
-        TeslaT4["NVIDIA Tesla T4 GPU Runtime<br/>16GB VRAM | CUDA 12.2"]
-        RAPIDSStack["NVIDIA RAPIDS Stack<br/>cudf.pandas & cuml.accel"]
-        MonteCarloSweep["100,000-Scenario Parameter Sweep<br/>8.62x Acceleration vs Host CPU"]
-        ExportData["gpu-sweep-summary.json<br/>Public Data Artifact"]
-        
-        TeslaT4 --> RAPIDSStack
-        RAPIDSStack --> MonteCarloSweep
-        MonteCarloSweep --> ExportData
+    subgraph ResearchAnalytics ["Research Analytics & Provenance"]
+        subgraph GPULayer ["Cloud GPU Analytics (Google Colab)"]
+            TeslaT4["NVIDIA Tesla T4 GPU Runtime<br/>16GB VRAM | CUDA 12.2"]
+            RAPIDSStack["NVIDIA RAPIDS Stack<br/>cudf.pandas & cuml.accel"]
+            Benchmark["Google/NVIDIA Tabular ML Benchmark<br/>8.62x Speedup (1.907s vs 0.221s)"]
+            
+            TeslaT4 --> RAPIDSStack
+            RAPIDSStack --> Benchmark
+        end
+
+        subgraph BQLayer ["Cloud Analytics (Google BigQuery Sandbox)"]
+            BQTable["z_wbe_research.scenarios_100k<br/>100,000 Deterministic Rows"]
+            GoogleSQL["GoogleSQL Analytics<br/>Bottleneck Distribution & Expiry"]
+            ExportData["gpu-sweep-summary.json<br/>Public Data Artifact"]
+            
+            BQTable --> GoogleSQL
+            GoogleSQL --> ExportData
+        end
+    end
+
+    subgraph CloudRunArch ["Cloud Run-Ready Container Architecture"]
+        Docker["Standalone Dockerfile<br/>Node.js / Express Microservice"]
     end
 
     UI -->|"User Clicks 'Explain with Nemotron'"| ExplainRoute
@@ -677,12 +690,10 @@ flowchart TD
 
 ## 12. Google Cloud Infrastructure
 
-* **Google BigQuery Sandbox**: Cloud analytics layer for querying and analyzing the 100,000-scenario research dataset (`z_wbe_research.scenarios_100k`) via GoogleSQL without requiring billing, credit cards, or paid resources. Analyzes bottleneck distributions, phase transitions, and memory wall boundaries. See [BigQuery Evidence Dossier](evidence/contest/bigquery/README.md).
-* **Google Cloud Run**: Serverless container configuration and Dockerfile provided for hosting the Node.js TypeScript API, managing sub-second cold starts, automated scaling, and secure environment variable isolation.
-* **Google Colab**: High-performance GPU notebook execution environment used to execute the Tesla T4 benchmark and simulate 100,000 scenario combinations with RAPIDS cuDF. See [COLAB.md](COLAB.md) for the complete Google Colab execution guide, synchronization workflow, and permanent launch link.
-* **Cloud Build & Artifact Registry**: Automated container image construction and registry storage for Cloud Run revisions.
-* **Secret Manager**: Secure externalized storage for OpenRouter credentials outside client-side application code.
-* **GKE Architectural Alignment**: Follows Google Kubernetes Engine best practices for hosting accelerated microservices.
+* **Google BigQuery Sandbox**: Cloud analytics layer storing and analyzing the 100,000-scenario research dataset (`z_wbe_research.scenarios_100k`) via GoogleSQL without requiring billing, credit cards, or paid resources. Analyzes bottleneck distributions, phase transitions, and memory wall boundaries under automatic 60-day sandbox lifecycle limits. See [BigQuery Evidence Dossier](evidence/contest/bigquery/README.md).
+* **Google Colab**: High-performance GPU research environment used to execute the Tesla T4 benchmark proving an 8.62× speedup with NVIDIA RAPIDS `cudf.pandas`. See [COLAB.md](COLAB.md) for the complete Google Colab execution guide, synchronization workflow, and permanent launch link.
+* **Cloud Run-Ready Container Architecture**: Standalone Node.js/Express Dockerfile and container configuration provided for portable serverless container deployment.
+* **GKE Architectural Alignment**: Follows Google Kubernetes Engine best practices for decoupled microservice boundaries.
 
 
 ---

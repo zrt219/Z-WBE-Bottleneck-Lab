@@ -22,7 +22,7 @@
 - **Media**: `golden_ticket_speed_up_data_analytics.png, 04_nemotron_grounded_interpretation.png, cpu_vs_gpu_speedup.png, ad_02.png`
 - **Media Order**: 1. golden_ticket_speed_up_data_analytics.png -> 2. 04_nemotron_grounded_interpretation.png -> 3. cpu_vs_gpu_speedup.png -> 4. ad_02.png
 - **Hashtags**: #NVIDIAGTC #Neuroscience
-- **Mentions**: @GoogleDevs | @NVIDIAAI
+- **Mentions**: @googlecloud | @GoogleDevs | @NVIDIAAI
 - **Claims Verified**: YES - Validation ground truth paradox
 - **Manual Review Required**: NO
 
@@ -43,7 +43,7 @@ Validation must rely on pre-recorded dynamical benchmarks:
 https://z-wbe-bottleneck-lab.vercel.app
 
 #NVIDIAGTC #Neuroscience
-cc @GoogleDevs @NVIDIAAI
+cc @googlecloud @GoogleDevs @NVIDIAAI
 ```
 
 ---

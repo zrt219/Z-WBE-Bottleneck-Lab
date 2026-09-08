@@ -17,12 +17,12 @@
 - **Content Pillar**: Pillar C: GPU / NVIDIA
 - **Scheduled Time (MDT)**: 10:12 MDT
 - **Primary Destination URL**: https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
-- **Hook**: REAL NVIDIA T4 + RAPIDS + COLAB EVIDENCE 🚀
-- **Post Summary**: Z-WBE for @GoogleDevs x @NVIDIAAI GTC Challenge!
+- **Hook**: NVIDIA T4 + RAPIDS + COLAB EVIDENCE 🚀
+- **Post Summary**: Z-WBE for @googlecloud x @NVIDIAAI GTC Challenge!
 - **Media**: `colab_t4_terminal_execution.gif`
 - **Media Order**: Single Asset: colab_t4_terminal_execution.gif
 - **Hashtags**: #NVIDIAGTC
-- **Mentions**: @GoogleDevs | @NVIDIAAI | @asierarranz
+- **Mentions**: @googlecloud | @NVIDIAAI | @GoogleDevs | @asierarranz
 - **Claims Verified**: YES - Flagship contest submission post
 - **Manual Review Required**: NO
 
@@ -33,15 +33,15 @@
 ### Post Copy
 
 ```markdown
-REAL NVIDIA T4 + RAPIDS + COLAB EVIDENCE 🚀
-Z-WBE for @GoogleDevs x @NVIDIAAI GTC Challenge!
+NVIDIA T4 + RAPIDS + COLAB EVIDENCE 🚀
+Z-WBE for @googlecloud x @NVIDIAAI GTC Challenge!
 
 Built: 6-stage WBE lab + 12 equations
-Learned: cuDF 8.62x on T4; 100x imaging exposes memory wall!
+Learned: cuDF 8.62x on T4; 100x imaging hits memory wall!
 
 Colab: https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 
-cc @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC
+cc @googlecloud @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC
 ```
 
 ---
@@ -180,12 +180,12 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Content Pillar**: Pillar I: Learning Paths
 - **Scheduled Time (MDT)**: 18:58 MDT
 - **Primary Destination URL**: https://g.dev/zhane
-- **Hook**: 4 Google Cloud x NVIDIA learning paths completed:
+- **Hook**: 4 Google Cloud x NVIDIA paths completed:
 - **Post Summary**: 2. Intro to Inference
 - **Media**: `social_card_nim_gke.png, 06_architecture_evidence_view.png, 07_github_notebook_code_provenance.png, ad_04.png`
 - **Media Order**: 1. social_card_nim_gke.png -> 2. 06_architecture_evidence_view.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_04.png
 - **Hashtags**: #NVIDIAGTC
-- **Mentions**: @GoogleDevs | @NVIDIAAI | @asierarranz
+- **Mentions**: @googlecloud | @GoogleDevs | @NVIDIAAI | @asierarranz
 - **Claims Verified**: YES - 4 badges verified on vanity profile
 - **Manual Review Required**: NO
 
@@ -199,16 +199,16 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 ### Post Copy
 
 ```markdown
-4 Google Cloud x NVIDIA learning paths completed:
+4 Google Cloud x NVIDIA paths completed:
 1. NIM on GKE
 2. Intro to Inference
 3. GPU Data Analytics
 4. Accelerated ML
 
-Every course directly shaped Z-WBE code.
+Every course shaped Z-WBE code.
 Badges: https://g.dev/zhane
 
-cc @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC
+cc @googlecloud @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC
 ```
 
 ---

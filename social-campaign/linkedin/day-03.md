@@ -44,11 +44,11 @@ Today is the deadline for the Golden Ticket Challenge. I am proud to formally pr
 An open-source systems-modeling lab dismantling domain silos in computational neuroscience and HPC. It evaluates all 6 macroscopic pipeline stages—Preservation, Acquisition, Reconstruction, Functionalization, Execution, Validation—under 8 physical scaling constraints.
 
 2. WHAT WAS BUILT:
-- Deterministic TypeScript Engine: 12 scaling equations calculate physical constraints in <1ms without hallucinations (CALCULATED FROM SCENARIO ASSUMPTIONS).
+- Deterministic TypeScript Engine: 12 scaling equations calculate scenario-derived engineering quantities in <1ms without hallucinations (CALCULATED FROM SCENARIO ASSUMPTIONS).
 - Grounded AI Explainer: NVIDIA Nemotron 3 Super 120B via OpenRouter interprets trade-offs under strict grounding (AI INTERPRETATION).
-- 100,000-Scenario Monte Carlo Sweep: Mapped in GPU memory via NVIDIA RAPIDS cuDF to uncover bottleneck phase transitions.
+- 100,000-Scenario Parameter Sweep: Z-WBE includes a deterministic 100,000-scenario parameter sweep stored and analyzed in Google BigQuery Sandbox to uncover bottleneck phase transitions.
 - Canonical 1-Click Colab Lab: Unified 10-stage notebook running cuDF, cuML, and XGBoost on an NVIDIA Tesla T4.
-- Production-Grade Rigor: 89 unit tests, containerized Cloud Run microservice.
+- Production-Grade Rigor: 89 unit tests, Cloud Run-ready container architecture.
 
 3. WHAT WAS LEARNED:
 - NVIDIA NIM on GKE: Decoupled inference isolates math from generative serving.
@@ -58,7 +58,7 @@ An open-source systems-modeling lab dismantling domain silos in computational ne
 - Systems Insight: 100x microscopy acceleration moves the bottleneck to Memory Bandwidth (Amdahl's Law).
 
 4. EMPIRICAL BENCHMARK EVIDENCE (Tesla T4 GPU in Google Colab):
-- End-to-End ETL + ML Pipeline: 8.62× measured T4 speedup on the Google/NVIDIA tabular ML benchmark (1.907 s CPU vs 0.221 s GPU). Separately, Z-WBE also includes a 100,000-scenario GPU parameter sweep.
+- End-to-End ETL + ML Pipeline: 8.62× measured T4 speedup on the Google/NVIDIA tabular ML benchmark (1.907 s CPU vs 0.221 s GPU with cudf.pandas). Separately, Z-WBE includes a deterministic 100,000-scenario parameter sweep in BigQuery Sandbox.
 - Sub-Task Speedups:
   * XGBoost Training: 9.8x (0.545s vs 0.056s)
   * Random Forest (cuML): 8.5x (1.308s vs 0.154s)

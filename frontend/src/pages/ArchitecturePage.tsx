@@ -11,14 +11,14 @@ export const ArchitecturePage: React.FC = () => {
           <span>System Architecture & Data Flow</span>
         </div>
         <h1 className="text-2xl font-extrabold text-slate-900 tracking-tight">
-          Google Cloud Run, Deterministic Physics Engine, OpenRouter, and NVIDIA Nemotron 3 Super
+          Vercel Live App, Deterministic Physics Engine, BigQuery Analytics, Colab GPU Lab, and NVIDIA Nemotron 3 Super
         </h1>
         <p className="text-sm text-slate-600 leading-relaxed">
-          How Z-WBE Bottleneck Lab decouples millisecond deterministic calculations from AI model interpretation and GPU parameter sweeps.
+          How Z-WBE Bottleneck Lab decouples millisecond deterministic calculations from AI model interpretation, NVIDIA GPU benchmarks, and 100k BigQuery scenario analytics.
         </p>
       </div>
 
-      {/* Primary Pipeline Diagram (Section 28 Truthful Architecture) */}
+      {/* Primary Pipeline Diagram (Truthful Architecture) */}
       <div className="bg-white border border-slate-200/90 rounded-2xl p-4 sm:p-6 shadow-card space-y-4">
         <div className="flex items-center justify-between border-b border-slate-100 pb-3">
           <div className="flex items-center space-x-2">
@@ -28,7 +28,7 @@ export const ArchitecturePage: React.FC = () => {
             </h2>
           </div>
           <span className="text-[10px] font-mono text-blue-700 bg-blue-50 px-2 py-0.5 rounded border border-blue-200">
-            Containerized for Google Cloud Run
+            Vercel Edge Delivery + Cloud Run Ready
           </span>
         </div>
 
@@ -49,14 +49,14 @@ export const ArchitecturePage: React.FC = () => {
             <ArrowRight className="w-4 h-4" />
           </div>
 
-          {/* Step 2: Google Cloud Run */}
+          {/* Step 2: Vercel Edge / Cloud Run Microservice */}
           <div className="p-3.5 rounded-lg bg-blue-50/70 border border-blue-200 flex flex-col items-center space-y-1">
             <div className="w-7 h-7 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs font-bold font-mono">
               2
             </div>
-            <div className="text-xs font-bold text-blue-950">Google Cloud Run</div>
+            <div className="text-xs font-bold text-blue-950">Vercel Edge & Microservice</div>
             <p className="text-[10px] text-slate-600">
-              Hosts frontend & Node.js backend; secures server-side API keys
+              Hosts frontend & edge proxy; Cloud Run container architecture ready; secures API keys
             </p>
           </div>
 
@@ -110,23 +110,23 @@ export const ArchitecturePage: React.FC = () => {
           <div>
             <span className="font-bold">Zero Secret Exposure Boundary: </span>
             <span>
-              The browser NEVER accesses the OpenRouter API key. All model requests are brokered strictly server-side by Google Cloud Run. Keys are never logged, never exposed to client bundles, and never returned in API payloads.
+              The browser NEVER accesses the OpenRouter API key. All model requests are brokered strictly server-side by the Vercel Edge proxy / microservice. Keys are never logged, never exposed to client bundles, and never returned in API payloads.
             </span>
           </div>
         </div>
       </div>
 
-      {/* GPU Offline / Analytical Sweep Pipeline Diagram */}
+      {/* GPU Benchmark & BigQuery Sandbox Pipeline Diagram */}
       <div className="bg-white border border-slate-200/90 rounded-2xl p-4 sm:p-6 shadow-card space-y-4">
         <div className="flex items-center justify-between border-b border-slate-100 pb-3">
           <div className="flex items-center space-x-2">
             <Server className="w-4 h-4 text-purple-600" />
             <h2 className="text-sm font-bold uppercase tracking-wider text-slate-900">
-              NVIDIA GPU Parameter Exploration Pipeline (100,000 Sweeps)
+              NVIDIA GPU Benchmark & Google BigQuery Sandbox Analytics
             </h2>
           </div>
           <span className="text-[10px] font-mono text-purple-700 bg-purple-50 px-2 py-0.5 rounded border border-purple-200">
-            Google Colab + RAPIDS cuDF
+            Google Colab + BigQuery Sandbox
           </span>
         </div>
 
@@ -139,7 +139,7 @@ export const ArchitecturePage: React.FC = () => {
             </div>
             <div className="text-xs font-bold text-slate-900">Google Colab</div>
             <p className="text-[10px] text-slate-500">
-              Generates 100,000 synthetic parameter combinations
+              Executes Tesla T4 benchmark with RAPIDS cudf.pandas (8.62x speedup)
             </p>
           </div>
 
@@ -152,9 +152,9 @@ export const ArchitecturePage: React.FC = () => {
             <div className="w-8 h-8 rounded-full bg-emerald-500 text-slate-950 flex items-center justify-center text-xs font-bold font-mono">
               B
             </div>
-            <div className="text-xs font-bold text-white">NVIDIA RAPIDS</div>
+            <div className="text-xs font-bold text-white">BigQuery Sandbox</div>
             <p className="text-[10px] text-slate-300">
-              `cudf.pandas` vectorizes bottleneck classification across 8 constraints
+              Stores & analyzes 100k deterministic scenarios with GoogleSQL
             </p>
           </div>
 
@@ -169,17 +169,17 @@ export const ArchitecturePage: React.FC = () => {
             </div>
             <div className="text-xs font-bold text-slate-900">Summary Export</div>
             <p className="text-[10px] text-slate-500">
-              Outputs `gpu-sweep-summary.json` for frontend visualization
+              Outputs `gpu-sweep-summary.json` for frontend heatmap visualization
             </p>
           </div>
         </div>
 
         <div className="text-xs text-slate-600 space-y-1">
           <p>
-            The Jupyter notebook <code className="font-mono bg-slate-100 px-1 py-0.5 rounded text-slate-800">notebooks/gpu_scenario_sweep.ipynb</code> benchmarks CPU pandas against NVIDIA RAPIDS cuDF (<code className="font-mono bg-slate-100 px-1 py-0.5 rounded text-slate-800">cudf.pandas</code>).
+            The canonical Jupyter notebook <code className="font-mono bg-slate-100 px-1 py-0.5 rounded text-slate-800">notebooks/Z_WBE_GPU_LAB.ipynb</code> evaluates CPU pandas against NVIDIA RAPIDS cuDF (<code className="font-mono bg-slate-100 px-1 py-0.5 rounded text-slate-800">cudf.pandas</code>) in Google Colab on an NVIDIA Tesla T4 GPU.
           </p>
           <p className="text-slate-500 text-[11px]">
-            If execution runs in an environment without an active CUDA GPU, the system transparently records <strong>GPU BENCHMARK NOT EXECUTED</strong> rather than fabricating benchmark timings.
+            The 100,000 deterministic scenario dataset is stored and analyzed in <strong>Google BigQuery Sandbox</strong> under table <code className="font-mono bg-slate-100 px-1 py-0.5 rounded text-slate-800">z_wbe_research.scenarios_100k</code> using GoogleSQL without requiring billing or credit cards.
           </p>
         </div>
       </div>
@@ -189,10 +189,10 @@ export const ArchitecturePage: React.FC = () => {
         <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-card space-y-2">
           <div className="flex items-center space-x-2 font-bold text-slate-900">
             <Cloud className="w-4 h-4 text-blue-600" />
-            <span>Google Cloud Run Deployment</span>
+            <span>Google Cloud & BigQuery Sandbox</span>
           </div>
           <p className="text-slate-600 leading-relaxed">
-            Stateless container execution scales from zero to peak scientific concurrency in sub-second time. Automatically handles TLS termination, request throttling, and environment secret injection for OpenRouter API key.
+            Google BigQuery Sandbox stores and queries 100,000 deterministic scenarios with GoogleSQL under free-tier limits (10 GiB storage, 1 TiB query/month). Complete Dockerfile and container configuration provided for Cloud Run-ready deployment.
           </p>
         </div>
 

@@ -18,11 +18,11 @@
 - **Scheduled Time (MDT)**: 10:15 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
 - **Hook**: What breaks first in whole-brain emulation?
-- **Post Summary**: I built Z-WBE Bottleneck Lab for the @GoogleDevs x @NVIDIAAI GTC Golden Ticket Challenge.
+- **Post Summary**: I built Z-WBE Bottleneck Lab for the @googlecloud x @NVIDIAAI GTC Challenge.
 - **Media**: `social_card_nim_gke.png, social_card_data_analytics.png, social_card_accelerated_ml.png, social_card_intro_inference.png`
 - **Media Order**: 1. social_card_nim_gke.png -> 2. social_card_data_analytics.png -> 3. social_card_accelerated_ml.png -> 4. social_card_intro_inference.png
 - **Hashtags**: #NVIDIAGTC
-- **Mentions**: @GoogleDevs | @NVIDIAAI | @asierarranz
+- **Mentions**: @googlecloud | @NVIDIAAI | @GoogleDevs | @asierarranz
 - **Claims Verified**: YES - Upgraded launch draft
 - **Manual Review Required**: NO
 
@@ -38,13 +38,13 @@
 ```markdown
 What breaks first in whole-brain emulation?
 
-I built Z-WBE Bottleneck Lab for the @GoogleDevs x @NVIDIAAI GTC Golden Ticket Challenge.
+I built Z-WBE Bottleneck Lab for the @googlecloud x @NVIDIAAI GTC Challenge.
 
 Change assumptions. See what fractures.
 
-Live app: https://z-wbe-bottleneck-lab.vercel.app
+Live: https://z-wbe-bottleneck-lab.vercel.app
 
-cc @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC
+cc @googlecloud @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC
 ```
 
 ---
@@ -221,7 +221,7 @@ Test your intuition live: https://z-wbe-bottleneck-lab.vercel.app
 - **Media**: `golden_ticket_nim_gke.png, 02_imaging_wall_baseline.png, 07_github_notebook_code_provenance.png, ad_08.png`
 - **Media Order**: 1. golden_ticket_nim_gke.png -> 2. 02_imaging_wall_baseline.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_08.png
 - **Hashtags**: #NVIDIAGTC
-- **Mentions**: @GoogleDevs | @NVIDIAAI | @asierarranz
+- **Mentions**: @googlecloud | @GoogleDevs | @NVIDIAAI | @asierarranz
 - **Claims Verified**: YES - Challenge build context
 - **Manual Review Required**: NO
 
@@ -241,7 +241,7 @@ Complex systems are dependency chains: solve one, the next strains.
 
 Day 1 of 21 complete: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
-cc @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC
+cc @googlecloud @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC
 ```
 
 ---

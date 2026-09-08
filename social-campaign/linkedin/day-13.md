@@ -46,8 +46,7 @@ NVIDIA RAPIDS fixes this imbalance by porting the entire data science stack to C
 - `cuML`: Accelerated machine learning algorithms (Random Forest, k-Means, SVM, PCA)
 - `cugraph`: Accelerated graph analytics for biological networks
 
-In Z-WBE Bottleneck Lab, RAPIDS is the engine that makes high-dimensional neuroscience parameter exploration practical.
-Instead of waiting 45 minutes for CPU pandas to sweep 100,000 WBE scenarios, cuDF executes the entire sweep in under 5 seconds.
+In Z-WBE Bottleneck Lab, RAPIDS cuDF accelerates tabular analytics on Tesla T4 by 8.62×, while 100,000 deterministic scenarios are stored and analyzed in Google BigQuery Sandbox.
 
 Explore our RAPIDS pipeline in Google Colab:
 https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb

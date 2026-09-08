@@ -9,21 +9,21 @@
 
 ## 1. 100-Word Project Description
 
-Z-WBE Bottleneck Lab is a scientific web demonstrator addressing a fundamental question in Whole Brain Emulation: *Under specified biological, imaging, reconstruction, computing, memory, interconnect, power, and economic assumptions, which technical constraint becomes the dominant bottleneck first?* Built on strict epistemic separation, deterministic TypeScript equations calculate all physical quantities (voxels, data volumes, PFLOPS, memory bandwidth, power, costs) while NVIDIA Nemotron 3 Super (`nvidia/nemotron-3-super-120b-a12b:free`), accessed through OpenRouter, provides causal interpretations without inventing data. Featuring interactive sensitivity testing, scenario comparison, and a 100,000-sweep GPU exploration map, it exposes critical system inflection points.
+Z-WBE Bottleneck Lab is a scientific web demonstrator addressing a fundamental question in Whole Brain Emulation: *Under specified biological, imaging, reconstruction, computing, memory, interconnect, power, and economic assumptions, which technical constraint becomes the dominant bottleneck first?* Built on strict epistemic separation, deterministic TypeScript equations compute scenario-derived engineering quantities (voxels, data volumes, PFLOPS, memory bandwidth, power, costs) while NVIDIA Nemotron 3 Super (`nvidia/nemotron-3-super-120b-a12b:free`), accessed through OpenRouter, provides causal interpretations without inventing data. Featuring interactive sensitivity testing, scenario comparison, and a deterministic 100,000-scenario parameter sweep analyzed in Google BigQuery Sandbox, it exposes critical system inflection points.
 
 ---
 
 ## 2. 250-Word Technical Description
 
-Z-WBE Bottleneck Lab is engineered as a decoupled full-stack scientific application with its live demonstrator deployed on Vercel with serverless edge delivery, alongside a production-ready containerized microservice architected for Google Cloud Run. Structured generative interpretation is powered by NVIDIA Nemotron 3 Super via OpenRouter, and large-scale parameter space exploration is accelerated via NVIDIA RAPIDS.
+Z-WBE Bottleneck Lab is engineered as a decoupled full-stack scientific application with its live demonstrator deployed on Vercel with serverless edge delivery, alongside a Cloud Run-ready container architecture. Structured generative interpretation is powered by NVIDIA Nemotron 3 Super via OpenRouter, high-throughput tabular analytics are benchmarked with NVIDIA RAPIDS in Google Colab, and 100,000 deterministic scenarios are analyzed in Google BigQuery Sandbox.
 
-The architecture strictly isolates deterministic computation from generative interpretation. The client (React 18, TypeScript, Vite, Tailwind CSS) lets users adjust 25+ parameters across tissue volume, multi-beam electron microscopy rates, automated segmentation accuracy, neural model biophysics, hardware specifications, and budgets. The backend (Node.js/Express, containerized for Google Cloud Run) executes rigorous analytical scaling equations to calculate physical data volumes, real-time simulation FLOPs, dynamic memory traffic, and thermal dissipation.
+The architecture strictly isolates deterministic computation from generative interpretation. The client (React 18, TypeScript, Vite, Tailwind CSS) lets users adjust 25+ parameters across tissue volume, multi-beam electron microscopy rates, automated segmentation accuracy, neural model biophysics, hardware specifications, and budgets. The backend (Node.js/Express with Cloud Run-ready container architecture, and Vercel edge functions) executes rigorous analytical scaling equations to calculate physical data volumes, real-time simulation FLOPs, dynamic memory traffic, and thermal dissipation.
 
 The Bottleneck Engine evaluates normalized pressure scores across eight technical dimensions (Acquisition, Reconstruction, Storage, Compute, Memory Bandwidth, Interconnect, Power, Economics), deterministically ranking constraints. A sensitivity engine perturbs variables across 0.5x, 1x, 2x, 10x, and 100x multipliers to map phase transitions and identify highest-leverage parameters.
 
-When users click `[ EXPLAIN WITH NEMOTRON ]`, the backend constructs a grounded JSON payload and transmits it to NVIDIA Nemotron 3 Super via OpenRouter. Bound by a strict system prompt, Nemotron explains why constraints dominate and where bottlenecks shift, without altering numbers. All live calls are tracked via a session counter (`AI REQUESTS THIS SESSION`) and cached deterministically using an FNV-1a `scenarioHash`. If rate-limited or offline, a deterministic grounded fallback ensures uninterrupted operation.
+When users click `[ EXPLAIN WITH NEMOTRON ]`, the serverless edge/backend proxy constructs a grounded JSON payload and transmits it to NVIDIA Nemotron 3 Super via OpenRouter. Bound by a strict system prompt, Nemotron explains why constraints dominate and where bottlenecks shift, without altering numbers. All live calls are tracked via a session counter (`AI REQUESTS THIS SESSION`) and cached deterministically using an FNV-1a `scenarioHash`. If rate-limited or offline, a deterministic grounded fallback ensures uninterrupted operation.
 
-For global parameter space exploration, a Google Colab notebook benchmarks 100,000 Monte Carlo scenario sweeps accelerated by NVIDIA RAPIDS `cudf.pandas`.
+For tabular acceleration, a Google Colab notebook demonstrates an 8.62× T4 speedup via NVIDIA RAPIDS `cudf.pandas`, while a deterministic 100,000-scenario parameter sweep is stored and analyzed in Google BigQuery Sandbox.
 
 ---
 
@@ -35,26 +35,21 @@ Whole-brain emulation is often discussed as if it depends on a single breakthrou
 
 ---
 
-## 4. System Architecture
+### 4. System Architecture
 
 ```
-                                [ CLIENT / BROWSER ]
+                                [ VERCEL LIVE APPLICATION ]
                                React 18 + TypeScript + Vite
                        (Responsive Desktop-First Scientific Lab)
                                         │
-                         HTTP REST / JSON (Explicit Calls Only)
-                                        ▼
-                           [ GOOGLE CLOUD RUN ]
-                Node.js / Express Containerized Microservice
-                                        │
             ┌───────────────────────────┴───────────────────────────┐
             ▼                                                       ▼
-[ DETERMINISTIC SCALING ENGINE ]                          [ OPENROUTER GATEWAY CLIENT ]
+[ DETERMINISTIC SCALING ENGINE ]                          [ NEMOTRON INTEGRATION / EDGE ]
 • Nanoscale Voxel Calculations                            • Model: nemotron-3-super-120b-a12b:free
 • Real-time Compute & Memory FLOP/s                       • Deterministic Caching (scenarioHash)
 • 8-Dimension Normalized Pressures                        • Session Counter (aiRequestsThisSession)
 • 0.5x – 100x Sensitivity Analysis                        • 429 Rate-Limit & Single-Retry Controller
-• Bottleneck Transition Detection                         • Zero Secret Exposure Boundary
+• Bottleneck Transition Detection                         • Zero Secret Exposure Boundary (Vercel Edge)
             │                                                       │
             └───────────────────────────┬───────────────────────────┘
                                         ▼
@@ -64,31 +59,37 @@ Whole-brain emulation is often discussed as if it depends on a single breakthrou
                  [ NVIDIA NEMOTRON 3 SUPER 120B MODEL ]
                       Mamba-Transformer Hybrid Architecture
                    Structured JSON Scientific Interpretation
-                                        │
-                                        ▼
-                            [ GPU ANALYTICS ENGINE ]
-                        Google Colab + NVIDIA RAPIDS
-                          `cudf.pandas` 100,000 Sweep
-                   Aggregate Transition Map (JSON Export)
+
+                        ═══════════════════════════════
+                             RESEARCH & ANALYTICS
+                        ═══════════════════════════════
+       [ GOOGLE COLAB + NVIDIA RAPIDS ]            [ GOOGLE BIGQUERY SANDBOX ]
+       • NVIDIA Tesla T4 GPU Runtime               • z_wbe_research.scenarios_100k
+       • cudf.pandas 8.62x Tabular Speedup         • 100,000 Deterministic Scenarios
+       • Hardware Provenance Benchmark             • GoogleSQL Distribution Analytics
+                                                   • No Credit Card / 60-Day Expiry
+
+       [ CLOUD RUN-READY CONTAINER ARCHITECTURE ]
+       • Standalone Node.js / Express microservice Dockerfile
+       • Optional container deployment for enterprise parity
 ```
 
 ---
 
 ## 5. Google Cloud Role
 
-* **Google Cloud Run**: Serverless container configuration and Dockerfile provided for hosting the Node.js TypeScript microservice. Provides automatic scaling from zero, sub-second cold starts, and keeps the OpenRouter API key strictly server-side away from client bundles.
-* **Google Colab**: High-performance compute environment used to run the Tesla T4 benchmark and the 100,000-scenario Monte Carlo parameter sweep notebook with GPU acceleration.
-* **Cloud Build & Artifact Registry**: Builds the multi-stage Dockerfile and manages immutable container image revisions.
-* **Secret Manager**: Externalized secret management provisioning credentials directly to Cloud Run without committing or exposing keys.
-* **Deployment Architecture**: Public demonstrator deployed on Vercel with serverless edge caching; backend microservice containerized and prepared for Google Cloud Run. OpenRouter brokers model inference to NVIDIA Nemotron 3 Super.
+* **Google BigQuery Sandbox**: Cloud analytics layer storing and querying the 100,000-scenario research dataset (`z_wbe_research.scenarios_100k`) via GoogleSQL without requiring billing, credit cards, or paid resources. Used to analyze bottleneck frequencies, phase boundaries, and scaling correlations under automatic 60-day sandbox lifecycle limits.
+* **Google Colab**: High-performance GPU research environment used to run the Tesla T4 benchmark proving an 8.62× speedup with NVIDIA RAPIDS `cudf.pandas`.
+* **Cloud Run-Ready Container Architecture**: Standalone Node.js/Express Dockerfile and container configuration provided for portable serverless container deployment.
+* **Deployment Architecture**: Public demonstrator deployed live on Vercel with serverless edge delivery, backed by BigQuery Sandbox for scenario analytics and Google Colab for GPU benchmarking. OpenRouter brokers model inference to NVIDIA Nemotron 3 Super.
 
 ---
 
 ## 6. NVIDIA Technology
 
 * **NVIDIA Nemotron 3 Super (`nvidia/nemotron-3-super-120b-a12b:free`)**: 120B-parameter open hybrid Mamba-Transformer architecture serving as the scientific interpretation layer via OpenRouter.
-* **NVIDIA RAPIDS (`cudf.pandas`)**: Zero-code-change GPU acceleration for pandas workflows, evaluating 100,000 scenario combinations across 8 technical dimensions in parallel on GPU memory.
-* **NVIDIA Tesla T4 GPU**: 8.62× measured T4 speedup on the Google/NVIDIA tabular ML benchmark (1.907 s CPU vs 0.221 s GPU; cudf.pandas zero-code acceleration). Separately, Z-WBE also includes a 100,000-scenario GPU parameter sweep.
+* **NVIDIA RAPIDS (`cudf.pandas`)**: Zero-code-change GPU acceleration for pandas workflows, delivering a measured 8.62× speedup on an NVIDIA Tesla T4 in Google Colab.
+* **NVIDIA Tesla T4 GPU Benchmark**: 8.62× measured T4 speedup on the separate Google/NVIDIA tabular ML benchmark (1.907 s CPU vs 0.221 s GPU with cudf.pandas). Separately, Z-WBE includes a deterministic 100,000-scenario parameter sweep stored and analyzed in Google BigQuery Sandbox.
 
 ---
 
@@ -105,20 +106,19 @@ Whole-brain emulation is often discussed as if it depends on a single breakthrou
 ## 8. OpenRouter Integration
 
 * **Gateway Endpoint**: `https://openrouter.ai/api/v1/chat/completions`
-* **Server-Side Routing**: All AI requests originate strictly from the Cloud Run backend via `Authorization: Bearer ${OPENROUTER_API_KEY}`. The browser never accesses or sees API keys.
+* **Server-Side Routing**: All AI requests originate strictly from the serverless edge / backend proxy via `Authorization: Bearer ${OPENROUTER_API_KEY}`. The browser never accesses or sees API keys.
 * **Quota Preservation**: Calls are triggered only when the user explicitly clicks `[ EXPLAIN WITH NEMOTRON ]`. No calls during slider drags, text input, preset switches, or chart renders.
 * **Deterministic Caching**: Responses are cached using an FNV-1a hash of normalized assumptions, calculated metrics, model slug, and prompt version (`scenarioHash`). Repeated clicks return cached data with 0 API calls.
 * **Resilience**: Maximum 1 automatic retry; HTTP 429 triggers an immediate user banner (`FREE API RATE LIMIT REACHED`); offline mode returns a deterministic grounded fallback.
 
 ---
 
-## 9. GPU Analytics Experiment
+## 9. Tabular GPU Benchmark & Scenario Analytics
 
-* **Notebook**: `notebooks/gpu_scenario_sweep.ipynb`
-* **Synthetic Combinations**: 100,000 configurations generated across imaging throughput, microscopes, segmentation accuracy, proofreading multipliers, compute throughput, memory bandwidth, interconnect, power, and budget ceilings.
-* **Benchmark**: Evaluates CPU pandas vs NVIDIA RAPIDS cuDF (`cudf.pandas`).
-* **Honest Execution Disclosure**: If executed without a physical GPU, the notebook explicitly records `GPU BENCHMARK NOT EXECUTED` without fabricating speedup numbers.
-* **Export**: Generates `public/data/gpu-sweep-summary.json` containing bottleneck frequencies, parameter correlations, and transition boundary regions.
+* **Canonical Colab Notebook**: `notebooks/Z_WBE_GPU_LAB.ipynb`
+* **Tabular ML Benchmark**: Evaluates CPU pandas vs NVIDIA RAPIDS cuDF (`cudf.pandas`) on the Google/NVIDIA tabular ML benchmark, measuring an 8.62× T4 speedup (1.907 s CPU vs 0.221 s GPU).
+* **100,000-Scenario Parameter Sweep**: Deterministic 100,000-scenario parameter sweep stored and analyzed in Google BigQuery Sandbox (`z_wbe_research.scenarios_100k`) via GoogleSQL, with summary distributions exported to `public/data/gpu-sweep-summary.json`.
+* **Honest Execution Disclosure**: All benchmark numbers are backed by raw hardware telemetry logs (`nvidia-smi`) and timing provenance files (`evidence/contest/gpu-benchmark/BENCHMARK_PROVENANCE.md`).
 
 ---
 
@@ -135,11 +135,11 @@ Whole-brain emulation is often discussed as if it depends on a single breakthrou
 ### 2. [Speed Up Data Analytics on GPUs](https://developers.google.com/profile/badges/playlists/speed-up-data-analytics-GPUs?u=zhane)
 * **Public Badge Credential**: [Verified Badge Playlist](https://developers.google.com/profile/badges/playlists/speed-up-data-analytics-GPUs?u=zhane) • [Official Pathway](https://developers.google.com/learn/pathways/speed-up-data-analytics-GPUs)
 * **Learned**: NVIDIA RAPIDS, cuDF dataframe acceleration, GPU memory bandwidth utilization, and high-throughput parameter exploration.
-* **Applied**: Developed the 100,000-scenario Monte Carlo parameter sweep using `%load_ext cudf.pandas` to benchmark GPU cuDF vs CPU pandas.
+* **Applied**: Developed the Google Colab GPU lab benchmarking `cudf.pandas` zero-code acceleration (achieving 8.62× T4 speedup), paired with a deterministic 100,000-scenario parameter sweep stored and analyzed in Google BigQuery Sandbox.
 
 ### 3. [Accelerated Machine Learning with Google Cloud and NVIDIA](https://developers.google.com/profile/badges/playlists/accelerated-machine-learning-with-google-cloud-and-nvidia?u=110918189625880989910)
 * **Public Badge Credential**: [Verified Badge Playlist](https://developers.google.com/profile/badges/playlists/accelerated-machine-learning-with-google-cloud-and-nvidia?u=110918189625880989910) • [Official Pathway](https://developers.google.com/learn/pathways/accelerated-machine-learning-with-google-cloud-and-nvidia)
-* **Applied Where Genuinely Used**: Used GPU-accelerated array and dataframe processing for multidimensional correlation calculations and threshold boundary discovery across the 100,000-scenario dataset.
+* **Applied Where Genuinely Used**: Evaluated GPU-accelerated dataframe processing in Google Colab, and analyzed multidimensional bottleneck distributions across the 100,000-scenario dataset using GoogleSQL in BigQuery Sandbox.
 * **Strict Integrity**: Did *not* falsely claim execution of cuML or XGBoost models, as the scenario sweep is an analytical parameter space exploration rather than a supervised learning task.
 
 ### 4. [Intro to Inference: How to Run AI Models on a GPU](https://developers.google.com/profile/badges/playlists/ai-models-on-gpu-intro?u=zhane)
@@ -182,7 +182,7 @@ Unlike typical AI applications that prompt models to estimate or compute enginee
 5. **The Shift**: "Instantly, a banner appears: **`THE BOTTLENECK MOVED.`** The acquisition constraint vanished, but the dominant bottleneck shifted to MEMORY BANDWIDTH."
 6. **Nemotron Reasoning**: "Click *`[ EXPLAIN WITH NEMOTRON ]`*. NVIDIA Nemotron 3 Super, running through OpenRouter, returns a structured report labeled **`AI INTERPRETATION`**. Nemotron is instructed to interpret only the deterministic metrics supplied by the application, and its output is labeled AI INTERPRETATION."
 7. **Session Request Counter & Caching**: "Notice the `AI REQUESTS THIS SESSION` counter incremented. If we click explain again, the result returns instantly from the cache with `CACHED (0 API CALLS)`."
-8. **GPU Exploration Map**: "Scroll to the GPU Exploration Map to view the 100,000-scenario Monte Carlo sweep executed via NVIDIA RAPIDS cuDF, illustrating global phase transition thresholds."
+8. **Scenario Exploration Map**: "Scroll to the Scenario Exploration Map to view the deterministic 100,000-scenario parameter sweep stored and analyzed in Google BigQuery Sandbox, illustrating global phase transition thresholds."
 
 ---
 
@@ -206,15 +206,15 @@ The debate surrounding Whole Brain Emulation (WBE) is often trapped in domain si
 **Z-WBE Bottleneck Lab** unifies the entire macroscopic engineering pipeline—Preservation, Acquisition, Reconstruction, Functionalization, Execution, and Validation—into a single interactive scaling demonstrator.
 
 **Core Product Principle: Strict Epistemic Separation**
-* ⚡ **Deterministic Physical Engine**: 12 transparent scaling equations compute physical quantities (voxels, data volumes, PFLOPS, memory bandwidth, thermal power, and budgets in <1ms). All values are labeled `CALCULATED FROM SCENARIO ASSUMPTIONS`.
+* ⚡ **Deterministic Physical Engine**: 12 transparent scaling equations compute scenario-derived engineering quantities (voxels, data volumes, PFLOPS, memory bandwidth, thermal power, and budgets in <1ms). All values are labeled `CALCULATED FROM SCENARIO ASSUMPTIONS`.
 * 🧠 **Grounded Generative AI**: NVIDIA Nemotron 3 Super 120B (`nvidia/nemotron-3-super-120b-a12b:free`) via **OpenRouter** interprets calculated results. Nemotron is bound by a strict grounding contract: it explains causal leverage points and trade-offs without inventing measurements or hallucinating numbers. All outputs are labeled `AI INTERPRETATION`.
 
 **Key Architectural Highlights**:
 * 💥 **The Hero Moment**: Testing *"What happens if imaging becomes 100x faster?"* reveals Amdahl's Law in action: eliminating microscopy barriers causes the dominant bottleneck to instantly jump to Memory Bandwidth in <1ms.
-* ⚡ **8.62× GPU Acceleration**: 8.62× measured T4 speedup on the Google/NVIDIA tabular ML benchmark (1.907 s CPU vs 0.221 s GPU).
-* 📊 **100,000-Scenario Parameter Sweep**: Z-WBE also includes a 100,000-scenario GPU parameter sweep (100,000-scenario parameter-space exploration in GPU memory with NVIDIA RAPIDS cuDF, exported directly into the web application's interactive heatmap).
+* ⚡ **8.62× GPU Acceleration**: 8.62× measured T4 speedup on the Google/NVIDIA tabular ML benchmark (1.907 s CPU vs 0.221 s GPU with cudf.pandas).
+* 📊 **100,000-Scenario Parameter Sweep**: Z-WBE includes a deterministic 100,000-scenario parameter sweep stored and analyzed in Google BigQuery Sandbox.
 * 🚀 **1-Click Colab Launch**: Complete canonical 10-stage GPU notebook ready to run in one click via Google Colab.
-* 🛡️ **Verified Engineering**: 89 passing unit tests, full TypeScript monorepo, zero-secret server-side API boundary, and containerized microservice architected for Google Cloud Run.
+* 🛡️ **Verified Engineering**: 89 passing unit tests, full TypeScript monorepo, zero-secret server-side API boundary, and Cloud Run-ready container architecture.
 
 ### Selected Contest Judges
 The official contest judging panel includes Asier Arranz, Jen Harvey, Ray Harvey, Chorouk Malmoum, Steve Nouri, Merve Noyan, Johnny Nunez, and Joerg Storm. Selected judges highlighted for our application include:
@@ -247,18 +247,18 @@ Judges & Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI | @Asier 
 Change the assumptions. See what fractures.
 
 Key Highlights:
-⚡ Deterministic scaling equations compute all metrics (FLOPs, TB/s, scan times, costs) in <1ms.
+⚡ Deterministic scaling equations compute scenario-derived engineering quantities (<1ms).
 🧠 NVIDIA Nemotron 3 Super 120B via @OpenRouter explains *why* bottlenecks shift—bound by a strict grounding contract.
 💥 The Hero Moment: Imaging gets 100x faster? The bottleneck instantly moves to memory bandwidth.
-🏎️ 8.62× measured T4 speedup on the Google/NVIDIA tabular ML benchmark.
-📊 Z-WBE also includes a 100,000-scenario GPU parameter sweep.
-🧪 89 passing unit tests | TypeScript monorepo | Cloud Run container ready.
+🏎️ 8.62× measured T4 speedup on tabular ML benchmark with RAPIDS.
+📊 100k scenarios stored & analyzed in BigQuery Sandbox.
+🧪 89 passing unit tests | TypeScript monorepo | Cloud Run-ready container.
 
 🌐 Live Lab: https://z-wbe-bottleneck-lab.vercel.app
 📓 Run in Colab: https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 💻 Code: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
-cc @GoogleDevs @NVIDIAAI @asierarranz
+cc @googlecloud @GoogleDevs @NVIDIAAI @asierarranz
 #NVIDIAGTC #GoogleCloud #NVIDIA #GTC2026 #Nemotron #OpenRouter #RAPIDS #cuDF #CloudRun #DevChallenge
 
 ---
@@ -277,8 +277,8 @@ cc @GoogleDevs @NVIDIAAI @asierarranz
 - [x] **Production build passes**: `npm run build` bundles `shared`, `backend`, and `frontend` into production assets cleanly.
 - [x] **OpenRouter key server-side**: Zero secrets committed or exposed in client bundles.
 - [x] **Open Model Verified**: NVIDIA Nemotron 3 Super 120B (`nvidia/nemotron-3-super-120b-a12b:free`) integrated via backend proxy with FNV-1a deterministic caching.
-- [x] **Hardware Provenance Verified**: 8.62× measured T4 speedup on the Google/NVIDIA tabular ML benchmark (1.907 s CPU vs 0.221 s GPU). Separately, Z-WBE also includes a 100,000-scenario GPU parameter sweep.
-- [x] **Google Cloud & Edge Deployment**: Live on Google Cloud Run (`https://z-wbe-bottleneck-lab-517854668789.us-central1.run.app`) and Vercel edge (`https://z-wbe-bottleneck-lab.vercel.app`), verified with deployment artifacts (`cloud-run-url.txt`, `cloud-run-service.json`, `cloud-run-health.txt`).
+- [x] **Hardware & Cloud Provenance Verified**: 8.62× measured T4 speedup on the Google/NVIDIA tabular ML benchmark (1.907 s CPU vs 0.221 s GPU with cudf.pandas). Separately, Z-WBE includes a deterministic 100,000-scenario parameter sweep stored and analyzed in Google BigQuery Sandbox.
+- [x] **Deployment & Analytics**: Live on Vercel edge (`https://z-wbe-bottleneck-lab.vercel.app`), verified with Google BigQuery Sandbox (`z_wbe_research.scenarios_100k`), Google Colab (`Z_WBE_GPU_LAB.ipynb`), and Cloud Run-ready container architecture.
 - [x] **Canonical Colab Notebook**: Consolidated into `notebooks/Z_WBE_GPU_LAB.ipynb` with 10 structured sections; automated synchronization utility provided (`scripts/sync-colab.ps1`).
 - [x] **Repository Topics Live**: All 20 official topics active on GitHub repository.
 

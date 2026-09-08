@@ -22,7 +22,7 @@
 - **Media**: `golden_ticket_data_analytics.png, 06_architecture_evidence_view.png, 04_colab_cuml_execution_progress.png, ad_03.png`
 - **Media Order**: 1. golden_ticket_data_analytics.png -> 2. 06_architecture_evidence_view.png -> 3. 04_colab_cuml_execution_progress.png -> 4. ad_03.png
 - **Hashtags**: #NVIDIAGTC #Hardware
-- **Mentions**: @GoogleDevs | @NVIDIAAI
+- **Mentions**: @googlecloud | @GoogleDevs | @NVIDIAAI
 - **Claims Verified**: YES - Memory wall core thesis
 - **Manual Review Required**: NO
 
@@ -43,7 +43,7 @@ Meet the Memory Wall in whole-brain emulation:
 https://z-wbe-bottleneck-lab.vercel.app
 
 #NVIDIAGTC #Hardware
-cc @GoogleDevs @NVIDIAAI
+cc @googlecloud @GoogleDevs @NVIDIAAI
 ```
 
 ---

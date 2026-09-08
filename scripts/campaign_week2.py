@@ -221,7 +221,7 @@ From raw voxels to megawatt power budgets, pure TypeScript calculates the physic
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 #NVIDIAGTC #TypeScript
-cc @GoogleDevs @NVIDIAAI"""
+cc @googlecloud @GoogleDevs @NVIDIAAI"""
         },
         {
             "id": "buffer_x_d08_p2",
@@ -1121,7 +1121,7 @@ Run our canonical Colab notebook:
 https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 
 #NVIDIAGTC #GoogleColab
-cc @GoogleDevs @NVIDIAAI"""
+cc @googlecloud @GoogleDevs @NVIDIAAI"""
         },
         {
             "id": "buffer_x_d11_p2",
@@ -1558,8 +1558,7 @@ NVIDIA RAPIDS fixes this imbalance by porting the entire data science stack to C
 - `cuML`: Accelerated machine learning algorithms (Random Forest, k-Means, SVM, PCA)
 - `cugraph`: Accelerated graph analytics for biological networks
 
-In Z-WBE Bottleneck Lab, RAPIDS is the engine that makes high-dimensional neuroscience parameter exploration practical.
-Instead of waiting 45 minutes for CPU pandas to sweep 100,000 WBE scenarios, cuDF executes the entire sweep in under 5 seconds.
+In Z-WBE Bottleneck Lab, RAPIDS cuDF accelerates tabular analytics on Tesla T4 by 8.62×, while 100,000 deterministic scenarios are stored and analyzed in Google BigQuery Sandbox.
 
 Explore our RAPIDS pipeline in Google Colab:
 https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
@@ -1704,14 +1703,13 @@ Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
             "claims_verified": "YES - cuDF and cuML acceleration thesis",
             "manual_review": "NO",
             "media": "public/recordings/colab_t4_terminal_execution.gif",
-            "text": """Why wait 45 minutes on CPU pandas?
-NVIDIA cuDF and cuML sweep 100,000 scenarios in <5 seconds.
+            "text": """NVIDIA RAPIDS cuDF delivered an 8.62x measured T4 speedup on tabular ML (1.907s CPU vs 0.221s GPU).
 
 Run our Colab GPU lab:
 https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 
 #NVIDIAGTC #RAPIDS
-cc @GoogleDevs @NVIDIAAI"""
+cc @googlecloud @GoogleDevs @NVIDIAAI"""
         },
         {
             "id": "buffer_x_d13_p2",
@@ -1827,11 +1825,11 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
                 "public/colab-evidence/08_colab_rapids_and_variable_inspector.png",
                 "public/marketing/ad_05.png"
             ],
-            "text": """Mapping 100,000 futures for Whole-Brain Emulation in GPU memory.
+            "text": """Mapping 100,000 futures for Whole-Brain Emulation in Google BigQuery Sandbox.
 
 When modeling an engineering system as complex as brain emulation, testing 3 or 4 hand-picked scenarios is not enough. You need to explore the entire high-dimensional parameter space.
 
-In Stage 9 of our GPU pipeline, we generated and evaluated 100,000 distinct Monte Carlo scenarios using NVIDIA RAPIDS cuDF in GPU memory:
+In our parameter sweep pipeline, we generated and evaluated 100,000 distinct deterministic scenarios stored and analyzed in Google BigQuery Sandbox using GoogleSQL:
 - Varied acquisition beam speed from 0.1x to 500x.
 - Varied voxel resolution from 2nm to 50nm.
 - Varied synaptic density from 100 to 1,500 synapses per neuron.
@@ -1839,12 +1837,13 @@ In Stage 9 of our GPU pipeline, we generated and evaluated 100,000 distinct Mont
 - Varied simulation compute capacity from 100 PFLOPS to 100 ExaFLOPS.
 
 The Global Phase Transition Findings:
-1. The Acquisition Domain: 48.2% of all possible parameter combinations are dominated by the Acquisition (Imaging) Wall.
-2. The Memory Domain: 28.7% of scenarios are dominated by Memory Bandwidth.
-3. The Compute Domain: 14.1% are dominated by Real-Time Neural Simulation Compute.
-4. The Interconnect & Thermal Domains: 9.0% are dominated by multi-node bisection bandwidth or facility power.
+1. The Acquisition Domain: 27.3% of scenarios are dominated by the Acquisition Wall.
+2. The Economic Cost Domain: 27.3% are dominated by Capital & Operating Costs.
+3. The Reconstruction Domain: 18.8% are dominated by Segmentation & Tracing.
+4. The Memory Bandwidth Domain: 14.1% are dominated by Memory Bandwidth.
+5. Storage & Infrastructure: 12.5% across Storage, Power, Interconnect & Compute.
 
-Notice: Memory Bandwidth dominates more than DOUBLE the scenario space of raw compute!
+Notice: Memory Bandwidth dominates thousands of times more scenarios than raw compute!
 In supercomputing discussions, people build ExaFLOP clusters. The data says they should be building high-bandwidth memory fabrics.
 
 Explore the interactive 100k scenario heatmap live:
@@ -1852,7 +1851,7 @@ https://z-wbe-bottleneck-lab.vercel.app
 
 
 Mentions & Judges: @Google Cloud | @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Harvey | @Ray Harvey
-#NVIDIAGTC #MonteCarlo #DataScience #DataAnalytics #RAPIDS #cuDF #Supercomputing #ComputationalNeuroscience"""
+#NVIDIAGTC #BigQuery #GoogleCloud #DataScience #DataAnalytics #Supercomputing #ComputationalNeuroscience"""
         },
         {
             "id": "buffer_li_d14_p2",
@@ -1869,24 +1868,21 @@ Mentions & Judges: @Google Cloud | @Google for Developers | @NVIDIA AI | @Asier 
                 "public/colab-evidence/07_github_notebook_code_provenance.png",
                 "public/marketing/ad_04.png"
             ],
-            "text": """How we generated 100,000 synthetic parameter scenarios in under 2 seconds.
+            "text": """How we analyzed 100,000 synthetic parameter scenarios in Google BigQuery Sandbox.
 
-In `scripts/generate_gpu_sweep.py`, I implemented a vectorized Monte Carlo generator:
-- Uses Latin Hypercube Sampling across 10 continuous parameter dimensions to ensure uniform space coverage.
-- Allocates contiguous NumPy arrays and converts them directly into cuDF GPU dataframes.
-- Evaluates our 12 scaling equations vectorized across GPU cores without a single Python `for` loop.
+In `scripts/generate_gpu_sweep.py` and BigQuery Sandbox:
+- Evaluates 100,000 deterministic parameter combinations across 10 dimensions.
+- Loaded into BigQuery public table `geometric-kiln-457011-h4:z_wbe_research.scenarios_100k` (33.4 MB).
+- Evaluates our scaling equations and dominant bottleneck classifications via GoogleSQL queries in seconds with zero infrastructure cost.
 
-Total time to generate, evaluate, and classify 100,000 scenarios into dominant bottleneck categories on an NVIDIA Tesla T4:
-1.84 seconds.
-
-The output is exported directly to `public/data/gpu-sweep-summary.json`, which hydrates our web application's interactive GPU Exploration Map.
+The output is also exported directly to `public/data/gpu-sweep-summary.json`, which hydrates our web application's interactive GPU Exploration Map.
 
 Inspect the generator script on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 
 Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
-#NVIDIAGTC #Python #MonteCarlo #DataEngineering #RAPIDS #cuDF #Mathematics"""
+#NVIDIAGTC #BigQuery #GoogleCloud #Python #DataEngineering #Mathematics"""
         },
         {
             "id": "buffer_li_d14_p3",
@@ -2006,16 +2002,18 @@ Mentions & Judges: @Google Cloud | @Google for Developers | @NVIDIA AI | @Asier 
                 "public/colab-evidence/08_colab_rapids_and_variable_inspector.png",
                 "public/images/banner-light.png"
             ],
-            "text": """I mapped 100,000 WBE futures in GPU memory via NVIDIA cuDF:
-48.2% Acquisition-bound
-28.7% Memory-bound
-14.1% Compute-bound
-9.0% Interconnect/Power-bound
+            "text": """100k WBE scenarios in BigQuery Sandbox:
+• 27.3% Acquisition
+• 27.3% Cost
+• 18.8% Reconstruction
+• 14.1% Memory BW
+• 10.7% Storage
+• 1.8% Power/Compute
 
-Memory dominates 2x more than compute!
-Map: https://z-wbe-bottleneck-lab.vercel.app
+Memory dominates raw compute!
+https://z-wbe-bottleneck-lab.vercel.app
 
-cc @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC"""
+cc @googlecloud @GoogleDevs @NVIDIAAI #NVIDIAGTC"""
         },
         {
             "id": "buffer_x_d14_p2",
@@ -2032,12 +2030,13 @@ cc @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC"""
                 "public/colab-evidence/07_github_notebook_code_provenance.png",
                 "public/images/banner-dark.png"
             ],
-            "text": """100k scenarios generated and evaluated in 1.84s on a Tesla T4.
-Zero Python loops. Pure GPU vectorization.
+            "text": """100k scenarios analyzed in BigQuery Sandbox with GoogleSQL + Colab GPU research lab on Tesla T4.
+Zero-cost serverless analytics.
 
 Colab code: https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 
-#NVIDIAGTC #GoogleColab"""
+#NVIDIAGTC #BigQuery
+cc @googlecloud @GoogleDevs"""
         },
         {
             "id": "buffer_x_d14_p3",
@@ -2100,7 +2099,7 @@ Week 3 starts tomorrow: Preservation limits, biophysical functionalization, and 
 
 Explore the lab: https://z-wbe-bottleneck-lab.vercel.app
 
-cc @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC"""
+cc @googlecloud @GoogleDevs @NVIDIAAI #NVIDIAGTC"""
         }
     ]
 

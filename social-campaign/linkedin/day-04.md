@@ -168,11 +168,11 @@ Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 - **Content Pillar**: Pillar C: GPU / NVIDIA
 - **Scheduled Time (MDT)**: 17:34 MDT
 - **Primary Destination URL**: https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
-- **Hook**: Mapping bottleneck phase transitions across 100,000 scenarios in GPU memory.
+- **Hook**: Mapping bottleneck phase transitions across 100,000 scenarios in Google BigQuery Sandbox.
 - **Post Summary**: What does the global landscape of bottlenecks look like across varying imaging speeds and compute budgets?
 - **Media**: `social_card_data_analytics.png, 02_imaging_wall_baseline.png, 07_github_notebook_code_provenance.png, ad_01.png`
 - **Media Order**: 1. social_card_data_analytics.png -> 2. 02_imaging_wall_baseline.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_01.png
-- **Hashtags**: #NVIDIAGTC #RAPIDS #cuDF #GoogleColab #MonteCarlo #DataScience #DataAnalytics
+- **Hashtags**: #NVIDIAGTC #BigQuery #GoogleCloud #DataScience #DataAnalytics
 - **Mentions**: @Google Cloud | @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - Colab Stage 9 parameter sweep verified
 - **Manual Review Required**: NO
@@ -187,26 +187,26 @@ Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 ### Post Copy
 
 ```markdown
-Mapping bottleneck phase transitions across 100,000 scenarios in GPU memory.
+Mapping bottleneck phase transitions across 100,000 scenarios in Google BigQuery Sandbox.
 
 What does the global landscape of bottlenecks look like across varying imaging speeds and compute budgets?
 
-In Stage 9 of our canonical Colab notebook, we run a 100,000-scenario Monte Carlo sweep:
+In our 100,000-scenario parameter sweep stored and analyzed in BigQuery Sandbox:
 - We vary acquisition throughput from 0.1x to 500x baseline.
 - We vary available memory bandwidth from 1 TB/s to 100 TB/s.
-- We calculate the dominant bottleneck for every single scenario using NVIDIA RAPIDS cuDF in GPU memory.
+- We calculate the dominant bottleneck for every single scenario using deterministic scaling equations.
 
 The result is a 2D phase transition diagram:
 - Below 10x acquisition speed, the system is 98% Acquisition-bound.
 - Between 10x and 100x, the system undergoes a rapid phase transition into a Memory-bound regime.
 - Above 100x, Memory Bandwidth and Interconnect dictate 87% of all simulated outcomes.
 
-Run the parameter sweep notebook cell yourself:
-https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
+Explore the BigQuery research dataset:
+https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 
 Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
-#NVIDIAGTC #RAPIDS #cuDF #GoogleColab #MonteCarlo #DataScience #DataAnalytics
+#NVIDIAGTC #BigQuery #GoogleCloud #DataScience #DataAnalytics
 ```
 
 ---

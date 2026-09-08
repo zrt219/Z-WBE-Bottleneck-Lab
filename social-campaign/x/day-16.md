@@ -17,12 +17,12 @@
 - **Content Pillar**: Pillar A: WBE Research
 - **Scheduled Time (MDT)**: 10:19 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
-- **Hook**: A nanometer scan of a CPU doesn't tell you the clock frequency or register voltage.
+- **Hook**: A nanometer scan of a CPU doesn't reveal clock frequency or register voltage.
 - **Post Summary**: A connectome doesn't give you ion channel densities.
 - **Media**: `golden_ticket_data_analytics.png, 01_hero_overview.png, 06_colab_gpu_extensions_and_terminal.png, ad_05.png`
 - **Media Order**: 1. golden_ticket_data_analytics.png -> 2. 01_hero_overview.png -> 3. 06_colab_gpu_extensions_and_terminal.png -> 4. ad_05.png
 - **Hashtags**: #NVIDIAGTC #Neuroscience
-- **Mentions**: @GoogleDevs | @NVIDIAAI
+- **Mentions**: @googlecloud | @GoogleDevs | @NVIDIAAI
 - **Claims Verified**: YES - Connectome != simulation thesis
 - **Manual Review Required**: NO
 
@@ -36,14 +36,14 @@
 ### Post Copy
 
 ```markdown
-A nanometer scan of a CPU doesn't tell you the clock frequency or register voltage.
+A nanometer scan of a CPU doesn't reveal clock frequency or register voltage.
 A connectome doesn't give you ion channel densities.
 
 That's the Functionalization problem.
 Explore: https://z-wbe-bottleneck-lab.vercel.app
 
 #NVIDIAGTC #Neuroscience
-cc @GoogleDevs @NVIDIAAI
+cc @googlecloud @GoogleDevs @NVIDIAAI
 ```
 
 ---

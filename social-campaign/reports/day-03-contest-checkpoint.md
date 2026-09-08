@@ -20,9 +20,9 @@ Section 52 mandates an explicit audit verifying that at least one qualifying pub
 | Requirement | Audit Status | Evidence in Post Copy |
 | :--- | :--- | :--- |
 | **Project Explanation** | **VERIFIED** | Explicitly defines Z-WBE Bottleneck Lab as a macroscopic systems-modeling lab unifying 6 pipeline stages (Preservation to Validation) under 8 physical scaling constraints. |
-| **What Was Built** | **VERIFIED** | Documents the 12 deterministic TypeScript equations, strict NVIDIA Nemotron 3 Super grounding contract, 100k GPU Monte Carlo sweep, and 89 unit tests. |
+| **What Was Built** | **VERIFIED** | Documents the 12 deterministic TypeScript equations, strict NVIDIA Nemotron 3 Super grounding contract, 100k BigQuery Sandbox parameter sweep, and 89 unit tests. |
 | **What Was Learned** | **VERIFIED** | Details concrete learnings from all 4 Google Cloud × NVIDIA pathways (NIM GKE microservice decoupling, inference latency/throughput budgeting, cuDF `%load_ext cudf.pandas` acceleration, and cuML training). |
-| **Required Tagging** | **VERIFIED** | Includes `Google for Developers` / `@GoogleDevs`, `NVIDIA AI` / `@NVIDIAAI`, `Asier Arranz`, `Jen Harvey`, and `Ray Harvey`. |
+| **Required Tagging** | **VERIFIED** | Includes `Google Cloud` / `@googlecloud`, `Google for Developers` / `@GoogleDevs`, `NVIDIA AI` / `@NVIDIAAI`, `Asier Arranz`, `Jen Harvey`, and `Ray Harvey`. |
 | **Primary Hashtag** | **VERIFIED** | Anchored by `#NVIDIAGTC`. |
 | **Public Project Links** | **VERIFIED** | Includes live web app (`https://z-wbe-bottleneck-lab.vercel.app`), 1-click Colab lab (`https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb`), GitHub repo (`https://github.com/zrt219/Z-WBE-Bottleneck-Lab`), and Google Developer Profile (`https://g.dev/zhane`). |
 
@@ -44,7 +44,7 @@ Section 52 mandates an explicit audit verifying that at least one qualifying pub
 ## 3. Technical Evidence Provenance Reconciliation
 
 - **Hardware Profile**: NVIDIA Tesla T4 GPU (16 GB GDDR6) on Google Colab.
-- **Speedup Multiplier**: 8.62× measured T4 speedup on the Google/NVIDIA tabular ML benchmark (1.907 s CPU vs 0.221 s GPU). Separately, Z-WBE also includes a 100,000-scenario GPU parameter sweep.
+- **Speedup Multiplier**: 8.62× measured T4 speedup on the Google/NVIDIA tabular ML benchmark (1.907 s CPU vs 0.221 s GPU). Separately, Z-WBE includes a deterministic 100,000-scenario parameter sweep stored and analyzed in Google BigQuery Sandbox.
 - **Sub-Task Breakdown**: XGBoost (9.8×), Random Forest (8.5×), Data Cleaning (6.8×), Data Loading (4.25×).
 - **Code Provenance**: `%load_ext cudf.pandas` with zero application code modifications.
 - **Repository Proof File**: `evidence/contest/gpu-benchmark/BENCHMARK_PROVENANCE.md` & `cpu_vs_gpu_benchmark.json`.

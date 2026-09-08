@@ -48,15 +48,15 @@ I built Z-WBE Bottleneck Lab for the Google Cloud × NVIDIA GTC Berlin 2026 Gold
 Z-WBE is an interactive, open-source systems-modeling laboratory that unifies all 6 macroscopic pipeline stages—Preservation, Acquisition, Reconstruction, Functionalization, Execution, and Validation—under 8 physical scaling constraints.
 
 Core Architectural Principle: Strict Epistemic Separation
-1. Deterministic Physical Engine: 12 transparent scaling equations compute physical reality (voxels, storage volumes, simulation FLOPs, memory bandwidth in TB/s, thermal dissipation, and capital budgets in <1ms). Every metric is labeled: CALCULATED FROM SCENARIO ASSUMPTIONS.
+1. Deterministic Physical Engine: 12 transparent scaling equations compute scenario-derived engineering quantities (voxels, storage volumes, simulation FLOPs, memory bandwidth in TB/s, thermal dissipation, and capital budgets in <1ms). Every metric is labeled: CALCULATED FROM SCENARIO ASSUMPTIONS.
 2. Grounded Generative AI: NVIDIA Nemotron 3 Super 120B (nvidia/nemotron-3-super-120b-a12b:free) via OpenRouter interprets causal relationships and trade-offs. Nemotron operates under a strict grounding contract: it explains why bottlenecks dominate without inventing measurements or modifying numbers. Every qualitative insight is labeled: AI INTERPRETATION.
 
 Key Empirical & Architectural Highlights:
 - The Hero Demo Moment: What happens if imaging becomes 100x faster? The acquisition bottleneck collapses—and the dominant constraint instantly shifts to Memory Bandwidth in <1ms.
-- Empirical 8.62× GPU Acceleration: 8.62× measured T4 speedup on the Google/NVIDIA tabular ML benchmark (1.907 s CPU vs 0.221 s GPU). Separately, Z-WBE also includes a 100,000-scenario GPU parameter sweep.
-- 100,000-Scenario Monte Carlo Sweep: 100,000-scenario parameter-space exploration in GPU memory with NVIDIA RAPIDS cuDF, visualized in an interactive heatmap.
+- Empirical 8.62× GPU Acceleration: 8.62× measured T4 speedup on the Google/NVIDIA tabular ML benchmark (1.907 s CPU vs 0.221 s GPU with cudf.pandas).
+- 100,000-Scenario Parameter Sweep: Z-WBE includes a deterministic 100,000-scenario parameter sweep stored and analyzed in Google BigQuery Sandbox.
 - 1-Click Reproducible Colab: Full 10-stage GPU notebook ready to run in one click.
-- 89 Passing Unit Tests: Full TypeScript monorepo, zero secret leakage, containerized microservice ready for Google Cloud Run.
+- 89 Passing Unit Tests: Full TypeScript monorepo, zero secret leakage, Cloud Run-ready container architecture.
 
 Explore the live demonstrator, interactive notebook, and full source:
 Live Demonstrator: https://z-wbe-bottleneck-lab.vercel.app

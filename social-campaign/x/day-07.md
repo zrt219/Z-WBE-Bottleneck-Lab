@@ -22,7 +22,7 @@
 - **Media**: `guided_tour_walkthrough.mp4`
 - **Media Order**: Single Asset: guided_tour_walkthrough.mp4
 - **Hashtags**: #NVIDIAGTC #BuildInPublic
-- **Mentions**: @GoogleDevs | @NVIDIAAI | @asierarranz
+- **Mentions**: @googlecloud | @GoogleDevs | @NVIDIAAI | @asierarranz
 - **Claims Verified**: YES - Week 1 summary
 - **Manual Review Required**: NO
 
@@ -36,13 +36,13 @@
 Week 1 of Z-WBE complete!
 89 tests passing.
 8.62x speedup on Tesla T4.
-100k scenarios mapped.
+100k scenarios mapped in BigQuery.
 Contest submitted.
 
 Try live: https://z-wbe-bottleneck-lab.vercel.app
 
 #NVIDIAGTC #BuildInPublic
-cc @GoogleDevs @NVIDIAAI @asierarranz
+cc @googlecloud @GoogleDevs @NVIDIAAI @asierarranz
 ```
 
 ---
@@ -170,7 +170,7 @@ https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/n
 - **Media**: `social_card_nim_gke.png, 06_architecture_evidence_view.png, cpu_vs_gpu_speedup.png, banner-dark.png`
 - **Media Order**: 1. social_card_nim_gke.png -> 2. 06_architecture_evidence_view.png -> 3. cpu_vs_gpu_speedup.png -> 4. banner-dark.png
 - **Hashtags**: #NVIDIAGTC
-- **Mentions**: @GoogleDevs | @NVIDIAAI | @asierarranz
+- **Mentions**: @googlecloud | @GoogleDevs | @NVIDIAAI | @asierarranz
 - **Claims Verified**: YES - Week 2 teaser
 - **Manual Review Required**: NO
 
@@ -187,10 +187,10 @@ https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/n
 Week 1: The Project.
 Week 2: The Engineering.
 
-Tomorrow, I open up the 12 deterministic TypeScript equations behind the physics:
+Tomorrow, I open up the 12 deterministic equations behind the physics:
 https://z-wbe-bottleneck-lab.vercel.app
 
-cc @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC
+cc @googlecloud @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC
 ```
 
 ---

@@ -17,12 +17,12 @@
 - **Content Pillar**: Pillar C: GPU / NVIDIA
 - **Scheduled Time (MDT)**: 10:14 MDT
 - **Primary Destination URL**: https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
-- **Hook**: Why wait 45 minutes on CPU pandas?
-- **Post Summary**: NVIDIA cuDF and cuML sweep 100,000 scenarios in <5 seconds.
+- **Hook**: NVIDIA RAPIDS cuDF delivered an 8.62x measured T4 speedup on tabular ML (1.907s CPU vs 0.221s GPU).
+- **Post Summary**: Run our Colab GPU lab:
 - **Media**: `colab_t4_terminal_execution.gif`
 - **Media Order**: Single Asset: colab_t4_terminal_execution.gif
 - **Hashtags**: #NVIDIAGTC #RAPIDS
-- **Mentions**: @GoogleDevs | @NVIDIAAI
+- **Mentions**: @googlecloud | @GoogleDevs | @NVIDIAAI
 - **Claims Verified**: YES - cuDF and cuML acceleration thesis
 - **Manual Review Required**: NO
 
@@ -33,14 +33,13 @@
 ### Post Copy
 
 ```markdown
-Why wait 45 minutes on CPU pandas?
-NVIDIA cuDF and cuML sweep 100,000 scenarios in <5 seconds.
+NVIDIA RAPIDS cuDF delivered an 8.62x measured T4 speedup on tabular ML (1.907s CPU vs 0.221s GPU).
 
 Run our Colab GPU lab:
 https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 
 #NVIDIAGTC #RAPIDS
-cc @GoogleDevs @NVIDIAAI
+cc @googlecloud @GoogleDevs @NVIDIAAI
 ```
 
 ---

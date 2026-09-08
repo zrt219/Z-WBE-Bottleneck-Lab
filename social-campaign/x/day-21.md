@@ -17,12 +17,12 @@
 - **Content Pillar**: Pillar F: Build Journey
 - **Scheduled Time (MDT)**: 10:18 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
-- **Hook**: Day 21 of 21: Full Campaign Retrospective!
+- **Hook**: Day 21/21: Full Retrospective!
 - **Post Summary**: 8.62x GPU speedup on Tesla T4.
 - **Media**: `social_card_intro_inference.png, 06_architecture_evidence_view.png, cpu_vs_gpu_speedup.png, ad_10.png`
 - **Media Order**: 1. social_card_intro_inference.png -> 2. 06_architecture_evidence_view.png -> 3. cpu_vs_gpu_speedup.png -> 4. ad_10.png
 - **Hashtags**: #NVIDIAGTC #BuildInPublic
-- **Mentions**: @GoogleDevs | @NVIDIAAI | @asierarranz
+- **Mentions**: @googlecloud | @GoogleDevs | @NVIDIAAI
 - **Claims Verified**: YES - Campaign retrospective
 - **Manual Review Required**: NO
 
@@ -36,17 +36,17 @@
 ### Post Copy
 
 ```markdown
-Day 21 of 21: Full Campaign Retrospective!
+Day 21/21: Full Retrospective!
 220 posts.
 89 unit tests.
 8.62x GPU speedup on Tesla T4.
-100k scenarios mapped.
+100k BigQuery scenarios analyzed.
 Grounded AI interpretation.
 
-The sprint is complete: https://z-wbe-bottleneck-lab.vercel.app
+Explore: https://z-wbe-bottleneck-lab.vercel.app
 
 #NVIDIAGTC #BuildInPublic
-cc @GoogleDevs @NVIDIAAI @asierarranz
+cc @googlecloud @GoogleDevs @NVIDIAAI
 ```
 
 ---
@@ -175,12 +175,12 @@ Star the repo: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Content Pillar**: Pillar F: Build Journey
 - **Scheduled Time (MDT)**: 20:32 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
-- **Hook**: Thank you to @GoogleDevs, @NVIDIAAI, @asierarranz, and the community for an incredible 21 days.
+- **Hook**: Thank you to @googlecloud, @GoogleDevs, @NVIDIAAI, and the community for an incredible 21 days.
 - **Post Summary**: The campaign ends. The research continues.
 - **Media**: `social_card_nim_gke.png, 03_bottleneck_moved_transition.png, 08_colab_rapids_and_variable_inspector.png, ad_07.png`
 - **Media Order**: 1. social_card_nim_gke.png -> 2. 03_bottleneck_moved_transition.png -> 3. 08_colab_rapids_and_variable_inspector.png -> 4. ad_07.png
 - **Hashtags**: #NVIDIAGTC
-- **Mentions**: @GoogleDevs | @NVIDIAAI | @asierarranz
+- **Mentions**: @googlecloud | @GoogleDevs | @NVIDIAAI
 - **Claims Verified**: YES - Final signoff
 - **Manual Review Required**: NO
 
@@ -194,7 +194,7 @@ Star the repo: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 ### Post Copy
 
 ```markdown
-Thank you to @GoogleDevs, @NVIDIAAI, @asierarranz, and the community for an incredible 21 days.
+Thank you to @googlecloud, @GoogleDevs, @NVIDIAAI, and the community for an incredible 21 days.
 
 The campaign ends. The research continues.
 

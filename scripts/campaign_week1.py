@@ -39,15 +39,15 @@ I built Z-WBE Bottleneck Lab for the Google Cloud × NVIDIA GTC Berlin 2026 Gold
 Z-WBE is an interactive, open-source systems-modeling laboratory that unifies all 6 macroscopic pipeline stages—Preservation, Acquisition, Reconstruction, Functionalization, Execution, and Validation—under 8 physical scaling constraints.
 
 Core Architectural Principle: Strict Epistemic Separation
-1. Deterministic Physical Engine: 12 transparent scaling equations compute physical reality (voxels, storage volumes, simulation FLOPs, memory bandwidth in TB/s, thermal dissipation, and capital budgets in <1ms). Every metric is labeled: CALCULATED FROM SCENARIO ASSUMPTIONS.
+1. Deterministic Physical Engine: 12 transparent scaling equations compute scenario-derived engineering quantities (voxels, storage volumes, simulation FLOPs, memory bandwidth in TB/s, thermal dissipation, and capital budgets in <1ms). Every metric is labeled: CALCULATED FROM SCENARIO ASSUMPTIONS.
 2. Grounded Generative AI: NVIDIA Nemotron 3 Super 120B (nvidia/nemotron-3-super-120b-a12b:free) via OpenRouter interprets causal relationships and trade-offs. Nemotron operates under a strict grounding contract: it explains why bottlenecks dominate without inventing measurements or modifying numbers. Every qualitative insight is labeled: AI INTERPRETATION.
 
 Key Empirical & Architectural Highlights:
 - The Hero Demo Moment: What happens if imaging becomes 100x faster? The acquisition bottleneck collapses—and the dominant constraint instantly shifts to Memory Bandwidth in <1ms.
-- Empirical 8.62× GPU Acceleration: 8.62× measured T4 speedup on the Google/NVIDIA tabular ML benchmark (1.907 s CPU vs 0.221 s GPU). Separately, Z-WBE also includes a 100,000-scenario GPU parameter sweep.
-- 100,000-Scenario Monte Carlo Sweep: 100,000-scenario parameter-space exploration in GPU memory with NVIDIA RAPIDS cuDF, visualized in an interactive heatmap.
+- Empirical 8.62× GPU Acceleration: 8.62× measured T4 speedup on the Google/NVIDIA tabular ML benchmark (1.907 s CPU vs 0.221 s GPU with cudf.pandas).
+- 100,000-Scenario Parameter Sweep: Z-WBE includes a deterministic 100,000-scenario parameter sweep stored and analyzed in Google BigQuery Sandbox.
 - 1-Click Reproducible Colab: Full 10-stage GPU notebook ready to run in one click.
-- 89 Passing Unit Tests: Full TypeScript monorepo, zero secret leakage, containerized microservice ready for Google Cloud Run.
+- 89 Passing Unit Tests: Full TypeScript monorepo, zero secret leakage, Cloud Run-ready container architecture.
 
 Explore the live demonstrator, interactive notebook, and full source:
 Live Demonstrator: https://z-wbe-bottleneck-lab.vercel.app
@@ -252,13 +252,13 @@ Mentions & Judges: @Google Cloud | @Google for Developers | @NVIDIA AI | @Asier 
             ],
             "text": """What breaks first in whole-brain emulation?
 
-I built Z-WBE Bottleneck Lab for the @GoogleDevs x @NVIDIAAI GTC Golden Ticket Challenge.
+I built Z-WBE Bottleneck Lab for the @googlecloud x @NVIDIAAI GTC Challenge.
 
 Change assumptions. See what fractures.
 
-Live app: https://z-wbe-bottleneck-lab.vercel.app
+Live: https://z-wbe-bottleneck-lab.vercel.app
 
-cc @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC"""
+cc @googlecloud @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC"""
         },
         {
             "id": "buffer_x_d01_p2",
@@ -371,7 +371,7 @@ Complex systems are dependency chains: solve one, the next strains.
 
 Day 1 of 21 complete: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
-cc @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC"""
+cc @googlecloud @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC"""
         }
     ]
 
@@ -700,11 +700,11 @@ Today is the deadline for the Golden Ticket Challenge. I am proud to formally pr
 An open-source systems-modeling lab dismantling domain silos in computational neuroscience and HPC. It evaluates all 6 macroscopic pipeline stages—Preservation, Acquisition, Reconstruction, Functionalization, Execution, Validation—under 8 physical scaling constraints.
 
 2. WHAT WAS BUILT:
-- Deterministic TypeScript Engine: 12 scaling equations calculate physical constraints in <1ms without hallucinations (CALCULATED FROM SCENARIO ASSUMPTIONS).
+- Deterministic TypeScript Engine: 12 scaling equations calculate scenario-derived engineering quantities in <1ms without hallucinations (CALCULATED FROM SCENARIO ASSUMPTIONS).
 - Grounded AI Explainer: NVIDIA Nemotron 3 Super 120B via OpenRouter interprets trade-offs under strict grounding (AI INTERPRETATION).
-- 100,000-Scenario Monte Carlo Sweep: Mapped in GPU memory via NVIDIA RAPIDS cuDF to uncover bottleneck phase transitions.
+- 100,000-Scenario Parameter Sweep: Z-WBE includes a deterministic 100,000-scenario parameter sweep stored and analyzed in Google BigQuery Sandbox to uncover bottleneck phase transitions.
 - Canonical 1-Click Colab Lab: Unified 10-stage notebook running cuDF, cuML, and XGBoost on an NVIDIA Tesla T4.
-- Production-Grade Rigor: 89 unit tests, containerized Cloud Run microservice.
+- Production-Grade Rigor: 89 unit tests, Cloud Run-ready container architecture.
 
 3. WHAT WAS LEARNED:
 - NVIDIA NIM on GKE: Decoupled inference isolates math from generative serving.
@@ -714,7 +714,7 @@ An open-source systems-modeling lab dismantling domain silos in computational ne
 - Systems Insight: 100x microscopy acceleration moves the bottleneck to Memory Bandwidth (Amdahl's Law).
 
 4. EMPIRICAL BENCHMARK EVIDENCE (Tesla T4 GPU in Google Colab):
-- End-to-End ETL + ML Pipeline: 8.62× measured T4 speedup on the Google/NVIDIA tabular ML benchmark (1.907 s CPU vs 0.221 s GPU). Separately, Z-WBE also includes a 100,000-scenario GPU parameter sweep.
+- End-to-End ETL + ML Pipeline: 8.62× measured T4 speedup on the Google/NVIDIA tabular ML benchmark (1.907 s CPU vs 0.221 s GPU with cudf.pandas). Separately, Z-WBE includes a deterministic 100,000-scenario parameter sweep in BigQuery Sandbox.
 - Sub-Task Speedups:
   * XGBoost Training: 9.8x (0.545s vs 0.056s)
   * Random Forest (cuML): 8.5x (1.308s vs 0.154s)
@@ -914,15 +914,15 @@ Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
             "claims_verified": "YES - Flagship contest submission post",
             "manual_review": "NO",
             "media": "public/recordings/colab_t4_terminal_execution.gif",
-            "text": """REAL NVIDIA T4 + RAPIDS + COLAB EVIDENCE 🚀
-Z-WBE for @GoogleDevs x @NVIDIAAI GTC Challenge!
+            "text": """NVIDIA T4 + RAPIDS + COLAB EVIDENCE 🚀
+Z-WBE for @googlecloud x @NVIDIAAI GTC Challenge!
 
 Built: 6-stage WBE lab + 12 equations
-Learned: cuDF 8.62x on T4; 100x imaging exposes memory wall!
+Learned: cuDF 8.62x on T4; 100x imaging hits memory wall!
 
 Colab: https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 
-cc @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC"""
+cc @googlecloud @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC"""
         },
         {
             "id": "buffer_x_d03_p2",
@@ -1016,16 +1016,16 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
                 "public/colab-evidence/07_github_notebook_code_provenance.png",
                 "public/marketing/ad_04.png"
             ],
-            "text": """4 Google Cloud x NVIDIA learning paths completed:
+            "text": """4 Google Cloud x NVIDIA paths completed:
 1. NIM on GKE
 2. Intro to Inference
 3. GPU Data Analytics
 4. Accelerated ML
 
-Every course directly shaped Z-WBE code.
+Every course shaped Z-WBE code.
 Badges: https://g.dev/zhane
 
-cc @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC"""
+cc @googlecloud @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC"""
         },
         {
             "id": "buffer_x_d03_p6",
@@ -1172,26 +1172,26 @@ Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
                 "public/colab-evidence/07_github_notebook_code_provenance.png",
                 "public/marketing/ad_01.png"
             ],
-            "text": """Mapping bottleneck phase transitions across 100,000 scenarios in GPU memory.
+            "text": """Mapping bottleneck phase transitions across 100,000 scenarios in Google BigQuery Sandbox.
 
 What does the global landscape of bottlenecks look like across varying imaging speeds and compute budgets?
 
-In Stage 9 of our canonical Colab notebook, we run a 100,000-scenario Monte Carlo sweep:
+In our 100,000-scenario parameter sweep stored and analyzed in BigQuery Sandbox:
 - We vary acquisition throughput from 0.1x to 500x baseline.
 - We vary available memory bandwidth from 1 TB/s to 100 TB/s.
-- We calculate the dominant bottleneck for every single scenario using NVIDIA RAPIDS cuDF in GPU memory.
+- We calculate the dominant bottleneck for every single scenario using deterministic scaling equations.
 
 The result is a 2D phase transition diagram:
 - Below 10x acquisition speed, the system is 98% Acquisition-bound.
 - Between 10x and 100x, the system undergoes a rapid phase transition into a Memory-bound regime.
 - Above 100x, Memory Bandwidth and Interconnect dictate 87% of all simulated outcomes.
 
-Run the parameter sweep notebook cell yourself:
-https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
+Explore the BigQuery research dataset:
+https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 
 Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
-#NVIDIAGTC #RAPIDS #cuDF #GoogleColab #MonteCarlo #DataScience #DataAnalytics"""
+#NVIDIAGTC #BigQuery #GoogleCloud #DataScience #DataAnalytics"""
         },
         {
             "id": "buffer_li_d04_p5",
@@ -1246,7 +1246,7 @@ Making imaging infinitely fast only accelerates WBE until memory bandwidth stall
 Test the limit live: https://z-wbe-bottleneck-lab.vercel.app
 
 #NVIDIAGTC #AmdahlsLaw
-cc @GoogleDevs @NVIDIAAI"""
+cc @googlecloud @GoogleDevs @NVIDIAAI"""
         },
         {
             "id": "buffer_x_d04_p2",
@@ -1287,13 +1287,14 @@ Code: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
                 "public/colab-evidence/07_github_notebook_code_provenance.png",
                 "public/marketing/ad_10.png"
             ],
-            "text": """100,000 scenarios mapped in GPU memory via NVIDIA cuDF:
+            "text": """100,000 scenarios analyzed in Google BigQuery Sandbox:
 Below 10x imaging speed: 98% acquisition-bound.
 Above 100x: 87% memory-bound.
 
-Run the Colab sweep: https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
+Explore: https://z-wbe-bottleneck-lab.vercel.app
 
-#NVIDIAGTC #RAPIDS"""
+#NVIDIAGTC #BigQuery
+cc @googlecloud @GoogleDevs @NVIDIAAI"""
         },
         {
             "id": "buffer_x_d04_p4",
@@ -1542,7 +1543,7 @@ Meet the Memory Wall in whole-brain emulation:
 https://z-wbe-bottleneck-lab.vercel.app
 
 #NVIDIAGTC #Hardware
-cc @GoogleDevs @NVIDIAAI"""
+cc @googlecloud @GoogleDevs @NVIDIAAI"""
         },
         {
             "id": "buffer_x_d05_p2",
@@ -2104,13 +2105,13 @@ Mentions & Judges: @Google Cloud | @Google for Developers | @NVIDIA AI | @Asier 
             "text": """Week 1 of Z-WBE complete!
 89 tests passing.
 8.62x speedup on Tesla T4.
-100k scenarios mapped.
+100k scenarios mapped in BigQuery.
 Contest submitted.
 
 Try live: https://z-wbe-bottleneck-lab.vercel.app
 
 #NVIDIAGTC #BuildInPublic
-cc @GoogleDevs @NVIDIAAI @asierarranz"""
+cc @googlecloud @GoogleDevs @NVIDIAAI @asierarranz"""
         },
         {
             "id": "buffer_x_d07_p2",
@@ -2187,10 +2188,10 @@ https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/n
             "text": """Week 1: The Project.
 Week 2: The Engineering.
 
-Tomorrow, I open up the 12 deterministic TypeScript equations behind the physics:
+Tomorrow, I open up the 12 deterministic equations behind the physics:
 https://z-wbe-bottleneck-lab.vercel.app
 
-cc @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC"""
+cc @googlecloud @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC"""
         }
     ]
 

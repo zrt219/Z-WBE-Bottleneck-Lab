@@ -18,11 +18,11 @@
 - **Scheduled Time (MDT)**: 10:14 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: 89 unit tests pass in 1.15s.
-- **Post Summary**: 12 deterministic physical equations.
+- **Post Summary**: 12 deterministic engineering equations.
 - **Media**: `social_card_data_analytics.png, 02_imaging_wall_baseline.png, 07_github_notebook_code_provenance.png, ad_06.png`
 - **Media Order**: 1. social_card_data_analytics.png -> 2. 02_imaging_wall_baseline.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_06.png
 - **Hashtags**: #NVIDIAGTC #OpenSource
-- **Mentions**: @GoogleDevs | @NVIDIAAI
+- **Mentions**: @googlecloud | @GoogleDevs | @NVIDIAAI
 - **Claims Verified**: YES - 89 tests passing, MIT license
 - **Manual Review Required**: NO
 
@@ -37,14 +37,14 @@
 
 ```markdown
 89 unit tests pass in 1.15s.
-12 deterministic physical equations.
+12 deterministic engineering equations.
 1-click Colab notebook on Tesla T4.
 100% open source (MIT).
 
 Inspect the code: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 #NVIDIAGTC #OpenSource
-cc @GoogleDevs @NVIDIAAI
+cc @googlecloud @GoogleDevs @NVIDIAAI
 ```
 
 ---

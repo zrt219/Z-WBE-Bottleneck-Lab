@@ -21,7 +21,7 @@
 - **Post Summary**: Today marks Day 21 and the conclusion of our maximum-exposure launch sprint for Z-WBE Bottleneck Lab, built for the Google Clou...
 - **Media**: `social_card_data_analytics.png, 02_imaging_wall_baseline.png, cpu_vs_gpu_speedup.png, ad_02.png`
 - **Media Order**: 1. social_card_data_analytics.png -> 2. 02_imaging_wall_baseline.png -> 3. cpu_vs_gpu_speedup.png -> 4. ad_02.png
-- **Hashtags**: #NVIDIAGTC #GoogleCloud #NVIDIA #Nemotron #RAPIDS #cuDF #cuML #TeslaT4 #GoogleColab #CloudRun #BuildInPublic #OpenSource #ComputationalNeuroscience #SystemsEngineering #GTC2026
+- **Hashtags**: #NVIDIAGTC #GoogleCloud #BigQuery #NVIDIA #Nemotron #RAPIDS #cuDF #cuML #TeslaT4 #GoogleColab #CloudRun #BuildInPublic #OpenSource #ComputationalNeuroscience #SystemsEngineering #GTC2026
 - **Mentions**: @Google Cloud | @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Harvey | @Ray Harvey
 - **Claims Verified**: YES - Complete campaign retrospective verified
 - **Manual Review Required**: NO
@@ -45,9 +45,9 @@ Over the past three consecutive weeks, we documented nearly every facet of this 
 - Explored all 6 macroscopic WBE stages (Preservation, Acquisition, Reconstruction, Functionalization, Execution, Validation).
 - Modeled all 8 physical constraint dimensions (Acquisition, Reconstruction, Storage, Compute, Memory, Interconnect, Power, Economics).
 - Demonstrated Amdahl's Law in action: Accelerating imaging by 100x instantly shifted the dominant bottleneck to Memory Bandwidth.
-- 8.62× measured T4 speedup on the Google/NVIDIA tabular ML benchmark (1.907 s CPU vs 0.221 s GPU). Separately, Z-WBE also includes a 100,000-scenario GPU parameter sweep.
-- Proved how to stop AI hallucinations in science using Epistemic Separation: pure TypeScript calculates the physics; NVIDIA Nemotron 3 Super 120B interprets the causal trade-offs under a strict grounding contract.
-- Mapped 100,000 Monte Carlo scenarios in GPU memory to identify global bottleneck phase transitions.
+- 8.62× measured T4 speedup on the Google/NVIDIA tabular ML benchmark (1.907 s CPU vs 0.221 s GPU). Separately, Z-WBE includes a deterministic 100,000-scenario parameter sweep stored and analyzed in Google BigQuery Sandbox.
+- Proved how to stop AI hallucinations in science using Epistemic Separation: pure TypeScript computes scenario-derived engineering quantities; NVIDIA Nemotron 3 Super 120B interprets causal trade-offs under a strict grounding contract.
+- Analyzed 100,000 deterministic scenarios with GoogleSQL in BigQuery Sandbox to identify global bottleneck phase transitions.
 - Completed all 4 official Google Cloud × NVIDIA learning pathways on Google Cloud Skills Boost.
 - Maintained 89 passing unit tests with 100% test pass rate in CI/CD.
 
@@ -65,7 +65,7 @@ GitHub Repository: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 Google Developer Profile: https://g.dev/zhane
 
 Mentions & Judges: @Google Cloud | @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Harvey | @Ray Harvey
-#NVIDIAGTC #GoogleCloud #NVIDIA #Nemotron #RAPIDS #cuDF #cuML #TeslaT4 #GoogleColab #CloudRun #BuildInPublic #OpenSource #ComputationalNeuroscience #SystemsEngineering #GTC2026
+#NVIDIAGTC #GoogleCloud #BigQuery #NVIDIA #Nemotron #RAPIDS #cuDF #cuML #TeslaT4 #GoogleColab #CloudRun #BuildInPublic #OpenSource #ComputationalNeuroscience #SystemsEngineering #GTC2026
 ```
 
 ---

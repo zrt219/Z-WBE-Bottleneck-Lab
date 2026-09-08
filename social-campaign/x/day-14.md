@@ -17,12 +17,12 @@
 - **Content Pillar**: Pillar C: GPU / NVIDIA
 - **Scheduled Time (MDT)**: 10:18 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
-- **Hook**: I mapped 100,000 WBE futures in GPU memory via NVIDIA cuDF:
-- **Post Summary**: 48.2% Acquisition-bound
+- **Hook**: 100k WBE scenarios in BigQuery Sandbox:
+- **Post Summary**: • 18.8% Reconstruction
 - **Media**: `social_card_data_analytics.png, 02_imaging_wall_baseline.png, 08_colab_rapids_and_variable_inspector.png, banner-light.png`
 - **Media Order**: 1. social_card_data_analytics.png -> 2. 02_imaging_wall_baseline.png -> 3. 08_colab_rapids_and_variable_inspector.png -> 4. banner-light.png
 - **Hashtags**: #NVIDIAGTC
-- **Mentions**: @GoogleDevs | @NVIDIAAI | @asierarranz
+- **Mentions**: @googlecloud | @GoogleDevs | @NVIDIAAI
 - **Claims Verified**: YES - 100k sweep statistics verified
 - **Manual Review Required**: NO
 
@@ -36,16 +36,18 @@
 ### Post Copy
 
 ```markdown
-I mapped 100,000 WBE futures in GPU memory via NVIDIA cuDF:
-48.2% Acquisition-bound
-28.7% Memory-bound
-14.1% Compute-bound
-9.0% Interconnect/Power-bound
+100k WBE scenarios in BigQuery Sandbox:
+• 27.3% Acquisition
+• 27.3% Cost
+• 18.8% Reconstruction
+• 14.1% Memory BW
+• 10.7% Storage
+• 1.8% Power/Compute
 
-Memory dominates 2x more than compute!
-Map: https://z-wbe-bottleneck-lab.vercel.app
+Memory dominates raw compute!
+https://z-wbe-bottleneck-lab.vercel.app
 
-cc @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC
+cc @googlecloud @GoogleDevs @NVIDIAAI #NVIDIAGTC
 ```
 
 ---
@@ -59,12 +61,12 @@ cc @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC
 - **Content Pillar**: Pillar D: Google Cloud / Colab
 - **Scheduled Time (MDT)**: 12:32 MDT
 - **Primary Destination URL**: https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
-- **Hook**: 100k scenarios generated and evaluated in 1.84s on a Tesla T4.
-- **Post Summary**: Zero Python loops. Pure GPU vectorization.
+- **Hook**: 100k scenarios analyzed in BigQuery Sandbox with GoogleSQL + Colab GPU research lab on Tesla T4.
+- **Post Summary**: Zero-cost serverless analytics.
 - **Media**: `google-nvidia-developer-badges.png, 01_hero_overview.png, 07_github_notebook_code_provenance.png, banner-dark.png`
 - **Media Order**: 1. google-nvidia-developer-badges.png -> 2. 01_hero_overview.png -> 3. 07_github_notebook_code_provenance.png -> 4. banner-dark.png
-- **Hashtags**: #NVIDIAGTC #GoogleColab
-- **Mentions**: None
+- **Hashtags**: #NVIDIAGTC #BigQuery
+- **Mentions**: @googlecloud | @GoogleDevs
 - **Claims Verified**: YES - Scatter matrix visual
 - **Manual Review Required**: NO
 
@@ -78,12 +80,13 @@ cc @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC
 ### Post Copy
 
 ```markdown
-100k scenarios generated and evaluated in 1.84s on a Tesla T4.
-Zero Python loops. Pure GPU vectorization.
+100k scenarios analyzed in BigQuery Sandbox with GoogleSQL + Colab GPU research lab on Tesla T4.
+Zero-cost serverless analytics.
 
 Colab code: https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 
-#NVIDIAGTC #GoogleColab
+#NVIDIAGTC #BigQuery
+cc @googlecloud @GoogleDevs
 ```
 
 ---
@@ -177,7 +180,7 @@ https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/n
 - **Media**: `social_card_nim_gke.png, 05_gpu_exploration_map.png, eda_histograms.png, ad_09.png`
 - **Media Order**: 1. social_card_nim_gke.png -> 2. 05_gpu_exploration_map.png -> 3. eda_histograms.png -> 4. ad_09.png
 - **Hashtags**: #NVIDIAGTC
-- **Mentions**: @GoogleDevs | @NVIDIAAI | @asierarranz
+- **Mentions**: @googlecloud | @GoogleDevs | @NVIDIAAI
 - **Claims Verified**: YES - Week 2 close / Week 3 teaser
 - **Manual Review Required**: NO
 
@@ -196,7 +199,7 @@ Week 3 starts tomorrow: Preservation limits, biophysical functionalization, and 
 
 Explore the lab: https://z-wbe-bottleneck-lab.vercel.app
 
-cc @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC
+cc @googlecloud @GoogleDevs @NVIDIAAI #NVIDIAGTC
 ```
 
 ---

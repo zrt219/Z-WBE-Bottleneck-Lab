@@ -17,11 +17,11 @@
 - **Content Pillar**: Pillar C: GPU / NVIDIA
 - **Scheduled Time (MDT)**: 10:03 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
-- **Hook**: Mapping 100,000 futures for Whole-Brain Emulation in GPU memory.
+- **Hook**: Mapping 100,000 futures for Whole-Brain Emulation in Google BigQuery Sandbox.
 - **Post Summary**: When modeling an engineering system as complex as brain emulation, testing 3 or 4 hand-picked scenarios is not enough. You need...
 - **Media**: `social_card_data_analytics.png, 02_imaging_wall_baseline.png, 08_colab_rapids_and_variable_inspector.png, ad_05.png`
 - **Media Order**: 1. social_card_data_analytics.png -> 2. 02_imaging_wall_baseline.png -> 3. 08_colab_rapids_and_variable_inspector.png -> 4. ad_05.png
-- **Hashtags**: #NVIDIAGTC #MonteCarlo #DataScience #DataAnalytics #RAPIDS #cuDF #Supercomputing #ComputationalNeuroscience
+- **Hashtags**: #NVIDIAGTC #BigQuery #GoogleCloud #DataScience #DataAnalytics #Supercomputing #ComputationalNeuroscience
 - **Mentions**: @Google Cloud | @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Harvey | @Ray Harvey
 - **Claims Verified**: YES - 100k scenario sweep summary verified in gpu-sweep-summary.json
 - **Manual Review Required**: NO
@@ -36,11 +36,11 @@
 ### Post Copy
 
 ```markdown
-Mapping 100,000 futures for Whole-Brain Emulation in GPU memory.
+Mapping 100,000 futures for Whole-Brain Emulation in Google BigQuery Sandbox.
 
 When modeling an engineering system as complex as brain emulation, testing 3 or 4 hand-picked scenarios is not enough. You need to explore the entire high-dimensional parameter space.
 
-In Stage 9 of our GPU pipeline, we generated and evaluated 100,000 distinct Monte Carlo scenarios using NVIDIA RAPIDS cuDF in GPU memory:
+In our parameter sweep pipeline, we generated and evaluated 100,000 distinct deterministic scenarios stored and analyzed in Google BigQuery Sandbox using GoogleSQL:
 - Varied acquisition beam speed from 0.1x to 500x.
 - Varied voxel resolution from 2nm to 50nm.
 - Varied synaptic density from 100 to 1,500 synapses per neuron.
@@ -48,12 +48,13 @@ In Stage 9 of our GPU pipeline, we generated and evaluated 100,000 distinct Mont
 - Varied simulation compute capacity from 100 PFLOPS to 100 ExaFLOPS.
 
 The Global Phase Transition Findings:
-1. The Acquisition Domain: 48.2% of all possible parameter combinations are dominated by the Acquisition (Imaging) Wall.
-2. The Memory Domain: 28.7% of scenarios are dominated by Memory Bandwidth.
-3. The Compute Domain: 14.1% are dominated by Real-Time Neural Simulation Compute.
-4. The Interconnect & Thermal Domains: 9.0% are dominated by multi-node bisection bandwidth or facility power.
+1. The Acquisition Domain: 27.3% of scenarios are dominated by the Acquisition Wall.
+2. The Economic Cost Domain: 27.3% are dominated by Capital & Operating Costs.
+3. The Reconstruction Domain: 18.8% are dominated by Segmentation & Tracing.
+4. The Memory Bandwidth Domain: 14.1% are dominated by Memory Bandwidth.
+5. Storage & Infrastructure: 12.5% across Storage, Power, Interconnect & Compute.
 
-Notice: Memory Bandwidth dominates more than DOUBLE the scenario space of raw compute!
+Notice: Memory Bandwidth dominates thousands of times more scenarios than raw compute!
 In supercomputing discussions, people build ExaFLOP clusters. The data says they should be building high-bandwidth memory fabrics.
 
 Explore the interactive 100k scenario heatmap live:
@@ -61,7 +62,7 @@ https://z-wbe-bottleneck-lab.vercel.app
 
 
 Mentions & Judges: @Google Cloud | @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Harvey | @Ray Harvey
-#NVIDIAGTC #MonteCarlo #DataScience #DataAnalytics #RAPIDS #cuDF #Supercomputing #ComputationalNeuroscience
+#NVIDIAGTC #BigQuery #GoogleCloud #DataScience #DataAnalytics #Supercomputing #ComputationalNeuroscience
 ```
 
 ---
@@ -75,11 +76,11 @@ Mentions & Judges: @Google Cloud | @Google for Developers | @NVIDIA AI | @Asier 
 - **Content Pillar**: Pillar C: GPU / NVIDIA
 - **Scheduled Time (MDT)**: 12:17 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
-- **Hook**: How we generated 100,000 synthetic parameter scenarios in under 2 seconds.
-- **Post Summary**: In scripts/generate_gpu_sweep.py, I implemented a vectorized Monte Carlo generator:
+- **Hook**: How we analyzed 100,000 synthetic parameter scenarios in Google BigQuery Sandbox.
+- **Post Summary**: In scripts/generate_gpu_sweep.py and BigQuery Sandbox:
 - **Media**: `social_card_data_analytics.png, 05_gpu_exploration_map.png, 07_github_notebook_code_provenance.png, ad_04.png`
 - **Media Order**: 1. social_card_data_analytics.png -> 2. 05_gpu_exploration_map.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_04.png
-- **Hashtags**: #NVIDIAGTC #Python #MonteCarlo #DataEngineering #RAPIDS #cuDF #Mathematics
+- **Hashtags**: #NVIDIAGTC #BigQuery #GoogleCloud #Python #DataEngineering #Mathematics
 - **Mentions**: @Google Cloud | @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - scripts/generate_gpu_sweep.py code verified
 - **Manual Review Required**: NO
@@ -94,24 +95,21 @@ Mentions & Judges: @Google Cloud | @Google for Developers | @NVIDIA AI | @Asier 
 ### Post Copy
 
 ```markdown
-How we generated 100,000 synthetic parameter scenarios in under 2 seconds.
+How we analyzed 100,000 synthetic parameter scenarios in Google BigQuery Sandbox.
 
-In `scripts/generate_gpu_sweep.py`, I implemented a vectorized Monte Carlo generator:
-- Uses Latin Hypercube Sampling across 10 continuous parameter dimensions to ensure uniform space coverage.
-- Allocates contiguous NumPy arrays and converts them directly into cuDF GPU dataframes.
-- Evaluates our 12 scaling equations vectorized across GPU cores without a single Python `for` loop.
+In `scripts/generate_gpu_sweep.py` and BigQuery Sandbox:
+- Evaluates 100,000 deterministic parameter combinations across 10 dimensions.
+- Loaded into BigQuery public table `geometric-kiln-457011-h4:z_wbe_research.scenarios_100k` (33.4 MB).
+- Evaluates our scaling equations and dominant bottleneck classifications via GoogleSQL queries in seconds with zero infrastructure cost.
 
-Total time to generate, evaluate, and classify 100,000 scenarios into dominant bottleneck categories on an NVIDIA Tesla T4:
-1.84 seconds.
-
-The output is exported directly to `public/data/gpu-sweep-summary.json`, which hydrates our web application's interactive GPU Exploration Map.
+The output is also exported directly to `public/data/gpu-sweep-summary.json`, which hydrates our web application's interactive GPU Exploration Map.
 
 Inspect the generator script on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 
 Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
-#NVIDIAGTC #Python #MonteCarlo #DataEngineering #RAPIDS #cuDF #Mathematics
+#NVIDIAGTC #BigQuery #GoogleCloud #Python #DataEngineering #Mathematics
 ```
 
 ---
