@@ -297,7 +297,7 @@ export const AboutPage: React.FC = () => {
               <div className="space-y-2 flex-1 min-w-0">
                 <div className="flex items-start justify-between gap-2">
                   <a
-                    href="https://developers.google.com/profile/badges/playlists/ai-models-on-gpu-intro?u=110918189625880989910"
+                    href="https://developers.google.com/profile/badges/playlists/ai-models-on-gpu-intro?u=zhane"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-extrabold text-slate-900 text-sm hover:text-blue-600 transition-colors inline-flex items-center space-x-1 group"
@@ -314,7 +314,7 @@ export const AboutPage: React.FC = () => {
                 </p>
                 <div className="flex items-center space-x-3 text-[11px] font-mono pt-1">
                   <a
-                    href="https://developers.google.com/profile/badges/playlists/ai-models-on-gpu-intro?u=110918189625880989910"
+                    href="https://developers.google.com/profile/badges/playlists/ai-models-on-gpu-intro?u=zhane"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-emerald-700 hover:text-emerald-800 font-bold inline-flex items-center space-x-1"

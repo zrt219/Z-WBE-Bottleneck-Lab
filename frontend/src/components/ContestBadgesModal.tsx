@@ -276,7 +276,7 @@ export const ContestBadgesModal: React.FC<ContestBadgesModalProps> = ({ isOpen, 
                     <div className="space-y-1.5 flex-1 min-w-0">
                       <div className="flex items-start justify-between gap-1">
                         <a
-                          href="https://developers.google.com/profile/badges/playlists/ai-models-on-gpu-intro?u=110918189625880989910"
+                          href="https://developers.google.com/profile/badges/playlists/ai-models-on-gpu-intro?u=zhane"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="font-bold text-slate-900 text-xs hover:text-blue-600 transition-colors inline-flex items-center space-x-1 group"
@@ -293,7 +293,7 @@ export const ContestBadgesModal: React.FC<ContestBadgesModalProps> = ({ isOpen, 
                       </p>
                       <div className="flex items-center space-x-3 text-[10px] font-mono pt-0.5">
                         <a
-                          href="https://developers.google.com/profile/badges/playlists/ai-models-on-gpu-intro?u=110918189625880989910"
+                          href="https://developers.google.com/profile/badges/playlists/ai-models-on-gpu-intro?u=zhane"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-emerald-700 hover:text-emerald-800 font-bold inline-flex items-center space-x-1"

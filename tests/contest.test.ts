@@ -56,12 +56,12 @@ describe('Google Cloud × NVIDIA Developer Challenge 2026 Submission Verificatio
 
     // Public Profile & Verified Playlist URLs (All 4 verified badges)
     expect(content).toContain('110918189625880989910');
-    expect(content).toContain('https://developers.google.com/profile/u/110918189625880989910');
+    expect(content).toContain('developers.google.com/profile/u/zhane');
     expect(content).toContain('4 Official Digital Badges (4/4 Complete Sweep)');
-    expect(content).toContain('https://developers.google.com/profile/badges/playlists/nvidia-deploy-with-gen-ai?u=110918189625880989910');
-    expect(content).toContain('https://developers.google.com/profile/badges/playlists/speed-up-data-analytics-GPUs?u=110918189625880989910');
+    expect(content).toContain('https://developers.google.com/profile/badges/playlists/nvidia-deploy-with-gen-ai?u=zhane');
+    expect(content).toContain('https://developers.google.com/profile/badges/playlists/speed-up-data-analytics-GPUs?u=zhane');
     expect(content).toContain('https://developers.google.com/profile/badges/playlists/accelerated-machine-learning-with-google-cloud-and-nvidia?u=110918189625880989910');
-    expect(content).toContain('https://developers.google.com/profile/badges/playlists/ai-models-on-gpu-intro?u=110918189625880989910');
+    expect(content).toContain('https://developers.google.com/profile/badges/playlists/ai-models-on-gpu-intro?u=zhane');
     expect(content).toContain('https://developers.google.com/learn/pathways/ai-models-on-gpu-intro');
 
     // High-res badge artwork images
@@ -80,12 +80,12 @@ describe('Google Cloud × NVIDIA Developer Challenge 2026 Submission Verificatio
   it('verifies that CONTEST_SUBMISSION.md includes verified public profile and all 4 badge playlists', () => {
     const content = fs.readFileSync(contestSubmissionPath, 'utf-8');
     expect(content).toContain('110918189625880989910');
-    expect(content).toContain('https://developers.google.com/profile/u/110918189625880989910');
+    expect(content).toContain('developers.google.com/profile/u/zhane');
     expect(content).toContain('4/4 Complete Sweep');
-    expect(content).toContain('https://developers.google.com/profile/badges/playlists/nvidia-deploy-with-gen-ai?u=110918189625880989910');
-    expect(content).toContain('https://developers.google.com/profile/badges/playlists/speed-up-data-analytics-GPUs?u=110918189625880989910');
+    expect(content).toContain('https://developers.google.com/profile/badges/playlists/nvidia-deploy-with-gen-ai?u=zhane');
+    expect(content).toContain('https://developers.google.com/profile/badges/playlists/speed-up-data-analytics-GPUs?u=zhane');
     expect(content).toContain('https://developers.google.com/profile/badges/playlists/accelerated-machine-learning-with-google-cloud-and-nvidia?u=110918189625880989910');
-    expect(content).toContain('https://developers.google.com/profile/badges/playlists/ai-models-on-gpu-intro?u=110918189625880989910');
+    expect(content).toContain('https://developers.google.com/profile/badges/playlists/ai-models-on-gpu-intro?u=zhane');
     expect(content).toContain('nvidia/nemotron-3-super-120b-a12b:free');
   });
 
@@ -102,7 +102,7 @@ describe('Google Cloud × NVIDIA Developer Challenge 2026 Submission Verificatio
     expect(content).toContain('https://developers.google.com/profile/u/110918189625880989910');
     expect(content).toContain('/images/google-nvidia-developer-badges.png');
     expect(content).toContain('4 Official Badges Verified');
-    expect(content).toContain('https://developers.google.com/profile/badges/playlists/ai-models-on-gpu-intro?u=110918189625880989910');
+    expect(content).toContain('https://developers.google.com/profile/badges/playlists/ai-models-on-gpu-intro?u=zhane');
     expect(content).toContain('/images/badge_nim_gke.png');
     expect(content).toContain('/images/badge_data_analytics.png');
     expect(content).toContain('/images/badge_accelerated_ml.png');
@@ -120,7 +120,7 @@ describe('Google Cloud × NVIDIA Developer Challenge 2026 Submission Verificatio
     expect(content).toContain('/images/google-nvidia-developer-badges.png');
     expect(content).toContain('110918189625880989910');
     expect(content).toContain('4/4 Badges Verified');
-    expect(content).toContain('https://developers.google.com/profile/badges/playlists/ai-models-on-gpu-intro?u=110918189625880989910');
+    expect(content).toContain('https://developers.google.com/profile/badges/playlists/ai-models-on-gpu-intro?u=zhane');
     expect(content).toContain('/images/badge_nim_gke.png');
     expect(content).toContain('/images/badge_data_analytics.png');
     expect(content).toContain('/images/badge_accelerated_ml.png');

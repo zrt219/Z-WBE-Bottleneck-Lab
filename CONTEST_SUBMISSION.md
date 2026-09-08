@@ -124,16 +124,16 @@ Whole-brain emulation is often discussed as if it depends on a single breakthrou
 
 ## 10. What Was Learned (Four GTC Learning Pathways) & Verified Credentials
 
-* **Google Developers Public Profile**: [developers.google.com/profile/u/110918189625880989910](https://developers.google.com/profile/u/110918189625880989910) (User ID: `110918189625880989910`)
+* **Google Developers Public Profile**: [developers.google.com/profile/u/zhane](https://developers.google.com/profile/u/zhane) • [ID: 110918189625880989910](https://developers.google.com/profile/u/110918189625880989910)
 * **Verification Timestamp**: All 4 official badges earned and verified on **September 7, 2026** (4/4 Complete Sweep)
 
-### 1. [Deploy Faster Generative AI Models with NVIDIA NIM on GKE](https://developers.google.com/profile/badges/playlists/nvidia-deploy-with-gen-ai?u=110918189625880989910)
-* **Public Badge Credential**: [Verified Badge Playlist](https://developers.google.com/profile/badges/playlists/nvidia-deploy-with-gen-ai?u=110918189625880989910) • [Official Pathway](https://developers.google.com/learn/pathways/deploy-faster-gen-ai-models-nvidia-gke)
+### 1. [Deploy Faster Generative AI Models with NVIDIA NIM on GKE](https://developers.google.com/profile/badges/playlists/nvidia-deploy-with-gen-ai?u=zhane)
+* **Public Badge Credential**: [Verified Badge Playlist](https://developers.google.com/profile/badges/playlists/nvidia-deploy-with-gen-ai?u=zhane) • [Official Pathway](https://developers.google.com/learn/pathways/deploy-faster-gen-ai-models-nvidia-gke)
 * **Learned**: Production GPU infrastructure orchestration, containerized inference microservices, Google Kubernetes Engine (GKE), and the NVIDIA model serving architecture.
 * **Applied & Clarified**: While GKE and NIM provide enterprise self-hosted infrastructure, this contest application intentionally accesses **NVIDIA Nemotron 3 Super through OpenRouter** rather than self-hosting NIM. This achieves zero-weight-download serverless deployment on Google Cloud Run while still leveraging NVIDIA frontier foundation weights.
 
-### 2. [Speed Up Data Analytics on GPUs](https://developers.google.com/profile/badges/playlists/speed-up-data-analytics-GPUs?u=110918189625880989910)
-* **Public Badge Credential**: [Verified Badge Playlist](https://developers.google.com/profile/badges/playlists/speed-up-data-analytics-GPUs?u=110918189625880989910) • [Official Pathway](https://developers.google.com/learn/pathways/speed-up-data-analytics-GPUs)
+### 2. [Speed Up Data Analytics on GPUs](https://developers.google.com/profile/badges/playlists/speed-up-data-analytics-GPUs?u=zhane)
+* **Public Badge Credential**: [Verified Badge Playlist](https://developers.google.com/profile/badges/playlists/speed-up-data-analytics-GPUs?u=zhane) • [Official Pathway](https://developers.google.com/learn/pathways/speed-up-data-analytics-GPUs)
 * **Learned**: NVIDIA RAPIDS, cuDF dataframe acceleration, GPU memory bandwidth utilization, and high-throughput parameter exploration.
 * **Applied**: Developed the 100,000-scenario Monte Carlo parameter sweep using `%load_ext cudf.pandas` to benchmark GPU cuDF vs CPU pandas.
 
@@ -142,8 +142,8 @@ Whole-brain emulation is often discussed as if it depends on a single breakthrou
 * **Applied Where Genuinely Used**: Used GPU-accelerated array and dataframe processing for multidimensional correlation calculations and threshold boundary discovery across the 100,000-scenario dataset.
 * **Strict Integrity**: Did *not* falsely claim execution of cuML or XGBoost models, as the scenario sweep is an analytical parameter space exploration rather than a supervised learning task.
 
-### 4. [Intro to Inference: How to Run AI Models on a GPU](https://developers.google.com/profile/badges/playlists/ai-models-on-gpu-intro?u=110918189625880989910)
-* **Public Badge Credential**: [Verified Badge Playlist](https://developers.google.com/profile/badges/playlists/ai-models-on-gpu-intro?u=110918189625880989910) • [Official Pathway](https://developers.google.com/learn/pathways/ai-models-on-gpu-intro)
+### 4. [Intro to Inference: How to Run AI Models on a GPU](https://developers.google.com/profile/badges/playlists/ai-models-on-gpu-intro?u=zhane)
+* **Public Badge Credential**: [Verified Badge Playlist](https://developers.google.com/profile/badges/playlists/ai-models-on-gpu-intro?u=zhane) • [Official Pathway](https://developers.google.com/learn/pathways/ai-models-on-gpu-intro)
 * **Learned**: Latency vs throughput trade-offs, time-to-first-token (TTFT), KV cache memory dynamics, model serving architectures, and prompt token efficiency.
 * **Applied**: Structured scenario inputs into compact JSON (~15 key numerical metrics) rather than verbose text dumps, keeping response times under 4 seconds. Implemented deterministic FNV-1a caching to eliminate redundant queries.
 
@@ -197,8 +197,8 @@ Unlike typical AI applications that prompt models to estimate or compute enginee
 
 I am thrilled to present **Z-WBE Bottleneck Lab**, built for the **Google Cloud × NVIDIA GTC Berlin 2026 Golden Ticket Challenge**!
 
-**What I Learned from the Google Cloud & NVIDIA Community**:
-Completing the **Speed Up Data Analytics on GPUs** and **Deploy Faster Generative AI Models with NVIDIA NIM on GKE** pathways fundamentally changed how I think about full-stack AI engineering. I learned that data engineering latency often dwarfs inference time—and that zero-code GPU acceleration with NVIDIA RAPIDS `cudf.pandas` can eliminate pipeline bottlenecks entirely. I also learned how to architect low-latency containerized microservices and ground open foundation models with strict deterministic contracts.
+**What I Learned from the Google Cloud & NVIDIA Community (4/4 Complete Pathway Sweep)**:
+Completing all four official Google Cloud × NVIDIA Learning Pathways (**Deploy Faster Generative AI Models with NVIDIA NIM on GKE**, **Speed Up Data Analytics on GPUs**, **Accelerated Machine Learning with Google Cloud and NVIDIA**, and **Intro to Inference: How to Run AI Models on a GPU**—4/4 Complete Sweep) fundamentally transformed how I architect accelerated scientific applications. I learned that data-loading latency often dwarfs inference time—and that zero-code GPU acceleration with NVIDIA RAPIDS `cudf.pandas` can eliminate pipeline bottlenecks entirely. I also learned how to architect low-latency containerized microservices and ground open foundation models with strict deterministic contracts.
 
 **What I Built: Z-WBE Bottleneck Lab**
 The debate surrounding Whole Brain Emulation (WBE) is often trapped in domain silos: microscopists assume compute is trivial, while computer architects assume connectome imaging is solved. 
@@ -234,7 +234,7 @@ Judges & Mentions: Google for Developers | NVIDIA AI | Jen Harvey | Ray Harvey
 
 🚀 Excited to unveil **Z-WBE Bottleneck Lab** for the Google Cloud × NVIDIA GTC Berlin 2026 Golden Ticket Challenge!
 
-🎓 What I Learned: Zero-code GPU acceleration with RAPIDS @rapidsai cuDF eliminates data bottlenecks, while open foundation models thrive when grounded against deterministic physics engines.
+🎓 What I Learned (4/4 Complete Pathway Sweep): Completed all 4 official Google Cloud × NVIDIA pathways! Zero-code GPU acceleration with RAPIDS @rapidsai cuDF eliminates data bottlenecks, while open foundation models thrive when grounded against deterministic physics engines.
 
 🔬 What I Built: An interactive laboratory testing what breaks first in whole-brain emulation.
 Change the assumptions. See what fractures.
