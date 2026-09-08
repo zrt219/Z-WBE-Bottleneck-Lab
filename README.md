@@ -247,36 +247,57 @@ All core interface views captured at 1920×1080 judge-grade resolution:
 
 ## 6. Dual-Path System Architecture
 
-The application enforces a strict separation between deterministic physical mathematics and generative language reasoning:
+The application enforces a strict epistemic and architectural separation between deterministic physical mathematics and generative language reasoning:
 
-```
-+----------------------------------------------------------------------------------------+
-|                                CLIENT / FRONTEND (Vite + React 18)                     |
-|  • Fully Reactive Local Simulation Engine (@z-wbe/shared)                              |
-|  • 12 Deterministic Equations evaluated in < 1ms on every slider change                 |
-|  • 8-Dimensional Bottleneck Pressure Engine & Sensitivity Lab                         |
-|  • GPU Parameter Sweep Interactive Heatmap (100k Precomputed Scenarios)               |
-|  • Interactive Guided Walkthrough Tour & Scenario Comparison Modal                    |
-|  • Official Contest & Verified Badges Modal Showcase                                  |
-+----------------------------------------------------------------------------------------+
-                                            |
-                                            v Explicit User Invocations Only (/api/explain)
-+----------------------------------------------------------------------------------------+
-|                     BACKEND & EDGE ROUTING (Express / Google Cloud Run / Vercel)        |
-|  • Zero-Secret Boundary: OPENROUTER_API_KEY never transmitted to client               |
-|  • Request Rate-Limiting & Session Metering (aiRequestsThisSession counter)           |
-|  • Scenario Hash Caching (FNV-1a hash over model + prompt + metrics)                   |
-|  • Sub-second Cold Start Google Cloud Run Container                                   |
-+----------------------------------------------------------------------------------------+
-                                            |
-                                            v Grounded JSON Payload
-+----------------------------------------------------------------------------------------+
-|                        NVIDIA OPEN MODEL REASONING (OpenRouter)                        |
-|  • Model: NVIDIA Nemotron 3 Super (nvidia/nemotron-3-super-120b-a12b:free)             |
-|  • 120B Hybrid Mamba-Transformer Architecture                                          |
-|  • Structured Schema Enforcement (What Limits, Why, Highest Leverage, Uncertainties)   |
-|  • Strict Epistemic Grounding Contract (Consumes deterministic metrics)                 |
-+----------------------------------------------------------------------------------------+
+```mermaid
+flowchart TD
+    subgraph ClientLayer ["Client Layer (Vite + React 18 + TypeScript)"]
+        UI["Interactive Biophysical Dashboard"]
+        SharedCalc["@z-wbe/shared Deterministic Engine<br/>12 Physical Scaling Equations (&lt;1ms Execution)"]
+        PressureCalc["8-Dimensional Bottleneck Matrix<br/>Normalized Pressure Vector & Sensitivity Lab"]
+        SweepMap["GPU Exploration Map<br/>100,000 Monte Carlo Precomputed Scenarios"]
+        
+        UI -->|"Biophysical Parameter Changes"| SharedCalc
+        SharedCalc -->|"Computed Engineering Metrics"| PressureCalc
+        PressureCalc -->|"Dominant Constraint & Leverage"| UI
+        SweepMap -.->|"Visualized in UI"| UI
+    end
+
+    subgraph EdgeLayer ["Edge & Backend Microservice (Express / Google Cloud Run / Vercel Edge)"]
+        ExplainRoute["POST /api/explain<br/>Explicit User Clicks Only"]
+        SecretVault["Server-Side Secret Vault<br/>OPENROUTER_API_KEY Zero-Leak Boundary"]
+        CacheStore["Deterministic Scenario Cache<br/>FNV-1a Hash (Model + Prompt + Metrics)"]
+        RateGuard["Rate-Limit Guard & Session Metering<br/>aiRequestsThisSession Tracker"]
+        
+        ExplainRoute --> SecretVault
+        ExplainRoute --> CacheStore
+        CacheStore -->|"Cache Miss"| RateGuard
+    end
+
+    subgraph LLMLayer ["Open Foundation Model (OpenRouter)"]
+        NemotronModel["NVIDIA Nemotron 3 Super 120B<br/>nvidia/nemotron-3-super-120b-a12b:free<br/>Hybrid Mamba-Transformer"]
+        GroundingContract["Strict Epistemic Grounding Contract<br/>Explains Calculated Metrics | Zero Hallucinated Values"]
+        
+        RateGuard -->|"Grounded Scenario JSON"| NemotronModel
+        NemotronModel --> GroundingContract
+        GroundingContract -->|"Structured JSON (Limits, Why, Leverage)"| ExplainRoute
+    end
+
+    subgraph GPULayer ["Cloud GPU Analytics (Google Cloud Colab Enterprise)"]
+        TeslaT4["NVIDIA Tesla T4 GPU Runtime<br/>16GB VRAM | CUDA 12.2"]
+        RAPIDSStack["NVIDIA RAPIDS Stack<br/>cudf.pandas & cuml.accel"]
+        MonteCarloSweep["100,000-Scenario Parameter Sweep<br/>8.62x Acceleration vs Host CPU"]
+        ExportData["gpu-sweep-summary.json<br/>Public Data Artifact"]
+        
+        TeslaT4 --> RAPIDSStack
+        RAPIDSStack --> MonteCarloSweep
+        MonteCarloSweep --> ExportData
+    end
+
+    UI -->|"User Clicks 'Explain with Nemotron'"| ExplainRoute
+    CacheStore -.->|"Instant Cached Response"| UI
+    ExplainRoute -->|"Grounded Scientific Interpretation"| UI
+    ExportData -->|"Static Data Ingestion"| SweepMap
 ```
 
 ---
@@ -464,6 +485,142 @@ All benchmark metrics were executed in Google Cloud Colab Enterprise with full r
     </td>
   </tr>
 </table>
+
+### 🔄 The Antigravity ↔ GitHub ↔ Colab Triad Architecture
+
+To ensure total reproducibility, prevent corrupted Jupyter JSON merge conflicts, and preserve epistemic integrity, the project implements a **Triad Synchronization Architecture** centered around GitHub as the immutable single source of truth:
+
+```mermaid
+flowchart TD
+    subgraph Hub ["Single Source of Truth (GitHub Remote)"]
+        GH["GitHub: zrt219/Z-WBE-Bottleneck-Lab<br/>Branch: main"]
+        CanonicalNB["notebooks/Z_WBE_GPU_LAB.ipynb<br/>(One Canonical Active Notebook)"]
+        GH --- CanonicalNB
+    end
+
+    subgraph LocalDev ["Local Development & Verification (Antigravity IDE)"]
+        LocalCode["Edit Equations, Schemas & UI<br/>npm test & npm run typecheck"]
+        SyncScript["scripts/sync-colab.ps1<br/>8-Step Automated Sync Utility"]
+        LocalNB["Local notebooks/Z_WBE_GPU_LAB.ipynb"]
+        
+        SyncScript -->|"1. git pull --rebase"| LocalNB
+        LocalCode -->|"2. Author cells & markdown"| LocalNB
+        SyncScript -->|"6. Commit & 7. Push to main"| GH
+    end
+
+    subgraph CloudExecution ["Hardware Acceleration (Google Cloud Colab Enterprise)"]
+        LaunchBadge["Direct Colab Launch Badge / URL<br/>colab.research.google.com/..."]
+        ColabVM["Google Colab VM with Tesla T4 GPU<br/>Execute Cells with RAPIDS & cuML"]
+        ColabSave["Colab Menu: File -> Save a copy in GitHub<br/>Path: notebooks/Z_WBE_GPU_LAB.ipynb"]
+        
+        GH -->|"Load latest code on launch"| LaunchBadge
+        LaunchBadge --> ColabVM
+        ColabVM -->|"Save verified cell outputs"| ColabSave
+        ColabSave -->|"Commit & Push directly to main"| GH
+    end
+
+    subgraph CleanDirs ["Repository Directory Hygiene"]
+        DirRoot["notebooks/Z_WBE_GPU_LAB.ipynb (Canonical Active)"]
+        DirArchive["notebooks/archive/ (4 Preserved Historical Notebooks)"]
+        DirTutorials["notebooks/tutorials/ (5 Deep-Dive Guides)"]
+    end
+```
+
+#### The Sequential Non-Concurrent Loop
+Jupyter Notebook `.ipynb` files are complex JSON trees. Concurrent edits in local IDEs and cloud runtimes create messy git conflicts. The workflow strictly enforces a unidirectional, sequential loop:
+
+$$\text{Antigravity Editing} \longrightarrow \text{Git Push} \longrightarrow \text{Colab T4 Execution} \longrightarrow \text{Save to GitHub} \longrightarrow \text{Antigravity Pull}$$
+
+1. **Antigravity Authors**: Equations, test suites, and markdown documentation are authored and verified locally.
+2. **Push to GitHub**: Changes are committed and pushed to `origin main`.
+3. **Launch in Colab**: The notebook is opened via its [Permanent Colab Link](https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb).
+4. **Execute on T4**: Cells are executed in Google Cloud Colab Enterprise on an NVIDIA Tesla T4 GPU.
+5. **Save to GitHub**: In Colab, the researcher selects `File -> Save a copy in GitHub`, writing outputs directly back to `notebooks/Z_WBE_GPU_LAB.ipynb`.
+6. **Pull to Antigravity**: Running `git pull --rebase origin main` (or `.\scripts\sync-colab.ps1`) brings live GPU outputs and plots back into the local environment.
+
+#### Automated 8-Step Synchronization Utility (`scripts/sync-colab.ps1`)
+To automate this pipeline without manual git commands, the repository includes a custom PowerShell utility ([`scripts/sync-colab.ps1`](scripts/sync-colab.ps1)):
+```powershell
+# Run the complete 8-step sync cycle
+.\scripts\sync-colab.ps1
+
+# Auto-commit and push notebook updates directly
+.\scripts\sync-colab.ps1 -CommitMessage "feat(gpu): update 100k sweep parameters" -Push
+
+# Skip pull step when working offline
+.\scripts\sync-colab.ps1 -SkipPull
+```
+**The 8-Step Automated Logic**:
+1. **Pull & Rebase**: Executes `git pull --rebase origin main` to ingest outputs saved from Google Colab.
+2. **Verify Canonical Notebook**: Asserts that `notebooks/Z_WBE_GPU_LAB.ipynb` exists and is accessible.
+3. **Inspect Modification State**: Compares git commit hashes and porcelain status to identify remote Colab updates.
+4. **Validate JSON Schema**: Validates Jupyter JSON tree syntax and verifies cell integrity (>0 cells).
+5. **Report Git Working Copy**: Displays short status of all repository tracked files.
+6. **Commit on Request**: Stages and commits notebook changes if `-CommitMessage` was supplied.
+7. **Push on Request**: Pushes verified commits to `origin main` if `-Push` was specified.
+8. **Print Permanent URL**: Outputs the one-click Google Colab launch URL for instant browser access.
+
+#### Repository Directory Hygiene & Clean Loading
+When opening a repository in Google Colab from GitHub, Colab scans and presents every `.ipynb` file located in the target folder. To eliminate visual clutter and ensure judges and researchers immediately launch the intended notebook, the repository is organized into three distinct tiers:
+* **Root Tier (`notebooks/Z_WBE_GPU_LAB.ipynb`)**: Strictly **one** canonical notebook containing the full 10-stage GPU analytics suite.
+* **Archive Tier (`notebooks/archive/`)**: Preserves all 4 earlier exploratory and NYC traffic modeling notebooks (`gpu_accelerated_regression.ipynb`, `gpu_scenario_sweep_old.ipynb`, `nyc_congestion_pricing_equilibrium.ipynb`, and `nyc_graph_congestion_matrix.ipynb`).
+* **Tutorials Tier (`notebooks/tutorials/`)**: Houses 5 deep-dive technical guides covering CPU vs. GPU profiling, ensemble modeling, EDA, and Apache Parquet columnar storage.
+
+---
+
+### 🧬 The 10-Section Canonical GPU Execution Pipeline
+
+The canonical notebook [`notebooks/Z_WBE_GPU_LAB.ipynb`](notebooks/Z_WBE_GPU_LAB.ipynb) unifies all contest learning pathways into an end-to-end analytical pipeline:
+
+```mermaid
+flowchart TD
+    subgraph EnvSetup ["Environment & Infrastructure Setup"]
+        S1["Section 1: Environment & GPU Proof<br/>!nvidia-smi | CUDA Check | PyTorch GPU Verification"]
+        S2["Section 2: NVIDIA RAPIDS Setup<br/>%load_ext cudf.pandas | %load_ext cuml.accel"]
+        S1 --> S2
+    end
+
+    subgraph CourseBenchmark ["Google Cloud × NVIDIA Course Benchmark"]
+        S3["Section 3: Course Dual-Mode Pipeline<br/>NYC Taxi Dataset | Random Forest & XGBoost"]
+        S4["Section 4: Benchmark Evidence & Hardware Provenance<br/>1.907s CPU vs 0.221s T4 GPU (8.62x Speedup, 88.4% Time Saved)"]
+        S2 --> S3
+        S3 --> S4
+    end
+
+    subgraph ZWBEModel ["Deterministic Biophysical Scaling"]
+        S5["Section 5: Z-WBE Biophysical & Engineering Equations<br/>Voxels | Acquisition Time | Model State | Compute FLOPs | Memory TB/s"]
+        S6["Section 6: 100,000-Scenario Monte Carlo Sweep<br/>Vectorized cuDF GPU DataFrame Sweep"]
+        S4 --> S5
+        S5 --> S6
+    end
+
+    subgraph BottleneckAnalytics ["Multi-Dimensional Bottleneck Analytics"]
+        S7["Section 7: Bottleneck Classification Engine<br/>8-Dimensional Normalized Pressure Vector (arg max)"]
+        S8["Section 8: Phase-Transition & Hero Demonstration<br/>100x Imaging Breakthrough: The Bottleneck Moved"]
+        S6 --> S7
+        S7 --> S8
+    end
+
+    subgraph IntegrationExport ["Data Integration & Contest Verification"]
+        S9["Section 9: Visual Analytics & JSON Export<br/>Matplotlib Distribution Plots -> public/data/gpu-sweep-summary.json"]
+        S10["Section 10: Contest Evidence & Learning Pathways<br/>Mapping to 4 Official Google Cloud & NVIDIA Credentials"]
+        S8 --> S9
+        S9 --> S10
+    end
+```
+
+| Section | Purpose & Implementation | Technologies & Libraries |
+| :--- | :--- | :--- |
+| **1. Environment & GPU Proof** | Telemetry logging of host CPU, memory, and physical GPU accelerator. Asserts NVIDIA Tesla T4 availability, CUDA driver version, and VRAM capacity. | `nvidia-smi`, `torch.cuda`, `sys` |
+| **2. NVIDIA RAPIDS Setup** | Zero-code-change GPU acceleration initialization. Intercepts standard pandas and scikit-learn calls, seamlessly offloading dataframe and linear algebra kernels to CUDA cores. | `%load_ext cudf.pandas`, `%load_ext cuml.accel` |
+| **3. Course Benchmark Pipeline** | Dual-mode execution of the tabular machine learning curriculum from the Google Cloud × NVIDIA pathway on the NYC taxi dataset. | `pandas`, `cudf`, `sklearn`, `xgboost` |
+| **4. Benchmark Evidence & Provenance** | Precision timing instrumentation comparing CPU execution (1.907s) to NVIDIA Tesla T4 (0.221s), proving an **8.62× speedup** with zero code changes. | `time.perf_counter()`, `json`, `matplotlib` |
+| **5. Z-WBE Biophysical Equations** | Deterministic mathematical implementation of the 12 whole-brain emulation scaling equations (voxels, scan time, state storage, compute FLOPs, memory bus traffic, power MW, and total cost). | Pure Python vectorized math |
+| **6. 100,000-Scenario Monte Carlo Sweep** | Synthetic generation and evaluation of 100,000 randomized biophysical configurations across 8 dimensions in GPU memory using cuDF dataframes. | `cudf.DataFrame`, `numpy.random` |
+| **7. Bottleneck Classification** | Evaluates normalized constraint pressure vectors across Acquisition, Reconstruction, Storage, Compute, Memory Bandwidth, Interconnect, Power, and Economics, computing $\arg\max$ dominance. | Vectorized GPU tensor operations |
+| **8. Phase-Transition & Hero Moment** | Simulates the flagship contest breakthrough: scaling imaging throughput by 100× to demonstrate Amdahl's Law ("The Bottleneck Moved" from Acquisition to Memory Bandwidth). | Parameter sweep sensitivity curves |
+| **9. Visual Analytics & JSON Export** | Generates high-resolution distribution histograms and exports the structured aggregate summary artifact (`public/data/gpu-sweep-summary.json`) consumed by the web application. | `matplotlib.pyplot`, `seaborn`, `json` |
+| **10. Contest Evidence & Pathways** | Formal alignment matrix mapping notebook outcomes directly to all 4 completed Google Cloud and NVIDIA developer certifications. | Markdown documentation |
 
 ---
 
