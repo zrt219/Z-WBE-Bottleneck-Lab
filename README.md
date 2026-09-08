@@ -437,10 +437,35 @@ To validate the real-world performance gains taught in the **Speed Up Data Analy
 </div>
 
 <div align="center" style="margin-top: 16px; margin-bottom: 24px;">
-  <a href="./public/colab-evidence/colab_t4_live_execution.gif">
-    <img src="./public/colab-evidence/colab_t4_live_execution.gif" alt="Google Colab Enterprise NVIDIA Tesla T4 Live Execution" width="760" style="border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.25); border: 1px solid #333;" />
-  </a>
-  <p><em>Live Execution in Google Colab Enterprise: Accelerated Data Science Pipeline with NVIDIA Tesla T4 & RAPIDS</em></p>
+  <table width="100%" align="center">
+    <tr>
+      <td width="50%" align="center">
+        <a href="./public/colab-evidence/colab_t4_terminal_execution.gif">
+          <img src="./public/colab-evidence/colab_t4_terminal_execution.gif" alt="Live Section 1 GPU Execution & NVIDIA-SMI Terminal" width="100%" style="border-radius: 8px; border: 1px solid #333; box-shadow: 0 4px 16px rgba(0,0,0,0.2);" />
+        </a><br />
+        <strong>Live GPU Verification &amp; Terminal Telemetry</strong><br />
+        <em>Synchronized execution of PyTorch GPU check alongside active <code>nvidia-smi</code> terminal monitoring Tesla T4 16GB.</em>
+      </td>
+      <td width="50%" align="center">
+        <a href="./public/colab-evidence/colab_gemini_assistant.gif">
+          <img src="./public/colab-evidence/colab_gemini_assistant.gif" alt="Colab Enterprise Integrated Gemini AI Assistant" width="100%" style="border-radius: 8px; border: 1px solid #333; box-shadow: 0 4px 16px rgba(0,0,0,0.2);" />
+        </a><br />
+        <strong>Integrated Gemini AI Assistance in Colab</strong><br />
+        <em>Querying Google Cloud Colab Enterprise Gemini assistant to inspect NVIDIA RAPIDS acceleration pipeline.</em>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" align="center">
+        <a href="./public/colab-evidence/colab_full_overview_execution.gif">
+          <img src="./public/colab-evidence/colab_full_overview_execution.gif" alt="Google Colab Enterprise Full Notebook Execution" width="100%" style="border-radius: 8px; border: 1px solid #333; box-shadow: 0 4px 16px rgba(0,0,0,0.2);" />
+        </a><br />
+        <strong>Canonical Notebook Overview &amp; Execution Flow</strong><br />
+        <em>Complete 10-section canonical notebook running live on Tesla T4 GPU hardware runtime.</em>
+        <br /><br />
+        🎥 <strong>Full-HD Live Session Recording (MP4)</strong>: <a href="./public/recordings/colab_t4_live_demo.mp4"><code>public/recordings/colab_t4_live_demo.mp4</code></a>
+      </td>
+    </tr>
+  </table>
 </div>
 
 ### Google Cloud Colab Enterprise Runtime & Provenance Gallery
@@ -497,10 +522,15 @@ All benchmark metrics were executed in Google Cloud Colab Enterprise with full r
     </td>
   </tr>
   <tr>
-    <td colspan="2" align="center">
+    <td width="50%" align="center">
       <a href="./public/colab-evidence/07_github_notebook_code_provenance.png"><img src="./public/colab-evidence/07_github_notebook_code_provenance.png" alt="Canonical Z-WBE GPU Lab & NVIDIA Tesla T4 Live Terminal" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
-      <strong>Canonical Z-WBE GPU Lab & NVIDIA Tesla T4 Live Terminal</strong><br />
+      <strong>Canonical Z-WBE GPU Lab &amp; Terminal</strong><br />
       <em>Deterministic scaling law model, 100,000-scenario sweep, and active <code>nvidia-smi</code> terminal showing Tesla T4 16GB.</em>
+    </td>
+    <td width="50%" align="center">
+      <a href="./public/colab-evidence/08_colab_rapids_and_variable_inspector.png"><img src="./public/colab-evidence/08_colab_rapids_and_variable_inspector.png" alt="NVIDIA RAPIDS Setup & 100k Monte Carlo Variable Inspector" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
+      <strong>RAPIDS Setup &amp; Variable Inspector</strong><br />
+      <em>Live activation of <code>cudf.pandas</code> with 100,000-scenario parameter distribution arrays resident in memory.</em>
     </td>
   </tr>
 </table>
@@ -838,6 +868,25 @@ npm test
   * [Speed Up Data Analytics on GPUs](https://developers.google.com/profile/badges/playlists/speed-up-data-analytics-GPUs?u=zhane) • [Pathway](https://developers.google.com/learn/pathways/speed-up-data-analytics-GPUs)
   * [Accelerated Machine Learning with Google Cloud and NVIDIA](https://developers.google.com/profile/badges/playlists/accelerated-machine-learning-with-google-cloud-and-nvidia?u=110918189625880989910) • [Pathway](https://developers.google.com/learn/pathways/accelerated-machine-learning-with-google-cloud-and-nvidia)
   * [Intro to Inference: How to Run AI Models on a GPU](https://developers.google.com/profile/badges/playlists/ai-models-on-gpu-intro?u=zhane) • [Pathway](https://developers.google.com/learn/pathways/ai-models-on-gpu-intro)
+
+<div align="center" style="margin-top: 16px; margin-bottom: 20px;">
+  <table width="100%" align="center">
+    <tr>
+      <td width="50%" align="center">
+        <a href="./public/images/google-nvidia-developer-badges.png">
+          <img src="./public/images/google-nvidia-developer-badges.png" alt="Google Cloud x NVIDIA 4/4 Complete Sweep Developer Badges" width="100%" style="border-radius: 8px; border: 1px solid #333;" />
+        </a><br />
+        <strong>4/4 Verified Google Cloud × NVIDIA Badges</strong>
+      </td>
+      <td width="50%" align="center">
+        <a href="./public/images/golden_ticket_speed_up_data_analytics.png">
+          <img src="./public/images/golden_ticket_speed_up_data_analytics.png" alt="NVIDIA GTC Berlin Golden Ticket Winner Card" width="100%" style="border-radius: 8px; border: 1px solid #333;" />
+        </a><br />
+        <strong>NVIDIA GTC Berlin Golden Ticket Pathway Card</strong>
+      </td>
+    </tr>
+  </table>
+</div>
 ---
 
 <div align="center">
