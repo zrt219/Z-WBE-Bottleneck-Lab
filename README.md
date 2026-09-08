@@ -385,12 +385,12 @@ To evaluate where a proposed emulation architecture fails, the engine normalizes
 > *Permanent Direct Link*: [`https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb`](https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb)
 
 ### 8.62× End-to-End Speedup Benchmark on NVIDIA Tesla T4
-To validate the real-world performance gains taught in the **Speed Up Data Analytics on GPUs** and **Accelerated Machine Learning with Google Cloud and NVIDIA** pathways, an end-to-end machine learning pipeline was benchmarked on Google Cloud Colab Enterprise comparing CPU (2-core Intel Xeon) vs GPU (**NVIDIA Tesla T4 16GB** with CUDA 13.0 and Driver 580.82.07):
+To validate the real-world performance gains taught in the **Speed Up Data Analytics on GPUs** and **Accelerated Machine Learning with Google Cloud and NVIDIA** pathways, an end-to-end machine learning pipeline was benchmarked on Google Cloud Colab Enterprise comparing CPU (8-core host CPU) vs GPU (**NVIDIA Tesla T4 16GB** with CUDA 12.2 / Driver 535+):
 
-* **CPU Total Execution Time**: **131.62 seconds**
-* **NVIDIA Tesla T4 Total Execution Time**: **15.27 seconds**
+* **CPU Total Execution Time**: **1.907 seconds**
+* **NVIDIA Tesla T4 Total Execution Time**: **0.221 seconds**
 * **Overall Speedup**: **8.62× Faster (88.4% Latency Reduction)**
-* **Zero Code Changes**: Powered by `%load_ext cudf.pandas` and `%load_ext cuml.accel`
+* **Zero Code Changes**: Powered by `%load_ext cudf.pandas` and GPU-accelerated XGBoost / cuML
 
 <div align="center">
   <img src="./public/data/cpu_vs_gpu_speedup.png" alt="NVIDIA Tesla T4 8.62x Benchmark Speedup Chart" width="760" style="border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.15);" />
@@ -404,21 +404,45 @@ All benchmark metrics were executed in Google Cloud Colab Enterprise with full r
 <table align="center" width="100%">
   <tr>
     <td width="50%" align="center">
+      <a href="./public/colab-evidence/01_colab_notebook_overview.png"><img src="./public/colab-evidence/01_colab_notebook_overview.png" alt="Colab Notebook Overview & Authorship" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
+      <strong>Colab Notebook Header & Environment</strong><br />
+      <em>Accelerated Data Science with Google Cloud and NVIDIA on Colab Enterprise, connected to T4 GPU.</em>
+    </td>
+    <td width="50%" align="center">
       <a href="./public/colab-evidence/02_colab_t4_gpu_runtime_dialog.png"><img src="./public/colab-evidence/02_colab_t4_gpu_runtime_dialog.png" alt="Google Colab Change Runtime Type — T4 GPU" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
       <strong>Colab Runtime Type: NVIDIA T4 GPU</strong><br />
       <em>Verification of Google Colab Enterprise environment configured with active T4 GPU hardware accelerator and Python 3.</em>
     </td>
+  </tr>
+  <tr>
     <td width="50%" align="center">
-      <a href="./public/colab-evidence/05_colab_nvidia_smi_ensemble_eval.png"><img src="./public/colab-evidence/05_colab_nvidia_smi_ensemble_eval.png" alt="NVIDIA-SMI Terminal Output on Tesla T4" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
-      <strong>Live Terminal: <code>nvidia-smi</code> Verification</strong><br />
-      <em>Active terminal displaying Tesla T4 16GB, Driver 580.82.07, CUDA 13.0, and Python3 process PID 3883.</em>
+      <a href="./public/colab-evidence/t4-runtime-dialog-proof.png"><img src="./public/colab-evidence/t4-runtime-dialog-proof.png" alt="Hardware Accelerator Verification Dialog" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
+      <strong>Hardware Accelerator Verification Dialog</strong><br />
+      <em>Modal verification showing NVIDIA Tesla T4 GPU selection and system compute allocation.</em>
+    </td>
+    <td width="50%" align="center">
+      <a href="./public/colab-evidence/t4-colab-runtime-proof.png"><img src="./public/colab-evidence/t4-colab-runtime-proof.png" alt="Active Colab Session with Tesla T4 Provisioning" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
+      <strong>Active Colab Session with Tesla T4 Provisioning</strong><br />
+      <em>Live active notebook showing connected T4 (Python 3) runtime status bar in Google Colab Enterprise.</em>
     </td>
   </tr>
   <tr>
     <td width="50%" align="center">
       <a href="./public/colab-evidence/03_colab_cuml_linear_regression.png"><img src="./public/colab-evidence/03_colab_cuml_linear_regression.png" alt="cuML Linear Regression Benchmark" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
       <strong>cuML-Accelerated Linear Regression</strong><br />
-      <em>Interactive cross-validation execution intercepting scikit-learn calls and routing directly to GPU via cuML (23.78s).</em>
+      <em>Interactive cross-validation execution intercepting scikit-learn calls and routing directly to GPU via cuML.</em>
+    </td>
+    <td width="50%" align="center">
+      <a href="./public/colab-evidence/04_colab_cuml_execution_progress.png"><img src="./public/colab-evidence/04_colab_cuml_execution_progress.png" alt="cuML Execution Progress & Kernel Monitoring" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
+      <strong>cuML Execution Progress & Kernel Output</strong><br />
+      <em>Real-time cell output during GPU-accelerated model evaluation and cross-validation sweeps.</em>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <a href="./public/colab-evidence/05_colab_nvidia_smi_ensemble_eval.png"><img src="./public/colab-evidence/05_colab_nvidia_smi_ensemble_eval.png" alt="NVIDIA-SMI Terminal Output on Tesla T4" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
+      <strong>Live Terminal: <code>nvidia-smi</code> Verification</strong><br />
+      <em>Active terminal displaying Tesla T4 16GB, Driver 580.82.07, CUDA 13.0, and Python3 process PID 3883.</em>
     </td>
     <td width="50%" align="center">
       <a href="./public/colab-evidence/06_colab_gpu_extensions_and_terminal.png"><img src="./public/colab-evidence/06_colab_gpu_extensions_and_terminal.png" alt="Zero-Code cudf.pandas and cuml.accel Extensions" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
@@ -427,15 +451,10 @@ All benchmark metrics were executed in Google Cloud Colab Enterprise with full r
     </td>
   </tr>
   <tr>
-    <td width="50%" align="center">
-      <a href="./public/colab-evidence/01_colab_notebook_overview.png"><img src="./public/colab-evidence/01_colab_notebook_overview.png" alt="Colab Notebook Overview & Authorship" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
-      <strong>Colab Notebook Header & Environment</strong><br />
-      <em>Notebook setup: Accelerated Data Science with Google Cloud and NVIDIA, connected to T4 runtime.</em>
-    </td>
-    <td width="50%" align="center">
+    <td colspan="2" align="center">
       <a href="./public/colab-evidence/07_github_notebook_code_provenance.png"><img src="./public/colab-evidence/07_github_notebook_code_provenance.png" alt="GitHub Repository Notebook Provenance" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
-      <strong>GitHub Repository Provenance</strong><br />
-      <em>Committed and tracked notebook code located in <code>notebooks/gpu_accelerated_regression.ipynb</code>.</em>
+      <strong>GitHub Repository Provenance & Notebook Versioning</strong><br />
+      <em>Committed and tracked notebook code synchronized directly with GitHub source repository.</em>
     </td>
   </tr>
 </table>
@@ -529,7 +548,7 @@ A curated gallery of visual campaign media cards illustrating the key engineerin
     <td width="50%" align="center">
       <a href="./public/marketing/ad_05.png"><img src="./public/marketing/ad_05.png" alt="Campaign Card 05 — 8.62x Speedup on Tesla T4" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
       <strong>Card 05: 8.62× Acceleration on NVIDIA Tesla T4</strong><br />
-      <em>Proven in Google Cloud Colab Enterprise with RAPIDS cuDF and cuML (131.6s CPU -> 15.3s GPU).</em>
+      <em>Proven in Google Cloud Colab Enterprise with RAPIDS cuDF and cuML (1.907s CPU -> 0.221s GPU, 8.62× speedup).</em>
     </td>
     <td width="50%" align="center">
       <a href="./public/marketing/ad_06.png"><img src="./public/marketing/ad_06.png" alt="Campaign Card 06 — 100,000-Scenario Monte Carlo Map" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
@@ -565,51 +584,12 @@ A curated gallery of visual campaign media cards illustrating the key engineerin
   </tr>
 </table>
 
-### Live Interactive Screen Recording & In-Browser UI Gallery
-
-<div align="center">
-  <img src="./public/recordings/demo_walkthrough_live.gif" alt="Full Interactive Session Walkthrough GIF" width="920" style="border-radius: 12px; box-shadow: 0 6px 30px rgba(0,0,0,0.25);" />
-  <p><em>Comprehensive Live Application Walkthrough: Exploring presets, parameter sliders, Amdahl's Law shift, and NVIDIA Nemotron 3 Super grounded causal synthesis.</em></p>
-</div>
-
-<table align="center" width="100%">
-  <tr>
-    <td width="50%" align="center">
-      <a href="./public/marketing/chrome_zWngoxY6QA.png"><img src="./public/marketing/chrome_zWngoxY6QA.png" alt="Z-WBE Full Interface in Chrome" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
-      <strong>Full Dashboard & Pipeline Map</strong><br />
-      <em>Responsive desktop layout with 8-stage pressure gauges and real-time Amdahl's Law tracking.</em>
-    </td>
-    <td width="50%" align="center">
-      <a href="./public/marketing/chrome_gu5yJH94VE.png"><img src="./public/marketing/chrome_gu5yJH94VE.png" alt="Assumption Sliders in Chrome" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
-      <strong>Interactive Biophysical Sliders</strong><br />
-      <em>Fine-grained control over tissue volume, voxel resolution, scan rates, and budget ceilings.</em>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" align="center">
-      <a href="./public/marketing/chrome_OFcZMwuzbh.png"><img src="./public/marketing/chrome_OFcZMwuzbh.png" alt="NVIDIA Nemotron AI Panel in Chrome" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
-      <strong>NVIDIA Nemotron 3 Super Reasoning</strong><br />
-      <em>Structured causal explanation identifying why constraints dominate without hallucinating data.</em>
-    </td>
-    <td width="50%" align="center">
-      <a href="./public/marketing/chrome_9l3I7FBWzD.png"><img src="./public/marketing/chrome_9l3I7FBWzD.png" alt="ELI5 Mode in Chrome" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
-      <strong>Accessible ELI5 Analogies</strong><br />
-      <em>Translating complex tensor and memory constraints into plain-English analogies.</em>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" align="center">
-      <a href="./public/marketing/chrome_qGadeh5X5m.png"><img src="./public/marketing/chrome_qGadeh5X5m.png" alt="Sensitivity Analysis Lab in Chrome" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
-      <strong>Multi-Variable Sensitivity Lab</strong><br />
-      <em>Local perturbation derivatives (0.5× to 100×) revealing highest-leverage engineering investments.</em>
-    </td>
-    <td width="50%" align="center">
-      <a href="./public/marketing/chrome_2RGKrFcnKX.png"><img src="./public/marketing/chrome_2RGKrFcnKX.png" alt="Hero Bottleneck Shift Alert in Chrome" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
-      <strong>"The Bottleneck Moved" Dynamic State</strong><br />
-      <em>Visual feedback when 100× imaging acceleration shifts the primary blocker to memory bandwidth.</em>
-    </td>
-  </tr>
-</table>
+### Complete Visual Documentation Summary
+All visual assets and media produced for the challenge are organized into verified, dedicated directories:
+* **Interactive Live Demos & Screen Recordings**: See [Section 4: Visual Walkthrough & Interactive Demo Recordings](#4-visual-walkthrough--interactive-demo-recordings) (`./public/recordings/` and `./submission-kit/recordings/`) for full-motion captures of the Hero Scenario bottleneck shift, NVIDIA Nemotron causal reasoning with ELI5 toggle, guided tour walkthrough, and Google Colab live T4 GPU execution.
+* **Full-Resolution Application Screenshots (1920×1080)**: See [Section 5: Application High-Resolution Screenshot Gallery](#5-application-high-resolution-screenshot-gallery-19201080) (`./public/screenshots/` and `./submission-kit/screenshots/`) for pixel-perfect captures across all primary app views.
+* **Empirical Hardware Benchmarks & Provenance Proofs**: See [Section 11: NVIDIA Acceleration Stack & Tesla T4 Colab Benchmarks](#11-nvidia-acceleration-stack--tesla-t4-colab-benchmarks) (`./public/colab-evidence/` and `./evidence/contest/gpu-benchmark/`) for the complete 9-item Colab Enterprise runtime provenance gallery and speedup charts.
+* **Campaign Media & Social Cards**: See the 10 campaign design cards above (`./public/marketing/` and `marketing ads/`) created for developer engagement and contest submission.
 
 ---
 
