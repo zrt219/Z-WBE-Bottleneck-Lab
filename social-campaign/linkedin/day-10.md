@@ -249,7 +249,7 @@ Day 10 Build Log: Encoding scenario states into shareable URLs.
 
 If you discover a fascinating bottleneck transition in Z-WBE, how do you share it with a colleague?
 
-We implemented deep URL parameter synchronization in `tests/urlParams.test.ts`:
+I implemented deep URL parameter synchronization in `tests/urlParams.test.ts`:
 - Every slider parameter is serialized into base64 or URL search params (`?res=4&dwell=20&beams=64...`).
 - When a user opens a shared link, the app decodes the parameters, verifies boundary safety, and re-executes the deterministic equations instantly.
 - The colleague sees the exact same bottleneck ranking, gauges, and metrics with zero divergence.

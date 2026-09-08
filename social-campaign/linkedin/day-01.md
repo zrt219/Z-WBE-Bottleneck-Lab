@@ -79,7 +79,7 @@ Mentions & Judges: @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Ha
 - **Scheduled Time (MDT)**: 11:45 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: Most discussions about brain emulation focus on compute. The math says compute is rarely the first wall.
-- **Post Summary**: In Z-WBE Bottleneck Lab, we model 8 distinct physical and economic constraint dimensions simultaneously:
+- **Post Summary**: In Z-WBE Bottleneck Lab, I model 8 distinct physical and economic constraint dimensions simultaneously:
 - **Media**: `social_card_intro_inference.png, 02_imaging_wall_baseline.png, 07_github_notebook_code_provenance.png, ad_02.png`
 - **Media Order**: 1. social_card_intro_inference.png -> 2. 02_imaging_wall_baseline.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_02.png
 - **Hashtags**: #NVIDIAGTC #SystemsEngineering #ComputationalNeuroscience #HighPerformanceComputing #HardwareArchitecture #TypeScript #OpenSource
@@ -99,7 +99,7 @@ Mentions & Judges: @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Ha
 ```markdown
 Most discussions about brain emulation focus on compute. The math says compute is rarely the first wall.
 
-In Z-WBE Bottleneck Lab, we model 8 distinct physical and economic constraint dimensions simultaneously:
+In Z-WBE Bottleneck Lab, I model 8 distinct physical and economic constraint dimensions simultaneously:
 1. Acquisition (microscopy scan time and beam dwell rates)
 2. Reconstruction (segmentation and synapse extraction throughput)
 3. Storage (raw voxel ingest and multi-resolution volume persistence)
@@ -211,9 +211,9 @@ In popular science coverage, scanning a brain is frequently conflated with simul
 
 If you solve Acquisition and Reconstruction, you have produced an anatomical wiring diagram—a static connectome. You have not yet functionalized or executed it.
 
-In Z-WBE Bottleneck Lab, we model the operational cost and technical barriers across all six stages.
+In Z-WBE Bottleneck Lab, I model the operational cost and technical barriers across all six stages.
 
-Read our full pipeline architecture breakdown on GitHub:
+Read the full pipeline architecture breakdown on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 
@@ -258,7 +258,7 @@ When building an AI-powered scientific application, the most common trap is pass
 
 The LLM will happily give you an answer. It will sound authoritative. And it will be subtly wrong, mathematically inconsistent, and impossible to reproduce.
 
-In Z-WBE Bottleneck Lab, we implemented strict epistemic separation:
+In Z-WBE Bottleneck Lab, I implemented strict epistemic separation:
 - The TypeScript engine runs pure mathematical functions based on first-principles physics. If you set 4nm isotropic voxels over 1,200 cm³, the calculator deterministically outputs 18.75 Petavoxels and 1.25 ZB raw data.
 - The LLM (NVIDIA Nemotron 3 Super 120B) receives only calculated facts and context.
 - Nemotron's sole job is causal interpretation: explaining why a bottleneck dominates, identifying trade-offs, and explaining secondary constraints.

@@ -17,12 +17,12 @@
 - **Content Pillar**: Pillar B: Systems Engineering
 - **Scheduled Time (MDT)**: 10:15 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
-- **Hook**: What breaks first if you attempt whole-brain emulation?
-- **Post Summary**: I built Z-WBE Bottleneck Lab for the @GoogleDevs x @NVIDIAAI GTC Berlin Golden Ticket Challenge.
+- **Hook**: What breaks first in whole-brain emulation?
+- **Post Summary**: I built Z-WBE Bottleneck Lab for the @GoogleDevs x @NVIDIAAI GTC Golden Ticket Challenge.
 - **Media**: `social_card_nim_gke.png, social_card_data_analytics.png, social_card_accelerated_ml.png, social_card_intro_inference.png`
 - **Media Order**: 1. social_card_nim_gke.png -> 2. social_card_data_analytics.png -> 3. social_card_accelerated_ml.png -> 4. social_card_intro_inference.png
 - **Hashtags**: #NVIDIAGTC
-- **Mentions**: @GoogleDevs | @NVIDIAAI
+- **Mentions**: @GoogleDevs | @NVIDIAAI | @asierarranz
 - **Claims Verified**: YES - Upgraded launch draft
 - **Manual Review Required**: NO
 
@@ -36,15 +36,15 @@
 ### Post Copy
 
 ```markdown
-What breaks first if you attempt whole-brain emulation?
+What breaks first in whole-brain emulation?
 
-I built Z-WBE Bottleneck Lab for the @GoogleDevs x @NVIDIAAI GTC Berlin Golden Ticket Challenge.
+I built Z-WBE Bottleneck Lab for the @GoogleDevs x @NVIDIAAI GTC Golden Ticket Challenge.
 
 Change assumptions. See what fractures.
 
 Live app: https://z-wbe-bottleneck-lab.vercel.app
 
-cc @asierarranz #NVIDIAGTC
+cc @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC
 ```
 
 ---
@@ -81,7 +81,7 @@ Imaging a human brain at 4nm isotropic creates 18.75 Petavoxels and >1.2 Zettaby
 
 At typical electron beam dwell times, a single beam takes >1,000 years.
 
-We modeled the numbers deterministically:
+I modeled the numbers deterministically:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 #NVIDIAGTC #Neuroscience
@@ -216,12 +216,12 @@ Test your intuition live: https://z-wbe-bottleneck-lab.vercel.app
 - **Content Pillar**: Pillar F: Build Journey
 - **Scheduled Time (MDT)**: 21:00 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
-- **Hook**: If you optimize only the microscopy, Amdahl's Law will punish you immediately.
-- **Post Summary**: Complex systems are chains of dependencies. Solve one link, and the next link takes the strain.
+- **Hook**: If you optimize microscopy, Amdahl's Law punishes you immediately.
+- **Post Summary**: Complex systems are dependency chains: solve one, the next strains.
 - **Media**: `golden_ticket_nim_gke.png, 02_imaging_wall_baseline.png, 07_github_notebook_code_provenance.png, ad_08.png`
 - **Media Order**: 1. golden_ticket_nim_gke.png -> 2. 02_imaging_wall_baseline.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_08.png
-- **Hashtags**: #NVIDIAGTC #BuildInPublic
-- **Mentions**: None
+- **Hashtags**: #NVIDIAGTC
+- **Mentions**: @GoogleDevs | @NVIDIAAI | @asierarranz
 - **Claims Verified**: YES - Challenge build context
 - **Manual Review Required**: NO
 
@@ -235,14 +235,13 @@ Test your intuition live: https://z-wbe-bottleneck-lab.vercel.app
 ### Post Copy
 
 ```markdown
-If you optimize only the microscopy, Amdahl's Law will punish you immediately.
+If you optimize microscopy, Amdahl's Law punishes you immediately.
 
-Complex systems are chains of dependencies. Solve one link, and the next link takes the strain.
+Complex systems are dependency chains: solve one, the next strains.
 
-Day 1 of 21 complete.
-https://github.com/zrt219/Z-WBE-Bottleneck-Lab
+Day 1 of 21 complete: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
-#NVIDIAGTC #BuildInPublic
+cc @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC
 ```
 
 ---

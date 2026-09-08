@@ -51,7 +51,7 @@ If any single stage fails, the entire pipeline collapses.
 A perfect reconstruction of an imperfectly preserved specimen yields a high-resolution map of structural artifacts.
 A perfect anatomical connectome with zero functionalization is an unpowered circuit.
 
-In Z-WBE Bottleneck Lab, we model the interdependencies across all six stages.
+In Z-WBE Bottleneck Lab, I model the interdependencies across all six stages.
 
 Explore the complete pipeline model live:
 https://z-wbe-bottleneck-lab.vercel.app

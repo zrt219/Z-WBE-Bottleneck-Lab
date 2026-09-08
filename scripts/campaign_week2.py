@@ -336,7 +336,7 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
             "text": """The Strict Grounding Contract: How we bind NVIDIA Nemotron 3 Super 120B to physical truth.
 
 One of the most persistent challenges in LLM engineering is preventing models from hallucinating domain facts.
-In Z-WBE Bottleneck Lab, we implemented a Strict Grounding Contract that governs how NVIDIA Nemotron 3 Super 120B (`nvidia/nemotron-3-super-120b-a12b:free`) interacts with our physical simulation engine.
+In Z-WBE Bottleneck Lab, I implemented a Strict Grounding Contract that governs how NVIDIA Nemotron 3 Super 120B (`nvidia/nemotron-3-super-120b-a12b:free`) interacts with the physical simulation engine.
 
 The Grounding Contract Rules:
 1. Grounded Context Injection: The system prompt provides Nemotron with the exact scenario state calculated by TypeScript: dominant bottleneck, secondary constraint, scan time, required bandwidth, and total power.
@@ -386,7 +386,7 @@ STRICT OPERATIONAL BOUNDARIES:
 4. Maintain scientific rigor: do not claim brain emulation is solved or imminent.
 ```
 
-We tested this prompt across 50 adversarial slider combinations in `shared/tests/grounding.test.ts`. 
+I tested this prompt across 50 adversarial slider combinations in `shared/tests/grounding.test.ts`. 
 In 100% of test cases, Nemotron adhered to the numerical boundary and explained causal relationships without inventing false metrics.
 
 Inspect the complete prompt implementation on GitHub:
@@ -780,7 +780,7 @@ Mentions: @Google for Developers | @NVIDIA AI
 
 If you discover a fascinating bottleneck transition in Z-WBE, how do you share it with a colleague?
 
-We implemented deep URL parameter synchronization in `tests/urlParams.test.ts`:
+I implemented deep URL parameter synchronization in `tests/urlParams.test.ts`:
 - Every slider parameter is serialized into base64 or URL search params (`?res=4&dwell=20&beams=64...`).
 - When a user opens a shared link, the app decodes the parameters, verifies boundary safety, and re-executes the deterministic equations instantly.
 - The colleague sees the exact same bottleneck ranking, gauges, and metrics with zero divergence.
@@ -1392,7 +1392,7 @@ When benchmarking GPU kernels in Python, the first run often suffers from CUDA c
 If you measure the first run, your benchmark is measuring initialization, not throughput.
 
 In `scripts/benchmark_cpu_vs_gpu.py`:
-- We ran 5 unmeasured warmup iterations through the pipeline to ensure GPU context and memory pools were fully allocated.
+- I ran 5 unmeasured warmup iterations through the pipeline to ensure GPU context and memory pools were fully allocated.
 - We then executed 10 measured runs for both CPU and GPU paths.
 - We recorded the median runtime to eliminate OS scheduling jitter.
 
@@ -1496,7 +1496,7 @@ Graceful acceleration: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
             ],
             "text": """Never benchmark the first CUDA run.
 Context initialization skew is real.
-We ran 5 warmups before recording 10 median runs.
+I ran 5 warmups before recording 10 median runs.
 
 Engineering rigor matters: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
@@ -1871,7 +1871,7 @@ Mentions & Judges: @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Ha
             ],
             "text": """How we generated 100,000 synthetic parameter scenarios in under 2 seconds.
 
-In `scripts/generate_gpu_sweep.py`, we implemented a vectorized Monte Carlo generator:
+In `scripts/generate_gpu_sweep.py`, I implemented a vectorized Monte Carlo generator:
 - Uses Latin Hypercube Sampling across 10 continuous parameter dimensions to ensure uniform space coverage.
 - Allocates contiguous NumPy arrays and converts them directly into cuDF GPU dataframes.
 - Evaluates our 12 scaling equations vectorized across GPU cores without a single Python `for` loop.
@@ -2006,16 +2006,16 @@ Mentions & Judges: @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Ha
                 "public/colab-evidence/08_colab_rapids_and_variable_inspector.png",
                 "public/images/banner-light.png"
             ],
-            "text": """We mapped 100,000 WBE futures in GPU memory via NVIDIA cuDF:
+            "text": """I mapped 100,000 WBE futures in GPU memory via NVIDIA cuDF:
 48.2% Acquisition-bound
 28.7% Memory-bound
 14.1% Compute-bound
 9.0% Interconnect/Power-bound
 
-Memory dominates 2x more than raw compute!
+Memory dominates 2x more than compute!
 Map: https://z-wbe-bottleneck-lab.vercel.app
 
-#NVIDIAGTC #RAPIDS"""
+cc @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC"""
         },
         {
             "id": "buffer_x_d14_p2",
@@ -2096,11 +2096,11 @@ https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/n
                 "public/marketing/ad_09.png"
             ],
             "text": """Week 2 is a wrap!
-Week 3 starts tomorrow: Preservation limits, biophysical functionalization, and consciousness validation.
+Week 3 starts tomorrow: Preservation limits, biophysical functionalization, and validation.
 
 Explore the lab: https://z-wbe-bottleneck-lab.vercel.app
 
-#NVIDIAGTC #BuildInPublic"""
+cc @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC"""
         }
     ]
 

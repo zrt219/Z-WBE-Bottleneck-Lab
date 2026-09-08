@@ -1213,7 +1213,7 @@ Validation must rely on statistical and dynamical benchmarks captured in-vivo pr
 3. Subjective Continuity:
 Whether an emulation possesses subjective continuity or conscious experience is an unresolved philosophical question outside the scope of physical systems engineering.
 
-In Z-WBE Bottleneck Lab, we model Functional Validation as an operational engineering constraint, while explicitly acknowledging its philosophical boundaries.
+In Z-WBE Bottleneck Lab, I model Functional Validation as an operational engineering constraint, while explicitly acknowledging its philosophical boundaries.
 
 Explore our validation framework live:
 https://z-wbe-bottleneck-lab.vercel.app
@@ -2051,7 +2051,7 @@ Star the repo: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
                 "public/colab-evidence/08_colab_rapids_and_variable_inspector.png",
                 "public/marketing/ad_07.png"
             ],
-            "text": """Thank you to @GoogleDevs, @NVIDIAAI, and the community for an incredible 21 days.
+            "text": """Thank you to @GoogleDevs, @NVIDIAAI, @asierarranz, and the community for an incredible 21 days.
 
 The campaign ends. The research continues.
 

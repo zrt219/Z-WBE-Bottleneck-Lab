@@ -74,7 +74,7 @@ Mentions & Judges: @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Ha
             ],
             "text": """Most discussions about brain emulation focus on compute. The math says compute is rarely the first wall.
 
-In Z-WBE Bottleneck Lab, we model 8 distinct physical and economic constraint dimensions simultaneously:
+In Z-WBE Bottleneck Lab, I model 8 distinct physical and economic constraint dimensions simultaneously:
 1. Acquisition (microscopy scan time and beam dwell rates)
 2. Reconstruction (segmentation and synapse extraction throughput)
 3. Storage (raw voxel ingest and multi-resolution volume persistence)
@@ -152,9 +152,9 @@ In popular science coverage, scanning a brain is frequently conflated with simul
 
 If you solve Acquisition and Reconstruction, you have produced an anatomical wiring diagram—a static connectome. You have not yet functionalized or executed it.
 
-In Z-WBE Bottleneck Lab, we model the operational cost and technical barriers across all six stages.
+In Z-WBE Bottleneck Lab, I model the operational cost and technical barriers across all six stages.
 
-Read our full pipeline architecture breakdown on GitHub:
+Read the full pipeline architecture breakdown on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 
@@ -183,7 +183,7 @@ When building an AI-powered scientific application, the most common trap is pass
 
 The LLM will happily give you an answer. It will sound authoritative. And it will be subtly wrong, mathematically inconsistent, and impossible to reproduce.
 
-In Z-WBE Bottleneck Lab, we implemented strict epistemic separation:
+In Z-WBE Bottleneck Lab, I implemented strict epistemic separation:
 - The TypeScript engine runs pure mathematical functions based on first-principles physics. If you set 4nm isotropic voxels over 1,200 cm³, the calculator deterministically outputs 18.75 Petavoxels and 1.25 ZB raw data.
 - The LLM (NVIDIA Nemotron 3 Super 120B) receives only calculated facts and context.
 - Nemotron's sole job is causal interpretation: explaining why a bottleneck dominates, identifying trade-offs, and explaining secondary constraints.
@@ -250,15 +250,15 @@ Mentions & Judges: @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Ha
                 "public/images/social_card_accelerated_ml.png",
                 "public/images/social_card_intro_inference.png"
             ],
-            "text": """What breaks first if you attempt whole-brain emulation?
+            "text": """What breaks first in whole-brain emulation?
 
-I built Z-WBE Bottleneck Lab for the @GoogleDevs x @NVIDIAAI GTC Berlin Golden Ticket Challenge.
+I built Z-WBE Bottleneck Lab for the @GoogleDevs x @NVIDIAAI GTC Golden Ticket Challenge.
 
 Change assumptions. See what fractures.
 
 Live app: https://z-wbe-bottleneck-lab.vercel.app
 
-cc @asierarranz #NVIDIAGTC"""
+cc @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC"""
         },
         {
             "id": "buffer_x_d01_p2",
@@ -279,7 +279,7 @@ cc @asierarranz #NVIDIAGTC"""
 
 At typical electron beam dwell times, a single beam takes >1,000 years.
 
-We modeled the numbers deterministically:
+I modeled the numbers deterministically:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 #NVIDIAGTC #Neuroscience"""
@@ -365,14 +365,13 @@ Test your intuition live: https://z-wbe-bottleneck-lab.vercel.app
                 "public/colab-evidence/07_github_notebook_code_provenance.png",
                 "public/marketing/ad_08.png"
             ],
-            "text": """If you optimize only the microscopy, Amdahl's Law will punish you immediately.
+            "text": """If you optimize microscopy, Amdahl's Law punishes you immediately.
 
-Complex systems are chains of dependencies. Solve one link, and the next link takes the strain.
+Complex systems are dependency chains: solve one, the next strains.
 
-Day 1 of 21 complete.
-https://github.com/zrt219/Z-WBE-Bottleneck-Lab
+Day 1 of 21 complete: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
-#NVIDIAGTC #BuildInPublic"""
+cc @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC"""
         }
     ]
 
@@ -847,9 +846,9 @@ Mentions: @Google for Developers | @NVIDIA AI
                 "public/colab-evidence/07_github_notebook_code_provenance.png",
                 "public/marketing/ad_09.png"
             ],
-            "text": """Day 3 Build Log: How we unified 4 fragmented notebooks into one canonical GPU lab.
+            "text": """Day 3 Build Log: How I unified 4 fragmented notebooks into one canonical GPU lab.
 
-Earlier in the sprint, we had separate notebooks for cuDF data analytics, cuML model training, Parquet optimization, and Monte Carlo sweeps.
+Earlier in the sprint, I had separate notebooks for cuDF data analytics, cuML model training, Parquet optimization, and Monte Carlo sweeps.
 Maintaining 4 notebooks created sync friction, broken relative paths, and confusing user journeys.
 
 We wrote an automated synchronization pipeline in `scripts/sync-colab.ps1` that:
@@ -916,14 +915,14 @@ Mentions: @Google for Developers | @NVIDIA AI
             "manual_review": "NO",
             "media": "public/recordings/colab_t4_terminal_execution.gif",
             "text": """REAL NVIDIA T4 + RAPIDS + COLAB EVIDENCE 🚀
-Submitting Z-WBE for @GoogleDevs x @NVIDIAAI GTC Challenge!
+Z-WBE for @GoogleDevs x @NVIDIAAI GTC Challenge!
 
 Built: 6-stage WBE lab + 12 equations
 Learned: cuDF 8.62x on T4; 100x imaging exposes memory wall!
 
 Colab: https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 
-cc @asierarranz #NVIDIAGTC #GoogleCloud"""
+cc @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC"""
         },
         {
             "id": "buffer_x_d03_p2",
@@ -1023,10 +1022,10 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 3. GPU Data Analytics
 4. Accelerated ML
 
-Every single course directly shaped Z-WBE code.
+Every course directly shaped Z-WBE code.
 Badges: https://g.dev/zhane
 
-#NVIDIAGTC #GoogleCloud"""
+cc @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC"""
         },
         {
             "id": "buffer_x_d03_p6",
@@ -1421,7 +1420,7 @@ Streaming that 800 TB at biological real-time frequencies is an entirely differe
 If you have 800 TB of synaptic weights, but your memory bus throughput is only 2 TB/s, updating every synapse once takes 400 seconds.
 Your simulation runs 400x slower than biological real time.
 
-In Z-WBE Bottleneck Lab, we model bandwidth and capacity as separate constraint equations.
+In Z-WBE Bottleneck Lab, I model bandwidth and capacity as separate constraint equations.
 
 Inspect the formulas in `shared/src/equations.ts`:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
@@ -1666,7 +1665,7 @@ If any single stage fails, the entire pipeline collapses.
 A perfect reconstruction of an imperfectly preserved specimen yields a high-resolution map of structural artifacts.
 A perfect anatomical connectome with zero functionalization is an unpowered circuit.
 
-In Z-WBE Bottleneck Lab, we model the interdependencies across all six stages.
+In Z-WBE Bottleneck Lab, I model the interdependencies across all six stages.
 
 Explore the complete pipeline model live:
 https://z-wbe-bottleneck-lab.vercel.app
@@ -2108,10 +2107,10 @@ Mentions & Judges: @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Ha
 100k scenarios mapped.
 Contest submitted.
 
-Try the live demonstrator: https://z-wbe-bottleneck-lab.vercel.app
+Try live: https://z-wbe-bottleneck-lab.vercel.app
 
 #NVIDIAGTC #BuildInPublic
-cc @GoogleDevs @NVIDIAAI"""
+cc @GoogleDevs @NVIDIAAI @asierarranz"""
         },
         {
             "id": "buffer_x_d07_p2",
@@ -2188,10 +2187,10 @@ https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/n
             "text": """Week 1: The Project.
 Week 2: The Engineering.
 
-Tomorrow morning, we open up the 12 deterministic TypeScript equations behind the physics:
+Tomorrow, I open up the 12 deterministic TypeScript equations behind the physics:
 https://z-wbe-bottleneck-lab.vercel.app
 
-#NVIDIAGTC"""
+cc @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC"""
         }
     ]
 

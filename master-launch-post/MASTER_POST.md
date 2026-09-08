@@ -86,13 +86,13 @@ Mentions & Judges: @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Ha
 *Attach: `02_hero_bottleneck_shift.gif` (or the 3 images)*
 
 ```text
-What breaks first if you attempt whole-brain emulation?
+What breaks first in whole-brain emulation?
 
-I built Z-WBE Bottleneck Lab for the @GoogleDevs x @NVIDIAAI GTC Berlin Golden Ticket Challenge.
+I built Z-WBE Bottleneck Lab for the @GoogleDevs x @NVIDIAAI GTC Golden Ticket Challenge.
 
-100x faster imaging doesn't solve WBE—it exposes the Memory Wall.
+100x imaging speedup exposes the Memory Wall.
 
-Try it live: https://z-wbe-bottleneck-lab.vercel.app
+Try live: https://z-wbe-bottleneck-lab.vercel.app
 
 cc @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC
 ```
@@ -106,9 +106,9 @@ cc @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC
 ```text
 What breaks first if you attempt whole-brain emulation?
 
-I built Z-WBE Bottleneck Lab for the @GoogleDevs x @NVIDIAAI GTC Berlin Golden Ticket Challenge.
+I built Z-WBE Bottleneck Lab for the @GoogleDevs x @NVIDIAAI GTC Golden Ticket Challenge.
 
-Here is the signature experiment: accelerate imaging by 100x. The bottleneck immediately jumps to memory bandwidth.
+Signature experiment: accelerate imaging by 100x and the bottleneck immediately jumps to memory bandwidth.
 
 1/3 #NVIDIAGTC
 ```
@@ -116,9 +116,7 @@ Here is the signature experiment: accelerate imaging by 100x. The bottleneck imm
 #### **Tweet 2 (The Architecture & 8.62x GPU Benchmark)**
 *Attach: `03_tesla_t4_gpu_speedup.png`*
 ```text
-Z-WBE enforces strict epistemic separation:
-- Deterministic TypeScript engine calculates physical reality (12 equations)
-- NVIDIA Nemotron 120B interprets causal trade-offs under a strict grounding contract
+Strict epistemic separation: deterministic physics + Nemotron AI interpretation.
 
 Measured 8.62× pipeline speedup on an NVIDIA Tesla T4 in Google Colab: 1.907 s CPU vs 0.221 s GPU. cudf.pandas provided zero-code-change GPU acceleration for supported pandas operations.
 

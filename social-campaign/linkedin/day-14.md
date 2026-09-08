@@ -76,7 +76,7 @@ Mentions & Judges: @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Ha
 - **Scheduled Time (MDT)**: 12:17 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: How we generated 100,000 synthetic parameter scenarios in under 2 seconds.
-- **Post Summary**: In scripts/generate_gpu_sweep.py, we implemented a vectorized Monte Carlo generator:
+- **Post Summary**: In scripts/generate_gpu_sweep.py, I implemented a vectorized Monte Carlo generator:
 - **Media**: `social_card_data_analytics.png, 05_gpu_exploration_map.png, 07_github_notebook_code_provenance.png, ad_04.png`
 - **Media Order**: 1. social_card_data_analytics.png -> 2. 05_gpu_exploration_map.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_04.png
 - **Hashtags**: #NVIDIAGTC #Python #MonteCarlo #DataEngineering #RAPIDS #cuDF #Mathematics
@@ -96,7 +96,7 @@ Mentions & Judges: @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Ha
 ```markdown
 How we generated 100,000 synthetic parameter scenarios in under 2 seconds.
 
-In `scripts/generate_gpu_sweep.py`, we implemented a vectorized Monte Carlo generator:
+In `scripts/generate_gpu_sweep.py`, I implemented a vectorized Monte Carlo generator:
 - Uses Latin Hypercube Sampling across 10 continuous parameter dimensions to ensure uniform space coverage.
 - Allocates contiguous NumPy arrays and converts them directly into cuDF GPU dataframes.
 - Evaluates our 12 scaling equations vectorized across GPU cores without a single Python `for` loop.

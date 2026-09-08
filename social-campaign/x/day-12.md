@@ -159,7 +159,7 @@ Graceful acceleration: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 ```markdown
 Never benchmark the first CUDA run.
 Context initialization skew is real.
-We ran 5 warmups before recording 10 median runs.
+I ran 5 warmups before recording 10 median runs.
 
 Engineering rigor matters: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 

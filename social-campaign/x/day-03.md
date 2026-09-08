@@ -18,11 +18,11 @@
 - **Scheduled Time (MDT)**: 10:12 MDT
 - **Primary Destination URL**: https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 - **Hook**: REAL NVIDIA T4 + RAPIDS + COLAB EVIDENCE 🚀
-- **Post Summary**: Submitting Z-WBE for @GoogleDevs x @NVIDIAAI GTC Challenge!
+- **Post Summary**: Z-WBE for @GoogleDevs x @NVIDIAAI GTC Challenge!
 - **Media**: `colab_t4_terminal_execution.gif`
 - **Media Order**: Single Asset: colab_t4_terminal_execution.gif
-- **Hashtags**: #NVIDIAGTC #GoogleCloud
-- **Mentions**: @GoogleDevs | @NVIDIAAI
+- **Hashtags**: #NVIDIAGTC
+- **Mentions**: @GoogleDevs | @NVIDIAAI | @asierarranz
 - **Claims Verified**: YES - Flagship contest submission post
 - **Manual Review Required**: NO
 
@@ -34,14 +34,14 @@
 
 ```markdown
 REAL NVIDIA T4 + RAPIDS + COLAB EVIDENCE 🚀
-Submitting Z-WBE for @GoogleDevs x @NVIDIAAI GTC Challenge!
+Z-WBE for @GoogleDevs x @NVIDIAAI GTC Challenge!
 
 Built: 6-stage WBE lab + 12 equations
 Learned: cuDF 8.62x on T4; 100x imaging exposes memory wall!
 
 Colab: https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 
-cc @asierarranz #NVIDIAGTC #GoogleCloud
+cc @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC
 ```
 
 ---
@@ -184,8 +184,8 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Post Summary**: 2. Intro to Inference
 - **Media**: `social_card_nim_gke.png, 06_architecture_evidence_view.png, 07_github_notebook_code_provenance.png, ad_04.png`
 - **Media Order**: 1. social_card_nim_gke.png -> 2. 06_architecture_evidence_view.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_04.png
-- **Hashtags**: #NVIDIAGTC #GoogleCloud
-- **Mentions**: None
+- **Hashtags**: #NVIDIAGTC
+- **Mentions**: @GoogleDevs | @NVIDIAAI | @asierarranz
 - **Claims Verified**: YES - 4 badges verified on vanity profile
 - **Manual Review Required**: NO
 
@@ -205,10 +205,10 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 3. GPU Data Analytics
 4. Accelerated ML
 
-Every single course directly shaped Z-WBE code.
+Every course directly shaped Z-WBE code.
 Badges: https://g.dev/zhane
 
-#NVIDIAGTC #GoogleCloud
+cc @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC
 ```
 
 ---

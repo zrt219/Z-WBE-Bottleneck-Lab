@@ -17,12 +17,12 @@
 - **Content Pillar**: Pillar C: GPU / NVIDIA
 - **Scheduled Time (MDT)**: 10:18 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
-- **Hook**: We mapped 100,000 WBE futures in GPU memory via NVIDIA cuDF:
+- **Hook**: I mapped 100,000 WBE futures in GPU memory via NVIDIA cuDF:
 - **Post Summary**: 48.2% Acquisition-bound
 - **Media**: `social_card_data_analytics.png, 02_imaging_wall_baseline.png, 08_colab_rapids_and_variable_inspector.png, banner-light.png`
 - **Media Order**: 1. social_card_data_analytics.png -> 2. 02_imaging_wall_baseline.png -> 3. 08_colab_rapids_and_variable_inspector.png -> 4. banner-light.png
-- **Hashtags**: #NVIDIAGTC #RAPIDS
-- **Mentions**: None
+- **Hashtags**: #NVIDIAGTC
+- **Mentions**: @GoogleDevs | @NVIDIAAI | @asierarranz
 - **Claims Verified**: YES - 100k sweep statistics verified
 - **Manual Review Required**: NO
 
@@ -36,16 +36,16 @@
 ### Post Copy
 
 ```markdown
-We mapped 100,000 WBE futures in GPU memory via NVIDIA cuDF:
+I mapped 100,000 WBE futures in GPU memory via NVIDIA cuDF:
 48.2% Acquisition-bound
 28.7% Memory-bound
 14.1% Compute-bound
 9.0% Interconnect/Power-bound
 
-Memory dominates 2x more than raw compute!
+Memory dominates 2x more than compute!
 Map: https://z-wbe-bottleneck-lab.vercel.app
 
-#NVIDIAGTC #RAPIDS
+cc @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC
 ```
 
 ---
@@ -173,11 +173,11 @@ https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/n
 - **Scheduled Time (MDT)**: 20:32 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
 - **Hook**: Week 2 is a wrap!
-- **Post Summary**: Week 3 starts tomorrow: Preservation limits, biophysical functionalization, and consciousness validation.
+- **Post Summary**: Week 3 starts tomorrow: Preservation limits, biophysical functionalization, and validation.
 - **Media**: `social_card_nim_gke.png, 05_gpu_exploration_map.png, eda_histograms.png, ad_09.png`
 - **Media Order**: 1. social_card_nim_gke.png -> 2. 05_gpu_exploration_map.png -> 3. eda_histograms.png -> 4. ad_09.png
-- **Hashtags**: #NVIDIAGTC #BuildInPublic
-- **Mentions**: None
+- **Hashtags**: #NVIDIAGTC
+- **Mentions**: @GoogleDevs | @NVIDIAAI | @asierarranz
 - **Claims Verified**: YES - Week 2 close / Week 3 teaser
 - **Manual Review Required**: NO
 
@@ -192,11 +192,11 @@ https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/n
 
 ```markdown
 Week 2 is a wrap!
-Week 3 starts tomorrow: Preservation limits, biophysical functionalization, and consciousness validation.
+Week 3 starts tomorrow: Preservation limits, biophysical functionalization, and validation.
 
 Explore the lab: https://z-wbe-bottleneck-lab.vercel.app
 
-#NVIDIAGTC #BuildInPublic
+cc @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC
 ```
 
 ---

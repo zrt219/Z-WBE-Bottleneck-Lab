@@ -39,7 +39,7 @@
 The Strict Grounding Contract: How we bind NVIDIA Nemotron 3 Super 120B to physical truth.
 
 One of the most persistent challenges in LLM engineering is preventing models from hallucinating domain facts.
-In Z-WBE Bottleneck Lab, we implemented a Strict Grounding Contract that governs how NVIDIA Nemotron 3 Super 120B (`nvidia/nemotron-3-super-120b-a12b:free`) interacts with our physical simulation engine.
+In Z-WBE Bottleneck Lab, I implemented a Strict Grounding Contract that governs how NVIDIA Nemotron 3 Super 120B (`nvidia/nemotron-3-super-120b-a12b:free`) interacts with the physical simulation engine.
 
 The Grounding Contract Rules:
 1. Grounded Context Injection: The system prompt provides Nemotron with the exact scenario state calculated by TypeScript: dominant bottleneck, secondary constraint, scan time, required bandwidth, and total power.
@@ -105,7 +105,7 @@ STRICT OPERATIONAL BOUNDARIES:
 4. Maintain scientific rigor: do not claim brain emulation is solved or imminent.
 ```
 
-We tested this prompt across 50 adversarial slider combinations in `shared/tests/grounding.test.ts`. 
+I tested this prompt across 50 adversarial slider combinations in `shared/tests/grounding.test.ts`. 
 In 100% of test cases, Nemotron adhered to the numerical boundary and explained causal relationships without inventing false metrics.
 
 Inspect the complete prompt implementation on GitHub:

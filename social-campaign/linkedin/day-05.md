@@ -108,7 +108,7 @@ Streaming that 800 TB at biological real-time frequencies is an entirely differe
 If you have 800 TB of synaptic weights, but your memory bus throughput is only 2 TB/s, updating every synapse once takes 400 seconds.
 Your simulation runs 400x slower than biological real time.
 
-In Z-WBE Bottleneck Lab, we model bandwidth and capacity as separate constraint equations.
+In Z-WBE Bottleneck Lab, I model bandwidth and capacity as separate constraint equations.
 
 Inspect the formulas in `shared/src/equations.ts`:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab

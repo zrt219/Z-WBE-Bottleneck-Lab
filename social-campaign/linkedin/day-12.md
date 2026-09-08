@@ -253,7 +253,7 @@ When benchmarking GPU kernels in Python, the first run often suffers from CUDA c
 If you measure the first run, your benchmark is measuring initialization, not throughput.
 
 In `scripts/benchmark_cpu_vs_gpu.py`:
-- We ran 5 unmeasured warmup iterations through the pipeline to ensure GPU context and memory pools were fully allocated.
+- I ran 5 unmeasured warmup iterations through the pipeline to ensure GPU context and memory pools were fully allocated.
 - We then executed 10 measured runs for both CPU and GPU paths.
 - We recorded the median runtime to eliminate OS scheduling jitter.
 

@@ -237,8 +237,8 @@ Mentions: @Google for Developers | @NVIDIA AI
 - **Content Pillar**: Pillar D: Google Cloud / Colab
 - **Scheduled Time (MDT)**: 18:42 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
-- **Hook**: Day 3 Build Log: How we unified 4 fragmented notebooks into one canonical GPU lab.
-- **Post Summary**: Earlier in the sprint, we had separate notebooks for cuDF data analytics, cuML model training, Parquet optimization, and Monte ...
+- **Hook**: Day 3 Build Log: How I unified 4 fragmented notebooks into one canonical GPU lab.
+- **Post Summary**: Earlier in the sprint, I had separate notebooks for cuDF data analytics, cuML model training, Parquet optimization, and Monte C...
 - **Media**: `social_card_data_analytics.png, 05_gpu_exploration_map.png, 07_github_notebook_code_provenance.png, ad_09.png`
 - **Media Order**: 1. social_card_data_analytics.png -> 2. 05_gpu_exploration_map.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_09.png
 - **Hashtags**: #NVIDIAGTC #DevOps #GoogleColab #GitHub #Automation #Maturity
@@ -256,9 +256,9 @@ Mentions: @Google for Developers | @NVIDIA AI
 ### Post Copy
 
 ```markdown
-Day 3 Build Log: How we unified 4 fragmented notebooks into one canonical GPU lab.
+Day 3 Build Log: How I unified 4 fragmented notebooks into one canonical GPU lab.
 
-Earlier in the sprint, we had separate notebooks for cuDF data analytics, cuML model training, Parquet optimization, and Monte Carlo sweeps.
+Earlier in the sprint, I had separate notebooks for cuDF data analytics, cuML model training, Parquet optimization, and Monte Carlo sweeps.
 Maintaining 4 notebooks created sync friction, broken relative paths, and confusing user journeys.
 
 We wrote an automated synchronization pipeline in `scripts/sync-colab.ps1` that:
