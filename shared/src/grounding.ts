@@ -139,27 +139,46 @@ export function getFriendlyBottleneck(key: string): { label: string; analogy: st
  */
 export function sanitizeUserProse(text: string): string {
   if (!text) return '';
-  return text
-    // Strip bracketed enums that follow a label or word (e.g. "Acquisition Throughput [ACQUISITION]")
-    .replace(/(\b[A-Za-z0-9&/_-]+\b)\s*\[([A-Z_]{3,30})\]/g, (_match, prevWord, enumName) => {
-      const lowerPrev = prevWord.toLowerCase();
-      const prepositions = ['in', 'by', 'on', 'is', 'of', 'the', 'a', 'at', 'into', 'for', 'to'];
-      if (prepositions.includes(lowerPrev)) {
-        const friendly = getFriendlyBottleneck(enumName);
-        return `${prevWord} ${friendly ? friendly.label : enumName}`;
-      }
-      return prevWord;
-    })
-    // Replace any remaining standalone bracketed enums like "[ACQUISITION]"
-    .replace(/\[([A-Z_]{3,30})\]/g, (_match, enumName) => {
-      const friendly = getFriendlyBottleneck(enumName);
-      return friendly ? friendly.label : enumName;
-    })
-    // Clean up excessive whitespace
-    .replace(/[ \t]{2,}/g, ' ')
-    // Clean up empty parentheses
-    .replace(/\s*\(\s*\)/g, '')
-    .trim();
+  const prepositions = new Set([
+    'in', 'by', 'on', 'is', 'of', 'the', 'a', 'an', 'at', 'into', 'for', 'to', 'with', 'from',
+    'was', 'are', 'were', 'becomes', 'became', 'remains'
+  ]);
+
+  // First replace pattern: [ENUM] with check of what comes before it
+  let result = text.replace(/(.*?)\s*\[([A-Z_]{3,30})\]/g, (_match, prefix, enumName) => {
+    const trimmedPrefix = prefix.trim();
+    const lastWordMatch = trimmedPrefix.match(/([a-zA-Z]+)[^a-zA-Z]*$/);
+    const lastWord = lastWordMatch ? lastWordMatch[1].toLowerCase() : '';
+    const friendly = getFriendlyBottleneck(enumName);
+    const friendlyLabel = friendly ? friendly.label : enumName;
+
+    // If prefix is empty or ends with bullet, colon, dash, or a preposition/linking verb
+    if (
+      !trimmedPrefix ||
+      trimmedPrefix.endsWith(':') ||
+      trimmedPrefix.endsWith('-') ||
+      trimmedPrefix.endsWith('•') ||
+      prepositions.has(lastWord)
+    ) {
+      return `${prefix ? prefix + ' ' : ''}${friendlyLabel}`;
+    }
+
+    // Otherwise the preceding token is already the label name (e.g. "Microscope Scanning Time" or "(Data Highway)")
+    // So strip the bracketed enum entirely!
+    return prefix;
+  });
+
+  // Also replace any leftover [ENUM] that didn't match
+  result = result.replace(/\[([A-Z_]{3,30})\]/g, (_match, enumName) => {
+    const friendly = getFriendlyBottleneck(enumName);
+    return friendly ? friendly.label : enumName;
+  });
+
+  // Clean duplicate phrases if any exist (e.g. repeated titles with parentheses)
+  result = result.replace(/(\b[A-Za-z0-9&/_-]+(?:\s+[A-Za-z0-9&/_-]+)*(?:\s*\([^)]*\))?)\s+\1(?=[^\w]|$)/g, '$1');
+  result = result.replace(/[ \t]{2,}/g, ' ');
+  result = result.replace(/\s*\(\s*\)/g, '');
+  return result.trim();
 }
 
 /**

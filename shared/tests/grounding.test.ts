@@ -189,5 +189,14 @@ Imaging Rate Per Instrument
 
     // Standalone enum replacement
     expect(sanitizeUserProse('Gated primarily by [STORAGE].')).toBe('Gated primarily by Data Storage & Disk Capacity.');
+
+    // Complex label with parenthetical descriptor followed by bracketed enum
+    const complexProse =
+      'In Mouse Circuit Scale (10 mm³ cortical column) (mouse-circuit) (Mouse Circuit (10 mm³)), the primary technical blocker is Microscope Scanning Time [ACQUISITION] (pressure: 138.9%), followed by Memory Bandwidth (Data Highway) [MEMORY_BANDWIDTH] (84.5%). Addressing Imaging Rate Per Instrument gives the greatest speedup.';
+    const cleanedComplex = cleanScenarioProse(sanitizeUserProse(complexProse));
+    expect(cleanedComplex).toBe(
+      'In Mouse Circuit Scale (10 mm³ cortical column), the primary technical blocker is Microscope Scanning Time (pressure: 138.9%), followed by Memory Bandwidth (Data Highway) (84.5%). Addressing Imaging Rate Per Instrument gives the greatest speedup.'
+    );
+    expect(cleanedComplex).not.toContain('Memory Bandwidth (Data Highway) Memory Bandwidth (Data Highway)');
   });
 });
