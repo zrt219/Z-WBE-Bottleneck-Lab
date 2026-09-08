@@ -22,7 +22,7 @@
 - **Media**: `social_card_nim_gke.png, 02_imaging_wall_baseline.png, cpu_vs_gpu_speedup.png, banner-light.png`
 - **Media Order**: 1. social_card_nim_gke.png -> 2. 02_imaging_wall_baseline.png -> 3. cpu_vs_gpu_speedup.png -> 4. banner-light.png
 - **Hashtags**: #NVIDIAGTC #GoogleCloud #NVIDIA #Nemotron #RAPIDS #cuDF #cuML #TeslaT4 #GoogleColab #CloudRun #DevChallenge #GoldenTicket #OpenSource #HighPerformanceComputing
-- **Mentions**: Google for Developers | NVIDIA AI | Jen Harvey | Ray Harvey
+- **Mentions**: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 - **Claims Verified**: YES - T4 GPU benchmark verified in cpu_vs_gpu_benchmark.json
 - **Manual Review Required**: NO
 
@@ -72,7 +72,7 @@ Live Demonstrator: https://z-wbe-bottleneck-lab.vercel.app
 GitHub: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 Profile: https://g.dev/zhane
 
-Judges & Mentions: Google for Developers | NVIDIA AI | Jen Harvey | Ray Harvey
+Judges & Mentions: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #GoogleCloud #NVIDIA #Nemotron #RAPIDS #cuDF #cuML #TeslaT4 #GoogleColab #CloudRun #DevChallenge #GoldenTicket #OpenSource #HighPerformanceComputing
 ```
 
@@ -92,7 +92,7 @@ Judges & Mentions: Google for Developers | NVIDIA AI | Jen Harvey | Ray Harvey
 - **Media**: `social_card_data_analytics.png, 01_hero_overview.png, cpu_vs_gpu_speedup.png, banner-dark.png`
 - **Media Order**: 1. social_card_data_analytics.png -> 2. 01_hero_overview.png -> 3. cpu_vs_gpu_speedup.png -> 4. banner-dark.png
 - **Hashtags**: #NVIDIAGTC #RAPIDS #cuDF #DataScience #Python #GPUComputing #MachineLearning
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 - **Claims Verified**: YES - cudf.pandas zero-code mechanics documented
 - **Manual Review Required**: NO
 
@@ -125,6 +125,8 @@ Data ingestion accelerated by 4.25x. Data cleaning accelerated by 6.8x. End-to-e
 Run the benchmark cell yourself in Google Colab:
 https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 
+
+Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #RAPIDS #cuDF #DataScience #Python #GPUComputing #MachineLearning
 ```
 
@@ -144,7 +146,7 @@ https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/n
 - **Media**: `colab_t4_terminal_execution.gif`
 - **Media Order**: Single Asset: colab_t4_terminal_execution.gif
 - **Hashtags**: #NVIDIAGTC #GoogleColab #NVIDIA #Jupyter #DataScience #BuildInPublic #OpenScience
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 - **Claims Verified**: YES - GIF shows actual Colab run
 - **Manual Review Required**: NO
 
@@ -167,6 +169,8 @@ Every single cell is designed to be 100% reproducible with a single click.
 Launch the notebook now:
 https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 
+
+Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #GoogleColab #NVIDIA #Jupyter #DataScience #BuildInPublic #OpenScience
 ```
 
@@ -186,7 +190,7 @@ https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/n
 - **Media**: `golden_ticket_nim_gke.png, 06_architecture_evidence_view.png, cpu_vs_gpu_speedup.png, ad_10.png`
 - **Media Order**: 1. golden_ticket_nim_gke.png -> 2. 06_architecture_evidence_view.png -> 3. cpu_vs_gpu_speedup.png -> 4. ad_10.png
 - **Hashtags**: #NVIDIAGTC #ScientificIntegrity #Benchmark #Reproducibility #Hardware #EngineeringEthics
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 - **Claims Verified**: YES - BENCHMARK_PROVENANCE.md documents T4 vs L4 audit
 - **Manual Review Required**: NO
 
@@ -217,6 +221,8 @@ An 8.62x speedup on a standard Tesla T4 is real, verifiable, and achievable by a
 Read our full provenance ledger on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
+
+Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #ScientificIntegrity #Benchmark #Reproducibility #Hardware #EngineeringEthics
 ```
 
@@ -236,7 +242,7 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Media**: `social_card_data_analytics.png, 05_gpu_exploration_map.png, 07_github_notebook_code_provenance.png, ad_09.png`
 - **Media Order**: 1. social_card_data_analytics.png -> 2. 05_gpu_exploration_map.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_09.png
 - **Hashtags**: #NVIDIAGTC #DevOps #GoogleColab #GitHub #Automation #Maturity
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 - **Claims Verified**: YES - sync-colab.ps1 script in scripts/
 - **Manual Review Required**: NO
 
@@ -266,6 +272,8 @@ One source of truth. Zero manual copy-pasting.
 Check out our notebook synchronization setup:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
+
+Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #DevOps #GoogleColab #GitHub #Automation #Maturity
 ```
 
@@ -285,7 +293,7 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Media**: `social_card_accelerated_ml.png, 04_nemotron_grounded_interpretation.png, cpu_vs_gpu_speedup.png, ad_08.png`
 - **Media Order**: 1. social_card_accelerated_ml.png -> 2. 04_nemotron_grounded_interpretation.png -> 3. cpu_vs_gpu_speedup.png -> 4. ad_08.png
 - **Hashtags**: #NVIDIAGTC #GoogleCloud #NVIDIA #GTC2026 #DevChallenge #BuildInPublic
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 - **Claims Verified**: YES - Official contest submission complete
 - **Manual Review Required**: NO
 
@@ -315,6 +323,8 @@ The 21-day campaign has only just begun. Over the next 18 days, we will dissect 
 
 Explore the project: https://z-wbe-bottleneck-lab.vercel.app
 
+
+Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #GoogleCloud #NVIDIA #GTC2026 #DevChallenge #BuildInPublic
 ```
 

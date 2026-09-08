@@ -22,7 +22,7 @@
 - **Media**: `social_card_intro_inference.png, 02_imaging_wall_baseline.png, 07_github_notebook_code_provenance.png, ad_09.png`
 - **Media Order**: 1. social_card_intro_inference.png -> 2. 02_imaging_wall_baseline.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_09.png
 - **Hashtags**: #NVIDIAGTC #TypeScript #Mathematics #OpenSource #SystemsEngineering #SoftwareEngineering
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 - **Claims Verified**: YES - 12 equations in shared/src/equations.ts
 - **Manual Review Required**: NO
 
@@ -61,6 +61,8 @@ All 12 functions are tested with 19 dedicated unit tests in `shared/tests/equati
 Inspect the pure TypeScript implementation on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
+
+Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #TypeScript #Mathematics #OpenSource #SystemsEngineering #SoftwareEngineering
 ```
 

@@ -22,7 +22,7 @@
 - **Media**: `social_card_intro_inference.png, 06_architecture_evidence_view.png, cpu_vs_gpu_speedup.png, ad_10.png`
 - **Media Order**: 1. social_card_intro_inference.png -> 2. 06_architecture_evidence_view.png -> 3. cpu_vs_gpu_speedup.png -> 4. ad_10.png
 - **Hashtags**: #NVIDIAGTC #BuildInPublic
-- **Mentions**: None
+- **Mentions**: @GoogleDevs | @NVIDIAAI
 - **Claims Verified**: YES - Campaign retrospective
 - **Manual Review Required**: NO
 
@@ -46,6 +46,7 @@ Zero hallucinated numbers.
 The sprint is complete: https://z-wbe-bottleneck-lab.vercel.app
 
 #NVIDIAGTC #BuildInPublic
+cc @GoogleDevs @NVIDIAAI
 ```
 
 ---

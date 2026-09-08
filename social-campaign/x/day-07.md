@@ -22,7 +22,7 @@
 - **Media**: `guided_tour_walkthrough.mp4`
 - **Media Order**: Single Asset: guided_tour_walkthrough.mp4
 - **Hashtags**: #NVIDIAGTC #BuildInPublic
-- **Mentions**: None
+- **Mentions**: @GoogleDevs | @NVIDIAAI
 - **Claims Verified**: YES - Week 1 summary
 - **Manual Review Required**: NO
 
@@ -42,6 +42,7 @@ Contest submitted.
 Try the live demonstrator: https://z-wbe-bottleneck-lab.vercel.app
 
 #NVIDIAGTC #BuildInPublic
+cc @GoogleDevs @NVIDIAAI
 ```
 
 ---

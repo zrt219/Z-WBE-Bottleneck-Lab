@@ -22,7 +22,7 @@
 - **Media**: `social_card_intro_inference.png, 06_architecture_evidence_view.png, 05_colab_nvidia_smi_ensemble_eval.png, ad_04.png`
 - **Media Order**: 1. social_card_intro_inference.png -> 2. 06_architecture_evidence_view.png -> 3. 05_colab_nvidia_smi_ensemble_eval.png -> 4. ad_04.png
 - **Hashtags**: #NVIDIAGTC #Economics #CapitalExpenditure #DataCenter #FinancialModeling #HighPerformanceComputing #SystemsEngineering
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 - **Claims Verified**: YES - Capex and Opex equations verified
 - **Manual Review Required**: NO
 
@@ -58,6 +58,8 @@ It is an Apollo-scale or CERN-scale scientific capital project.
 Explore the economic sliders live:
 https://z-wbe-bottleneck-lab.vercel.app
 
+
+Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #Economics #CapitalExpenditure #DataCenter #FinancialModeling #HighPerformanceComputing #SystemsEngineering
 ```
 

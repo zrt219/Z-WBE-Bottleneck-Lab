@@ -22,7 +22,7 @@
 - **Media**: `social_card_data_analytics.png, 03_bottleneck_moved_transition.png, cpu_vs_gpu_speedup.png, ad_06.png`
 - **Media Order**: 1. social_card_data_analytics.png -> 2. 03_bottleneck_moved_transition.png -> 3. cpu_vs_gpu_speedup.png -> 4. ad_06.png
 - **Hashtags**: #NVIDIAGTC #GoogleCloud #GoogleColab #NVIDIA #RAPIDS #DataScience #MachineLearning #OpenScience
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 - **Claims Verified**: YES - 10-stage unified notebook verified
 - **Manual Review Required**: NO
 
@@ -60,6 +60,8 @@ Every cell runs in Google Colab Enterprise on an NVIDIA Tesla T4 runtime with on
 Launch the notebook now:
 https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 
+
+Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #GoogleCloud #GoogleColab #NVIDIA #RAPIDS #DataScience #MachineLearning #OpenScience
 ```
 

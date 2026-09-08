@@ -22,7 +22,7 @@
 - **Media**: `social_card_intro_inference.png, 04_nemotron_grounded_interpretation.png, 07_github_notebook_code_provenance.png, banner-light.png`
 - **Media Order**: 1. social_card_intro_inference.png -> 2. 04_nemotron_grounded_interpretation.png -> 3. 07_github_notebook_code_provenance.png -> 4. banner-light.png
 - **Hashtags**: #NVIDIAGTC #NVIDIA #Nemotron #OpenRouter #AIEngineering #PromptEngineering #SystemArchitecture #TrustworthyAI
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 - **Claims Verified**: YES - Nemotron 3 Super model slug and grounding verified
 - **Manual Review Required**: NO
 
@@ -53,6 +53,8 @@ Nemotron's Mamba-Transformer hybrid architecture provides exceptional long-conte
 Experience grounded AI in action:
 https://z-wbe-bottleneck-lab.vercel.app
 
+
+Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #NVIDIA #Nemotron #OpenRouter #AIEngineering #PromptEngineering #SystemArchitecture #TrustworthyAI
 ```
 

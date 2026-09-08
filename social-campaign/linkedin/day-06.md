@@ -22,7 +22,7 @@
 - **Media**: `social_card_intro_inference.png, 02_imaging_wall_baseline.png, cpu_vs_gpu_speedup.png, banner-light.png`
 - **Media Order**: 1. social_card_intro_inference.png -> 2. 02_imaging_wall_baseline.png -> 3. cpu_vs_gpu_speedup.png -> 4. banner-light.png
 - **Hashtags**: #NVIDIAGTC #WholeBrainEmulation #ComputationalNeuroscience #SystemsEngineering #Biophysics #Research #OpenSource
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 - **Claims Verified**: YES - 6 pipeline stages modeled in Z-WBE
 - **Manual Review Required**: NO
 
@@ -56,6 +56,8 @@ In Z-WBE Bottleneck Lab, we model the interdependencies across all six stages.
 Explore the complete pipeline model live:
 https://z-wbe-bottleneck-lab.vercel.app
 
+
+Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #WholeBrainEmulation #ComputationalNeuroscience #SystemsEngineering #Biophysics #Research #OpenSource
 ```
 

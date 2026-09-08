@@ -22,7 +22,7 @@
 - **Media**: `social_card_nim_gke.png, 06_architecture_evidence_view.png, eda_histograms.png, ad_09.png`
 - **Media Order**: 1. social_card_nim_gke.png -> 2. 06_architecture_evidence_view.png -> 3. eda_histograms.png -> 4. ad_09.png
 - **Hashtags**: #NVIDIAGTC #ComputationalNeuroscience #Connectomics #Biophysics #SystemsModeling #AI #ComputerArchitecture
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 - **Claims Verified**: YES - Connectome != simulation thesis verified
 - **Manual Review Required**: NO
 
@@ -59,6 +59,8 @@ In Z-WBE Bottleneck Lab, our model demonstrates that even if Reconstruction were
 Explore our dual-stage modeling live:
 https://z-wbe-bottleneck-lab.vercel.app
 
+
+Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #ComputationalNeuroscience #Connectomics #Biophysics #SystemsModeling #AI #ComputerArchitecture
 ```
 

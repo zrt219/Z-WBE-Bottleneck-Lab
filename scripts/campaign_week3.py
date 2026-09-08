@@ -47,6 +47,8 @@ Lowering z-resolution accelerates acquisition, but directly increases the recons
 Explore the trade-offs of voxel resolution live:
 https://z-wbe-bottleneck-lab.vercel.app
 
+
+Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #Microscopy #Biophysics #Cryopreservation #Connectomics #Neuroscience #SystemsModeling"""
         },
         {
@@ -198,7 +200,8 @@ Dwell <20ns per pixel, and Poisson noise destroys the image.
 Physics dictates the Imaging Wall:
 https://z-wbe-bottleneck-lab.vercel.app
 
-#NVIDIAGTC #Physics"""
+#NVIDIAGTC #Physics
+cc @GoogleDevs @NVIDIAAI"""
         },
         {
             "id": "buffer_x_d15_p2",
@@ -333,6 +336,8 @@ In Z-WBE Bottleneck Lab, our model demonstrates that even if Reconstruction were
 Explore our dual-stage modeling live:
 https://z-wbe-bottleneck-lab.vercel.app
 
+
+Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #ComputationalNeuroscience #Connectomics #Biophysics #SystemsModeling #AI #ComputerArchitecture"""
         },
         {
@@ -476,7 +481,8 @@ A connectome doesn't give you ion channel densities.
 That's the Functionalization problem.
 Explore: https://z-wbe-bottleneck-lab.vercel.app
 
-#NVIDIAGTC #Neuroscience"""
+#NVIDIAGTC #Neuroscience
+cc @GoogleDevs @NVIDIAAI"""
         },
         {
             "id": "buffer_x_d16_p2",
@@ -612,6 +618,8 @@ In Z-WBE Bottleneck Lab, Equation 7 models Interconnect Bandwidth as an independ
 Explore the hardware triad live:
 https://z-wbe-bottleneck-lab.vercel.app
 
+
+Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #Supercomputing #ComputerArchitecture #Interconnect #NVLink #InfiniBand #HighPerformanceComputing #Hardware"""
         },
         {
@@ -756,7 +764,8 @@ Compute + Memory + Interconnect.
 
 Explore: https://z-wbe-bottleneck-lab.vercel.app
 
-#NVIDIAGTC #Supercomputing"""
+#NVIDIAGTC #Supercomputing
+cc @GoogleDevs @NVIDIAAI"""
         },
         {
             "id": "buffer_x_d17_p2",
@@ -887,6 +896,8 @@ It is an Apollo-scale or CERN-scale scientific capital project.
 Explore the economic sliders live:
 https://z-wbe-bottleneck-lab.vercel.app
 
+
+Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #Economics #CapitalExpenditure #DataCenter #FinancialModeling #HighPerformanceComputing #SystemsEngineering"""
         },
         {
@@ -1175,6 +1186,8 @@ In Z-WBE Bottleneck Lab, we model Functional Validation as an operational engine
 Explore our validation framework live:
 https://z-wbe-bottleneck-lab.vercel.app
 
+
+Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #Neuroscience #Validation #PhilosophyOfMind #ScientificIntegrity #SystemsModeling #Research"""
         },
         {
@@ -1318,7 +1331,8 @@ You sliced the original brain to image it. The original no longer exists.
 Validation must rely on pre-recorded dynamical benchmarks:
 https://z-wbe-bottleneck-lab.vercel.app
 
-#NVIDIAGTC #Neuroscience"""
+#NVIDIAGTC #Neuroscience
+cc @GoogleDevs @NVIDIAAI"""
         },
         {
             "id": "buffer_x_d19_p2",
@@ -1455,6 +1469,8 @@ Want to fork the project and build a mouse brain emulation demonstrator? Go for 
 Clone or star the repository on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
+
+Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #OpenSource #GitHub #ReproducibleResearch #OpenScience #TypeScript #Python #DevCommunity"""
         },
         {
@@ -1603,7 +1619,8 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 Inspect the code: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
-#NVIDIAGTC #OpenSource"""
+#NVIDIAGTC #OpenSource
+cc @GoogleDevs @NVIDIAAI"""
         },
         {
             "id": "buffer_x_d20_p2",
@@ -1732,7 +1749,7 @@ What's Next for Z-WBE Lab?
 2. Integrating multi-GPU Dask-cuDF clusters to model distributed supercomputing topologies.
 3. Engaging computational neuroscience labs to refine biophysical functionalization parameters.
 
-Thank you to Google for Developers, NVIDIA AI, Jen Harvey, Ray Harvey, and the global developer community for following this build-in-public journey.
+Thank you to @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey, and the global developer community for following this build-in-public journey.
 
 Experience the live lab, interactive Colab, and open-source code:
 Live Demonstrator: https://z-wbe-bottleneck-lab.vercel.app
@@ -1740,7 +1757,7 @@ Live Demonstrator: https://z-wbe-bottleneck-lab.vercel.app
 GitHub Repository: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 Google Developer Profile: https://g.dev/zhane
 
-Mentions & Judges: Google for Developers | NVIDIA AI | Jen Harvey | Ray Harvey
+Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #GoogleCloud #NVIDIA #Nemotron #RAPIDS #cuDF #cuML #TeslaT4 #GoogleColab #CloudRun #BuildInPublic #OpenSource #ComputationalNeuroscience #SystemsEngineering #GTC2026"""
         },
         {
@@ -1777,6 +1794,8 @@ The journey to understand biological computing is a marathon, not a sprint.
 Explore the future roadmap on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
+
+Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #Roadmap #ComputationalNeuroscience #NeuromorphicComputing #Research #OpenScience"""
         },
         {
@@ -1796,6 +1815,8 @@ From 8 physical scaling dimensions to the hero 100x imaging transition, explore 
 Try it yourself:
 https://z-wbe-bottleneck-lab.vercel.app
 
+
+Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #WebDev #DataViz #InteractiveScience #Engineering"""
         },
         {
@@ -1832,6 +1853,8 @@ Education creates knowledge. Building in public creates proof.
 View all 4 verified credentials on my Google Developer profile:
 https://g.dev/zhane
 
+
+Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #GoogleCloud #GoogleDevelopers #NVIDIA #SkillBadges #ContinuousLearning #FullStackAI"""
         },
         {
@@ -1866,6 +1889,8 @@ Star the repository: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 Launch the live lab: https://z-wbe-bottleneck-lab.vercel.app
 Run the Colab: https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 
+
+Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #BuildInPublic #OpenSource #Engineering #Science #Finale"""
         }
     ]
@@ -1895,7 +1920,8 @@ Zero hallucinated numbers.
 
 The sprint is complete: https://z-wbe-bottleneck-lab.vercel.app
 
-#NVIDIAGTC #BuildInPublic"""
+#NVIDIAGTC #BuildInPublic
+cc @GoogleDevs @NVIDIAAI"""
         },
         {
             "id": "buffer_x_d21_p2",

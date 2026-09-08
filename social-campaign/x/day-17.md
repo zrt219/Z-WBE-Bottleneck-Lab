@@ -22,7 +22,7 @@
 - **Media**: `golden_ticket_accelerated_ml.png, 06_architecture_evidence_view.png, t4-colab-runtime-proof.png, ad_08.png`
 - **Media Order**: 1. golden_ticket_accelerated_ml.png -> 2. 06_architecture_evidence_view.png -> 3. t4-colab-runtime-proof.png -> 4. ad_08.png
 - **Hashtags**: #NVIDIAGTC #Supercomputing
-- **Mentions**: None
+- **Mentions**: @GoogleDevs | @NVIDIAAI
 - **Claims Verified**: YES - Hardware triad thesis
 - **Manual Review Required**: NO
 
@@ -44,6 +44,7 @@ Compute + Memory + Interconnect.
 Explore: https://z-wbe-bottleneck-lab.vercel.app
 
 #NVIDIAGTC #Supercomputing
+cc @GoogleDevs @NVIDIAAI
 ```
 
 ---

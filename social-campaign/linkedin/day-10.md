@@ -22,7 +22,7 @@
 - **Media**: `social_card_intro_inference.png, 04_nemotron_grounded_interpretation.png, 07_github_notebook_code_provenance.png, ad_03.png`
 - **Media Order**: 1. social_card_intro_inference.png -> 2. 04_nemotron_grounded_interpretation.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_03.png
 - **Hashtags**: #NVIDIAGTC #SoftwareArchitecture #AIEngineering #SystemDesign #TypeScript #Nemotron #CleanArchitecture
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 - **Claims Verified**: YES - Epistemic separation architecture verified
 - **Manual Review Required**: NO
 
@@ -63,6 +63,8 @@ Use determinism for math. Use generative models for synthesis, explanation, and 
 Experience the power of epistemic separation:
 https://z-wbe-bottleneck-lab.vercel.app
 
+
+Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #SoftwareArchitecture #AIEngineering #SystemDesign #TypeScript #Nemotron #CleanArchitecture
 ```
 

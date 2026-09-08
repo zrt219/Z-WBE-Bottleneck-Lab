@@ -22,7 +22,7 @@
 - **Media**: `social_card_nim_gke.png, 06_architecture_evidence_view.png, 08_colab_rapids_and_variable_inspector.png, ad_07.png`
 - **Media Order**: 1. social_card_nim_gke.png -> 2. 06_architecture_evidence_view.png -> 3. 08_colab_rapids_and_variable_inspector.png -> 4. ad_07.png
 - **Hashtags**: #NVIDIAGTC #MemoryWall #ComputerArchitecture #HBM #GPUComputing #HighPerformanceComputing #HardwareEngineering
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 - **Claims Verified**: YES - Memory wall bandwidth calculations verified
 - **Manual Review Required**: NO
 
@@ -59,6 +59,8 @@ In Z-WBE Bottleneck Lab, our deterministic model makes this memory bandwidth tax
 Experience the Memory Wall calculation live:
 https://z-wbe-bottleneck-lab.vercel.app
 
+
+Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #MemoryWall #ComputerArchitecture #HBM #GPUComputing #HighPerformanceComputing #HardwareEngineering
 ```
 

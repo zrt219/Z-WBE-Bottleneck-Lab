@@ -22,7 +22,7 @@
 - **Media**: `golden_ticket_data_analytics.png, 01_hero_overview.png, 06_colab_gpu_extensions_and_terminal.png, ad_05.png`
 - **Media Order**: 1. golden_ticket_data_analytics.png -> 2. 01_hero_overview.png -> 3. 06_colab_gpu_extensions_and_terminal.png -> 4. ad_05.png
 - **Hashtags**: #NVIDIAGTC #Neuroscience
-- **Mentions**: None
+- **Mentions**: @GoogleDevs | @NVIDIAAI
 - **Claims Verified**: YES - Connectome != simulation thesis
 - **Manual Review Required**: NO
 
@@ -43,6 +43,7 @@ That's the Functionalization problem.
 Explore: https://z-wbe-bottleneck-lab.vercel.app
 
 #NVIDIAGTC #Neuroscience
+cc @GoogleDevs @NVIDIAAI
 ```
 
 ---

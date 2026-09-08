@@ -22,7 +22,7 @@
 - **Media**: `social_card_nim_gke.png, 06_architecture_evidence_view.png, cpu_vs_gpu_speedup.png, ad_10.png`
 - **Media Order**: 1. social_card_nim_gke.png -> 2. 06_architecture_evidence_view.png -> 3. cpu_vs_gpu_speedup.png -> 4. ad_10.png
 - **Hashtags**: #NVIDIAGTC #OpenSource #GitHub #ReproducibleResearch #OpenScience #TypeScript #Python #DevCommunity
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 - **Claims Verified**: YES - 89 tests passing, MIT license
 - **Manual Review Required**: NO
 
@@ -58,6 +58,8 @@ Want to fork the project and build a mouse brain emulation demonstrator? Go for 
 Clone or star the repository on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
+
+Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #OpenSource #GitHub #ReproducibleResearch #OpenScience #TypeScript #Python #DevCommunity
 ```
 

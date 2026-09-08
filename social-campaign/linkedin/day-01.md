@@ -22,7 +22,7 @@
 - **Media**: `social_card_nim_gke.png, social_card_data_analytics.png, social_card_accelerated_ml.png, social_card_intro_inference.png`
 - **Media Order**: 1. social_card_nim_gke.png -> 2. social_card_data_analytics.png -> 3. social_card_accelerated_ml.png -> 4. social_card_intro_inference.png
 - **Hashtags**: #NVIDIAGTC #GoogleCloud #NVIDIA #Nemotron #OpenRouter #RAPIDS #cuDF #CloudRun #ComputationalNeuroscience #SystemsEngineering #OpenSource #DevChallenge
-- **Mentions**: Google for Developers | NVIDIA AI | Jen Harvey | Ray Harvey
+- **Mentions**: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 - **Claims Verified**: YES - 12 equations, 89 tests, 8.62x speedup on T4
 - **Manual Review Required**: NO
 
@@ -63,7 +63,7 @@ Live Demonstrator: https://z-wbe-bottleneck-lab.vercel.app
 1-Click Colab Lab: https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 GitHub Repository: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
-Mentions & Judges: Google for Developers | NVIDIA AI | Jen Harvey | Ray Harvey
+Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #GoogleCloud #NVIDIA #Nemotron #OpenRouter #RAPIDS #cuDF #CloudRun #ComputationalNeuroscience #SystemsEngineering #OpenSource #DevChallenge
 ```
 
@@ -83,7 +83,7 @@ Mentions & Judges: Google for Developers | NVIDIA AI | Jen Harvey | Ray Harvey
 - **Media**: `social_card_intro_inference.png, 02_imaging_wall_baseline.png, 07_github_notebook_code_provenance.png, ad_02.png`
 - **Media Order**: 1. social_card_intro_inference.png -> 2. 02_imaging_wall_baseline.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_02.png
 - **Hashtags**: #NVIDIAGTC #SystemsEngineering #ComputationalNeuroscience #HighPerformanceComputing #HardwareArchitecture #TypeScript #OpenSource
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 - **Claims Verified**: YES - 8 bottleneck dimensions defined in shared/src/types.ts
 - **Manual Review Required**: NO
 
@@ -118,6 +118,8 @@ Our TypeScript engine evaluates all 8 constraints deterministically in under 1 m
 Inspect our constraint equations in the open-source repository:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
+
+Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #SystemsEngineering #ComputationalNeuroscience #HighPerformanceComputing #HardwareArchitecture #TypeScript #OpenSource
 ```
 
@@ -137,7 +139,7 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Media**: `guided_tour_walkthrough.mp4`
 - **Media Order**: Single Asset: guided_tour_walkthrough.mp4
 - **Hashtags**: #NVIDIAGTC #InteractiveDemo #Neuroscience #SystemsEngineering #WebDev #BuildInPublic
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 - **Claims Verified**: YES - Live Vercel app state matches video walkthrough
 - **Manual Review Required**: NO
 
@@ -161,6 +163,8 @@ Whole-brain emulation is not a single science problem—it is an end-to-end syst
 Try the live demonstrator in your browser:
 https://z-wbe-bottleneck-lab.vercel.app
 
+
+Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #InteractiveDemo #Neuroscience #SystemsEngineering #WebDev #BuildInPublic
 ```
 
@@ -180,7 +184,7 @@ https://z-wbe-bottleneck-lab.vercel.app
 - **Media**: `social_card_accelerated_ml.png, 02_imaging_wall_baseline.png, 07_github_notebook_code_provenance.png, ad_01.png`
 - **Media Order**: 1. social_card_accelerated_ml.png -> 2. 02_imaging_wall_baseline.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_01.png
 - **Hashtags**: #NVIDIAGTC #ComputationalNeuroscience #Connectomics #SystemsModeling #Research #OpenSource
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 - **Claims Verified**: YES - 6 pipeline stages documented in README.md
 - **Manual Review Required**: NO
 
@@ -212,6 +216,8 @@ In Z-WBE Bottleneck Lab, we model the operational cost and technical barriers ac
 Read our full pipeline architecture breakdown on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
+
+Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #ComputationalNeuroscience #Connectomics #SystemsModeling #Research #OpenSource
 ```
 
@@ -231,7 +237,7 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Media**: `social_card_intro_inference.png, 04_nemotron_grounded_interpretation.png, 01_colab_notebook_overview.png, banner-light.png`
 - **Media Order**: 1. social_card_intro_inference.png -> 2. 04_nemotron_grounded_interpretation.png -> 3. 01_colab_notebook_overview.png -> 4. banner-light.png
 - **Hashtags**: #NVIDIAGTC #AIEngineering #Nemotron #SoftwareArchitecture #TypeScript #BuildInPublic
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 - **Claims Verified**: YES - Epistemic separation architecture verified in tests/security.test.ts
 - **Manual Review Required**: NO
 
@@ -263,6 +269,8 @@ This ensures the user always knows what is deterministic mathematics and what is
 Test the dual interpretation engine live:
 https://z-wbe-bottleneck-lab.vercel.app
 
+
+Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #AIEngineering #Nemotron #SoftwareArchitecture #TypeScript #BuildInPublic
 ```
 
@@ -282,7 +290,7 @@ https://z-wbe-bottleneck-lab.vercel.app
 - **Media**: `social_card_accelerated_ml.png, 02_imaging_wall_baseline.png, 07_github_notebook_code_provenance.png, banner-dark.png`
 - **Media Order**: 1. social_card_accelerated_ml.png -> 2. 02_imaging_wall_baseline.png -> 3. 07_github_notebook_code_provenance.png -> 4. banner-dark.png
 - **Hashtags**: #NVIDIAGTC #AmdahlsLaw #SystemsEngineering #HardwareDesign #ScientificComputing
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 - **Claims Verified**: YES - 12 equations in shared/src/equations.ts
 - **Manual Review Required**: NO
 
@@ -311,6 +319,8 @@ Tomorrow morning, we dive deep into the 100x Imaging Experiment and examine what
 Star or fork the repository on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
+
+Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #AmdahlsLaw #SystemsEngineering #HardwareDesign #ScientificComputing
 ```
 

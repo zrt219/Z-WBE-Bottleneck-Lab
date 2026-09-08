@@ -22,7 +22,7 @@
 - **Media**: `google-nvidia-developer-badges.png, 02_imaging_wall_baseline.png, 02_colab_t4_gpu_runtime_dialog.png, ad_01.png`
 - **Media Order**: 1. google-nvidia-developer-badges.png -> 2. 02_imaging_wall_baseline.png -> 3. 02_colab_t4_gpu_runtime_dialog.png -> 4. ad_01.png
 - **Hashtags**: #NVIDIAGTC #Physics
-- **Mentions**: None
+- **Mentions**: @GoogleDevs | @NVIDIAAI
 - **Claims Verified**: YES - Dwell time shot noise physics
 - **Manual Review Required**: NO
 
@@ -44,6 +44,7 @@ Physics dictates the Imaging Wall:
 https://z-wbe-bottleneck-lab.vercel.app
 
 #NVIDIAGTC #Physics
+cc @GoogleDevs @NVIDIAAI
 ```
 
 ---

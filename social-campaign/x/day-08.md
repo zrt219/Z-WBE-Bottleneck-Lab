@@ -22,7 +22,7 @@
 - **Media**: `golden_ticket_nim_gke.png, 06_architecture_evidence_view.png, 07_github_notebook_code_provenance.png, ad_04.png`
 - **Media Order**: 1. golden_ticket_nim_gke.png -> 2. 06_architecture_evidence_view.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_04.png
 - **Hashtags**: #NVIDIAGTC #TypeScript
-- **Mentions**: None
+- **Mentions**: @GoogleDevs | @NVIDIAAI
 - **Claims Verified**: YES - 12 equations in shared/src/equations.ts
 - **Manual Review Required**: NO
 
@@ -43,6 +43,7 @@ From raw voxels to megawatt power budgets, pure TypeScript calculates the physic
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 #NVIDIAGTC #TypeScript
+cc @GoogleDevs @NVIDIAAI
 ```
 
 ---

@@ -22,7 +22,7 @@
 - **Media**: `google-nvidia-developer-badges.png, 02_imaging_wall_baseline.png, cpu_vs_gpu_speedup.png, ad_07.png`
 - **Media Order**: 1. google-nvidia-developer-badges.png -> 2. 02_imaging_wall_baseline.png -> 3. cpu_vs_gpu_speedup.png -> 4. ad_07.png
 - **Hashtags**: #NVIDIAGTC #Neuroscience #Validation #PhilosophyOfMind #ScientificIntegrity #SystemsModeling #Research
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 - **Claims Verified**: YES - Validation stage biophysics modeled
 - **Manual Review Required**: NO
 
@@ -62,6 +62,8 @@ In Z-WBE Bottleneck Lab, we model Functional Validation as an operational engine
 Explore our validation framework live:
 https://z-wbe-bottleneck-lab.vercel.app
 
+
+Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #Neuroscience #Validation #PhilosophyOfMind #ScientificIntegrity #SystemsModeling #Research
 ```
 

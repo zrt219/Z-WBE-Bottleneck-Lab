@@ -22,7 +22,7 @@
 - **Media**: `social_card_data_analytics.png, 06_architecture_evidence_view.png, cpu_vs_gpu_speedup.png, ad_10.png`
 - **Media Order**: 1. social_card_data_analytics.png -> 2. 06_architecture_evidence_view.png -> 3. cpu_vs_gpu_speedup.png -> 4. ad_10.png
 - **Hashtags**: #NVIDIAGTC #NVIDIA #TeslaT4 #RAPIDS #cuDF #cuML #Benchmark #DataScience #PerformanceEngineering
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 - **Claims Verified**: YES - 8.62x overall speedup verified in cpu_vs_gpu_benchmark.json
 - **Manual Review Required**: NO
 
@@ -66,6 +66,8 @@ Notice the pattern: Arithmetic-heavy machine learning tasks achieved 8.5x to 9.8
 Run the benchmark cell live in Colab:
 https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 
+
+Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #NVIDIA #TeslaT4 #RAPIDS #cuDF #cuML #Benchmark #DataScience #PerformanceEngineering
 ```
 

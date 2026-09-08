@@ -22,7 +22,7 @@
 - **Media**: `colab_t4_terminal_execution.gif`
 - **Media Order**: Single Asset: colab_t4_terminal_execution.gif
 - **Hashtags**: #NVIDIAGTC #RAPIDS
-- **Mentions**: None
+- **Mentions**: @GoogleDevs | @NVIDIAAI
 - **Claims Verified**: YES - cuDF and cuML acceleration thesis
 - **Manual Review Required**: NO
 
@@ -40,6 +40,7 @@ Run our Colab GPU lab:
 https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 
 #NVIDIAGTC #RAPIDS
+cc @GoogleDevs @NVIDIAAI
 ```
 
 ---

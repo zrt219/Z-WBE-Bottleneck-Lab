@@ -22,7 +22,7 @@
 - **Media**: `social_card_data_analytics.png, 02_imaging_wall_baseline.png, 07_github_notebook_code_provenance.png, ad_06.png`
 - **Media Order**: 1. social_card_data_analytics.png -> 2. 02_imaging_wall_baseline.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_06.png
 - **Hashtags**: #NVIDIAGTC #OpenSource
-- **Mentions**: None
+- **Mentions**: @GoogleDevs | @NVIDIAAI
 - **Claims Verified**: YES - 89 tests passing, MIT license
 - **Manual Review Required**: NO
 
@@ -44,6 +44,7 @@
 Inspect the code: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 #NVIDIAGTC #OpenSource
+cc @GoogleDevs @NVIDIAAI
 ```
 
 ---

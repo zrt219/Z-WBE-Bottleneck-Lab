@@ -22,7 +22,7 @@
 - **Media**: `hero_bottleneck_shift.gif`
 - **Media Order**: Single Asset: hero_bottleneck_shift.gif
 - **Hashtags**: #NVIDIAGTC #AmdahlsLaw
-- **Mentions**: None
+- **Mentions**: @GoogleDevs | @NVIDIAAI
 - **Claims Verified**: YES - Amdahl's Law concept
 - **Manual Review Required**: NO
 
@@ -39,6 +39,7 @@ Making imaging infinitely fast only accelerates WBE until memory bandwidth stall
 Test the limit live: https://z-wbe-bottleneck-lab.vercel.app
 
 #NVIDIAGTC #AmdahlsLaw
+cc @GoogleDevs @NVIDIAAI
 ```
 
 ---

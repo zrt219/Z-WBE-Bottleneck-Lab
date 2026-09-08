@@ -9,11 +9,25 @@
 
 ---
 
+## 🏷️ Official Tagging & Handles Checklist
+
+| Platform | Entity / Judge | Handle / Type | Direct URL / Profile |
+| :--- | :--- | :--- | :--- |
+| **LinkedIn** | **Google for Developers** | `@Google for Developers` | [LinkedIn Showcase](https://www.linkedin.com/showcase/googledevelopers/posts/?feedView=all) |
+| **LinkedIn** | **NVIDIA AI** | `@NVIDIA AI` | [LinkedIn Showcase](https://www.linkedin.com/showcase/nvidia-ai/) |
+| **LinkedIn** | **Jen Harvey** | `@Jen Harvey` | [LinkedIn Profile](https://www.linkedin.com/in/jennifer-harvey-li/) |
+| **LinkedIn** | **Ray Harvey** | `@Ray Harvey` | [LinkedIn Profile](https://www.linkedin.com/in/ray-harvey/) |
+| **X (Twitter)**| **Google for Developers** | `@GoogleDevs` | [X Profile](https://x.com/googledevs) |
+| **X (Twitter)**| **NVIDIA AI** | `@NVIDIAAI` | [X Profile](https://x.com/NVIDIAAI) |
+| **All** | **Official Challenge Hashtag** | `#NVIDIAGTC` | — |
+
+---
+
 ## 🏆 Top 3 Strongest Assets Included in this Folder
 
 | File | Type | What It Proves to Judges & Engineers |
 | :--- | :---: | :--- |
-| [`01_google_nvidia_golden_ticket_badges.png`](01_google_nvidia_golden_ticket_badges.png) | Static Image | **Contest Credential Proof**: Demonstrates completion of all official Google Cloud × NVIDIA learning pathways (NIM on GKE, Intro to Inference, GPU Data Analytics with RAPIDS cuDF, and Accelerated ML with cuML). |
+| [`01_google_nvidia_golden_ticket_badges.png`](01_google_nvidia_golden_ticket_badges.png) | Static Image | **Contest Credential Proof**: Proves completion of all 4 official Google Cloud × NVIDIA learning pathways (NIM on GKE, Intro to Inference, GPU Data Analytics with RAPIDS cuDF, and Accelerated ML with cuML). |
 | [`02_hero_bottleneck_shift.gif`](02_hero_bottleneck_shift.gif)<br>*(or [`02b_hero_bottleneck_shift_static.png`](02b_hero_bottleneck_shift_static.png))* | Animated Demo / High-Res PNG | **Core Scientific Thesis**: The signature experiment. When microscopy acquisition is accelerated by 100×, the acquisition bottleneck instantly collapses and shifts to Memory Bandwidth in <1ms. |
 | [`03_tesla_t4_gpu_speedup.png`](03_tesla_t4_gpu_speedup.png) | Static Benchmark | **Empirical Hardware Evidence**: Measured 8.62× speedup (1.907s CPU vs 0.221s GPU, 88.4% time reduction) on an NVIDIA Tesla T4 GPU in Google Cloud Colab Enterprise using zero-code-change `%load_ext cudf.pandas`. |
 
@@ -58,7 +72,7 @@ Live Demonstrator: https://z-wbe-bottleneck-lab.vercel.app
 GitHub Repository: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 Developer Profile: https://g.dev/zhane
 
-Mentions & Judges: Google for Developers | NVIDIA AI | Jen Harvey | Ray Harvey
+Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #GoogleCloud #NVIDIA #Nemotron #OpenRouter #RAPIDS #cuDF #CloudRun #ComputationalNeuroscience #SystemsEngineering #OpenSource #DevChallenge
 ```
 
@@ -78,7 +92,7 @@ We built Z-WBE Bottleneck Lab for the @GoogleDevs x @NVIDIAAI GTC Berlin Golden 
 
 Try it live: https://z-wbe-bottleneck-lab.vercel.app
 
-#NVIDIAGTC #WholeBrainEmulation
+cc @GoogleDevs @NVIDIAAI #NVIDIAGTC
 ```
 
 ---
@@ -118,9 +132,52 @@ Live App: https://z-wbe-bottleneck-lab.vercel.app
 Colab: https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 GitHub: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
-Mentions: @GoogleDevs @NVIDIAAI
+cc @GoogleDevs @NVIDIAAI
 
 3/3 #NVIDIAGTC #OpenSource
+```
+
+---
+
+## 🌐 3. Google Developer Community Forum Submission ("Share Your Learnings Here")
+
+> **Use this text to submit directly in the Google Developer Community contest forum thread if posting on the contest website:**
+
+```markdown
+### 🎫 Project Entry: Z-WBE Bottleneck Lab (Google Cloud × NVIDIA GTC Berlin 2026 Golden Ticket Challenge)
+
+**Live Demonstrator**: https://z-wbe-bottleneck-lab.vercel.app  
+**Canonical Google Colab Lab**: https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb  
+**Open-Source GitHub Repository**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab  
+**Google Developer Profile**: https://g.dev/zhane  
+**Hashtag**: #NVIDIAGTC
+
+---
+
+#### 1. What I Learned (4/4 Complete Pathway Sweep)
+Completing all four official Google Cloud × NVIDIA learning pathways:
+1. Deploy Faster Generative AI Models with NVIDIA NIM on GKE
+2. Speed Up Data Analytics on GPUs
+3. Accelerated Machine Learning with Google Cloud and NVIDIA
+4. Intro to Inference: How to Run AI Models on a GPU
+
+...taught me two foundational engineering lessons:
+- **Zero-Code GPU Acceleration Works**: Using NVIDIA RAPIDS `cudf.pandas` transforms CPU bottlenecks with zero code refactoring, yielding real 8.62× speedups on an NVIDIA Tesla T4 in Google Cloud Colab Enterprise (1.907s CPU vs 0.221s GPU, 88.4% execution time reduction).
+- **Epistemic Separation for AI Systems**: Large language models excel at causal reasoning and qualitative interpretation, but physical scaling equations must remain deterministic. Isolating deterministic computation from LLM interpretation prevents hallucinated measurements while maximizing insight.
+
+---
+
+#### 2. What I Built: Z-WBE Bottleneck Lab
+I built an interactive scientific systems-modeling laboratory that models the 6 macroscopic phases of Whole-Brain Emulation across 8 physical constraint dimensions (Acquisition, Reconstruction, Storage, Compute, Memory Bandwidth, Interconnect, Power, and Economics).
+
+- **Deterministic Engine**: 12 transparent scaling equations calculate physical realities (<1ms execution) labeled `CALCULATED FROM SCENARIO ASSUMPTIONS`.
+- **Grounded AI Interpretation**: NVIDIA Nemotron 3 Super 120B (`nvidia/nemotron-3-super-120b-a12b:free`) via OpenRouter provides causal explanations under a strict grounding contract labeled `AI INTERPRETATION`.
+- **The Signature Experiment**: What happens when imaging is 100× faster? The acquisition wall collapses and the dominant constraint instantly shifts to Memory Bandwidth in <1ms.
+- **100,000-Scenario Monte Carlo Sweep**: GPU-accelerated parameter exploration mapped in Colab and rendered in an interactive web heatmap.
+- **Verified Software Engineering**: 89 passing unit tests across 11 suites, TypeScript monorepo, and Google Cloud Run container readiness.
+
+Judges & Mentions: Google for Developers | NVIDIA AI | Jen Harvey | Ray Harvey
+#NVIDIAGTC #GoogleCloud #NVIDIA #Nemotron #RAPIDS #cuDF #Colab #OpenSource
 ```
 
 ---
@@ -128,12 +185,18 @@ Mentions: @GoogleDevs @NVIDIAAI
 ## 🚀 How to Deploy in 30 Seconds
 
 1. **LinkedIn**:
-   - Copy the text from the [LinkedIn Master Launch Post](#-1-linkedin-master-launch-post) section.
+   - Copy the text from [LinkedIn Master Launch Post](#-1-linkedin-master-launch-post).
    - Go to LinkedIn, click "Start a post".
-   - Drag & drop `01_google_nvidia_golden_ticket_badges.png`, `02b_hero_bottleneck_shift_static.png`, and `03_tesla_t4_gpu_speedup.png` (or attach `02_hero_bottleneck_shift.gif` as video/media).
-   - Paste caption and schedule or publish!
+   - When pasting, verify that `@Google for Developers`, `@NVIDIA AI`, `@Jen Harvey`, and `@Ray Harvey` link to their official profiles.
+   - Attach `01_google_nvidia_golden_ticket_badges.png`, `02b_hero_bottleneck_shift_static.png`, and `03_tesla_t4_gpu_speedup.png` (or attach `02_hero_bottleneck_shift.gif`).
+   - Click Post!
 
 2. **Twitter / X**:
-   - Choose either the standalone post or thread.
-   - Attach the corresponding media file from this folder.
-   - Paste caption and publish!
+   - Copy either the standalone tweet or 3-part thread.
+   - Attach the corresponding media file.
+   - Verify `@GoogleDevs` and `@NVIDIAAI` are highlighted.
+   - Click Post!
+
+3. **Google Developer Forum (Optional / Fallback)**:
+   - Go to the contest announcement thread.
+   - Paste the Markdown from Section 3 above and submit!

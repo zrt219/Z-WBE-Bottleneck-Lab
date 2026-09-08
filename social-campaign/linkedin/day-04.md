@@ -22,7 +22,7 @@
 - **Media**: `golden_ticket_intro_inference.png, 02_imaging_wall_baseline.png, 04_colab_cuml_execution_progress.png, ad_03.png`
 - **Media Order**: 1. golden_ticket_intro_inference.png -> 2. 02_imaging_wall_baseline.png -> 3. 04_colab_cuml_execution_progress.png -> 4. ad_03.png
 - **Hashtags**: #NVIDIAGTC #AmdahlsLaw #SystemsEngineering #ComputerArchitecture #Neuroscience #HPC
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 - **Claims Verified**: YES - Amdahl's Law scaling equations verified
 - **Manual Review Required**: NO
 
@@ -56,6 +56,8 @@ In Z-WBE Bottleneck Lab, our interactive engine visualizes this exact Amdahl kne
 Test the limits of Amdahl's Law on our live demonstrator:
 https://z-wbe-bottleneck-lab.vercel.app
 
+
+Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #AmdahlsLaw #SystemsEngineering #ComputerArchitecture #Neuroscience #HPC
 ```
 

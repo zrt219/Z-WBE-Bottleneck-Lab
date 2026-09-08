@@ -22,7 +22,7 @@
 - **Media**: `social_card_data_analytics.png, 05_gpu_exploration_map.png, 07_github_notebook_code_provenance.png, ad_01.png`
 - **Media Order**: 1. social_card_data_analytics.png -> 2. 05_gpu_exploration_map.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_01.png
 - **Hashtags**: #NVIDIAGTC #RAPIDS #cuDF #cuML #DataScience #Python #GPUComputing #AcceleratedComputing
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 - **Claims Verified**: YES - RAPIDS stack integration verified
 - **Manual Review Required**: NO
 
@@ -52,6 +52,8 @@ Instead of waiting 45 minutes for CPU pandas to sweep 100,000 WBE scenarios, cuD
 Explore our RAPIDS pipeline in Google Colab:
 https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 
+
+Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #RAPIDS #cuDF #cuML #DataScience #Python #GPUComputing #AcceleratedComputing
 ```
 

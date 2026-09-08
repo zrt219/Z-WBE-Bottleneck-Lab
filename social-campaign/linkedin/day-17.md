@@ -22,7 +22,7 @@
 - **Media**: `social_card_intro_inference.png, 06_architecture_evidence_view.png, 02_colab_t4_gpu_runtime_dialog.png, ad_01.png`
 - **Media Order**: 1. social_card_intro_inference.png -> 2. 06_architecture_evidence_view.png -> 3. 02_colab_t4_gpu_runtime_dialog.png -> 4. ad_01.png
 - **Hashtags**: #NVIDIAGTC #Supercomputing #ComputerArchitecture #Interconnect #NVLink #InfiniBand #HighPerformanceComputing #Hardware
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 - **Claims Verified**: YES - Interconnect and bisection bandwidth modeled
 - **Manual Review Required**: NO
 
@@ -60,6 +60,8 @@ In Z-WBE Bottleneck Lab, Equation 7 models Interconnect Bandwidth as an independ
 Explore the hardware triad live:
 https://z-wbe-bottleneck-lab.vercel.app
 
+
+Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #Supercomputing #ComputerArchitecture #Interconnect #NVLink #InfiniBand #HighPerformanceComputing #Hardware
 ```
 

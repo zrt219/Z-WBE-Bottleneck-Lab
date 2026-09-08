@@ -22,7 +22,7 @@
 - **Media**: `colab_t4_terminal_execution.gif`
 - **Media Order**: Single Asset: colab_t4_terminal_execution.gif
 - **Hashtags**: #NVIDIAGTC #GoogleColab
-- **Mentions**: None
+- **Mentions**: @GoogleDevs | @NVIDIAAI
 - **Claims Verified**: YES - Canonical Colab lab link
 - **Manual Review Required**: NO
 
@@ -41,6 +41,7 @@ Run our canonical Colab notebook:
 https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 
 #NVIDIAGTC #GoogleColab
+cc @GoogleDevs @NVIDIAAI
 ```
 
 ---

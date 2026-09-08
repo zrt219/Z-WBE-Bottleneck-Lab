@@ -52,6 +52,8 @@ All 12 functions are tested with 19 dedicated unit tests in `shared/tests/equati
 Inspect the pure TypeScript implementation on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
+
+Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #TypeScript #Mathematics #OpenSource #SystemsEngineering #SoftwareEngineering"""
         },
         {
@@ -210,7 +212,8 @@ Zero hallucinated numbers.
 From raw voxels to megawatt power budgets, pure TypeScript calculates the physics of WBE:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
-#NVIDIAGTC #TypeScript"""
+#NVIDIAGTC #TypeScript
+cc @GoogleDevs @NVIDIAAI"""
         },
         {
             "id": "buffer_x_d08_p2",
@@ -339,6 +342,8 @@ Nemotron's Mamba-Transformer hybrid architecture provides exceptional long-conte
 Experience grounded AI in action:
 https://z-wbe-bottleneck-lab.vercel.app
 
+
+Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #NVIDIA #Nemotron #OpenRouter #AIEngineering #PromptEngineering #SystemArchitecture #TrustworthyAI"""
         },
         {
@@ -637,6 +642,8 @@ Use determinism for math. Use generative models for synthesis, explanation, and 
 Experience the power of epistemic separation:
 https://z-wbe-bottleneck-lab.vercel.app
 
+
+Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #SoftwareArchitecture #AIEngineering #SystemDesign #TypeScript #Nemotron #CleanArchitecture"""
         },
         {
@@ -935,6 +942,8 @@ Every cell runs in Google Colab Enterprise on an NVIDIA Tesla T4 runtime with on
 Launch the notebook now:
 https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 
+
+Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #GoogleCloud #GoogleColab #NVIDIA #RAPIDS #DataScience #MachineLearning #OpenScience"""
         },
         {
@@ -1079,7 +1088,8 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab/blob/main/COLAB.md
 Run our canonical Colab notebook:
 https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 
-#NVIDIAGTC #GoogleColab"""
+#NVIDIAGTC #GoogleColab
+cc @GoogleDevs @NVIDIAAI"""
         },
         {
             "id": "buffer_x_d11_p2",
@@ -1227,6 +1237,8 @@ Notice the pattern: Arithmetic-heavy machine learning tasks achieved 8.5x to 9.8
 Run the benchmark cell live in Colab:
 https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 
+
+Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #NVIDIA #TeslaT4 #RAPIDS #cuDF #cuML #Benchmark #DataScience #PerformanceEngineering"""
         },
         {
@@ -1512,6 +1524,8 @@ Instead of waiting 45 minutes for CPU pandas to sweep 100,000 WBE scenarios, cuD
 Explore our RAPIDS pipeline in Google Colab:
 https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 
+
+Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #RAPIDS #cuDF #cuML #DataScience #Python #GPUComputing #AcceleratedComputing"""
         },
         {
@@ -1648,7 +1662,8 @@ NVIDIA cuDF and cuML sweep 100,000 scenarios in <5 seconds.
 Run our Colab GPU lab:
 https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 
-#NVIDIAGTC #RAPIDS"""
+#NVIDIAGTC #RAPIDS
+cc @GoogleDevs @NVIDIAAI"""
         },
         {
             "id": "buffer_x_d13_p2",
@@ -1787,6 +1802,8 @@ In supercomputing discussions, people build ExaFLOP clusters. The data says they
 Explore the interactive 100k scenario heatmap live:
 https://z-wbe-bottleneck-lab.vercel.app
 
+
+Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #MonteCarlo #DataScience #DataAnalytics #RAPIDS #cuDF #Supercomputing #ComputationalNeuroscience"""
         },
         {
@@ -1819,6 +1836,8 @@ The output is exported directly to `public/data/gpu-sweep-summary.json`, which h
 Inspect the generator script on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
+
+Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #Python #MonteCarlo #DataEngineering #RAPIDS #cuDF #Mathematics"""
         },
         {
@@ -1849,6 +1868,8 @@ Click any cell to immediately populate the application sliders with that exact s
 Try the interactive map live:
 https://z-wbe-bottleneck-lab.vercel.app
 
+
+Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #DataVisualization #Heatmap #UXDesign #WebDev #InteractiveScience"""
         },
         {
@@ -1878,6 +1899,8 @@ Key Correlation Findings:
 Inspect the correlation scatter matrix in Google Colab:
 https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 
+
+Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #DataScience #Statistics #Correlation #EDA #GoogleColab #Python"""
         },
         {
@@ -1913,6 +1936,8 @@ We will tackle the deepest scientific unknowns: preservation uncertainty, recons
 Experience Z-WBE Bottleneck Lab:
 https://z-wbe-bottleneck-lab.vercel.app
 
+
+Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #Engineering #BuildInPublic #OpenSource #SoftwareArchitecture #Retrospective"""
         }
     ]

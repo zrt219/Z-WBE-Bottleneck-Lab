@@ -22,7 +22,7 @@
 - **Media**: `golden_ticket_speed_up_data_analytics.png, 02_imaging_wall_baseline.png, 07_github_notebook_code_provenance.png, ad_06.png`
 - **Media Order**: 1. golden_ticket_speed_up_data_analytics.png -> 2. 02_imaging_wall_baseline.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_06.png
 - **Hashtags**: #NVIDIAGTC #Microscopy #Biophysics #Cryopreservation #Connectomics #Neuroscience #SystemsModeling
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 - **Claims Verified**: YES - Preservation and acquisition biophysics modeled
 - **Manual Review Required**: NO
 
@@ -56,6 +56,8 @@ Lowering z-resolution accelerates acquisition, but directly increases the recons
 Explore the trade-offs of voxel resolution live:
 https://z-wbe-bottleneck-lab.vercel.app
 
+
+Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #Microscopy #Biophysics #Cryopreservation #Connectomics #Neuroscience #SystemsModeling
 ```
 
