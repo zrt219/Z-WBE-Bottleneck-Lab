@@ -148,4 +148,6 @@ try {
     Write-Host "--------------------------------------------------------------------------------" -ForegroundColor DarkGray
     Write-Host "`nSync complete! Canonical Z-WBE GPU Lab ready for execution on NVIDIA Tesla T4 GPU.`n" -ForegroundColor Cyan
 }
-final
+finally {
+    Pop-Location
+}
