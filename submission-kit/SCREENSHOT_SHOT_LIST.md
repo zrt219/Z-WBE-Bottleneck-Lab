@@ -51,9 +51,9 @@ All screenshots should be captured at **1920 × 1080** resolution (16:9 desktop)
 * **File**: `05_gpu_exploration_map.png`
 * **View**:
   - GPU Exploration Map section displaying parameter phase transitions across 100,000 synthetic Monte Carlo configurations
-  - NVIDIA RAPIDS `cudf.pandas` badge and Colab Enterprise benchmark reference
+  - NVIDIA RAPIDS `cudf.pandas` badge and Google Colab benchmark reference
   - Distribution breakdown of primary bottlenecks (Acquisition vs. Memory vs. Compute vs. Economics)
-* **Caption**: *"Global parameter space sweep: 100,000 Monte Carlo scenario evaluations accelerated via NVIDIA RAPIDS cudf.pandas in Google Cloud Colab Enterprise."*
+* **Caption**: *"Global parameter space sweep: 100,000 Monte Carlo scenario evaluations accelerated via NVIDIA RAPIDS cudf.pandas in Google Colab."*
 
 ---
 

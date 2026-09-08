@@ -22,7 +22,7 @@
 - **Media**: `social_card_intro_inference.png, 06_architecture_evidence_view.png, 02_colab_t4_gpu_runtime_dialog.png, ad_01.png`
 - **Media Order**: 1. social_card_intro_inference.png -> 2. 06_architecture_evidence_view.png -> 3. 02_colab_t4_gpu_runtime_dialog.png -> 4. ad_01.png
 - **Hashtags**: #NVIDIAGTC #Supercomputing #ComputerArchitecture #Interconnect #NVLink #InfiniBand #HighPerformanceComputing #Hardware
-- **Mentions**: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - Interconnect and bisection bandwidth modeled
 - **Manual Review Required**: NO
 
@@ -61,7 +61,7 @@ Explore the hardware triad live:
 https://z-wbe-bottleneck-lab.vercel.app
 
 
-Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #Supercomputing #ComputerArchitecture #Interconnect #NVLink #InfiniBand #HighPerformanceComputing #Hardware
 ```
 
@@ -81,7 +81,7 @@ Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harv
 - **Media**: `social_card_nim_gke.png, 04_nemotron_grounded_interpretation.png, 07_github_notebook_code_provenance.png, banner-light.png`
 - **Media Order**: 1. social_card_nim_gke.png -> 2. 04_nemotron_grounded_interpretation.png -> 3. 07_github_notebook_code_provenance.png -> 4. banner-light.png
 - **Hashtags**: #NVIDIAGTC #GoogleCloud #NVIDIA #Inference #LLMOps #GPUComputing #DeveloperJourney
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - Intro to Inference course learnings verified
 - **Manual Review Required**: NO
 
@@ -110,6 +110,8 @@ Key Course Takeaways:
 View my verified Google Cloud credentials:
 https://g.dev/zhane
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #GoogleCloud #NVIDIA #Inference #LLMOps #GPUComputing #DeveloperJourney
 ```
 
@@ -129,7 +131,7 @@ https://g.dev/zhane
 - **Media**: `social_card_nim_gke.png, 01_hero_overview.png, cpu_vs_gpu_speedup.png, banner-dark.png`
 - **Media Order**: 1. social_card_nim_gke.png -> 2. 01_hero_overview.png -> 3. cpu_vs_gpu_speedup.png -> 4. banner-dark.png
 - **Hashtags**: #NVIDIAGTC #WebDev #DataVisualization #Networking #HPC
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - UI screenshot of Interconnect gauge
 - **Manual Review Required**: NO
 
@@ -150,6 +152,8 @@ Notice how increasing the 'Inter-Regional Axon Ratio' slider directly drives up 
 Explore the network constraints live:
 https://z-wbe-bottleneck-lab.vercel.app
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #WebDev #DataVisualization #Networking #HPC
 ```
 
@@ -169,7 +173,7 @@ https://z-wbe-bottleneck-lab.vercel.app
 - **Media**: `social_card_intro_inference.png, 06_architecture_evidence_view.png, 07_github_notebook_code_provenance.png, ad_10.png`
 - **Media Order**: 1. social_card_intro_inference.png -> 2. 06_architecture_evidence_view.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_10.png
 - **Hashtags**: #NVIDIAGTC #Networking #Supercomputing #Datacenter #InfiniBand #HardwareArchitecture
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - Network topology equations in shared/src/equations.ts
 - **Manual Review Required**: NO
 
@@ -196,6 +200,8 @@ In Z-WBE Bottleneck Lab, our Interconnect equation incorporates these network di
 Review our networking formulas on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #Networking #Supercomputing #Datacenter #InfiniBand #HardwareArchitecture
 ```
 
@@ -215,7 +221,7 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Media**: `golden_ticket_intro_inference.png, 06_architecture_evidence_view.png, 07_github_notebook_code_provenance.png, ad_09.png`
 - **Media Order**: 1. golden_ticket_intro_inference.png -> 2. 06_architecture_evidence_view.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_09.png
 - **Hashtags**: #NVIDIAGTC #AppSec #Cybersecurity #WebSecurity #TypeScript #Vitest #BuildInPublic
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - Security tests pass in 275ms
 - **Manual Review Required**: NO
 
@@ -243,6 +249,8 @@ All 6 security unit tests pass in Vitest in 275 milliseconds.
 Check out our security test suite:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #AppSec #Cybersecurity #WebSecurity #TypeScript #Vitest #BuildInPublic
 ```
 

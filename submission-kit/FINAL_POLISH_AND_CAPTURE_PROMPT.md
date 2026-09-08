@@ -8,7 +8,7 @@ Use this prompt to execute the final visual inspection, presentation polish, scr
 You are performing the final submission packaging for Z-WBE Bottleneck Lab (Google Cloud × NVIDIA GTC Berlin 2026 Golden Ticket Challenge).
 
 Project Rules:
-1. NO NEW MAJOR FEATURES. The architecture is locked: React 18 frontend on Vercel, deterministic TypeScript scaling calculator (<1ms), NVIDIA Nemotron 3 Super 120B (OpenRouter free route) with strict epistemic grounding, and 100,000-scenario parameter sweep via NVIDIA RAPIDS (cudf.pandas) in Colab Enterprise.
+1. NO NEW MAJOR FEATURES. The architecture is locked: React 18 frontend on Vercel, deterministic TypeScript scaling calculator (<1ms), NVIDIA Nemotron 3 Super 120B (OpenRouter free route) with strict epistemic grounding, and 100,000-scenario parameter sweep via NVIDIA RAPIDS (cudf.pandas) in Google Colab.
 2. TRUTH-IN-CLAIMS: All numbers are authoritative from deterministic equations; the open model explains but never alters calculated figures. No "zero-hallucination guarantee" claims; use "strict grounding contract" and "deterministic numerical boundary".
 3. VERIFICATION: Test all buttons, modals, presets, and live API routes on desktop (1920x1080) and mobile (390x844).
 

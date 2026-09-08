@@ -195,7 +195,7 @@ export const ContestBadgesModal: React.FC<ContestBadgesModalProps> = ({ isOpen, 
                         </span>
                       </div>
                       <p className="text-[11px] text-slate-600 leading-normal">
-                        <strong>Architectural Role:</strong> Enabled the 100,000-scenario Monte Carlo sweep using NVIDIA RAPIDS <code className="bg-slate-100 px-1 py-0.5 rounded font-mono">cudf.pandas</code> in Google Colab Enterprise, accelerating parameter phase transition discovery.
+                        <strong>Architectural Role:</strong> Enabled the 100,000-scenario Monte Carlo sweep using NVIDIA RAPIDS <code className="bg-slate-100 px-1 py-0.5 rounded font-mono">cudf.pandas</code> in Google Colab, accelerating parameter phase transition discovery.
                       </p>
                       <div className="flex items-center space-x-3 text-[10px] font-mono pt-0.5">
                         <a
@@ -347,7 +347,7 @@ export const ContestBadgesModal: React.FC<ContestBadgesModalProps> = ({ isOpen, 
                   <div className="p-3 rounded-xl border border-slate-200 bg-slate-50 space-y-1">
                     <span className="font-bold text-slate-900 block">(b) Effective Use of NVIDIA & Google Cloud</span>
                     <p className="text-slate-600 leading-normal text-[11px]">
-                      Seamless fusion of Google Cloud Run serverless hosting, Google Colab Enterprise, NVIDIA RAPIDS cuDF parameter sweeps, and NVIDIA Nemotron 3 Super structured causal reasoning.
+                      Seamless fusion of Google Cloud Run serverless hosting, Google Colab, NVIDIA RAPIDS cuDF parameter sweeps, and NVIDIA Nemotron 3 Super structured causal reasoning.
                     </p>
                   </div>
                   <div className="p-3 rounded-xl border border-slate-200 bg-slate-50 space-y-1">

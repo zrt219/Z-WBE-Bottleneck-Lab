@@ -22,7 +22,7 @@
 - **Media**: `social_card_data_analytics.png, 02_imaging_wall_baseline.png, cpu_vs_gpu_speedup.png, ad_02.png`
 - **Media Order**: 1. social_card_data_analytics.png -> 2. 02_imaging_wall_baseline.png -> 3. cpu_vs_gpu_speedup.png -> 4. ad_02.png
 - **Hashtags**: #NVIDIAGTC #GoogleCloud #NVIDIA #Nemotron #RAPIDS #cuDF #cuML #TeslaT4 #GoogleColab #CloudRun #BuildInPublic #OpenSource #ComputationalNeuroscience #SystemsEngineering #GTC2026
-- **Mentions**: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+- **Mentions**: @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Harvey | @Ray Harvey
 - **Claims Verified**: YES - Complete campaign retrospective verified
 - **Manual Review Required**: NO
 
@@ -45,7 +45,7 @@ Over the past three consecutive weeks, we documented nearly every facet of this 
 - Explored all 6 macroscopic WBE stages (Preservation, Acquisition, Reconstruction, Functionalization, Execution, Validation).
 - Modeled all 8 physical constraint dimensions (Acquisition, Reconstruction, Storage, Compute, Memory, Interconnect, Power, Economics).
 - Demonstrated Amdahl's Law in action: Accelerating imaging by 100x instantly shifted the dominant bottleneck to Memory Bandwidth.
-- Delivered an empirical 8.62x GPU pipeline speedup on an NVIDIA Tesla T4 in Google Cloud Colab Enterprise using zero-code-change `%load_ext cudf.pandas`.
+- Measured 8.62× pipeline speedup on an NVIDIA Tesla T4 in Google Colab: 1.907 s CPU vs 0.221 s GPU. cudf.pandas provided zero-code-change GPU acceleration for supported pandas operations.
 - Proved how to stop AI hallucinations in science using Epistemic Separation: pure TypeScript calculates the physics; NVIDIA Nemotron 3 Super 120B interprets the causal trade-offs under a strict grounding contract.
 - Mapped 100,000 Monte Carlo scenarios in GPU memory to identify global bottleneck phase transitions.
 - Completed all 4 official Google Cloud × NVIDIA learning pathways on Google Cloud Skills Boost.
@@ -56,7 +56,7 @@ What's Next for Z-WBE Lab?
 2. Integrating multi-GPU Dask-cuDF clusters to model distributed supercomputing topologies.
 3. Engaging computational neuroscience labs to refine biophysical functionalization parameters.
 
-Thank you to @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey, and the global developer community for following this build-in-public journey.
+Thank you to @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Harvey | @Ray Harvey, and the global developer community for following this build-in-public journey.
 
 Experience the live lab, interactive Colab, and open-source code:
 Live Demonstrator: https://z-wbe-bottleneck-lab.vercel.app
@@ -64,7 +64,7 @@ Live Demonstrator: https://z-wbe-bottleneck-lab.vercel.app
 GitHub Repository: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 Google Developer Profile: https://g.dev/zhane
 
-Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+Mentions & Judges: @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #GoogleCloud #NVIDIA #Nemotron #RAPIDS #cuDF #cuML #TeslaT4 #GoogleColab #CloudRun #BuildInPublic #OpenSource #ComputationalNeuroscience #SystemsEngineering #GTC2026
 ```
 
@@ -84,7 +84,7 @@ Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harv
 - **Media**: `golden_ticket_data_analytics.png, 06_architecture_evidence_view.png, 07_github_notebook_code_provenance.png, ad_01.png`
 - **Media Order**: 1. golden_ticket_data_analytics.png -> 2. 06_architecture_evidence_view.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_01.png
 - **Hashtags**: #NVIDIAGTC #Roadmap #ComputationalNeuroscience #NeuromorphicComputing #Research #OpenScience
-- **Mentions**: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - Future roadmap documented in README.md
 - **Manual Review Required**: NO
 
@@ -118,7 +118,7 @@ Explore the future roadmap on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 
-Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #Roadmap #ComputationalNeuroscience #NeuromorphicComputing #Research #OpenScience
 ```
 
@@ -138,7 +138,7 @@ Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harv
 - **Media**: `guided_tour_walkthrough.mp4`
 - **Media Order**: Single Asset: guided_tour_walkthrough.mp4
 - **Hashtags**: #NVIDIAGTC #WebDev #DataViz #InteractiveScience #Engineering
-- **Mentions**: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - Full app walkthrough video
 - **Manual Review Required**: NO
 
@@ -157,7 +157,7 @@ Try it yourself:
 https://z-wbe-bottleneck-lab.vercel.app
 
 
-Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #WebDev #DataViz #InteractiveScience #Engineering
 ```
 
@@ -177,7 +177,7 @@ Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harv
 - **Media**: `social_card_nim_gke.png, 04_nemotron_grounded_interpretation.png, cpu_vs_gpu_speedup.png, banner-light.png`
 - **Media Order**: 1. social_card_nim_gke.png -> 2. 04_nemotron_grounded_interpretation.png -> 3. cpu_vs_gpu_speedup.png -> 4. banner-light.png
 - **Hashtags**: #NVIDIAGTC #GoogleCloud #GoogleDevelopers #NVIDIA #SkillBadges #ContinuousLearning #FullStackAI
-- **Mentions**: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - All 4 badges verified on vanity profile
 - **Manual Review Required**: NO
 
@@ -211,7 +211,7 @@ View all 4 verified credentials on my Google Developer profile:
 https://g.dev/zhane
 
 
-Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #GoogleCloud #GoogleDevelopers #NVIDIA #SkillBadges #ContinuousLearning #FullStackAI
 ```
 
@@ -231,7 +231,7 @@ Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harv
 - **Media**: `google-nvidia-developer-badges.png, 04_nemotron_grounded_interpretation.png, cpu_vs_gpu_speedup.png, banner-dark.png`
 - **Media Order**: 1. google-nvidia-developer-badges.png -> 2. 04_nemotron_grounded_interpretation.png -> 3. cpu_vs_gpu_speedup.png -> 4. banner-dark.png
 - **Hashtags**: #NVIDIAGTC #BuildInPublic #OpenSource #Engineering #Science #Finale
-- **Mentions**: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+- **Mentions**: @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Harvey | @Ray Harvey
 - **Claims Verified**: YES - Campaign conclusion signed off
 - **Manual Review Required**: NO
 
@@ -263,7 +263,7 @@ Launch the live lab: https://z-wbe-bottleneck-lab.vercel.app
 Run the Colab: https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 
 
-Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+Mentions & Judges: @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #BuildInPublic #OpenSource #Engineering #Science #Finale
 ```
 

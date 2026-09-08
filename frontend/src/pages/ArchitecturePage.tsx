@@ -126,7 +126,7 @@ export const ArchitecturePage: React.FC = () => {
             </h2>
           </div>
           <span className="text-[10px] font-mono text-purple-700 bg-purple-50 px-2 py-0.5 rounded border border-purple-200">
-            Google Cloud Colab Enterprise + RAPIDS cuDF
+            Google Colab + RAPIDS cuDF
           </span>
         </div>
 
@@ -137,7 +137,7 @@ export const ArchitecturePage: React.FC = () => {
             <div className="w-8 h-8 rounded-full bg-purple-600 text-white flex items-center justify-center text-xs font-bold font-mono">
               A
             </div>
-            <div className="text-xs font-bold text-slate-900">Colab Enterprise</div>
+            <div className="text-xs font-bold text-slate-900">Google Colab</div>
             <p className="text-[10px] text-slate-500">
               Generates 100,000 synthetic parameter combinations
             </p>

@@ -1,7 +1,7 @@
 # NVIDIA Tesla T4 GPU Benchmark Provenance
 
 > **Topic**: Empirical GPU vs. CPU acceleration benchmark for the Google Cloud × NVIDIA GTC Berlin 2026 Golden Ticket Challenge  
-> **Hardware**: NVIDIA Tesla T4 GPU vs. 8-Core Host CPU (Google Cloud Colab Enterprise)  
+> **Hardware**: NVIDIA Tesla T4 GPU vs. 8-Core Host CPU (Google Colab)  
 > **Source Notebook**: `notebooks/gpu_accelerated_regression.ipynb`  
 > **Date**: September 7, 2026 (Recorded session timestamp: `2026-09-07T08:26:48Z`)  
 
@@ -22,7 +22,7 @@ This document establishes the empirical provenance for the **8.62× end-to-end s
 
 | Component | Specification | Provenance Details |
 | :--- | :--- | :--- |
-| **GPU Accelerator** | **NVIDIA Tesla T4** (16 GB GDDR6 VRAM) | Provisioned via Google Cloud Colab Enterprise GPU runtime (`!nvidia-smi` verified). |
+| **GPU Accelerator** | **NVIDIA Tesla T4** (16 GB GDDR6 VRAM) | Provisioned via Google Colab GPU runtime (`!nvidia-smi` verified). |
 | **Host CPU** | 8-Core Intel Xeon / AMD EPYC virtualized host | Default Google Cloud Colab compute allocation. |
 | **CUDA Version** | CUDA 12.2 / NVIDIA Driver 535+ | Colab standard environment. |
 | **Python Libraries** | RAPIDS `cudf.pandas`, `xgboost`, `scikit-learn`, `numpy` | Zero code changes using `%load_ext cudf.pandas`. |

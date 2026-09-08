@@ -22,7 +22,7 @@
 - **Media**: `social_card_data_analytics.png, 06_architecture_evidence_view.png, cpu_vs_gpu_speedup.png, ad_10.png`
 - **Media Order**: 1. social_card_data_analytics.png -> 2. 06_architecture_evidence_view.png -> 3. cpu_vs_gpu_speedup.png -> 4. ad_10.png
 - **Hashtags**: #NVIDIAGTC #NVIDIA #TeslaT4 #RAPIDS #cuDF #cuML #Benchmark #DataScience #PerformanceEngineering
-- **Mentions**: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - 8.62x overall speedup verified in cpu_vs_gpu_benchmark.json
 - **Manual Review Required**: NO
 
@@ -67,7 +67,7 @@ Run the benchmark cell live in Colab:
 https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 
 
-Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #NVIDIA #TeslaT4 #RAPIDS #cuDF #cuML #Benchmark #DataScience #PerformanceEngineering
 ```
 
@@ -87,7 +87,7 @@ Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harv
 - **Media**: `social_card_accelerated_ml.png, 05_gpu_exploration_map.png, 07_github_notebook_code_provenance.png, ad_09.png`
 - **Media Order**: 1. social_card_accelerated_ml.png -> 2. 05_gpu_exploration_map.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_09.png
 - **Hashtags**: #NVIDIAGTC #cuML #MachineLearning #RandomForest #scikitlearn #DataScience #GPUComputing
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - cuML vs scikit-learn mechanics documented
 - **Manual Review Required**: NO
 
@@ -120,6 +120,8 @@ Training time collapsed from 1.308 seconds on CPU to 0.154 seconds on Tesla T4.
 Run the cuML training comparison in Colab:
 https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #cuML #MachineLearning #RandomForest #scikitlearn #DataScience #GPUComputing
 ```
 
@@ -139,7 +141,7 @@ https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/n
 - **Media**: `social_card_accelerated_ml.png, 06_architecture_evidence_view.png, cpu_vs_gpu_speedup.png, ad_08.png`
 - **Media Order**: 1. social_card_accelerated_ml.png -> 2. 06_architecture_evidence_view.png -> 3. cpu_vs_gpu_speedup.png -> 4. ad_08.png
 - **Hashtags**: #NVIDIAGTC #DataVisualization #Benchmark #Python #Matplotlib
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - Chart matches public/data/cpu_vs_gpu_speedup.png
 - **Manual Review Required**: NO
 
@@ -161,6 +163,8 @@ Notice the consistent multi-fold speedup across ETL, feature engineering, and mo
 Inspect the raw data:
 https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #DataVisualization #Benchmark #Python #Matplotlib
 ```
 
@@ -180,7 +184,7 @@ https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/n
 - **Media**: `social_card_data_analytics.png, 06_architecture_evidence_view.png, 07_github_notebook_code_provenance.png, ad_07.png`
 - **Media Order**: 1. social_card_data_analytics.png -> 2. 06_architecture_evidence_view.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_07.png
 - **Hashtags**: #NVIDIAGTC #RAPIDS #cuDF #Python #DataEngineering #Pandas #CleanArchitecture
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - CPU fallback semantics in cudf.pandas verified
 - **Manual Review Required**: NO
 
@@ -208,6 +212,8 @@ In Z-WBE Bottleneck Lab, 100% of our core data cleaning and feature engineering 
 Inspect our cuDF profiling scripts on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #RAPIDS #cuDF #Python #DataEngineering #Pandas #CleanArchitecture
 ```
 
@@ -227,7 +233,7 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Media**: `social_card_data_analytics.png, 02_imaging_wall_baseline.png, cpu_vs_gpu_speedup.png, ad_06.png`
 - **Media Order**: 1. social_card_data_analytics.png -> 2. 02_imaging_wall_baseline.png -> 3. cpu_vs_gpu_speedup.png -> 4. ad_06.png
 - **Hashtags**: #NVIDIAGTC #Benchmarking #Statistics #Python #PerformanceTuning #BuildInPublic
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - scripts/benchmark_cpu_vs_gpu.py verified
 - **Manual Review Required**: NO
 
@@ -256,6 +262,8 @@ Result: Clean, statistically robust timing data (1.907s CPU vs 0.221s GPU).
 Review our benchmarking methodology on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #Benchmarking #Statistics #Python #PerformanceTuning #BuildInPublic
 ```
 

@@ -22,7 +22,7 @@
 - **Media**: `social_card_nim_gke.png, 06_architecture_evidence_view.png, 08_colab_rapids_and_variable_inspector.png, ad_07.png`
 - **Media Order**: 1. social_card_nim_gke.png -> 2. 06_architecture_evidence_view.png -> 3. 08_colab_rapids_and_variable_inspector.png -> 4. ad_07.png
 - **Hashtags**: #NVIDIAGTC #MemoryWall #ComputerArchitecture #HBM #GPUComputing #HighPerformanceComputing #HardwareEngineering
-- **Mentions**: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - Memory wall bandwidth calculations verified
 - **Manual Review Required**: NO
 
@@ -60,7 +60,7 @@ Experience the Memory Wall calculation live:
 https://z-wbe-bottleneck-lab.vercel.app
 
 
-Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #MemoryWall #ComputerArchitecture #HBM #GPUComputing #HighPerformanceComputing #HardwareEngineering
 ```
 
@@ -80,7 +80,7 @@ Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harv
 - **Media**: `golden_ticket_speed_up_data_analytics.png, 06_architecture_evidence_view.png, 07_github_notebook_code_provenance.png, ad_06.png`
 - **Media Order**: 1. golden_ticket_speed_up_data_analytics.png -> 2. 06_architecture_evidence_view.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_06.png
 - **Hashtags**: #NVIDIAGTC #ComputerArchitecture #HardwareDesign #SystemsEngineering #DataScience #TypeScript
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - Memory capacity vs bandwidth formula in shared/src/equations.ts
 - **Manual Review Required**: NO
 
@@ -113,6 +113,8 @@ In Z-WBE Bottleneck Lab, we model bandwidth and capacity as separate constraint 
 Inspect the formulas in `shared/src/equations.ts`:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #ComputerArchitecture #HardwareDesign #SystemsEngineering #DataScience #TypeScript
 ```
 
@@ -132,7 +134,7 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Media**: `guided_tour_walkthrough.gif`
 - **Media Order**: Single Asset: guided_tour_walkthrough.gif
 - **Hashtags**: #NVIDIAGTC #DataVisualization #InteractiveLab #Neuroscience #WebPerformance
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - Slider reaction verified
 - **Manual Review Required**: NO
 
@@ -152,6 +154,8 @@ Notice how the compute requirements grow linearly, but the memory bus pressure s
 Test the slider live:
 https://z-wbe-bottleneck-lab.vercel.app
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #DataVisualization #InteractiveLab #Neuroscience #WebPerformance
 ```
 
@@ -171,7 +175,7 @@ https://z-wbe-bottleneck-lab.vercel.app
 - **Media**: `social_card_data_analytics.png, 06_architecture_evidence_view.png, 07_github_notebook_code_provenance.png, ad_05.png`
 - **Media Order**: 1. social_card_data_analytics.png -> 2. 06_architecture_evidence_view.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_05.png
 - **Hashtags**: #NVIDIAGTC #RAPIDS #cuDF #GoogleColab #Profiling #PerformanceEngineering #Python
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - Colab Stage 5 profiling evidence verified
 - **Manual Review Required**: NO
 
@@ -199,6 +203,8 @@ Keeping data on the GPU avoids PCIe bus traversal, which is the exact same princ
 Inspect our profiling cells in Colab:
 https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #RAPIDS #cuDF #GoogleColab #Profiling #PerformanceEngineering #Python
 ```
 
@@ -218,7 +224,7 @@ https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/n
 - **Media**: `golden_ticket_accelerated_ml.png, 06_architecture_evidence_view.png, 07_github_notebook_code_provenance.png, ad_04.png`
 - **Media Order**: 1. golden_ticket_accelerated_ml.png -> 2. 06_architecture_evidence_view.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_04.png
 - **Hashtags**: #NVIDIAGTC #TypeScript #CleanCode #UnitTesting #Mathematics #BuildInPublic
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - Vitest equations suite verified
 - **Manual Review Required**: NO
 
@@ -245,6 +251,8 @@ We wrote specific unit tests in `shared/tests/equations.test.ts` to verify:
 Check out our unit tests:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #TypeScript #CleanCode #UnitTesting #Mathematics #BuildInPublic
 ```
 

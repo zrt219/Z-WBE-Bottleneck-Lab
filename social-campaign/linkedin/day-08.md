@@ -22,7 +22,7 @@
 - **Media**: `social_card_intro_inference.png, 02_imaging_wall_baseline.png, 07_github_notebook_code_provenance.png, ad_09.png`
 - **Media Order**: 1. social_card_intro_inference.png -> 2. 02_imaging_wall_baseline.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_09.png
 - **Hashtags**: #NVIDIAGTC #TypeScript #Mathematics #OpenSource #SystemsEngineering #SoftwareEngineering
-- **Mentions**: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - 12 equations in shared/src/equations.ts
 - **Manual Review Required**: NO
 
@@ -62,7 +62,7 @@ Inspect the pure TypeScript implementation on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 
-Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #TypeScript #Mathematics #OpenSource #SystemsEngineering #SoftwareEngineering
 ```
 
@@ -82,7 +82,7 @@ Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harv
 - **Media**: `golden_ticket_speed_up_data_analytics.png, 06_architecture_evidence_view.png, 07_github_notebook_code_provenance.png, ad_08.png`
 - **Media Order**: 1. golden_ticket_speed_up_data_analytics.png -> 2. 06_architecture_evidence_view.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_08.png
 - **Hashtags**: #NVIDIAGTC #FunctionalProgramming #CleanCode #TypeScript #SoftwareArchitecture
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - Pure functional architecture verified
 - **Manual Review Required**: NO
 
@@ -113,6 +113,8 @@ When building scientific software, pure functions are the ultimate defense again
 Experience the instant responsiveness live:
 https://z-wbe-bottleneck-lab.vercel.app
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #FunctionalProgramming #CleanCode #TypeScript #SoftwareArchitecture
 ```
 
@@ -132,7 +134,7 @@ https://z-wbe-bottleneck-lab.vercel.app
 - **Media**: `golden_ticket_intro_inference.png, 03_bottleneck_moved_transition.png, 07_github_notebook_code_provenance.png, ad_07.png`
 - **Media Order**: 1. golden_ticket_intro_inference.png -> 2. 03_bottleneck_moved_transition.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_07.png
 - **Hashtags**: #NVIDIAGTC #DataTransparency #OpenScience #UIUX #WebDev
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - Evidence drawer UI screenshot
 - **Manual Review Required**: NO
 
@@ -160,6 +162,8 @@ Transparency is not an afterthought; it is built into the primary interface.
 Open the evidence drawer live:
 https://z-wbe-bottleneck-lab.vercel.app
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #DataTransparency #OpenScience #UIUX #WebDev
 ```
 
@@ -179,7 +183,7 @@ https://z-wbe-bottleneck-lab.vercel.app
 - **Media**: `golden_ticket_accelerated_ml.png, 06_architecture_evidence_view.png, 07_github_notebook_code_provenance.png, ad_06.png`
 - **Media Order**: 1. golden_ticket_accelerated_ml.png -> 2. 06_architecture_evidence_view.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_06.png
 - **Hashtags**: #NVIDIAGTC #ThermalPower #EnergyEfficiency #DataCenter #HighPerformanceComputing #HardwareArchitecture
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - Power and PUE equations verified
 - **Manual Review Required**: NO
 
@@ -213,6 +217,8 @@ In Z-WBE Bottleneck Lab, power is not a footnote; it is one of the 8 core constr
 Inspect our thermodynamic equations on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #ThermalPower #EnergyEfficiency #DataCenter #HighPerformanceComputing #HardwareArchitecture
 ```
 
@@ -232,7 +238,7 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Media**: `golden_ticket_data_analytics.png, 06_architecture_evidence_view.png, 07_github_notebook_code_provenance.png, ad_05.png`
 - **Media Order**: 1. golden_ticket_data_analytics.png -> 2. 06_architecture_evidence_view.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_05.png
 - **Hashtags**: #NVIDIAGTC #TypeScript #SoftwareTesting #Vitest #BuildInPublic
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - shared/tests/equations.test.ts passing (19/19 tests)
 - **Manual Review Required**: NO
 
@@ -259,6 +265,8 @@ All 19 tests pass in vitest in 10 milliseconds.
 Explore the tests:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #TypeScript #SoftwareTesting #Vitest #BuildInPublic
 ```
 

@@ -22,7 +22,7 @@
 - **Media**: `social_card_intro_inference.png, 02_imaging_wall_baseline.png, cpu_vs_gpu_speedup.png, banner-light.png`
 - **Media Order**: 1. social_card_intro_inference.png -> 2. 02_imaging_wall_baseline.png -> 3. cpu_vs_gpu_speedup.png -> 4. banner-light.png
 - **Hashtags**: #NVIDIAGTC #WholeBrainEmulation #ComputationalNeuroscience #SystemsEngineering #Biophysics #Research #OpenSource
-- **Mentions**: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - 6 pipeline stages modeled in Z-WBE
 - **Manual Review Required**: NO
 
@@ -57,7 +57,7 @@ Explore the complete pipeline model live:
 https://z-wbe-bottleneck-lab.vercel.app
 
 
-Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #WholeBrainEmulation #ComputationalNeuroscience #SystemsEngineering #Biophysics #Research #OpenSource
 ```
 
@@ -77,7 +77,7 @@ Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harv
 - **Media**: `social_card_intro_inference.png, 01_hero_overview.png, 07_github_notebook_code_provenance.png, banner-dark.png`
 - **Media Order**: 1. social_card_intro_inference.png -> 2. 01_hero_overview.png -> 3. 07_github_notebook_code_provenance.png -> 4. banner-dark.png
 - **Hashtags**: #NVIDIAGTC #ComputerVision #DeepLearning #Neuroscience #Connectomics #Inference
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - Reconstruction compute equations documented
 - **Manual Review Required**: NO
 
@@ -107,6 +107,8 @@ In Z-WBE Bottleneck Lab, our Reconstruction equation calculates this pre-simulat
 Inspect our reconstruction formulas in the repository:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #ComputerVision #DeepLearning #Neuroscience #Connectomics #Inference
 ```
 
@@ -126,7 +128,7 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Media**: `guided_tour_walkthrough.mp4`
 - **Media Order**: Single Asset: guided_tour_walkthrough.mp4
 - **Hashtags**: #NVIDIAGTC #WebDev #Engineering #DataVisualization #InteractiveApp
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - Full app walkthrough MP4
 - **Manual Review Required**: NO
 
@@ -146,6 +148,8 @@ Our demonstrator connects the entire pipeline end-to-end so you can see the syst
 Launch the lab in your browser:
 https://z-wbe-bottleneck-lab.vercel.app
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #WebDev #Engineering #DataVisualization #InteractiveApp
 ```
 
@@ -165,7 +169,7 @@ https://z-wbe-bottleneck-lab.vercel.app
 - **Media**: `social_card_data_analytics.png, 02_imaging_wall_baseline.png, 07_github_notebook_code_provenance.png, ad_10.png`
 - **Media Order**: 1. social_card_data_analytics.png -> 2. 02_imaging_wall_baseline.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_10.png
 - **Hashtags**: #NVIDIAGTC #Neuroscience #Biophysics #ScientificIntegrity #SystemsModeling #Research
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - Epistemic limitations documented in README.md
 - **Manual Review Required**: NO
 
@@ -197,6 +201,8 @@ We never claim WBE is 'solved'—we build the systems modeling framework to quan
 Read our full discussion of epistemic limitations on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #Neuroscience #Biophysics #ScientificIntegrity #SystemsModeling #Research
 ```
 
@@ -216,7 +222,7 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Media**: `social_card_nim_gke.png, 04_nemotron_grounded_interpretation.png, 07_github_notebook_code_provenance.png, ad_09.png`
 - **Media Order**: 1. social_card_nim_gke.png -> 2. 04_nemotron_grounded_interpretation.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_09.png
 - **Hashtags**: #NVIDIAGTC #GoogleCloud #CloudRun #Docker #DevOps #BackendEngineering #TypeScript
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - Dockerfile and Cloud Run compatibility tested
 - **Manual Review Required**: NO
 
@@ -243,6 +249,8 @@ Tested and documented in `evidence/contest/cloud-run/deployment-summary.md`.
 Inspect our Dockerfile on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #GoogleCloud #CloudRun #Docker #DevOps #BackendEngineering #TypeScript
 ```
 

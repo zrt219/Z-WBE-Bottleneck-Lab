@@ -22,7 +22,7 @@
 - **Media**: `social_card_intro_inference.png, 04_nemotron_grounded_interpretation.png, 07_github_notebook_code_provenance.png, banner-light.png`
 - **Media Order**: 1. social_card_intro_inference.png -> 2. 04_nemotron_grounded_interpretation.png -> 3. 07_github_notebook_code_provenance.png -> 4. banner-light.png
 - **Hashtags**: #NVIDIAGTC #NVIDIA #Nemotron #OpenRouter #AIEngineering #PromptEngineering #SystemArchitecture #TrustworthyAI
-- **Mentions**: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - Nemotron 3 Super model slug and grounding verified
 - **Manual Review Required**: NO
 
@@ -54,7 +54,7 @@ Experience grounded AI in action:
 https://z-wbe-bottleneck-lab.vercel.app
 
 
-Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #NVIDIA #Nemotron #OpenRouter #AIEngineering #PromptEngineering #SystemArchitecture #TrustworthyAI
 ```
 
@@ -74,7 +74,7 @@ Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harv
 - **Media**: `social_card_intro_inference.png, 04_nemotron_grounded_interpretation.png, 07_github_notebook_code_provenance.png, banner-dark.png`
 - **Media Order**: 1. social_card_intro_inference.png -> 2. 04_nemotron_grounded_interpretation.png -> 3. 07_github_notebook_code_provenance.png -> 4. banner-dark.png
 - **Hashtags**: #NVIDIAGTC #PromptEngineering #OpenRouter #Nemotron #AIEthics #SoftwareTesting
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - backend/src/services/prompt.ts system prompt verified
 - **Manual Review Required**: NO
 
@@ -111,6 +111,8 @@ In 100% of test cases, Nemotron adhered to the numerical boundary and explained 
 Inspect the complete prompt implementation on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #PromptEngineering #OpenRouter #Nemotron #AIEthics #SoftwareTesting
 ```
 
@@ -130,7 +132,7 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Media**: `social_card_intro_inference.png, 02_imaging_wall_baseline.png, eda_scatter_matrix.png, ad_10.png`
 - **Media Order**: 1. social_card_intro_inference.png -> 2. 02_imaging_wall_baseline.png -> 3. eda_scatter_matrix.png -> 4. ad_10.png
 - **Hashtags**: #NVIDIAGTC #NVIDIAAI #Nemotron #UIUX #DataScience
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - Screenshot of Nemotron response card
 - **Manual Review Required**: NO
 
@@ -156,6 +158,8 @@ This is what grounded, trustworthy generative AI looks like in scientific applic
 Try prompting different scenarios live:
 https://z-wbe-bottleneck-lab.vercel.app
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #NVIDIAAI #Nemotron #UIUX #DataScience
 ```
 
@@ -175,7 +179,7 @@ https://z-wbe-bottleneck-lab.vercel.app
 - **Media**: `golden_ticket_intro_inference.png, 04_nemotron_grounded_interpretation.png, 07_github_notebook_code_provenance.png, ad_09.png`
 - **Media Order**: 1. golden_ticket_intro_inference.png -> 2. 04_nemotron_grounded_interpretation.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_09.png
 - **Hashtags**: #NVIDIAGTC #WebSecurity #OpenRouter #BackendEngineering #DevOps #TypeScript
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - OpenRouter streaming implementation verified
 - **Manual Review Required**: NO
 
@@ -205,6 +209,8 @@ The user can always explore calculations even when external AI APIs are offline.
 Review our backend proxy code on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #WebSecurity #OpenRouter #BackendEngineering #DevOps #TypeScript
 ```
 
@@ -224,7 +230,7 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Media**: `golden_ticket_accelerated_ml.png, 04_nemotron_grounded_interpretation.png, 07_github_notebook_code_provenance.png, ad_08.png`
 - **Media Order**: 1. golden_ticket_accelerated_ml.png -> 2. 04_nemotron_grounded_interpretation.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_08.png
 - **Hashtags**: #NVIDIAGTC #LLMEval #SoftwareTesting #Vitest #AIEngineering #BuildInPublic
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - shared/tests/grounding.test.ts passing
 - **Manual Review Required**: NO
 
@@ -253,6 +259,8 @@ All 7 grounding contract tests pass in Vitest.
 Check out our LLM evaluation tests:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #LLMEval #SoftwareTesting #Vitest #AIEngineering #BuildInPublic
 ```
 

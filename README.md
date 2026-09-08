@@ -21,13 +21,13 @@
 **Built for the Google Cloud × NVIDIA GTC Berlin 2026 Golden Ticket Challenge**  
 GitHub Repository: [https://github.com/zrt219/Z-WBE-Bottleneck-Lab](https://github.com/zrt219/Z-WBE-Bottleneck-Lab)  
 Official Challenge Hashtags: **`#NVIDIAGTC`** • **`#GoogleCloud`** • **`#GTC26`** • **`#GTC2026`** • **`#BuildWithAI`**  
-Key Repository Topics: `nvidia-gtc` `google-cloud` `google-cloud-run` `nvidia-nemotron` `rapids-cudf` `colab-enterprise` `whole-brain-emulation` `connectomics` `computational-neuroscience` `gpu-acceleration` `amdahls-law`
+Key Repository Topics: `nvidia-gtc` `google-cloud` `google-cloud-run` `nvidia-nemotron` `rapids-cudf` `google-colab` `whole-brain-emulation` `connectomics` `computational-neuroscience` `gpu-acceleration` `amdahls-law`
 
 ---
 
 ## 🏛️ Google Cloud × NVIDIA Developer Challenge 2026: Project Demonstrator
 
-**Z-WBE Bottleneck Lab** was built for the **Google Cloud × NVIDIA GTC Berlin 2026 Golden Ticket Challenge**. Built on strict epistemic separation, the public interactive demonstrator is deployed with high-speed global edge delivery on **Vercel**, backed by a production-ready containerized microservice architected for **Google Cloud Run**, and leverages open foundation models (**NVIDIA Nemotron 3 Super 120B** via OpenRouter) alongside **NVIDIA RAPIDS (`cudf.pandas`)** in Google Cloud Colab Enterprise to evaluate multi-dimensional scaling bottlenecks in Whole Brain Emulation.
+**Z-WBE Bottleneck Lab** was built for the **Google Cloud × NVIDIA GTC Berlin 2026 Golden Ticket Challenge**. Built on strict epistemic separation, the public interactive demonstrator is deployed with high-speed global edge delivery on **Vercel**, backed by a production-ready containerized microservice architected for **Google Cloud Run**, and leverages open foundation models (**NVIDIA Nemotron 3 Super 120B** via OpenRouter) alongside **NVIDIA RAPIDS (`cudf.pandas`)** in Google Colab to evaluate multi-dimensional scaling bottlenecks in Whole Brain Emulation.
 
 ---
 
@@ -60,7 +60,7 @@ To develop Z-WBE Bottleneck Lab, the developer completed the official **Google C
 | Learning Pathway & Public Badge Link | Verification Status | Architectural Contribution to Z-WBE Bottleneck Lab |
 | :--- | :---: | :--- |
 | **1. [Deploy Faster Generative AI Models with NVIDIA NIM on GKE](https://developers.google.com/profile/badges/playlists/nvidia-deploy-with-gen-ai?u=zhane)**<br>[🔗 Course Pathway](https://developers.google.com/learn/pathways/deploy-faster-gen-ai-models-nvidia-gke) | ✅ Verified Badge<br>(Sep 7, 2026) | **Containerized Microservice & Inference Gateway**: Informed the high-throughput serverless microservice design for Google Cloud Run. Guided the strict JSON schema serialization, low-latency client caching, and resilient circuit-breaker fallbacks when requesting generative reasoning from NVIDIA Nemotron. |
-| **2. [Speed Up Data Analytics on GPUs](https://developers.google.com/profile/badges/playlists/speed-up-data-analytics-GPUs?u=zhane)**<br>[🔗 Course Pathway](https://developers.google.com/learn/pathways/speed-up-data-analytics-GPUs) | ✅ Verified Badge<br>(Sep 7, 2026) | **100,000-Scenario Monte Carlo Exploration Map**: Applied GPU-accelerated dataframe processing with NVIDIA RAPIDS `cudf.pandas` in Google Cloud Colab Enterprise, enabling zero-code GPU parallelism across a 100,000-scenario multi-dimensional parameter space. |
+| **2. [Speed Up Data Analytics on GPUs](https://developers.google.com/profile/badges/playlists/speed-up-data-analytics-GPUs?u=zhane)**<br>[🔗 Course Pathway](https://developers.google.com/learn/pathways/speed-up-data-analytics-GPUs) | ✅ Verified Badge<br>(Sep 7, 2026) | **100,000-Scenario Monte Carlo Exploration Map**: Applied GPU-accelerated dataframe processing with NVIDIA RAPIDS `cudf.pandas` in Google Colab, enabling zero-code GPU parallelism across a 100,000-scenario multi-dimensional parameter space. |
 | **3. [Accelerated Machine Learning with Google Cloud and NVIDIA](https://developers.google.com/profile/badges/playlists/accelerated-machine-learning-with-google-cloud-and-nvidia?u=110918189625880989910)**<br>[🔗 Course Pathway](https://developers.google.com/learn/pathways/accelerated-machine-learning-with-google-cloud-and-nvidia) | ✅ Verified Badge<br>(Sep 7, 2026) | **8-Dimensional Hardware Bottleneck Matrix**: Provided the systems-level engineering foundation to model tensor compute scaling (PFLOPS), High-Bandwidth Memory (HBM3e) bus bandwidth saturation, NVLink cluster fabric communication, and megawatt data-center power limits. |
 | **4. [Intro to Inference: How to Run AI Models on a GPU](https://developers.google.com/profile/badges/playlists/ai-models-on-gpu-intro?u=zhane)**<br>[🔗 Course Pathway](https://developers.google.com/learn/pathways/ai-models-on-gpu-intro) | ✅ Verified Badge<br>(Sep 7, 2026) | **Latency Budgeting & Token Calibration**: Taught KV-cache sizing, memory-bandwidth-bound vs. compute-bound inference phases, and temperature control. Enabled seamless zero-token-waste integration with `nvidia/nemotron-3-super-120b-a12b:free` on OpenRouter. |
 
@@ -73,7 +73,7 @@ Entries are evaluated by a joint Google Cloud & NVIDIA judging panel on four equ
 | Criterion | Evaluation Dimension | How Z-WBE Bottleneck Lab Fulfills It (10/10 Focus) |
 | :--- | :--- | :--- |
 | **(a) Technical Innovation** | Novelty, biophysical scaling, and real-time Amdahl's Law modeling | First public scientific tool to connect all 8 dimensions of Whole Brain Emulation (imaging, segmentation, PFLOPS, memory bandwidth, NVLink interconnect, power, proofreading, budget) into 12 coupled analytical equations executing in **&lt; 1 ms** locally. Eliminates speculative timelines with deterministic sensitivity curves. |
-| **(b) Effective Use of NVIDIA & Google Cloud** | Ecosystem synergy and full-stack integration | End-to-end integration: **Google Cloud Colab Enterprise** hosts the parameter sweeps; **NVIDIA RAPIDS cuDF** accelerates 100,000-scenario Monte Carlo simulations; **Google Cloud Run** containerization configurations are provided for serverless microservice deployment; and **NVIDIA Nemotron 3 Super 120B** (`nvidia/nemotron-3-super-120b-a12b:free` via OpenRouter) delivers grounded causal interpretation. |
+| **(b) Effective Use of NVIDIA & Google Cloud** | Ecosystem synergy and full-stack integration | End-to-end integration: **Google Colab** hosts the parameter sweeps; **NVIDIA RAPIDS cuDF** accelerates 100,000-scenario Monte Carlo simulations; **Google Cloud Run** containerization configurations are provided for serverless microservice deployment; and **NVIDIA Nemotron 3 Super 120B** (`nvidia/nemotron-3-super-120b-a12b:free` via OpenRouter) delivers grounded causal interpretation. |
 | **(c) Potential Impact & Usefulness** | Value to developers, researchers, and scientific community | De-silos neuroscience, electron microscopy, and HPC engineering. When researchers ask *"What happens if imaging becomes 100x faster?"*, the lab proves that the dominant bottleneck immediately jumps to memory bandwidth and cold storage, preventing millions in misallocated capital grants. |
 | **(d) Quality of Documentation & Presentation** | Code cleanliness, tests, accessibility, and documentation | Complete mathematical specification for all 12 equations; **84 passing automated Vitest unit tests** across 10 suites; strict TypeScript monorepo; WCAG 2.1 AAA accessibility mode; 1-click interactive demo; scenario permalink state synchronization; comprehensive visual walkthroughs, animated GIFs, and Colab runtime verification proofs. |
 
@@ -203,12 +203,12 @@ An interactive walkthrough guiding judges and researchers through physical slide
   <p><em>Guided Tour Walkthrough: Step-by-step exploration of the 6-stage pipeline, parameter controls, and hardware stress tests.</em></p>
 </div>
 
-### ⚡ Google Cloud Colab Enterprise: Live Tesla T4 Acceleration
-Real-time recording of the Google Cloud Colab Enterprise notebook executing the accelerated pipeline with NVIDIA RAPIDS `cudf.pandas`, `cuml.accel`, and live `nvidia-smi` terminal output:
+### ⚡ Google Colab: Live Tesla T4 Acceleration
+Real-time recording of the Google Colab notebook executing the accelerated pipeline with NVIDIA RAPIDS `cudf.pandas`, `cuml.accel`, and live `nvidia-smi` terminal output:
 
 <div align="center">
-  <img src="./public/colab-evidence/colab_t4_live_execution.gif" alt="Google Cloud Colab Live Execution on Tesla T4" width="880" style="border-radius: 12px; box-shadow: 0 6px 30px rgba(0,0,0,0.25);" />
-  <p><em>Live Google Cloud Colab Session: Running zero-code GPU-accelerated pipelines with active terminal monitoring on NVIDIA Tesla T4.</em></p>
+  <img src="./public/colab-evidence/colab_t4_live_execution.gif" alt="Google Colab Live Execution on Tesla T4" width="880" style="border-radius: 12px; box-shadow: 0 6px 30px rgba(0,0,0,0.25);" />
+  <p><em>Live Google Colab Session: Running zero-code GPU-accelerated pipelines with active terminal monitoring on NVIDIA Tesla T4.</em></p>
 </div>
 
 ---
@@ -296,7 +296,7 @@ flowchart TD
         GroundingContract -->|"Structured JSON (Limits, Why, Leverage)"| ExplainRoute
     end
 
-    subgraph GPULayer ["Cloud GPU Analytics (Google Cloud Colab Enterprise)"]
+    subgraph GPULayer ["Cloud GPU Analytics (Google Colab)"]
         TeslaT4["NVIDIA Tesla T4 GPU Runtime<br/>16GB VRAM | CUDA 12.2"]
         RAPIDSStack["NVIDIA RAPIDS Stack<br/>cudf.pandas & cuml.accel"]
         MonteCarloSweep["100,000-Scenario Parameter Sweep<br/>8.62x Acceleration vs Host CPU"]
@@ -425,12 +425,12 @@ To evaluate where a proposed emulation architecture fails, the engine normalizes
 > *Permanent Direct Link*: [`https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb`](https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb)
 
 ### 8.62× End-to-End Speedup Benchmark on NVIDIA Tesla T4
-To validate the real-world performance gains taught in the **Speed Up Data Analytics on GPUs** and **Accelerated Machine Learning with Google Cloud and NVIDIA** pathways, an end-to-end machine learning pipeline was benchmarked on Google Cloud Colab Enterprise comparing CPU (8-core host CPU) vs GPU (**NVIDIA Tesla T4 16GB** with CUDA 12.2 / Driver 535+):
+To validate the real-world performance gains taught in the **Speed Up Data Analytics on GPUs** and **Accelerated Machine Learning with Google Cloud and NVIDIA** pathways, an end-to-end machine learning pipeline was benchmarked on Google Colab comparing CPU (8-core host CPU) vs GPU (**NVIDIA Tesla T4 16GB** with CUDA 12.2 / Driver 535+):
 
 * **CPU Total Execution Time**: **1.907 seconds**
 * **NVIDIA Tesla T4 Total Execution Time**: **0.221 seconds**
 * **Overall Speedup**: **8.62× Faster (88.4% Latency Reduction)**
-* **Zero Code Changes**: Powered by `%load_ext cudf.pandas` and GPU-accelerated XGBoost / cuML
+* **Zero-Code-Change Acceleration**: Measured 8.62× pipeline speedup on an NVIDIA Tesla T4 in Google Colab: 1.907 s CPU vs 0.221 s GPU. cudf.pandas provided zero-code-change GPU acceleration for supported pandas operations.
 
 <div align="center">
   <img src="./public/data/cpu_vs_gpu_speedup.png" alt="NVIDIA Tesla T4 8.62x Benchmark Speedup Chart" width="760" style="border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.15);" />
@@ -449,16 +449,16 @@ To validate the real-world performance gains taught in the **Speed Up Data Analy
       </td>
       <td width="50%" align="center">
         <a href="./public/colab-evidence/colab_gemini_assistant.gif">
-          <img src="./public/colab-evidence/colab_gemini_assistant.gif" alt="Colab Enterprise Integrated Gemini AI Assistant" width="100%" style="border-radius: 8px; border: 1px solid #333; box-shadow: 0 4px 16px rgba(0,0,0,0.2);" />
+          <img src="./public/colab-evidence/colab_gemini_assistant.gif" alt="Colab Integrated Gemini AI Assistant" width="100%" style="border-radius: 8px; border: 1px solid #333; box-shadow: 0 4px 16px rgba(0,0,0,0.2);" />
         </a><br />
         <strong>Integrated Gemini AI Assistance in Colab</strong><br />
-        <em>Querying Google Cloud Colab Enterprise Gemini assistant to inspect NVIDIA RAPIDS acceleration pipeline.</em>
+        <em>Querying Google Colab Gemini assistant to inspect NVIDIA RAPIDS acceleration pipeline.</em>
       </td>
     </tr>
     <tr>
       <td colspan="2" align="center">
         <a href="./public/colab-evidence/colab_full_overview_execution.gif">
-          <img src="./public/colab-evidence/colab_full_overview_execution.gif" alt="Google Colab Enterprise Full Notebook Execution" width="100%" style="border-radius: 8px; border: 1px solid #333; box-shadow: 0 4px 16px rgba(0,0,0,0.2);" />
+          <img src="./public/colab-evidence/colab_full_overview_execution.gif" alt="Google Colab Full Notebook Execution" width="100%" style="border-radius: 8px; border: 1px solid #333; box-shadow: 0 4px 16px rgba(0,0,0,0.2);" />
         </a><br />
         <strong>Canonical Notebook Overview &amp; Execution Flow</strong><br />
         <em>Complete 10-section canonical notebook running live on Tesla T4 GPU hardware runtime.</em>
@@ -469,21 +469,21 @@ To validate the real-world performance gains taught in the **Speed Up Data Analy
   </table>
 </div>
 
-### Google Cloud Colab Enterprise Runtime & Provenance Gallery
+### Google Colab Runtime & Provenance Gallery
 
-All benchmark metrics were executed in Google Cloud Colab Enterprise with full reproducible telemetry and runtime logging:
+All benchmark metrics were executed in Google Colab with full reproducible telemetry and runtime logging:
 
 <table align="center" width="100%">
   <tr>
     <td width="50%" align="center">
       <a href="./public/colab-evidence/01_colab_notebook_overview.png"><img src="./public/colab-evidence/01_colab_notebook_overview.png" alt="Colab Notebook Overview & Authorship" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
       <strong>Colab Notebook Header & Environment</strong><br />
-      <em>Accelerated Data Science with Google Cloud and NVIDIA on Colab Enterprise, connected to T4 GPU.</em>
+      <em>Accelerated Data Science with Google Cloud and NVIDIA on Google Colab, connected to T4 GPU.</em>
     </td>
     <td width="50%" align="center">
       <a href="./public/colab-evidence/02_colab_t4_gpu_runtime_dialog.png"><img src="./public/colab-evidence/02_colab_t4_gpu_runtime_dialog.png" alt="Google Colab Change Runtime Type — T4 GPU" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
       <strong>Colab Runtime Type: NVIDIA T4 GPU</strong><br />
-      <em>Verification of Google Colab Enterprise environment configured with active T4 GPU hardware accelerator and Python 3.</em>
+      <em>Verification of Google Colab environment configured with active T4 GPU hardware accelerator and Python 3.</em>
     </td>
   </tr>
   <tr>
@@ -495,7 +495,7 @@ All benchmark metrics were executed in Google Cloud Colab Enterprise with full r
     <td width="50%" align="center">
       <a href="./public/colab-evidence/t4-colab-runtime-proof.png"><img src="./public/colab-evidence/t4-colab-runtime-proof.png" alt="Active Colab Session with Tesla T4 Provisioning" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
       <strong>Active Colab Session with Tesla T4 Provisioning</strong><br />
-      <em>Live active notebook showing connected T4 (Python 3) runtime status bar in Google Colab Enterprise.</em>
+      <em>Live active notebook showing connected T4 (Python 3) runtime status bar in Google Colab.</em>
     </td>
   </tr>
   <tr>
@@ -558,7 +558,7 @@ flowchart TD
         SyncScript -->|"6. Commit & 7. Push to main"| GH
     end
 
-    subgraph CloudExecution ["Hardware Acceleration (Google Cloud Colab Enterprise)"]
+    subgraph CloudExecution ["Hardware Acceleration (Google Colab)"]
         LaunchBadge["Direct Colab Launch Badge / URL<br/>colab.research.google.com/..."]
         ColabVM["Google Colab VM with Tesla T4 GPU<br/>Execute Cells with RAPIDS & cuML"]
         ColabSave["Colab Menu: File -> Save a copy in GitHub<br/>Path: notebooks/Z_WBE_GPU_LAB.ipynb"]
@@ -584,7 +584,7 @@ $$\text{Antigravity Editing} \longrightarrow \text{Git Push} \longrightarrow \te
 1. **Antigravity Authors**: Equations, test suites, and markdown documentation are authored and verified locally.
 2. **Push to GitHub**: Changes are committed and pushed to `origin main`.
 3. **Launch in Colab**: The notebook is opened via its [Permanent Colab Link](https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb).
-4. **Execute on T4**: Cells are executed in Google Cloud Colab Enterprise on an NVIDIA Tesla T4 GPU.
+4. **Execute on T4**: Cells are executed in Google Colab on an NVIDIA Tesla T4 GPU.
 5. **Save to GitHub**: In Colab, the researcher selects `File -> Save a copy in GitHub`, writing outputs directly back to `notebooks/Z_WBE_GPU_LAB.ipynb`.
 6. **Pull to Antigravity**: Running `git pull --rebase origin main` (or `.\scripts\sync-colab.ps1`) brings live GPU outputs and plots back into the local environment.
 
@@ -677,7 +677,7 @@ flowchart TD
 ## 12. Google Cloud Infrastructure
 
 * **Google Cloud Run**: Serverless container configuration and Dockerfile provided for hosting the Node.js TypeScript API, managing sub-second cold starts, automated scaling, and secure environment variable isolation.
-* **Google Cloud Colab Enterprise**: High-performance GPU notebook execution environment used to execute the Tesla T4 benchmark and simulate 100,000 scenario combinations with RAPIDS cuDF. See [COLAB.md](COLAB.md) for the complete Google Colab Enterprise execution guide, synchronization workflow, and permanent launch link.
+* **Google Colab**: High-performance GPU notebook execution environment used to execute the Tesla T4 benchmark and simulate 100,000 scenario combinations with RAPIDS cuDF. See [COLAB.md](COLAB.md) for the complete Google Colab execution guide, synchronization workflow, and permanent launch link.
 * **Cloud Build & Artifact Registry**: Automated container image construction and registry storage for Cloud Run revisions.
 * **Secret Manager**: Secure externalized storage for OpenRouter credentials outside client-side application code.
 * **GKE Architectural Alignment**: Follows Google Kubernetes Engine best practices for hosting accelerated microservices.
@@ -761,7 +761,7 @@ A curated gallery of visual campaign media cards illustrating the key engineerin
     <td width="50%" align="center">
       <a href="./public/marketing/ad_05.png"><img src="./public/marketing/ad_05.png" alt="Campaign Card 05 — 8.62x Speedup on Tesla T4" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
       <strong>Card 05: 8.62× Acceleration on NVIDIA Tesla T4</strong><br />
-      <em>Proven in Google Cloud Colab Enterprise with RAPIDS cuDF and cuML (1.907s CPU -> 0.221s GPU, 8.62× speedup).</em>
+      <em>Proven in Google Colab with RAPIDS cuDF and cuML: Measured 8.62× pipeline speedup on an NVIDIA Tesla T4 in Google Colab: 1.907 s CPU vs 0.221 s GPU. cudf.pandas provided zero-code-change GPU acceleration for supported pandas operations.</em>
     </td>
     <td width="50%" align="center">
       <a href="./public/marketing/ad_06.png"><img src="./public/marketing/ad_06.png" alt="Campaign Card 06 — 100,000-Scenario Monte Carlo Map" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
@@ -801,7 +801,7 @@ A curated gallery of visual campaign media cards illustrating the key engineerin
 All visual assets and media produced for the challenge are organized into verified, dedicated directories:
 * **Interactive Live Demos & Screen Recordings**: See [Section 4: Visual Walkthrough & Interactive Demo Recordings](#4-visual-walkthrough--interactive-demo-recordings) (`./public/recordings/` and `./submission-kit/recordings/`) for full-motion captures of the Hero Scenario bottleneck shift, NVIDIA Nemotron causal reasoning with ELI5 toggle, guided tour walkthrough, and Google Colab live T4 GPU execution.
 * **Full-Resolution Application Screenshots (1920×1080)**: See [Section 5: Application High-Resolution Screenshot Gallery](#5-application-high-resolution-screenshot-gallery-19201080) (`./public/screenshots/` and `./submission-kit/screenshots/`) for pixel-perfect captures across all primary app views.
-* **Empirical Hardware Benchmarks & Provenance Proofs**: See [Section 11: NVIDIA Acceleration Stack & Tesla T4 Colab Benchmarks](#11-nvidia-acceleration-stack--tesla-t4-colab-benchmarks) (`./public/colab-evidence/` and `./evidence/contest/gpu-benchmark/`) for the complete 9-item Colab Enterprise runtime provenance gallery and speedup charts.
+* **Empirical Hardware Benchmarks & Provenance Proofs**: See [Section 11: NVIDIA Acceleration Stack & Tesla T4 Colab Benchmarks](#11-nvidia-acceleration-stack--tesla-t4-colab-benchmarks) (`./public/colab-evidence/` and `./evidence/contest/gpu-benchmark/`) for the complete 9-item Colab runtime provenance gallery and speedup charts.
 * **Campaign Media & Social Cards**: See the 10 campaign design cards above (`./public/marketing/` and `marketing ads/`) created for developer engagement and contest submission.
 
 ---
@@ -861,8 +861,8 @@ npm test
 * **Competition**: Google Cloud × NVIDIA Developer Challenge 2026
 * **Social Hashtag**: **`#NVIDIAGTC`**
 * **Judges & Channels**:
-  * **LinkedIn**: Google for Developers, NVIDIA AI, Jen Harvey, Ray Harvey
-  * **X (Twitter)**: `@GoogleDevs`, `@NVIDIAAI`
+  * **LinkedIn**: Google for Developers, NVIDIA AI, Asier Arranz, Jen Harvey, Ray Harvey, Chorouk Malmoum
+  * **X (Twitter)**: `@GoogleDevs`, `@NVIDIAAI`, `@asierarranz`
 * **Google Developers Public Profile**: [developers.google.com/profile/u/zhane](https://developers.google.com/profile/u/zhane) • [ID: 110918189625880989910](https://developers.google.com/profile/u/110918189625880989910) • **Verified Level 11 Developer**
 * **Verified Pathways & Public Credentials (Earned Sep 7, 2026 - 4/4 Complete Sweep)**:
   * [Deploy Faster Generative AI Models with NVIDIA NIM on GKE](https://developers.google.com/profile/badges/playlists/nvidia-deploy-with-gen-ai?u=zhane) • [Pathway](https://developers.google.com/learn/pathways/deploy-faster-gen-ai-models-nvidia-gke)

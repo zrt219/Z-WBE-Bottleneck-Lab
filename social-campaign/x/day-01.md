@@ -18,10 +18,10 @@
 - **Scheduled Time (MDT)**: 10:15 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
 - **Hook**: What breaks first if you attempt whole-brain emulation?
-- **Post Summary**: We built Z-WBE Bottleneck Lab for the @GoogleDevs x @NVIDIAAI GTC Berlin Golden Ticket Challenge.
+- **Post Summary**: I built Z-WBE Bottleneck Lab for the @GoogleDevs x @NVIDIAAI GTC Berlin Golden Ticket Challenge.
 - **Media**: `social_card_nim_gke.png, social_card_data_analytics.png, social_card_accelerated_ml.png, social_card_intro_inference.png`
 - **Media Order**: 1. social_card_nim_gke.png -> 2. social_card_data_analytics.png -> 3. social_card_accelerated_ml.png -> 4. social_card_intro_inference.png
-- **Hashtags**: #NVIDIAGTC #WholeBrainEmulation
+- **Hashtags**: #NVIDIAGTC
 - **Mentions**: @GoogleDevs | @NVIDIAAI
 - **Claims Verified**: YES - Upgraded launch draft
 - **Manual Review Required**: NO
@@ -38,13 +38,13 @@
 ```markdown
 What breaks first if you attempt whole-brain emulation?
 
-We built Z-WBE Bottleneck Lab for the @GoogleDevs x @NVIDIAAI GTC Berlin Golden Ticket Challenge.
+I built Z-WBE Bottleneck Lab for the @GoogleDevs x @NVIDIAAI GTC Berlin Golden Ticket Challenge.
 
 Change assumptions. See what fractures.
 
 Live app: https://z-wbe-bottleneck-lab.vercel.app
 
-#NVIDIAGTC #WholeBrainEmulation
+cc @asierarranz #NVIDIAGTC
 ```
 
 ---

@@ -22,7 +22,7 @@
 - **Media**: `golden_ticket_speed_up_data_analytics.png, 02_imaging_wall_baseline.png, 07_github_notebook_code_provenance.png, ad_06.png`
 - **Media Order**: 1. golden_ticket_speed_up_data_analytics.png -> 2. 02_imaging_wall_baseline.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_06.png
 - **Hashtags**: #NVIDIAGTC #Microscopy #Biophysics #Cryopreservation #Connectomics #Neuroscience #SystemsModeling
-- **Mentions**: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - Preservation and acquisition biophysics modeled
 - **Manual Review Required**: NO
 
@@ -57,7 +57,7 @@ Explore the trade-offs of voxel resolution live:
 https://z-wbe-bottleneck-lab.vercel.app
 
 
-Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #Microscopy #Biophysics #Cryopreservation #Connectomics #Neuroscience #SystemsModeling
 ```
 
@@ -77,7 +77,7 @@ Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harv
 - **Media**: `golden_ticket_intro_inference.png, 02_imaging_wall_baseline.png, 07_github_notebook_code_provenance.png, ad_05.png`
 - **Media Order**: 1. golden_ticket_intro_inference.png -> 2. 02_imaging_wall_baseline.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_05.png
 - **Hashtags**: #NVIDIAGTC #Physics #ElectronMicroscopy #Optics #Nanotechnology #Hardware #OpenSource
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - Beam dwell time formulas in shared/src/equations.ts
 - **Manual Review Required**: NO
 
@@ -109,6 +109,8 @@ In Z-WBE, our Acquisition equation explicitly models parallel beam count and dwe
 Inspect our equations in the repository:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #Physics #ElectronMicroscopy #Optics #Nanotechnology #Hardware #OpenSource
 ```
 
@@ -128,7 +130,7 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Media**: `golden_ticket_accelerated_ml.png, 02_imaging_wall_baseline.png, 05_colab_nvidia_smi_ensemble_eval.png, ad_04.png`
 - **Media Order**: 1. golden_ticket_accelerated_ml.png -> 2. 02_imaging_wall_baseline.png -> 3. 05_colab_nvidia_smi_ensemble_eval.png -> 4. ad_04.png
 - **Hashtags**: #NVIDIAGTC #UIUX #DataViz #WebDev #ScientificComputing
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - UI screenshot of baseline Acquisition Wall
 - **Manual Review Required**: NO
 
@@ -151,6 +153,8 @@ The gauge glows deep red because it represents 88% of the entire baseline projec
 Try adjusting the beam count slider to see how many parallel beams are needed to bring scan time under 30 days:
 https://z-wbe-bottleneck-lab.vercel.app
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #UIUX #DataViz #WebDev #ScientificComputing
 ```
 
@@ -170,7 +174,7 @@ https://z-wbe-bottleneck-lab.vercel.app
 - **Media**: `golden_ticket_data_analytics.png, 05_gpu_exploration_map.png, 07_github_notebook_code_provenance.png, ad_03.png`
 - **Media Order**: 1. golden_ticket_data_analytics.png -> 2. 05_gpu_exploration_map.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_03.png
 - **Hashtags**: #NVIDIAGTC #Neuroscience #Histology #ScientificRigor #Biophysics #Research
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - Provenance disclaimer on tissue shrinkage verified
 - **Manual Review Required**: NO
 
@@ -199,6 +203,8 @@ Our demonstrator models the macroscopic scaling constraints under given assumpti
 Read our full discussion of biological limitations on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #Neuroscience #Histology #ScientificRigor #Biophysics #Research
 ```
 
@@ -218,7 +224,7 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Media**: `golden_ticket_nim_gke.png, 02_imaging_wall_baseline.png, 07_github_notebook_code_provenance.png, ad_02.png`
 - **Media Order**: 1. golden_ticket_nim_gke.png -> 2. 02_imaging_wall_baseline.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_02.png
 - **Hashtags**: #NVIDIAGTC #TypeScript #SoftwareTesting #SensitivityAnalysis #Vitest #BuildInPublic
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - shared/tests/sensitivity.test.ts passing (5/5 tests)
 - **Manual Review Required**: NO
 
@@ -246,6 +252,8 @@ In `shared/tests/sensitivity.test.ts`, we wrote automated tests measuring parame
 Review our sensitivity tests:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #TypeScript #SoftwareTesting #SensitivityAnalysis #Vitest #BuildInPublic
 ```
 

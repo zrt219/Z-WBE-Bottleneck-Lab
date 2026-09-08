@@ -41,7 +41,7 @@ Learned: cuDF 8.62x on T4; 100x imaging exposes memory wall!
 
 Colab: https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 
-#NVIDIAGTC #GoogleCloud
+cc @asierarranz #NVIDIAGTC #GoogleCloud
 ```
 
 ---

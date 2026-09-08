@@ -1,6 +1,6 @@
 """
 Z-WBE Bottleneck Lab: 100,000 Synthetic Scenario Parameter Sweep
-Compatible with NVIDIA RAPIDS / cuDF, Google Cloud Colab Enterprise, and CPU fallback.
+Compatible with NVIDIA RAPIDS / cuDF, Google Colab, and CPU fallback.
 Generates public/data/gpu-sweep-summary.json without fabricating benchmark numbers.
 """
 

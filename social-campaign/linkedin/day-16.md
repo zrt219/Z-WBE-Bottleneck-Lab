@@ -22,7 +22,7 @@
 - **Media**: `social_card_nim_gke.png, 06_architecture_evidence_view.png, eda_histograms.png, ad_09.png`
 - **Media Order**: 1. social_card_nim_gke.png -> 2. 06_architecture_evidence_view.png -> 3. eda_histograms.png -> 4. ad_09.png
 - **Hashtags**: #NVIDIAGTC #ComputationalNeuroscience #Connectomics #Biophysics #SystemsModeling #AI #ComputerArchitecture
-- **Mentions**: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - Connectome != simulation thesis verified
 - **Manual Review Required**: NO
 
@@ -60,7 +60,7 @@ Explore our dual-stage modeling live:
 https://z-wbe-bottleneck-lab.vercel.app
 
 
-Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #ComputationalNeuroscience #Connectomics #Biophysics #SystemsModeling #AI #ComputerArchitecture
 ```
 
@@ -80,7 +80,7 @@ Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harv
 - **Media**: `golden_ticket_speed_up_data_analytics.png, 04_nemotron_grounded_interpretation.png, 07_github_notebook_code_provenance.png, ad_08.png`
 - **Media Order**: 1. golden_ticket_speed_up_data_analytics.png -> 2. 04_nemotron_grounded_interpretation.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_08.png
 - **Hashtags**: #NVIDIAGTC #Neuroscience #SynapticPlasticity #Biophysics #DataScience #OpenSource
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - Synaptic conductance modeling in shared/src/equations.ts
 - **Manual Review Required**: NO
 
@@ -112,6 +112,8 @@ If structural features only explain 70% of synaptic variance, the remaining 30% 
 Inspect our functionalization formulas on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #Neuroscience #SynapticPlasticity #Biophysics #DataScience #OpenSource
 ```
 
@@ -131,7 +133,7 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Media**: `nemotron_eli5_toggle.mp4`
 - **Media Order**: Single Asset: nemotron_eli5_toggle.mp4
 - **Hashtags**: #NVIDIAGTC #Nemotron #AIEngineering #ExplainableAI #WebDev
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - Video of ELI5 explanation of functionalization
 - **Manual Review Required**: NO
 
@@ -150,6 +152,8 @@ It uses the musical sheet music metaphor:
 Listen to the explanation live in Z-WBE:
 https://z-wbe-bottleneck-lab.vercel.app
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #Nemotron #AIEngineering #ExplainableAI #WebDev
 ```
 
@@ -169,7 +173,7 @@ https://z-wbe-bottleneck-lab.vercel.app
 - **Media**: `golden_ticket_intro_inference.png, 06_architecture_evidence_view.png, 07_github_notebook_code_provenance.png, ad_07.png`
 - **Media Order**: 1. golden_ticket_intro_inference.png -> 2. 06_architecture_evidence_view.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_07.png
 - **Hashtags**: #NVIDIAGTC #Simulation #HighPerformanceComputing #Biophysics #Algorithms #Supercomputing
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - Simulation FLOPS equation verified
 - **Manual Review Required**: NO
 
@@ -199,6 +203,8 @@ If multi-compartment cable theory is required, real-time simulation surges to >1
 Explore the compute scaling across model levels:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #Simulation #HighPerformanceComputing #Biophysics #Algorithms #Supercomputing
 ```
 
@@ -218,7 +224,7 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Media**: `golden_ticket_accelerated_ml.png, 02_imaging_wall_baseline.png, 07_github_notebook_code_provenance.png, ad_06.png`
 - **Media Order**: 1. golden_ticket_accelerated_ml.png -> 2. 02_imaging_wall_baseline.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_06.png
 - **Hashtags**: #NVIDIAGTC #IntegrationTesting #Vitest #FrontendEngineering #BuildInPublic
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - shared/tests/heroDemo.test.ts passing
 - **Manual Review Required**: NO
 
@@ -244,6 +250,8 @@ In `tests/heroDemo.test.ts`, we wrote automated end-to-end integration tests tha
 Review our integration tests:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #IntegrationTesting #Vitest #FrontendEngineering #BuildInPublic
 ```
 

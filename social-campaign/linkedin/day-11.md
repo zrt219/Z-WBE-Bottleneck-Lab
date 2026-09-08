@@ -22,7 +22,7 @@
 - **Media**: `social_card_data_analytics.png, 03_bottleneck_moved_transition.png, cpu_vs_gpu_speedup.png, ad_06.png`
 - **Media Order**: 1. social_card_data_analytics.png -> 2. 03_bottleneck_moved_transition.png -> 3. cpu_vs_gpu_speedup.png -> 4. ad_06.png
 - **Hashtags**: #NVIDIAGTC #GoogleCloud #GoogleColab #NVIDIA #RAPIDS #DataScience #MachineLearning #OpenScience
-- **Mentions**: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - 10-stage unified notebook verified
 - **Manual Review Required**: NO
 
@@ -55,13 +55,13 @@ Stage 8: Accelerated Model Training: GPU-native XGBoost Classifier
 Stage 9: Global Monte Carlo Parameter Sweep (Mapping bottleneck phase transitions)
 Stage 10: Export to Web Application & JSON Artifact Packaging
 
-Every cell runs in Google Colab Enterprise on an NVIDIA Tesla T4 runtime with one click.
+Every cell runs in Google Google Colab on an NVIDIA Tesla T4 runtime with one click.
 
 Launch the notebook now:
 https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 
 
-Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #GoogleCloud #GoogleColab #NVIDIA #RAPIDS #DataScience #MachineLearning #OpenScience
 ```
 
@@ -81,7 +81,7 @@ Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harv
 - **Media**: `google-nvidia-developer-badges.png, 06_architecture_evidence_view.png, cpu_vs_gpu_speedup.png, ad_05.png`
 - **Media Order**: 1. google-nvidia-developer-badges.png -> 2. 06_architecture_evidence_view.png -> 3. cpu_vs_gpu_speedup.png -> 4. ad_05.png
 - **Hashtags**: #NVIDIAGTC #DeveloperWorkflow #DevOps #GitHub #GoogleColab #Automation #BuildInPublic
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - scripts/sync-colab.ps1 automated workflow
 - **Manual Review Required**: NO
 
@@ -112,6 +112,8 @@ Zero manual copy-pasting of code cells. Complete automated provenance.
 Inspect our sync pipeline on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #DeveloperWorkflow #DevOps #GitHub #GoogleColab #Automation #BuildInPublic
 ```
 
@@ -131,7 +133,7 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Media**: `colab_t4_terminal_execution.gif`
 - **Media Order**: Single Asset: colab_t4_terminal_execution.gif
 - **Hashtags**: #NVIDIAGTC #GoogleColab #Jupyter #NVIDIA #Python #AcceleratedComputing
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - Colab execution GIF verified
 - **Manual Review Required**: NO
 
@@ -149,6 +151,8 @@ In this capture, notice how cleanly `%load_ext cudf.pandas` hooks into the noteb
 Run it in your browser:
 https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #GoogleColab #Jupyter #NVIDIA #Python #AcceleratedComputing
 ```
 
@@ -168,7 +172,7 @@ https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/n
 - **Media**: `social_card_data_analytics.png, 06_architecture_evidence_view.png, 07_github_notebook_code_provenance.png, ad_04.png`
 - **Media Order**: 1. social_card_data_analytics.png -> 2. 06_architecture_evidence_view.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_04.png
 - **Hashtags**: #NVIDIAGTC #CICD #SoftwareTesting #DataScience #Jupyter #TypeScript #QualityEngineering
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - tests/colabNotebook.test.ts passes (5/5 tests)
 - **Manual Review Required**: NO
 
@@ -199,6 +203,8 @@ To guarantee that our canonical Colab notebook NEVER breaks, we wrote `tests/col
 Check out our notebook testing strategy:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #CICD #SoftwareTesting #DataScience #Jupyter #TypeScript #QualityEngineering
 ```
 
@@ -218,7 +224,7 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Media**: `social_card_nim_gke.png, 05_gpu_exploration_map.png, 07_github_notebook_code_provenance.png, ad_03.png`
 - **Media Order**: 1. social_card_nim_gke.png -> 2. 05_gpu_exploration_map.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_03.png
 - **Hashtags**: #NVIDIAGTC #Documentation #TechnicalWriting #DeveloperExperience #OpenSource
-- **Mentions**: None
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - COLAB.md documentation guide verified
 - **Manual Review Required**: NO
 
@@ -250,6 +256,8 @@ Good developer documentation is the bridge between code and community trust.
 Read `COLAB.md` on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab/blob/main/COLAB.md
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #Documentation #TechnicalWriting #DeveloperExperience #OpenSource
 ```
 

@@ -22,7 +22,7 @@
 - **Media**: `google-nvidia-developer-badges.png, 02_imaging_wall_baseline.png, 08_colab_rapids_and_variable_inspector.png, ad_07.png`
 - **Media Order**: 1. google-nvidia-developer-badges.png -> 2. 02_imaging_wall_baseline.png -> 3. 08_colab_rapids_and_variable_inspector.png -> 4. ad_07.png
 - **Hashtags**: #NVIDIAGTC #GoogleCloud #NVIDIA #SystemsEngineering #AmdahlsLaw #HardwareArchitecture #ComputationalNeuroscience #DevChallenge
-- **Mentions**: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - Baseline imaging 1141 days -> 11.4 days at 100x
 - **Manual Review Required**: NO
 
@@ -64,7 +64,7 @@ Accelerating a single subsystem simply reveals the next physical wall.
 Experience the hero transition live:
 https://z-wbe-bottleneck-lab.vercel.app
 
-Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #GoogleCloud #NVIDIA #SystemsEngineering #AmdahlsLaw #HardwareArchitecture #ComputationalNeuroscience #DevChallenge
 ```
 
@@ -84,7 +84,7 @@ Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harv
 - **Media**: `social_card_intro_inference.png, 02_imaging_wall_baseline.png, 07_github_notebook_code_provenance.png, ad_06.png`
 - **Media Order**: 1. social_card_intro_inference.png -> 2. 02_imaging_wall_baseline.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_06.png
 - **Hashtags**: #NVIDIAGTC #Microscopy #Biophysics #ElectronMicroscopy #ComputationalNeuroscience #TypeScript #OpenSource
-- **Mentions**: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - FIB-SEM vs knife-edge equations in shared/src/equations.ts
 - **Manual Review Required**: NO
 
@@ -113,7 +113,7 @@ Inspect the physical formulas in our shared TypeScript library:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 
-Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #Microscopy #Biophysics #ElectronMicroscopy #ComputationalNeuroscience #TypeScript #OpenSource
 ```
 
@@ -133,7 +133,7 @@ Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harv
 - **Media**: `hero_bottleneck_shift.gif`
 - **Media Order**: Single Asset: hero_bottleneck_shift.gif
 - **Hashtags**: #NVIDIAGTC #SystemsEngineering #InteractiveData #DataVisualization #WebDev #OpenSource
-- **Mentions**: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - GIF shows actual UI transition
 - **Manual Review Required**: NO
 
@@ -154,7 +154,7 @@ Try it yourself:
 https://z-wbe-bottleneck-lab.vercel.app
 
 
-Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #SystemsEngineering #InteractiveData #DataVisualization #WebDev #OpenSource
 ```
 
@@ -174,7 +174,7 @@ Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harv
 - **Media**: `social_card_intro_inference.png, 02_imaging_wall_baseline.png, 06_colab_gpu_extensions_and_terminal.png, ad_05.png`
 - **Media Order**: 1. social_card_intro_inference.png -> 2. 02_imaging_wall_baseline.png -> 3. 06_colab_gpu_extensions_and_terminal.png -> 4. ad_05.png
 - **Hashtags**: #NVIDIAGTC #NVIDIA #Nemotron #OpenRouter #PromptEngineering #AIEngineering #SystemDesign
-- **Mentions**: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - Nemotron prompt grounded in scenario state
 - **Manual Review Required**: NO
 
@@ -210,7 +210,7 @@ Explore this grounded AI design in action:
 https://z-wbe-bottleneck-lab.vercel.app
 
 
-Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #NVIDIA #Nemotron #OpenRouter #PromptEngineering #AIEngineering #SystemDesign
 ```
 
@@ -230,7 +230,7 @@ Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harv
 - **Media**: `social_card_intro_inference.png, 04_nemotron_grounded_interpretation.png, 07_github_notebook_code_provenance.png, ad_04.png`
 - **Media Order**: 1. social_card_intro_inference.png -> 2. 04_nemotron_grounded_interpretation.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_04.png
 - **Hashtags**: #NVIDIAGTC #TypeScript #FrontendArchitecture #WebPerformance #CleanCode #BuildInPublic
-- **Mentions**: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - Reactive state implemented with Zustand & pure functions
 - **Manual Review Required**: NO
 
@@ -259,7 +259,7 @@ Check out our client-side state architecture on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 
-Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #TypeScript #FrontendArchitecture #WebPerformance #CleanCode #BuildInPublic
 ```
 

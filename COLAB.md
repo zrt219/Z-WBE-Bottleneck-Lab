@@ -1,11 +1,11 @@
-# 🚀 Google Colab Enterprise & GPU Lab Guide
+# 🚀 Google Colab & GPU Lab Guide
 
 [![OPEN Z-WBE GPU LAB IN COLAB](https://img.shields.io/badge/OPEN%20Z--WBE%20GPU%20LAB%20IN%20COLAB-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white)](https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb)
 [![GitHub Repository](https://img.shields.io/badge/GitHub-Z--WBE%20Bottleneck%20Lab-181717?style=flat&logo=github)](https://github.com/zrt219/Z-WBE-Bottleneck-Lab)
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-z--wbe--bottleneck--lab.vercel.app-000000?style=flat&logo=vercel)](https://z-wbe-bottleneck-lab.vercel.app)
 
-Click the button above to launch the **canonical Z-WBE GPU Acceleration & Parameter Sweep Lab** directly in Google Colab Enterprise:
+Click the button above to launch the **canonical Z-WBE GPU Acceleration & Parameter Sweep Lab** directly in Google Colab:
 
 👉 **[Launch Canonical Z_WBE_GPU_LAB.ipynb in Google Colab](https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb)**
 

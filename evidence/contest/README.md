@@ -22,7 +22,7 @@ evidence/
 ## Evidence Dossiers
 
 1. **[gpu-benchmark/](./gpu-benchmark/)**:
-   - **Hardware**: NVIDIA Tesla T4 GPU (Google Cloud Colab Enterprise) vs. 8-Core Host CPU.
+   - **Hardware**: NVIDIA Tesla T4 GPU (Google Colab) vs. 8-Core Host CPU.
    - **Pipeline**: NYC Taxi regression pipeline (`cudf.pandas`, Random Forest, XGBoost histogram tree method).
    - **Speedup**: **8.62×** overall end-to-end pipeline acceleration; **88.4%** total execution time reduction.
    - **Provenance**: Documented execution methodology, isolated kernel resets, phase timing breakdowns, and explicit hardware provenance.

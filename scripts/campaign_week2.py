@@ -53,7 +53,7 @@ Inspect the pure TypeScript implementation on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 
-Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #TypeScript #Mathematics #OpenSource #SystemsEngineering #SoftwareEngineering"""
         },
         {
@@ -88,6 +88,8 @@ When building scientific software, pure functions are the ultimate defense again
 Experience the instant responsiveness live:
 https://z-wbe-bottleneck-lab.vercel.app
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #FunctionalProgramming #CleanCode #TypeScript #SoftwareArchitecture"""
         },
         {
@@ -119,6 +121,8 @@ Transparency is not an afterthought; it is built into the primary interface.
 Open the evidence drawer live:
 https://z-wbe-bottleneck-lab.vercel.app
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #DataTransparency #OpenScience #UIUX #WebDev"""
         },
         {
@@ -156,6 +160,8 @@ In Z-WBE Bottleneck Lab, power is not a footnote; it is one of the 8 core constr
 Inspect our thermodynamic equations on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #ThermalPower #EnergyEfficiency #DataCenter #HighPerformanceComputing #HardwareArchitecture"""
         },
         {
@@ -186,6 +192,8 @@ All 19 tests pass in vitest in 10 milliseconds.
 Explore the tests:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #TypeScript #SoftwareTesting #Vitest #BuildInPublic"""
         }
     ]
@@ -343,7 +351,7 @@ Experience grounded AI in action:
 https://z-wbe-bottleneck-lab.vercel.app
 
 
-Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #NVIDIA #Nemotron #OpenRouter #AIEngineering #PromptEngineering #SystemArchitecture #TrustworthyAI"""
         },
         {
@@ -384,6 +392,8 @@ In 100% of test cases, Nemotron adhered to the numerical boundary and explained 
 Inspect the complete prompt implementation on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #PromptEngineering #OpenRouter #Nemotron #AIEthics #SoftwareTesting"""
         },
         {
@@ -413,6 +423,8 @@ This is what grounded, trustworthy generative AI looks like in scientific applic
 Try prompting different scenarios live:
 https://z-wbe-bottleneck-lab.vercel.app
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #NVIDIAAI #Nemotron #UIUX #DataScience"""
         },
         {
@@ -446,6 +458,8 @@ The user can always explore calculations even when external AI APIs are offline.
 Review our backend proxy code on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #WebSecurity #OpenRouter #BackendEngineering #DevOps #TypeScript"""
         },
         {
@@ -478,6 +492,8 @@ All 7 grounding contract tests pass in Vitest.
 Check out our LLM evaluation tests:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #LLMEval #SoftwareTesting #Vitest #AIEngineering #BuildInPublic"""
         }
     ]
@@ -643,7 +659,7 @@ Experience the power of epistemic separation:
 https://z-wbe-bottleneck-lab.vercel.app
 
 
-Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #SoftwareArchitecture #AIEngineering #SystemDesign #TypeScript #Nemotron #CleanArchitecture"""
         },
         {
@@ -677,6 +693,8 @@ Automated Vitest and Python unit test suites assert mathematical parity between 
 Review our Triad architecture on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #Architecture #TypeScript #Python #DevOps #FullStack"""
         },
         {
@@ -705,6 +723,8 @@ You never have to guess whether a number was calculated by physics equations or 
 Test it yourself:
 https://z-wbe-bottleneck-lab.vercel.app
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #Design #WebDev #Transparency #BuildInPublic"""
         },
         {
@@ -737,6 +757,8 @@ If an engineering team claims their AI is infallible, they do not understand pro
 Read our integrity guidelines on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #ScientificIntegrity #AI #Ethics #EngineeringStandards"""
         },
         {
@@ -768,6 +790,8 @@ Science requires reproducibility. Shareable scenario URLs make it effortless.
 Inspect our URL parameter test suites:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #WebDev #TypeScript #Reproducibility #Frontend #BuildInPublic"""
         }
     ]
@@ -937,13 +961,13 @@ Stage 8: Accelerated Model Training: GPU-native XGBoost Classifier
 Stage 9: Global Monte Carlo Parameter Sweep (Mapping bottleneck phase transitions)
 Stage 10: Export to Web Application & JSON Artifact Packaging
 
-Every cell runs in Google Colab Enterprise on an NVIDIA Tesla T4 runtime with one click.
+Every cell runs in Google Google Colab on an NVIDIA Tesla T4 runtime with one click.
 
 Launch the notebook now:
 https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 
 
-Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #GoogleCloud #GoogleColab #NVIDIA #RAPIDS #DataScience #MachineLearning #OpenScience"""
         },
         {
@@ -978,6 +1002,8 @@ Zero manual copy-pasting of code cells. Complete automated provenance.
 Inspect our sync pipeline on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #DeveloperWorkflow #DevOps #GitHub #GoogleColab #Automation #BuildInPublic"""
         },
         {
@@ -997,6 +1023,8 @@ In this capture, notice how cleanly `%load_ext cudf.pandas` hooks into the noteb
 Run it in your browser:
 https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #GoogleColab #Jupyter #NVIDIA #Python #AcceleratedComputing"""
         },
         {
@@ -1031,6 +1059,8 @@ To guarantee that our canonical Colab notebook NEVER breaks, we wrote `tests/col
 Check out our notebook testing strategy:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #CICD #SoftwareTesting #DataScience #Jupyter #TypeScript #QualityEngineering"""
         },
         {
@@ -1066,6 +1096,8 @@ Good developer documentation is the bridge between code and community trust.
 Read `COLAB.md` on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab/blob/main/COLAB.md
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #Documentation #TechnicalWriting #DeveloperExperience #OpenSource"""
         }
     ]
@@ -1238,7 +1270,7 @@ Run the benchmark cell live in Colab:
 https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 
 
-Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #NVIDIA #TeslaT4 #RAPIDS #cuDF #cuML #Benchmark #DataScience #PerformanceEngineering"""
         },
         {
@@ -1275,6 +1307,8 @@ Training time collapsed from 1.308 seconds on CPU to 0.154 seconds on Tesla T4.
 Run the cuML training comparison in Colab:
 https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #cuML #MachineLearning #RandomForest #scikitlearn #DataScience #GPUComputing"""
         },
         {
@@ -1300,6 +1334,8 @@ Notice the consistent multi-fold speedup across ETL, feature engineering, and mo
 Inspect the raw data:
 https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #DataVisualization #Benchmark #Python #Matplotlib"""
         },
         {
@@ -1331,6 +1367,8 @@ In Z-WBE Bottleneck Lab, 100% of our core data cleaning and feature engineering 
 Inspect our cuDF profiling scripts on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #RAPIDS #cuDF #Python #DataEngineering #Pandas #CleanArchitecture"""
         },
         {
@@ -1363,6 +1401,8 @@ Result: Clean, statistically robust timing data (1.907s CPU vs 0.221s GPU).
 Review our benchmarking methodology on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #Benchmarking #Statistics #Python #PerformanceTuning #BuildInPublic"""
         }
     ]
@@ -1525,7 +1565,7 @@ Explore our RAPIDS pipeline in Google Colab:
 https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 
 
-Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #RAPIDS #cuDF #cuML #DataScience #Python #GPUComputing #AcceleratedComputing"""
         },
         {
@@ -1557,6 +1597,8 @@ Why is Parquet so much faster with cuDF?
 Read our complete Parquet tutorial in `notebooks/tutorials/TUTORIAL_WHY_PARQUET_FORMAT.md`:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #DataEngineering #ApacheParquet #RAPIDS #Storage #BigData #Python"""
         },
         {
@@ -1576,6 +1618,8 @@ Notice how the terminal shows zero memory warnings and instant completion of bot
 Try running it yourself:
 https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #GoogleColab #MachineLearning #Performance #DataAnalytics"""
         },
         {
@@ -1611,6 +1655,8 @@ Courses are valuable; applying them to open-source software is transformative.
 View my verified Google Developer badge:
 https://g.dev/zhane
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #GoogleCloud #GoogleDevelopers #NVIDIA #ContinuousLearning #Upskilling #DeveloperJourney"""
         },
         {
@@ -1641,6 +1687,8 @@ Automated in `scripts/test_cudf_profiling.py`.
 Check out our runtime initialization code:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
+
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #Python #DevOps #GoogleColab #ErrorHandling #BuildInPublic"""
         }
     ]
@@ -1803,7 +1851,7 @@ Explore the interactive 100k scenario heatmap live:
 https://z-wbe-bottleneck-lab.vercel.app
 
 
-Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+Mentions & Judges: @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #MonteCarlo #DataScience #DataAnalytics #RAPIDS #cuDF #Supercomputing #ComputationalNeuroscience"""
         },
         {
@@ -1837,7 +1885,7 @@ Inspect the generator script on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 
-Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #Python #MonteCarlo #DataEngineering #RAPIDS #cuDF #Mathematics"""
         },
         {
@@ -1869,7 +1917,7 @@ Try the interactive map live:
 https://z-wbe-bottleneck-lab.vercel.app
 
 
-Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #DataVisualization #Heatmap #UXDesign #WebDev #InteractiveScience"""
         },
         {
@@ -1900,7 +1948,7 @@ Inspect the correlation scatter matrix in Google Colab:
 https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 
 
-Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #DataScience #Statistics #Correlation #EDA #GoogleColab #Python"""
         },
         {
@@ -1937,7 +1985,7 @@ Experience Z-WBE Bottleneck Lab:
 https://z-wbe-bottleneck-lab.vercel.app
 
 
-Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+Mentions & Judges: @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #Engineering #BuildInPublic #OpenSource #SoftwareArchitecture #Retrospective"""
         }
     ]

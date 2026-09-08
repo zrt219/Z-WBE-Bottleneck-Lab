@@ -22,7 +22,7 @@
 - **Media**: `social_card_nim_gke.png, 02_imaging_wall_baseline.png, cpu_vs_gpu_speedup.png, banner-light.png`
 - **Media Order**: 1. social_card_nim_gke.png -> 2. 02_imaging_wall_baseline.png -> 3. cpu_vs_gpu_speedup.png -> 4. banner-light.png
 - **Hashtags**: #NVIDIAGTC #GoogleCloud #NVIDIA #Nemotron #RAPIDS #cuDF #cuML #TeslaT4 #GoogleColab #CloudRun #DevChallenge #GoldenTicket #OpenSource #HighPerformanceComputing
-- **Mentions**: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+- **Mentions**: @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Harvey | @Ray Harvey
 - **Claims Verified**: YES - T4 GPU benchmark verified in cpu_vs_gpu_benchmark.json
 - **Manual Review Required**: NO
 
@@ -57,8 +57,8 @@ An open-source systems-modeling lab dismantling domain silos in computational ne
 - Accelerated ML: cuML GPU acceleration drastically reduces tabular model training time.
 - Systems Insight: 100x microscopy acceleration moves the bottleneck to Memory Bandwidth (Amdahl's Law).
 
-4. EMPIRICAL BENCHMARK EVIDENCE (Tesla T4 GPU in Colab Enterprise):
-- End-to-End ETL + ML Pipeline: 1.907s CPU vs 0.221s GPU (8.62x speedup, 88.4% execution reduction)
+4. EMPIRICAL BENCHMARK EVIDENCE (Tesla T4 GPU in Google Colab):
+- End-to-End ETL + ML Pipeline: Measured 8.62× pipeline speedup on an NVIDIA Tesla T4 in Google Colab: 1.907 s CPU vs 0.221 s GPU. cudf.pandas provided zero-code-change GPU acceleration for supported pandas operations.
 - Sub-Task Speedups:
   * XGBoost Training: 9.8x (0.545s vs 0.056s)
   * Random Forest (cuML): 8.5x (1.308s vs 0.154s)
@@ -72,7 +72,7 @@ Live Demonstrator: https://z-wbe-bottleneck-lab.vercel.app
 GitHub: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 Profile: https://g.dev/zhane
 
-Judges & Mentions: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+Mentions & Judges: @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #GoogleCloud #NVIDIA #Nemotron #RAPIDS #cuDF #cuML #TeslaT4 #GoogleColab #CloudRun #DevChallenge #GoldenTicket #OpenSource #HighPerformanceComputing
 ```
 
@@ -92,7 +92,7 @@ Judges & Mentions: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harv
 - **Media**: `social_card_data_analytics.png, 01_hero_overview.png, cpu_vs_gpu_speedup.png, banner-dark.png`
 - **Media Order**: 1. social_card_data_analytics.png -> 2. 01_hero_overview.png -> 3. cpu_vs_gpu_speedup.png -> 4. banner-dark.png
 - **Hashtags**: #NVIDIAGTC #RAPIDS #cuDF #DataScience #Python #GPUComputing #MachineLearning
-- **Mentions**: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - cudf.pandas zero-code mechanics documented
 - **Manual Review Required**: NO
 
@@ -126,7 +126,7 @@ Run the benchmark cell yourself in Google Colab:
 https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 
 
-Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #RAPIDS #cuDF #DataScience #Python #GPUComputing #MachineLearning
 ```
 
@@ -141,12 +141,12 @@ Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harv
 - **Content Pillar**: Pillar D: Google Cloud / Colab
 - **Scheduled Time (MDT)**: 13:42 MDT
 - **Primary Destination URL**: https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
-- **Hook**: Watch our canonical 10-stage GPU notebook execute live on an NVIDIA Tesla T4 in Google Colab Enterprise.
+- **Hook**: Watch our canonical 10-stage GPU notebook execute live on an NVIDIA Tesla T4 in Google Google Colab.
 - **Post Summary**: Runtime initialization on a Tesla T4 GPU.
 - **Media**: `colab_t4_terminal_execution.gif`
 - **Media Order**: Single Asset: colab_t4_terminal_execution.gif
 - **Hashtags**: #NVIDIAGTC #GoogleColab #NVIDIA #Jupyter #DataScience #BuildInPublic #OpenScience
-- **Mentions**: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - GIF shows actual Colab run
 - **Manual Review Required**: NO
 
@@ -157,7 +157,7 @@ Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harv
 ### Post Copy
 
 ```markdown
-Watch our canonical 10-stage GPU notebook execute live on an NVIDIA Tesla T4 in Google Colab Enterprise.
+Watch our canonical 10-stage GPU notebook execute live on an NVIDIA Tesla T4 in Google Google Colab.
 
 This GIF captures:
 - Runtime initialization on a Tesla T4 GPU.
@@ -170,7 +170,7 @@ Launch the notebook now:
 https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 
 
-Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #GoogleColab #NVIDIA #Jupyter #DataScience #BuildInPublic #OpenScience
 ```
 
@@ -190,7 +190,7 @@ Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harv
 - **Media**: `golden_ticket_nim_gke.png, 06_architecture_evidence_view.png, cpu_vs_gpu_speedup.png, ad_10.png`
 - **Media Order**: 1. golden_ticket_nim_gke.png -> 2. 06_architecture_evidence_view.png -> 3. cpu_vs_gpu_speedup.png -> 4. ad_10.png
 - **Hashtags**: #NVIDIAGTC #ScientificIntegrity #Benchmark #Reproducibility #Hardware #EngineeringEthics
-- **Mentions**: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - BENCHMARK_PROVENANCE.md documents T4 vs L4 audit
 - **Manual Review Required**: NO
 
@@ -222,7 +222,7 @@ Read our full provenance ledger on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 
-Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #ScientificIntegrity #Benchmark #Reproducibility #Hardware #EngineeringEthics
 ```
 
@@ -242,7 +242,7 @@ Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harv
 - **Media**: `social_card_data_analytics.png, 05_gpu_exploration_map.png, 07_github_notebook_code_provenance.png, ad_09.png`
 - **Media Order**: 1. social_card_data_analytics.png -> 2. 05_gpu_exploration_map.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_09.png
 - **Hashtags**: #NVIDIAGTC #DevOps #GoogleColab #GitHub #Automation #Maturity
-- **Mentions**: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+- **Mentions**: @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Harvey | @Ray Harvey
 - **Claims Verified**: YES - sync-colab.ps1 script in scripts/
 - **Manual Review Required**: NO
 
@@ -273,7 +273,7 @@ Check out our notebook synchronization setup:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 
-Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+Mentions & Judges: @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #DevOps #GoogleColab #GitHub #Automation #Maturity
 ```
 
@@ -293,7 +293,7 @@ Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harv
 - **Media**: `social_card_accelerated_ml.png, 04_nemotron_grounded_interpretation.png, cpu_vs_gpu_speedup.png, ad_08.png`
 - **Media Order**: 1. social_card_accelerated_ml.png -> 2. 04_nemotron_grounded_interpretation.png -> 3. cpu_vs_gpu_speedup.png -> 4. ad_08.png
 - **Hashtags**: #NVIDIAGTC #GoogleCloud #NVIDIA #GTC2026 #DevChallenge #BuildInPublic
-- **Mentions**: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+- **Mentions**: @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - Official contest submission complete
 - **Manual Review Required**: NO
 
@@ -324,7 +324,7 @@ The 21-day campaign has only just begun. Over the next 18 days, we will dissect 
 Explore the project: https://z-wbe-bottleneck-lab.vercel.app
 
 
-Mentions & Judges: @Google for Developers | @NVIDIA AI | @Jen Harvey | @Ray Harvey
+Mentions: @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #GoogleCloud #NVIDIA #GTC2026 #DevChallenge #BuildInPublic
 ```
 

@@ -214,7 +214,7 @@ export const AboutPage: React.FC = () => {
                   </span>
                 </div>
                 <p className="text-slate-600 leading-relaxed">
-                  <strong>Architectural Impact:</strong> Applied GPU acceleration using NVIDIA RAPIDS <code className="font-mono bg-slate-200/70 px-1 py-0.5 rounded text-slate-900">cudf.pandas</code> in Google Cloud Colab Enterprise, unlocking zero-code GPU parallel processing across a 100,000-scenario multi-dimensional parameter exploration sweep.
+                  <strong>Architectural Impact:</strong> Applied GPU acceleration using NVIDIA RAPIDS <code className="font-mono bg-slate-200/70 px-1 py-0.5 rounded text-slate-900">cudf.pandas</code> in Google Colab, unlocking zero-code GPU parallel processing across a 100,000-scenario multi-dimensional parameter exploration sweep.
                 </p>
                 <div className="flex items-center space-x-3 text-[11px] font-mono pt-1">
                   <a
@@ -372,7 +372,7 @@ export const AboutPage: React.FC = () => {
               <span>Effective Use of NVIDIA & Google Cloud</span>
             </div>
             <p className="text-slate-700 leading-relaxed">
-              Demonstrates deep technical synergy across both ecosystems: Google Cloud Run provides secure serverless microservice execution, Google Cloud Colab Enterprise hosts GPU analytics, NVIDIA RAPIDS cuDF drives 100,000 Monte Carlo sweeps, and the open model NVIDIA Nemotron 3 Super 120B (<code className="font-mono bg-emerald-100 text-emerald-950 px-1 py-0.5 rounded">nvidia/nemotron-3-super-120b-a12b:free</code>) delivers causal reasoning through OpenRouter.
+              Demonstrates deep technical synergy across both ecosystems: Google Cloud Run provides secure serverless microservice execution, Google Colab hosts GPU analytics, NVIDIA RAPIDS cuDF drives 100,000 Monte Carlo sweeps, and the open model NVIDIA Nemotron 3 Super 120B (<code className="font-mono bg-emerald-100 text-emerald-950 px-1 py-0.5 rounded">nvidia/nemotron-3-super-120b-a12b:free</code>) delivers causal reasoning through OpenRouter.
             </p>
           </div>
 
