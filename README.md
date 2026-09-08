@@ -7,7 +7,7 @@
 [![NVIDIA Nemotron 3 Super](https://img.shields.io/badge/NVIDIA-Nemotron%203%20Super%20120B-76B900?logo=nvidia&logoColor=white)](https://openrouter.ai/models/nvidia/nemotron-3-super-120b-a12b:free)
 [![NVIDIA RAPIDS](https://img.shields.io/badge/NVIDIA-RAPIDS%20cuDF-76B900?logo=nvidia&logoColor=white)](https://rapids.ai)
 [![Vercel Deployment](https://img.shields.io/badge/Vercel-Fullstack%20Deploy-000000?logo=vercel&logoColor=white)](https://vercel.com)
-[![Tests: 77 Passed](https://img.shields.io/badge/Vitest-77%20Passing-brightgreen?logo=vitest&logoColor=white)](https://vitest.dev)
+[![Tests: 84 Passed](https://img.shields.io/badge/Vitest-84%20Passing-brightgreen?logo=vitest&logoColor=white)](https://vitest.dev)
 [![TypeScript Monorepo](https://img.shields.io/badge/TypeScript-Strict%20Monorepo-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
@@ -55,7 +55,7 @@ Entries are evaluated by a joint Google Cloud & NVIDIA judging panel on four equ
 | **(a) Technical Innovation** | Novelty, biophysical scaling, and real-time Amdahl's Law modeling | First public scientific tool to connect all 8 dimensions of Whole Brain Emulation (imaging, segmentation, PFLOPS, memory bandwidth, NVLink interconnect, power, proofreading, budget) into 12 coupled analytical equations executing in **&lt; 1 ms** locally. Eliminates speculative timelines with deterministic sensitivity curves. |
 | **(b) Effective Use of NVIDIA & Google Cloud** | Ecosystem synergy and full-stack integration | End-to-end integration: **Google Cloud Run** serves the containerized microservice; **Google Cloud Colab Enterprise** hosts the parameter sweeps; **NVIDIA RAPIDS cuDF** powers 100,000-scenario Monte Carlo simulations; and **NVIDIA Nemotron 3 Super 120B** (`nvidia/nemotron-3-super-120b-a12b:free` via OpenRouter) delivers grounded causal interpretation. |
 | **(c) Potential Impact & Usefulness** | Value to developers, researchers, and scientific community | De-silos neuroscience, electron microscopy, and HPC engineering. When researchers ask *"What happens if imaging becomes 100x faster?"*, the lab proves that the dominant bottleneck immediately jumps to memory bandwidth and cold storage, preventing millions in misallocated capital grants. |
-| **(d) Quality of Documentation & Presentation** | Code cleanliness, tests, accessibility, and documentation | Complete mathematical specification for all 12 equations; **77 passing automated Vitest unit tests**; strict TypeScript monorepo; WCAG 2.1 AAA accessibility mode; 1-click interactive demo; scenario permalink state synchronization; and comprehensive reproducibility guides. |
+| **(d) Quality of Documentation & Presentation** | Code cleanliness, tests, accessibility, and documentation | Complete mathematical specification for all 12 equations; **84 passing automated Vitest unit tests**; strict TypeScript monorepo; WCAG 2.1 AAA accessibility mode; 1-click interactive demo; scenario permalink state synchronization; and comprehensive reproducibility guides. |
 
 ---
 
@@ -89,7 +89,7 @@ Language models frequently hallucinate when asked open-ended scientific or econo
 10. [Google Cloud Infrastructure](#10-google-cloud-infrastructure)
 11. [Vercel Fullstack Deployment Guide](#11-vercel-fullstack-deployment-guide)
 12. [Local Installation & Development](#12-local-installation--development)
-13. [Verification Test Suite (77/77 Passing)](#13-verification-test-suite-7777-passing)
+13. [Verification Test Suite (84/84 Passing)](#13-verification-test-suite-8484-passing)
 14. [Scientific Limitations & Epistemic Boundaries](#14-scientific-limitations--epistemic-boundaries)
 15. [Contest Submission Details & Checklist](#15-contest-submission-details--checklist)
 
