@@ -44,7 +44,7 @@ Section 52 mandates an explicit audit verifying that at least one qualifying pub
 ## 3. Technical Evidence Provenance Reconciliation
 
 - **Hardware Profile**: NVIDIA Tesla T4 GPU (16 GB GDDR6) on Google Colab.
-- **Speedup Multiplier**: Measured 8.62× pipeline speedup on an NVIDIA Tesla T4 in Google Colab: 1.907 s CPU vs 0.221 s GPU. cudf.pandas provided zero-code-change GPU acceleration for supported pandas operations.
+- **Speedup Multiplier**: 8.62× measured T4 speedup on the Google/NVIDIA tabular ML benchmark (1.907 s CPU vs 0.221 s GPU). Separately, Z-WBE also includes a 100,000-scenario GPU parameter sweep.
 - **Sub-Task Breakdown**: XGBoost (9.8×), Random Forest (8.5×), Data Cleaning (6.8×), Data Loading (4.25×).
 - **Code Provenance**: `%load_ext cudf.pandas` with zero application code modifications.
 - **Repository Proof File**: `evidence/contest/gpu-benchmark/BENCHMARK_PROVENANCE.md` & `cpu_vs_gpu_benchmark.json`.

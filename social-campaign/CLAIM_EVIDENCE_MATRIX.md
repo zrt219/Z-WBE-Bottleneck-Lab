@@ -45,7 +45,7 @@ This ledger catalogs every quantitative, architectural, and scientific claim mad
 | **GitHub Repository** | `https://github.com/zrt219/Z-WBE-Bottleneck-Lab` | `README.md`, Git origin remote | Public repository, MIT License | **YES** |
 | **Google Developer Profile** | `https://g.dev/zhane` | `CONTEST_SUBMISSION.md`, `README.md` | Verified vanity profile showcasing 4 completed badges | **YES** |
 | **Google Developer Profile (Canonical ID)** | `https://developers.google.com/profile/u/110918189625880989910` | `CONTEST_SUBMISSION.md` | Official numerical profile URL | **YES** |
-| **Cloud Run Readiness** | Ready (`Dockerfile`, Port 8080) | `Dockerfile`, `evidence/contest/cloud-run/deployment-summary.md` | Multi-stage Docker build validated for Cloud Run | **YES** |
+| **Cloud Run Deployment** | Active (`cloud-run-url.txt`) | `evidence/contest/cloud-run/deployment-summary.md` | Verified Cloud Run service with URL, health check, and service JSON | **YES** |
 
 ---
 

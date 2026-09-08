@@ -22,7 +22,7 @@
 - **Media**: `social_card_intro_inference.png, 04_nemotron_grounded_interpretation.png, 07_github_notebook_code_provenance.png, ad_03.png`
 - **Media Order**: 1. social_card_intro_inference.png -> 2. 04_nemotron_grounded_interpretation.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_03.png
 - **Hashtags**: #NVIDIAGTC #SoftwareArchitecture #AIEngineering #SystemDesign #TypeScript #Nemotron #CleanArchitecture
-- **Mentions**: @Google for Developers | @NVIDIA AI
+- **Mentions**: @Google Cloud | @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - Epistemic separation architecture verified
 - **Manual Review Required**: NO
 
@@ -64,7 +64,7 @@ Experience the power of epistemic separation:
 https://z-wbe-bottleneck-lab.vercel.app
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #SoftwareArchitecture #AIEngineering #SystemDesign #TypeScript #Nemotron #CleanArchitecture
 ```
 
@@ -84,7 +84,7 @@ Mentions: @Google for Developers | @NVIDIA AI
 - **Media**: `social_card_data_analytics.png, 04_nemotron_grounded_interpretation.png, 07_github_notebook_code_provenance.png, ad_02.png`
 - **Media Order**: 1. social_card_data_analytics.png -> 2. 04_nemotron_grounded_interpretation.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_02.png
 - **Hashtags**: #NVIDIAGTC #Architecture #TypeScript #Python #DevOps #FullStack
-- **Mentions**: @Google for Developers | @NVIDIA AI
+- **Mentions**: @Google Cloud | @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - Architectural diagram in README.md verified
 - **Manual Review Required**: NO
 
@@ -115,7 +115,7 @@ Review our Triad architecture on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #Architecture #TypeScript #Python #DevOps #FullStack
 ```
 
@@ -135,7 +135,7 @@ Mentions: @Google for Developers | @NVIDIA AI
 - **Media**: `social_card_nim_gke.png, 04_nemotron_grounded_interpretation.png, 07_github_notebook_code_provenance.png, ad_01.png`
 - **Media Order**: 1. social_card_nim_gke.png -> 2. 04_nemotron_grounded_interpretation.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_01.png
 - **Hashtags**: #NVIDIAGTC #Design #WebDev #Transparency #BuildInPublic
-- **Mentions**: @Google for Developers | @NVIDIA AI
+- **Mentions**: @Google Cloud | @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - Evidence view UI matches description
 - **Manual Review Required**: NO
 
@@ -161,7 +161,7 @@ Test it yourself:
 https://z-wbe-bottleneck-lab.vercel.app
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #Design #WebDev #Transparency #BuildInPublic
 ```
 
@@ -181,7 +181,7 @@ Mentions: @Google for Developers | @NVIDIA AI
 - **Media**: `golden_ticket_speed_up_data_analytics.png, 04_nemotron_grounded_interpretation.png, cpu_vs_gpu_speedup.png, banner-light.png`
 - **Media Order**: 1. golden_ticket_speed_up_data_analytics.png -> 2. 04_nemotron_grounded_interpretation.png -> 3. cpu_vs_gpu_speedup.png -> 4. banner-light.png
 - **Hashtags**: #NVIDIAGTC #ScientificIntegrity #AI #Ethics #EngineeringStandards
-- **Mentions**: @Google for Developers | @NVIDIA AI
+- **Mentions**: @Google Cloud | @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - Language safety guidelines enforced in docs
 - **Manual Review Required**: NO
 
@@ -211,7 +211,7 @@ Read our integrity guidelines on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #ScientificIntegrity #AI #Ethics #EngineeringStandards
 ```
 
@@ -231,7 +231,7 @@ Mentions: @Google for Developers | @NVIDIA AI
 - **Media**: `golden_ticket_intro_inference.png, 03_bottleneck_moved_transition.png, 07_github_notebook_code_provenance.png, banner-dark.png`
 - **Media Order**: 1. golden_ticket_intro_inference.png -> 2. 03_bottleneck_moved_transition.png -> 3. 07_github_notebook_code_provenance.png -> 4. banner-dark.png
 - **Hashtags**: #NVIDIAGTC #WebDev #TypeScript #Reproducibility #Frontend #BuildInPublic
-- **Mentions**: @Google for Developers | @NVIDIA AI
+- **Mentions**: @Google Cloud | @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - URL state sync implementation verified
 - **Manual Review Required**: NO
 
@@ -260,7 +260,7 @@ Inspect our URL parameter test suites:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #WebDev #TypeScript #Reproducibility #Frontend #BuildInPublic
 ```
 

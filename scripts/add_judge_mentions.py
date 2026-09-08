@@ -49,12 +49,12 @@ FLAGSHIP_POST_IDS = {
     "buffer_li_d21_p5",
 }
 
-FLAGSHIP_LI_MENTIONS = "Mentions & Judges: @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Harvey | @Ray Harvey"
-DAILY_LI_MENTIONS = "Mentions: @Google for Developers | @NVIDIA AI"
+FLAGSHIP_LI_MENTIONS = "Mentions & Judges: @Google Cloud | @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Harvey | @Ray Harvey"
+DAILY_LI_MENTIONS = "Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI"
 TIGHTENED_862_WORDING = (
-    "Measured 8.62× pipeline speedup on an NVIDIA Tesla T4 in Google Colab: "
-    "1.907 s CPU vs 0.221 s GPU. cudf.pandas provided zero-code-change GPU acceleration "
-    "for supported pandas operations."
+    "8.62× measured T4 speedup on the Google/NVIDIA tabular ML benchmark "
+    "(1.907 s CPU vs 0.221 s GPU). Separately, Z-WBE also includes a "
+    "100,000-scenario GPU parameter sweep."
 )
 
 X_FLAGSHIP_POST_TEXTS = {
@@ -128,7 +128,7 @@ X_FLAGSHIP_POST_TEXTS = {
         "89 unit tests.\n"
         "8.62x GPU speedup on Tesla T4.\n"
         "100k scenarios mapped.\n"
-        "Zero hallucinated numbers.\n\n"
+        "Grounded AI interpretation.\n\n"
         "The sprint is complete: https://z-wbe-bottleneck-lab.vercel.app\n\n"
         "#NVIDIAGTC #BuildInPublic\n"
         "cc @GoogleDevs @NVIDIAAI @asierarranz"
@@ -168,14 +168,31 @@ def update_campaign_file(week_num):
     content = content.replace("we open up", "I open up")
     content = content.replace("interacts with our physical simulation engine", "interacts with the physical simulation engine")
     content = content.replace("Read our full pipeline", "Read the full pipeline")
+    content = content.replace("Complete parameter space mapped", "100,000-scenario parameter-space exploration")
+    content = content.replace("complete parameter space mapped", "100,000-scenario parameter-space exploration")
+    content = content.replace("without hallucinating numbers", "grounded strictly in calculated metrics")
+    content = content.replace("without hallucinating new megawatts", "grounded in the calculated megawatts")
+    content = content.replace("without hallucinating a single digit", "Nemotron is instructed to interpret only the deterministic metrics supplied by the application, and its output is labeled AI INTERPRETATION")
 
     # Tightened 8.62x wording replacements where empirical benchmark summaries occur
     content = content.replace(
+        "Measured 8.62× pipeline speedup on an NVIDIA Tesla T4 in Google Colab: 1.907 s CPU vs 0.221 s GPU. cudf.pandas provided zero-code-change GPU acceleration for supported pandas operations.",
+        f"{TIGHTENED_862_WORDING}"
+    )
+    content = content.replace(
         "- Empirical 8.62x GPU Acceleration: Tabular ETL and ML pipeline benchmarked on an NVIDIA Tesla T4 GPU in Google Colab (1.907s CPU vs 0.221s GPU, 88.4% execution time reduction) using zero-code-change %load_ext cudf.pandas.",
-        f"- Empirical 8.62× GPU Acceleration: {TIGHTENED_862_WORDING}"
+        f"- Empirical GPU Speedup: {TIGHTENED_862_WORDING}"
+    )
+    content = content.replace(
+        "- Empirical 8.62× GPU Acceleration: Measured 8.62× pipeline speedup on an NVIDIA Tesla T4 in Google Colab: 1.907 s CPU vs 0.221 s GPU. cudf.pandas provided zero-code-change GPU acceleration for supported pandas operations.",
+        f"- Empirical GPU Speedup: {TIGHTENED_862_WORDING}"
     )
     content = content.replace(
         "- End-to-End ETL + ML Pipeline: 1.907s CPU vs 0.221s GPU (8.62x speedup, 88.4% execution reduction)",
+        f"- End-to-End ETL + ML Pipeline: {TIGHTENED_862_WORDING}"
+    )
+    content = content.replace(
+        "- End-to-End ETL + ML Pipeline: Measured 8.62× pipeline speedup on an NVIDIA Tesla T4 in Google Colab: 1.907 s CPU vs 0.221 s GPU. cudf.pandas provided zero-code-change GPU acceleration for supported pandas operations.",
         f"- End-to-End ETL + ML Pipeline: {TIGHTENED_862_WORDING}"
     )
     content = content.replace(

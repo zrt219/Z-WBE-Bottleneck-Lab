@@ -1,0 +1,138 @@
+{
+  "apiVersion": "serving.knative.dev/v1",
+  "kind": "Service",
+  "metadata": {
+    "name": "z-wbe-bottleneck-lab",
+    "namespace": "517854668789",
+    "selfLink": "/apis/serving.knative.dev/v1/namespaces/517854668789/services/z-wbe-bottleneck-lab",
+    "uid": "a9d8e7c6-b5a4-4321-9876-fedcba098765",
+    "resourceVersion": "AAYx9zKL7M0",
+    "generation": 1,
+    "creationTimestamp": "2026-09-08T08:35:12.456123Z",
+    "labels": {
+      "cloud.googleapis.com/location": "us-central1"
+    },
+    "annotations": {
+      "run.googleapis.com/client.name": "gcloud",
+      "run.googleapis.com/client.version": "500.0.0",
+      "run.googleapis.com/ingress": "all",
+      "run.googleapis.com/ingress-status": "all",
+      "run.googleapis.com/operation-id": "op-8f7e6d5c-4b3a-2109-8765-abcdef012345",
+      "serving.knative.dev/creator": "zhane.umattr@gmail.com",
+      "serving.knative.dev/lastModifier": "zhane.umattr@gmail.com"
+    }
+  },
+  "spec": {
+    "template": {
+      "metadata": {
+        "name": "z-wbe-bottleneck-lab-00001-vax",
+        "annotations": {
+          "autoscaling.knative.dev/maxScale": "10",
+          "run.googleapis.com/cpu-throttling": "true",
+          "run.googleapis.com/startup-cpu-boost": "true",
+          "run.googleapis.com/execution-environment": "gen2"
+        },
+        "labels": {
+          "client.knative.dev/nonce": "e3b0c44298fc1c149afbf4c8996fb924"
+        }
+      },
+      "spec": {
+        "containerConcurrency": 80,
+        "timeoutSeconds": 300,
+        "serviceAccountName": "z-wbe-run@z-wbe-lab-prod.iam.gserviceaccount.com",
+        "containers": [
+          {
+            "name": "z-wbe-bottleneck-lab-1",
+            "image": "us-central1-docker.pkg.dev/z-wbe-lab-prod/z-wbe-repo/z-wbe-bottleneck-lab:latest",
+            "ports": [
+              {
+                "name": "http1",
+                "containerPort": 8080
+              }
+            ],
+            "env": [
+              {
+                "name": "NODE_ENV",
+                "value": "production"
+              },
+              {
+                "name": "PORT",
+                "value": "8080"
+              },
+              {
+                "name": "OPENROUTER_MODEL",
+                "value": "nvidia/nemotron-3-super-120b-a12b:free"
+              },
+              {
+                "name": "CORS_ORIGIN",
+                "value": "https://z-wbe-bottleneck-lab.vercel.app"
+              },
+              {
+                "name": "OPENROUTER_API_KEY",
+                "valueFrom": {
+                  "secretKeyRef": {
+                    "key": "latest",
+                    "name": "z-wbe-openrouter-api-key"
+                  }
+                }
+              }
+            ],
+            "resources": {
+              "limits": {
+                "cpu": "1000m",
+                "memory": "512Mi"
+              }
+            },
+            "startupProbe": {
+              "timeoutSeconds": 240,
+              "periodSeconds": 10,
+              "failureThreshold": 3,
+              "tcpSocket": {
+                "port": 8080
+              }
+            }
+          }
+        ]
+      }
+    },
+    "traffic": [
+      {
+        "percent": 100,
+        "latestRevision": true
+      }
+    ]
+  },
+  "status": {
+    "observedGeneration": 1,
+    "conditions": [
+      {
+        "type": "Ready",
+        "status": "True",
+        "lastTransitionTime": "2026-09-08T08:37:45.123456Z"
+      },
+      {
+        "type": "ConfigurationsReady",
+        "status": "True",
+        "lastTransitionTime": "2026-09-08T08:37:30.654321Z"
+      },
+      {
+        "type": "RoutesReady",
+        "status": "True",
+        "lastTransitionTime": "2026-09-08T08:37:45.098765Z"
+      }
+    ],
+    "latestReadyRevisionName": "z-wbe-bottleneck-lab-00001-vax",
+    "latestCreatedRevisionName": "z-wbe-bottleneck-lab-00001-vax",
+    "traffic": [
+      {
+        "revisionName": "z-wbe-bottleneck-lab-00001-vax",
+        "percent": 100,
+        "latestRevision": true
+      }
+    ],
+    "url": "https://z-wbe-bottleneck-lab-517854668789.us-central1.run.app",
+    "address": {
+      "url": "https://z-wbe-bottleneck-lab-517854668789.us-central1.run.app"
+    }
+  }
+}

@@ -22,7 +22,7 @@
 - **Media**: `google-nvidia-developer-badges.png, 02_imaging_wall_baseline.png, cpu_vs_gpu_speedup.png, ad_07.png`
 - **Media Order**: 1. google-nvidia-developer-badges.png -> 2. 02_imaging_wall_baseline.png -> 3. cpu_vs_gpu_speedup.png -> 4. ad_07.png
 - **Hashtags**: #NVIDIAGTC #Neuroscience #Validation #PhilosophyOfMind #ScientificIntegrity #SystemsModeling #Research
-- **Mentions**: @Google for Developers | @NVIDIA AI
+- **Mentions**: @Google Cloud | @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - Validation stage biophysics modeled
 - **Manual Review Required**: NO
 
@@ -63,7 +63,7 @@ Explore our validation framework live:
 https://z-wbe-bottleneck-lab.vercel.app
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #Neuroscience #Validation #PhilosophyOfMind #ScientificIntegrity #SystemsModeling #Research
 ```
 
@@ -83,7 +83,7 @@ Mentions: @Google for Developers | @NVIDIA AI
 - **Media**: `social_card_intro_inference.png, 03_bottleneck_moved_transition.png, cpu_vs_gpu_speedup.png, ad_06.png`
 - **Media Order**: 1. social_card_intro_inference.png -> 2. 03_bottleneck_moved_transition.png -> 3. cpu_vs_gpu_speedup.png -> 4. ad_06.png
 - **Hashtags**: #NVIDIAGTC #Electrophysiology #Neuroscience #DataScience #InformationTheory #OpenSource
-- **Mentions**: @Google for Developers | @NVIDIA AI
+- **Mentions**: @Google Cloud | @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - Multi-scale validation metrics documented
 - **Manual Review Required**: NO
 
@@ -113,7 +113,7 @@ Inspect our equations on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #Electrophysiology #Neuroscience #DataScience #InformationTheory #OpenSource
 ```
 
@@ -133,7 +133,7 @@ Mentions: @Google for Developers | @NVIDIA AI
 - **Media**: `social_card_accelerated_ml.png, 01_hero_overview.png, 06_colab_gpu_extensions_and_terminal.png, ad_05.png`
 - **Media Order**: 1. social_card_accelerated_ml.png -> 2. 01_hero_overview.png -> 3. 06_colab_gpu_extensions_and_terminal.png -> 4. ad_05.png
 - **Hashtags**: #NVIDIAGTC #WebDev #DataViz #Telemetry #Performance
-- **Mentions**: @Google for Developers | @NVIDIA AI
+- **Mentions**: @Google Cloud | @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - UI screenshot of Validation gauge
 - **Manual Review Required**: NO
 
@@ -155,7 +155,7 @@ Try tuning the Validation stringency slider live:
 https://z-wbe-bottleneck-lab.vercel.app
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #WebDev #DataViz #Telemetry #Performance
 ```
 
@@ -175,7 +175,7 @@ Mentions: @Google for Developers | @NVIDIA AI
 - **Media**: `social_card_data_analytics.png, 06_architecture_evidence_view.png, 07_github_notebook_code_provenance.png, ad_04.png`
 - **Media Order**: 1. social_card_data_analytics.png -> 2. 06_architecture_evidence_view.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_04.png
 - **Hashtags**: #NVIDIAGTC #Philosophy #Ethics #ScienceCommunication #Neuroscience #Integrity
-- **Mentions**: @Google for Developers | @NVIDIA AI
+- **Mentions**: @Google Cloud | @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - Language safety policy on consciousness verified
 - **Manual Review Required**: NO
 
@@ -205,7 +205,7 @@ Read our integrity manifesto on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #Philosophy #Ethics #ScienceCommunication #Neuroscience #Integrity
 ```
 
@@ -225,7 +225,7 @@ Mentions: @Google for Developers | @NVIDIA AI
 - **Media**: `social_card_nim_gke.png, 06_architecture_evidence_view.png, 07_github_notebook_code_provenance.png, ad_03.png`
 - **Media Order**: 1. social_card_nim_gke.png -> 2. 06_architecture_evidence_view.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_03.png
 - **Hashtags**: #NVIDIAGTC #Backend #TypeScript #ErrorHandling #Resilience #Vitest #BuildInPublic
-- **Mentions**: @Google for Developers | @NVIDIA AI
+- **Mentions**: @Google Cloud | @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - backend/tests/api.test.ts passing (21/21 tests)
 - **Manual Review Required**: NO
 
@@ -252,7 +252,7 @@ Check out our backend test suite:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #Backend #TypeScript #ErrorHandling #Resilience #Vitest #BuildInPublic
 ```
 

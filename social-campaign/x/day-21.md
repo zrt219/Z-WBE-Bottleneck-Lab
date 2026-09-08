@@ -41,7 +41,7 @@ Day 21 of 21: Full Campaign Retrospective!
 89 unit tests.
 8.62x GPU speedup on Tesla T4.
 100k scenarios mapped.
-Zero hallucinated numbers.
+Grounded AI interpretation.
 
 The sprint is complete: https://z-wbe-bottleneck-lab.vercel.app
 

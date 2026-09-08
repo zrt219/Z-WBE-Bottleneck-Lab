@@ -861,7 +861,7 @@ npm test
 * **Competition**: Google Cloud × NVIDIA Developer Challenge 2026
 * **Social Hashtag**: **`#NVIDIAGTC`**
 * **Judges & Channels**:
-  * **LinkedIn**: Google for Developers, NVIDIA AI, Asier Arranz, Jen Harvey, Ray Harvey, Chorouk Malmoum
+  * **LinkedIn**: Google Cloud, Google for Developers, NVIDIA AI, selected contest judges (Asier Arranz, Jen Harvey, Ray Harvey, Chorouk Malmoum)
   * **X (Twitter)**: `@GoogleDevs`, `@NVIDIAAI`, `@asierarranz`
 * **Google Developers Public Profile**: [developers.google.com/profile/u/zhane](https://developers.google.com/profile/u/zhane) • [ID: 110918189625880989910](https://developers.google.com/profile/u/110918189625880989910) • **Verified Level 11 Developer**
 * **Verified Pathways & Public Credentials (Earned Sep 7, 2026 - 4/4 Complete Sweep)**:

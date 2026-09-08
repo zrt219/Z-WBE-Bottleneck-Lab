@@ -22,7 +22,7 @@
 - **Media**: `social_card_intro_inference.png, 06_architecture_evidence_view.png, 05_colab_nvidia_smi_ensemble_eval.png, ad_04.png`
 - **Media Order**: 1. social_card_intro_inference.png -> 2. 06_architecture_evidence_view.png -> 3. 05_colab_nvidia_smi_ensemble_eval.png -> 4. ad_04.png
 - **Hashtags**: #NVIDIAGTC #Economics #CapitalExpenditure #DataCenter #FinancialModeling #HighPerformanceComputing #SystemsEngineering
-- **Mentions**: @Google for Developers | @NVIDIA AI
+- **Mentions**: @Google Cloud | @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - Capex and Opex equations verified
 - **Manual Review Required**: NO
 
@@ -59,7 +59,7 @@ Explore the economic sliders live:
 https://z-wbe-bottleneck-lab.vercel.app
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #Economics #CapitalExpenditure #DataCenter #FinancialModeling #HighPerformanceComputing #SystemsEngineering
 ```
 
@@ -79,7 +79,7 @@ Mentions: @Google for Developers | @NVIDIA AI
 - **Media**: `social_card_nim_gke.png, 06_architecture_evidence_view.png, 07_github_notebook_code_provenance.png, ad_03.png`
 - **Media Order**: 1. social_card_nim_gke.png -> 2. 06_architecture_evidence_view.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_03.png
 - **Hashtags**: #NVIDIAGTC #GoogleCloud #NVIDIA #Kubernetes #GKE #NIM #CloudRun #DevOps
-- **Mentions**: @Google for Developers | @NVIDIA AI
+- **Mentions**: @Google Cloud | @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - NIM on GKE course learnings verified
 - **Manual Review Required**: NO
 
@@ -108,7 +108,7 @@ View my verified Google Cloud badge:
 https://g.dev/zhane
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #GoogleCloud #NVIDIA #Kubernetes #GKE #NIM #CloudRun #DevOps
 ```
 
@@ -128,7 +128,7 @@ Mentions: @Google for Developers | @NVIDIA AI
 - **Media**: `social_card_data_analytics.png, 06_architecture_evidence_view.png, 03_colab_cuml_linear_regression.png, ad_02.png`
 - **Media Order**: 1. social_card_data_analytics.png -> 2. 06_architecture_evidence_view.png -> 3. 03_colab_cuml_linear_regression.png -> 4. ad_02.png
 - **Hashtags**: #NVIDIAGTC #InteractiveModel #DataViz #EngineeringEconomics #ProductDemo
-- **Mentions**: @Google for Developers | @NVIDIA AI
+- **Mentions**: @Google Cloud | @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - UI screenshot of Economics gauge
 - **Manual Review Required**: NO
 
@@ -152,7 +152,7 @@ Find the knee point yourself:
 https://z-wbe-bottleneck-lab.vercel.app
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #InteractiveModel #DataViz #EngineeringEconomics #ProductDemo
 ```
 
@@ -172,7 +172,7 @@ Mentions: @Google for Developers | @NVIDIA AI
 - **Media**: `social_card_accelerated_ml.png, 06_architecture_evidence_view.png, 07_github_notebook_code_provenance.png, ad_01.png`
 - **Media Order**: 1. social_card_accelerated_ml.png -> 2. 06_architecture_evidence_view.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_01.png
 - **Hashtags**: #NVIDIAGTC #LiquidCooling #Thermodynamics #DataCenter #GreenComputing #HardwareEngineering
-- **Mentions**: @Google for Developers | @NVIDIA AI
+- **Mentions**: @Google Cloud | @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - Liquid cooling and thermodynamic modeling verified
 - **Manual Review Required**: NO
 
@@ -203,7 +203,7 @@ Inspect our thermodynamic equations on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #LiquidCooling #Thermodynamics #DataCenter #GreenComputing #HardwareEngineering
 ```
 
@@ -223,7 +223,7 @@ Mentions: @Google for Developers | @NVIDIA AI
 - **Media**: `golden_ticket_speed_up_data_analytics.png, 06_architecture_evidence_view.png, 07_github_notebook_code_provenance.png, banner-light.png`
 - **Media Order**: 1. golden_ticket_speed_up_data_analytics.png -> 2. 06_architecture_evidence_view.png -> 3. 07_github_notebook_code_provenance.png -> 4. banner-light.png
 - **Hashtags**: #NVIDIAGTC #Accessibility #A11y #WebDevelopment #Frontend #TypeScript #Vitest
-- **Mentions**: @Google for Developers | @NVIDIA AI
+- **Mentions**: @Google Cloud | @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - Accessibility tests pass (7/7 tests)
 - **Manual Review Required**: NO
 
@@ -251,7 +251,7 @@ Check out our accessibility test suite:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #Accessibility #A11y #WebDevelopment #Frontend #TypeScript #Vitest
 ```
 

@@ -22,7 +22,7 @@
 - **Media**: `social_card_data_analytics.png, 05_gpu_exploration_map.png, 07_github_notebook_code_provenance.png, ad_01.png`
 - **Media Order**: 1. social_card_data_analytics.png -> 2. 05_gpu_exploration_map.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_01.png
 - **Hashtags**: #NVIDIAGTC #RAPIDS #cuDF #cuML #DataScience #Python #GPUComputing #AcceleratedComputing
-- **Mentions**: @Google for Developers | @NVIDIA AI
+- **Mentions**: @Google Cloud | @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - RAPIDS stack integration verified
 - **Manual Review Required**: NO
 
@@ -53,7 +53,7 @@ Explore our RAPIDS pipeline in Google Colab:
 https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #RAPIDS #cuDF #cuML #DataScience #Python #GPUComputing #AcceleratedComputing
 ```
 
@@ -73,7 +73,7 @@ Mentions: @Google for Developers | @NVIDIA AI
 - **Media**: `social_card_data_analytics.png, 05_gpu_exploration_map.png, 07_github_notebook_code_provenance.png, banner-light.png`
 - **Media Order**: 1. social_card_data_analytics.png -> 2. 05_gpu_exploration_map.png -> 3. 07_github_notebook_code_provenance.png -> 4. banner-light.png
 - **Hashtags**: #NVIDIAGTC #DataEngineering #ApacheParquet #RAPIDS #Storage #BigData #Python
-- **Mentions**: @Google for Developers | @NVIDIA AI
+- **Mentions**: @Google Cloud | @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - Parquet tutorial and optimization verified
 - **Manual Review Required**: NO
 
@@ -102,7 +102,7 @@ Read our complete Parquet tutorial in `notebooks/tutorials/TUTORIAL_WHY_PARQUET_
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #DataEngineering #ApacheParquet #RAPIDS #Storage #BigData #Python
 ```
 
@@ -122,7 +122,7 @@ Mentions: @Google for Developers | @NVIDIA AI
 - **Media**: `colab_t4_terminal_execution.gif`
 - **Media Order**: Single Asset: colab_t4_terminal_execution.gif
 - **Hashtags**: #NVIDIAGTC #GoogleColab #MachineLearning #Performance #DataAnalytics
-- **Mentions**: @Google for Developers | @NVIDIA AI
+- **Mentions**: @Google Cloud | @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - Colab execution capture
 - **Manual Review Required**: NO
 
@@ -141,7 +141,7 @@ Try running it yourself:
 https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #GoogleColab #MachineLearning #Performance #DataAnalytics
 ```
 
@@ -161,7 +161,7 @@ Mentions: @Google for Developers | @NVIDIA AI
 - **Media**: `social_card_data_analytics.png, 01_hero_overview.png, cpu_vs_gpu_speedup.png, banner-dark.png`
 - **Media Order**: 1. social_card_data_analytics.png -> 2. 01_hero_overview.png -> 3. cpu_vs_gpu_speedup.png -> 4. banner-dark.png
 - **Hashtags**: #NVIDIAGTC #GoogleCloud #GoogleDevelopers #NVIDIA #ContinuousLearning #Upskilling #DeveloperJourney
-- **Mentions**: @Google for Developers | @NVIDIA AI
+- **Mentions**: @Google Cloud | @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - Google Cloud Speed Up Data Analytics badge verified
 - **Manual Review Required**: NO
 
@@ -194,7 +194,7 @@ View my verified Google Developer badge:
 https://g.dev/zhane
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #GoogleCloud #GoogleDevelopers #NVIDIA #ContinuousLearning #Upskilling #DeveloperJourney
 ```
 
@@ -214,7 +214,7 @@ Mentions: @Google for Developers | @NVIDIA AI
 - **Media**: `social_card_data_analytics.png, 06_architecture_evidence_view.png, 07_github_notebook_code_provenance.png, ad_10.png`
 - **Media Order**: 1. social_card_data_analytics.png -> 2. 06_architecture_evidence_view.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_10.png
 - **Hashtags**: #NVIDIAGTC #Python #DevOps #GoogleColab #ErrorHandling #BuildInPublic
-- **Mentions**: @Google for Developers | @NVIDIA AI
+- **Mentions**: @Google Cloud | @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - scripts/test_cudf_profiling.py verified
 - **Manual Review Required**: NO
 
@@ -242,7 +242,7 @@ Check out our runtime initialization code:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #Python #DevOps #GoogleColab #ErrorHandling #BuildInPublic
 ```
 

@@ -22,7 +22,7 @@
 - **Media**: `social_card_data_analytics.png, 02_imaging_wall_baseline.png, 08_colab_rapids_and_variable_inspector.png, ad_05.png`
 - **Media Order**: 1. social_card_data_analytics.png -> 2. 02_imaging_wall_baseline.png -> 3. 08_colab_rapids_and_variable_inspector.png -> 4. ad_05.png
 - **Hashtags**: #NVIDIAGTC #MonteCarlo #DataScience #DataAnalytics #RAPIDS #cuDF #Supercomputing #ComputationalNeuroscience
-- **Mentions**: @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Harvey | @Ray Harvey
+- **Mentions**: @Google Cloud | @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Harvey | @Ray Harvey
 - **Claims Verified**: YES - 100k scenario sweep summary verified in gpu-sweep-summary.json
 - **Manual Review Required**: NO
 
@@ -60,7 +60,7 @@ Explore the interactive 100k scenario heatmap live:
 https://z-wbe-bottleneck-lab.vercel.app
 
 
-Mentions & Judges: @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Harvey | @Ray Harvey
+Mentions & Judges: @Google Cloud | @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #MonteCarlo #DataScience #DataAnalytics #RAPIDS #cuDF #Supercomputing #ComputationalNeuroscience
 ```
 
@@ -80,7 +80,7 @@ Mentions & Judges: @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Ha
 - **Media**: `social_card_data_analytics.png, 05_gpu_exploration_map.png, 07_github_notebook_code_provenance.png, ad_04.png`
 - **Media Order**: 1. social_card_data_analytics.png -> 2. 05_gpu_exploration_map.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_04.png
 - **Hashtags**: #NVIDIAGTC #Python #MonteCarlo #DataEngineering #RAPIDS #cuDF #Mathematics
-- **Mentions**: @Google for Developers | @NVIDIA AI
+- **Mentions**: @Google Cloud | @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - scripts/generate_gpu_sweep.py code verified
 - **Manual Review Required**: NO
 
@@ -110,7 +110,7 @@ Inspect the generator script on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #Python #MonteCarlo #DataEngineering #RAPIDS #cuDF #Mathematics
 ```
 
@@ -130,7 +130,7 @@ Mentions: @Google for Developers | @NVIDIA AI
 - **Media**: `golden_ticket_data_analytics.png, 02_imaging_wall_baseline.png, eda_histograms.png, ad_03.png`
 - **Media Order**: 1. golden_ticket_data_analytics.png -> 2. 02_imaging_wall_baseline.png -> 3. eda_histograms.png -> 4. ad_03.png
 - **Hashtags**: #NVIDIAGTC #DataVisualization #Heatmap #UXDesign #WebDev #InteractiveScience
-- **Mentions**: @Google for Developers | @NVIDIA AI
+- **Mentions**: @Google Cloud | @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - UI screenshot of heatmap
 - **Manual Review Required**: NO
 
@@ -158,7 +158,7 @@ Try the interactive map live:
 https://z-wbe-bottleneck-lab.vercel.app
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #DataVisualization #Heatmap #UXDesign #WebDev #InteractiveScience
 ```
 
@@ -178,7 +178,7 @@ Mentions: @Google for Developers | @NVIDIA AI
 - **Media**: `golden_ticket_nim_gke.png, 02_imaging_wall_baseline.png, 07_github_notebook_code_provenance.png, ad_02.png`
 - **Media Order**: 1. golden_ticket_nim_gke.png -> 2. 02_imaging_wall_baseline.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_02.png
 - **Hashtags**: #NVIDIAGTC #DataScience #Statistics #Correlation #EDA #GoogleColab #Python
-- **Mentions**: @Google for Developers | @NVIDIA AI
+- **Mentions**: @Google Cloud | @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - eda_scatter_matrix.png verified
 - **Manual Review Required**: NO
 
@@ -205,7 +205,7 @@ Inspect the correlation scatter matrix in Google Colab:
 https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #DataScience #Statistics #Correlation #EDA #GoogleColab #Python
 ```
 
@@ -225,7 +225,7 @@ Mentions: @Google for Developers | @NVIDIA AI
 - **Media**: `social_card_data_analytics.png, 04_nemotron_grounded_interpretation.png, cpu_vs_gpu_speedup.png, ad_01.png`
 - **Media Order**: 1. social_card_data_analytics.png -> 2. 04_nemotron_grounded_interpretation.png -> 3. cpu_vs_gpu_speedup.png -> 4. ad_01.png
 - **Hashtags**: #NVIDIAGTC #Engineering #BuildInPublic #OpenSource #SoftwareArchitecture #Retrospective
-- **Mentions**: @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Harvey | @Ray Harvey
+- **Mentions**: @Google Cloud | @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Harvey | @Ray Harvey
 - **Claims Verified**: YES - Week 2 completion verified
 - **Manual Review Required**: NO
 
@@ -258,7 +258,7 @@ Experience Z-WBE Bottleneck Lab:
 https://z-wbe-bottleneck-lab.vercel.app
 
 
-Mentions & Judges: @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Harvey | @Ray Harvey
+Mentions & Judges: @Google Cloud | @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #Engineering #BuildInPublic #OpenSource #SoftwareArchitecture #Retrospective
 ```
 

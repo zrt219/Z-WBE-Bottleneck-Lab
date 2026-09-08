@@ -44,8 +44,8 @@ Core Architectural Principle: Strict Epistemic Separation
 
 Key Empirical & Architectural Highlights:
 - The Hero Demo Moment: What happens if imaging becomes 100x faster? The acquisition bottleneck collapses—and the dominant constraint instantly shifts to Memory Bandwidth in <1ms.
-- Empirical 8.62× GPU Acceleration: Measured 8.62× pipeline speedup on an NVIDIA Tesla T4 in Google Colab: 1.907 s CPU vs 0.221 s GPU. cudf.pandas provided zero-code-change GPU acceleration for supported pandas operations.
-- 100,000-Scenario Monte Carlo Sweep: Complete parameter space mapped in GPU memory with NVIDIA RAPIDS cuDF, visualized in an interactive heatmap.
+- Empirical 8.62× GPU Acceleration: 8.62× measured T4 speedup on the Google/NVIDIA tabular ML benchmark (1.907 s CPU vs 0.221 s GPU). Separately, Z-WBE also includes a 100,000-scenario GPU parameter sweep.
+- 100,000-Scenario Monte Carlo Sweep: 100,000-scenario parameter-space exploration in GPU memory with NVIDIA RAPIDS cuDF, visualized in an interactive heatmap.
 - 1-Click Reproducible Colab: Full 10-stage GPU notebook ready to run in one click.
 - 89 Passing Unit Tests: Full TypeScript monorepo, zero secret leakage, containerized microservice ready for Google Cloud Run.
 
@@ -54,7 +54,7 @@ Live Demonstrator: https://z-wbe-bottleneck-lab.vercel.app
 1-Click Colab Lab: https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 GitHub Repository: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
-Mentions & Judges: @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Harvey | @Ray Harvey
+Mentions & Judges: @Google Cloud | @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #GoogleCloud #NVIDIA #Nemotron #OpenRouter #RAPIDS #cuDF #CloudRun #ComputationalNeuroscience #SystemsEngineering #OpenSource #DevChallenge"""
         },
         {
@@ -94,7 +94,7 @@ Inspect our constraint equations in the open-source repository:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #SystemsEngineering #ComputationalNeuroscience #HighPerformanceComputing #HardwareArchitecture #TypeScript #OpenSource"""
         },
         {
@@ -121,7 +121,7 @@ Try the live demonstrator in your browser:
 https://z-wbe-bottleneck-lab.vercel.app
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #InteractiveDemo #Neuroscience #SystemsEngineering #WebDev #BuildInPublic"""
         },
         {
@@ -158,7 +158,7 @@ Read the full pipeline architecture breakdown on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #ComputationalNeuroscience #Connectomics #SystemsModeling #Research #OpenSource"""
         },
         {
@@ -195,7 +195,7 @@ Test the dual interpretation engine live:
 https://z-wbe-bottleneck-lab.vercel.app
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #AIEngineering #Nemotron #SoftwareArchitecture #TypeScript #BuildInPublic"""
         },
         {
@@ -229,7 +229,7 @@ Star or fork the repository on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 
-Mentions & Judges: @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Harvey | @Ray Harvey
+Mentions & Judges: @Google Cloud | @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #AmdahlsLaw #SystemsEngineering #HardwareDesign #ScientificComputing"""
         }
     ]
@@ -425,7 +425,7 @@ Accelerating a single subsystem simply reveals the next physical wall.
 Experience the hero transition live:
 https://z-wbe-bottleneck-lab.vercel.app
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #GoogleCloud #NVIDIA #SystemsEngineering #AmdahlsLaw #HardwareArchitecture #ComputationalNeuroscience #DevChallenge"""
         },
         {
@@ -458,7 +458,7 @@ Inspect the physical formulas in our shared TypeScript library:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #Microscopy #Biophysics #ElectronMicroscopy #ComputationalNeuroscience #TypeScript #OpenSource"""
         },
         {
@@ -481,7 +481,7 @@ Try it yourself:
 https://z-wbe-bottleneck-lab.vercel.app
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #SystemsEngineering #InteractiveData #DataVisualization #WebDev #OpenSource"""
         },
         {
@@ -499,7 +499,7 @@ Mentions: @Google for Developers | @NVIDIA AI
                 "public/colab-evidence/06_colab_gpu_extensions_and_terminal.png",
                 "public/marketing/ad_05.png"
             ],
-            "text": """How NVIDIA Nemotron explains the bottleneck shift without hallucinating numbers.
+            "text": """How NVIDIA Nemotron explains the bottleneck shift grounded strictly in calculated metrics.
 
 When the user activates the 100x imaging preset, our frontend triggers a request to NVIDIA Nemotron 3 Super 120B via OpenRouter.
 
@@ -521,7 +521,7 @@ Explore this grounded AI design in action:
 https://z-wbe-bottleneck-lab.vercel.app
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #NVIDIA #Nemotron #OpenRouter #PromptEngineering #AIEngineering #SystemDesign"""
         },
         {
@@ -554,7 +554,7 @@ Check out our client-side state architecture on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #TypeScript #FrontendArchitecture #WebPerformance #CleanCode #BuildInPublic"""
         }
     ]
@@ -714,7 +714,7 @@ An open-source systems-modeling lab dismantling domain silos in computational ne
 - Systems Insight: 100x microscopy acceleration moves the bottleneck to Memory Bandwidth (Amdahl's Law).
 
 4. EMPIRICAL BENCHMARK EVIDENCE (Tesla T4 GPU in Google Colab):
-- End-to-End ETL + ML Pipeline: Measured 8.62× pipeline speedup on an NVIDIA Tesla T4 in Google Colab: 1.907 s CPU vs 0.221 s GPU. cudf.pandas provided zero-code-change GPU acceleration for supported pandas operations.
+- End-to-End ETL + ML Pipeline: 8.62× measured T4 speedup on the Google/NVIDIA tabular ML benchmark (1.907 s CPU vs 0.221 s GPU). Separately, Z-WBE also includes a 100,000-scenario GPU parameter sweep.
 - Sub-Task Speedups:
   * XGBoost Training: 9.8x (0.545s vs 0.056s)
   * Random Forest (cuML): 8.5x (1.308s vs 0.154s)
@@ -728,7 +728,7 @@ Live Demonstrator: https://z-wbe-bottleneck-lab.vercel.app
 GitHub: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 Profile: https://g.dev/zhane
 
-Mentions & Judges: @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Harvey | @Ray Harvey
+Mentions & Judges: @Google Cloud | @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #GoogleCloud #NVIDIA #Nemotron #RAPIDS #cuDF #cuML #TeslaT4 #GoogleColab #CloudRun #DevChallenge #GoldenTicket #OpenSource #HighPerformanceComputing"""
         },
         {
@@ -766,7 +766,7 @@ Run the benchmark cell yourself in Google Colab:
 https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #RAPIDS #cuDF #DataScience #Python #GPUComputing #MachineLearning"""
         },
         {
@@ -792,7 +792,7 @@ Launch the notebook now:
 https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #GoogleColab #NVIDIA #Jupyter #DataScience #BuildInPublic #OpenScience"""
         },
         {
@@ -828,7 +828,7 @@ Read our full provenance ledger on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #ScientificIntegrity #Benchmark #Reproducibility #Hardware #EngineeringEthics"""
         },
         {
@@ -863,7 +863,7 @@ Check out our notebook synchronization setup:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 
-Mentions & Judges: @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Harvey | @Ray Harvey
+Mentions & Judges: @Google Cloud | @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #DevOps #GoogleColab #GitHub #Automation #Maturity"""
         },
         {
@@ -898,7 +898,7 @@ The 21-day campaign has only just begun. Over the next 18 days, we will dissect 
 Explore the project: https://z-wbe-bottleneck-lab.vercel.app
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #GoogleCloud #NVIDIA #GTC2026 #DevChallenge #BuildInPublic"""
         }
     ]
@@ -1092,7 +1092,7 @@ Test the limits of Amdahl's Law on our live demonstrator:
 https://z-wbe-bottleneck-lab.vercel.app
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #AmdahlsLaw #SystemsEngineering #ComputerArchitecture #Neuroscience #HPC"""
         },
         {
@@ -1129,7 +1129,7 @@ Inspect the complete scoring algorithm in `shared/src/bottlenecks.ts`:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #Algorithm #TypeScript #DataModeling #MathematicalModeling #OpenSource"""
         },
         {
@@ -1154,7 +1154,7 @@ Play with the sliders live:
 https://z-wbe-bottleneck-lab.vercel.app
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #WebDev #UIUX #DataVisualization #Neuroscience"""
         },
         {
@@ -1190,7 +1190,7 @@ Run the parameter sweep notebook cell yourself:
 https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #RAPIDS #cuDF #GoogleColab #MonteCarlo #DataScience #DataAnalytics"""
         },
         {
@@ -1224,7 +1224,7 @@ Inspect our test suites:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #SoftwareTesting #Vitest #TypeScript #UnitTesting #QualityAssurance"""
         }
     ]
@@ -1388,7 +1388,7 @@ Experience the Memory Wall calculation live:
 https://z-wbe-bottleneck-lab.vercel.app
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #MemoryWall #ComputerArchitecture #HBM #GPUComputing #HighPerformanceComputing #HardwareEngineering"""
         },
         {
@@ -1426,7 +1426,7 @@ Inspect the formulas in `shared/src/equations.ts`:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #ComputerArchitecture #HardwareDesign #SystemsEngineering #DataScience #TypeScript"""
         },
         {
@@ -1449,7 +1449,7 @@ Test the slider live:
 https://z-wbe-bottleneck-lab.vercel.app
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #DataVisualization #InteractiveLab #Neuroscience #WebPerformance"""
         },
         {
@@ -1482,7 +1482,7 @@ Inspect our profiling cells in Colab:
 https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #RAPIDS #cuDF #GoogleColab #Profiling #PerformanceEngineering #Python"""
         },
         {
@@ -1514,7 +1514,7 @@ Check out our unit tests:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #TypeScript #CleanCode #UnitTesting #Mathematics #BuildInPublic"""
         }
     ]
@@ -1671,7 +1671,7 @@ Explore the complete pipeline model live:
 https://z-wbe-bottleneck-lab.vercel.app
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #WholeBrainEmulation #ComputationalNeuroscience #SystemsEngineering #Biophysics #Research #OpenSource"""
         },
         {
@@ -1706,7 +1706,7 @@ Inspect our reconstruction formulas in the repository:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #ComputerVision #DeepLearning #Neuroscience #Connectomics #Inference"""
         },
         {
@@ -1729,7 +1729,7 @@ Launch the lab in your browser:
 https://z-wbe-bottleneck-lab.vercel.app
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #WebDev #Engineering #DataVisualization #InteractiveApp"""
         },
         {
@@ -1766,7 +1766,7 @@ Read our full discussion of epistemic limitations on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #Neuroscience #Biophysics #ScientificIntegrity #SystemsModeling #Research"""
         },
         {
@@ -1798,7 +1798,7 @@ Inspect our Dockerfile on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #GoogleCloud #CloudRun #Docker #DevOps #BackendEngineering #TypeScript"""
         }
     ]
@@ -1966,7 +1966,7 @@ Tomorrow, we kick off Week 2: The Engineering Deep Dive, starting with our 12 de
 Try the demonstrator: https://z-wbe-bottleneck-lab.vercel.app
 
 
-Mentions & Judges: @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Harvey | @Ray Harvey
+Mentions & Judges: @Google Cloud | @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #GoogleCloud #NVIDIA #BuildInPublic #OpenSource #SoftwareEngineering #ComputationalNeuroscience #Retrospective"""
         },
         {
@@ -1996,7 +1996,7 @@ Toggle between the modes live:
 https://z-wbe-bottleneck-lab.vercel.app
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #AI #PromptEngineering #Nemotron #UXDesign #ScientificCommunication"""
         },
         {
@@ -2017,7 +2017,7 @@ Try it yourself:
 https://z-wbe-bottleneck-lab.vercel.app
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #InteractiveDesign #AIEngineering #WebDev #BuildInPublic"""
         },
         {
@@ -2051,7 +2051,7 @@ Fork the repository:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #OpenSource #Science #Reproducibility #GitHub #TypeScript #DevCommunity"""
         },
         {
@@ -2085,7 +2085,7 @@ Thank you to everyone who tried the app, ran the Colab notebook, and sent feedba
 Live demonstrator: https://z-wbe-bottleneck-lab.vercel.app
 
 
-Mentions & Judges: @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Harvey | @Ray Harvey
+Mentions & Judges: @Google Cloud | @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #BuildInPublic #Engineering #Roadmap #GTC2026"""
         }
     ]

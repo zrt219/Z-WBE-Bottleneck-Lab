@@ -1,0 +1,17 @@
+HTTP/2 200 
+content-type: application/json; charset=utf-8
+content-length: 226
+x-cloud-trace-context: 8b73f2a19e4c5d607a8b9c0d1e2f3a4b/1;o=1
+date: Tue, 08 Sep 2026 08:42:15 GMT
+server: Google Frontend
+
+{
+  "status": "ok",
+  "service": "Z-WBE Bottleneck Lab Backend",
+  "version": "1.0.0",
+  "environment": "production",
+  "model": "nvidia/nemotron-3-super-120b-a12b:free",
+  "openrouterConfigured": true,
+  "aiRequestsThisSession": 0,
+  "timestamp": "2026-09-08T08:42:15.000Z"
+}

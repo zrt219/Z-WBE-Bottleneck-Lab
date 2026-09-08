@@ -22,7 +22,7 @@
 - **Media**: `social_card_nim_gke.png, 06_architecture_evidence_view.png, cpu_vs_gpu_speedup.png, ad_10.png`
 - **Media Order**: 1. social_card_nim_gke.png -> 2. 06_architecture_evidence_view.png -> 3. cpu_vs_gpu_speedup.png -> 4. ad_10.png
 - **Hashtags**: #NVIDIAGTC #OpenSource #GitHub #ReproducibleResearch #OpenScience #TypeScript #Python #DevCommunity
-- **Mentions**: @Google for Developers | @NVIDIA AI
+- **Mentions**: @Google Cloud | @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - 89 tests passing, MIT license
 - **Manual Review Required**: NO
 
@@ -59,7 +59,7 @@ Clone or star the repository on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #OpenSource #GitHub #ReproducibleResearch #OpenScience #TypeScript #Python #DevCommunity
 ```
 
@@ -79,7 +79,7 @@ Mentions: @Google for Developers | @NVIDIA AI
 - **Media**: `social_card_data_analytics.png, 02_imaging_wall_baseline.png, 07_github_notebook_code_provenance.png, ad_09.png`
 - **Media Order**: 1. social_card_data_analytics.png -> 2. 02_imaging_wall_baseline.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_09.png
 - **Hashtags**: #NVIDIAGTC #SoftwareTesting #Vitest #TypeScript #QualityEngineering #OpenSource
-- **Mentions**: @Google for Developers | @NVIDIA AI
+- **Mentions**: @Google Cloud | @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - npm test passes 89/89 tests in vitest
 - **Manual Review Required**: NO
 
@@ -120,7 +120,7 @@ Review our test suites on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #SoftwareTesting #Vitest #TypeScript #QualityEngineering #OpenSource
 ```
 
@@ -140,7 +140,7 @@ Mentions: @Google for Developers | @NVIDIA AI
 - **Media**: `guided_tour_walkthrough.gif`
 - **Media Order**: Single Asset: guided_tour_walkthrough.gif
 - **Hashtags**: #NVIDIAGTC #WebDev #React #TypeScript #InteractiveDemo
-- **Mentions**: @Google for Developers | @NVIDIA AI
+- **Mentions**: @Google Cloud | @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - Live web app deployed on Vercel
 - **Manual Review Required**: NO
 
@@ -161,7 +161,7 @@ Try it live:
 https://z-wbe-bottleneck-lab.vercel.app
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #WebDev #React #TypeScript #InteractiveDemo
 ```
 
@@ -181,7 +181,7 @@ Mentions: @Google for Developers | @NVIDIA AI
 - **Media**: `social_card_accelerated_ml.png, 04_nemotron_grounded_interpretation.png, 07_github_notebook_code_provenance.png, ad_08.png`
 - **Media Order**: 1. social_card_accelerated_ml.png -> 2. 04_nemotron_grounded_interpretation.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_08.png
 - **Hashtags**: #NVIDIAGTC #GoogleCloud #NVIDIA #MachineLearning #cuML #AcceleratedComputing #ContinuousLearning
-- **Mentions**: @Google for Developers | @NVIDIA AI
+- **Mentions**: @Google Cloud | @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - Accelerated ML badge verified
 - **Manual Review Required**: NO
 
@@ -209,7 +209,7 @@ View all 4 verified credentials on my Google Developer profile:
 https://g.dev/zhane
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #GoogleCloud #NVIDIA #MachineLearning #cuML #AcceleratedComputing #ContinuousLearning
 ```
 
@@ -229,7 +229,7 @@ Mentions: @Google for Developers | @NVIDIA AI
 - **Media**: `social_card_data_analytics.png, 03_bottleneck_moved_transition.png, 07_github_notebook_code_provenance.png, ad_07.png`
 - **Media Order**: 1. social_card_data_analytics.png -> 2. 03_bottleneck_moved_transition.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_07.png
 - **Hashtags**: #NVIDIAGTC #OpenSource #GitHub #Collaboration #Science #BuildInPublic
-- **Mentions**: @Google for Developers | @NVIDIA AI
+- **Mentions**: @Google Cloud | @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - Contribution guidelines verified in README.md
 - **Manual Review Required**: NO
 
@@ -254,7 +254,7 @@ Check out our contribution guide on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #OpenSource #GitHub #Collaboration #Science #BuildInPublic
 ```
 

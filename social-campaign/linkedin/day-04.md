@@ -22,7 +22,7 @@
 - **Media**: `golden_ticket_intro_inference.png, 02_imaging_wall_baseline.png, 04_colab_cuml_execution_progress.png, ad_03.png`
 - **Media Order**: 1. golden_ticket_intro_inference.png -> 2. 02_imaging_wall_baseline.png -> 3. 04_colab_cuml_execution_progress.png -> 4. ad_03.png
 - **Hashtags**: #NVIDIAGTC #AmdahlsLaw #SystemsEngineering #ComputerArchitecture #Neuroscience #HPC
-- **Mentions**: @Google for Developers | @NVIDIA AI
+- **Mentions**: @Google Cloud | @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - Amdahl's Law scaling equations verified
 - **Manual Review Required**: NO
 
@@ -57,7 +57,7 @@ Test the limits of Amdahl's Law on our live demonstrator:
 https://z-wbe-bottleneck-lab.vercel.app
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #AmdahlsLaw #SystemsEngineering #ComputerArchitecture #Neuroscience #HPC
 ```
 
@@ -77,7 +77,7 @@ Mentions: @Google for Developers | @NVIDIA AI
 - **Media**: `golden_ticket_accelerated_ml.png, 02_imaging_wall_baseline.png, 07_github_notebook_code_provenance.png, ad_02.png`
 - **Media Order**: 1. golden_ticket_accelerated_ml.png -> 2. 02_imaging_wall_baseline.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_02.png
 - **Hashtags**: #NVIDIAGTC #Algorithm #TypeScript #DataModeling #MathematicalModeling #OpenSource
-- **Mentions**: @Google for Developers | @NVIDIA AI
+- **Mentions**: @Google Cloud | @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - Bottleneck scoring algorithm in shared/src/bottlenecks.ts
 - **Manual Review Required**: NO
 
@@ -110,7 +110,7 @@ Inspect the complete scoring algorithm in `shared/src/bottlenecks.ts`:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #Algorithm #TypeScript #DataModeling #MathematicalModeling #OpenSource
 ```
 
@@ -130,7 +130,7 @@ Mentions: @Google for Developers | @NVIDIA AI
 - **Media**: `hero_bottleneck_shift.mp4`
 - **Media Order**: Single Asset: hero_bottleneck_shift.mp4
 - **Hashtags**: #NVIDIAGTC #WebDev #UIUX #DataVisualization #Neuroscience
-- **Mentions**: @Google for Developers | @NVIDIA AI
+- **Mentions**: @Google Cloud | @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - UI transition capture
 - **Manual Review Required**: NO
 
@@ -153,7 +153,7 @@ Play with the sliders live:
 https://z-wbe-bottleneck-lab.vercel.app
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #WebDev #UIUX #DataVisualization #Neuroscience
 ```
 
@@ -173,7 +173,7 @@ Mentions: @Google for Developers | @NVIDIA AI
 - **Media**: `social_card_data_analytics.png, 02_imaging_wall_baseline.png, 07_github_notebook_code_provenance.png, ad_01.png`
 - **Media Order**: 1. social_card_data_analytics.png -> 2. 02_imaging_wall_baseline.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_01.png
 - **Hashtags**: #NVIDIAGTC #RAPIDS #cuDF #GoogleColab #MonteCarlo #DataScience #DataAnalytics
-- **Mentions**: @Google for Developers | @NVIDIA AI
+- **Mentions**: @Google Cloud | @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - Colab Stage 9 parameter sweep verified
 - **Manual Review Required**: NO
 
@@ -205,7 +205,7 @@ Run the parameter sweep notebook cell yourself:
 https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #RAPIDS #cuDF #GoogleColab #MonteCarlo #DataScience #DataAnalytics
 ```
 
@@ -225,7 +225,7 @@ Mentions: @Google for Developers | @NVIDIA AI
 - **Media**: `golden_ticket_nim_gke.png, 02_imaging_wall_baseline.png, 07_github_notebook_code_provenance.png, banner-light.png`
 - **Media Order**: 1. golden_ticket_nim_gke.png -> 2. 02_imaging_wall_baseline.png -> 3. 07_github_notebook_code_provenance.png -> 4. banner-light.png
 - **Hashtags**: #NVIDIAGTC #SoftwareTesting #Vitest #TypeScript #UnitTesting #QualityAssurance
-- **Mentions**: @Google for Developers | @NVIDIA AI
+- **Mentions**: @Google Cloud | @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - vitest unit tests in shared/tests/bottlenecks.test.ts
 - **Manual Review Required**: NO
 
@@ -255,7 +255,7 @@ Inspect our test suites:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #SoftwareTesting #Vitest #TypeScript #UnitTesting #QualityAssurance
 ```
 

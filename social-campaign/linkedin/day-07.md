@@ -22,7 +22,7 @@
 - **Media**: `social_card_intro_inference.png, 02_imaging_wall_baseline.png, cpu_vs_gpu_speedup.png, ad_04.png`
 - **Media Order**: 1. social_card_intro_inference.png -> 2. 02_imaging_wall_baseline.png -> 3. cpu_vs_gpu_speedup.png -> 4. ad_04.png
 - **Hashtags**: #NVIDIAGTC #GoogleCloud #NVIDIA #BuildInPublic #OpenSource #SoftwareEngineering #ComputationalNeuroscience #Retrospective
-- **Mentions**: @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Harvey | @Ray Harvey
+- **Mentions**: @Google Cloud | @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Harvey | @Ray Harvey
 - **Claims Verified**: YES - Week 1 sprint retrospective verified
 - **Manual Review Required**: NO
 
@@ -61,7 +61,7 @@ Tomorrow, we kick off Week 2: The Engineering Deep Dive, starting with our 12 de
 Try the demonstrator: https://z-wbe-bottleneck-lab.vercel.app
 
 
-Mentions & Judges: @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Harvey | @Ray Harvey
+Mentions & Judges: @Google Cloud | @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #GoogleCloud #NVIDIA #BuildInPublic #OpenSource #SoftwareEngineering #ComputationalNeuroscience #Retrospective
 ```
 
@@ -81,7 +81,7 @@ Mentions & Judges: @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Ha
 - **Media**: `social_card_intro_inference.png, 04_nemotron_grounded_interpretation.png, 04_colab_cuml_execution_progress.png, ad_03.png`
 - **Media Order**: 1. social_card_intro_inference.png -> 2. 04_nemotron_grounded_interpretation.png -> 3. 04_colab_cuml_execution_progress.png -> 4. ad_03.png
 - **Hashtags**: #NVIDIAGTC #AI #PromptEngineering #Nemotron #UXDesign #ScientificCommunication
-- **Mentions**: @Google for Developers | @NVIDIA AI
+- **Mentions**: @Google Cloud | @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - ELI5 vs Expert toggle implementation
 - **Manual Review Required**: NO
 
@@ -107,7 +107,7 @@ Toggle between the modes live:
 https://z-wbe-bottleneck-lab.vercel.app
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #AI #PromptEngineering #Nemotron #UXDesign #ScientificCommunication
 ```
 
@@ -127,7 +127,7 @@ Mentions: @Google for Developers | @NVIDIA AI
 - **Media**: `nemotron_eli5_toggle.gif`
 - **Media Order**: Single Asset: nemotron_eli5_toggle.gif
 - **Hashtags**: #NVIDIAGTC #InteractiveDesign #AIEngineering #WebDev #BuildInPublic
-- **Mentions**: @Google for Developers | @NVIDIA AI
+- **Mentions**: @Google Cloud | @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - GIF shows ELI5 toggle
 - **Manual Review Required**: NO
 
@@ -146,7 +146,7 @@ Try it yourself:
 https://z-wbe-bottleneck-lab.vercel.app
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #InteractiveDesign #AIEngineering #WebDev #BuildInPublic
 ```
 
@@ -166,7 +166,7 @@ Mentions: @Google for Developers | @NVIDIA AI
 - **Media**: `social_card_intro_inference.png, 06_architecture_evidence_view.png, 07_github_notebook_code_provenance.png, ad_02.png`
 - **Media Order**: 1. social_card_intro_inference.png -> 2. 06_architecture_evidence_view.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_02.png
 - **Hashtags**: #NVIDIAGTC #OpenSource #Science #Reproducibility #GitHub #TypeScript #DevCommunity
-- **Mentions**: @Google for Developers | @NVIDIA AI
+- **Mentions**: @Google Cloud | @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - Open-source repo forkability verified
 - **Manual Review Required**: NO
 
@@ -196,7 +196,7 @@ Fork the repository:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #OpenSource #Science #Reproducibility #GitHub #TypeScript #DevCommunity
 ```
 
@@ -216,7 +216,7 @@ Mentions: @Google for Developers | @NVIDIA AI
 - **Media**: `social_card_data_analytics.png, 04_nemotron_grounded_interpretation.png, cpu_vs_gpu_speedup.png, ad_01.png`
 - **Media Order**: 1. social_card_data_analytics.png -> 2. 04_nemotron_grounded_interpretation.png -> 3. cpu_vs_gpu_speedup.png -> 4. ad_01.png
 - **Hashtags**: #NVIDIAGTC #BuildInPublic #Engineering #Roadmap #GTC2026
-- **Mentions**: @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Harvey | @Ray Harvey
+- **Mentions**: @Google Cloud | @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Harvey | @Ray Harvey
 - **Claims Verified**: YES - Week 2 roadmap outline
 - **Manual Review Required**: NO
 
@@ -246,7 +246,7 @@ Thank you to everyone who tried the app, ran the Colab notebook, and sent feedba
 Live demonstrator: https://z-wbe-bottleneck-lab.vercel.app
 
 
-Mentions & Judges: @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Harvey | @Ray Harvey
+Mentions & Judges: @Google Cloud | @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #BuildInPublic #Engineering #Roadmap #GTC2026
 ```
 

@@ -22,7 +22,7 @@
 - **Media**: `social_card_nim_gke.png, social_card_data_analytics.png, social_card_accelerated_ml.png, social_card_intro_inference.png`
 - **Media Order**: 1. social_card_nim_gke.png -> 2. social_card_data_analytics.png -> 3. social_card_accelerated_ml.png -> 4. social_card_intro_inference.png
 - **Hashtags**: #NVIDIAGTC #GoogleCloud #NVIDIA #Nemotron #OpenRouter #RAPIDS #cuDF #CloudRun #ComputationalNeuroscience #SystemsEngineering #OpenSource #DevChallenge
-- **Mentions**: @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Harvey | @Ray Harvey
+- **Mentions**: @Google Cloud | @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Harvey | @Ray Harvey
 - **Claims Verified**: YES - 12 equations, 89 tests, 8.62x speedup on T4
 - **Manual Review Required**: NO
 
@@ -53,8 +53,8 @@ Core Architectural Principle: Strict Epistemic Separation
 
 Key Empirical & Architectural Highlights:
 - The Hero Demo Moment: What happens if imaging becomes 100x faster? The acquisition bottleneck collapses—and the dominant constraint instantly shifts to Memory Bandwidth in <1ms.
-- Empirical 8.62× GPU Acceleration: Measured 8.62× pipeline speedup on an NVIDIA Tesla T4 in Google Colab: 1.907 s CPU vs 0.221 s GPU. cudf.pandas provided zero-code-change GPU acceleration for supported pandas operations.
-- 100,000-Scenario Monte Carlo Sweep: Complete parameter space mapped in GPU memory with NVIDIA RAPIDS cuDF, visualized in an interactive heatmap.
+- Empirical 8.62× GPU Acceleration: 8.62× measured T4 speedup on the Google/NVIDIA tabular ML benchmark (1.907 s CPU vs 0.221 s GPU). Separately, Z-WBE also includes a 100,000-scenario GPU parameter sweep.
+- 100,000-Scenario Monte Carlo Sweep: 100,000-scenario parameter-space exploration in GPU memory with NVIDIA RAPIDS cuDF, visualized in an interactive heatmap.
 - 1-Click Reproducible Colab: Full 10-stage GPU notebook ready to run in one click.
 - 89 Passing Unit Tests: Full TypeScript monorepo, zero secret leakage, containerized microservice ready for Google Cloud Run.
 
@@ -63,7 +63,7 @@ Live Demonstrator: https://z-wbe-bottleneck-lab.vercel.app
 1-Click Colab Lab: https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 GitHub Repository: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
-Mentions & Judges: @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Harvey | @Ray Harvey
+Mentions & Judges: @Google Cloud | @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #GoogleCloud #NVIDIA #Nemotron #OpenRouter #RAPIDS #cuDF #CloudRun #ComputationalNeuroscience #SystemsEngineering #OpenSource #DevChallenge
 ```
 
@@ -83,7 +83,7 @@ Mentions & Judges: @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Ha
 - **Media**: `social_card_intro_inference.png, 02_imaging_wall_baseline.png, 07_github_notebook_code_provenance.png, ad_02.png`
 - **Media Order**: 1. social_card_intro_inference.png -> 2. 02_imaging_wall_baseline.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_02.png
 - **Hashtags**: #NVIDIAGTC #SystemsEngineering #ComputationalNeuroscience #HighPerformanceComputing #HardwareArchitecture #TypeScript #OpenSource
-- **Mentions**: @Google for Developers | @NVIDIA AI
+- **Mentions**: @Google Cloud | @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - 8 bottleneck dimensions defined in shared/src/types.ts
 - **Manual Review Required**: NO
 
@@ -119,7 +119,7 @@ Inspect our constraint equations in the open-source repository:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #SystemsEngineering #ComputationalNeuroscience #HighPerformanceComputing #HardwareArchitecture #TypeScript #OpenSource
 ```
 
@@ -139,7 +139,7 @@ Mentions: @Google for Developers | @NVIDIA AI
 - **Media**: `guided_tour_walkthrough.mp4`
 - **Media Order**: Single Asset: guided_tour_walkthrough.mp4
 - **Hashtags**: #NVIDIAGTC #InteractiveDemo #Neuroscience #SystemsEngineering #WebDev #BuildInPublic
-- **Mentions**: @Google for Developers | @NVIDIA AI
+- **Mentions**: @Google Cloud | @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - Live Vercel app state matches video walkthrough
 - **Manual Review Required**: NO
 
@@ -164,7 +164,7 @@ Try the live demonstrator in your browser:
 https://z-wbe-bottleneck-lab.vercel.app
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #InteractiveDemo #Neuroscience #SystemsEngineering #WebDev #BuildInPublic
 ```
 
@@ -184,7 +184,7 @@ Mentions: @Google for Developers | @NVIDIA AI
 - **Media**: `social_card_accelerated_ml.png, 02_imaging_wall_baseline.png, 07_github_notebook_code_provenance.png, ad_01.png`
 - **Media Order**: 1. social_card_accelerated_ml.png -> 2. 02_imaging_wall_baseline.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_01.png
 - **Hashtags**: #NVIDIAGTC #ComputationalNeuroscience #Connectomics #SystemsModeling #Research #OpenSource
-- **Mentions**: @Google for Developers | @NVIDIA AI
+- **Mentions**: @Google Cloud | @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - 6 pipeline stages documented in README.md
 - **Manual Review Required**: NO
 
@@ -217,7 +217,7 @@ Read the full pipeline architecture breakdown on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #ComputationalNeuroscience #Connectomics #SystemsModeling #Research #OpenSource
 ```
 
@@ -237,7 +237,7 @@ Mentions: @Google for Developers | @NVIDIA AI
 - **Media**: `social_card_intro_inference.png, 04_nemotron_grounded_interpretation.png, 01_colab_notebook_overview.png, banner-light.png`
 - **Media Order**: 1. social_card_intro_inference.png -> 2. 04_nemotron_grounded_interpretation.png -> 3. 01_colab_notebook_overview.png -> 4. banner-light.png
 - **Hashtags**: #NVIDIAGTC #AIEngineering #Nemotron #SoftwareArchitecture #TypeScript #BuildInPublic
-- **Mentions**: @Google for Developers | @NVIDIA AI
+- **Mentions**: @Google Cloud | @Google for Developers | @NVIDIA AI
 - **Claims Verified**: YES - Epistemic separation architecture verified in tests/security.test.ts
 - **Manual Review Required**: NO
 
@@ -270,7 +270,7 @@ Test the dual interpretation engine live:
 https://z-wbe-bottleneck-lab.vercel.app
 
 
-Mentions: @Google for Developers | @NVIDIA AI
+Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI
 #NVIDIAGTC #AIEngineering #Nemotron #SoftwareArchitecture #TypeScript #BuildInPublic
 ```
 
@@ -290,7 +290,7 @@ Mentions: @Google for Developers | @NVIDIA AI
 - **Media**: `social_card_accelerated_ml.png, 02_imaging_wall_baseline.png, 07_github_notebook_code_provenance.png, banner-dark.png`
 - **Media Order**: 1. social_card_accelerated_ml.png -> 2. 02_imaging_wall_baseline.png -> 3. 07_github_notebook_code_provenance.png -> 4. banner-dark.png
 - **Hashtags**: #NVIDIAGTC #AmdahlsLaw #SystemsEngineering #HardwareDesign #ScientificComputing
-- **Mentions**: @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Harvey | @Ray Harvey
+- **Mentions**: @Google Cloud | @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Harvey | @Ray Harvey
 - **Claims Verified**: YES - 12 equations in shared/src/equations.ts
 - **Manual Review Required**: NO
 
@@ -320,7 +320,7 @@ Star or fork the repository on GitHub:
 https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 
-Mentions & Judges: @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Harvey | @Ray Harvey
+Mentions & Judges: @Google Cloud | @Google for Developers | @NVIDIA AI | @Asier Arranz | @Jen Harvey | @Ray Harvey
 #NVIDIAGTC #AmdahlsLaw #SystemsEngineering #HardwareDesign #ScientificComputing
 ```
 
