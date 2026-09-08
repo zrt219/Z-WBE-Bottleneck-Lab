@@ -43,7 +43,7 @@ export const GpuExplorationMap: React.FC = () => {
     return (
       <div className="bg-white border border-slate-200/90 rounded-2xl p-8 shadow-card text-center space-y-2">
         <RefreshCw className="w-5 h-5 text-blue-600 animate-spin mx-auto" />
-        <span className="text-xs text-slate-500 font-mono">Loading GPU Parameter Exploration Map...</span>
+        <span className="text-xs text-slate-500 font-mono">Loading BigQuery Parameter Exploration Map...</span>
       </div>
     );
   }
@@ -52,14 +52,11 @@ export const GpuExplorationMap: React.FC = () => {
     return (
       <div className="bg-white border border-slate-200/90 rounded-2xl p-8 shadow-card text-center space-y-3">
         <AlertCircle className="w-8 h-8 text-amber-500 mx-auto" />
-        <div className="text-sm font-bold text-slate-800">GPU Exploration Map Pending</div>
+        <div className="text-sm font-bold text-slate-800">BigQuery Parameter Map Pending</div>
         <p className="text-xs text-slate-500 max-w-md mx-auto leading-relaxed">{error}</p>
       </div>
     );
   }
-
-  const b = data.benchmark;
-  const isGpuExecuted = b.status === 'GPU_ACCELERATED' && b.runtimeGpuSeconds !== null;
 
   return (
     <div className="bg-white border border-slate-200/90 rounded-2xl p-4 sm:p-6 shadow-card space-y-5">
@@ -71,31 +68,24 @@ export const GpuExplorationMap: React.FC = () => {
           <div>
             <div className="flex items-center space-x-2">
               <h2 className="text-sm font-extrabold text-slate-900 tracking-tight">
-                GPU Parameter Exploration Map (100,000 Sweeps)
+                Parameter Exploration Map (100,000 Sweeps)
               </h2>
               <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded-full bg-slate-100 text-slate-700 border border-slate-300">
-                RAPIDS / cuDF
+                BigQuery Sandbox / GoogleSQL
               </span>
             </div>
             <p className="text-[11px] text-slate-500 mt-0.5">
-              Monte Carlo sensitivity space across imaging, reconstruction, compute, memory, and cost.
+              Deterministic scenario parameter space analyzed in Google BigQuery Sandbox.
             </p>
           </div>
         </div>
 
-        {/* Benchmark Execution Badge */}
+        {/* BigQuery Execution Badge */}
         <div>
-          {isGpuExecuted ? (
-            <div className="flex items-center space-x-2 text-xs font-mono bg-emerald-50 text-emerald-800 px-3.5 py-1.5 rounded-xl border border-emerald-300 shadow-xs">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-              <span className="font-bold">NVIDIA GPU Accelerated ({b.speedup?.toFixed(1)}x Speedup)</span>
-            </div>
-          ) : (
-            <div className="flex items-center space-x-2 text-xs font-mono bg-slate-100 text-slate-700 px-3 py-1.5 rounded-xl border border-slate-300 shadow-xs">
-              <AlertCircle className="w-3.5 h-3.5 text-slate-500" />
-              <span className="font-bold text-[11px]">GPU BENCHMARK NOT EXECUTED</span>
-            </div>
-          )}
+          <div className="flex items-center space-x-2 text-xs font-mono bg-blue-50 text-blue-800 px-3.5 py-1.5 rounded-xl border border-blue-300 shadow-xs">
+            <span className="w-2 h-2 rounded-full bg-blue-500"></span>
+            <span className="font-bold">Google BigQuery Sandbox (100k Rows)</span>
+          </div>
         </div>
       </div>
 
@@ -108,21 +98,21 @@ export const GpuExplorationMap: React.FC = () => {
           </div>
         </div>
         <div className="p-3 rounded-xl bg-slate-50/80 border border-slate-200/80 shadow-xs">
-          <span className="text-[10px] text-slate-400 uppercase font-semibold">CPU pandas Runtime</span>
+          <span className="text-[10px] text-slate-400 uppercase font-semibold">Analytics Engine</span>
           <div className="font-bold text-slate-900 mt-0.5 text-sm">
-            {b.runtimeCpuSeconds ? `${b.runtimeCpuSeconds.toFixed(3)}s` : 'N/A'}
+            Google BigQuery
           </div>
         </div>
         <div className="p-3 rounded-xl bg-slate-50/80 border border-slate-200/80 shadow-xs">
-          <span className="text-[10px] text-slate-400 uppercase font-semibold">cuDF GPU Runtime</span>
+          <span className="text-[10px] text-slate-400 uppercase font-semibold">Query Dialect</span>
           <div className="font-bold text-emerald-700 mt-0.5 text-sm">
-            {b.runtimeGpuSeconds ? `${b.runtimeGpuSeconds.toFixed(3)}s` : 'N/A'}
+            GoogleSQL Sandbox
           </div>
         </div>
         <div className="p-3 rounded-xl bg-slate-50/80 border border-slate-200/80 shadow-xs">
-          <span className="text-[10px] text-slate-400 uppercase font-semibold">Acceleration Factor</span>
+          <span className="text-[10px] text-slate-400 uppercase font-semibold">Dataset Scope</span>
           <div className="font-black text-blue-700 mt-0.5 text-sm">
-            {b.speedup ? `${b.speedup.toFixed(1)}x speedup` : 'CPU Only'}
+            100,000 Rows
           </div>
         </div>
       </div>
@@ -132,9 +122,9 @@ export const GpuExplorationMap: React.FC = () => {
         <div className="flex items-center justify-between text-xs">
           <span className="font-bold uppercase tracking-wider text-slate-700 flex items-center space-x-1.5">
             <BarChart3 className="w-3.5 h-3.5 text-blue-600" />
-            <span>Dominant Bottleneck Distribution Across 100,000 Parameter Sweeps</span>
+            <span>Dominant Bottleneck Distribution Across 100,000 Parameter Sweeps (GoogleSQL)</span>
           </span>
-          <span className="font-mono text-slate-400 text-[10px]">Monte Carlo Density</span>
+          <span className="font-mono text-slate-400 text-[10px]">BigQuery Sandbox</span>
         </div>
 
         <div className="space-y-2 bg-slate-50/70 p-4 rounded-xl border border-slate-200/90 shadow-xs">

@@ -27,7 +27,7 @@ To maintain absolute software hygiene, prevent messy Jupyter JSON merge conflict
      ANTIGRAVITY                        COLAB
      • Edit code & equations       • T4 GPU execution
      • Local builds & tests        • NVIDIA RAPIDS cuDF & cuML
-     • Verification & docs         • 100k Monte Carlo sweep
+     • Verification & docs         • 100k scenario exploration
      • Sync script automation      • Benchmark outputs
           │                               │
           │                               ▼
@@ -73,7 +73,7 @@ Earlier experimental and NYC congestion notebooks are safely preserved under `no
 3. **Google × NVIDIA course benchmark**: Dual-mode data science pipeline executing on NYC taxi data with Random Forest and XGBoost.
 4. **Benchmark evidence**: Measure execution speedup (8.62× end-to-end acceleration, 88.4% time reduction) and document hardware provenance (NVIDIA Tesla T4 vs. host CPU).
 5. **Z-WBE scenario generator**: Deterministic scaling laws for Whole Brain Emulation (voxels, acquisition, reconstruction proofreading, compute PFLOPS, memory TB/s, interconnect, power MW, costs).
-6. **100,000-scenario sweep**: Vectorized parameter exploration using GPU dataframes.
+6. **100,000-scenario sweep**: Vectorized multi-dimensional parameter exploration.
 7. **Bottleneck classification**: Classify dominant engineering constraints across 8 technical dimensions using normalized pressure vectors ($\arg\max$).
 8. **Phase-transition analysis**: Map inflection points and test the Hero Moment (100× imaging throughput acceleration).
 9. **Charts / exports**: Render distribution plots and export aggregate summary JSON to `gpu-sweep-summary.json` and `public/data/gpu-sweep-summary.json`.

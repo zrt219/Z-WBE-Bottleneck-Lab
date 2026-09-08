@@ -80,8 +80,12 @@ Whole-brain emulation is often discussed as if it depends on a single breakthrou
 
 * **Google BigQuery Sandbox**: Cloud analytics layer storing and querying the 100,000-scenario research dataset (`z_wbe_research.scenarios_100k`) via GoogleSQL without requiring billing, credit cards, or paid resources. Used to analyze bottleneck frequencies, phase boundaries, and scaling correlations under automatic 60-day sandbox lifecycle limits.
 * **Google Colab**: High-performance GPU research environment used to run the Tesla T4 benchmark proving an 8.62× speedup with NVIDIA RAPIDS `cudf.pandas`.
-* **Cloud Run-Ready Container Architecture**: Standalone Node.js/Express Dockerfile and container configuration provided for portable serverless container deployment.
 * **Deployment Architecture**: Public demonstrator deployed live on Vercel with serverless edge delivery, backed by BigQuery Sandbox for scenario analytics and Google Colab for GPU benchmarking. OpenRouter brokers model inference to NVIDIA Nemotron 3 Super.
+* **Cloud Run-Ready Container Architecture**: Standalone Node.js/Express Dockerfile and container configuration provided for portable serverless container deployment.
+
+> **Clean Contest Technology Line**:
+> - **Google Cloud**: BigQuery Sandbox stores and analyzes 100,000 deterministic Z-WBE scenarios with GoogleSQL. Google Colab provides the GPU research environment.
+> - **NVIDIA**: Nemotron 3 Super provides grounded interpretation, and RAPIDS cudf.pandas produced a measured 8.62× T4 speedup on the separate Google/NVIDIA tabular ML benchmark.
 
 ---
 
@@ -319,9 +323,9 @@ Direct Entry Link: **[https://forms.gle/pVjTK6H8Vx4WtFWs5](https://forms.gle/pVj
 - [x] **Three demo presets work**: The Imaging Wall, The Memory Wall, and The Economic Wall all deterministically trigger their respective bottlenecks.
 - [x] **Flagship demo works**: "What happens if imaging gets 100x faster?" moves bottleneck from ACQUISITION to MEMORY_BANDWIDTH.
 - [x] **Methodology page exists**: `/methodology` documents equations, assumptions, and scientific responsibility boundary.
-- [x] **Architecture page exists**: `/architecture` provides complete diagrams of Cloud Run, Deterministic Engine, OpenRouter, Nemotron 3 Super, and RAPIDS experiment.
+- [x] **Architecture page exists**: `/architecture` provides complete diagrams of Vercel Edge, Cloud Run-ready container architecture, Deterministic Engine, OpenRouter, Nemotron 3 Super, Colab T4 benchmark, and BigQuery Sandbox analytics.
 - [x] **About page exists**: `/about` explains research motivation, contest background, and limitations.
-- [x] **README is complete**: Covers all required sections, Google Cloud Run deployment, and four learning pathways.
+- [x] **README is complete**: Covers all required sections, BigQuery Sandbox analytics, Colab GPU benchmark, Vercel edge deployment, Cloud Run-ready container architecture, and four learning pathways.
 - [x] **.env.example exists**: Verbatim match with required format.
 - [x] **Demo script exists**: Complete step-by-step walkthrough documented.
 

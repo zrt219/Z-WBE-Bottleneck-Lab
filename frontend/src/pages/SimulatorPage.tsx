@@ -320,7 +320,7 @@ export const SimulatorPage: React.FC = () => {
               </span>
             </div>
             <div className="text-xs sm:text-sm font-bold text-slate-900 truncate">
-              Built with NVIDIA Nemotron 3 Super (Free on OpenRouter) &amp; NVIDIA RAPIDS cuDF
+              Built with NVIDIA Nemotron 3 Super (Free on OpenRouter) &amp; BigQuery Sandbox Analytics
             </div>
             <div className="flex flex-wrap items-center gap-2 text-[11px] text-slate-600">
               <span className="inline-flex items-center space-x-1 font-semibold text-emerald-700">
@@ -328,7 +328,7 @@ export const SimulatorPage: React.FC = () => {
                 <span>4/4 Verified Badges (Full Sweep • Sep 7, 2026)</span>
               </span>
               <span className="text-slate-300 hidden sm:inline">•</span>
-              <span className="hidden sm:inline text-slate-500">Cloud Run Container Architecture</span>
+              <span className="hidden sm:inline text-slate-500">Cloud Run-Ready Container Architecture</span>
             </div>
           </div>
         </div>

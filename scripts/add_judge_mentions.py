@@ -53,31 +53,31 @@ FLAGSHIP_LI_MENTIONS = "Mentions & Judges: @Google Cloud | @Google for Developer
 DAILY_LI_MENTIONS = "Mentions: @Google Cloud | @Google for Developers | @NVIDIA AI"
 TIGHTENED_862_WORDING = (
     "8.62× measured T4 speedup on the Google/NVIDIA tabular ML benchmark "
-    "(1.907 s CPU vs 0.221 s GPU). Separately, Z-WBE also includes a "
-    "100,000-scenario GPU parameter sweep."
+    "(1.907 s CPU vs 0.221 s GPU with cudf.pandas). Separately, Z-WBE includes a "
+    "deterministic 100,000-scenario parameter sweep stored and analyzed in Google BigQuery Sandbox."
 )
 
 X_FLAGSHIP_POST_TEXTS = {
     "buffer_x_d01_p1": (
         "What breaks first in whole-brain emulation?\n\n"
-        "I built Z-WBE Bottleneck Lab for the @GoogleDevs x @NVIDIAAI GTC Golden Ticket Challenge.\n\n"
+        "I built Z-WBE Bottleneck Lab for the @googlecloud x @NVIDIAAI GTC Golden Ticket Challenge.\n\n"
         "Change assumptions. See what fractures.\n\n"
         "Live app: https://z-wbe-bottleneck-lab.vercel.app\n\n"
-        "cc @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC"
+        "cc @googlecloud @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC"
     ),
     "buffer_x_d01_p6": (
         "If you optimize microscopy, Amdahl's Law punishes you immediately.\n\n"
         "Complex systems are dependency chains: solve one, the next strains.\n\n"
         "Day 1 of 21 complete: https://github.com/zrt219/Z-WBE-Bottleneck-Lab\n\n"
-        "cc @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC"
+        "cc @googlecloud @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC"
     ),
     "buffer_x_d03_p1": (
         "REAL NVIDIA T4 + RAPIDS + COLAB EVIDENCE 🚀\n"
-        "Z-WBE for @GoogleDevs x @NVIDIAAI GTC Challenge!\n\n"
+        "Z-WBE for @googlecloud x @NVIDIAAI GTC Challenge!\n\n"
         "Built: 6-stage WBE lab + 12 equations\n"
         "Learned: cuDF 8.62x on T4; 100x imaging exposes memory wall!\n\n"
         "Colab: https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb\n\n"
-        "cc @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC"
+        "cc @googlecloud @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC"
     ),
     "buffer_x_d03_p5": (
         "4 Google Cloud x NVIDIA learning paths completed:\n"
@@ -87,7 +87,7 @@ X_FLAGSHIP_POST_TEXTS = {
         "4. Accelerated ML\n\n"
         "Every course directly shaped Z-WBE code.\n"
         "Badges: https://g.dev/zhane\n\n"
-        "cc @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC"
+        "cc @googlecloud @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC"
     ),
     "buffer_x_d07_p1": (
         "Week 1 of Z-WBE complete!\n"
@@ -97,44 +97,44 @@ X_FLAGSHIP_POST_TEXTS = {
         "Contest submitted.\n\n"
         "Try live: https://z-wbe-bottleneck-lab.vercel.app\n\n"
         "#NVIDIAGTC #BuildInPublic\n"
-        "cc @GoogleDevs @NVIDIAAI @asierarranz"
+        "cc @googlecloud @GoogleDevs @NVIDIAAI @asierarranz"
     ),
     "buffer_x_d07_p5": (
         "Week 1: The Project.\n"
         "Week 2: The Engineering.\n\n"
         "Tomorrow, I open up the 12 deterministic TypeScript equations behind the physics:\n"
         "https://z-wbe-bottleneck-lab.vercel.app\n\n"
-        "cc @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC"
+        "cc @googlecloud @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC"
     ),
     "buffer_x_d14_p1": (
-        "I mapped 100,000 WBE futures in GPU memory via NVIDIA cuDF:\n"
-        "48.2% Acquisition-bound\n"
-        "28.7% Memory-bound\n"
-        "14.1% Compute-bound\n"
-        "9.0% Interconnect/Power-bound\n\n"
-        "Memory dominates 2x more than compute!\n"
+        "100,000 WBE scenarios analyzed in BigQuery Sandbox:\n"
+        "27.3% Acquisition-bound\n"
+        "27.3% Cost-bound\n"
+        "18.8% Reconstruction-bound\n"
+        "14.1% Memory Bandwidth-bound\n\n"
+        "Memory dominates over compute!\n"
         "Map: https://z-wbe-bottleneck-lab.vercel.app\n\n"
-        "cc @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC"
+        "cc @googlecloud @GoogleDevs @NVIDIAAI #NVIDIAGTC"
     ),
     "buffer_x_d14_p5": (
         "Week 2 is a wrap!\n"
         "Week 3 starts tomorrow: Preservation limits, biophysical functionalization, and validation.\n\n"
         "Explore the lab: https://z-wbe-bottleneck-lab.vercel.app\n\n"
-        "cc @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC"
+        "cc @googlecloud @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC"
     ),
     "buffer_x_d21_p1": (
         "Day 21 of 21: Full Campaign Retrospective!\n"
-        "220 posts.\n"
+        "214 posts.\n"
         "89 unit tests.\n"
         "8.62x GPU speedup on Tesla T4.\n"
-        "100k scenarios mapped.\n"
+        "100k scenarios in BigQuery.\n"
         "Grounded AI interpretation.\n\n"
         "The sprint is complete: https://z-wbe-bottleneck-lab.vercel.app\n\n"
         "#NVIDIAGTC #BuildInPublic\n"
-        "cc @GoogleDevs @NVIDIAAI @asierarranz"
+        "cc @googlecloud @GoogleDevs @NVIDIAAI @asierarranz"
     ),
     "buffer_x_d21_p5": (
-        "Thank you to @GoogleDevs, @NVIDIAAI, @asierarranz, and the community for an incredible 21 days.\n\n"
+        "Thank you to @googlecloud, @GoogleDevs, @NVIDIAAI, @asierarranz, and the community for an incredible 21 days.\n\n"
         "The campaign ends. The research continues.\n\n"
         "Live lab: https://z-wbe-bottleneck-lab.vercel.app\n\n"
         "#NVIDIAGTC"

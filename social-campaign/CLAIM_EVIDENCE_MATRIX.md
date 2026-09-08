@@ -15,7 +15,7 @@ This ledger catalogs every quantitative, architectural, and scientific claim mad
 | **Execution Time Reduction** | 88.4% | `evidence/contest/gpu-benchmark/cpu_vs_gpu_benchmark.json` | Key: `"time_saved_percent": 88.4` | 2026-09-07 | **YES** | Calculated as `(1.907 - 0.221) / 1.907`. |
 | **Unit Test Suite** | 89 passing unit tests | `tests/`, `backend/tests/`, `shared/tests/` | Output of `npm test` (vitest v3.2.7): 11 passed test files, 89 passed tests | 2026-09-08 | **YES** | Zero failing tests. Run regularly to maintain ground truth. |
 | **Deterministic Equations** | 12 scaling equations | `shared/src/equations.ts` | 12 pure functions in `shared/src/equations.ts` & verified in `shared/tests/equations.test.ts` | 2026-09-08 | **YES** | Explicit physical formulas covering all 8 constraint dimensions. |
-| **Monte Carlo Sweep Volume** | 100,000 synthetic scenarios | `public/data/gpu-sweep-summary.json` | `scripts/generate_gpu_sweep.py` output dataset | 2026-09-07 | **YES** | Generated in GPU memory with cuDF for phase space mapping. |
+| **100k Parameter Sweep** | 100,000 deterministic scenarios | `geometric-kiln-457011-h4:z_wbe_research.scenarios_100k` | Google BigQuery Sandbox table & `public/data/gpu-sweep-summary.json` | 2026-09-08 | **YES** | Deterministic 100,000-scenario parameter sweep stored and analyzed in Google BigQuery Sandbox using GoogleSQL. |
 | **Random Forest Speedup** | 8.5× speedup | `evidence/contest/gpu-benchmark/cpu_vs_gpu_benchmark.json` | 1.308s CPU vs 0.154s GPU | 2026-09-07 | **YES** | Sub-step benchmark within pipeline. |
 | **XGBoost Speedup** | 9.8× speedup | `evidence/contest/gpu-benchmark/cpu_vs_gpu_benchmark.json` | 0.545s CPU vs 0.056s GPU | 2026-09-07 | **YES** | Sub-step benchmark within pipeline. |
 | **Data Cleaning Speedup** | 6.8× speedup | `evidence/contest/gpu-benchmark/cpu_vs_gpu_benchmark.json` | 0.0034s CPU vs 0.0005s GPU | 2026-09-07 | **YES** | Sub-step benchmark using `cudf.pandas`. |
@@ -45,7 +45,7 @@ This ledger catalogs every quantitative, architectural, and scientific claim mad
 | **GitHub Repository** | `https://github.com/zrt219/Z-WBE-Bottleneck-Lab` | `README.md`, Git origin remote | Public repository, MIT License | **YES** |
 | **Google Developer Profile** | `https://g.dev/zhane` | `CONTEST_SUBMISSION.md`, `README.md` | Verified vanity profile showcasing 4 completed badges | **YES** |
 | **Google Developer Profile (Canonical ID)** | `https://developers.google.com/profile/u/110918189625880989910` | `CONTEST_SUBMISSION.md` | Official numerical profile URL | **YES** |
-| **Cloud Run Deployment** | Active (`cloud-run-url.txt`) | `evidence/contest/cloud-run/deployment-summary.md` | Verified Cloud Run service with URL, health check, and service JSON | **YES** |
+| **Cloud Run Architecture** | Cloud Run-ready container architecture | `Dockerfile`, `backend/Dockerfile` | Standalone containerized Node.js/Express service ready for serverless microservice deployment | **YES** |
 
 ---
 

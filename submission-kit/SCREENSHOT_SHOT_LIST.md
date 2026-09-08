@@ -47,13 +47,13 @@ All screenshots should be captured at **1920 × 1080** resolution (16:9 desktop)
 
 ---
 
-### Shot 5: GPU Exploration Map (100,000-Scenario Sweep)
+### Shot 5: Parameter Exploration Map (100,000-Scenario Sweep)
 * **File**: `05_gpu_exploration_map.png`
 * **View**:
-  - GPU Exploration Map section displaying parameter phase transitions across 100,000 synthetic Monte Carlo configurations
-  - NVIDIA RAPIDS `cudf.pandas` badge and Google Colab benchmark reference
+  - Parameter Exploration Map section displaying parameter phase transitions across 100,000 synthetic configurations
+  - Google BigQuery Sandbox badge and GoogleSQL distribution analytics
   - Distribution breakdown of primary bottlenecks (Acquisition vs. Memory vs. Compute vs. Economics)
-* **Caption**: *"Global parameter space sweep: 100,000 Monte Carlo scenario evaluations accelerated via NVIDIA RAPIDS cudf.pandas in Google Colab."*
+* **Caption**: *"Global parameter space sweep: 100,000 deterministic scenario evaluations stored and analyzed in Google BigQuery Sandbox using GoogleSQL."*
 
 ---
 
@@ -61,5 +61,5 @@ All screenshots should be captured at **1920 × 1080** resolution (16:9 desktop)
 * **File**: `06_architecture_evidence_view.png`
 * **View**:
   - `/architecture` page or technical modal diagram showing the decoupled pipeline:
-    Client Browser → Cloud Run / Vercel → Deterministic TypeScript Scaling Engine → OpenRouter API → NVIDIA Nemotron 3 Super → Grounded Synthesis
+    Client Browser → Vercel Edge (Cloud Run Ready) → Deterministic TypeScript Scaling Engine → OpenRouter API → NVIDIA Nemotron 3 Super → Grounded Synthesis
 * **Caption**: *"System Architecture: Complete epistemic separation between deterministic physics calculation and generative causal reasoning."*

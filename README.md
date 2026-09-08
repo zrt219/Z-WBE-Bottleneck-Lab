@@ -30,6 +30,10 @@ Key Repository Topics: `nvidia-gtc` `google-cloud` `google-cloud-run` `nvidia-ne
 
 **Z-WBE Bottleneck Lab** was built for the **Google Cloud × NVIDIA GTC Berlin 2026 Golden Ticket Challenge**. Built on strict epistemic separation, the public interactive demonstrator is deployed with high-speed global edge delivery on **Vercel**, backed by a Cloud Run-ready container architecture, and leverages open foundation models (**NVIDIA Nemotron 3 Super 120B** via OpenRouter), **NVIDIA RAPIDS (`cudf.pandas`)** in Google Colab for tabular GPU benchmarks, and **Google BigQuery Sandbox** to store and analyze 100,000 deterministic scenarios.
 
+> **Technology Stack**:
+> - **Google Cloud**: BigQuery Sandbox stores and analyzes 100,000 deterministic Z-WBE scenarios with GoogleSQL. Google Colab provides the GPU research environment.
+> - **NVIDIA**: Nemotron 3 Super provides grounded interpretation, and RAPIDS cudf.pandas produced a measured 8.62× T4 speedup on the separate Google/NVIDIA tabular ML benchmark.
+
 ---
 
 ## 🏆 Verified Credentials & Completed Learning Pathways
@@ -545,7 +549,7 @@ All benchmark metrics were executed in Google Colab with full reproducible telem
     <td width="50%" align="center">
       <a href="./public/colab-evidence/08_colab_rapids_and_variable_inspector.png"><img src="./public/colab-evidence/08_colab_rapids_and_variable_inspector.png" alt="NVIDIA RAPIDS Setup & 100k Monte Carlo Variable Inspector" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
       <strong>RAPIDS Setup &amp; Variable Inspector</strong><br />
-      <em>Live activation of <code>cudf.pandas</code> with 100,000-scenario parameter distribution arrays resident in memory.</em>
+      <em>Live Colab environment with variable inspector showing 100,000-scenario parameter distribution arrays resident in memory.</em>
     </td>
   </tr>
 </table>
@@ -653,7 +657,7 @@ flowchart TD
 
     subgraph ZWBEModel ["Deterministic Biophysical Scaling"]
         S5["Section 5: Z-WBE Biophysical & Engineering Equations<br/>Voxels | Acquisition Time | Model State | Compute FLOPs | Memory TB/s"]
-        S6["Section 6: 100,000-Scenario Monte Carlo Sweep<br/>Vectorized cuDF GPU DataFrame Sweep"]
+        S6["Section 6: 100,000-Scenario Parameter Sweep<br/>Vectorized Mathematical Exploration"]
         S4 --> S5
         S5 --> S6
     end
@@ -680,8 +684,8 @@ flowchart TD
 | **3. Course Benchmark Pipeline** | Dual-mode execution of the tabular machine learning curriculum from the Google Cloud × NVIDIA pathway on the NYC taxi dataset. | `pandas`, `cudf`, `sklearn`, `xgboost` |
 | **4. Benchmark Evidence & Provenance** | Precision timing instrumentation comparing CPU execution (1.907s) to NVIDIA Tesla T4 (0.221s), proving an **8.62× speedup** with zero code changes. | `time.perf_counter()`, `json`, `matplotlib` |
 | **5. Z-WBE Biophysical Equations** | Deterministic mathematical implementation of the 12 whole-brain emulation scaling equations (voxels, scan time, state storage, compute FLOPs, memory bus traffic, power MW, and total cost). | Pure Python vectorized math |
-| **6. 100,000-Scenario Monte Carlo Sweep** | Synthetic generation and evaluation of 100,000 randomized biophysical configurations across 8 dimensions in GPU memory using cuDF dataframes. | `cudf.DataFrame`, `numpy.random` |
-| **7. Bottleneck Classification** | Evaluates normalized constraint pressure vectors across Acquisition, Reconstruction, Storage, Compute, Memory Bandwidth, Interconnect, Power, and Economics, computing $\arg\max$ dominance. | Vectorized GPU tensor operations |
+| **6. 100,000-Scenario Parameter Sweep** | Synthetic generation and evaluation of 100,000 randomized biophysical configurations across 8 dimensions. Stored and analyzed via GoogleSQL in Google BigQuery Sandbox. | `numpy`, `pandas`, `BigQuery Sandbox` |
+| **7. Bottleneck Classification** | Evaluates normalized constraint pressure vectors across Acquisition, Reconstruction, Storage, Compute, Memory Bandwidth, Interconnect, Power, and Economics, computing $\arg\max$ dominance. | Vectorized multi-dimensional arrays |
 | **8. Phase-Transition & Hero Moment** | Simulates the flagship contest breakthrough: scaling imaging throughput by 100× to demonstrate Amdahl's Law ("The Bottleneck Moved" from Acquisition to Memory Bandwidth). | Parameter sweep sensitivity curves |
 | **9. Visual Analytics & JSON Export** | Generates high-resolution distribution histograms and exports the structured aggregate summary artifact (`public/data/gpu-sweep-summary.json`) consumed by the web application. | `matplotlib.pyplot`, `seaborn`, `json` |
 | **10. Contest Evidence & Pathways** | Formal alignment matrix mapping notebook outcomes directly to all 4 completed Google Cloud and NVIDIA developer certifications. | Markdown documentation |

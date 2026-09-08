@@ -51,13 +51,13 @@ export const AboutPage: React.FC = () => {
             </div>
             <div className="p-3 rounded-xl bg-slate-800/60 border border-slate-700/60 backdrop-blur-xs">
               <div className="text-base">📊</div>
-              <div className="font-bold text-white mt-1">GPU Analytics</div>
-              <div className="text-[11px] text-slate-400">100k Monte Carlo parameter sweep with cuDF</div>
+              <div className="font-bold text-white mt-1">BigQuery Analytics</div>
+              <div className="text-[11px] text-slate-400">100k scenario sweep in BigQuery Sandbox</div>
             </div>
             <div className="p-3 rounded-xl bg-slate-800/60 border border-slate-700/60 backdrop-blur-xs">
               <div className="text-base">☁️</div>
-              <div className="font-bold text-white mt-1">Cloud Native</div>
-              <div className="text-[11px] text-slate-400">Containerized Google Cloud Run microservice</div>
+              <div className="font-bold text-white mt-1">Cloud Architecture</div>
+              <div className="text-[11px] text-slate-400">Vercel live app & Cloud Run-ready container</div>
             </div>
           </div>
 
@@ -214,7 +214,7 @@ export const AboutPage: React.FC = () => {
                   </span>
                 </div>
                 <p className="text-slate-600 leading-relaxed">
-                  <strong>Architectural Impact:</strong> Applied GPU acceleration using NVIDIA RAPIDS <code className="font-mono bg-slate-200/70 px-1 py-0.5 rounded text-slate-900">cudf.pandas</code> in Google Colab, unlocking zero-code GPU parallel processing across a 100,000-scenario multi-dimensional parameter exploration sweep.
+                  <strong>Architectural Impact:</strong> Applied zero-code GPU acceleration using NVIDIA RAPIDS <code className="font-mono bg-slate-200/70 px-1 py-0.5 rounded text-slate-900">cudf.pandas</code> in Google Colab (achieving 8.62× measured speedup on Tesla T4), paired with a deterministic 100,000-scenario parameter sweep stored and analyzed in Google BigQuery Sandbox.
                 </p>
                 <div className="flex items-center space-x-3 text-[11px] font-mono pt-1">
                   <a
@@ -372,7 +372,7 @@ export const AboutPage: React.FC = () => {
               <span>Effective Use of NVIDIA & Google Cloud</span>
             </div>
             <p className="text-slate-700 leading-relaxed">
-              Demonstrates deep technical synergy across both ecosystems: Google Cloud Run provides secure serverless microservice execution, Google Colab hosts GPU analytics, NVIDIA RAPIDS cuDF drives 100,000 Monte Carlo sweeps, and the open model NVIDIA Nemotron 3 Super 120B (<code className="font-mono bg-emerald-100 text-emerald-950 px-1 py-0.5 rounded">nvidia/nemotron-3-super-120b-a12b:free</code>) delivers causal reasoning through OpenRouter.
+              Demonstrates deep technical synergy across both ecosystems: public interactive demonstrator deployed on Vercel with Cloud Run-ready container architecture, Google Colab hosting the measured 8.62× Tesla T4 tabular GPU benchmark with NVIDIA RAPIDS cudf.pandas, Google BigQuery Sandbox storing and querying 100,000 deterministic scenarios via GoogleSQL, and the open model NVIDIA Nemotron 3 Super 120B (<code className="font-mono bg-emerald-100 text-emerald-950 px-1 py-0.5 rounded">nvidia/nemotron-3-super-120b-a12b:free</code>) delivering grounded causal reasoning through OpenRouter.
             </p>
           </div>
 
