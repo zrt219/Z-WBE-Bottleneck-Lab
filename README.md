@@ -6,9 +6,9 @@
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb)
 [![Google Cloud Run](https://img.shields.io/badge/Google%20Cloud-Cloud%20Run-4285F4?logo=google-cloud&logoColor=white)](https://cloud.google.com/run)
 [![NVIDIA Nemotron 3 Super](https://img.shields.io/badge/NVIDIA-Nemotron%203%20Super%20120B-76B900?logo=nvidia&logoColor=white)](https://openrouter.ai/models/nvidia/nemotron-3-super-120b-a12b:free)
-[![NVIDIA RAPIDS](https://img.shields.io/badge/NVIDIA-RAPIDS%20cuDF-76B900?logo=nvidia&logoColor=white)](https://rapids.ai)
+[![NVIDIA RAPIDS](https://img.shields.io/badge/NVIDIA-RAPIDS%20cuDF%208.62x-76B900?logo=nvidia&logoColor=white)](https://rapids.ai)
 [![Vercel Deployment](https://img.shields.io/badge/Vercel-Fullstack%20Deploy-000000?logo=vercel&logoColor=white)](https://z-wbe-bottleneck-lab.vercel.app)
-[![Tests: 84 Passed](https://img.shields.io/badge/Vitest-84%20Passing-brightgreen?logo=vitest&logoColor=white)](https://vitest.dev)
+[![Tests: 89 Passed](https://img.shields.io/badge/Vitest-89%20Passing-brightgreen?logo=vitest&logoColor=white)](https://vitest.dev)
 [![TypeScript Monorepo](https://img.shields.io/badge/TypeScript-Strict%20Monorepo-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
@@ -20,7 +20,8 @@
 
 **Built for the Google Cloud × NVIDIA GTC Berlin 2026 Golden Ticket Challenge**  
 GitHub Repository: [https://github.com/zrt219/Z-WBE-Bottleneck-Lab](https://github.com/zrt219/Z-WBE-Bottleneck-Lab)  
-Contest Hashtag: **`#NVIDIAGTC`**
+Official Challenge Hashtags: **`#NVIDIAGTC`** • **`#GoogleCloud`** • **`#GTC26`** • **`#GTC2026`** • **`#BuildWithAI`**  
+Key Repository Topics: `nvidia-gtc` `google-cloud` `google-cloud-run` `nvidia-nemotron` `rapids-cudf` `colab-enterprise` `whole-brain-emulation` `connectomics` `computational-neuroscience` `gpu-acceleration` `amdahls-law`
 
 ---
 
@@ -819,6 +820,30 @@ npm test
   * [Speed Up Data Analytics on GPUs](https://developers.google.com/profile/badges/playlists/speed-up-data-analytics-GPUs?u=110918189625880989910) • [Pathway](https://developers.google.com/learn/pathways/speed-up-data-analytics-GPUs)
   * [Accelerated Machine Learning with Google Cloud and NVIDIA](https://developers.google.com/profile/badges/playlists/accelerated-machine-learning-with-google-cloud-and-nvidia?u=110918189625880989910) • [Pathway](https://developers.google.com/learn/pathways/accelerated-machine-learning-with-google-cloud-and-nvidia)
   * [Intro to Inference: How to Run AI Models on a GPU](https://developers.google.com/learn/pathways/ai-models-on-gpu-intro)
+
+### 🏷️ Official Challenge Hashtags & Discovery Topics
+
+To maximize algorithmic visibility, contest tracking, and discovery across the Google Developer Community, NVIDIA GTC 2026, and open-source scientific computing circles:
+
+#### Official Submission Hashtags (LinkedIn & X/Twitter)
+```text
+#NVIDIAGTC #GoogleCloud #NVIDIA #GTC26 #GTC2026 #Nemotron #OpenRouter #RAPIDS #cuDF #cuML #CloudRun #WholeBrainEmulation #Connectomics #ComputationalNeuroscience #GPUAcceleration #OpenSource #DevChallenge #BuildWithAI
+```
+
+#### GitHub Repository Topics (Settings -> General -> Topics)
+```text
+nvidia-gtc, google-cloud, google-cloud-run, nvidia-nemotron, rapids, cudf, cuml, colab-enterprise, whole-brain-emulation, connectomics, computational-neuroscience, biophysical-modeling, gpu-acceleration, amdahls-law, mamba-transformer, openrouter, react, typescript, vite, vitest
+```
+
+#### Multi-Domain Topic Matrix & SEO Discovery Keywords
+| Category | Discovery Tags & Keywords | Primary Technologies & Targets |
+| :--- | :--- | :--- |
+| **Contest & Community** | `#NVIDIAGTC`, `#GoogleCloud`, `#GTC26`, `#GTC2026`, `nvidia-gtc` | Google Cloud × NVIDIA GTC Berlin 2026 Golden Ticket |
+| **Generative AI & Inference** | `nvidia-nemotron`, `nemotron-3-super`, `openrouter`, `mamba`, `llm-grounding` | NVIDIA Nemotron 3 Super 120B (Hybrid Mamba-Transformer) |
+| **Accelerated Data Science** | `rapids`, `cudf`, `cuml`, `gpu-dataframes`, `tesla-t4`, `colab-enterprise` | NVIDIA RAPIDS `cudf.pandas`, Google Cloud Colab Enterprise |
+| **Cloud & Microservices** | `google-cloud-run`, `serverless`, `docker`, `containerized-inference`, `vercel` | Google Cloud Run, Artifact Registry, Secret Manager |
+| **Neuroscience & Connectomics** | `whole-brain-emulation`, `connectomics`, `computational-neuroscience`, `amdahls-law` | Deterministic biophysical scaling, multi-dimensional bottleneck analysis |
+| **Fullstack Engineering** | `typescript`, `react18`, `vite`, `vitest`, `tailwind`, `framer-motion` | Strict monorepo architecture, 89 unit tests, &lt;1ms deterministic math |
 
 ---
 
