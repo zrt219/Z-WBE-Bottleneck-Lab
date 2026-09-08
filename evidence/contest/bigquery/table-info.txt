@@ -1,4 +1,4 @@
-﻿Table geometric-kiln-457011-h4:z_wbe_research.scenarios_100k
+Table geometric-kiln-457011-h4:z_wbe_research.scenarios_100k
 
    Last modified                     Schema                     Total Rows   Total Bytes     Expiration      Time Partitioning   Clustered Fields   Total Logical Bytes   Total Physical Bytes   Labels  
  ----------------- ------------------------------------------- ------------ ------------- ----------------- ------------------- ------------------ --------------------- ---------------------- -------- 

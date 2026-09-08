@@ -1,4 +1,4 @@
--- QUERY 1: Bottleneck Distribution across 100,000 WBE Scenarios
+/* QUERY 1: Bottleneck Distribution across 100,000 WBE Scenarios */
 SELECT
   dominant_bottleneck,
   COUNT(*) AS scenarios,

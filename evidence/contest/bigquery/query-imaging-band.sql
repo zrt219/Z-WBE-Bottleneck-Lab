@@ -1,4 +1,4 @@
--- QUERY 4: Bottleneck Transitions Across Imaging Speed Bands
+/* QUERY 4: Bottleneck Transitions Across Imaging Speed Bands */
 SELECT
   CASE
     WHEN imaging_rate_mm3_year < 1 THEN '<1'

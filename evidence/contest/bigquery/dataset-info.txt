@@ -1,4 +1,4 @@
-﻿Dataset geometric-kiln-457011-h4:z_wbe_research
+Dataset geometric-kiln-457011-h4:z_wbe_research
 
    Last modified              ACLs             Labels    Type     Max time travel (Hours)  
  ----------------- -------------------------- -------- --------- ------------------------- 

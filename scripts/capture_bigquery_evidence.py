@@ -50,13 +50,26 @@ def main():
     with open(os.path.join(OUT_DIR, "query-results-bottleneck-distribution.json"), "w", encoding="utf-8") as f:
         f.write(q1_res)
 
-    # 4. Query 3: Acquisition vs Memory Bandwidth
+    # 4. Query 2: Memory Wall Conditions (sample limit 100)
+    q2 = f"SELECT * FROM `{PROJECT_ID}.{DATASET}.{TABLE}` WHERE dominant_bottleneck = 'MEMORY_BANDWIDTH' LIMIT 100"
+    q2_res = run_cmd(f'bq query --format=prettyjson --use_legacy_sql=false "{q2}"')
+    with open(os.path.join(OUT_DIR, "query-results-memory-wall.json"), "w", encoding="utf-8") as f:
+        f.write(q2_res)
+
+    # 5. Query 3: Acquisition vs Memory Bandwidth
     q3 = f"SELECT dominant_bottleneck, AVG(imaging_rate_mm3_year) AS avg_imaging_rate, AVG(memory_bandwidth_tb_s) AS avg_memory_bandwidth FROM `{PROJECT_ID}.{DATASET}.{TABLE}` WHERE dominant_bottleneck IN ('ACQUISITION', 'MEMORY_BANDWIDTH') GROUP BY dominant_bottleneck"
     q3_res = run_cmd(f'bq query --format=prettyjson --use_legacy_sql=false "{q3}"')
     with open(os.path.join(OUT_DIR, "query-results-acquisition-memory.json"), "w", encoding="utf-8") as f:
         f.write(q3_res)
 
+    # 6. Query 4: Bottleneck Transitions by Imaging Band
+    q4 = f"SELECT CASE WHEN imaging_rate_mm3_year < 1 THEN '<1' WHEN imaging_rate_mm3_year < 3 THEN '1-3' WHEN imaging_rate_mm3_year < 10 THEN '3-10' ELSE '10+' END AS imaging_band, dominant_bottleneck, COUNT(*) AS scenarios FROM `{PROJECT_ID}.{DATASET}.{TABLE}` GROUP BY imaging_band, dominant_bottleneck ORDER BY imaging_band, scenarios DESC"
+    q4_res = run_cmd(f'bq query --format=prettyjson --use_legacy_sql=false "{q4}"')
+    with open(os.path.join(OUT_DIR, "query-results-imaging-band.json"), "w", encoding="utf-8") as f:
+        f.write(q4_res)
+
     print("[SUCCESS] All BigQuery evidence files generated and saved!")
 
 if __name__ == '__main__':
     main()
+

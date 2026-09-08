@@ -1,4 +1,4 @@
--- QUERY 3: Acquisition vs Memory Bandwidth Regime Comparison
+/* QUERY 3: Acquisition vs Memory Bandwidth Regime Comparison */
 SELECT
   dominant_bottleneck,
   AVG(imaging_rate_mm3_year) AS avg_imaging_rate,

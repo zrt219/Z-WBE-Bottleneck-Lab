@@ -88,7 +88,7 @@ ORDER BY scenarios DESC;
 
 ### Query 2: Memory Wall Inspection
 Inspects configurations where memory bus saturation dominates over compute and imaging (`dominant_bottleneck = 'MEMORY_BANDWIDTH'`).
-See: [`query-memory-wall.sql`](file:///evidence/contest/bigquery/query-memory-wall.sql)
+See: [`query-memory-wall.sql`](./query-memory-wall.sql)
 
 ### Query 3: Acquisition vs. Memory Bandwidth Regime Comparison
 Compares the average imaging rate and memory bandwidth between acquisition-bound and memory-bound scenarios:
@@ -108,19 +108,30 @@ Results (from `query-results-acquisition-memory.json`):
 
 ### Query 4: Bottleneck Transitions Across Imaging Speed Bands
 Evaluates dominant constraints across four discrete imaging velocity bands (`<1`, `1-3`, `3-10`, `10+` mm³/yr per instrument).
-See: [`query-imaging-band.sql`](file:///evidence/contest/bigquery/query-imaging-band.sql)
+See: [`query-imaging-band.sql`](./query-imaging-band.sql)
+
+### Executing Queries Locally
+To run any of the analytical queries via `bq CLI`:
+```powershell
+# In PowerShell (using stdin piping to preserve multi-line SQL formatting)
+Get-Content ./evidence/contest/bigquery/query-bottleneck-distribution.sql | bq query --use_legacy_sql=false
+
+# Or via bash:
+bq query --use_legacy_sql=false < evidence/contest/bigquery/query-bottleneck-distribution.sql
+```
 
 ---
 
 ## 6. Verification Artifacts & Manifest
 
 All evidence artifacts are preserved in this directory:
-- [`z_wbe_100k_scenarios.csv`](file:///evidence/contest/bigquery/z_wbe_100k_scenarios.csv): Complete 100,000-scenario deterministic dataset (36.28 MB).
-- [`schema.json`](file:///evidence/contest/bigquery/schema.json): BigQuery schema auto-detection output (41 columns).
-- [`dataset-info.txt`](file:///evidence/contest/bigquery/dataset-info.txt): `bq show` metadata confirming location `US`.
-- [`table-info.txt`](file:///evidence/contest/bigquery/table-info.txt): `bq show` table metadata confirming 100,000 rows.
-- [`table-info.json`](file:///evidence/contest/bigquery/table-info.json): Detailed JSON metadata for `scenarios_100k`.
-- [`query-results-bottleneck-distribution.json`](file:///evidence/contest/bigquery/query-results-bottleneck-distribution.json): Raw BigQuery GoogleSQL results for query 1.
-- [`query-results-acquisition-memory.json`](file:///evidence/contest/bigquery/query-results-acquisition-memory.json): Raw BigQuery GoogleSQL results for query 3.
-- [`query-results-memory-wall.json`](file:///evidence/contest/bigquery/query-results-memory-wall.json): Sample rows from the memory-bandwidth constrained regime.
-- [`query-results-imaging-band.json`](file:///evidence/contest/bigquery/query-results-imaging-band.json): Transition counts by imaging velocity band.
+- [`z_wbe_100k_scenarios.csv`](./z_wbe_100k_scenarios.csv): Complete 100,000-scenario deterministic dataset (36.28 MB).
+- [`schema.json`](./schema.json): BigQuery schema auto-detection output (41 columns).
+- [`dataset-info.txt`](./dataset-info.txt): `bq show` metadata confirming location `US`.
+- [`table-info.txt`](./table-info.txt): `bq show` table metadata confirming 100,000 rows.
+- [`table-info.json`](./table-info.json): Detailed JSON metadata for `scenarios_100k`.
+- [`query-results-bottleneck-distribution.json`](./query-results-bottleneck-distribution.json): Raw BigQuery GoogleSQL results for query 1.
+- [`query-results-acquisition-memory.json`](./query-results-acquisition-memory.json): Raw BigQuery GoogleSQL results for query 3.
+- [`query-results-memory-wall.json`](./query-results-memory-wall.json): Sample rows from the memory-bandwidth constrained regime.
+- [`query-results-imaging-band.json`](./query-results-imaging-band.json): Transition counts by imaging velocity band.
+

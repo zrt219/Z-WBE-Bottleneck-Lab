@@ -74,9 +74,9 @@ Entries are evaluated by a joint Google Cloud & NVIDIA judging panel on four equ
 | Criterion | Evaluation Dimension | How Z-WBE Bottleneck Lab Fulfills It (10/10 Focus) |
 | :--- | :--- | :--- |
 | **(a) Technical Innovation** | Novelty, biophysical scaling, and real-time Amdahl's Law modeling | First public scientific tool to connect all 8 dimensions of Whole Brain Emulation (imaging, segmentation, PFLOPS, memory bandwidth, NVLink interconnect, power, proofreading, budget) into 12 coupled analytical equations executing in **&lt; 1 ms** locally. Eliminates speculative timelines with deterministic sensitivity curves. |
-| **(b) Effective Use of NVIDIA & Google Cloud** | Ecosystem synergy and full-stack integration | End-to-end integration: **Google Colab** hosts the parameter sweeps; **NVIDIA RAPIDS cuDF** accelerates 100,000-scenario Monte Carlo simulations; **Google Cloud Run** containerization configurations are provided for serverless microservice deployment; and **NVIDIA Nemotron 3 Super 120B** (`nvidia/nemotron-3-super-120b-a12b:free` via OpenRouter) delivers grounded causal interpretation. |
+| **(b) Effective Use of NVIDIA & Google Cloud** | Ecosystem synergy and full-stack integration | End-to-end integration: **Google Colab** hosts parameter exploration and verified NVIDIA GPU acceleration (**8.62×** speedup on Tesla T4 via RAPIDS `cudf.pandas`); **Google BigQuery Sandbox** stores and analyzes the 100,000-scenario research dataset via GoogleSQL without requiring billing or credit cards; **Google Cloud Run** containerization configurations are provided for serverless microservice deployment; and **NVIDIA Nemotron 3 Super 120B** (`nvidia/nemotron-3-super-120b-a12b:free` via OpenRouter) delivers grounded causal interpretation. |
 | **(c) Potential Impact & Usefulness** | Value to developers, researchers, and scientific community | De-silos neuroscience, electron microscopy, and HPC engineering. When researchers ask *"What happens if imaging becomes 100x faster?"*, the lab proves that the dominant bottleneck immediately jumps to memory bandwidth and cold storage, preventing millions in misallocated capital grants. |
-| **(d) Quality of Documentation & Presentation** | Code cleanliness, tests, accessibility, and documentation | Complete mathematical specification for all 12 equations; **84 passing automated Vitest unit tests** across 10 suites; strict TypeScript monorepo; WCAG 2.1 AAA accessibility mode; 1-click interactive demo; scenario permalink state synchronization; comprehensive visual walkthroughs, animated GIFs, and Colab runtime verification proofs. |
+| **(d) Quality of Documentation & Presentation** | Code cleanliness, tests, accessibility, and documentation | Complete mathematical specification for all 12 equations; **89 passing automated Vitest unit tests** across 11 suites; strict TypeScript monorepo; WCAG 2.1 AAA accessibility mode; 1-click interactive demo; scenario permalink state synchronization; comprehensive visual walkthroughs, animated GIFs, and Colab runtime verification proofs. |
 
 ---
 
@@ -677,11 +677,13 @@ flowchart TD
 
 ## 12. Google Cloud Infrastructure
 
+* **Google BigQuery Sandbox**: Cloud analytics layer for querying and analyzing the 100,000-scenario research dataset (`z_wbe_research.scenarios_100k`) via GoogleSQL without requiring billing, credit cards, or paid resources. Analyzes bottleneck distributions, phase transitions, and memory wall boundaries. See [BigQuery Evidence Dossier](evidence/contest/bigquery/README.md).
 * **Google Cloud Run**: Serverless container configuration and Dockerfile provided for hosting the Node.js TypeScript API, managing sub-second cold starts, automated scaling, and secure environment variable isolation.
 * **Google Colab**: High-performance GPU notebook execution environment used to execute the Tesla T4 benchmark and simulate 100,000 scenario combinations with RAPIDS cuDF. See [COLAB.md](COLAB.md) for the complete Google Colab execution guide, synchronization workflow, and permanent launch link.
 * **Cloud Build & Artifact Registry**: Automated container image construction and registry storage for Cloud Run revisions.
 * **Secret Manager**: Secure externalized storage for OpenRouter credentials outside client-side application code.
 * **GKE Architectural Alignment**: Follows Google Kubernetes Engine best practices for hosting accelerated microservices.
+
 
 ---
 
