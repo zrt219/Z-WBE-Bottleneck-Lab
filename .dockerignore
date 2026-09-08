@@ -1,0 +1,18 @@
+node_modules
+npm-debug.log
+.git
+.gitignore
+.env
+.env.*
+.env.local
+dist
+frontend/dist
+backend/dist
+shared/dist
+coverage
+.vscode
+.idea
+*.log
+scratch
+marketing ads
+submission-kit/recordings/*.mp4

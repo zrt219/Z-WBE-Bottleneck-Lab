@@ -5,7 +5,8 @@ import {
   PRESET_MOUSE_CIRCUIT,
   PRESET_HUMAN_SCALE,
   DEMO_PRESET_IMAGING_WALL,
-  DEMO_PRESET_MEMORY_WALL
+  DEMO_PRESET_MEMORY_WALL,
+  DEMO_PRESET_ECONOMIC_WALL
 } from '@z-wbe/shared';
 
 const PRESETS_MAP: Record<string, ScenarioAssumptions> = {
@@ -14,7 +15,8 @@ const PRESETS_MAP: Record<string, ScenarioAssumptions> = {
   'mouse-circuit': PRESET_MOUSE_CIRCUIT,
   'human-scale': PRESET_HUMAN_SCALE,
   'demo-imaging-wall': DEMO_PRESET_IMAGING_WALL,
-  'demo-memory-wall': DEMO_PRESET_MEMORY_WALL
+  'demo-memory-wall': DEMO_PRESET_MEMORY_WALL,
+  'demo-economic-wall': DEMO_PRESET_ECONOMIC_WALL
 };
 
 /**

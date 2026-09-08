@@ -244,7 +244,7 @@ cc @googledevs @NVIDIAAI
 
 - [x] **Typecheck passes**: `npm run typecheck` passes across `shared`, `backend`, and `frontend` with 0 errors.
 - [x] **Lint passes**: `npm run lint` passes cleanly.
-- [x] **Unit tests pass**: 77 tests passing across `equations`, `bottlenecks`, `sensitivity`, `security`, `urlParams`, `heroDemo`, `accessibility`, `api`, and `contest`.
+- [x] **Unit tests pass**: 84 tests passing across 10 test suites (`equations`, `bottlenecks`, `sensitivity`, `grounding`, `security`, `urlParams`, `heroDemo`, `accessibility`, `api`, and `contest`).
 - [x] **Production build passes**: `npm run build` bundles `shared`, `backend`, and `frontend` into production assets cleanly.
 - [x] **OpenRouter key is server-side**: Key is never exposed to client bundles, never prefixed with `VITE_`, never sent to the browser.
 - [x] **No Gemma references remain**: Legacy Gemma files purged, zero active dependencies.
