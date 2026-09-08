@@ -188,51 +188,65 @@ Unlike typical AI applications that prompt models to estimate or compute enginee
 
 ## 15. LinkedIn Launch Post
 
-I am thrilled to present **Z-WBE Bottleneck Lab**, developed for the **Google Cloud × NVIDIA GTC Berlin 2026 Golden Ticket Build**!
+**Recommended Media Attachments**: 
+* Primary: Dark Hero Banner (`public/images/banner-dark.png`) OR 
+* Benchmark Chart: Empirical Speedup Chart (`public/data/cpu_vs_gpu_speedup.png`) OR 
+* Video/GIF: Animated Walkthrough (`public/recordings/hero_bottleneck_shift.gif`)
 
-The debate surrounding Whole Brain Emulation (WBE) is often divided into isolated silos: microscopists assume compute is trivial, while computer architects assume connectome imaging is solved. 
+---
 
-**Z-WBE Bottleneck Lab** unifies the entire engineering pipeline—Preservation, Acquisition, Reconstruction, Functionalization, Execution, and Validation—into a single interactive scaling demonstrator.
+I am thrilled to present **Z-WBE Bottleneck Lab**, built for the **Google Cloud × NVIDIA GTC Berlin 2026 Golden Ticket Challenge**!
+
+The debate surrounding Whole Brain Emulation (WBE) is often trapped in domain silos: microscopists assume compute is trivial, while computer architects assume connectome imaging is already solved. 
+
+**Z-WBE Bottleneck Lab** unifies the entire macroscopic engineering pipeline—Preservation, Acquisition, Reconstruction, Functionalization, Execution, and Validation—into a single interactive scaling demonstrator.
 
 **Core Product Principle: Strict Epistemic Separation**
-* **Deterministic Code**: Transparent scaling equations compute physical quantities (voxels, data volumes, PFLOPS, memory bandwidth, thermal power, and financial budgets). All values are labeled `CALCULATED FROM SCENARIO ASSUMPTIONS`.
-* **Grounded Generative AI**: NVIDIA Nemotron 3 Super (`nvidia/nemotron-3-super-120b-a12b:free`), accessed through **OpenRouter**, interprets calculated results. Nemotron is bound by a strict grounding contract: it explains causal relationships and leverage points without inventing measurements or altering numbers. All outputs are labeled `AI INTERPRETATION`.
+* ⚡ **Deterministic Physical Engine**: 12 transparent scaling equations compute physical quantities (voxels, data volumes, PFLOPS, memory bandwidth, thermal power, and budgets in <1ms). All values are labeled `CALCULATED FROM SCENARIO ASSUMPTIONS`.
+* 🧠 **Grounded Generative AI**: NVIDIA Nemotron 3 Super 120B (`nvidia/nemotron-3-super-120b-a12b:free`) via **OpenRouter** interprets calculated results. Nemotron is bound by a strict grounding contract: it explains causal leverage points and trade-offs without inventing measurements or hallucinating numbers. All outputs are labeled `AI INTERPRETATION`.
 
-**Key Architectural Features**:
-* **Live Constraint Engine**: Real-time identification of dominant and secondary bottlenecks across 8 dimensions.
-* **The Hero Demo Moment**: Testing *"What happens if imaging becomes 100x faster?"* demonstrates that eliminating microscopy barriers immediately shifts the dominant constraint to memory bandwidth.
-* **Session Counter & In-Memory Caching**: Tracks `AI REQUESTS THIS SESSION` to manage free quotas, with deterministic `scenarioHash` caching returning instant results.
-* **GPU Exploration Map**: 100,000-scenario Monte Carlo parameter sweep accelerated via NVIDIA RAPIDS `cudf.pandas` in Google Cloud Colab Enterprise.
-* **Architecture**: High-speed edge deployment on Vercel with containerized microservice ready for Google Cloud Run.
+**Key Architectural Highlights**:
+* 💥 **The Hero Moment**: Testing *"What happens if imaging becomes 100x faster?"* reveals Amdahl's Law in action: eliminating microscopy barriers causes the dominant bottleneck to instantly jump to Memory Bandwidth in <1ms.
+* ⚡ **8.62× GPU Acceleration**: Empirical tabular data pipeline benchmarked on **Google Cloud Colab Enterprise** on an **NVIDIA Tesla T4 GPU** (1.907s CPU vs 0.221s GPU, 88.4% time reduction) using zero-code-change `%load_ext cudf.pandas`.
+* 📊 **100,000-Scenario Monte Carlo Sweep**: Parameter space explored in GPU memory with NVIDIA RAPIDS cuDF, exported directly into the web application's interactive heatmap.
+* 🚀 **1-Click Colab Launch**: Complete canonical 10-stage GPU notebook ready to run in one click via Google Colab.
+* 🛡️ **Verified Engineering**: 89 passing unit tests, full TypeScript monorepo, zero-secret server-side API boundary, and containerized microservice architected for Google Cloud Run.
 
-Explore the live demonstrator, technical methodology, and open-source code:
-🌐 Live Lab: https://z-wbe-bottleneck-lab.vercel.app
-💻 GitHub Repository: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
+Experience the live lab, interactive Colab notebook, and open-source architecture:
+🌐 **Live Demonstrator**: https://z-wbe-bottleneck-lab.vercel.app  
+📓 **1-Click Colab Lab**: https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb  
+💻 **GitHub Repository**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab  
 
-Mentions & Judges: Google for Developers | NVIDIA AI | Jen Harvey | Ray Harvey
-#NVIDIAGTC #GoogleCloud #NVIDIA #GTC26 #GTC2026 #Nemotron #OpenRouter #ArtificialIntelligence #ComputationalNeuroscience #RAPIDS #cuDF #CloudRun #OpenSource
+Judges & Mentions: Google for Developers | NVIDIA AI | Jen Harvey | Ray Harvey
+#NVIDIAGTC #GoogleCloud #NVIDIA #GTC26 #GTC2026 #Nemotron #OpenRouter #RAPIDS #cuDF #cuML #CloudRun #WholeBrainEmulation #Connectomics #ComputationalNeuroscience #GPUAcceleration #OpenSource #DevChallenge #BuildWithAI
 
 ---
 
 ## 16. X (Twitter) Launch Post
 
-🚀 Excited to unveil **Z-WBE Bottleneck Lab** for the Google Cloud × NVIDIA GTC Berlin 2026 Golden Ticket Build!
+**Recommended Media Attachment**: Attach `public/recordings/hero_bottleneck_shift.gif` or `public/colab-evidence/colab_t4_live_execution.gif` (Motion/video drives 10× higher engagement on X).
+
+---
+
+🚀 Excited to unveil **Z-WBE Bottleneck Lab** for the Google Cloud × NVIDIA GTC Berlin 2026 Golden Ticket Challenge!
 
 🔬 What actually breaks first if you attempt whole-brain emulation?
 Change the assumptions. See what fractures.
 
-Key highlights:
-⚡ Deterministic scaling equations compute all metrics (FLOPs, TB/s, scan times, costs).
-🧠 NVIDIA Nemotron 3 Super 120B via @OpenRouter explains *why* bottlenecks shift—bound by a strict grounding contract.
-💥 The Hero Moment: What happens if imaging gets 100x faster? The bottleneck moves to memory bandwidth.
-📊 100,000 synthetic parameter sweep powered by NVIDIA RAPIDS cuDF & Google Cloud Colab.
-☁️ High-speed edge deployment on Vercel with containerized microservice ready for Google Cloud Run.
+Key Highlights:
+⚡ Deterministic scaling equations compute all metrics (FLOPs, TB/s, scan times, costs) in <1ms.
+🧠 NVIDIA Nemotron 3 Super 120B via @OpenRouter explains *why* bottlenecks shift—bound by a strict zero-hallucination grounding contract.
+💥 The Hero Moment: Imaging gets 100x faster? The bottleneck instantly moves to memory bandwidth.
+🏎️ 8.62× speedup on NVIDIA Tesla T4 GPU with zero code changes using RAPIDS @rapidsai cuDF in Google Cloud Colab Enterprise!
+📊 100,000 Monte Carlo sweep mapping global phase transitions.
+🧪 89 passing unit tests | TypeScript monorepo | Cloud Run container ready.
 
-🌐 Experience the live lab: https://z-wbe-bottleneck-lab.vercel.app
-💻 Code & Methodology: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
+🌐 Live Lab: https://z-wbe-bottleneck-lab.vercel.app
+📓 Run in Colab: https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
+💻 Code: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
-cc @googledevs @NVIDIAAI
-#NVIDIAGTC #GoogleCloud #NVIDIA #GTC2026 #Nemotron #OpenRouter #RAPIDS #cuDF #CloudRun #BioEngineering #MachineLearning
+cc @GoogleDevs @NVIDIAAI
+#NVIDIAGTC #GoogleCloud #NVIDIA #GTC2026 #Nemotron #OpenRouter #RAPIDS #cuDF #CloudRun #DevChallenge
 
 ---
 
