@@ -1,7 +1,8 @@
 import puppeteer from 'puppeteer-core';
 
 async function runButtonVerification() {
-  console.log('🚀 Starting Comprehensive Browser Button Verification...');
+  const baseUrl = (process.env.TEST_URL || process.argv[2] || 'https://z-wbe-bottleneck-lab.vercel.app').replace(/\/$/, '');
+  console.log(`🚀 Starting Comprehensive Browser Button Verification against: ${baseUrl}...`);
   const browser = await puppeteer.launch({
     executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
     headless: true,
@@ -18,6 +19,11 @@ async function runButtonVerification() {
       consoleErrors.push(msg.text());
     }
   });
+  page.on('response', (response) => {
+    if (response.status() >= 400) {
+      console.error(`[HTTP ${response.status()}] ${response.url()}`);
+    }
+  });
   page.on('pageerror', (err) => {
     console.error(`[Browser Uncaught Error]`, err.message);
     consoleErrors.push(err.message);
@@ -25,8 +31,8 @@ async function runButtonVerification() {
 
   try {
     // 1. Visit Home Page
-    console.log('1. Navigating to http://localhost:5173...');
-    await page.goto('http://localhost:5173', { waitUntil: 'networkidle0' });
+    console.log(`1. Navigating to ${baseUrl}...`);
+    await page.goto(baseUrl, { waitUntil: 'networkidle0' });
 
     // 2. Test Top 1-Click Demo Button from Home
     console.log('2. Testing Top Header ⚡ 1-Click Demo button from Home page...');
@@ -37,13 +43,13 @@ async function runButtonVerification() {
     console.log(`   - Constraint shift banner visible: ${bannerVisible}`);
 
     // 3. Test Top 1-Click Demo Button from Another Page (e.g., /about)
-    console.log('3. Navigating to /about and testing Top Header ⚡ 1-Click Demo button...');
-    await page.goto('http://localhost:5173/about', { waitUntil: 'networkidle0' });
+    console.log(`3. Navigating to ${baseUrl}/about and testing Top Header ⚡ 1-Click Demo button...`);
+    await page.goto(`${baseUrl}/about`, { waitUntil: 'networkidle0' });
     const topDemoFromAbout = await page.waitForSelector('[data-testid="header-one-click-demo-button"]');
     await topDemoFromAbout.click();
     await new Promise((r) => setTimeout(r, 1500));
     const currentUrl = page.url();
-    console.log(`   - Redirected back to Home: ${currentUrl === 'http://localhost:5173/'}`);
+    console.log(`   - Redirected back to Home: ${currentUrl === `${baseUrl}/` || currentUrl === baseUrl}`);
     const bannerVisibleAfterNav = await page.$eval('#tour-preset-selector', (el) => el.innerText.includes('THE BOTTLENECK MOVED'));
     console.log(`   - 1-Click Demo executed after navigation: ${bannerVisibleAfterNav}`);
 
@@ -114,7 +120,7 @@ async function runButtonVerification() {
     console.log('10. Testing all main navigation links...');
     const routes = ['/tutorials/basics', '/tutorials/options', '/tutorials/pipeline', '/tutorials/api-walkthrough', '/methodology', '/architecture', '/about'];
     for (const route of routes) {
-      await page.goto(`http://localhost:5173${route}`, { waitUntil: 'networkidle0' });
+      await page.goto(`${baseUrl}${route}`, { waitUntil: 'networkidle0' });
       console.log(`   - Visited ${route} successfully.`);
     }
 
