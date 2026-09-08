@@ -8,19 +8,19 @@
 
 ---
 
-## Post 1: Morning Flagship (07:44 MDT)
+## Post 1: Morning Flagship (09:58 MDT)
 
 - **Buffer Post ID**: `buffer_li_d17_p1`
 - **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 17
 - **Content Pillar**: Pillar B: Systems Engineering
-- **Scheduled Time (MDT)**: 07:44 MDT
+- **Scheduled Time (MDT)**: 09:58 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
 - **Hook**: The Hardware Triad: Why Compute, Memory, and Interconnect must scale together.
 - **Post Summary**: When supercomputer designers architect exascale systems for biological simulation, they cannot focus on FLOPS alone.
-- **Media**: `ad_07.png, 01_hero_overview.png, 03_bottleneck_moved_transition.png, banner-dark.png`
-- **Media Order**: 1. ad_07.png -> 2. 01_hero_overview.png -> 3. 03_bottleneck_moved_transition.png -> 4. banner-dark.png
+- **Media**: `social_card_intro_inference.png, 06_architecture_evidence_view.png, 02_colab_t4_gpu_runtime_dialog.png, ad_01.png`
+- **Media Order**: 1. social_card_intro_inference.png -> 2. 06_architecture_evidence_view.png -> 3. 02_colab_t4_gpu_runtime_dialog.png -> 4. ad_01.png
 - **Hashtags**: #NVIDIAGTC #Supercomputing #ComputerArchitecture #Interconnect #NVLink #InfiniBand #HighPerformanceComputing #Hardware
 - **Mentions**: None
 - **Claims Verified**: YES - Interconnect and bisection bandwidth modeled
@@ -28,10 +28,10 @@
 
 ### Media Attachments
 **Format**: Multi-Image Carousel (4 images)
-1. `public/marketing/ad_07.png`
-2. `public/screenshots/01_hero_overview.png`
-3. `public/screenshots/03_bottleneck_moved_transition.png`
-4. `public/images/banner-dark.png`
+1. `public/images/social_card_intro_inference.png`
+2. `public/screenshots/06_architecture_evidence_view.png`
+3. `public/colab-evidence/02_colab_t4_gpu_runtime_dialog.png`
+4. `public/marketing/ad_01.png`
 
 ### Post Copy
 
@@ -65,29 +65,30 @@ https://z-wbe-bottleneck-lab.vercel.app
 
 ---
 
-## Post 2: Mid-Morning Explainer (09:32 MDT)
+## Post 2: Mid-Morning Explainer (12:12 MDT)
 
 - **Buffer Post ID**: `buffer_li_d17_p2`
 - **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 17
 - **Content Pillar**: Pillar I: Learning Paths
-- **Scheduled Time (MDT)**: 09:32 MDT
+- **Scheduled Time (MDT)**: 12:12 MDT
 - **Primary Destination URL**: https://g.dev/zhane
 - **Hook**: From Course to Code: What I learned from 'Intro to Inference: How to Run AI Models on a GPU'.
 - **Post Summary**: Completing the Google Cloud × NVIDIA badge 'Intro to Inference' fundamentally transformed how I designed Z-WBE's model-serving ...
-- **Media**: `social_card_intro_inference.png, badge_intro_inference.png, google-nvidia-developer-badges.png`
-- **Media Order**: 1. social_card_intro_inference.png -> 2. badge_intro_inference.png -> 3. google-nvidia-developer-badges.png
+- **Media**: `social_card_nim_gke.png, 04_nemotron_grounded_interpretation.png, 07_github_notebook_code_provenance.png, banner-light.png`
+- **Media Order**: 1. social_card_nim_gke.png -> 2. 04_nemotron_grounded_interpretation.png -> 3. 07_github_notebook_code_provenance.png -> 4. banner-light.png
 - **Hashtags**: #NVIDIAGTC #GoogleCloud #NVIDIA #Inference #LLMOps #GPUComputing #DeveloperJourney
 - **Mentions**: None
 - **Claims Verified**: YES - Intro to Inference course learnings verified
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (3 images)
-1. `public/images/social_card_intro_inference.png`
-2. `public/images/badge_intro_inference.png`
-3. `public/images/google-nvidia-developer-badges.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/social_card_nim_gke.png`
+2. `public/screenshots/04_nemotron_grounded_interpretation.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/images/banner-light.png`
 
 ### Post Copy
 
@@ -112,28 +113,30 @@ https://g.dev/zhane
 
 ---
 
-## Post 3: Noon Visual Proof (11:26 MDT)
+## Post 3: Noon Visual Proof (14:42 MDT)
 
 - **Buffer Post ID**: `buffer_li_d17_p3`
 - **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 17
 - **Content Pillar**: Pillar H: Product Demo
-- **Scheduled Time (MDT)**: 11:26 MDT
+- **Scheduled Time (MDT)**: 14:42 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
 - **Hook**: Inspect the Interconnect Bandwidth gauge in Z-WBE Bottleneck Lab.
 - **Post Summary**: Notice how increasing the 'Inter-Regional Axon Ratio' slider directly drives up the Interconnect gauge pressure, even when tota...
-- **Media**: `01_hero_overview.png, 06_architecture_evidence_view.png`
-- **Media Order**: 1. 01_hero_overview.png -> 2. 06_architecture_evidence_view.png
+- **Media**: `social_card_nim_gke.png, 01_hero_overview.png, cpu_vs_gpu_speedup.png, banner-dark.png`
+- **Media Order**: 1. social_card_nim_gke.png -> 2. 01_hero_overview.png -> 3. cpu_vs_gpu_speedup.png -> 4. banner-dark.png
 - **Hashtags**: #NVIDIAGTC #WebDev #DataVisualization #Networking #HPC
 - **Mentions**: None
 - **Claims Verified**: YES - UI screenshot of Interconnect gauge
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (2 images)
-1. `public/screenshots/01_hero_overview.png`
-2. `public/screenshots/06_architecture_evidence_view.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/social_card_nim_gke.png`
+2. `public/screenshots/01_hero_overview.png`
+3. `public/data/cpu_vs_gpu_speedup.png`
+4. `public/images/banner-dark.png`
 
 ### Post Copy
 
@@ -150,29 +153,30 @@ https://z-wbe-bottleneck-lab.vercel.app
 
 ---
 
-## Post 4: Evening Deep Dive (17:36 MDT)
+## Post 4: Evening Deep Dive (17:28 MDT)
 
 - **Buffer Post ID**: `buffer_li_d17_p4`
 - **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 17
 - **Content Pillar**: Pillar B: Systems Engineering
-- **Scheduled Time (MDT)**: 17:36 MDT
+- **Scheduled Time (MDT)**: 17:28 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: Fat-Tree vs Torus vs Dragonfly: Networking topologies for brain simulation.
 - **Post Summary**: How do you wire 2,000 accelerator nodes to simulate long-range biological neural projections?
-- **Media**: `ad_04.png, 07_github_notebook_code_provenance.png, banner-dark.png`
-- **Media Order**: 1. ad_04.png -> 2. 07_github_notebook_code_provenance.png -> 3. banner-dark.png
+- **Media**: `social_card_intro_inference.png, 06_architecture_evidence_view.png, 07_github_notebook_code_provenance.png, ad_10.png`
+- **Media Order**: 1. social_card_intro_inference.png -> 2. 06_architecture_evidence_view.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_10.png
 - **Hashtags**: #NVIDIAGTC #Networking #Supercomputing #Datacenter #InfiniBand #HardwareArchitecture
 - **Mentions**: None
 - **Claims Verified**: YES - Network topology equations in shared/src/equations.ts
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (3 images)
-1. `public/marketing/ad_04.png`
-2. `public/colab-evidence/07_github_notebook_code_provenance.png`
-3. `public/images/banner-dark.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/social_card_intro_inference.png`
+2. `public/screenshots/06_architecture_evidence_view.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/marketing/ad_10.png`
 
 ### Post Copy
 
@@ -195,28 +199,30 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 ---
 
-## Post 5: Night Build Log (19:28 MDT)
+## Post 5: Night Build Log (20:12 MDT)
 
 - **Buffer Post ID**: `buffer_li_d17_p5`
 - **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 17
 - **Content Pillar**: Pillar F: Build Journey
-- **Scheduled Time (MDT)**: 19:28 MDT
+- **Scheduled Time (MDT)**: 20:12 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: Day 17 Build Log: Security testing and API payload sanitization.
 - **Post Summary**: When users interact with parameter sliders, malicious actors could attempt prototype pollution or numerical injection (passing ...
-- **Media**: `ad_08.png, 06_architecture_evidence_view.png`
-- **Media Order**: 1. ad_08.png -> 2. 06_architecture_evidence_view.png
+- **Media**: `golden_ticket_intro_inference.png, 06_architecture_evidence_view.png, 07_github_notebook_code_provenance.png, ad_09.png`
+- **Media Order**: 1. golden_ticket_intro_inference.png -> 2. 06_architecture_evidence_view.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_09.png
 - **Hashtags**: #NVIDIAGTC #AppSec #Cybersecurity #WebSecurity #TypeScript #Vitest #BuildInPublic
 - **Mentions**: None
 - **Claims Verified**: YES - Security tests pass in 275ms
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (2 images)
-1. `public/marketing/ad_08.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/golden_ticket_intro_inference.png`
 2. `public/screenshots/06_architecture_evidence_view.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/marketing/ad_09.png`
 
 ### Post Copy
 

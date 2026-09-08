@@ -130,7 +130,8 @@ Every single deployed post has been confirmed present in Buffer with:
 
 ---
 
-## 6. Execution Plan for Remaining Campaign Posts (Days 11–21 & X Channel)
+## 6. Execution Plan for Remaining Campaign Posts (Days 11–21, Day 3 Post 3, & X Channel)
 
-1. **24-Hour Quota Resumption**: As soon as Buffer's rolling 24-hour limit (`250-in-1day`) resets, executing `python scripts/deploy_buffer_campaign.py` will automatically resume from Day 10 (Post 3) and deploy Days 11 through 21. The state file `social-campaign/buffer_deployed_posts.json` prevents any duplicate submissions.
-2. **X (Twitter) Channel Unlocking**: The user should visit `https://publish.buffer.com/channels` to reconnect or activate their X profile (`@ZRT219`). Once unlocked, running `scripts/deploy_buffer_campaign.py` will automatically push all 107 formatted X drafts.
+1. **Asset Remediation (Day 3 Post 3)**: Fixed `buffer_li_d03_p3` and all related Colab GIF posts in `campaign_week1.py`, `campaign_week2.py`, and `campaign_week3.py` to use `public/recordings/colab_t4_terminal_execution.gif` (2.4 MB) instead of the oversized 15.1 MB GIF (`colab_t4_live_execution.gif`). This resolves the Buffer image upload rejection.
+2. **24-Hour Quota Resumption**: As soon as Buffer's rolling 24-hour limit (`250-in-1day`, `Retry-After: ~72000s`) resets, executing `python scripts/deploy_buffer_campaign.py` will automatically resume, deploy `buffer_li_d03_p3`, Day 10 (Posts 3–5), and Days 11 through 21. The state file `social-campaign/buffer_deployed_posts.json` prevents duplicate submissions.
+3. **X (Twitter) Channel Unlocking**: The user should visit `https://publish.buffer.com/channels` to reconnect or activate their X profile (`@ZRT219`). Once unlocked, running `scripts/deploy_buffer_campaign.py` will automatically push all 107 formatted X drafts.

@@ -39,21 +39,30 @@ ctx = ssl._create_unverified_context()
 def parse_rate_limit_headers(headers):
     # e.g. ratelimit: "100-in-15min"; r=65; t=643
     result = {}
-    for k, v in headers.items():
-        if "ratelimit" in k.lower():
-            if "-in-15min" in v:
-                m_r = re.search(r'r=(\d+)', v)
-                m_t = re.search(r't=(\d+)', v)
-                if m_r: result['r_15m'] = int(m_r.group(1))
-                if m_t: result['t_15m'] = int(m_t.group(1))
-            elif "-in-1day" in v:
-                m_r = re.search(r'r=(\d+)', v)
-                m_t = re.search(r't=(\d+)', v)
-                if m_r: result['r_1d'] = int(m_r.group(1))
-                if m_t: result['t_1d'] = int(m_t.group(1))
+    vals = []
+    if hasattr(headers, "get_all"):
+        for h_name in ["ratelimit", "ratelimit-policy", "x-ratelimit-reset"]:
+            found = headers.get_all(h_name)
+            if found:
+                vals.extend(found)
+    if hasattr(headers, "items"):
+        for k, v in headers.items():
+            if "ratelimit" in k.lower():
+                vals.append(v)
+    for v in vals:
+        if "-in-15min" in v:
+            m_r = re.search(r'r=(\d+)', v)
+            m_t = re.search(r't=(\d+)', v)
+            if m_r: result['r_15m'] = int(m_r.group(1))
+            if m_t: result['t_15m'] = int(m_t.group(1))
+        elif "-in-1day" in v:
+            m_r = re.search(r'r=(\d+)', v)
+            m_t = re.search(r't=(\d+)', v)
+            if m_r: result['r_1d'] = int(m_r.group(1))
+            if m_t: result['t_1d'] = int(m_t.group(1))
     return result
 
-def query_buffer(query, variables=None, retries=3):
+def query_buffer(query, variables=None, retries=5):
     data = {"query": query}
     if variables:
         data["variables"] = variables
@@ -69,15 +78,27 @@ def query_buffer(query, variables=None, retries=3):
             }
         )
         try:
-            with urllib.request.urlopen(req, context=ctx) as resp:
-                headers = dict(resp.headers)
+            with urllib.request.urlopen(req, context=ctx, timeout=30) as resp:
+                headers = resp.headers
                 limits = parse_rate_limit_headers(headers)
                 body = json.loads(resp.read().decode("utf-8"))
                 return body, limits
         except urllib.error.HTTPError as e:
             if e.code == 429:
-                print(f"[RateLimit 429] Backing off 30s... (attempt {attempt+1}/{retries})")
-                time.sleep(30)
+                retry_after = 60
+                if "Retry-After" in e.headers:
+                    try:
+                        retry_after = int(e.headers["Retry-After"])
+                    except Exception:
+                        pass
+                limits = parse_rate_limit_headers(e.headers)
+                t_15m = limits.get('t_15m', retry_after)
+                if retry_after > 300 or limits.get('r_1d') == 0:
+                    print(f"[RateLimit 429] 24-hour quota exhausted (Retry-After: {retry_after}s / ~{retry_after//3600}h). Stopping deployment.")
+                    return {"http_error": 429, "error": "24-hour rate limit exceeded"}, limits
+                wait_sec = max(retry_after, t_15m) + 3
+                print(f"[RateLimit 429] Buffer 15m window active. Sleeping {wait_sec}s until reset... (attempt {attempt+1}/{retries})")
+                time.sleep(wait_sec)
                 continue
             err_body = e.read().decode("utf-8")
             print(f"[HTTP {e.code}] Error: {err_body}")
@@ -258,6 +279,11 @@ def deploy_posts():
     print(f"Created in this run: {created_count}")
     print(f"Previously created: {skipped_count}")
     print(f"Total deployed drafts in state: {len(state)}")
+
+    print("\nRecompiling campaign calendar and day files with newly deployed IDs...")
+    compile_campaign.main()
+    print("Compilation complete.")
+
     return state
 
 if __name__ == "__main__":

@@ -8,19 +8,19 @@
 
 ---
 
-## Post 1: Morning Flagship (07:47 MDT)
+## Post 1: Morning Flagship (10:01 MDT)
 
 - **Buffer Post ID**: `6a9faec87eee3ace70b78289`
 - **Buffer Status**: `DRAFT (Buffer Verified)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 08
 - **Content Pillar**: Pillar E: Open Source
-- **Scheduled Time (MDT)**: 07:47 MDT
+- **Scheduled Time (MDT)**: 10:01 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: The 12 deterministic equations behind Z-WBE Bottleneck Lab.
 - **Post Summary**: When building a systems demonstrator, mathematical integrity is non-negotiable.
-- **Media**: `ad_04.png, 06_architecture_evidence_view.png, 01_hero_overview.png, banner-dark.png`
-- **Media Order**: 1. ad_04.png -> 2. 06_architecture_evidence_view.png -> 3. 01_hero_overview.png -> 4. banner-dark.png
+- **Media**: `social_card_intro_inference.png, 02_imaging_wall_baseline.png, 07_github_notebook_code_provenance.png, ad_09.png`
+- **Media Order**: 1. social_card_intro_inference.png -> 2. 02_imaging_wall_baseline.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_09.png
 - **Hashtags**: #NVIDIAGTC #TypeScript #Mathematics #OpenSource #SystemsEngineering #SoftwareEngineering
 - **Mentions**: None
 - **Claims Verified**: YES - 12 equations in shared/src/equations.ts
@@ -28,10 +28,10 @@
 
 ### Media Attachments
 **Format**: Multi-Image Carousel (4 images)
-1. `public/marketing/ad_04.png`
-2. `public/screenshots/06_architecture_evidence_view.png`
-3. `public/screenshots/01_hero_overview.png`
-4. `public/images/banner-dark.png`
+1. `public/images/social_card_intro_inference.png`
+2. `public/screenshots/02_imaging_wall_baseline.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/marketing/ad_09.png`
 
 ### Post Copy
 
@@ -66,29 +66,30 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 ---
 
-## Post 2: Mid-Morning Explainer (09:35 MDT)
+## Post 2: Mid-Morning Explainer (12:15 MDT)
 
 - **Buffer Post ID**: `6a9faecab11a426090bd816e`
 - **Buffer Status**: `DRAFT (Buffer Verified)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 08
 - **Content Pillar**: Pillar B: Systems Engineering
-- **Scheduled Time (MDT)**: 09:35 MDT
+- **Scheduled Time (MDT)**: 12:15 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
 - **Hook**: Why we chose pure functional programming for physical scaling calculations.
 - **Post Summary**: In shared/src/equations.ts, every single equation is a pure function:
-- **Media**: `ad_01.png, 06_architecture_evidence_view.png, banner-light.png`
-- **Media Order**: 1. ad_01.png -> 2. 06_architecture_evidence_view.png -> 3. banner-light.png
+- **Media**: `golden_ticket_speed_up_data_analytics.png, 06_architecture_evidence_view.png, 07_github_notebook_code_provenance.png, ad_08.png`
+- **Media Order**: 1. golden_ticket_speed_up_data_analytics.png -> 2. 06_architecture_evidence_view.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_08.png
 - **Hashtags**: #NVIDIAGTC #FunctionalProgramming #CleanCode #TypeScript #SoftwareArchitecture
 - **Mentions**: None
 - **Claims Verified**: YES - Pure functional architecture verified
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (3 images)
-1. `public/marketing/ad_01.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/golden_ticket_speed_up_data_analytics.png`
 2. `public/screenshots/06_architecture_evidence_view.png`
-3. `public/images/banner-light.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/marketing/ad_08.png`
 
 ### Post Copy
 
@@ -115,28 +116,30 @@ https://z-wbe-bottleneck-lab.vercel.app
 
 ---
 
-## Post 3: Noon Visual Proof (11:28 MDT)
+## Post 3: Noon Visual Proof (14:46 MDT)
 
 - **Buffer Post ID**: `6a9faecce638e16871e64585`
 - **Buffer Status**: `DRAFT (Buffer Verified)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 08
 - **Content Pillar**: Pillar H: Product Demo
-- **Scheduled Time (MDT)**: 11:28 MDT
+- **Scheduled Time (MDT)**: 14:46 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
 - **Hook**: Inspect the raw evidence behind every number: The Z-WBE Evidence Drawer.
 - **Post Summary**: In the bottom panel of Z-WBE Bottleneck Lab, click the 'Evidence & Methodology' drawer.
-- **Media**: `06_architecture_evidence_view.png, 01_hero_overview.png`
-- **Media Order**: 1. 06_architecture_evidence_view.png -> 2. 01_hero_overview.png
+- **Media**: `golden_ticket_intro_inference.png, 03_bottleneck_moved_transition.png, 07_github_notebook_code_provenance.png, ad_07.png`
+- **Media Order**: 1. golden_ticket_intro_inference.png -> 2. 03_bottleneck_moved_transition.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_07.png
 - **Hashtags**: #NVIDIAGTC #DataTransparency #OpenScience #UIUX #WebDev
 - **Mentions**: None
 - **Claims Verified**: YES - Evidence drawer UI screenshot
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (2 images)
-1. `public/screenshots/06_architecture_evidence_view.png`
-2. `public/screenshots/01_hero_overview.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/golden_ticket_intro_inference.png`
+2. `public/screenshots/03_bottleneck_moved_transition.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/marketing/ad_07.png`
 
 ### Post Copy
 
@@ -160,29 +163,30 @@ https://z-wbe-bottleneck-lab.vercel.app
 
 ---
 
-## Post 4: Evening Deep Dive (17:34 MDT)
+## Post 4: Evening Deep Dive (17:32 MDT)
 
 - **Buffer Post ID**: `6a9faecd1900c10a4f0e900c`
 - **Buffer Status**: `DRAFT (Buffer Verified)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 08
 - **Content Pillar**: Pillar B: Systems Engineering
-- **Scheduled Time (MDT)**: 17:34 MDT
+- **Scheduled Time (MDT)**: 17:32 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: Equation 8: The Thermal Power Budget of Brain Simulation.
 - **Post Summary**: Can you run a human brain emulation on a standard university server rack?
-- **Media**: `ad_10.png, 03_bottleneck_moved_transition.png, banner-dark.png`
-- **Media Order**: 1. ad_10.png -> 2. 03_bottleneck_moved_transition.png -> 3. banner-dark.png
+- **Media**: `golden_ticket_accelerated_ml.png, 06_architecture_evidence_view.png, 07_github_notebook_code_provenance.png, ad_06.png`
+- **Media Order**: 1. golden_ticket_accelerated_ml.png -> 2. 06_architecture_evidence_view.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_06.png
 - **Hashtags**: #NVIDIAGTC #ThermalPower #EnergyEfficiency #DataCenter #HighPerformanceComputing #HardwareArchitecture
 - **Mentions**: None
 - **Claims Verified**: YES - Power and PUE equations verified
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (3 images)
-1. `public/marketing/ad_10.png`
-2. `public/screenshots/03_bottleneck_moved_transition.png`
-3. `public/images/banner-dark.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/golden_ticket_accelerated_ml.png`
+2. `public/screenshots/06_architecture_evidence_view.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/marketing/ad_06.png`
 
 ### Post Copy
 
@@ -212,28 +216,30 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 ---
 
-## Post 5: Night Build Log (19:28 MDT)
+## Post 5: Night Build Log (20:16 MDT)
 
 - **Buffer Post ID**: `6a9faecf7eee3ace70b783a1`
 - **Buffer Status**: `DRAFT (Buffer Verified)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 08
 - **Content Pillar**: Pillar F: Build Journey
-- **Scheduled Time (MDT)**: 19:28 MDT
+- **Scheduled Time (MDT)**: 20:16 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: Day 8 Build Log: Testing equation boundaries and edge cases.
 - **Post Summary**: In shared/tests/equations.test.ts, we wrote 19 automated tests targeting boundary conditions:
-- **Media**: `ad_04.png, 07_github_notebook_code_provenance.png`
-- **Media Order**: 1. ad_04.png -> 2. 07_github_notebook_code_provenance.png
+- **Media**: `golden_ticket_data_analytics.png, 06_architecture_evidence_view.png, 07_github_notebook_code_provenance.png, ad_05.png`
+- **Media Order**: 1. golden_ticket_data_analytics.png -> 2. 06_architecture_evidence_view.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_05.png
 - **Hashtags**: #NVIDIAGTC #TypeScript #SoftwareTesting #Vitest #BuildInPublic
 - **Mentions**: None
 - **Claims Verified**: YES - shared/tests/equations.test.ts passing (19/19 tests)
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (2 images)
-1. `public/marketing/ad_04.png`
-2. `public/colab-evidence/07_github_notebook_code_provenance.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/golden_ticket_data_analytics.png`
+2. `public/screenshots/06_architecture_evidence_view.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/marketing/ad_05.png`
 
 ### Post Copy
 

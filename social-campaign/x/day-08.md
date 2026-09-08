@@ -8,28 +8,30 @@
 
 ---
 
-## Post 1: Morning Hook (07:18 MDT)
+## Post 1: Morning Hook (10:15 MDT)
 
 - **Buffer Post ID**: `buffer_x_d08_p1`
 - **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 08
 - **Content Pillar**: Pillar E: Open Source
-- **Scheduled Time (MDT)**: 07:18 MDT
+- **Scheduled Time (MDT)**: 10:15 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: 12 deterministic equations.
 - **Post Summary**: Zero hallucinated numbers.
-- **Media**: `ad_04.png, 06_architecture_evidence_view.png`
-- **Media Order**: 1. ad_04.png -> 2. 06_architecture_evidence_view.png
+- **Media**: `golden_ticket_nim_gke.png, 06_architecture_evidence_view.png, 07_github_notebook_code_provenance.png, ad_04.png`
+- **Media Order**: 1. golden_ticket_nim_gke.png -> 2. 06_architecture_evidence_view.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_04.png
 - **Hashtags**: #NVIDIAGTC #TypeScript
 - **Mentions**: None
 - **Claims Verified**: YES - 12 equations in shared/src/equations.ts
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (2 images)
-1. `public/marketing/ad_04.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/golden_ticket_nim_gke.png`
 2. `public/screenshots/06_architecture_evidence_view.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/marketing/ad_04.png`
 
 ### Post Copy
 
@@ -45,28 +47,30 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 ---
 
-## Post 2: Mid-Morning Visual (08:46 MDT)
+## Post 2: Mid-Morning Visual (12:28 MDT)
 
 - **Buffer Post ID**: `buffer_x_d08_p2`
 - **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 08
 - **Content Pillar**: Pillar B: Systems Engineering
-- **Scheduled Time (MDT)**: 08:46 MDT
+- **Scheduled Time (MDT)**: 12:28 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
 - **Hook**: Simulating 86 billion neurons in real time takes ~1.2 ExaFLOPS.
 - **Post Summary**: At 25 TFLOPS/W and 1.2 PUE, that's 57 Megawatts of power.
-- **Media**: `ad_10.png, 01_hero_overview.png`
-- **Media Order**: 1. ad_10.png -> 2. 01_hero_overview.png
+- **Media**: `google-nvidia-developer-badges.png, 06_architecture_evidence_view.png, 04_colab_cuml_execution_progress.png, ad_03.png`
+- **Media Order**: 1. google-nvidia-developer-badges.png -> 2. 06_architecture_evidence_view.png -> 3. 04_colab_cuml_execution_progress.png -> 4. ad_03.png
 - **Hashtags**: #NVIDIAGTC #HPC
 - **Mentions**: None
 - **Claims Verified**: YES - Power equation calculation
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (2 images)
-1. `public/marketing/ad_10.png`
-2. `public/screenshots/01_hero_overview.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/google-nvidia-developer-badges.png`
+2. `public/screenshots/06_architecture_evidence_view.png`
+3. `public/colab-evidence/04_colab_cuml_execution_progress.png`
+4. `public/marketing/ad_03.png`
 
 ### Post Copy
 
@@ -83,14 +87,14 @@ Explore: https://z-wbe-bottleneck-lab.vercel.app
 
 ---
 
-## Post 3: Late-Morning Data (10:32 MDT)
+## Post 3: Late-Morning Data (14:58 MDT)
 
 - **Buffer Post ID**: `buffer_x_d08_p3`
 - **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 08
 - **Content Pillar**: Pillar E: Open Source
-- **Scheduled Time (MDT)**: 10:32 MDT
+- **Scheduled Time (MDT)**: 14:58 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: 19 vitest unit tests verify our physical equations in 10ms.
 - **Post Summary**: Zero mocks. Pure functional math.
@@ -118,28 +122,30 @@ Source: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 ---
 
-## Post 4: Evening Hook (16:58 MDT)
+## Post 4: Evening Hook (17:44 MDT)
 
 - **Buffer Post ID**: `buffer_x_d08_p4`
 - **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 08
 - **Content Pillar**: Pillar H: Product Demo
-- **Scheduled Time (MDT)**: 16:58 MDT
+- **Scheduled Time (MDT)**: 17:44 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
 - **Hook**: Click 'Evidence & Methodology' in Z-WBE.
 - **Post Summary**: See the exact mathematical inputs, outputs, and SHA-256 hash.
-- **Media**: `06_architecture_evidence_view.png, banner-dark.png`
-- **Media Order**: 1. 06_architecture_evidence_view.png -> 2. banner-dark.png
+- **Media**: `social_card_intro_inference.png, 04_nemotron_grounded_interpretation.png, 03_colab_cuml_linear_regression.png, ad_02.png`
+- **Media Order**: 1. social_card_intro_inference.png -> 2. 04_nemotron_grounded_interpretation.png -> 3. 03_colab_cuml_linear_regression.png -> 4. ad_02.png
 - **Hashtags**: #NVIDIAGTC
 - **Mentions**: None
 - **Claims Verified**: YES - Evidence drawer feature
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (2 images)
-1. `public/screenshots/06_architecture_evidence_view.png`
-2. `public/images/banner-dark.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/social_card_intro_inference.png`
+2. `public/screenshots/04_nemotron_grounded_interpretation.png`
+3. `public/colab-evidence/03_colab_cuml_linear_regression.png`
+4. `public/marketing/ad_02.png`
 
 ### Post Copy
 
@@ -154,28 +160,30 @@ Inspect the evidence: https://z-wbe-bottleneck-lab.vercel.app
 
 ---
 
-## Post 5: Night Observation (18:34 MDT)
+## Post 5: Night Observation (20:28 MDT)
 
 - **Buffer Post ID**: `buffer_x_d08_p5`
 - **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 08
 - **Content Pillar**: Pillar B: Systems Engineering
-- **Scheduled Time (MDT)**: 18:34 MDT
+- **Scheduled Time (MDT)**: 20:28 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: When an equation runs in 0.05ms, your user interface feels alive.
 - **Post Summary**: When an LLM guesses the numbers, it feels like fiction.
-- **Media**: `ad_01.png, 03_bottleneck_moved_transition.png`
-- **Media Order**: 1. ad_01.png -> 2. 03_bottleneck_moved_transition.png
+- **Media**: `social_card_accelerated_ml.png, 06_architecture_evidence_view.png, 07_github_notebook_code_provenance.png, ad_01.png`
+- **Media Order**: 1. social_card_accelerated_ml.png -> 2. 06_architecture_evidence_view.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_01.png
 - **Hashtags**: #NVIDIAGTC #SoftwareArchitecture
 - **Mentions**: None
 - **Claims Verified**: YES - Systems modeling thesis
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (2 images)
-1. `public/marketing/ad_01.png`
-2. `public/screenshots/03_bottleneck_moved_transition.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/social_card_accelerated_ml.png`
+2. `public/screenshots/06_architecture_evidence_view.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/marketing/ad_01.png`
 
 ### Post Copy
 

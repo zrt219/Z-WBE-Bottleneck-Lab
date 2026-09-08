@@ -8,28 +8,30 @@
 
 ---
 
-## Post 1: Morning Hook (07:15 MDT)
+## Post 1: Morning Hook (10:13 MDT)
 
 - **Buffer Post ID**: `buffer_x_d10_p1`
 - **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 10
 - **Content Pillar**: Pillar B: Systems Engineering
-- **Scheduled Time (MDT)**: 07:15 MDT
+- **Scheduled Time (MDT)**: 10:13 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
 - **Hook**: Never let an LLM do math in a scientific app.
 - **Post Summary**: Use pure deterministic code for calculations.
-- **Media**: `ad_04.png, 06_architecture_evidence_view.png`
-- **Media Order**: 1. ad_04.png -> 2. 06_architecture_evidence_view.png
+- **Media**: `golden_ticket_accelerated_ml.png, 04_nemotron_grounded_interpretation.png, 07_github_notebook_code_provenance.png, ad_10.png`
+- **Media Order**: 1. golden_ticket_accelerated_ml.png -> 2. 04_nemotron_grounded_interpretation.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_10.png
 - **Hashtags**: #NVIDIAGTC #SoftwareArchitecture
 - **Mentions**: None
 - **Claims Verified**: YES - Epistemic separation pattern
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (2 images)
-1. `public/marketing/ad_04.png`
-2. `public/screenshots/06_architecture_evidence_view.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/golden_ticket_accelerated_ml.png`
+2. `public/screenshots/04_nemotron_grounded_interpretation.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/marketing/ad_10.png`
 
 ### Post Copy
 
@@ -47,28 +49,30 @@ https://z-wbe-bottleneck-lab.vercel.app
 
 ---
 
-## Post 2: Mid-Morning Visual (08:44 MDT)
+## Post 2: Mid-Morning Visual (12:27 MDT)
 
 - **Buffer Post ID**: `buffer_x_d10_p2`
 - **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 10
 - **Content Pillar**: Pillar G: Scientific Integrity
-- **Scheduled Time (MDT)**: 08:44 MDT
+- **Scheduled Time (MDT)**: 12:27 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: Words we refuse to use:
 - **Post Summary**: ❌ Unsubstantiated AI claims
-- **Media**: `06_architecture_evidence_view.png, banner-dark.png`
-- **Media Order**: 1. 06_architecture_evidence_view.png -> 2. banner-dark.png
+- **Media**: `golden_ticket_data_analytics.png, 04_nemotron_grounded_interpretation.png, cpu_vs_gpu_speedup.png, ad_09.png`
+- **Media Order**: 1. golden_ticket_data_analytics.png -> 2. 04_nemotron_grounded_interpretation.png -> 3. cpu_vs_gpu_speedup.png -> 4. ad_09.png
 - **Hashtags**: #NVIDIAGTC #EngineeringEthics
 - **Mentions**: None
 - **Claims Verified**: YES - Language safety policy
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (2 images)
-1. `public/screenshots/06_architecture_evidence_view.png`
-2. `public/images/banner-dark.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/golden_ticket_data_analytics.png`
+2. `public/screenshots/04_nemotron_grounded_interpretation.png`
+3. `public/data/cpu_vs_gpu_speedup.png`
+4. `public/marketing/ad_09.png`
 
 ### Post Copy
 
@@ -90,14 +94,14 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 ---
 
-## Post 3: Late-Morning Data (10:28 MDT)
+## Post 3: Late-Morning Data (14:57 MDT)
 
 - **Buffer Post ID**: `buffer_x_d10_p3`
 - **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 10
 - **Content Pillar**: Pillar E: Open Source
-- **Scheduled Time (MDT)**: 10:28 MDT
+- **Scheduled Time (MDT)**: 14:57 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: Share any bottleneck scenario via URL params:
 - **Post Summary**: ?res=4&dwell=20&beams=64
@@ -126,28 +130,30 @@ Code: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 ---
 
-## Post 4: Evening Hook (16:54 MDT)
+## Post 4: Evening Hook (17:43 MDT)
 
 - **Buffer Post ID**: `buffer_x_d10_p4`
 - **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 10
 - **Content Pillar**: Pillar B: Systems Engineering
-- **Scheduled Time (MDT)**: 16:54 MDT
+- **Scheduled Time (MDT)**: 17:43 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
 - **Hook**: Every card in Z-WBE is labeled:
 - **Post Summary**: CALCULATED FROM SCENARIO ASSUMPTIONS vs AI INTERPRETATION.
-- **Media**: `ad_01.png, 04_nemotron_grounded_interpretation.png`
-- **Media Order**: 1. ad_01.png -> 2. 04_nemotron_grounded_interpretation.png
+- **Media**: `golden_ticket_nim_gke.png, 04_nemotron_grounded_interpretation.png, t4-colab-runtime-proof.png, ad_08.png`
+- **Media Order**: 1. golden_ticket_nim_gke.png -> 2. 04_nemotron_grounded_interpretation.png -> 3. t4-colab-runtime-proof.png -> 4. ad_08.png
 - **Hashtags**: #NVIDIAGTC
 - **Mentions**: None
 - **Claims Verified**: YES - Visual provenance labels
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (2 images)
-1. `public/marketing/ad_01.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/golden_ticket_nim_gke.png`
 2. `public/screenshots/04_nemotron_grounded_interpretation.png`
+3. `public/colab-evidence/t4-colab-runtime-proof.png`
+4. `public/marketing/ad_08.png`
 
 ### Post Copy
 
@@ -164,28 +170,30 @@ Live demo: https://z-wbe-bottleneck-lab.vercel.app
 
 ---
 
-## Post 5: Night Observation (18:26 MDT)
+## Post 5: Night Observation (20:27 MDT)
 
 - **Buffer Post ID**: `buffer_x_d10_p5`
 - **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 10
 - **Content Pillar**: Pillar F: Build Journey
-- **Scheduled Time (MDT)**: 18:26 MDT
+- **Scheduled Time (MDT)**: 20:27 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: The Triad:
 - **Post Summary**: Backend Microservice (Node)
-- **Media**: `banner-dark.png, 07_github_notebook_code_provenance.png`
-- **Media Order**: 1. banner-dark.png -> 2. 07_github_notebook_code_provenance.png
+- **Media**: `google-nvidia-developer-badges.png, 03_bottleneck_moved_transition.png, 07_github_notebook_code_provenance.png, ad_07.png`
+- **Media Order**: 1. google-nvidia-developer-badges.png -> 2. 03_bottleneck_moved_transition.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_07.png
 - **Hashtags**: #NVIDIAGTC #FullStack
 - **Mentions**: None
 - **Claims Verified**: YES - Triad sync workflow
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (2 images)
-1. `public/images/banner-dark.png`
-2. `public/colab-evidence/07_github_notebook_code_provenance.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/google-nvidia-developer-badges.png`
+2. `public/screenshots/03_bottleneck_moved_transition.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/marketing/ad_07.png`
 
 ### Post Copy
 

@@ -8,19 +8,19 @@
 
 ---
 
-## Post 1: Morning Flagship (07:44 MDT)
+## Post 1: Morning Flagship (10:02 MDT)
 
 - **Buffer Post ID**: `6a9faeaae638e16871e642eb`
 - **Buffer Status**: `DRAFT (Buffer Verified)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 04
 - **Content Pillar**: Pillar B: Systems Engineering
-- **Scheduled Time (MDT)**: 07:44 MDT
+- **Scheduled Time (MDT)**: 10:02 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
 - **Hook**: Why Amdahl's Law is the most brutal rule in systems engineering.
 - **Post Summary**: In computer architecture, Amdahl's Law states:
-- **Media**: `ad_02.png, 03_bottleneck_moved_transition.png, 05_gpu_exploration_map.png, banner-dark.png`
-- **Media Order**: 1. ad_02.png -> 2. 03_bottleneck_moved_transition.png -> 3. 05_gpu_exploration_map.png -> 4. banner-dark.png
+- **Media**: `golden_ticket_intro_inference.png, 02_imaging_wall_baseline.png, 04_colab_cuml_execution_progress.png, ad_03.png`
+- **Media Order**: 1. golden_ticket_intro_inference.png -> 2. 02_imaging_wall_baseline.png -> 3. 04_colab_cuml_execution_progress.png -> 4. ad_03.png
 - **Hashtags**: #NVIDIAGTC #AmdahlsLaw #SystemsEngineering #ComputerArchitecture #Neuroscience #HPC
 - **Mentions**: None
 - **Claims Verified**: YES - Amdahl's Law scaling equations verified
@@ -28,10 +28,10 @@
 
 ### Media Attachments
 **Format**: Multi-Image Carousel (4 images)
-1. `public/marketing/ad_02.png`
-2. `public/screenshots/03_bottleneck_moved_transition.png`
-3. `public/screenshots/05_gpu_exploration_map.png`
-4. `public/images/banner-dark.png`
+1. `public/images/golden_ticket_intro_inference.png`
+2. `public/screenshots/02_imaging_wall_baseline.png`
+3. `public/colab-evidence/04_colab_cuml_execution_progress.png`
+4. `public/marketing/ad_03.png`
 
 ### Post Copy
 
@@ -61,29 +61,30 @@ https://z-wbe-bottleneck-lab.vercel.app
 
 ---
 
-## Post 2: Mid-Morning Explainer (09:33 MDT)
+## Post 2: Mid-Morning Explainer (12:14 MDT)
 
 - **Buffer Post ID**: `6a9faeab7c96d9873c8f7b3f`
 - **Buffer Status**: `DRAFT (Buffer Verified)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 04
 - **Content Pillar**: Pillar B: Systems Engineering
-- **Scheduled Time (MDT)**: 09:33 MDT
+- **Scheduled Time (MDT)**: 12:14 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: How does Z-WBE determine which constraint is 'Dominant'?
 - **Post Summary**: When 8 constraint dimensions are evaluated simultaneously, how do you mathematically rank them?
-- **Media**: `ad_04.png, 01_hero_overview.png, 06_architecture_evidence_view.png`
-- **Media Order**: 1. ad_04.png -> 2. 01_hero_overview.png -> 3. 06_architecture_evidence_view.png
+- **Media**: `golden_ticket_accelerated_ml.png, 02_imaging_wall_baseline.png, 07_github_notebook_code_provenance.png, ad_02.png`
+- **Media Order**: 1. golden_ticket_accelerated_ml.png -> 2. 02_imaging_wall_baseline.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_02.png
 - **Hashtags**: #NVIDIAGTC #Algorithm #TypeScript #DataModeling #MathematicalModeling #OpenSource
 - **Mentions**: None
 - **Claims Verified**: YES - Bottleneck scoring algorithm in shared/src/bottlenecks.ts
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (3 images)
-1. `public/marketing/ad_04.png`
-2. `public/screenshots/01_hero_overview.png`
-3. `public/screenshots/06_architecture_evidence_view.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/golden_ticket_accelerated_ml.png`
+2. `public/screenshots/02_imaging_wall_baseline.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/marketing/ad_02.png`
 
 ### Post Copy
 
@@ -111,14 +112,14 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 ---
 
-## Post 3: Noon Visual Proof (11:27 MDT)
+## Post 3: Noon Visual Proof (14:44 MDT)
 
 - **Buffer Post ID**: `6a9faeade638e16871e6432d`
 - **Buffer Status**: `DRAFT (Buffer Verified)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 04
 - **Content Pillar**: Pillar H: Product Demo
-- **Scheduled Time (MDT)**: 11:27 MDT
+- **Scheduled Time (MDT)**: 14:44 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
 - **Hook**: Video capture: The moment the bottleneck jumps from Acquisition to Memory Bandwidth.
 - **Post Summary**: Notice how the UI immediately updates:
@@ -152,29 +153,30 @@ https://z-wbe-bottleneck-lab.vercel.app
 
 ---
 
-## Post 4: Evening Deep Dive (17:36 MDT)
+## Post 4: Evening Deep Dive (17:34 MDT)
 
 - **Buffer Post ID**: `6a9faeae1900c10a4f0e8d83`
 - **Buffer Status**: `DRAFT (Buffer Verified)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 04
 - **Content Pillar**: Pillar C: GPU / NVIDIA
-- **Scheduled Time (MDT)**: 17:36 MDT
+- **Scheduled Time (MDT)**: 17:34 MDT
 - **Primary Destination URL**: https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 - **Hook**: Mapping bottleneck phase transitions across 100,000 scenarios in GPU memory.
 - **Post Summary**: What does the global landscape of bottlenecks look like across varying imaging speeds and compute budgets?
-- **Media**: `ad_05.png, 05_gpu_exploration_map.png, cpu_vs_gpu_speedup.png`
-- **Media Order**: 1. ad_05.png -> 2. 05_gpu_exploration_map.png -> 3. cpu_vs_gpu_speedup.png
+- **Media**: `social_card_data_analytics.png, 02_imaging_wall_baseline.png, 07_github_notebook_code_provenance.png, ad_01.png`
+- **Media Order**: 1. social_card_data_analytics.png -> 2. 02_imaging_wall_baseline.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_01.png
 - **Hashtags**: #NVIDIAGTC #RAPIDS #cuDF #GoogleColab #MonteCarlo #DataScience #DataAnalytics
 - **Mentions**: None
 - **Claims Verified**: YES - Colab Stage 9 parameter sweep verified
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (3 images)
-1. `public/marketing/ad_05.png`
-2. `public/screenshots/05_gpu_exploration_map.png`
-3. `public/data/cpu_vs_gpu_speedup.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/social_card_data_analytics.png`
+2. `public/screenshots/02_imaging_wall_baseline.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/marketing/ad_01.png`
 
 ### Post Copy
 
@@ -201,29 +203,30 @@ https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/n
 
 ---
 
-## Post 5: Night Build Log (19:28 MDT)
+## Post 5: Night Build Log (20:14 MDT)
 
 - **Buffer Post ID**: `6a9faeb0e638e16871e64349`
 - **Buffer Status**: `DRAFT (Buffer Verified)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 04
 - **Content Pillar**: Pillar F: Build Journey
-- **Scheduled Time (MDT)**: 19:28 MDT
+- **Scheduled Time (MDT)**: 20:14 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: Day 4 Build Log: Writing unit tests for bottleneck phase transitions.
 - **Post Summary**: How do you know your bottleneck ranking algorithm is mathematically sound and free of regressions?
-- **Media**: `ad_09.png, 07_github_notebook_code_provenance.png, banner-dark.png`
-- **Media Order**: 1. ad_09.png -> 2. 07_github_notebook_code_provenance.png -> 3. banner-dark.png
+- **Media**: `golden_ticket_nim_gke.png, 02_imaging_wall_baseline.png, 07_github_notebook_code_provenance.png, banner-light.png`
+- **Media Order**: 1. golden_ticket_nim_gke.png -> 2. 02_imaging_wall_baseline.png -> 3. 07_github_notebook_code_provenance.png -> 4. banner-light.png
 - **Hashtags**: #NVIDIAGTC #SoftwareTesting #Vitest #TypeScript #UnitTesting #QualityAssurance
 - **Mentions**: None
 - **Claims Verified**: YES - vitest unit tests in shared/tests/bottlenecks.test.ts
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (3 images)
-1. `public/marketing/ad_09.png`
-2. `public/colab-evidence/07_github_notebook_code_provenance.png`
-3. `public/images/banner-dark.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/golden_ticket_nim_gke.png`
+2. `public/screenshots/02_imaging_wall_baseline.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/images/banner-light.png`
 
 ### Post Copy
 

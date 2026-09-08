@@ -8,28 +8,30 @@
 
 ---
 
-## Post 1: Morning Hook (07:14 MDT)
+## Post 1: Morning Hook (10:19 MDT)
 
 - **Buffer Post ID**: `buffer_x_d16_p1`
 - **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 16
 - **Content Pillar**: Pillar A: WBE Research
-- **Scheduled Time (MDT)**: 07:14 MDT
+- **Scheduled Time (MDT)**: 10:19 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
 - **Hook**: A nanometer scan of a CPU doesn't tell you the clock frequency or register voltage.
 - **Post Summary**: A connectome doesn't give you ion channel densities.
-- **Media**: `ad_06.png, 01_hero_overview.png`
-- **Media Order**: 1. ad_06.png -> 2. 01_hero_overview.png
+- **Media**: `golden_ticket_data_analytics.png, 01_hero_overview.png, 06_colab_gpu_extensions_and_terminal.png, ad_05.png`
+- **Media Order**: 1. golden_ticket_data_analytics.png -> 2. 01_hero_overview.png -> 3. 06_colab_gpu_extensions_and_terminal.png -> 4. ad_05.png
 - **Hashtags**: #NVIDIAGTC #Neuroscience
 - **Mentions**: None
 - **Claims Verified**: YES - Connectome != simulation thesis
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (2 images)
-1. `public/marketing/ad_06.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/golden_ticket_data_analytics.png`
 2. `public/screenshots/01_hero_overview.png`
+3. `public/colab-evidence/06_colab_gpu_extensions_and_terminal.png`
+4. `public/marketing/ad_05.png`
 
 ### Post Copy
 
@@ -45,28 +47,30 @@ Explore: https://z-wbe-bottleneck-lab.vercel.app
 
 ---
 
-## Post 2: Mid-Morning Visual (08:42 MDT)
+## Post 2: Mid-Morning Visual (12:34 MDT)
 
 - **Buffer Post ID**: `buffer_x_d16_p2`
 - **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 16
 - **Content Pillar**: Pillar A: WBE Research
-- **Scheduled Time (MDT)**: 08:42 MDT
+- **Scheduled Time (MDT)**: 12:34 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: Point neurons: 10 PFLOPS.
 - **Post Summary**: Multi-compartment Hodgkin-Huxley: 1.2 ExaFLOPS.
-- **Media**: `ad_04.png, 06_architecture_evidence_view.png`
-- **Media Order**: 1. ad_04.png -> 2. 06_architecture_evidence_view.png
+- **Media**: `golden_ticket_nim_gke.png, 06_architecture_evidence_view.png, 07_github_notebook_code_provenance.png, ad_04.png`
+- **Media Order**: 1. golden_ticket_nim_gke.png -> 2. 06_architecture_evidence_view.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_04.png
 - **Hashtags**: #NVIDIAGTC #HPC
 - **Mentions**: None
 - **Claims Verified**: YES - Point neuron vs multi-compartment compute
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (2 images)
-1. `public/marketing/ad_04.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/golden_ticket_nim_gke.png`
 2. `public/screenshots/06_architecture_evidence_view.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/marketing/ad_04.png`
 
 ### Post Copy
 
@@ -82,14 +86,14 @@ Equations: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 ---
 
-## Post 3: Late-Morning Data (10:26 MDT)
+## Post 3: Late-Morning Data (15:04 MDT)
 
 - **Buffer Post ID**: `buffer_x_d16_p3`
 - **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 16
 - **Content Pillar**: Pillar H: Product Demo
-- **Scheduled Time (MDT)**: 10:26 MDT
+- **Scheduled Time (MDT)**: 15:04 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
 - **Hook**: The Hero Demo Moment:
 - **Post Summary**: Click '100x Imaging Speed'.
@@ -118,28 +122,30 @@ Live app: https://z-wbe-bottleneck-lab.vercel.app
 
 ---
 
-## Post 4: Evening Hook (16:52 MDT)
+## Post 4: Evening Hook (17:50 MDT)
 
 - **Buffer Post ID**: `buffer_x_d16_p4`
 - **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 16
 - **Content Pillar**: Pillar E: Open Source
-- **Scheduled Time (MDT)**: 16:52 MDT
+- **Scheduled Time (MDT)**: 17:50 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: Integration tests verify the Hero Demo:
 - **Post Summary**: State transitions from Acquisition to Memory are tested in 13ms in CI.
-- **Media**: `ad_09.png, 07_github_notebook_code_provenance.png`
-- **Media Order**: 1. ad_09.png -> 2. 07_github_notebook_code_provenance.png
+- **Media**: `google-nvidia-developer-badges.png, 02_imaging_wall_baseline.png, 07_github_notebook_code_provenance.png, ad_03.png`
+- **Media Order**: 1. google-nvidia-developer-badges.png -> 2. 02_imaging_wall_baseline.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_03.png
 - **Hashtags**: #NVIDIAGTC #SoftwareTesting
 - **Mentions**: None
 - **Claims Verified**: YES - Hero demo vitest pass in 13ms
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (2 images)
-1. `public/marketing/ad_09.png`
-2. `public/colab-evidence/07_github_notebook_code_provenance.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/google-nvidia-developer-badges.png`
+2. `public/screenshots/02_imaging_wall_baseline.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/marketing/ad_03.png`
 
 ### Post Copy
 
@@ -154,28 +160,30 @@ Tests: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 ---
 
-## Post 5: Night Observation (18:22 MDT)
+## Post 5: Night Observation (20:34 MDT)
 
 - **Buffer Post ID**: `buffer_x_d16_p5`
 - **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 16
 - **Content Pillar**: Pillar B: Systems Engineering
-- **Scheduled Time (MDT)**: 18:22 MDT
+- **Scheduled Time (MDT)**: 20:34 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
 - **Hook**: A static wiring diagram is dead anatomy.
 - **Post Summary**: A simulation is living dynamical physics.
-- **Media**: `banner-dark.png, ad_06.png`
-- **Media Order**: 1. banner-dark.png -> 2. ad_06.png
+- **Media**: `social_card_intro_inference.png, 06_architecture_evidence_view.png, 03_colab_cuml_linear_regression.png, ad_02.png`
+- **Media Order**: 1. social_card_intro_inference.png -> 2. 06_architecture_evidence_view.png -> 3. 03_colab_cuml_linear_regression.png -> 4. ad_02.png
 - **Hashtags**: #NVIDIAGTC
 - **Mentions**: None
 - **Claims Verified**: YES - Structural biology limits
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (2 images)
-1. `public/images/banner-dark.png`
-2. `public/marketing/ad_06.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/social_card_intro_inference.png`
+2. `public/screenshots/06_architecture_evidence_view.png`
+3. `public/colab-evidence/03_colab_cuml_linear_regression.png`
+4. `public/marketing/ad_02.png`
 
 ### Post Copy
 

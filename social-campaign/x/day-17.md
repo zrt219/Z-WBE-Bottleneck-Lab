@@ -8,28 +8,30 @@
 
 ---
 
-## Post 1: Morning Hook (07:12 MDT)
+## Post 1: Morning Hook (10:13 MDT)
 
 - **Buffer Post ID**: `buffer_x_d17_p1`
 - **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 17
 - **Content Pillar**: Pillar B: Systems Engineering
-- **Scheduled Time (MDT)**: 07:12 MDT
+- **Scheduled Time (MDT)**: 10:13 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
 - **Hook**: 1.2 ExaFLOPS is useless if your nodes can't exchange spike packets across switches.
 - **Post Summary**: Compute + Memory + Interconnect.
-- **Media**: `ad_07.png, 01_hero_overview.png`
-- **Media Order**: 1. ad_07.png -> 2. 01_hero_overview.png
+- **Media**: `golden_ticket_accelerated_ml.png, 06_architecture_evidence_view.png, t4-colab-runtime-proof.png, ad_08.png`
+- **Media Order**: 1. golden_ticket_accelerated_ml.png -> 2. 06_architecture_evidence_view.png -> 3. t4-colab-runtime-proof.png -> 4. ad_08.png
 - **Hashtags**: #NVIDIAGTC #Supercomputing
 - **Mentions**: None
 - **Claims Verified**: YES - Hardware triad thesis
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (2 images)
-1. `public/marketing/ad_07.png`
-2. `public/screenshots/01_hero_overview.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/golden_ticket_accelerated_ml.png`
+2. `public/screenshots/06_architecture_evidence_view.png`
+3. `public/colab-evidence/t4-colab-runtime-proof.png`
+4. `public/marketing/ad_08.png`
 
 ### Post Copy
 
@@ -46,28 +48,30 @@ Explore: https://z-wbe-bottleneck-lab.vercel.app
 
 ---
 
-## Post 2: Mid-Morning Visual (08:40 MDT)
+## Post 2: Mid-Morning Visual (12:26 MDT)
 
 - **Buffer Post ID**: `buffer_x_d17_p2`
 - **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 17
 - **Content Pillar**: Pillar I: Learning Paths
-- **Scheduled Time (MDT)**: 08:40 MDT
+- **Scheduled Time (MDT)**: 12:26 MDT
 - **Primary Destination URL**: https://g.dev/zhane
 - **Hook**: Completed 'Intro to Inference: How to Run AI Models on a GPU'.
 - **Post Summary**: Applied course principles to keep Nemotron TTFT under 400ms.
-- **Media**: `social_card_intro_inference.png, badge_intro_inference.png`
-- **Media Order**: 1. social_card_intro_inference.png -> 2. badge_intro_inference.png
+- **Media**: `social_card_intro_inference.png, 04_nemotron_grounded_interpretation.png, 08_colab_rapids_and_variable_inspector.png, ad_07.png`
+- **Media Order**: 1. social_card_intro_inference.png -> 2. 04_nemotron_grounded_interpretation.png -> 3. 08_colab_rapids_and_variable_inspector.png -> 4. ad_07.png
 - **Hashtags**: #NVIDIAGTC #GoogleCloud
 - **Mentions**: None
 - **Claims Verified**: YES - Intro to inference badge verified
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (2 images)
+**Format**: Multi-Image Carousel (4 images)
 1. `public/images/social_card_intro_inference.png`
-2. `public/images/badge_intro_inference.png`
+2. `public/screenshots/04_nemotron_grounded_interpretation.png`
+3. `public/colab-evidence/08_colab_rapids_and_variable_inspector.png`
+4. `public/marketing/ad_07.png`
 
 ### Post Copy
 
@@ -82,14 +86,14 @@ Badges: https://g.dev/zhane
 
 ---
 
-## Post 3: Late-Morning Data (10:24 MDT)
+## Post 3: Late-Morning Data (14:56 MDT)
 
 - **Buffer Post ID**: `buffer_x_d17_p3`
 - **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 17
 - **Content Pillar**: Pillar B: Systems Engineering
-- **Scheduled Time (MDT)**: 10:24 MDT
+- **Scheduled Time (MDT)**: 14:56 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: Long-range cortical axons cross hemispheres.
 - **Post Summary**: Simulating 1,000 distributed nodes requires >5 TB/s bisection network bandwidth.
@@ -117,28 +121,30 @@ Code: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 ---
 
-## Post 4: Evening Hook (16:50 MDT)
+## Post 4: Evening Hook (17:42 MDT)
 
 - **Buffer Post ID**: `buffer_x_d17_p4`
 - **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 17
 - **Content Pillar**: Pillar F: Build Journey
-- **Scheduled Time (MDT)**: 16:50 MDT
+- **Scheduled Time (MDT)**: 17:42 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: Security in scientific apps:
 - **Post Summary**: 6 unit tests verify parameter payload sanitization and zero environment variable leaks.
-- **Media**: `ad_09.png, 07_github_notebook_code_provenance.png`
-- **Media Order**: 1. ad_09.png -> 2. 07_github_notebook_code_provenance.png
+- **Media**: `golden_ticket_nim_gke.png, 02_imaging_wall_baseline.png, 07_github_notebook_code_provenance.png, ad_06.png`
+- **Media Order**: 1. golden_ticket_nim_gke.png -> 2. 02_imaging_wall_baseline.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_06.png
 - **Hashtags**: #NVIDIAGTC #CyberSecurity
 - **Mentions**: None
 - **Claims Verified**: YES - Security sanitization tests verified
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (2 images)
-1. `public/marketing/ad_09.png`
-2. `public/colab-evidence/07_github_notebook_code_provenance.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/golden_ticket_nim_gke.png`
+2. `public/screenshots/02_imaging_wall_baseline.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/marketing/ad_06.png`
 
 ### Post Copy
 
@@ -153,28 +159,30 @@ Tests: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 ---
 
-## Post 5: Night Observation (18:20 MDT)
+## Post 5: Night Observation (20:26 MDT)
 
 - **Buffer Post ID**: `buffer_x_d17_p5`
 - **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 17
 - **Content Pillar**: Pillar B: Systems Engineering
-- **Scheduled Time (MDT)**: 18:20 MDT
+- **Scheduled Time (MDT)**: 20:26 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
 - **Hook**: If one switch drops a packet, the entire simulation clock tick stalls.
 - **Post Summary**: Distributed systems are unforgiving.
-- **Media**: `banner-dark.png, 03_bottleneck_moved_transition.png`
-- **Media Order**: 1. banner-dark.png -> 2. 03_bottleneck_moved_transition.png
+- **Media**: `google-nvidia-developer-badges.png, 06_architecture_evidence_view.png, 06_colab_gpu_extensions_and_terminal.png, ad_05.png`
+- **Media Order**: 1. google-nvidia-developer-badges.png -> 2. 06_architecture_evidence_view.png -> 3. 06_colab_gpu_extensions_and_terminal.png -> 4. ad_05.png
 - **Hashtags**: #NVIDIAGTC #HPC
 - **Mentions**: None
 - **Claims Verified**: YES - Network queueing thesis
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (2 images)
-1. `public/images/banner-dark.png`
-2. `public/screenshots/03_bottleneck_moved_transition.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/google-nvidia-developer-badges.png`
+2. `public/screenshots/06_architecture_evidence_view.png`
+3. `public/colab-evidence/06_colab_gpu_extensions_and_terminal.png`
+4. `public/marketing/ad_05.png`
 
 ### Post Copy
 

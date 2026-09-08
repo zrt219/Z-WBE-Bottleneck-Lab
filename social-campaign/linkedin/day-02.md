@@ -8,19 +8,19 @@
 
 ---
 
-## Post 1: Morning Flagship (07:52 MDT)
+## Post 1: Morning Flagship (10:04 MDT)
 
 - **Buffer Post ID**: `6a9fae98e638e16871e641bb`
 - **Buffer Status**: `DRAFT (Buffer Verified)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 02
 - **Content Pillar**: Pillar B: Systems Engineering
-- **Scheduled Time (MDT)**: 07:52 MDT
+- **Scheduled Time (MDT)**: 10:04 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
 - **Hook**: THE BOTTLENECK MOVED. What happens when you make microscopy 100x faster?
 - **Post Summary**: Here is the central experiment at the heart of Z-WBE Bottleneck Lab:
-- **Media**: `ad_02.png, 02_imaging_wall_baseline.png, 03_bottleneck_moved_transition.png, banner-dark.png`
-- **Media Order**: 1. ad_02.png -> 2. 02_imaging_wall_baseline.png -> 3. 03_bottleneck_moved_transition.png -> 4. banner-dark.png
+- **Media**: `google-nvidia-developer-badges.png, 02_imaging_wall_baseline.png, 08_colab_rapids_and_variable_inspector.png, ad_07.png`
+- **Media Order**: 1. google-nvidia-developer-badges.png -> 2. 02_imaging_wall_baseline.png -> 3. 08_colab_rapids_and_variable_inspector.png -> 4. ad_07.png
 - **Hashtags**: #NVIDIAGTC #GoogleCloud #NVIDIA #SystemsEngineering #AmdahlsLaw #HardwareArchitecture #ComputationalNeuroscience #DevChallenge
 - **Mentions**: Google for Developers | NVIDIA AI | Jen Harvey | Ray Harvey
 - **Claims Verified**: YES - Baseline imaging 1141 days -> 11.4 days at 100x
@@ -28,10 +28,10 @@
 
 ### Media Attachments
 **Format**: Multi-Image Carousel (4 images)
-1. `public/marketing/ad_02.png`
+1. `public/images/google-nvidia-developer-badges.png`
 2. `public/screenshots/02_imaging_wall_baseline.png`
-3. `public/screenshots/03_bottleneck_moved_transition.png`
-4. `public/images/banner-dark.png`
+3. `public/colab-evidence/08_colab_rapids_and_variable_inspector.png`
+4. `public/marketing/ad_07.png`
 
 ### Post Copy
 
@@ -70,29 +70,30 @@ Mentions & Judges: Google for Developers | NVIDIA AI | Jen Harvey | Ray Harvey
 
 ---
 
-## Post 2: Mid-Morning Explainer (09:38 MDT)
+## Post 2: Mid-Morning Explainer (12:18 MDT)
 
 - **Buffer Post ID**: `6a9fae9abfce41cfe2ffcab0`
 - **Buffer Status**: `DRAFT (Buffer Verified)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 02
 - **Content Pillar**: Pillar A: WBE Research
-- **Scheduled Time (MDT)**: 09:38 MDT
+- **Scheduled Time (MDT)**: 12:18 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: FIB-SEM vs Knife-Edge Diamond Slicing: The physics behind the Imaging Wall.
 - **Post Summary**: Why is high-resolution brain imaging so slow?
-- **Media**: `ad_07.png, 02_imaging_wall_baseline.png, 06_architecture_evidence_view.png`
-- **Media Order**: 1. ad_07.png -> 2. 02_imaging_wall_baseline.png -> 3. 06_architecture_evidence_view.png
+- **Media**: `social_card_intro_inference.png, 02_imaging_wall_baseline.png, 07_github_notebook_code_provenance.png, ad_06.png`
+- **Media Order**: 1. social_card_intro_inference.png -> 2. 02_imaging_wall_baseline.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_06.png
 - **Hashtags**: #NVIDIAGTC #Microscopy #Biophysics #ElectronMicroscopy #ComputationalNeuroscience #TypeScript #OpenSource
 - **Mentions**: None
 - **Claims Verified**: YES - FIB-SEM vs knife-edge equations in shared/src/equations.ts
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (3 images)
-1. `public/marketing/ad_07.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/social_card_intro_inference.png`
 2. `public/screenshots/02_imaging_wall_baseline.png`
-3. `public/screenshots/06_architecture_evidence_view.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/marketing/ad_06.png`
 
 ### Post Copy
 
@@ -116,14 +117,14 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 ---
 
-## Post 3: Noon Visual Proof (11:32 MDT)
+## Post 3: Noon Visual Proof (14:46 MDT)
 
 - **Buffer Post ID**: `6a9fae9cbfce41cfe2ffcb92`
 - **Buffer Status**: `DRAFT (Buffer Verified)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 02
 - **Content Pillar**: Pillar H: Product Demo
-- **Scheduled Time (MDT)**: 11:32 MDT
+- **Scheduled Time (MDT)**: 14:46 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
 - **Hook**: Watch what happens when you flip the 100x imaging toggle in Z-WBE Bottleneck Lab.
 - **Post Summary**: Notice how the Acquisition gauge drops from critical red (dominant constraint) to green, while the Memory Bandwidth gauge insta...
@@ -155,29 +156,30 @@ https://z-wbe-bottleneck-lab.vercel.app
 
 ---
 
-## Post 4: Evening Deep Dive (17:42 MDT)
+## Post 4: Evening Deep Dive (17:32 MDT)
 
 - **Buffer Post ID**: `6a9fae9d1900c10a4f0e8bec`
 - **Buffer Status**: `DRAFT (Buffer Verified)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 02
 - **Content Pillar**: Pillar B: Systems Engineering
-- **Scheduled Time (MDT)**: 17:42 MDT
+- **Scheduled Time (MDT)**: 17:32 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
 - **Hook**: How NVIDIA Nemotron explains the bottleneck shift without hallucinating numbers.
 - **Post Summary**: When the user activates the 100x imaging preset, our frontend triggers a request to NVIDIA Nemotron 3 Super 120B via OpenRouter.
-- **Media**: `ad_04.png, 04_nemotron_grounded_interpretation.png, banner-light.png`
-- **Media Order**: 1. ad_04.png -> 2. 04_nemotron_grounded_interpretation.png -> 3. banner-light.png
+- **Media**: `social_card_intro_inference.png, 02_imaging_wall_baseline.png, 06_colab_gpu_extensions_and_terminal.png, ad_05.png`
+- **Media Order**: 1. social_card_intro_inference.png -> 2. 02_imaging_wall_baseline.png -> 3. 06_colab_gpu_extensions_and_terminal.png -> 4. ad_05.png
 - **Hashtags**: #NVIDIAGTC #NVIDIA #Nemotron #OpenRouter #PromptEngineering #AIEngineering #SystemDesign
 - **Mentions**: None
 - **Claims Verified**: YES - Nemotron prompt grounded in scenario state
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (3 images)
-1. `public/marketing/ad_04.png`
-2. `public/screenshots/04_nemotron_grounded_interpretation.png`
-3. `public/images/banner-light.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/social_card_intro_inference.png`
+2. `public/screenshots/02_imaging_wall_baseline.png`
+3. `public/colab-evidence/06_colab_gpu_extensions_and_terminal.png`
+4. `public/marketing/ad_05.png`
 
 ### Post Copy
 
@@ -208,29 +210,30 @@ https://z-wbe-bottleneck-lab.vercel.app
 
 ---
 
-## Post 5: Night Build Log (19:35 MDT)
+## Post 5: Night Build Log (20:16 MDT)
 
 - **Buffer Post ID**: `6a9fae9fbfce41cfe2ffcbca`
 - **Buffer Status**: `DRAFT (Buffer Verified)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 02
 - **Content Pillar**: Pillar F: Build Journey
-- **Scheduled Time (MDT)**: 19:35 MDT
+- **Scheduled Time (MDT)**: 20:16 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: Day 2 Build Log: Designing the 100x preset slider in TypeScript.
 - **Post Summary**: When building the parameter slider engine, we had to balance two competing engineering goals:
-- **Media**: `ad_02.png, 07_github_notebook_code_provenance.png, banner-dark.png`
-- **Media Order**: 1. ad_02.png -> 2. 07_github_notebook_code_provenance.png -> 3. banner-dark.png
+- **Media**: `social_card_intro_inference.png, 04_nemotron_grounded_interpretation.png, 07_github_notebook_code_provenance.png, ad_04.png`
+- **Media Order**: 1. social_card_intro_inference.png -> 2. 04_nemotron_grounded_interpretation.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_04.png
 - **Hashtags**: #NVIDIAGTC #TypeScript #FrontendArchitecture #WebPerformance #CleanCode #BuildInPublic
 - **Mentions**: None
 - **Claims Verified**: YES - Reactive state implemented with Zustand & pure functions
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (3 images)
-1. `public/marketing/ad_02.png`
-2. `public/colab-evidence/07_github_notebook_code_provenance.png`
-3. `public/images/banner-dark.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/social_card_intro_inference.png`
+2. `public/screenshots/04_nemotron_grounded_interpretation.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/marketing/ad_04.png`
 
 ### Post Copy
 

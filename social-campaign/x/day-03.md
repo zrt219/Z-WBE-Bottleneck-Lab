@@ -8,19 +8,19 @@
 
 ---
 
-## Post 1: Contest Flagship Hook (07:11 MDT)
+## Post 1: Contest Flagship Hook (10:12 MDT)
 
 - **Buffer Post ID**: `buffer_x_d03_p1`
 - **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 03
 - **Content Pillar**: Pillar C: GPU / NVIDIA
-- **Scheduled Time (MDT)**: 07:11 MDT
+- **Scheduled Time (MDT)**: 10:12 MDT
 - **Primary Destination URL**: https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 - **Hook**: REAL NVIDIA T4 + RAPIDS + COLAB EVIDENCE 🚀
 - **Post Summary**: Submitting Z-WBE for @GoogleDevs x @NVIDIAAI GTC Challenge!
-- **Media**: `colab_t4_live_execution.gif`
-- **Media Order**: Single Asset: colab_t4_live_execution.gif
+- **Media**: `colab_t4_terminal_execution.gif`
+- **Media Order**: Single Asset: colab_t4_terminal_execution.gif
 - **Hashtags**: #NVIDIAGTC #GoogleCloud
 - **Mentions**: @GoogleDevs | @NVIDIAAI
 - **Claims Verified**: YES - Flagship contest submission post
@@ -28,7 +28,7 @@
 
 ### Media Attachments
 **Format**: Animated GIF
-- `public/recordings/colab_t4_live_execution.gif`
+- `public/recordings/colab_t4_terminal_execution.gif`
 
 ### Post Copy
 
@@ -46,28 +46,30 @@ Colab: https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob
 
 ---
 
-## Post 2: Mid-Morning Visual (08:44 MDT)
+## Post 2: Mid-Morning Visual (11:58 MDT)
 
 - **Buffer Post ID**: `buffer_x_d03_p2`
 - **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 03
 - **Content Pillar**: Pillar C: GPU / NVIDIA
-- **Scheduled Time (MDT)**: 08:44 MDT
+- **Scheduled Time (MDT)**: 11:58 MDT
 - **Primary Destination URL**: https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 - **Hook**: 1.907s on CPU.
 - **Post Summary**: 0.221s on NVIDIA Tesla T4 GPU.
-- **Media**: `ad_03.png, cpu_vs_gpu_speedup.png`
-- **Media Order**: 1. ad_03.png -> 2. cpu_vs_gpu_speedup.png
+- **Media**: `social_card_data_analytics.png, 03_bottleneck_moved_transition.png, 07_github_notebook_code_provenance.png, ad_07.png`
+- **Media Order**: 1. social_card_data_analytics.png -> 2. 03_bottleneck_moved_transition.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_07.png
 - **Hashtags**: #NVIDIAGTC #RAPIDS
 - **Mentions**: None
 - **Claims Verified**: YES - Benchmark chart matches empirical JSON
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (2 images)
-1. `public/marketing/ad_03.png`
-2. `public/data/cpu_vs_gpu_speedup.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/social_card_data_analytics.png`
+2. `public/screenshots/03_bottleneck_moved_transition.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/marketing/ad_07.png`
 
 ### Post Copy
 
@@ -86,28 +88,30 @@ https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/n
 
 ---
 
-## Post 3: Late-Morning Data (10:28 MDT)
+## Post 3: Late-Morning Data (13:58 MDT)
 
 - **Buffer Post ID**: `buffer_x_d03_p3`
 - **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 03
 - **Content Pillar**: Pillar C: GPU / NVIDIA
-- **Scheduled Time (MDT)**: 10:28 MDT
+- **Scheduled Time (MDT)**: 13:58 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: Sub-task speedup breakdown on Tesla T4:
 - **Post Summary**: Parquet Loading: 4.25x
-- **Media**: `05_colab_nvidia_smi_ensemble_eval.png, 02_colab_t4_gpu_runtime_dialog.png`
-- **Media Order**: 1. 05_colab_nvidia_smi_ensemble_eval.png -> 2. 02_colab_t4_gpu_runtime_dialog.png
+- **Media**: `social_card_data_analytics.png, 02_imaging_wall_baseline.png, cpu_vs_gpu_speedup.png, ad_06.png`
+- **Media Order**: 1. social_card_data_analytics.png -> 2. 02_imaging_wall_baseline.png -> 3. cpu_vs_gpu_speedup.png -> 4. ad_06.png
 - **Hashtags**: #NVIDIAGTC #GPUComputing
 - **Mentions**: None
 - **Claims Verified**: YES - Sub-task breakdown verified
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (2 images)
-1. `public/colab-evidence/05_colab_nvidia_smi_ensemble_eval.png`
-2. `public/colab-evidence/02_colab_t4_gpu_runtime_dialog.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/social_card_data_analytics.png`
+2. `public/screenshots/02_imaging_wall_baseline.png`
+3. `public/data/cpu_vs_gpu_speedup.png`
+4. `public/marketing/ad_06.png`
 
 ### Post Copy
 
@@ -126,28 +130,30 @@ Code: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 ---
 
-## Post 4: Evening Hook (16:54 MDT)
+## Post 4: Evening Hook (16:42 MDT)
 
 - **Buffer Post ID**: `buffer_x_d03_p4`
 - **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 03
 - **Content Pillar**: Pillar G: Scientific Integrity
-- **Scheduled Time (MDT)**: 16:54 MDT
+- **Scheduled Time (MDT)**: 16:42 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: We audited our benchmark:
 - **Post Summary**: An early draft said 'L4 GPU'. Raw nvidia-smi proved it was a Tesla T4.
-- **Media**: `t4-colab-runtime-proof.png, ad_03.png`
-- **Media Order**: 1. t4-colab-runtime-proof.png -> 2. ad_03.png
+- **Media**: `social_card_nim_gke.png, 01_hero_overview.png, cpu_vs_gpu_speedup.png, ad_05.png`
+- **Media Order**: 1. social_card_nim_gke.png -> 2. 01_hero_overview.png -> 3. cpu_vs_gpu_speedup.png -> 4. ad_05.png
 - **Hashtags**: #NVIDIAGTC #ScientificIntegrity
 - **Mentions**: None
 - **Claims Verified**: YES - Provenance audit verified
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (2 images)
-1. `public/colab-evidence/t4-colab-runtime-proof.png`
-2. `public/marketing/ad_03.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/social_card_nim_gke.png`
+2. `public/screenshots/01_hero_overview.png`
+3. `public/data/cpu_vs_gpu_speedup.png`
+4. `public/marketing/ad_05.png`
 
 ### Post Copy
 
@@ -165,28 +171,30 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 ---
 
-## Post 5: Night Observation (18:28 MDT)
+## Post 5: Night Observation (18:58 MDT)
 
 - **Buffer Post ID**: `buffer_x_d03_p5`
 - **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 03
 - **Content Pillar**: Pillar I: Learning Paths
-- **Scheduled Time (MDT)**: 18:28 MDT
+- **Scheduled Time (MDT)**: 18:58 MDT
 - **Primary Destination URL**: https://g.dev/zhane
 - **Hook**: 4 Google Cloud x NVIDIA learning paths completed:
 - **Post Summary**: 2. Intro to Inference
-- **Media**: `google-nvidia-developer-badges.png, ad_08.png`
-- **Media Order**: 1. google-nvidia-developer-badges.png -> 2. ad_08.png
+- **Media**: `social_card_nim_gke.png, 06_architecture_evidence_view.png, 07_github_notebook_code_provenance.png, ad_04.png`
+- **Media Order**: 1. social_card_nim_gke.png -> 2. 06_architecture_evidence_view.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_04.png
 - **Hashtags**: #NVIDIAGTC #GoogleCloud
 - **Mentions**: None
 - **Claims Verified**: YES - 4 badges verified on vanity profile
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (2 images)
-1. `public/images/google-nvidia-developer-badges.png`
-2. `public/marketing/ad_08.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/social_card_nim_gke.png`
+2. `public/screenshots/06_architecture_evidence_view.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/marketing/ad_04.png`
 
 ### Post Copy
 
@@ -205,14 +213,14 @@ Badges: https://g.dev/zhane
 
 ---
 
-## Post 6: Late Night Reflection (20:15 MDT)
+## Post 6: Late Night Reflection (20:58 MDT)
 
 - **Buffer Post ID**: `buffer_x_d03_p6`
 - **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 03
 - **Content Pillar**: Pillar F: Build Journey
-- **Scheduled Time (MDT)**: 20:15 MDT
+- **Scheduled Time (MDT)**: 20:58 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
 - **Hook**: Contest submitted.
 - **Post Summary**: Tests passing (89/89).

@@ -8,19 +8,19 @@
 
 ---
 
-## Post 1: Morning Flagship (07:44 MDT)
+## Post 1: Morning Flagship (10:05 MDT)
 
 - **Buffer Post ID**: `buffer_li_d19_p1`
 - **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 19
 - **Content Pillar**: Pillar A: WBE Research
-- **Scheduled Time (MDT)**: 07:44 MDT
+- **Scheduled Time (MDT)**: 10:05 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
 - **Hook**: Stage 6: Validation. How do you prove an emulation is functionally correct?
 - **Post Summary**: Suppose you have completed all 5 upstream stages:
-- **Media**: `ad_06.png, 01_hero_overview.png, 04_nemotron_grounded_interpretation.png, banner-dark.png`
-- **Media Order**: 1. ad_06.png -> 2. 01_hero_overview.png -> 3. 04_nemotron_grounded_interpretation.png -> 4. banner-dark.png
+- **Media**: `google-nvidia-developer-badges.png, 02_imaging_wall_baseline.png, cpu_vs_gpu_speedup.png, ad_07.png`
+- **Media Order**: 1. google-nvidia-developer-badges.png -> 2. 02_imaging_wall_baseline.png -> 3. cpu_vs_gpu_speedup.png -> 4. ad_07.png
 - **Hashtags**: #NVIDIAGTC #Neuroscience #Validation #PhilosophyOfMind #ScientificIntegrity #SystemsModeling #Research
 - **Mentions**: None
 - **Claims Verified**: YES - Validation stage biophysics modeled
@@ -28,10 +28,10 @@
 
 ### Media Attachments
 **Format**: Multi-Image Carousel (4 images)
-1. `public/marketing/ad_06.png`
-2. `public/screenshots/01_hero_overview.png`
-3. `public/screenshots/04_nemotron_grounded_interpretation.png`
-4. `public/images/banner-dark.png`
+1. `public/images/google-nvidia-developer-badges.png`
+2. `public/screenshots/02_imaging_wall_baseline.png`
+3. `public/data/cpu_vs_gpu_speedup.png`
+4. `public/marketing/ad_07.png`
 
 ### Post Copy
 
@@ -67,29 +67,30 @@ https://z-wbe-bottleneck-lab.vercel.app
 
 ---
 
-## Post 2: Mid-Morning Explainer (09:32 MDT)
+## Post 2: Mid-Morning Explainer (12:19 MDT)
 
 - **Buffer Post ID**: `buffer_li_d19_p2`
 - **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 19
 - **Content Pillar**: Pillar A: WBE Research
-- **Scheduled Time (MDT)**: 09:32 MDT
+- **Scheduled Time (MDT)**: 12:19 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: Multi-Scale Validation Benchmarks: From Local Field Potentials to Behavior.
 - **Post Summary**: What concrete metrics can prove an emulation is working?
-- **Media**: `ad_04.png, 06_architecture_evidence_view.png, banner-light.png`
-- **Media Order**: 1. ad_04.png -> 2. 06_architecture_evidence_view.png -> 3. banner-light.png
+- **Media**: `social_card_intro_inference.png, 03_bottleneck_moved_transition.png, cpu_vs_gpu_speedup.png, ad_06.png`
+- **Media Order**: 1. social_card_intro_inference.png -> 2. 03_bottleneck_moved_transition.png -> 3. cpu_vs_gpu_speedup.png -> 4. ad_06.png
 - **Hashtags**: #NVIDIAGTC #Electrophysiology #Neuroscience #DataScience #InformationTheory #OpenSource
 - **Mentions**: None
 - **Claims Verified**: YES - Multi-scale validation metrics documented
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (3 images)
-1. `public/marketing/ad_04.png`
-2. `public/screenshots/06_architecture_evidence_view.png`
-3. `public/images/banner-light.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/social_card_intro_inference.png`
+2. `public/screenshots/03_bottleneck_moved_transition.png`
+3. `public/data/cpu_vs_gpu_speedup.png`
+4. `public/marketing/ad_06.png`
 
 ### Post Copy
 
@@ -114,28 +115,30 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 ---
 
-## Post 3: Noon Visual Proof (11:28 MDT)
+## Post 3: Noon Visual Proof (14:47 MDT)
 
 - **Buffer Post ID**: `buffer_li_d19_p3`
 - **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 19
 - **Content Pillar**: Pillar H: Product Demo
-- **Scheduled Time (MDT)**: 11:28 MDT
+- **Scheduled Time (MDT)**: 14:47 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
 - **Hook**: Validation telemetry in Z-WBE Bottleneck Lab.
 - **Post Summary**: Notice how logging multi-scale electrophysiological state vectors in real time adds an additional 5% to 10% memory bus overhead.
-- **Media**: `01_hero_overview.png, 04_nemotron_grounded_interpretation.png`
-- **Media Order**: 1. 01_hero_overview.png -> 2. 04_nemotron_grounded_interpretation.png
+- **Media**: `social_card_accelerated_ml.png, 01_hero_overview.png, 06_colab_gpu_extensions_and_terminal.png, ad_05.png`
+- **Media Order**: 1. social_card_accelerated_ml.png -> 2. 01_hero_overview.png -> 3. 06_colab_gpu_extensions_and_terminal.png -> 4. ad_05.png
 - **Hashtags**: #NVIDIAGTC #WebDev #DataViz #Telemetry #Performance
 - **Mentions**: None
 - **Claims Verified**: YES - UI screenshot of Validation gauge
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (2 images)
-1. `public/screenshots/01_hero_overview.png`
-2. `public/screenshots/04_nemotron_grounded_interpretation.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/social_card_accelerated_ml.png`
+2. `public/screenshots/01_hero_overview.png`
+3. `public/colab-evidence/06_colab_gpu_extensions_and_terminal.png`
+4. `public/marketing/ad_05.png`
 
 ### Post Copy
 
@@ -152,29 +155,30 @@ https://z-wbe-bottleneck-lab.vercel.app
 
 ---
 
-## Post 4: Evening Deep Dive (17:36 MDT)
+## Post 4: Evening Deep Dive (17:35 MDT)
 
 - **Buffer Post ID**: `buffer_li_d19_p4`
 - **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 19
 - **Content Pillar**: Pillar G: Scientific Integrity
-- **Scheduled Time (MDT)**: 17:36 MDT
+- **Scheduled Time (MDT)**: 17:35 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: Why we refuse to claim 'Consciousness Transfer' in Z-WBE.
 - **Post Summary**: In the science fiction imagination, brain emulation is often framed as 'uploading consciousness'.
-- **Media**: `ad_06.png, 07_github_notebook_code_provenance.png, banner-dark.png`
-- **Media Order**: 1. ad_06.png -> 2. 07_github_notebook_code_provenance.png -> 3. banner-dark.png
+- **Media**: `social_card_data_analytics.png, 06_architecture_evidence_view.png, 07_github_notebook_code_provenance.png, ad_04.png`
+- **Media Order**: 1. social_card_data_analytics.png -> 2. 06_architecture_evidence_view.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_04.png
 - **Hashtags**: #NVIDIAGTC #Philosophy #Ethics #ScienceCommunication #Neuroscience #Integrity
 - **Mentions**: None
 - **Claims Verified**: YES - Language safety policy on consciousness verified
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (3 images)
-1. `public/marketing/ad_06.png`
-2. `public/colab-evidence/07_github_notebook_code_provenance.png`
-3. `public/images/banner-dark.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/social_card_data_analytics.png`
+2. `public/screenshots/06_architecture_evidence_view.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/marketing/ad_04.png`
 
 ### Post Copy
 
@@ -199,28 +203,30 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 ---
 
-## Post 5: Night Build Log (19:28 MDT)
+## Post 5: Night Build Log (20:19 MDT)
 
 - **Buffer Post ID**: `buffer_li_d19_p5`
 - **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 19
 - **Content Pillar**: Pillar F: Build Journey
-- **Scheduled Time (MDT)**: 19:28 MDT
+- **Scheduled Time (MDT)**: 20:19 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: Day 19 Build Log: Testing rate limit resilience and error boundaries.
 - **Post Summary**: In backend/tests/api.test.ts, we wrote 21 automated backend tests:
-- **Media**: `ad_08.png, 06_architecture_evidence_view.png`
-- **Media Order**: 1. ad_08.png -> 2. 06_architecture_evidence_view.png
+- **Media**: `social_card_nim_gke.png, 06_architecture_evidence_view.png, 07_github_notebook_code_provenance.png, ad_03.png`
+- **Media Order**: 1. social_card_nim_gke.png -> 2. 06_architecture_evidence_view.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_03.png
 - **Hashtags**: #NVIDIAGTC #Backend #TypeScript #ErrorHandling #Resilience #Vitest #BuildInPublic
 - **Mentions**: None
 - **Claims Verified**: YES - backend/tests/api.test.ts passing (21/21 tests)
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (2 images)
-1. `public/marketing/ad_08.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/social_card_nim_gke.png`
 2. `public/screenshots/06_architecture_evidence_view.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/marketing/ad_03.png`
 
 ### Post Copy
 

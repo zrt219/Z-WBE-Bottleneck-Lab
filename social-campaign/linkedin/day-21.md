@@ -8,19 +8,19 @@
 
 ---
 
-## Post 1: Morning Flagship (07:45 MDT)
+## Post 1: Morning Flagship (10:02 MDT)
 
 - **Buffer Post ID**: `buffer_li_d21_p1`
 - **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 21
 - **Content Pillar**: Pillar F: Build Journey
-- **Scheduled Time (MDT)**: 07:45 MDT
+- **Scheduled Time (MDT)**: 10:02 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
 - **Hook**: CAMPAIGN RETROSPECTIVE: 21 Days of Building Z-WBE Bottleneck Lab in Public.
 - **Post Summary**: Today marks Day 21 and the conclusion of our maximum-exposure launch sprint for Z-WBE Bottleneck Lab, built for the Google Clou...
-- **Media**: `ad_10.png, banner-dark.png, 01_hero_overview.png, google-nvidia-developer-badges.png`
-- **Media Order**: 1. ad_10.png -> 2. banner-dark.png -> 3. 01_hero_overview.png -> 4. google-nvidia-developer-badges.png
+- **Media**: `social_card_data_analytics.png, 02_imaging_wall_baseline.png, cpu_vs_gpu_speedup.png, ad_02.png`
+- **Media Order**: 1. social_card_data_analytics.png -> 2. 02_imaging_wall_baseline.png -> 3. cpu_vs_gpu_speedup.png -> 4. ad_02.png
 - **Hashtags**: #NVIDIAGTC #GoogleCloud #NVIDIA #Nemotron #RAPIDS #cuDF #cuML #TeslaT4 #GoogleColab #CloudRun #BuildInPublic #OpenSource #ComputationalNeuroscience #SystemsEngineering #GTC2026
 - **Mentions**: Google for Developers | NVIDIA AI | Jen Harvey | Ray Harvey
 - **Claims Verified**: YES - Complete campaign retrospective verified
@@ -28,10 +28,10 @@
 
 ### Media Attachments
 **Format**: Multi-Image Carousel (4 images)
-1. `public/marketing/ad_10.png`
-2. `public/images/banner-dark.png`
-3. `public/screenshots/01_hero_overview.png`
-4. `public/images/google-nvidia-developer-badges.png`
+1. `public/images/social_card_data_analytics.png`
+2. `public/screenshots/02_imaging_wall_baseline.png`
+3. `public/data/cpu_vs_gpu_speedup.png`
+4. `public/marketing/ad_02.png`
 
 ### Post Copy
 
@@ -70,29 +70,30 @@ Mentions & Judges: Google for Developers | NVIDIA AI | Jen Harvey | Ray Harvey
 
 ---
 
-## Post 2: Mid-Morning Explainer (09:32 MDT)
+## Post 2: Mid-Morning Explainer (12:16 MDT)
 
 - **Buffer Post ID**: `buffer_li_d21_p2`
 - **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 21
 - **Content Pillar**: Pillar J: Future Work
-- **Scheduled Time (MDT)**: 09:32 MDT
+- **Scheduled Time (MDT)**: 12:16 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: The Future Roadmap: From static scenarios to dynamic multiscale simulation.
 - **Post Summary**: What comes after the 21-day launch sprint?
-- **Media**: `ad_01.png, 06_architecture_evidence_view.png, banner-light.png`
-- **Media Order**: 1. ad_01.png -> 2. 06_architecture_evidence_view.png -> 3. banner-light.png
+- **Media**: `golden_ticket_data_analytics.png, 06_architecture_evidence_view.png, 07_github_notebook_code_provenance.png, ad_01.png`
+- **Media Order**: 1. golden_ticket_data_analytics.png -> 2. 06_architecture_evidence_view.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_01.png
 - **Hashtags**: #NVIDIAGTC #Roadmap #ComputationalNeuroscience #NeuromorphicComputing #Research #OpenScience
 - **Mentions**: None
 - **Claims Verified**: YES - Future roadmap documented in README.md
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (3 images)
-1. `public/marketing/ad_01.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/golden_ticket_data_analytics.png`
 2. `public/screenshots/06_architecture_evidence_view.png`
-3. `public/images/banner-light.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/marketing/ad_01.png`
 
 ### Post Copy
 
@@ -121,14 +122,14 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 ---
 
-## Post 3: Noon Visual Proof (11:28 MDT)
+## Post 3: Noon Visual Proof (14:45 MDT)
 
 - **Buffer Post ID**: `buffer_li_d21_p3`
 - **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 21
 - **Content Pillar**: Pillar H: Product Demo
-- **Scheduled Time (MDT)**: 11:28 MDT
+- **Scheduled Time (MDT)**: 14:45 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
 - **Hook**: The complete Z-WBE Bottleneck Lab tour.
 - **Post Summary**: From 8 physical scaling dimensions to the hero 100x imaging transition, explore the entire demonstrator in under 60 seconds.
@@ -158,29 +159,30 @@ https://z-wbe-bottleneck-lab.vercel.app
 
 ---
 
-## Post 4: Evening Deep Dive (17:36 MDT)
+## Post 4: Evening Deep Dive (17:31 MDT)
 
 - **Buffer Post ID**: `buffer_li_d21_p4`
 - **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 21
 - **Content Pillar**: Pillar I: Learning Paths
-- **Scheduled Time (MDT)**: 17:36 MDT
+- **Scheduled Time (MDT)**: 17:31 MDT
 - **Primary Destination URL**: https://g.dev/zhane
 - **Hook**: Four Learning Pathways. One Production Build.
 - **Post Summary**: Completing the Google Cloud × NVIDIA Golden Ticket Challenge was not just about earning 4 badges on Google Cloud Skills Boost.
-- **Media**: `google-nvidia-developer-badges.png, ad_08.png, banner-dark.png`
-- **Media Order**: 1. google-nvidia-developer-badges.png -> 2. ad_08.png -> 3. banner-dark.png
+- **Media**: `social_card_nim_gke.png, 04_nemotron_grounded_interpretation.png, cpu_vs_gpu_speedup.png, banner-light.png`
+- **Media Order**: 1. social_card_nim_gke.png -> 2. 04_nemotron_grounded_interpretation.png -> 3. cpu_vs_gpu_speedup.png -> 4. banner-light.png
 - **Hashtags**: #NVIDIAGTC #GoogleCloud #GoogleDevelopers #NVIDIA #SkillBadges #ContinuousLearning #FullStackAI
 - **Mentions**: None
 - **Claims Verified**: YES - All 4 badges verified on vanity profile
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (3 images)
-1. `public/images/google-nvidia-developer-badges.png`
-2. `public/marketing/ad_08.png`
-3. `public/images/banner-dark.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/social_card_nim_gke.png`
+2. `public/screenshots/04_nemotron_grounded_interpretation.png`
+3. `public/data/cpu_vs_gpu_speedup.png`
+4. `public/images/banner-light.png`
 
 ### Post Copy
 
@@ -209,29 +211,30 @@ https://g.dev/zhane
 
 ---
 
-## Post 5: Final Campaign Sign-off (19:30 MDT)
+## Post 5: Final Campaign Sign-off (20:15 MDT)
 
 - **Buffer Post ID**: `buffer_li_d21_p5`
 - **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 21
 - **Content Pillar**: Pillar F: Build Journey
-- **Scheduled Time (MDT)**: 19:30 MDT
+- **Scheduled Time (MDT)**: 20:15 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: Final Sign-Off: The 21-Day Z-WBE Social Campaign.
 - **Post Summary**: Over 21 days, we proved that social media can be used for deep, evidence-first technical communication rather than shallow mark...
-- **Media**: `banner-dark.png, 01_hero_overview.png, cpu_vs_gpu_speedup.png`
-- **Media Order**: 1. banner-dark.png -> 2. 01_hero_overview.png -> 3. cpu_vs_gpu_speedup.png
+- **Media**: `google-nvidia-developer-badges.png, 04_nemotron_grounded_interpretation.png, cpu_vs_gpu_speedup.png, banner-dark.png`
+- **Media Order**: 1. google-nvidia-developer-badges.png -> 2. 04_nemotron_grounded_interpretation.png -> 3. cpu_vs_gpu_speedup.png -> 4. banner-dark.png
 - **Hashtags**: #NVIDIAGTC #BuildInPublic #OpenSource #Engineering #Science #Finale
 - **Mentions**: None
 - **Claims Verified**: YES - Campaign conclusion signed off
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (3 images)
-1. `public/images/banner-dark.png`
-2. `public/screenshots/01_hero_overview.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/google-nvidia-developer-badges.png`
+2. `public/screenshots/04_nemotron_grounded_interpretation.png`
 3. `public/data/cpu_vs_gpu_speedup.png`
+4. `public/images/banner-dark.png`
 
 ### Post Copy
 

@@ -8,19 +8,19 @@
 
 ---
 
-## Post 1: Morning Flagship (07:45 MDT)
+## Post 1: Morning Flagship (10:04 MDT)
 
 - **Buffer Post ID**: `6a9faed0e638e16871e645c6`
 - **Buffer Status**: `DRAFT (Buffer Verified)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 09
 - **Content Pillar**: Pillar C: GPU / NVIDIA
-- **Scheduled Time (MDT)**: 07:45 MDT
+- **Scheduled Time (MDT)**: 10:04 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
 - **Hook**: The Strict Grounding Contract: How we bind NVIDIA Nemotron 3 Super 120B to physical truth.
 - **Post Summary**: One of the most persistent challenges in LLM engineering is preventing models from hallucinating domain facts.
-- **Media**: `ad_04.png, 04_nemotron_grounded_interpretation.png, 06_architecture_evidence_view.png, banner-dark.png`
-- **Media Order**: 1. ad_04.png -> 2. 04_nemotron_grounded_interpretation.png -> 3. 06_architecture_evidence_view.png -> 4. banner-dark.png
+- **Media**: `social_card_intro_inference.png, 04_nemotron_grounded_interpretation.png, 07_github_notebook_code_provenance.png, banner-light.png`
+- **Media Order**: 1. social_card_intro_inference.png -> 2. 04_nemotron_grounded_interpretation.png -> 3. 07_github_notebook_code_provenance.png -> 4. banner-light.png
 - **Hashtags**: #NVIDIAGTC #NVIDIA #Nemotron #OpenRouter #AIEngineering #PromptEngineering #SystemArchitecture #TrustworthyAI
 - **Mentions**: None
 - **Claims Verified**: YES - Nemotron 3 Super model slug and grounding verified
@@ -28,10 +28,10 @@
 
 ### Media Attachments
 **Format**: Multi-Image Carousel (4 images)
-1. `public/marketing/ad_04.png`
+1. `public/images/social_card_intro_inference.png`
 2. `public/screenshots/04_nemotron_grounded_interpretation.png`
-3. `public/screenshots/06_architecture_evidence_view.png`
-4. `public/images/banner-dark.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/images/banner-light.png`
 
 ### Post Copy
 
@@ -58,29 +58,30 @@ https://z-wbe-bottleneck-lab.vercel.app
 
 ---
 
-## Post 2: Mid-Morning Explainer (09:32 MDT)
+## Post 2: Mid-Morning Explainer (12:18 MDT)
 
 - **Buffer Post ID**: `6a9faed27eee3ace70b783e1`
 - **Buffer Status**: `DRAFT (Buffer Verified)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 09
 - **Content Pillar**: Pillar C: GPU / NVIDIA
-- **Scheduled Time (MDT)**: 09:32 MDT
+- **Scheduled Time (MDT)**: 12:18 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: Inside our Nemotron System Prompt: Negative constraints that actually work.
 - **Post Summary**: How do you instruct an open-weights model to stay strictly within scientific boundaries?
-- **Media**: `ad_04.png, 04_nemotron_grounded_interpretation.png, banner-light.png`
-- **Media Order**: 1. ad_04.png -> 2. 04_nemotron_grounded_interpretation.png -> 3. banner-light.png
+- **Media**: `social_card_intro_inference.png, 04_nemotron_grounded_interpretation.png, 07_github_notebook_code_provenance.png, banner-dark.png`
+- **Media Order**: 1. social_card_intro_inference.png -> 2. 04_nemotron_grounded_interpretation.png -> 3. 07_github_notebook_code_provenance.png -> 4. banner-dark.png
 - **Hashtags**: #NVIDIAGTC #PromptEngineering #OpenRouter #Nemotron #AIEthics #SoftwareTesting
 - **Mentions**: None
 - **Claims Verified**: YES - backend/src/services/prompt.ts system prompt verified
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (3 images)
-1. `public/marketing/ad_04.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/social_card_intro_inference.png`
 2. `public/screenshots/04_nemotron_grounded_interpretation.png`
-3. `public/images/banner-light.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/images/banner-dark.png`
 
 ### Post Copy
 
@@ -113,28 +114,30 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 ---
 
-## Post 3: Noon Visual Proof (11:30 MDT)
+## Post 3: Noon Visual Proof (14:47 MDT)
 
 - **Buffer Post ID**: `6a9faed37c96d9873c8f7ec6`
 - **Buffer Status**: `DRAFT (Buffer Verified)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 09
 - **Content Pillar**: Pillar H: Product Demo
-- **Scheduled Time (MDT)**: 11:30 MDT
+- **Scheduled Time (MDT)**: 14:47 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
 - **Hook**: A real response from NVIDIA Nemotron 3 Super in Z-WBE Bottleneck Lab.
 - **Post Summary**: Notice the clarity of the output:
-- **Media**: `04_nemotron_grounded_interpretation.png, 01_hero_overview.png`
-- **Media Order**: 1. 04_nemotron_grounded_interpretation.png -> 2. 01_hero_overview.png
+- **Media**: `social_card_intro_inference.png, 02_imaging_wall_baseline.png, eda_scatter_matrix.png, ad_10.png`
+- **Media Order**: 1. social_card_intro_inference.png -> 2. 02_imaging_wall_baseline.png -> 3. eda_scatter_matrix.png -> 4. ad_10.png
 - **Hashtags**: #NVIDIAGTC #NVIDIAAI #Nemotron #UIUX #DataScience
 - **Mentions**: None
 - **Claims Verified**: YES - Screenshot of Nemotron response card
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (2 images)
-1. `public/screenshots/04_nemotron_grounded_interpretation.png`
-2. `public/screenshots/01_hero_overview.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/social_card_intro_inference.png`
+2. `public/screenshots/02_imaging_wall_baseline.png`
+3. `public/data/eda_scatter_matrix.png`
+4. `public/marketing/ad_10.png`
 
 ### Post Copy
 
@@ -156,29 +159,30 @@ https://z-wbe-bottleneck-lab.vercel.app
 
 ---
 
-## Post 4: Evening Deep Dive (17:38 MDT)
+## Post 4: Evening Deep Dive (17:35 MDT)
 
 - **Buffer Post ID**: `6a9faed4bfce41cfe2ffd244`
 - **Buffer Status**: `DRAFT (Buffer Verified)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 09
 - **Content Pillar**: Pillar F: Build Journey
-- **Scheduled Time (MDT)**: 17:38 MDT
+- **Scheduled Time (MDT)**: 17:35 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: Server-Side OpenRouter Proxy: Shielding API keys and managing quotas.
 - **Post Summary**: When building web applications powered by OpenRouter, exposing API keys in browser JavaScript is a fatal security vulnerability.
-- **Media**: `ad_08.png, 07_github_notebook_code_provenance.png, banner-dark.png`
-- **Media Order**: 1. ad_08.png -> 2. 07_github_notebook_code_provenance.png -> 3. banner-dark.png
+- **Media**: `golden_ticket_intro_inference.png, 04_nemotron_grounded_interpretation.png, 07_github_notebook_code_provenance.png, ad_09.png`
+- **Media Order**: 1. golden_ticket_intro_inference.png -> 2. 04_nemotron_grounded_interpretation.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_09.png
 - **Hashtags**: #NVIDIAGTC #WebSecurity #OpenRouter #BackendEngineering #DevOps #TypeScript
 - **Mentions**: None
 - **Claims Verified**: YES - OpenRouter streaming implementation verified
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (3 images)
-1. `public/marketing/ad_08.png`
-2. `public/colab-evidence/07_github_notebook_code_provenance.png`
-3. `public/images/banner-dark.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/golden_ticket_intro_inference.png`
+2. `public/screenshots/04_nemotron_grounded_interpretation.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/marketing/ad_09.png`
 
 ### Post Copy
 
@@ -204,28 +208,30 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 ---
 
-## Post 5: Night Build Log (19:34 MDT)
+## Post 5: Night Build Log (20:19 MDT)
 
 - **Buffer Post ID**: `6a9faed67c96d9873c8f7f30`
 - **Buffer Status**: `DRAFT (Buffer Verified)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 09
 - **Content Pillar**: Pillar F: Build Journey
-- **Scheduled Time (MDT)**: 19:34 MDT
+- **Scheduled Time (MDT)**: 20:19 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: Day 9 Build Log: Automated testing for AI grounding contracts.
 - **Post Summary**: Can you write automated unit tests for LLM responses? Yes, if you test contract compliance rather than exact text matching.
-- **Media**: `ad_04.png, 06_architecture_evidence_view.png`
-- **Media Order**: 1. ad_04.png -> 2. 06_architecture_evidence_view.png
+- **Media**: `golden_ticket_accelerated_ml.png, 04_nemotron_grounded_interpretation.png, 07_github_notebook_code_provenance.png, ad_08.png`
+- **Media Order**: 1. golden_ticket_accelerated_ml.png -> 2. 04_nemotron_grounded_interpretation.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_08.png
 - **Hashtags**: #NVIDIAGTC #LLMEval #SoftwareTesting #Vitest #AIEngineering #BuildInPublic
 - **Mentions**: None
 - **Claims Verified**: YES - shared/tests/grounding.test.ts passing
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (2 images)
-1. `public/marketing/ad_04.png`
-2. `public/screenshots/06_architecture_evidence_view.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/golden_ticket_accelerated_ml.png`
+2. `public/screenshots/04_nemotron_grounded_interpretation.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/marketing/ad_08.png`
 
 ### Post Copy
 

@@ -8,28 +8,30 @@
 
 ---
 
-## Post 1: Morning Hook (07:16 MDT)
+## Post 1: Morning Hook (10:16 MDT)
 
 - **Buffer Post ID**: `buffer_x_d15_p1`
 - **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 15
 - **Content Pillar**: Pillar A: WBE Research
-- **Scheduled Time (MDT)**: 07:16 MDT
+- **Scheduled Time (MDT)**: 10:16 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
 - **Hook**: Why can't electron microscopes just scan faster?
 - **Post Summary**: Dwell <20ns per pixel, and Poisson noise destroys the image.
-- **Media**: `ad_07.png, 02_imaging_wall_baseline.png`
-- **Media Order**: 1. ad_07.png -> 2. 02_imaging_wall_baseline.png
+- **Media**: `google-nvidia-developer-badges.png, 02_imaging_wall_baseline.png, 02_colab_t4_gpu_runtime_dialog.png, ad_01.png`
+- **Media Order**: 1. google-nvidia-developer-badges.png -> 2. 02_imaging_wall_baseline.png -> 3. 02_colab_t4_gpu_runtime_dialog.png -> 4. ad_01.png
 - **Hashtags**: #NVIDIAGTC #Physics
 - **Mentions**: None
 - **Claims Verified**: YES - Dwell time shot noise physics
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (2 images)
-1. `public/marketing/ad_07.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/google-nvidia-developer-badges.png`
 2. `public/screenshots/02_imaging_wall_baseline.png`
+3. `public/colab-evidence/02_colab_t4_gpu_runtime_dialog.png`
+4. `public/marketing/ad_01.png`
 
 ### Post Copy
 
@@ -46,28 +48,30 @@ https://z-wbe-bottleneck-lab.vercel.app
 
 ---
 
-## Post 2: Mid-Morning Visual (08:44 MDT)
+## Post 2: Mid-Morning Visual (12:30 MDT)
 
 - **Buffer Post ID**: `buffer_x_d15_p2`
 - **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 15
 - **Content Pillar**: Pillar A: WBE Research
-- **Scheduled Time (MDT)**: 08:44 MDT
+- **Scheduled Time (MDT)**: 12:30 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: 4nm isotropic = 18.75 Petavoxels.
 - **Post Summary**: 4nm x 4nm x 40nm anisotropic = 1.8 Petavoxels.
-- **Media**: `ad_01.png, 06_architecture_evidence_view.png`
-- **Media Order**: 1. ad_01.png -> 2. 06_architecture_evidence_view.png
+- **Media**: `social_card_intro_inference.png, 02_imaging_wall_baseline.png, 07_github_notebook_code_provenance.png, banner-light.png`
+- **Media Order**: 1. social_card_intro_inference.png -> 2. 02_imaging_wall_baseline.png -> 3. 07_github_notebook_code_provenance.png -> 4. banner-light.png
 - **Hashtags**: #NVIDIAGTC #Neuroscience
 - **Mentions**: None
 - **Claims Verified**: YES - Anisotropic resolution trade-off
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (2 images)
-1. `public/marketing/ad_01.png`
-2. `public/screenshots/06_architecture_evidence_view.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/social_card_intro_inference.png`
+2. `public/screenshots/02_imaging_wall_baseline.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/images/banner-light.png`
 
 ### Post Copy
 
@@ -83,14 +87,14 @@ Trade-offs: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 ---
 
-## Post 3: Late-Morning Data (10:28 MDT)
+## Post 3: Late-Morning Data (15:00 MDT)
 
 - **Buffer Post ID**: `buffer_x_d15_p3`
 - **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 15
 - **Content Pillar**: Pillar E: Open Source
-- **Scheduled Time (MDT)**: 10:28 MDT
+- **Scheduled Time (MDT)**: 15:00 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: We unit-test sensitivity:
 - **Post Summary**: Voxel count scales as O(n^3).
@@ -119,28 +123,30 @@ Tests: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 ---
 
-## Post 4: Evening Hook (16:54 MDT)
+## Post 4: Evening Hook (17:46 MDT)
 
 - **Buffer Post ID**: `buffer_x_d15_p4`
 - **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 15
 - **Content Pillar**: Pillar G: Scientific Integrity
-- **Scheduled Time (MDT)**: 16:54 MDT
+- **Scheduled Time (MDT)**: 17:46 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
 - **Hook**: Chemical fixation causes tissue shrinkage: extracellular space drops from 20% to <5%.
 - **Post Summary**: A perfect scan of a shrunken brain is a map of artifacts.
-- **Media**: `ad_06.png, 01_hero_overview.png`
-- **Media Order**: 1. ad_06.png -> 2. 01_hero_overview.png
+- **Media**: `social_card_accelerated_ml.png, 01_hero_overview.png, cpu_vs_gpu_speedup.png, banner-dark.png`
+- **Media Order**: 1. social_card_accelerated_ml.png -> 2. 01_hero_overview.png -> 3. cpu_vs_gpu_speedup.png -> 4. banner-dark.png
 - **Hashtags**: #NVIDIAGTC
 - **Mentions**: None
 - **Claims Verified**: YES - Extracellular space collapse documented
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (2 images)
-1. `public/marketing/ad_06.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/social_card_accelerated_ml.png`
 2. `public/screenshots/01_hero_overview.png`
+3. `public/data/cpu_vs_gpu_speedup.png`
+4. `public/images/banner-dark.png`
 
 ### Post Copy
 
@@ -156,28 +162,30 @@ https://z-wbe-bottleneck-lab.vercel.app
 
 ---
 
-## Post 5: Night Observation (18:26 MDT)
+## Post 5: Night Observation (20:30 MDT)
 
 - **Buffer Post ID**: `buffer_x_d15_p5`
 - **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 15
 - **Content Pillar**: Pillar B: Systems Engineering
-- **Scheduled Time (MDT)**: 18:26 MDT
+- **Scheduled Time (MDT)**: 20:30 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: You cannot speed up the electron beam without vaporizing the tissue block.
 - **Post Summary**: The only way through the Imaging Wall is extreme beam parallelism.
-- **Media**: `banner-dark.png, 02_imaging_wall_baseline.png`
-- **Media Order**: 1. banner-dark.png -> 2. 02_imaging_wall_baseline.png
+- **Media**: `social_card_data_analytics.png, 02_imaging_wall_baseline.png, 07_github_notebook_code_provenance.png, ad_10.png`
+- **Media Order**: 1. social_card_data_analytics.png -> 2. 02_imaging_wall_baseline.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_10.png
 - **Hashtags**: #NVIDIAGTC #Hardware
 - **Mentions**: None
 - **Claims Verified**: YES - Multi-beam parallelism requirement
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (2 images)
-1. `public/images/banner-dark.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/social_card_data_analytics.png`
 2. `public/screenshots/02_imaging_wall_baseline.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/marketing/ad_10.png`
 
 ### Post Copy
 

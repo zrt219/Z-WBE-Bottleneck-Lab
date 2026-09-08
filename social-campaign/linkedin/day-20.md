@@ -8,19 +8,19 @@
 
 ---
 
-## Post 1: Morning Flagship (07:46 MDT)
+## Post 1: Morning Flagship (09:59 MDT)
 
 - **Buffer Post ID**: `buffer_li_d20_p1`
 - **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 20
 - **Content Pillar**: Pillar E: Open Source
-- **Scheduled Time (MDT)**: 07:46 MDT
+- **Scheduled Time (MDT)**: 09:59 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: Open-Source Reproducibility: Why we open-sourced every equation, test, and notebook.
 - **Post Summary**: Scientific modeling cannot thrive in walled gardens.
-- **Media**: `ad_09.png, 07_github_notebook_code_provenance.png, 06_architecture_evidence_view.png, banner-dark.png`
-- **Media Order**: 1. ad_09.png -> 2. 07_github_notebook_code_provenance.png -> 3. 06_architecture_evidence_view.png -> 4. banner-dark.png
+- **Media**: `social_card_nim_gke.png, 06_architecture_evidence_view.png, cpu_vs_gpu_speedup.png, ad_10.png`
+- **Media Order**: 1. social_card_nim_gke.png -> 2. 06_architecture_evidence_view.png -> 3. cpu_vs_gpu_speedup.png -> 4. ad_10.png
 - **Hashtags**: #NVIDIAGTC #OpenSource #GitHub #ReproducibleResearch #OpenScience #TypeScript #Python #DevCommunity
 - **Mentions**: None
 - **Claims Verified**: YES - 89 tests passing, MIT license
@@ -28,10 +28,10 @@
 
 ### Media Attachments
 **Format**: Multi-Image Carousel (4 images)
-1. `public/marketing/ad_09.png`
-2. `public/colab-evidence/07_github_notebook_code_provenance.png`
-3. `public/screenshots/06_architecture_evidence_view.png`
-4. `public/images/banner-dark.png`
+1. `public/images/social_card_nim_gke.png`
+2. `public/screenshots/06_architecture_evidence_view.png`
+3. `public/data/cpu_vs_gpu_speedup.png`
+4. `public/marketing/ad_10.png`
 
 ### Post Copy
 
@@ -63,29 +63,30 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 ---
 
-## Post 2: Mid-Morning Explainer (09:34 MDT)
+## Post 2: Mid-Morning Explainer (12:13 MDT)
 
 - **Buffer Post ID**: `buffer_li_d20_p2`
 - **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 20
 - **Content Pillar**: Pillar E: Open Source
-- **Scheduled Time (MDT)**: 09:34 MDT
+- **Scheduled Time (MDT)**: 12:13 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: 89 Passing Tests: The verification foundation of Z-WBE.
 - **Post Summary**: Here is the exact output of running npm test across our repository:
-- **Media**: `ad_04.png, 07_github_notebook_code_provenance.png, banner-light.png`
-- **Media Order**: 1. ad_04.png -> 2. 07_github_notebook_code_provenance.png -> 3. banner-light.png
+- **Media**: `social_card_data_analytics.png, 02_imaging_wall_baseline.png, 07_github_notebook_code_provenance.png, ad_09.png`
+- **Media Order**: 1. social_card_data_analytics.png -> 2. 02_imaging_wall_baseline.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_09.png
 - **Hashtags**: #NVIDIAGTC #SoftwareTesting #Vitest #TypeScript #QualityEngineering #OpenSource
 - **Mentions**: None
 - **Claims Verified**: YES - npm test passes 89/89 tests in vitest
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (3 images)
-1. `public/marketing/ad_04.png`
-2. `public/colab-evidence/07_github_notebook_code_provenance.png`
-3. `public/images/banner-light.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/social_card_data_analytics.png`
+2. `public/screenshots/02_imaging_wall_baseline.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/marketing/ad_09.png`
 
 ### Post Copy
 
@@ -121,14 +122,14 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 ---
 
-## Post 3: Noon Visual Proof (11:28 MDT)
+## Post 3: Noon Visual Proof (14:43 MDT)
 
 - **Buffer Post ID**: `buffer_li_d20_p3`
 - **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 20
 - **Content Pillar**: Pillar H: Product Demo
-- **Scheduled Time (MDT)**: 11:28 MDT
+- **Scheduled Time (MDT)**: 14:43 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
 - **Hook**: Experience the complete Z-WBE application in your browser.
 - **Post Summary**: No installation required.
@@ -160,29 +161,30 @@ https://z-wbe-bottleneck-lab.vercel.app
 
 ---
 
-## Post 4: Evening Deep Dive (17:36 MDT)
+## Post 4: Evening Deep Dive (17:29 MDT)
 
 - **Buffer Post ID**: `buffer_li_d20_p4`
 - **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 20
 - **Content Pillar**: Pillar I: Learning Paths
-- **Scheduled Time (MDT)**: 17:36 MDT
+- **Scheduled Time (MDT)**: 17:29 MDT
 - **Primary Destination URL**: https://g.dev/zhane
 - **Hook**: From Course to Code: What I learned from 'Accelerated Machine Learning with Google Cloud and NVIDIA'.
 - **Post Summary**: The 4th official skill badge completed for this challenge was:
-- **Media**: `social_card_accelerated_ml.png, badge_accelerated_ml.png, google-nvidia-developer-badges.png`
-- **Media Order**: 1. social_card_accelerated_ml.png -> 2. badge_accelerated_ml.png -> 3. google-nvidia-developer-badges.png
+- **Media**: `social_card_accelerated_ml.png, 04_nemotron_grounded_interpretation.png, 07_github_notebook_code_provenance.png, ad_08.png`
+- **Media Order**: 1. social_card_accelerated_ml.png -> 2. 04_nemotron_grounded_interpretation.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_08.png
 - **Hashtags**: #NVIDIAGTC #GoogleCloud #NVIDIA #MachineLearning #cuML #AcceleratedComputing #ContinuousLearning
 - **Mentions**: None
 - **Claims Verified**: YES - Accelerated ML badge verified
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (3 images)
+**Format**: Multi-Image Carousel (4 images)
 1. `public/images/social_card_accelerated_ml.png`
-2. `public/images/badge_accelerated_ml.png`
-3. `public/images/google-nvidia-developer-badges.png`
+2. `public/screenshots/04_nemotron_grounded_interpretation.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/marketing/ad_08.png`
 
 ### Post Copy
 
@@ -205,28 +207,30 @@ https://g.dev/zhane
 
 ---
 
-## Post 5: Night Build Log (19:30 MDT)
+## Post 5: Night Build Log (20:13 MDT)
 
 - **Buffer Post ID**: `buffer_li_d20_p5`
 - **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 20
 - **Content Pillar**: Pillar F: Build Journey
-- **Scheduled Time (MDT)**: 19:30 MDT
+- **Scheduled Time (MDT)**: 20:13 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: Day 20 Build Log: Opening up issue templates and contribution pathways.
 - **Post Summary**: As we approach the finale of our 21-day sprint, we added formal contribution pathways to the repository:
-- **Media**: `ad_09.png, 07_github_notebook_code_provenance.png`
-- **Media Order**: 1. ad_09.png -> 2. 07_github_notebook_code_provenance.png
+- **Media**: `social_card_data_analytics.png, 03_bottleneck_moved_transition.png, 07_github_notebook_code_provenance.png, ad_07.png`
+- **Media Order**: 1. social_card_data_analytics.png -> 2. 03_bottleneck_moved_transition.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_07.png
 - **Hashtags**: #NVIDIAGTC #OpenSource #GitHub #Collaboration #Science #BuildInPublic
 - **Mentions**: None
 - **Claims Verified**: YES - Contribution guidelines verified in README.md
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (2 images)
-1. `public/marketing/ad_09.png`
-2. `public/colab-evidence/07_github_notebook_code_provenance.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/social_card_data_analytics.png`
+2. `public/screenshots/03_bottleneck_moved_transition.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/marketing/ad_07.png`
 
 ### Post Copy
 

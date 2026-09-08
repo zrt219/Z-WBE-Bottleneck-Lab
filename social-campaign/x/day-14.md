@@ -8,28 +8,30 @@
 
 ---
 
-## Post 1: Morning Hook (07:12 MDT)
+## Post 1: Morning Hook (10:18 MDT)
 
 - **Buffer Post ID**: `buffer_x_d14_p1`
 - **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 14
 - **Content Pillar**: Pillar C: GPU / NVIDIA
-- **Scheduled Time (MDT)**: 07:12 MDT
+- **Scheduled Time (MDT)**: 10:18 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
 - **Hook**: We mapped 100,000 WBE futures in GPU memory via NVIDIA cuDF:
 - **Post Summary**: 48.2% Acquisition-bound
-- **Media**: `ad_05.png, 05_gpu_exploration_map.png`
-- **Media Order**: 1. ad_05.png -> 2. 05_gpu_exploration_map.png
+- **Media**: `social_card_data_analytics.png, 02_imaging_wall_baseline.png, 08_colab_rapids_and_variable_inspector.png, banner-light.png`
+- **Media Order**: 1. social_card_data_analytics.png -> 2. 02_imaging_wall_baseline.png -> 3. 08_colab_rapids_and_variable_inspector.png -> 4. banner-light.png
 - **Hashtags**: #NVIDIAGTC #RAPIDS
 - **Mentions**: None
 - **Claims Verified**: YES - 100k sweep statistics verified
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (2 images)
-1. `public/marketing/ad_05.png`
-2. `public/screenshots/05_gpu_exploration_map.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/social_card_data_analytics.png`
+2. `public/screenshots/02_imaging_wall_baseline.png`
+3. `public/colab-evidence/08_colab_rapids_and_variable_inspector.png`
+4. `public/images/banner-light.png`
 
 ### Post Copy
 
@@ -48,28 +50,30 @@ Map: https://z-wbe-bottleneck-lab.vercel.app
 
 ---
 
-## Post 2: Mid-Morning Visual (08:44 MDT)
+## Post 2: Mid-Morning Visual (12:32 MDT)
 
 - **Buffer Post ID**: `buffer_x_d14_p2`
 - **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 14
 - **Content Pillar**: Pillar D: Google Cloud / Colab
-- **Scheduled Time (MDT)**: 08:44 MDT
+- **Scheduled Time (MDT)**: 12:32 MDT
 - **Primary Destination URL**: https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 - **Hook**: 100k scenarios generated and evaluated in 1.84s on a Tesla T4.
 - **Post Summary**: Zero Python loops. Pure GPU vectorization.
-- **Media**: `eda_scatter_matrix.png, eda_histograms.png`
-- **Media Order**: 1. eda_scatter_matrix.png -> 2. eda_histograms.png
+- **Media**: `google-nvidia-developer-badges.png, 01_hero_overview.png, 07_github_notebook_code_provenance.png, banner-dark.png`
+- **Media Order**: 1. google-nvidia-developer-badges.png -> 2. 01_hero_overview.png -> 3. 07_github_notebook_code_provenance.png -> 4. banner-dark.png
 - **Hashtags**: #NVIDIAGTC #GoogleColab
 - **Mentions**: None
 - **Claims Verified**: YES - Scatter matrix visual
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (2 images)
-1. `public/data/eda_scatter_matrix.png`
-2. `public/data/eda_histograms.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/google-nvidia-developer-badges.png`
+2. `public/screenshots/01_hero_overview.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/images/banner-dark.png`
 
 ### Post Copy
 
@@ -84,14 +88,14 @@ Colab code: https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab
 
 ---
 
-## Post 3: Late-Morning Data (10:28 MDT)
+## Post 3: Late-Morning Data (15:02 MDT)
 
 - **Buffer Post ID**: `buffer_x_d14_p3`
 - **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 14
 - **Content Pillar**: Pillar H: Product Demo
-- **Scheduled Time (MDT)**: 10:28 MDT
+- **Scheduled Time (MDT)**: 15:02 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
 - **Hook**: Interactive GPU Exploration Map:
 - **Post Summary**: Click any heatmap cell in Z-WBE to immediately load that scenario's parameters into the sliders.
@@ -119,28 +123,30 @@ Try it live: https://z-wbe-bottleneck-lab.vercel.app
 
 ---
 
-## Post 4: Evening Hook (16:54 MDT)
+## Post 4: Evening Hook (17:48 MDT)
 
 - **Buffer Post ID**: `buffer_x_d14_p4`
 - **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 14
 - **Content Pillar**: Pillar B: Systems Engineering
-- **Scheduled Time (MDT)**: 16:54 MDT
+- **Scheduled Time (MDT)**: 17:48 MDT
 - **Primary Destination URL**: https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 - **Hook**: Correlation insight:
 - **Post Summary**: Dwell time dictates project length (r=0.88).
-- **Media**: `ad_01.png, 03_bottleneck_moved_transition.png`
-- **Media Order**: 1. ad_01.png -> 2. 03_bottleneck_moved_transition.png
+- **Media**: `social_card_data_analytics.png, 06_architecture_evidence_view.png, 07_github_notebook_code_provenance.png, ad_10.png`
+- **Media Order**: 1. social_card_data_analytics.png -> 2. 06_architecture_evidence_view.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_10.png
 - **Hashtags**: #NVIDIAGTC #DataScience
 - **Mentions**: None
 - **Claims Verified**: YES - Pearson r correlation data
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (2 images)
-1. `public/marketing/ad_01.png`
-2. `public/screenshots/03_bottleneck_moved_transition.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/social_card_data_analytics.png`
+2. `public/screenshots/06_architecture_evidence_view.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/marketing/ad_10.png`
 
 ### Post Copy
 
@@ -157,28 +163,30 @@ https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/n
 
 ---
 
-## Post 5: Night Observation (18:24 MDT)
+## Post 5: Night Observation (20:32 MDT)
 
 - **Buffer Post ID**: `buffer_x_d14_p5`
 - **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 14
 - **Content Pillar**: Pillar F: Build Journey
-- **Scheduled Time (MDT)**: 18:24 MDT
+- **Scheduled Time (MDT)**: 20:32 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
 - **Hook**: Week 2 is a wrap!
 - **Post Summary**: Week 3 starts tomorrow: Preservation limits, biophysical functionalization, and consciousness validation.
-- **Media**: `banner-dark.png, ad_10.png`
-- **Media Order**: 1. banner-dark.png -> 2. ad_10.png
+- **Media**: `social_card_nim_gke.png, 05_gpu_exploration_map.png, eda_histograms.png, ad_09.png`
+- **Media Order**: 1. social_card_nim_gke.png -> 2. 05_gpu_exploration_map.png -> 3. eda_histograms.png -> 4. ad_09.png
 - **Hashtags**: #NVIDIAGTC #BuildInPublic
 - **Mentions**: None
 - **Claims Verified**: YES - Week 2 close / Week 3 teaser
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (2 images)
-1. `public/images/banner-dark.png`
-2. `public/marketing/ad_10.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/social_card_nim_gke.png`
+2. `public/screenshots/05_gpu_exploration_map.png`
+3. `public/data/eda_histograms.png`
+4. `public/marketing/ad_09.png`
 
 ### Post Copy
 

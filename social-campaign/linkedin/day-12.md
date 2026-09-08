@@ -8,19 +8,19 @@
 
 ---
 
-## Post 1: Morning Flagship (07:48 MDT)
+## Post 1: Morning Flagship (10:05 MDT)
 
 - **Buffer Post ID**: `buffer_li_d12_p1`
 - **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 12
 - **Content Pillar**: Pillar C: GPU / NVIDIA
-- **Scheduled Time (MDT)**: 07:48 MDT
+- **Scheduled Time (MDT)**: 10:05 MDT
 - **Primary Destination URL**: https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 - **Hook**: Dissecting the 8.62x speedup on an NVIDIA Tesla T4 GPU.
 - **Post Summary**: In data science benchmarks, speedup numbers are often reported as single vague multipliers: '10x faster!'
-- **Media**: `ad_03.png, cpu_vs_gpu_speedup.png, 05_colab_nvidia_smi_ensemble_eval.png, banner-dark.png`
-- **Media Order**: 1. ad_03.png -> 2. cpu_vs_gpu_speedup.png -> 3. 05_colab_nvidia_smi_ensemble_eval.png -> 4. banner-dark.png
+- **Media**: `social_card_data_analytics.png, 06_architecture_evidence_view.png, cpu_vs_gpu_speedup.png, ad_10.png`
+- **Media Order**: 1. social_card_data_analytics.png -> 2. 06_architecture_evidence_view.png -> 3. cpu_vs_gpu_speedup.png -> 4. ad_10.png
 - **Hashtags**: #NVIDIAGTC #NVIDIA #TeslaT4 #RAPIDS #cuDF #cuML #Benchmark #DataScience #PerformanceEngineering
 - **Mentions**: None
 - **Claims Verified**: YES - 8.62x overall speedup verified in cpu_vs_gpu_benchmark.json
@@ -28,10 +28,10 @@
 
 ### Media Attachments
 **Format**: Multi-Image Carousel (4 images)
-1. `public/marketing/ad_03.png`
-2. `public/data/cpu_vs_gpu_speedup.png`
-3. `public/colab-evidence/05_colab_nvidia_smi_ensemble_eval.png`
-4. `public/images/banner-dark.png`
+1. `public/images/social_card_data_analytics.png`
+2. `public/screenshots/06_architecture_evidence_view.png`
+3. `public/data/cpu_vs_gpu_speedup.png`
+4. `public/marketing/ad_10.png`
 
 ### Post Copy
 
@@ -71,29 +71,30 @@ https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/n
 
 ---
 
-## Post 2: Mid-Morning Explainer (09:36 MDT)
+## Post 2: Mid-Morning Explainer (12:20 MDT)
 
 - **Buffer Post ID**: `buffer_li_d12_p2`
 - **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 12
 - **Content Pillar**: Pillar C: GPU / NVIDIA
-- **Scheduled Time (MDT)**: 09:36 MDT
+- **Scheduled Time (MDT)**: 12:20 MDT
 - **Primary Destination URL**: https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 - **Hook**: cuML vs scikit-learn: Why Random Forest trained 8.5x faster on GPU.
 - **Post Summary**: Why does Random Forest training accelerate so dramatically on a GPU?
-- **Media**: `03_colab_cuml_linear_regression.png, 04_colab_cuml_execution_progress.png, cpu_vs_gpu_speedup.png`
-- **Media Order**: 1. 03_colab_cuml_linear_regression.png -> 2. 04_colab_cuml_execution_progress.png -> 3. cpu_vs_gpu_speedup.png
+- **Media**: `social_card_accelerated_ml.png, 05_gpu_exploration_map.png, 07_github_notebook_code_provenance.png, ad_09.png`
+- **Media Order**: 1. social_card_accelerated_ml.png -> 2. 05_gpu_exploration_map.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_09.png
 - **Hashtags**: #NVIDIAGTC #cuML #MachineLearning #RandomForest #scikitlearn #DataScience #GPUComputing
 - **Mentions**: None
 - **Claims Verified**: YES - cuML vs scikit-learn mechanics documented
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (3 images)
-1. `public/colab-evidence/03_colab_cuml_linear_regression.png`
-2. `public/colab-evidence/04_colab_cuml_execution_progress.png`
-3. `public/data/cpu_vs_gpu_speedup.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/social_card_accelerated_ml.png`
+2. `public/screenshots/05_gpu_exploration_map.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/marketing/ad_09.png`
 
 ### Post Copy
 
@@ -122,28 +123,30 @@ https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/n
 
 ---
 
-## Post 3: Noon Visual Proof (11:32 MDT)
+## Post 3: Noon Visual Proof (14:49 MDT)
 
 - **Buffer Post ID**: `buffer_li_d12_p3`
 - **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 12
 - **Content Pillar**: Pillar C: GPU / NVIDIA
-- **Scheduled Time (MDT)**: 11:32 MDT
+- **Scheduled Time (MDT)**: 14:49 MDT
 - **Primary Destination URL**: https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 - **Hook**: The empirical benchmark chart: CPU vs GPU across all 5 pipeline stages.
 - **Post Summary**: Generated directly by scripts/render_benchmark_chart.py from raw timing JSON.
-- **Media**: `cpu_vs_gpu_speedup.png, ad_03.png`
-- **Media Order**: 1. cpu_vs_gpu_speedup.png -> 2. ad_03.png
+- **Media**: `social_card_accelerated_ml.png, 06_architecture_evidence_view.png, cpu_vs_gpu_speedup.png, ad_08.png`
+- **Media Order**: 1. social_card_accelerated_ml.png -> 2. 06_architecture_evidence_view.png -> 3. cpu_vs_gpu_speedup.png -> 4. ad_08.png
 - **Hashtags**: #NVIDIAGTC #DataVisualization #Benchmark #Python #Matplotlib
 - **Mentions**: None
 - **Claims Verified**: YES - Chart matches public/data/cpu_vs_gpu_speedup.png
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (2 images)
-1. `public/data/cpu_vs_gpu_speedup.png`
-2. `public/marketing/ad_03.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/social_card_accelerated_ml.png`
+2. `public/screenshots/06_architecture_evidence_view.png`
+3. `public/data/cpu_vs_gpu_speedup.png`
+4. `public/marketing/ad_08.png`
 
 ### Post Copy
 
@@ -161,29 +164,30 @@ https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/n
 
 ---
 
-## Post 4: Evening Deep Dive (17:42 MDT)
+## Post 4: Evening Deep Dive (17:36 MDT)
 
 - **Buffer Post ID**: `buffer_li_d12_p4`
 - **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 12
 - **Content Pillar**: Pillar C: GPU / NVIDIA
-- **Scheduled Time (MDT)**: 17:42 MDT
+- **Scheduled Time (MDT)**: 17:36 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: What happens when cudf.pandas encounters an unsupported operation?
 - **Post Summary**: A common fear among engineers adopting GPU dataframes is code crashes when a pandas function lacks a native CUDA implementation.
-- **Media**: `06_colab_gpu_extensions_and_terminal.png, 06_architecture_evidence_view.png, banner-dark.png`
-- **Media Order**: 1. 06_colab_gpu_extensions_and_terminal.png -> 2. 06_architecture_evidence_view.png -> 3. banner-dark.png
+- **Media**: `social_card_data_analytics.png, 06_architecture_evidence_view.png, 07_github_notebook_code_provenance.png, ad_07.png`
+- **Media Order**: 1. social_card_data_analytics.png -> 2. 06_architecture_evidence_view.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_07.png
 - **Hashtags**: #NVIDIAGTC #RAPIDS #cuDF #Python #DataEngineering #Pandas #CleanArchitecture
 - **Mentions**: None
 - **Claims Verified**: YES - CPU fallback semantics in cudf.pandas verified
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (3 images)
-1. `public/colab-evidence/06_colab_gpu_extensions_and_terminal.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/social_card_data_analytics.png`
 2. `public/screenshots/06_architecture_evidence_view.png`
-3. `public/images/banner-dark.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/marketing/ad_07.png`
 
 ### Post Copy
 
@@ -207,28 +211,30 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 ---
 
-## Post 5: Night Build Log (19:36 MDT)
+## Post 5: Night Build Log (20:20 MDT)
 
 - **Buffer Post ID**: `buffer_li_d12_p5`
 - **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 12
 - **Content Pillar**: Pillar F: Build Journey
-- **Scheduled Time (MDT)**: 19:36 MDT
+- **Scheduled Time (MDT)**: 20:20 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: Day 12 Build Log: Eliminating benchmark warmup bias.
 - **Post Summary**: When benchmarking GPU kernels in Python, the first run often suffers from CUDA context initialization and JIT compilation overh...
-- **Media**: `ad_03.png, 05_colab_nvidia_smi_ensemble_eval.png`
-- **Media Order**: 1. ad_03.png -> 2. 05_colab_nvidia_smi_ensemble_eval.png
+- **Media**: `social_card_data_analytics.png, 02_imaging_wall_baseline.png, cpu_vs_gpu_speedup.png, ad_06.png`
+- **Media Order**: 1. social_card_data_analytics.png -> 2. 02_imaging_wall_baseline.png -> 3. cpu_vs_gpu_speedup.png -> 4. ad_06.png
 - **Hashtags**: #NVIDIAGTC #Benchmarking #Statistics #Python #PerformanceTuning #BuildInPublic
 - **Mentions**: None
 - **Claims Verified**: YES - scripts/benchmark_cpu_vs_gpu.py verified
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (2 images)
-1. `public/marketing/ad_03.png`
-2. `public/colab-evidence/05_colab_nvidia_smi_ensemble_eval.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/social_card_data_analytics.png`
+2. `public/screenshots/02_imaging_wall_baseline.png`
+3. `public/data/cpu_vs_gpu_speedup.png`
+4. `public/marketing/ad_06.png`
 
 ### Post Copy
 

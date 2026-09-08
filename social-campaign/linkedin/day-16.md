@@ -8,19 +8,19 @@
 
 ---
 
-## Post 1: Morning Flagship (07:46 MDT)
+## Post 1: Morning Flagship (10:04 MDT)
 
 - **Buffer Post ID**: `buffer_li_d16_p1`
 - **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 16
 - **Content Pillar**: Pillar A: WBE Research
-- **Scheduled Time (MDT)**: 07:46 MDT
+- **Scheduled Time (MDT)**: 10:04 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
 - **Hook**: Reconstruction vs Functionalization: Why having the wiring diagram is not enough.
 - **Post Summary**: Imagine you are given a complete, nanometer-accurate 3D scan of an advanced microprocessor:
-- **Media**: `ad_06.png, 01_hero_overview.png, 04_nemotron_grounded_interpretation.png, banner-dark.png`
-- **Media Order**: 1. ad_06.png -> 2. 01_hero_overview.png -> 3. 04_nemotron_grounded_interpretation.png -> 4. banner-dark.png
+- **Media**: `social_card_nim_gke.png, 06_architecture_evidence_view.png, eda_histograms.png, ad_09.png`
+- **Media Order**: 1. social_card_nim_gke.png -> 2. 06_architecture_evidence_view.png -> 3. eda_histograms.png -> 4. ad_09.png
 - **Hashtags**: #NVIDIAGTC #ComputationalNeuroscience #Connectomics #Biophysics #SystemsModeling #AI #ComputerArchitecture
 - **Mentions**: None
 - **Claims Verified**: YES - Connectome != simulation thesis verified
@@ -28,10 +28,10 @@
 
 ### Media Attachments
 **Format**: Multi-Image Carousel (4 images)
-1. `public/marketing/ad_06.png`
-2. `public/screenshots/01_hero_overview.png`
-3. `public/screenshots/04_nemotron_grounded_interpretation.png`
-4. `public/images/banner-dark.png`
+1. `public/images/social_card_nim_gke.png`
+2. `public/screenshots/06_architecture_evidence_view.png`
+3. `public/data/eda_histograms.png`
+4. `public/marketing/ad_09.png`
 
 ### Post Copy
 
@@ -64,29 +64,30 @@ https://z-wbe-bottleneck-lab.vercel.app
 
 ---
 
-## Post 2: Mid-Morning Explainer (09:34 MDT)
+## Post 2: Mid-Morning Explainer (12:18 MDT)
 
 - **Buffer Post ID**: `buffer_li_d16_p2`
 - **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 16
 - **Content Pillar**: Pillar A: WBE Research
-- **Scheduled Time (MDT)**: 09:34 MDT
+- **Scheduled Time (MDT)**: 12:18 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: How do you infer synaptic weight from an electron micrograph?
 - **Post Summary**: When computer vision detects a synapse in an electron micrograph, what physical features can it extract?
-- **Media**: `ad_04.png, 07_github_notebook_code_provenance.png, banner-light.png`
-- **Media Order**: 1. ad_04.png -> 2. 07_github_notebook_code_provenance.png -> 3. banner-light.png
+- **Media**: `golden_ticket_speed_up_data_analytics.png, 04_nemotron_grounded_interpretation.png, 07_github_notebook_code_provenance.png, ad_08.png`
+- **Media Order**: 1. golden_ticket_speed_up_data_analytics.png -> 2. 04_nemotron_grounded_interpretation.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_08.png
 - **Hashtags**: #NVIDIAGTC #Neuroscience #SynapticPlasticity #Biophysics #DataScience #OpenSource
 - **Mentions**: None
 - **Claims Verified**: YES - Synaptic conductance modeling in shared/src/equations.ts
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (3 images)
-1. `public/marketing/ad_04.png`
-2. `public/colab-evidence/07_github_notebook_code_provenance.png`
-3. `public/images/banner-light.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/golden_ticket_speed_up_data_analytics.png`
+2. `public/screenshots/04_nemotron_grounded_interpretation.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/marketing/ad_08.png`
 
 ### Post Copy
 
@@ -114,14 +115,14 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 ---
 
-## Post 3: Noon Visual Proof (11:30 MDT)
+## Post 3: Noon Visual Proof (14:48 MDT)
 
 - **Buffer Post ID**: `buffer_li_d16_p3`
 - **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 16
 - **Content Pillar**: Pillar H: Product Demo
-- **Scheduled Time (MDT)**: 11:30 MDT
+- **Scheduled Time (MDT)**: 14:48 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
 - **Hook**: Watch NVIDIA Nemotron explain the Functionalization problem in ELI5 mode.
 - **Post Summary**: It uses the musical sheet music metaphor:
@@ -152,29 +153,30 @@ https://z-wbe-bottleneck-lab.vercel.app
 
 ---
 
-## Post 4: Evening Deep Dive (17:38 MDT)
+## Post 4: Evening Deep Dive (17:34 MDT)
 
 - **Buffer Post ID**: `buffer_li_d16_p4`
 - **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 16
 - **Content Pillar**: Pillar B: Systems Engineering
-- **Scheduled Time (MDT)**: 17:38 MDT
+- **Scheduled Time (MDT)**: 17:34 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: Biophysical Levels of Simulation: Point neurons vs Multi-compartment.
 - **Post Summary**: When evaluating Stage 5 (Execution), how detailed does the neural simulation need to be?
-- **Media**: `ad_01.png, 06_architecture_evidence_view.png, banner-dark.png`
-- **Media Order**: 1. ad_01.png -> 2. 06_architecture_evidence_view.png -> 3. banner-dark.png
+- **Media**: `golden_ticket_intro_inference.png, 06_architecture_evidence_view.png, 07_github_notebook_code_provenance.png, ad_07.png`
+- **Media Order**: 1. golden_ticket_intro_inference.png -> 2. 06_architecture_evidence_view.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_07.png
 - **Hashtags**: #NVIDIAGTC #Simulation #HighPerformanceComputing #Biophysics #Algorithms #Supercomputing
 - **Mentions**: None
 - **Claims Verified**: YES - Simulation FLOPS equation verified
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (3 images)
-1. `public/marketing/ad_01.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/golden_ticket_intro_inference.png`
 2. `public/screenshots/06_architecture_evidence_view.png`
-3. `public/images/banner-dark.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/marketing/ad_07.png`
 
 ### Post Copy
 
@@ -200,28 +202,30 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 ---
 
-## Post 5: Night Build Log (19:32 MDT)
+## Post 5: Night Build Log (20:18 MDT)
 
 - **Buffer Post ID**: `buffer_li_d16_p5`
 - **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 16
 - **Content Pillar**: Pillar F: Build Journey
-- **Scheduled Time (MDT)**: 19:32 MDT
+- **Scheduled Time (MDT)**: 20:18 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: Day 16 Build Log: Validating the Hero Demo state transitions.
 - **Post Summary**: In tests/heroDemo.test.ts, we wrote automated end-to-end integration tests that verify:
-- **Media**: `ad_06.png, 03_bottleneck_moved_transition.png`
-- **Media Order**: 1. ad_06.png -> 2. 03_bottleneck_moved_transition.png
+- **Media**: `golden_ticket_accelerated_ml.png, 02_imaging_wall_baseline.png, 07_github_notebook_code_provenance.png, ad_06.png`
+- **Media Order**: 1. golden_ticket_accelerated_ml.png -> 2. 02_imaging_wall_baseline.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_06.png
 - **Hashtags**: #NVIDIAGTC #IntegrationTesting #Vitest #FrontendEngineering #BuildInPublic
 - **Mentions**: None
 - **Claims Verified**: YES - shared/tests/heroDemo.test.ts passing
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (2 images)
-1. `public/marketing/ad_06.png`
-2. `public/screenshots/03_bottleneck_moved_transition.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/golden_ticket_accelerated_ml.png`
+2. `public/screenshots/02_imaging_wall_baseline.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/marketing/ad_06.png`
 
 ### Post Copy
 

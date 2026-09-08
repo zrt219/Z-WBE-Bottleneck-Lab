@@ -8,19 +8,19 @@
 
 ---
 
-## Post 1: Morning Flagship (07:44 MDT)
+## Post 1: Morning Flagship (10:02 MDT)
 
 - **Buffer Post ID**: `buffer_li_d11_p1`
 - **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 11
 - **Content Pillar**: Pillar D: Google Cloud / Colab
-- **Scheduled Time (MDT)**: 07:44 MDT
+- **Scheduled Time (MDT)**: 10:02 MDT
 - **Primary Destination URL**: https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 - **Hook**: The 10 stages of our canonical Colab GPU Lab.
 - **Post Summary**: When building a cloud-accelerated scientific demonstrator, reproducibility is everything.
-- **Media**: `ad_08.png, 01_colab_notebook_overview.png, 06_colab_gpu_extensions_and_terminal.png, google-nvidia-developer-badges.png`
-- **Media Order**: 1. ad_08.png -> 2. 01_colab_notebook_overview.png -> 3. 06_colab_gpu_extensions_and_terminal.png -> 4. google-nvidia-developer-badges.png
+- **Media**: `social_card_data_analytics.png, 03_bottleneck_moved_transition.png, cpu_vs_gpu_speedup.png, ad_06.png`
+- **Media Order**: 1. social_card_data_analytics.png -> 2. 03_bottleneck_moved_transition.png -> 3. cpu_vs_gpu_speedup.png -> 4. ad_06.png
 - **Hashtags**: #NVIDIAGTC #GoogleCloud #GoogleColab #NVIDIA #RAPIDS #DataScience #MachineLearning #OpenScience
 - **Mentions**: None
 - **Claims Verified**: YES - 10-stage unified notebook verified
@@ -28,10 +28,10 @@
 
 ### Media Attachments
 **Format**: Multi-Image Carousel (4 images)
-1. `public/marketing/ad_08.png`
-2. `public/colab-evidence/01_colab_notebook_overview.png`
-3. `public/colab-evidence/06_colab_gpu_extensions_and_terminal.png`
-4. `public/images/google-nvidia-developer-badges.png`
+1. `public/images/social_card_data_analytics.png`
+2. `public/screenshots/03_bottleneck_moved_transition.png`
+3. `public/data/cpu_vs_gpu_speedup.png`
+4. `public/marketing/ad_06.png`
 
 ### Post Copy
 
@@ -65,29 +65,30 @@ https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/n
 
 ---
 
-## Post 2: Mid-Morning Explainer (09:32 MDT)
+## Post 2: Mid-Morning Explainer (12:16 MDT)
 
 - **Buffer Post ID**: `buffer_li_d11_p2`
 - **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 11
 - **Content Pillar**: Pillar D: Google Cloud / Colab
-- **Scheduled Time (MDT)**: 09:32 MDT
+- **Scheduled Time (MDT)**: 12:16 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: Antigravity -> GitHub -> Google Colab: The developer flywheel.
 - **Post Summary**: How did we build, benchmark, and sync our project across local code editors, cloud repositories, and Google Cloud Colab?
-- **Media**: `07_github_notebook_code_provenance.png, 06_architecture_evidence_view.png, banner-light.png`
-- **Media Order**: 1. 07_github_notebook_code_provenance.png -> 2. 06_architecture_evidence_view.png -> 3. banner-light.png
+- **Media**: `google-nvidia-developer-badges.png, 06_architecture_evidence_view.png, cpu_vs_gpu_speedup.png, ad_05.png`
+- **Media Order**: 1. google-nvidia-developer-badges.png -> 2. 06_architecture_evidence_view.png -> 3. cpu_vs_gpu_speedup.png -> 4. ad_05.png
 - **Hashtags**: #NVIDIAGTC #DeveloperWorkflow #DevOps #GitHub #GoogleColab #Automation #BuildInPublic
 - **Mentions**: None
 - **Claims Verified**: YES - scripts/sync-colab.ps1 automated workflow
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (3 images)
-1. `public/colab-evidence/07_github_notebook_code_provenance.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/google-nvidia-developer-badges.png`
 2. `public/screenshots/06_architecture_evidence_view.png`
-3. `public/images/banner-light.png`
+3. `public/data/cpu_vs_gpu_speedup.png`
+4. `public/marketing/ad_05.png`
 
 ### Post Copy
 
@@ -114,19 +115,19 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 ---
 
-## Post 3: Noon Visual Proof (11:28 MDT)
+## Post 3: Noon Visual Proof (14:45 MDT)
 
 - **Buffer Post ID**: `buffer_li_d11_p3`
 - **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 11
 - **Content Pillar**: Pillar D: Google Cloud / Colab
-- **Scheduled Time (MDT)**: 11:28 MDT
+- **Scheduled Time (MDT)**: 14:45 MDT
 - **Primary Destination URL**: https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 - **Hook**: Watch our Colab notebook execute live from cell 1 to cell 10.
 - **Post Summary**: In this capture, notice how cleanly %load_ext cudf.pandas hooks into the notebook runtime, delivering immediate speedups on Par...
-- **Media**: `colab_t4_live_execution.gif`
-- **Media Order**: Single Asset: colab_t4_live_execution.gif
+- **Media**: `colab_t4_terminal_execution.gif`
+- **Media Order**: Single Asset: colab_t4_terminal_execution.gif
 - **Hashtags**: #NVIDIAGTC #GoogleColab #Jupyter #NVIDIA #Python #AcceleratedComputing
 - **Mentions**: None
 - **Claims Verified**: YES - Colab execution GIF verified
@@ -134,7 +135,7 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 ### Media Attachments
 **Format**: Animated GIF
-- `public/recordings/colab_t4_live_execution.gif`
+- `public/recordings/colab_t4_terminal_execution.gif`
 
 ### Post Copy
 
@@ -151,29 +152,30 @@ https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/n
 
 ---
 
-## Post 4: Evening Deep Dive (17:34 MDT)
+## Post 4: Evening Deep Dive (17:31 MDT)
 
 - **Buffer Post ID**: `buffer_li_d11_p4`
 - **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 11
 - **Content Pillar**: Pillar E: Open Source
-- **Scheduled Time (MDT)**: 17:34 MDT
+- **Scheduled Time (MDT)**: 17:31 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: Unit testing a Jupyter Notebook in CI/CD? Yes.
 - **Post Summary**: A major source of frustration in open-source data science is broken notebooks:
-- **Media**: `ad_09.png, 07_github_notebook_code_provenance.png, banner-dark.png`
-- **Media Order**: 1. ad_09.png -> 2. 07_github_notebook_code_provenance.png -> 3. banner-dark.png
+- **Media**: `social_card_data_analytics.png, 06_architecture_evidence_view.png, 07_github_notebook_code_provenance.png, ad_04.png`
+- **Media Order**: 1. social_card_data_analytics.png -> 2. 06_architecture_evidence_view.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_04.png
 - **Hashtags**: #NVIDIAGTC #CICD #SoftwareTesting #DataScience #Jupyter #TypeScript #QualityEngineering
 - **Mentions**: None
 - **Claims Verified**: YES - tests/colabNotebook.test.ts passes (5/5 tests)
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (3 images)
-1. `public/marketing/ad_09.png`
-2. `public/colab-evidence/07_github_notebook_code_provenance.png`
-3. `public/images/banner-dark.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/social_card_data_analytics.png`
+2. `public/screenshots/06_architecture_evidence_view.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/marketing/ad_04.png`
 
 ### Post Copy
 
@@ -200,28 +202,30 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 ---
 
-## Post 5: Night Build Log (19:28 MDT)
+## Post 5: Night Build Log (20:15 MDT)
 
 - **Buffer Post ID**: `buffer_li_d11_p5`
 - **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 11
 - **Content Pillar**: Pillar F: Build Journey
-- **Scheduled Time (MDT)**: 19:28 MDT
+- **Scheduled Time (MDT)**: 20:15 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: Day 11 Build Log: Writing COLAB.md for flawless user onboarding.
 - **Post Summary**: When asking developers and contest judges to run a notebook, assume zero prior setup:
-- **Media**: `ad_03.png, 02_colab_t4_gpu_runtime_dialog.png`
-- **Media Order**: 1. ad_03.png -> 2. 02_colab_t4_gpu_runtime_dialog.png
+- **Media**: `social_card_nim_gke.png, 05_gpu_exploration_map.png, 07_github_notebook_code_provenance.png, ad_03.png`
+- **Media Order**: 1. social_card_nim_gke.png -> 2. 05_gpu_exploration_map.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_03.png
 - **Hashtags**: #NVIDIAGTC #Documentation #TechnicalWriting #DeveloperExperience #OpenSource
 - **Mentions**: None
 - **Claims Verified**: YES - COLAB.md documentation guide verified
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (2 images)
-1. `public/marketing/ad_03.png`
-2. `public/colab-evidence/02_colab_t4_gpu_runtime_dialog.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/social_card_nim_gke.png`
+2. `public/screenshots/05_gpu_exploration_map.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/marketing/ad_03.png`
 
 ### Post Copy
 

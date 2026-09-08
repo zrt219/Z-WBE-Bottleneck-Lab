@@ -8,28 +8,30 @@
 
 ---
 
-## Post 1: Morning Hook (07:24 MDT)
+## Post 1: Morning Hook (10:20 MDT)
 
 - **Buffer Post ID**: `buffer_x_d05_p1`
 - **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 05
 - **Content Pillar**: Pillar B: Systems Engineering
-- **Scheduled Time (MDT)**: 07:24 MDT
+- **Scheduled Time (MDT)**: 10:20 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
 - **Hook**: FLOPS are cheap.
 - **Post Summary**: Streaming 100 trillion synaptic weights across a memory bus at 30 TB/s is expensive.
-- **Media**: `ad_07.png, 03_bottleneck_moved_transition.png`
-- **Media Order**: 1. ad_07.png -> 2. 03_bottleneck_moved_transition.png
+- **Media**: `golden_ticket_data_analytics.png, 06_architecture_evidence_view.png, 04_colab_cuml_execution_progress.png, ad_03.png`
+- **Media Order**: 1. golden_ticket_data_analytics.png -> 2. 06_architecture_evidence_view.png -> 3. 04_colab_cuml_execution_progress.png -> 4. ad_03.png
 - **Hashtags**: #NVIDIAGTC #Hardware
 - **Mentions**: None
 - **Claims Verified**: YES - Memory wall core thesis
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (2 images)
-1. `public/marketing/ad_07.png`
-2. `public/screenshots/03_bottleneck_moved_transition.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/golden_ticket_data_analytics.png`
+2. `public/screenshots/06_architecture_evidence_view.png`
+3. `public/colab-evidence/04_colab_cuml_execution_progress.png`
+4. `public/marketing/ad_03.png`
 
 ### Post Copy
 
@@ -45,28 +47,30 @@ https://z-wbe-bottleneck-lab.vercel.app
 
 ---
 
-## Post 2: Mid-Morning Visual (08:50 MDT)
+## Post 2: Mid-Morning Visual (12:34 MDT)
 
 - **Buffer Post ID**: `buffer_x_d05_p2`
 - **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 05
 - **Content Pillar**: Pillar B: Systems Engineering
-- **Scheduled Time (MDT)**: 08:50 MDT
+- **Scheduled Time (MDT)**: 12:34 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: Capacity is a warehouse. Bandwidth is the loading dock.
 - **Post Summary**: Storing 800 TB of synapses on SSDs is easy.
-- **Media**: `ad_04.png, 06_architecture_evidence_view.png`
-- **Media Order**: 1. ad_04.png -> 2. 06_architecture_evidence_view.png
+- **Media**: `golden_ticket_nim_gke.png, 06_architecture_evidence_view.png, 07_github_notebook_code_provenance.png, ad_02.png`
+- **Media Order**: 1. golden_ticket_nim_gke.png -> 2. 06_architecture_evidence_view.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_02.png
 - **Hashtags**: #NVIDIAGTC #HPC
 - **Mentions**: None
 - **Claims Verified**: YES - Capacity vs bandwidth distinction
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (2 images)
-1. `public/marketing/ad_04.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/golden_ticket_nim_gke.png`
 2. `public/screenshots/06_architecture_evidence_view.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/marketing/ad_02.png`
 
 ### Post Copy
 
@@ -83,19 +87,19 @@ Equations: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 ---
 
-## Post 3: Late-Morning Data (10:38 MDT)
+## Post 3: Late-Morning Data (15:04 MDT)
 
 - **Buffer Post ID**: `buffer_x_d05_p3`
 - **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 05
 - **Content Pillar**: Pillar D: Google Cloud / Colab
-- **Scheduled Time (MDT)**: 10:38 MDT
+- **Scheduled Time (MDT)**: 15:04 MDT
 - **Primary Destination URL**: https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 - **Hook**: In Colab, PCIe memory transfer took 35% of total time until cuDF loaded vectors directly into GDDR6 device memory.
 - **Post Summary**: Zero-copy pipelines are mandatory for WBE scale:
-- **Media**: `colab_t4_live_execution.gif`
-- **Media Order**: Single Asset: colab_t4_live_execution.gif
+- **Media**: `colab_t4_terminal_execution.gif`
+- **Media Order**: Single Asset: colab_t4_terminal_execution.gif
 - **Hashtags**: #NVIDIAGTC #RAPIDS
 - **Mentions**: None
 - **Claims Verified**: YES - GPU zero-copy data transfer profiling
@@ -103,7 +107,7 @@ Equations: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 ### Media Attachments
 **Format**: Animated GIF
-- `public/recordings/colab_t4_live_execution.gif`
+- `public/recordings/colab_t4_terminal_execution.gif`
 
 ### Post Copy
 
@@ -118,14 +122,14 @@ https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/n
 
 ---
 
-## Post 4: Evening Hook (17:12 MDT)
+## Post 4: Evening Hook (17:50 MDT)
 
 - **Buffer Post ID**: `buffer_x_d05_p4`
 - **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 05
 - **Content Pillar**: Pillar H: Product Demo
-- **Scheduled Time (MDT)**: 17:12 MDT
+- **Scheduled Time (MDT)**: 17:50 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
 - **Hook**: Toggle between ELI5 simple analogies and Expert quantitative analysis in Z-WBE.
 - **Post Summary**: NVIDIA Nemotron explains the Memory Wall in plain English or deep systems math.
@@ -154,28 +158,30 @@ Try it: https://z-wbe-bottleneck-lab.vercel.app
 
 ---
 
-## Post 5: Night Observation (18:42 MDT)
+## Post 5: Night Observation (20:34 MDT)
 
 - **Buffer Post ID**: `buffer_x_d05_p5`
 - **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 05
 - **Content Pillar**: Pillar B: Systems Engineering
-- **Scheduled Time (MDT)**: 18:42 MDT
+- **Scheduled Time (MDT)**: 20:34 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: The Von Neumann architecture separates compute from memory.
 - **Post Summary**: The biological brain does not.
-- **Media**: `banner-dark.png, 01_hero_overview.png`
-- **Media Order**: 1. banner-dark.png -> 2. 01_hero_overview.png
+- **Media**: `google-nvidia-developer-badges.png, 06_architecture_evidence_view.png, 07_github_notebook_code_provenance.png, ad_01.png`
+- **Media Order**: 1. google-nvidia-developer-badges.png -> 2. 06_architecture_evidence_view.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_01.png
 - **Hashtags**: #NVIDIAGTC #Neuroscience
 - **Mentions**: None
 - **Claims Verified**: YES - Von Neumann architecture limits
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (2 images)
-1. `public/images/banner-dark.png`
-2. `public/screenshots/01_hero_overview.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/google-nvidia-developer-badges.png`
+2. `public/screenshots/06_architecture_evidence_view.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/marketing/ad_01.png`
 
 ### Post Copy
 

@@ -8,19 +8,19 @@
 
 ---
 
-## Post 1: Morning Flagship (07:46 MDT)
+## Post 1: Morning Flagship (10:03 MDT)
 
 - **Buffer Post ID**: `6a9faec17c96d9873c8f7cf0`
 - **Buffer Status**: `DRAFT (Buffer Verified)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 07
 - **Content Pillar**: Pillar F: Build Journey
-- **Scheduled Time (MDT)**: 07:46 MDT
+- **Scheduled Time (MDT)**: 10:03 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
 - **Hook**: Week 1 Retrospective: What we learned launching Z-WBE Bottleneck Lab.
 - **Post Summary**: Seven days ago, we launched Z-WBE Bottleneck Lab for the Google Cloud × NVIDIA GTC Berlin 2026 Golden Ticket Challenge.
-- **Media**: `ad_10.png, 01_hero_overview.png, 03_bottleneck_moved_transition.png, banner-dark.png`
-- **Media Order**: 1. ad_10.png -> 2. 01_hero_overview.png -> 3. 03_bottleneck_moved_transition.png -> 4. banner-dark.png
+- **Media**: `social_card_intro_inference.png, 02_imaging_wall_baseline.png, cpu_vs_gpu_speedup.png, ad_04.png`
+- **Media Order**: 1. social_card_intro_inference.png -> 2. 02_imaging_wall_baseline.png -> 3. cpu_vs_gpu_speedup.png -> 4. ad_04.png
 - **Hashtags**: #NVIDIAGTC #GoogleCloud #NVIDIA #BuildInPublic #OpenSource #SoftwareEngineering #ComputationalNeuroscience #Retrospective
 - **Mentions**: None
 - **Claims Verified**: YES - Week 1 sprint retrospective verified
@@ -28,10 +28,10 @@
 
 ### Media Attachments
 **Format**: Multi-Image Carousel (4 images)
-1. `public/marketing/ad_10.png`
-2. `public/screenshots/01_hero_overview.png`
-3. `public/screenshots/03_bottleneck_moved_transition.png`
-4. `public/images/banner-dark.png`
+1. `public/images/social_card_intro_inference.png`
+2. `public/screenshots/02_imaging_wall_baseline.png`
+3. `public/data/cpu_vs_gpu_speedup.png`
+4. `public/marketing/ad_04.png`
 
 ### Post Copy
 
@@ -65,29 +65,30 @@ Try the demonstrator: https://z-wbe-bottleneck-lab.vercel.app
 
 ---
 
-## Post 2: Mid-Morning Explainer (09:30 MDT)
+## Post 2: Mid-Morning Explainer (12:16 MDT)
 
 - **Buffer Post ID**: `6a9faec2b11a426090bd80c0`
 - **Buffer Status**: `DRAFT (Buffer Verified)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 07
 - **Content Pillar**: Pillar H: Product Demo
-- **Scheduled Time (MDT)**: 09:30 MDT
+- **Scheduled Time (MDT)**: 12:16 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
 - **Hook**: ELI5 vs Expert Mode: Bridging complex neuroscience for every audience.
 - **Post Summary**: One of the most praised features in Z-WBE Bottleneck Lab is our interactive interpretation toggle:
-- **Media**: `ad_04.png, 04_nemotron_grounded_interpretation.png, 06_architecture_evidence_view.png`
-- **Media Order**: 1. ad_04.png -> 2. 04_nemotron_grounded_interpretation.png -> 3. 06_architecture_evidence_view.png
+- **Media**: `social_card_intro_inference.png, 04_nemotron_grounded_interpretation.png, 04_colab_cuml_execution_progress.png, ad_03.png`
+- **Media Order**: 1. social_card_intro_inference.png -> 2. 04_nemotron_grounded_interpretation.png -> 3. 04_colab_cuml_execution_progress.png -> 4. ad_03.png
 - **Hashtags**: #NVIDIAGTC #AI #PromptEngineering #Nemotron #UXDesign #ScientificCommunication
 - **Mentions**: None
 - **Claims Verified**: YES - ELI5 vs Expert toggle implementation
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (3 images)
-1. `public/marketing/ad_04.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/social_card_intro_inference.png`
 2. `public/screenshots/04_nemotron_grounded_interpretation.png`
-3. `public/screenshots/06_architecture_evidence_view.png`
+3. `public/colab-evidence/04_colab_cuml_execution_progress.png`
+4. `public/marketing/ad_03.png`
 
 ### Post Copy
 
@@ -108,14 +109,14 @@ https://z-wbe-bottleneck-lab.vercel.app
 
 ---
 
-## Post 3: Noon Visual Proof (11:25 MDT)
+## Post 3: Noon Visual Proof (14:45 MDT)
 
 - **Buffer Post ID**: `6a9faec4b11a426090bd80db`
 - **Buffer Status**: `DRAFT (Buffer Verified)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 07
 - **Content Pillar**: Pillar H: Product Demo
-- **Scheduled Time (MDT)**: 11:25 MDT
+- **Scheduled Time (MDT)**: 14:45 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
 - **Hook**: Watch the ELI5 vs Expert toggle in action.
 - **Post Summary**: Notice how the underlying numerical calculations remain identical, while Nemotron dynamically restructures the causal narrative...
@@ -145,29 +146,30 @@ https://z-wbe-bottleneck-lab.vercel.app
 
 ---
 
-## Post 4: Evening Deep Dive (17:32 MDT)
+## Post 4: Evening Deep Dive (17:30 MDT)
 
 - **Buffer Post ID**: `6a9faec5e638e16871e644cd`
 - **Buffer Status**: `DRAFT (Buffer Verified)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 07
 - **Content Pillar**: Pillar E: Open Source
-- **Scheduled Time (MDT)**: 17:32 MDT
+- **Scheduled Time (MDT)**: 17:30 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: The Open Science Invitation: Don't agree with our assumptions? Change them!
 - **Post Summary**: In systems modeling, all models are wrong, but some are useful.
-- **Media**: `ad_09.png, 07_github_notebook_code_provenance.png, banner-light.png`
-- **Media Order**: 1. ad_09.png -> 2. 07_github_notebook_code_provenance.png -> 3. banner-light.png
+- **Media**: `social_card_intro_inference.png, 06_architecture_evidence_view.png, 07_github_notebook_code_provenance.png, ad_02.png`
+- **Media Order**: 1. social_card_intro_inference.png -> 2. 06_architecture_evidence_view.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_02.png
 - **Hashtags**: #NVIDIAGTC #OpenSource #Science #Reproducibility #GitHub #TypeScript #DevCommunity
 - **Mentions**: None
 - **Claims Verified**: YES - Open-source repo forkability verified
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (3 images)
-1. `public/marketing/ad_09.png`
-2. `public/colab-evidence/07_github_notebook_code_provenance.png`
-3. `public/images/banner-light.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/social_card_intro_inference.png`
+2. `public/screenshots/06_architecture_evidence_view.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/marketing/ad_02.png`
 
 ### Post Copy
 
@@ -192,29 +194,30 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 ---
 
-## Post 5: Night Build Log (19:26 MDT)
+## Post 5: Night Build Log (20:15 MDT)
 
 - **Buffer Post ID**: `6a9faec71900c10a4f0e8f5d`
 - **Buffer Status**: `DRAFT (Buffer Verified)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 07
 - **Content Pillar**: Pillar F: Build Journey
-- **Scheduled Time (MDT)**: 19:26 MDT
+- **Scheduled Time (MDT)**: 20:15 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
 - **Hook**: Week 2 Preview: The Engineering Deep Dive.
 - **Post Summary**: Here is what is coming in Week 2 of the Z-WBE sprint:
-- **Media**: `ad_01.png, google-nvidia-developer-badges.png, banner-dark.png`
-- **Media Order**: 1. ad_01.png -> 2. google-nvidia-developer-badges.png -> 3. banner-dark.png
+- **Media**: `social_card_data_analytics.png, 04_nemotron_grounded_interpretation.png, cpu_vs_gpu_speedup.png, ad_01.png`
+- **Media Order**: 1. social_card_data_analytics.png -> 2. 04_nemotron_grounded_interpretation.png -> 3. cpu_vs_gpu_speedup.png -> 4. ad_01.png
 - **Hashtags**: #NVIDIAGTC #BuildInPublic #Engineering #Roadmap #GTC2026
 - **Mentions**: None
 - **Claims Verified**: YES - Week 2 roadmap outline
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (3 images)
-1. `public/marketing/ad_01.png`
-2. `public/images/google-nvidia-developer-badges.png`
-3. `public/images/banner-dark.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/social_card_data_analytics.png`
+2. `public/screenshots/04_nemotron_grounded_interpretation.png`
+3. `public/data/cpu_vs_gpu_speedup.png`
+4. `public/marketing/ad_01.png`
 
 ### Post Copy
 

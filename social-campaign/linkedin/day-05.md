@@ -8,19 +8,19 @@
 
 ---
 
-## Post 1: Morning Flagship (07:48 MDT)
+## Post 1: Morning Flagship (10:05 MDT)
 
 - **Buffer Post ID**: `6a9faeb21900c10a4f0e8dc5`
 - **Buffer Status**: `DRAFT (Buffer Verified)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 05
 - **Content Pillar**: Pillar B: Systems Engineering
-- **Scheduled Time (MDT)**: 07:48 MDT
+- **Scheduled Time (MDT)**: 10:05 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
 - **Hook**: The Memory Wall: Why FLOPS are cheap, but streaming synapses is expensive.
 - **Post Summary**: In modern supercomputing, an H100 or B200 GPU can deliver thousands of TeraFLOPs of raw arithmetic compute.
-- **Media**: `ad_07.png, 03_bottleneck_moved_transition.png, 03_colab_cuml_linear_regression.png, banner-dark.png`
-- **Media Order**: 1. ad_07.png -> 2. 03_bottleneck_moved_transition.png -> 3. 03_colab_cuml_linear_regression.png -> 4. banner-dark.png
+- **Media**: `social_card_nim_gke.png, 06_architecture_evidence_view.png, 08_colab_rapids_and_variable_inspector.png, ad_07.png`
+- **Media Order**: 1. social_card_nim_gke.png -> 2. 06_architecture_evidence_view.png -> 3. 08_colab_rapids_and_variable_inspector.png -> 4. ad_07.png
 - **Hashtags**: #NVIDIAGTC #MemoryWall #ComputerArchitecture #HBM #GPUComputing #HighPerformanceComputing #HardwareEngineering
 - **Mentions**: None
 - **Claims Verified**: YES - Memory wall bandwidth calculations verified
@@ -28,10 +28,10 @@
 
 ### Media Attachments
 **Format**: Multi-Image Carousel (4 images)
-1. `public/marketing/ad_07.png`
-2. `public/screenshots/03_bottleneck_moved_transition.png`
-3. `public/colab-evidence/03_colab_cuml_linear_regression.png`
-4. `public/images/banner-dark.png`
+1. `public/images/social_card_nim_gke.png`
+2. `public/screenshots/06_architecture_evidence_view.png`
+3. `public/colab-evidence/08_colab_rapids_and_variable_inspector.png`
+4. `public/marketing/ad_07.png`
 
 ### Post Copy
 
@@ -64,29 +64,30 @@ https://z-wbe-bottleneck-lab.vercel.app
 
 ---
 
-## Post 2: Mid-Morning Explainer (09:36 MDT)
+## Post 2: Mid-Morning Explainer (12:20 MDT)
 
 - **Buffer Post ID**: `6a9faeb3e638e16871e64364`
 - **Buffer Status**: `DRAFT (Buffer Verified)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 05
 - **Content Pillar**: Pillar B: Systems Engineering
-- **Scheduled Time (MDT)**: 09:36 MDT
+- **Scheduled Time (MDT)**: 12:20 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: Memory Capacity vs Memory Bandwidth: The crucial distinction.
 - **Post Summary**: A common misconception when estimating hardware for brain simulation is focusing exclusively on Memory Capacity:
-- **Media**: `ad_04.png, 06_architecture_evidence_view.png, banner-light.png`
-- **Media Order**: 1. ad_04.png -> 2. 06_architecture_evidence_view.png -> 3. banner-light.png
+- **Media**: `golden_ticket_speed_up_data_analytics.png, 06_architecture_evidence_view.png, 07_github_notebook_code_provenance.png, ad_06.png`
+- **Media Order**: 1. golden_ticket_speed_up_data_analytics.png -> 2. 06_architecture_evidence_view.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_06.png
 - **Hashtags**: #NVIDIAGTC #ComputerArchitecture #HardwareDesign #SystemsEngineering #DataScience #TypeScript
 - **Mentions**: None
 - **Claims Verified**: YES - Memory capacity vs bandwidth formula in shared/src/equations.ts
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (3 images)
-1. `public/marketing/ad_04.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/golden_ticket_speed_up_data_analytics.png`
 2. `public/screenshots/06_architecture_evidence_view.png`
-3. `public/images/banner-light.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/marketing/ad_06.png`
 
 ### Post Copy
 
@@ -115,14 +116,14 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 ---
 
-## Post 3: Noon Visual Proof (11:34 MDT)
+## Post 3: Noon Visual Proof (14:48 MDT)
 
 - **Buffer Post ID**: `6a9faeb51900c10a4f0e8ded`
 - **Buffer Status**: `DRAFT (Buffer Verified)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 05
 - **Content Pillar**: Pillar H: Product Demo
-- **Scheduled Time (MDT)**: 11:34 MDT
+- **Scheduled Time (MDT)**: 14:48 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
 - **Hook**: Watch what happens when you adjust the Synaptic State Density slider in Z-WBE Bottleneck Lab.
 - **Post Summary**: As you increase synaptic state fidelity from 4 bytes (simple integrate-and-fire) to 32 bytes (multi-compartment Hodgkin-Huxley ...
@@ -154,29 +155,30 @@ https://z-wbe-bottleneck-lab.vercel.app
 
 ---
 
-## Post 4: Evening Deep Dive (17:40 MDT)
+## Post 4: Evening Deep Dive (17:36 MDT)
 
 - **Buffer Post ID**: `6a9faeb6b11a426090bd7de6`
 - **Buffer Status**: `DRAFT (Buffer Verified)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 05
 - **Content Pillar**: Pillar C: GPU / NVIDIA
-- **Scheduled Time (MDT)**: 17:40 MDT
+- **Scheduled Time (MDT)**: 17:36 MDT
 - **Primary Destination URL**: https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
 - **Hook**: How we profiled memory bandwidth vs GPU kernel execution in Google Colab.
 - **Post Summary**: In Stage 5 of our canonical Colab notebook, we profiled our tabular pipeline using %load_ext cudf.pandas to observe memory tran...
-- **Media**: `ad_03.png, 06_colab_gpu_extensions_and_terminal.png, 04_colab_cuml_execution_progress.png`
-- **Media Order**: 1. ad_03.png -> 2. 06_colab_gpu_extensions_and_terminal.png -> 3. 04_colab_cuml_execution_progress.png
+- **Media**: `social_card_data_analytics.png, 06_architecture_evidence_view.png, 07_github_notebook_code_provenance.png, ad_05.png`
+- **Media Order**: 1. social_card_data_analytics.png -> 2. 06_architecture_evidence_view.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_05.png
 - **Hashtags**: #NVIDIAGTC #RAPIDS #cuDF #GoogleColab #Profiling #PerformanceEngineering #Python
 - **Mentions**: None
 - **Claims Verified**: YES - Colab Stage 5 profiling evidence verified
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (3 images)
-1. `public/marketing/ad_03.png`
-2. `public/colab-evidence/06_colab_gpu_extensions_and_terminal.png`
-3. `public/colab-evidence/04_colab_cuml_execution_progress.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/social_card_data_analytics.png`
+2. `public/screenshots/06_architecture_evidence_view.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/marketing/ad_05.png`
 
 ### Post Copy
 
@@ -200,29 +202,30 @@ https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/n
 
 ---
 
-## Post 5: Night Build Log (19:38 MDT)
+## Post 5: Night Build Log (20:18 MDT)
 
 - **Buffer Post ID**: `6a9faeb87eee3ace70b780ca`
 - **Buffer Status**: `DRAFT (Buffer Verified)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 05
 - **Content Pillar**: Pillar F: Build Journey
-- **Scheduled Time (MDT)**: 19:38 MDT
+- **Scheduled Time (MDT)**: 20:18 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: Day 5 Build Log: Validating memory bandwidth units and precision.
 - **Post Summary**: When dealing with petabytes and terabytes per second, unit conversions are where bugs hide.
-- **Media**: `ad_07.png, 01_hero_overview.png, banner-dark.png`
-- **Media Order**: 1. ad_07.png -> 2. 01_hero_overview.png -> 3. banner-dark.png
+- **Media**: `golden_ticket_accelerated_ml.png, 06_architecture_evidence_view.png, 07_github_notebook_code_provenance.png, ad_04.png`
+- **Media Order**: 1. golden_ticket_accelerated_ml.png -> 2. 06_architecture_evidence_view.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_04.png
 - **Hashtags**: #NVIDIAGTC #TypeScript #CleanCode #UnitTesting #Mathematics #BuildInPublic
 - **Mentions**: None
 - **Claims Verified**: YES - Vitest equations suite verified
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (3 images)
-1. `public/marketing/ad_07.png`
-2. `public/screenshots/01_hero_overview.png`
-3. `public/images/banner-dark.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/golden_ticket_accelerated_ml.png`
+2. `public/screenshots/06_architecture_evidence_view.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/marketing/ad_04.png`
 
 ### Post Copy
 

@@ -8,19 +8,19 @@
 
 ---
 
-## Post 1: Morning Flagship (07:44 MDT)
+## Post 1: Morning Flagship (10:01 MDT)
 
 - **Buffer Post ID**: `buffer_li_d15_p1`
 - **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 15
 - **Content Pillar**: Pillar A: WBE Research
-- **Scheduled Time (MDT)**: 07:44 MDT
+- **Scheduled Time (MDT)**: 10:01 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
 - **Hook**: Preservation & Acquisition: The biological ground floor of Whole-Brain Emulation.
 - **Post Summary**: Before a single byte of digital storage is written, the physical biological specimen must be stabilized against decay.
-- **Media**: `ad_07.png, 02_imaging_wall_baseline.png, 06_architecture_evidence_view.png, banner-dark.png`
-- **Media Order**: 1. ad_07.png -> 2. 02_imaging_wall_baseline.png -> 3. 06_architecture_evidence_view.png -> 4. banner-dark.png
+- **Media**: `golden_ticket_speed_up_data_analytics.png, 02_imaging_wall_baseline.png, 07_github_notebook_code_provenance.png, ad_06.png`
+- **Media Order**: 1. golden_ticket_speed_up_data_analytics.png -> 2. 02_imaging_wall_baseline.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_06.png
 - **Hashtags**: #NVIDIAGTC #Microscopy #Biophysics #Cryopreservation #Connectomics #Neuroscience #SystemsModeling
 - **Mentions**: None
 - **Claims Verified**: YES - Preservation and acquisition biophysics modeled
@@ -28,10 +28,10 @@
 
 ### Media Attachments
 **Format**: Multi-Image Carousel (4 images)
-1. `public/marketing/ad_07.png`
+1. `public/images/golden_ticket_speed_up_data_analytics.png`
 2. `public/screenshots/02_imaging_wall_baseline.png`
-3. `public/screenshots/06_architecture_evidence_view.png`
-4. `public/images/banner-dark.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/marketing/ad_06.png`
 
 ### Post Copy
 
@@ -61,29 +61,30 @@ https://z-wbe-bottleneck-lab.vercel.app
 
 ---
 
-## Post 2: Mid-Morning Explainer (09:32 MDT)
+## Post 2: Mid-Morning Explainer (12:15 MDT)
 
 - **Buffer Post ID**: `buffer_li_d15_p2`
 - **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 15
 - **Content Pillar**: Pillar A: WBE Research
-- **Scheduled Time (MDT)**: 09:32 MDT
+- **Scheduled Time (MDT)**: 12:15 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: Beam Dwell Time: Why you cannot simply scan faster with electron microscopes.
 - **Post Summary**: Why does scanning an electron microscope beam take 20 to 50 nanoseconds per pixel? Why not 1 nanosecond?
-- **Media**: `ad_01.png, 02_imaging_wall_baseline.png, banner-light.png`
-- **Media Order**: 1. ad_01.png -> 2. 02_imaging_wall_baseline.png -> 3. banner-light.png
+- **Media**: `golden_ticket_intro_inference.png, 02_imaging_wall_baseline.png, 07_github_notebook_code_provenance.png, ad_05.png`
+- **Media Order**: 1. golden_ticket_intro_inference.png -> 2. 02_imaging_wall_baseline.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_05.png
 - **Hashtags**: #NVIDIAGTC #Physics #ElectronMicroscopy #Optics #Nanotechnology #Hardware #OpenSource
 - **Mentions**: None
 - **Claims Verified**: YES - Beam dwell time formulas in shared/src/equations.ts
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (3 images)
-1. `public/marketing/ad_01.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/golden_ticket_intro_inference.png`
 2. `public/screenshots/02_imaging_wall_baseline.png`
-3. `public/images/banner-light.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/marketing/ad_05.png`
 
 ### Post Copy
 
@@ -111,28 +112,30 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 ---
 
-## Post 3: Noon Visual Proof (11:28 MDT)
+## Post 3: Noon Visual Proof (14:45 MDT)
 
 - **Buffer Post ID**: `buffer_li_d15_p3`
 - **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 15
 - **Content Pillar**: Pillar H: Product Demo
-- **Scheduled Time (MDT)**: 11:28 MDT
+- **Scheduled Time (MDT)**: 14:45 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
 - **Hook**: The Baseline Acquisition Wall in Z-WBE Bottleneck Lab.
 - **Post Summary**: Notice the baseline Acquisition gauge:
-- **Media**: `02_imaging_wall_baseline.png, 01_hero_overview.png`
-- **Media Order**: 1. 02_imaging_wall_baseline.png -> 2. 01_hero_overview.png
+- **Media**: `golden_ticket_accelerated_ml.png, 02_imaging_wall_baseline.png, 05_colab_nvidia_smi_ensemble_eval.png, ad_04.png`
+- **Media Order**: 1. golden_ticket_accelerated_ml.png -> 2. 02_imaging_wall_baseline.png -> 3. 05_colab_nvidia_smi_ensemble_eval.png -> 4. ad_04.png
 - **Hashtags**: #NVIDIAGTC #UIUX #DataViz #WebDev #ScientificComputing
 - **Mentions**: None
 - **Claims Verified**: YES - UI screenshot of baseline Acquisition Wall
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (2 images)
-1. `public/screenshots/02_imaging_wall_baseline.png`
-2. `public/screenshots/01_hero_overview.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/golden_ticket_accelerated_ml.png`
+2. `public/screenshots/02_imaging_wall_baseline.png`
+3. `public/colab-evidence/05_colab_nvidia_smi_ensemble_eval.png`
+4. `public/marketing/ad_04.png`
 
 ### Post Copy
 
@@ -151,29 +154,30 @@ https://z-wbe-bottleneck-lab.vercel.app
 
 ---
 
-## Post 4: Evening Deep Dive (17:36 MDT)
+## Post 4: Evening Deep Dive (17:32 MDT)
 
 - **Buffer Post ID**: `buffer_li_d15_p4`
 - **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 15
 - **Content Pillar**: Pillar G: Scientific Integrity
-- **Scheduled Time (MDT)**: 17:36 MDT
+- **Scheduled Time (MDT)**: 17:32 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: Tissue Shrinkage and Staining Artifacts: Unresolved biological uncertainties.
 - **Post Summary**: When biological tissue is chemically fixed, stained with heavy metals (osmium tetroxide, uranyl acetate), and dehydrated for pl...
-- **Media**: `ad_06.png, 07_github_notebook_code_provenance.png, banner-dark.png`
-- **Media Order**: 1. ad_06.png -> 2. 07_github_notebook_code_provenance.png -> 3. banner-dark.png
+- **Media**: `golden_ticket_data_analytics.png, 05_gpu_exploration_map.png, 07_github_notebook_code_provenance.png, ad_03.png`
+- **Media Order**: 1. golden_ticket_data_analytics.png -> 2. 05_gpu_exploration_map.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_03.png
 - **Hashtags**: #NVIDIAGTC #Neuroscience #Histology #ScientificRigor #Biophysics #Research
 - **Mentions**: None
 - **Claims Verified**: YES - Provenance disclaimer on tissue shrinkage verified
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (3 images)
-1. `public/marketing/ad_06.png`
-2. `public/colab-evidence/07_github_notebook_code_provenance.png`
-3. `public/images/banner-dark.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/golden_ticket_data_analytics.png`
+2. `public/screenshots/05_gpu_exploration_map.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/marketing/ad_03.png`
 
 ### Post Copy
 
@@ -198,28 +202,30 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 ---
 
-## Post 5: Night Build Log (19:28 MDT)
+## Post 5: Night Build Log (20:15 MDT)
 
 - **Buffer Post ID**: `buffer_li_d15_p5`
 - **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 15
 - **Content Pillar**: Pillar F: Build Journey
-- **Scheduled Time (MDT)**: 19:28 MDT
+- **Scheduled Time (MDT)**: 20:15 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: Day 15 Build Log: Writing sensitivity analysis unit tests.
 - **Post Summary**: If you perturb voxel resolution by just 10%, how severely does the downstream pipeline react?
-- **Media**: `ad_04.png, 06_architecture_evidence_view.png`
-- **Media Order**: 1. ad_04.png -> 2. 06_architecture_evidence_view.png
+- **Media**: `golden_ticket_nim_gke.png, 02_imaging_wall_baseline.png, 07_github_notebook_code_provenance.png, ad_02.png`
+- **Media Order**: 1. golden_ticket_nim_gke.png -> 2. 02_imaging_wall_baseline.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_02.png
 - **Hashtags**: #NVIDIAGTC #TypeScript #SoftwareTesting #SensitivityAnalysis #Vitest #BuildInPublic
 - **Mentions**: None
 - **Claims Verified**: YES - shared/tests/sensitivity.test.ts passing (5/5 tests)
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (2 images)
-1. `public/marketing/ad_04.png`
-2. `public/screenshots/06_architecture_evidence_view.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/golden_ticket_nim_gke.png`
+2. `public/screenshots/02_imaging_wall_baseline.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/marketing/ad_02.png`
 
 ### Post Copy
 

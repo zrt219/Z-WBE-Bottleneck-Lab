@@ -8,28 +8,30 @@
 
 ---
 
-## Post 1: Morning Hook (07:14 MDT)
+## Post 1: Morning Hook (10:20 MDT)
 
 - **Buffer Post ID**: `buffer_x_d19_p1`
 - **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 19
 - **Content Pillar**: Pillar A: WBE Research
-- **Scheduled Time (MDT)**: 07:14 MDT
+- **Scheduled Time (MDT)**: 10:20 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
 - **Hook**: How do you validate a brain emulation?
 - **Post Summary**: You sliced the original brain to image it. The original no longer exists.
-- **Media**: `ad_06.png, 01_hero_overview.png`
-- **Media Order**: 1. ad_06.png -> 2. 01_hero_overview.png
+- **Media**: `golden_ticket_speed_up_data_analytics.png, 04_nemotron_grounded_interpretation.png, cpu_vs_gpu_speedup.png, ad_02.png`
+- **Media Order**: 1. golden_ticket_speed_up_data_analytics.png -> 2. 04_nemotron_grounded_interpretation.png -> 3. cpu_vs_gpu_speedup.png -> 4. ad_02.png
 - **Hashtags**: #NVIDIAGTC #Neuroscience
 - **Mentions**: None
 - **Claims Verified**: YES - Validation ground truth paradox
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (2 images)
-1. `public/marketing/ad_06.png`
-2. `public/screenshots/01_hero_overview.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/golden_ticket_speed_up_data_analytics.png`
+2. `public/screenshots/04_nemotron_grounded_interpretation.png`
+3. `public/data/cpu_vs_gpu_speedup.png`
+4. `public/marketing/ad_02.png`
 
 ### Post Copy
 
@@ -45,28 +47,30 @@ https://z-wbe-bottleneck-lab.vercel.app
 
 ---
 
-## Post 2: Mid-Morning Visual (08:42 MDT)
+## Post 2: Mid-Morning Visual (12:35 MDT)
 
 - **Buffer Post ID**: `buffer_x_d19_p2`
 - **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 19
 - **Content Pillar**: Pillar A: WBE Research
-- **Scheduled Time (MDT)**: 08:42 MDT
+- **Scheduled Time (MDT)**: 12:35 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: 4 Validation Gates:
 - **Post Summary**: 1. Patch-clamp I-V curves
-- **Media**: `ad_04.png, 06_architecture_evidence_view.png`
-- **Media Order**: 1. ad_04.png -> 2. 06_architecture_evidence_view.png
+- **Media**: `golden_ticket_intro_inference.png, 03_bottleneck_moved_transition.png, 07_github_notebook_code_provenance.png, ad_01.png`
+- **Media Order**: 1. golden_ticket_intro_inference.png -> 2. 03_bottleneck_moved_transition.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_01.png
 - **Hashtags**: #NVIDIAGTC #Biophysics
 - **Mentions**: None
 - **Claims Verified**: YES - 4 empirical validation gates
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (2 images)
-1. `public/marketing/ad_04.png`
-2. `public/screenshots/06_architecture_evidence_view.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/golden_ticket_intro_inference.png`
+2. `public/screenshots/03_bottleneck_moved_transition.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/marketing/ad_01.png`
 
 ### Post Copy
 
@@ -84,14 +88,14 @@ Formulas: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 ---
 
-## Post 3: Late-Morning Data (10:24 MDT)
+## Post 3: Late-Morning Data (15:05 MDT)
 
 - **Buffer Post ID**: `buffer_x_d19_p3`
 - **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 19
 - **Content Pillar**: Pillar G: Scientific Integrity
-- **Scheduled Time (MDT)**: 10:24 MDT
+- **Scheduled Time (MDT)**: 15:05 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: We model physical scaling constraints.
 - **Post Summary**: We do NOT claim 'consciousness transfer'.
@@ -120,28 +124,30 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 ---
 
-## Post 4: Evening Hook (16:50 MDT)
+## Post 4: Evening Hook (17:51 MDT)
 
 - **Buffer Post ID**: `buffer_x_d19_p4`
 - **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 19
 - **Content Pillar**: Pillar F: Build Journey
-- **Scheduled Time (MDT)**: 16:50 MDT
+- **Scheduled Time (MDT)**: 17:51 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: Resilience tested:
 - **Post Summary**: If OpenRouter hits HTTP 429 rate limits, Z-WBE retries gracefully.
-- **Media**: `ad_08.png, 07_github_notebook_code_provenance.png`
-- **Media Order**: 1. ad_08.png -> 2. 07_github_notebook_code_provenance.png
+- **Media**: `golden_ticket_accelerated_ml.png, 02_imaging_wall_baseline.png, 07_github_notebook_code_provenance.png, banner-light.png`
+- **Media Order**: 1. golden_ticket_accelerated_ml.png -> 2. 02_imaging_wall_baseline.png -> 3. 07_github_notebook_code_provenance.png -> 4. banner-light.png
 - **Hashtags**: #NVIDIAGTC #Backend
 - **Mentions**: None
 - **Claims Verified**: YES - 21 backend tests pass in 82ms
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (2 images)
-1. `public/marketing/ad_08.png`
-2. `public/colab-evidence/07_github_notebook_code_provenance.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/golden_ticket_accelerated_ml.png`
+2. `public/screenshots/02_imaging_wall_baseline.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/images/banner-light.png`
 
 ### Post Copy
 
@@ -157,28 +163,30 @@ Backend tests: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 ---
 
-## Post 5: Night Observation (18:20 MDT)
+## Post 5: Night Observation (20:35 MDT)
 
 - **Buffer Post ID**: `buffer_x_d19_p5`
 - **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 19
 - **Content Pillar**: Pillar A: WBE Research
-- **Scheduled Time (MDT)**: 18:20 MDT
+- **Scheduled Time (MDT)**: 20:35 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
 - **Hook**: Functional equivalence is measurable engineering.
 - **Post Summary**: Subjective identity is metaphysics.
-- **Media**: `banner-dark.png, ad_06.png`
-- **Media Order**: 1. banner-dark.png -> 2. ad_06.png
+- **Media**: `golden_ticket_data_analytics.png, 06_architecture_evidence_view.png, cpu_vs_gpu_speedup.png, banner-dark.png`
+- **Media Order**: 1. golden_ticket_data_analytics.png -> 2. 06_architecture_evidence_view.png -> 3. cpu_vs_gpu_speedup.png -> 4. banner-dark.png
 - **Hashtags**: #NVIDIAGTC
 - **Mentions**: None
 - **Claims Verified**: YES - Empirical functional equivalence thesis
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (2 images)
-1. `public/images/banner-dark.png`
-2. `public/marketing/ad_06.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/golden_ticket_data_analytics.png`
+2. `public/screenshots/06_architecture_evidence_view.png`
+3. `public/data/cpu_vs_gpu_speedup.png`
+4. `public/images/banner-dark.png`
 
 ### Post Copy
 

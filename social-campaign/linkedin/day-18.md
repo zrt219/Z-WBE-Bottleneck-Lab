@@ -8,19 +8,19 @@
 
 ---
 
-## Post 1: Morning Flagship (07:46 MDT)
+## Post 1: Morning Flagship (10:02 MDT)
 
 - **Buffer Post ID**: `buffer_li_d18_p1`
 - **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 18
 - **Content Pillar**: Pillar B: Systems Engineering
-- **Scheduled Time (MDT)**: 07:46 MDT
+- **Scheduled Time (MDT)**: 10:02 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
 - **Hook**: The Economic Wall: What does Whole-Brain Emulation actually cost?
 - **Post Summary**: Too many theoretical physics papers ignore economics:
-- **Media**: `ad_10.png, 01_hero_overview.png, 06_architecture_evidence_view.png, banner-dark.png`
-- **Media Order**: 1. ad_10.png -> 2. 01_hero_overview.png -> 3. 06_architecture_evidence_view.png -> 4. banner-dark.png
+- **Media**: `social_card_intro_inference.png, 06_architecture_evidence_view.png, 05_colab_nvidia_smi_ensemble_eval.png, ad_04.png`
+- **Media Order**: 1. social_card_intro_inference.png -> 2. 06_architecture_evidence_view.png -> 3. 05_colab_nvidia_smi_ensemble_eval.png -> 4. ad_04.png
 - **Hashtags**: #NVIDIAGTC #Economics #CapitalExpenditure #DataCenter #FinancialModeling #HighPerformanceComputing #SystemsEngineering
 - **Mentions**: None
 - **Claims Verified**: YES - Capex and Opex equations verified
@@ -28,10 +28,10 @@
 
 ### Media Attachments
 **Format**: Multi-Image Carousel (4 images)
-1. `public/marketing/ad_10.png`
-2. `public/screenshots/01_hero_overview.png`
-3. `public/screenshots/06_architecture_evidence_view.png`
-4. `public/images/banner-dark.png`
+1. `public/images/social_card_intro_inference.png`
+2. `public/screenshots/06_architecture_evidence_view.png`
+3. `public/colab-evidence/05_colab_nvidia_smi_ensemble_eval.png`
+4. `public/marketing/ad_04.png`
 
 ### Post Copy
 
@@ -63,29 +63,30 @@ https://z-wbe-bottleneck-lab.vercel.app
 
 ---
 
-## Post 2: Mid-Morning Explainer (09:34 MDT)
+## Post 2: Mid-Morning Explainer (12:16 MDT)
 
 - **Buffer Post ID**: `buffer_li_d18_p2`
 - **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 18
 - **Content Pillar**: Pillar I: Learning Paths
-- **Scheduled Time (MDT)**: 09:34 MDT
+- **Scheduled Time (MDT)**: 12:16 MDT
 - **Primary Destination URL**: https://g.dev/zhane
 - **Hook**: From Course to Code: What I learned from 'Deploy Faster Generative AI Models with NVIDIA NIM on GKE'.
 - **Post Summary**: Completing 'NVIDIA NIM on GKE' on Google Cloud Skills Boost provided the blueprint for managing high-cost GPU infrastructure:
-- **Media**: `social_card_nim_gke.png, badge_nim_gke.png, google-nvidia-developer-badges.png`
-- **Media Order**: 1. social_card_nim_gke.png -> 2. badge_nim_gke.png -> 3. google-nvidia-developer-badges.png
+- **Media**: `social_card_nim_gke.png, 06_architecture_evidence_view.png, 07_github_notebook_code_provenance.png, ad_03.png`
+- **Media Order**: 1. social_card_nim_gke.png -> 2. 06_architecture_evidence_view.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_03.png
 - **Hashtags**: #NVIDIAGTC #GoogleCloud #NVIDIA #Kubernetes #GKE #NIM #CloudRun #DevOps
 - **Mentions**: None
 - **Claims Verified**: YES - NIM on GKE course learnings verified
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (3 images)
+**Format**: Multi-Image Carousel (4 images)
 1. `public/images/social_card_nim_gke.png`
-2. `public/images/badge_nim_gke.png`
-3. `public/images/google-nvidia-developer-badges.png`
+2. `public/screenshots/06_architecture_evidence_view.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/marketing/ad_03.png`
 
 ### Post Copy
 
@@ -109,28 +110,30 @@ https://g.dev/zhane
 
 ---
 
-## Post 3: Noon Visual Proof (11:28 MDT)
+## Post 3: Noon Visual Proof (14:46 MDT)
 
 - **Buffer Post ID**: `buffer_li_d18_p3`
 - **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 18
 - **Content Pillar**: Pillar H: Product Demo
-- **Scheduled Time (MDT)**: 11:28 MDT
+- **Scheduled Time (MDT)**: 14:46 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
 - **Hook**: The Economic Gauge in Z-WBE Bottleneck Lab.
 - **Post Summary**: Notice how adjusting the 'Microscope Cluster Size' slider increases capital expenditure while simultaneously reducing the proje...
-- **Media**: `01_hero_overview.png, 03_bottleneck_moved_transition.png`
-- **Media Order**: 1. 01_hero_overview.png -> 2. 03_bottleneck_moved_transition.png
+- **Media**: `social_card_data_analytics.png, 06_architecture_evidence_view.png, 03_colab_cuml_linear_regression.png, ad_02.png`
+- **Media Order**: 1. social_card_data_analytics.png -> 2. 06_architecture_evidence_view.png -> 3. 03_colab_cuml_linear_regression.png -> 4. ad_02.png
 - **Hashtags**: #NVIDIAGTC #InteractiveModel #DataViz #EngineeringEconomics #ProductDemo
 - **Mentions**: None
 - **Claims Verified**: YES - UI screenshot of Economics gauge
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (2 images)
-1. `public/screenshots/01_hero_overview.png`
-2. `public/screenshots/03_bottleneck_moved_transition.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/social_card_data_analytics.png`
+2. `public/screenshots/06_architecture_evidence_view.png`
+3. `public/colab-evidence/03_colab_cuml_linear_regression.png`
+4. `public/marketing/ad_02.png`
 
 ### Post Copy
 
@@ -149,29 +152,30 @@ https://z-wbe-bottleneck-lab.vercel.app
 
 ---
 
-## Post 4: Evening Deep Dive (17:36 MDT)
+## Post 4: Evening Deep Dive (17:32 MDT)
 
 - **Buffer Post ID**: `buffer_li_d18_p4`
 - **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 18
 - **Content Pillar**: Pillar B: Systems Engineering
-- **Scheduled Time (MDT)**: 17:36 MDT
+- **Scheduled Time (MDT)**: 17:32 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: Liquid Cooling vs Air Cooling: The physical reality of a 57 MW facility.
 - **Post Summary**: At 57 Megawatts, standard air cooling in data centers fails:
-- **Media**: `ad_10.png, 07_github_notebook_code_provenance.png, banner-dark.png`
-- **Media Order**: 1. ad_10.png -> 2. 07_github_notebook_code_provenance.png -> 3. banner-dark.png
+- **Media**: `social_card_accelerated_ml.png, 06_architecture_evidence_view.png, 07_github_notebook_code_provenance.png, ad_01.png`
+- **Media Order**: 1. social_card_accelerated_ml.png -> 2. 06_architecture_evidence_view.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_01.png
 - **Hashtags**: #NVIDIAGTC #LiquidCooling #Thermodynamics #DataCenter #GreenComputing #HardwareEngineering
 - **Mentions**: None
 - **Claims Verified**: YES - Liquid cooling and thermodynamic modeling verified
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (3 images)
-1. `public/marketing/ad_10.png`
-2. `public/colab-evidence/07_github_notebook_code_provenance.png`
-3. `public/images/banner-dark.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/social_card_accelerated_ml.png`
+2. `public/screenshots/06_architecture_evidence_view.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/marketing/ad_01.png`
 
 ### Post Copy
 
@@ -197,28 +201,30 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 ---
 
-## Post 5: Night Build Log (19:30 MDT)
+## Post 5: Night Build Log (20:16 MDT)
 
 - **Buffer Post ID**: `buffer_li_d18_p5`
 - **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 18
 - **Content Pillar**: Pillar F: Build Journey
-- **Scheduled Time (MDT)**: 19:30 MDT
+- **Scheduled Time (MDT)**: 20:16 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: Day 18 Build Log: Building for accessibility (WCAG 2.1 AA compliance).
 - **Post Summary**: Scientific tools should be accessible to every researcher:
-- **Media**: `ad_04.png, 06_architecture_evidence_view.png`
-- **Media Order**: 1. ad_04.png -> 2. 06_architecture_evidence_view.png
+- **Media**: `golden_ticket_speed_up_data_analytics.png, 06_architecture_evidence_view.png, 07_github_notebook_code_provenance.png, banner-light.png`
+- **Media Order**: 1. golden_ticket_speed_up_data_analytics.png -> 2. 06_architecture_evidence_view.png -> 3. 07_github_notebook_code_provenance.png -> 4. banner-light.png
 - **Hashtags**: #NVIDIAGTC #Accessibility #A11y #WebDevelopment #Frontend #TypeScript #Vitest
 - **Mentions**: None
 - **Claims Verified**: YES - Accessibility tests pass (7/7 tests)
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (2 images)
-1. `public/marketing/ad_04.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/golden_ticket_speed_up_data_analytics.png`
 2. `public/screenshots/06_architecture_evidence_view.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/images/banner-light.png`
 
 ### Post Copy
 

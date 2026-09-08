@@ -15,17 +15,17 @@ def get_week2_data():
         {
             "id": "buffer_li_d08_p1",
             "slot": "Morning Flagship",
-            "time": "07:47 MDT",
+            "time": "10:01 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar E: Open Source",
             "url": "https://github.com/zrt219/Z-WBE-Bottleneck-Lab",
             "claims_verified": "YES - 12 equations in shared/src/equations.ts",
             "manual_review": "NO",
             "media": [
-                "public/marketing/ad_04.png",
-                "public/screenshots/06_architecture_evidence_view.png",
-                "public/screenshots/01_hero_overview.png",
-                "public/images/banner-dark.png"
+                "public/images/social_card_intro_inference.png",
+                "public/screenshots/02_imaging_wall_baseline.png",
+                "public/colab-evidence/07_github_notebook_code_provenance.png",
+                "public/marketing/ad_09.png"
             ],
             "text": """The 12 deterministic equations behind Z-WBE Bottleneck Lab.
 
@@ -57,16 +57,17 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
         {
             "id": "buffer_li_d08_p2",
             "slot": "Mid-Morning Explainer",
-            "time": "09:35 MDT",
+            "time": "12:15 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar B: Systems Engineering",
             "url": "https://z-wbe-bottleneck-lab.vercel.app",
             "claims_verified": "YES - Pure functional architecture verified",
             "manual_review": "NO",
             "media": [
-                "public/marketing/ad_01.png",
+                "public/images/golden_ticket_speed_up_data_analytics.png",
                 "public/screenshots/06_architecture_evidence_view.png",
-                "public/images/banner-light.png"
+                "public/colab-evidence/07_github_notebook_code_provenance.png",
+                "public/marketing/ad_08.png"
             ],
             "text": """Why we chose pure functional programming for physical scaling calculations.
 
@@ -90,15 +91,17 @@ https://z-wbe-bottleneck-lab.vercel.app
         {
             "id": "buffer_li_d08_p3",
             "slot": "Noon Visual Proof",
-            "time": "11:28 MDT",
+            "time": "14:46 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar H: Product Demo",
             "url": "https://z-wbe-bottleneck-lab.vercel.app",
             "claims_verified": "YES - Evidence drawer UI screenshot",
             "manual_review": "NO",
             "media": [
-                "public/screenshots/06_architecture_evidence_view.png",
-                "public/screenshots/01_hero_overview.png"
+                "public/images/golden_ticket_intro_inference.png",
+                "public/screenshots/03_bottleneck_moved_transition.png",
+                "public/colab-evidence/07_github_notebook_code_provenance.png",
+                "public/marketing/ad_07.png"
             ],
             "text": """Inspect the raw evidence behind every number: The Z-WBE Evidence Drawer.
 
@@ -119,16 +122,17 @@ https://z-wbe-bottleneck-lab.vercel.app
         {
             "id": "buffer_li_d08_p4",
             "slot": "Evening Deep Dive",
-            "time": "17:34 MDT",
+            "time": "17:32 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar B: Systems Engineering",
             "url": "https://github.com/zrt219/Z-WBE-Bottleneck-Lab",
             "claims_verified": "YES - Power and PUE equations verified",
             "manual_review": "NO",
             "media": [
-                "public/marketing/ad_10.png",
-                "public/screenshots/03_bottleneck_moved_transition.png",
-                "public/images/banner-dark.png"
+                "public/images/golden_ticket_accelerated_ml.png",
+                "public/screenshots/06_architecture_evidence_view.png",
+                "public/colab-evidence/07_github_notebook_code_provenance.png",
+                "public/marketing/ad_06.png"
             ],
             "text": """Equation 8: The Thermal Power Budget of Brain Simulation.
 
@@ -155,15 +159,17 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
         {
             "id": "buffer_li_d08_p5",
             "slot": "Night Build Log",
-            "time": "19:28 MDT",
+            "time": "20:16 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar F: Build Journey",
             "url": "https://github.com/zrt219/Z-WBE-Bottleneck-Lab",
             "claims_verified": "YES - shared/tests/equations.test.ts passing (19/19 tests)",
             "manual_review": "NO",
             "media": [
-                "public/marketing/ad_04.png",
-                "public/colab-evidence/07_github_notebook_code_provenance.png"
+                "public/images/golden_ticket_data_analytics.png",
+                "public/screenshots/06_architecture_evidence_view.png",
+                "public/colab-evidence/07_github_notebook_code_provenance.png",
+                "public/marketing/ad_05.png"
             ],
             "text": """Day 8 Build Log: Testing equation boundaries and edge cases.
 
@@ -186,15 +192,17 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
         {
             "id": "buffer_x_d08_p1",
             "slot": "Morning Hook",
-            "time": "07:18 MDT",
+            "time": "10:15 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar E: Open Source",
             "url": "https://github.com/zrt219/Z-WBE-Bottleneck-Lab",
             "claims_verified": "YES - 12 equations in shared/src/equations.ts",
             "manual_review": "NO",
             "media": [
-                "public/marketing/ad_04.png",
-                "public/screenshots/06_architecture_evidence_view.png"
+                "public/images/golden_ticket_nim_gke.png",
+                "public/screenshots/06_architecture_evidence_view.png",
+                "public/colab-evidence/07_github_notebook_code_provenance.png",
+                "public/marketing/ad_04.png"
             ],
             "text": """12 deterministic equations.
 Zero hallucinated numbers.
@@ -207,15 +215,17 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
         {
             "id": "buffer_x_d08_p2",
             "slot": "Mid-Morning Visual",
-            "time": "08:46 MDT",
+            "time": "12:28 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar B: Systems Engineering",
             "url": "https://z-wbe-bottleneck-lab.vercel.app",
             "claims_verified": "YES - Power equation calculation",
             "manual_review": "NO",
             "media": [
-                "public/marketing/ad_10.png",
-                "public/screenshots/01_hero_overview.png"
+                "public/images/google-nvidia-developer-badges.png",
+                "public/screenshots/06_architecture_evidence_view.png",
+                "public/colab-evidence/04_colab_cuml_execution_progress.png",
+                "public/marketing/ad_03.png"
             ],
             "text": """Simulating 86 billion neurons in real time takes ~1.2 ExaFLOPS.
 At 25 TFLOPS/W and 1.2 PUE, that's 57 Megawatts of power.
@@ -229,7 +239,7 @@ Explore: https://z-wbe-bottleneck-lab.vercel.app
         {
             "id": "buffer_x_d08_p3",
             "slot": "Late-Morning Data",
-            "time": "10:32 MDT",
+            "time": "14:58 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar E: Open Source",
             "url": "https://github.com/zrt219/Z-WBE-Bottleneck-Lab",
@@ -246,15 +256,17 @@ Source: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
         {
             "id": "buffer_x_d08_p4",
             "slot": "Evening Hook",
-            "time": "16:58 MDT",
+            "time": "17:44 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar H: Product Demo",
             "url": "https://z-wbe-bottleneck-lab.vercel.app",
             "claims_verified": "YES - Evidence drawer feature",
             "manual_review": "NO",
             "media": [
-                "public/screenshots/06_architecture_evidence_view.png",
-                "public/images/banner-dark.png"
+                "public/images/social_card_intro_inference.png",
+                "public/screenshots/04_nemotron_grounded_interpretation.png",
+                "public/colab-evidence/03_colab_cuml_linear_regression.png",
+                "public/marketing/ad_02.png"
             ],
             "text": """Click 'Evidence & Methodology' in Z-WBE.
 See the exact mathematical inputs, outputs, and SHA-256 hash.
@@ -266,15 +278,17 @@ Inspect the evidence: https://z-wbe-bottleneck-lab.vercel.app
         {
             "id": "buffer_x_d08_p5",
             "slot": "Night Observation",
-            "time": "18:34 MDT",
+            "time": "20:28 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar B: Systems Engineering",
             "url": "https://github.com/zrt219/Z-WBE-Bottleneck-Lab",
             "claims_verified": "YES - Systems modeling thesis",
             "manual_review": "NO",
             "media": [
-                "public/marketing/ad_01.png",
-                "public/screenshots/03_bottleneck_moved_transition.png"
+                "public/images/social_card_accelerated_ml.png",
+                "public/screenshots/06_architecture_evidence_view.png",
+                "public/colab-evidence/07_github_notebook_code_provenance.png",
+                "public/marketing/ad_01.png"
             ],
             "text": """When an equation runs in 0.05ms, your user interface feels alive.
 When an LLM guesses the numbers, it feels like fiction.
@@ -296,17 +310,17 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
         {
             "id": "buffer_li_d09_p1",
             "slot": "Morning Flagship",
-            "time": "07:45 MDT",
+            "time": "10:04 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar C: GPU / NVIDIA",
             "url": "https://z-wbe-bottleneck-lab.vercel.app",
             "claims_verified": "YES - Nemotron 3 Super model slug and grounding verified",
             "manual_review": "NO",
             "media": [
-                "public/marketing/ad_04.png",
+                "public/images/social_card_intro_inference.png",
                 "public/screenshots/04_nemotron_grounded_interpretation.png",
-                "public/screenshots/06_architecture_evidence_view.png",
-                "public/images/banner-dark.png"
+                "public/colab-evidence/07_github_notebook_code_provenance.png",
+                "public/images/banner-light.png"
             ],
             "text": """The Strict Grounding Contract: How we bind NVIDIA Nemotron 3 Super 120B to physical truth.
 
@@ -330,16 +344,17 @@ https://z-wbe-bottleneck-lab.vercel.app
         {
             "id": "buffer_li_d09_p2",
             "slot": "Mid-Morning Explainer",
-            "time": "09:32 MDT",
+            "time": "12:18 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar C: GPU / NVIDIA",
             "url": "https://github.com/zrt219/Z-WBE-Bottleneck-Lab",
             "claims_verified": "YES - backend/src/services/prompt.ts system prompt verified",
             "manual_review": "NO",
             "media": [
-                "public/marketing/ad_04.png",
+                "public/images/social_card_intro_inference.png",
                 "public/screenshots/04_nemotron_grounded_interpretation.png",
-                "public/images/banner-light.png"
+                "public/colab-evidence/07_github_notebook_code_provenance.png",
+                "public/images/banner-dark.png"
             ],
             "text": """Inside our Nemotron System Prompt: Negative constraints that actually work.
 
@@ -369,15 +384,17 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
         {
             "id": "buffer_li_d09_p3",
             "slot": "Noon Visual Proof",
-            "time": "11:30 MDT",
+            "time": "14:47 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar H: Product Demo",
             "url": "https://z-wbe-bottleneck-lab.vercel.app",
             "claims_verified": "YES - Screenshot of Nemotron response card",
             "manual_review": "NO",
             "media": [
-                "public/screenshots/04_nemotron_grounded_interpretation.png",
-                "public/screenshots/01_hero_overview.png"
+                "public/images/social_card_intro_inference.png",
+                "public/screenshots/02_imaging_wall_baseline.png",
+                "public/data/eda_scatter_matrix.png",
+                "public/marketing/ad_10.png"
             ],
             "text": """A real response from NVIDIA Nemotron 3 Super in Z-WBE Bottleneck Lab.
 
@@ -396,16 +413,17 @@ https://z-wbe-bottleneck-lab.vercel.app
         {
             "id": "buffer_li_d09_p4",
             "slot": "Evening Deep Dive",
-            "time": "17:38 MDT",
+            "time": "17:35 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar F: Build Journey",
             "url": "https://github.com/zrt219/Z-WBE-Bottleneck-Lab",
             "claims_verified": "YES - OpenRouter streaming implementation verified",
             "manual_review": "NO",
             "media": [
-                "public/marketing/ad_08.png",
+                "public/images/golden_ticket_intro_inference.png",
+                "public/screenshots/04_nemotron_grounded_interpretation.png",
                 "public/colab-evidence/07_github_notebook_code_provenance.png",
-                "public/images/banner-dark.png"
+                "public/marketing/ad_09.png"
             ],
             "text": """Server-Side OpenRouter Proxy: Shielding API keys and managing quotas.
 
@@ -428,15 +446,17 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
         {
             "id": "buffer_li_d09_p5",
             "slot": "Night Build Log",
-            "time": "19:34 MDT",
+            "time": "20:19 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar F: Build Journey",
             "url": "https://github.com/zrt219/Z-WBE-Bottleneck-Lab",
             "claims_verified": "YES - shared/tests/grounding.test.ts passing",
             "manual_review": "NO",
             "media": [
-                "public/marketing/ad_04.png",
-                "public/screenshots/06_architecture_evidence_view.png"
+                "public/images/golden_ticket_accelerated_ml.png",
+                "public/screenshots/04_nemotron_grounded_interpretation.png",
+                "public/colab-evidence/07_github_notebook_code_provenance.png",
+                "public/marketing/ad_08.png"
             ],
             "text": """Day 9 Build Log: Automated testing for AI grounding contracts.
 
@@ -461,15 +481,17 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
         {
             "id": "buffer_x_d09_p1",
             "slot": "Morning Hook",
-            "time": "07:12 MDT",
+            "time": "10:19 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar C: GPU / NVIDIA",
             "url": "https://z-wbe-bottleneck-lab.vercel.app",
             "claims_verified": "YES - Strict grounding contract",
             "manual_review": "NO",
             "media": [
-                "public/marketing/ad_04.png",
-                "public/screenshots/04_nemotron_grounded_interpretation.png"
+                "public/images/social_card_intro_inference.png",
+                "public/screenshots/04_nemotron_grounded_interpretation.png",
+                "public/colab-evidence/08_colab_rapids_and_variable_inspector.png",
+                "public/marketing/ad_07.png"
             ],
             "text": """How we stop AI hallucinations in science:
 1. Pure TypeScript calculates the numbers.
@@ -483,15 +505,17 @@ Try it: https://z-wbe-bottleneck-lab.vercel.app
         {
             "id": "buffer_x_d09_p2",
             "slot": "Mid-Morning Visual",
-            "time": "08:48 MDT",
+            "time": "12:33 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar C: GPU / NVIDIA",
             "url": "https://github.com/zrt219/Z-WBE-Bottleneck-Lab",
             "claims_verified": "YES - Prompt guardrails in repo",
             "manual_review": "NO",
             "media": [
+                "public/images/social_card_intro_inference.png",
                 "public/screenshots/04_nemotron_grounded_interpretation.png",
-                "public/screenshots/06_architecture_evidence_view.png"
+                "public/colab-evidence/07_github_notebook_code_provenance.png",
+                "public/marketing/ad_06.png"
             ],
             "text": """Our prompt negative constraint:
 "You MUST NEVER calculate, alter, or extrapolate numerical quantities."
@@ -504,7 +528,7 @@ Prompt source: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
         {
             "id": "buffer_x_d09_p3",
             "slot": "Late-Morning Data",
-            "time": "10:30 MDT",
+            "time": "15:03 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar F: Build Journey",
             "url": "https://github.com/zrt219/Z-WBE-Bottleneck-Lab",
@@ -521,15 +545,17 @@ Backend code: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
         {
             "id": "buffer_x_d09_p4",
             "slot": "Evening Hook",
-            "time": "17:04 MDT",
+            "time": "17:49 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar F: Build Journey",
             "url": "https://github.com/zrt219/Z-WBE-Bottleneck-Lab",
             "claims_verified": "YES - 7 grounding unit tests",
             "manual_review": "NO",
             "media": [
-                "public/marketing/ad_09.png",
-                "public/colab-evidence/07_github_notebook_code_provenance.png"
+                "public/images/social_card_intro_inference.png",
+                "public/screenshots/04_nemotron_grounded_interpretation.png",
+                "public/colab-evidence/07_github_notebook_code_provenance.png",
+                "public/marketing/ad_05.png"
             ],
             "text": """We write unit tests for LLM grounding contracts:
 7 automated tests verify Nemotron never outputs hallucinated numbers outside scenario bounds.
@@ -541,15 +567,17 @@ Tests: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
         {
             "id": "buffer_x_d09_p5",
             "slot": "Night Observation",
-            "time": "18:38 MDT",
+            "time": "20:33 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar C: GPU / NVIDIA",
             "url": "https://z-wbe-bottleneck-lab.vercel.app",
             "claims_verified": "YES - Mamba-transformer hybrid reasoning",
             "manual_review": "NO",
             "media": [
-                "public/images/banner-dark.png",
-                "public/screenshots/04_nemotron_grounded_interpretation.png"
+                "public/images/social_card_intro_inference.png",
+                "public/screenshots/04_nemotron_grounded_interpretation.png",
+                "public/colab-evidence/05_colab_nvidia_smi_ensemble_eval.png",
+                "public/marketing/ad_04.png"
             ],
             "text": """NVIDIA Nemotron 3 Super's hybrid Mamba-Transformer architecture is phenomenal at strict negative constraints.
 It doesn't wander.
@@ -570,17 +598,17 @@ See it live: https://z-wbe-bottleneck-lab.vercel.app
         {
             "id": "buffer_li_d10_p1",
             "slot": "Morning Flagship",
-            "time": "07:46 MDT",
+            "time": "09:58 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar B: Systems Engineering",
             "url": "https://z-wbe-bottleneck-lab.vercel.app",
             "claims_verified": "YES - Epistemic separation architecture verified",
             "manual_review": "NO",
             "media": [
-                "public/marketing/ad_04.png",
-                "public/screenshots/06_architecture_evidence_view.png",
-                "public/screenshots/03_bottleneck_moved_transition.png",
-                "public/images/banner-dark.png"
+                "public/images/social_card_intro_inference.png",
+                "public/screenshots/04_nemotron_grounded_interpretation.png",
+                "public/colab-evidence/07_github_notebook_code_provenance.png",
+                "public/marketing/ad_03.png"
             ],
             "text": """Epistemic Separation: The architectural pattern every AI engineer needs to know.
 
@@ -614,16 +642,17 @@ https://z-wbe-bottleneck-lab.vercel.app
         {
             "id": "buffer_li_d10_p2",
             "slot": "Mid-Morning Explainer",
-            "time": "09:34 MDT",
+            "time": "12:13 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar B: Systems Engineering",
             "url": "https://github.com/zrt219/Z-WBE-Bottleneck-Lab",
             "claims_verified": "YES - Architectural diagram in README.md verified",
             "manual_review": "NO",
             "media": [
-                "public/marketing/ad_01.png",
-                "public/screenshots/01_hero_overview.png",
-                "public/images/banner-light.png"
+                "public/images/social_card_data_analytics.png",
+                "public/screenshots/04_nemotron_grounded_interpretation.png",
+                "public/colab-evidence/07_github_notebook_code_provenance.png",
+                "public/marketing/ad_02.png"
             ],
             "text": """The Triad Architecture: How Frontend, Backend, and Notebook synchronize.
 
@@ -646,15 +675,17 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
         {
             "id": "buffer_li_d10_p3",
             "slot": "Noon Visual Proof",
-            "time": "11:26 MDT",
+            "time": "14:43 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar H: Product Demo",
             "url": "https://z-wbe-bottleneck-lab.vercel.app",
             "claims_verified": "YES - Evidence view UI matches description",
             "manual_review": "NO",
             "media": [
-                "public/screenshots/06_architecture_evidence_view.png",
-                "public/screenshots/04_nemotron_grounded_interpretation.png"
+                "public/images/social_card_nim_gke.png",
+                "public/screenshots/04_nemotron_grounded_interpretation.png",
+                "public/colab-evidence/07_github_notebook_code_provenance.png",
+                "public/marketing/ad_01.png"
             ],
             "text": """Look at the labels in Z-WBE Bottleneck Lab.
 
@@ -672,16 +703,17 @@ https://z-wbe-bottleneck-lab.vercel.app
         {
             "id": "buffer_li_d10_p4",
             "slot": "Evening Deep Dive",
-            "time": "17:36 MDT",
+            "time": "17:29 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar G: Scientific Integrity",
             "url": "https://github.com/zrt219/Z-WBE-Bottleneck-Lab",
             "claims_verified": "YES - Language safety guidelines enforced in docs",
             "manual_review": "NO",
             "media": [
-                "public/marketing/ad_10.png",
-                "public/colab-evidence/07_github_notebook_code_provenance.png",
-                "public/images/banner-dark.png"
+                "public/images/golden_ticket_speed_up_data_analytics.png",
+                "public/screenshots/04_nemotron_grounded_interpretation.png",
+                "public/data/cpu_vs_gpu_speedup.png",
+                "public/images/banner-light.png"
             ],
             "text": """Language Safety: Words we refuse to use in Z-WBE.
 
@@ -703,15 +735,17 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
         {
             "id": "buffer_li_d10_p5",
             "slot": "Night Build Log",
-            "time": "19:30 MDT",
+            "time": "20:13 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar F: Build Journey",
             "url": "https://github.com/zrt219/Z-WBE-Bottleneck-Lab",
             "claims_verified": "YES - URL state sync implementation verified",
             "manual_review": "NO",
             "media": [
-                "public/marketing/ad_02.png",
-                "public/screenshots/03_bottleneck_moved_transition.png"
+                "public/images/golden_ticket_intro_inference.png",
+                "public/screenshots/03_bottleneck_moved_transition.png",
+                "public/colab-evidence/07_github_notebook_code_provenance.png",
+                "public/images/banner-dark.png"
             ],
             "text": """Day 10 Build Log: Encoding scenario states into shareable URLs.
 
@@ -735,15 +769,17 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
         {
             "id": "buffer_x_d10_p1",
             "slot": "Morning Hook",
-            "time": "07:15 MDT",
+            "time": "10:13 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar B: Systems Engineering",
             "url": "https://z-wbe-bottleneck-lab.vercel.app",
             "claims_verified": "YES - Epistemic separation pattern",
             "manual_review": "NO",
             "media": [
-                "public/marketing/ad_04.png",
-                "public/screenshots/06_architecture_evidence_view.png"
+                "public/images/golden_ticket_accelerated_ml.png",
+                "public/screenshots/04_nemotron_grounded_interpretation.png",
+                "public/colab-evidence/07_github_notebook_code_provenance.png",
+                "public/marketing/ad_10.png"
             ],
             "text": """Never let an LLM do math in a scientific app.
 
@@ -758,15 +794,17 @@ https://z-wbe-bottleneck-lab.vercel.app
         {
             "id": "buffer_x_d10_p2",
             "slot": "Mid-Morning Visual",
-            "time": "08:44 MDT",
+            "time": "12:27 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar G: Scientific Integrity",
             "url": "https://github.com/zrt219/Z-WBE-Bottleneck-Lab",
             "claims_verified": "YES - Language safety policy",
             "manual_review": "NO",
             "media": [
-                "public/screenshots/06_architecture_evidence_view.png",
-                "public/images/banner-dark.png"
+                "public/images/golden_ticket_data_analytics.png",
+                "public/screenshots/04_nemotron_grounded_interpretation.png",
+                "public/data/cpu_vs_gpu_speedup.png",
+                "public/marketing/ad_09.png"
             ],
             "text": """Words we refuse to use:
 ❌ Unsubstantiated AI claims
@@ -785,7 +823,7 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
         {
             "id": "buffer_x_d10_p3",
             "slot": "Late-Morning Data",
-            "time": "10:28 MDT",
+            "time": "14:57 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar E: Open Source",
             "url": "https://github.com/zrt219/Z-WBE-Bottleneck-Lab",
@@ -803,15 +841,17 @@ Code: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
         {
             "id": "buffer_x_d10_p4",
             "slot": "Evening Hook",
-            "time": "16:54 MDT",
+            "time": "17:43 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar B: Systems Engineering",
             "url": "https://z-wbe-bottleneck-lab.vercel.app",
             "claims_verified": "YES - Visual provenance labels",
             "manual_review": "NO",
             "media": [
-                "public/marketing/ad_01.png",
-                "public/screenshots/04_nemotron_grounded_interpretation.png"
+                "public/images/golden_ticket_nim_gke.png",
+                "public/screenshots/04_nemotron_grounded_interpretation.png",
+                "public/colab-evidence/t4-colab-runtime-proof.png",
+                "public/marketing/ad_08.png"
             ],
             "text": """Every card in Z-WBE is labeled:
 `CALCULATED FROM SCENARIO ASSUMPTIONS` vs `AI INTERPRETATION`.
@@ -825,15 +865,17 @@ Live demo: https://z-wbe-bottleneck-lab.vercel.app
         {
             "id": "buffer_x_d10_p5",
             "slot": "Night Observation",
-            "time": "18:26 MDT",
+            "time": "20:27 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar F: Build Journey",
             "url": "https://github.com/zrt219/Z-WBE-Bottleneck-Lab",
             "claims_verified": "YES - Triad sync workflow",
             "manual_review": "NO",
             "media": [
-                "public/images/banner-dark.png",
-                "public/colab-evidence/07_github_notebook_code_provenance.png"
+                "public/images/google-nvidia-developer-badges.png",
+                "public/screenshots/03_bottleneck_moved_transition.png",
+                "public/colab-evidence/07_github_notebook_code_provenance.png",
+                "public/marketing/ad_07.png"
             ],
             "text": """The Triad:
 Frontend UI (React)
@@ -857,17 +899,17 @@ Source: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
         {
             "id": "buffer_li_d11_p1",
             "slot": "Morning Flagship",
-            "time": "07:44 MDT",
+            "time": "10:02 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar D: Google Cloud / Colab",
             "url": "https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb",
             "claims_verified": "YES - 10-stage unified notebook verified",
             "manual_review": "NO",
             "media": [
-                "public/marketing/ad_08.png",
-                "public/colab-evidence/01_colab_notebook_overview.png",
-                "public/colab-evidence/06_colab_gpu_extensions_and_terminal.png",
-                "public/images/google-nvidia-developer-badges.png"
+                "public/images/social_card_data_analytics.png",
+                "public/screenshots/03_bottleneck_moved_transition.png",
+                "public/data/cpu_vs_gpu_speedup.png",
+                "public/marketing/ad_06.png"
             ],
             "text": """The 10 stages of our canonical Colab GPU Lab.
 
@@ -898,16 +940,17 @@ https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/n
         {
             "id": "buffer_li_d11_p2",
             "slot": "Mid-Morning Explainer",
-            "time": "09:32 MDT",
+            "time": "12:16 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar D: Google Cloud / Colab",
             "url": "https://github.com/zrt219/Z-WBE-Bottleneck-Lab",
             "claims_verified": "YES - scripts/sync-colab.ps1 automated workflow",
             "manual_review": "NO",
             "media": [
-                "public/colab-evidence/07_github_notebook_code_provenance.png",
+                "public/images/google-nvidia-developer-badges.png",
                 "public/screenshots/06_architecture_evidence_view.png",
-                "public/images/banner-light.png"
+                "public/data/cpu_vs_gpu_speedup.png",
+                "public/marketing/ad_05.png"
             ],
             "text": """Antigravity -> GitHub -> Google Colab: The developer flywheel.
 
@@ -931,13 +974,13 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
         {
             "id": "buffer_li_d11_p3",
             "slot": "Noon Visual Proof",
-            "time": "11:28 MDT",
+            "time": "14:45 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar D: Google Cloud / Colab",
             "url": "https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb",
             "claims_verified": "YES - Colab execution GIF verified",
             "manual_review": "NO",
-            "media": "public/recordings/colab_t4_live_execution.gif",
+            "media": "public/recordings/colab_t4_terminal_execution.gif",
             "text": """Watch our Colab notebook execute live from cell 1 to cell 10.
 
 In this capture, notice how cleanly `%load_ext cudf.pandas` hooks into the notebook runtime, delivering immediate speedups on Parquet ingest and cuML model fitting without a single lines-of-code rewrite.
@@ -950,16 +993,17 @@ https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/n
         {
             "id": "buffer_li_d11_p4",
             "slot": "Evening Deep Dive",
-            "time": "17:34 MDT",
+            "time": "17:31 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar E: Open Source",
             "url": "https://github.com/zrt219/Z-WBE-Bottleneck-Lab",
             "claims_verified": "YES - tests/colabNotebook.test.ts passes (5/5 tests)",
             "manual_review": "NO",
             "media": [
-                "public/marketing/ad_09.png",
+                "public/images/social_card_data_analytics.png",
+                "public/screenshots/06_architecture_evidence_view.png",
                 "public/colab-evidence/07_github_notebook_code_provenance.png",
-                "public/images/banner-dark.png"
+                "public/marketing/ad_04.png"
             ],
             "text": """Unit testing a Jupyter Notebook in CI/CD? Yes.
 
@@ -983,15 +1027,17 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
         {
             "id": "buffer_li_d11_p5",
             "slot": "Night Build Log",
-            "time": "19:28 MDT",
+            "time": "20:15 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar F: Build Journey",
             "url": "https://github.com/zrt219/Z-WBE-Bottleneck-Lab",
             "claims_verified": "YES - COLAB.md documentation guide verified",
             "manual_review": "NO",
             "media": [
-                "public/marketing/ad_03.png",
-                "public/colab-evidence/02_colab_t4_gpu_runtime_dialog.png"
+                "public/images/social_card_nim_gke.png",
+                "public/screenshots/05_gpu_exploration_map.png",
+                "public/colab-evidence/07_github_notebook_code_provenance.png",
+                "public/marketing/ad_03.png"
             ],
             "text": """Day 11 Build Log: Writing COLAB.md for flawless user onboarding.
 
@@ -1019,13 +1065,13 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab/blob/main/COLAB.md
         {
             "id": "buffer_x_d11_p1",
             "slot": "Morning Hook",
-            "time": "07:14 MDT",
+            "time": "10:16 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar D: Google Cloud / Colab",
             "url": "https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb",
             "claims_verified": "YES - Canonical Colab lab link",
             "manual_review": "NO",
-            "media": "public/recordings/colab_t4_live_execution.gif",
+            "media": "public/recordings/colab_t4_terminal_execution.gif",
             "text": """10 stages.
 1 click.
 100% reproducible GPU benchmarks on Tesla T4.
@@ -1038,15 +1084,17 @@ https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/n
         {
             "id": "buffer_x_d11_p2",
             "slot": "Mid-Morning Visual",
-            "time": "08:42 MDT",
+            "time": "12:30 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar D: Google Cloud / Colab",
             "url": "https://github.com/zrt219/Z-WBE-Bottleneck-Lab",
             "claims_verified": "YES - Flywheel diagram verified",
             "manual_review": "NO",
             "media": [
-                "public/marketing/ad_08.png",
-                "public/colab-evidence/01_colab_notebook_overview.png"
+                "public/images/google-nvidia-developer-badges.png",
+                "public/screenshots/04_nemotron_grounded_interpretation.png",
+                "public/colab-evidence/07_github_notebook_code_provenance.png",
+                "public/marketing/ad_02.png"
             ],
             "text": """The Flywheel:
 Local code -> GitHub -> Google Colab GPU -> JSON evidence -> Vercel web app.
@@ -1059,15 +1107,17 @@ Source: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
         {
             "id": "buffer_x_d11_p3",
             "slot": "Late-Morning Data",
-            "time": "10:24 MDT",
+            "time": "15:00 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar E: Open Source",
             "url": "https://github.com/zrt219/Z-WBE-Bottleneck-Lab",
             "claims_verified": "YES - CI tests for notebooks",
             "manual_review": "NO",
             "media": [
+                "public/images/social_card_data_analytics.png",
+                "public/screenshots/03_bottleneck_moved_transition.png",
                 "public/colab-evidence/07_github_notebook_code_provenance.png",
-                "public/images/banner-dark.png"
+                "public/marketing/ad_01.png"
             ],
             "text": """We unit-test our Jupyter notebook in CI!
 5 automated tests verify all 10 stages exist, cuDF loads, and export paths are valid.
@@ -1080,15 +1130,17 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
         {
             "id": "buffer_x_d11_p4",
             "slot": "Evening Hook",
-            "time": "16:50 MDT",
+            "time": "17:46 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar D: Google Cloud / Colab",
             "url": "https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb",
             "claims_verified": "YES - T4 runtime verification dialog",
             "manual_review": "NO",
             "media": [
-                "public/colab-evidence/02_colab_t4_gpu_runtime_dialog.png",
-                "public/colab-evidence/05_colab_nvidia_smi_ensemble_eval.png"
+                "public/images/google-nvidia-developer-badges.png",
+                "public/screenshots/02_imaging_wall_baseline.png",
+                "public/colab-evidence/07_github_notebook_code_provenance.png",
+                "public/images/banner-light.png"
             ],
             "text": """Google Colab runtime verified:
 NVIDIA Tesla T4 GPU (16 GB GDDR6).
@@ -1102,15 +1154,17 @@ https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/n
         {
             "id": "buffer_x_d11_p5",
             "slot": "Night Observation",
-            "time": "18:22 MDT",
+            "time": "20:30 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar F: Build Journey",
             "url": "https://github.com/zrt219/Z-WBE-Bottleneck-Lab/blob/main/COLAB.md",
             "claims_verified": "YES - COLAB.md guide exists",
             "manual_review": "NO",
             "media": [
-                "public/marketing/ad_03.png",
-                "public/images/banner-light.png"
+                "public/images/golden_ticket_data_analytics.png",
+                "public/screenshots/01_hero_overview.png",
+                "public/data/cpu_vs_gpu_speedup.png",
+                "public/images/banner-dark.png"
             ],
             "text": """A benchmark without a 1-click reproduction link is just a screenshot.
 
@@ -1131,17 +1185,17 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab/blob/main/COLAB.md
         {
             "id": "buffer_li_d12_p1",
             "slot": "Morning Flagship",
-            "time": "07:48 MDT",
+            "time": "10:05 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar C: GPU / NVIDIA",
             "url": "https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb",
             "claims_verified": "YES - 8.62x overall speedup verified in cpu_vs_gpu_benchmark.json",
             "manual_review": "NO",
             "media": [
-                "public/marketing/ad_03.png",
+                "public/images/social_card_data_analytics.png",
+                "public/screenshots/06_architecture_evidence_view.png",
                 "public/data/cpu_vs_gpu_speedup.png",
-                "public/colab-evidence/05_colab_nvidia_smi_ensemble_eval.png",
-                "public/images/banner-dark.png"
+                "public/marketing/ad_10.png"
             ],
             "text": """Dissecting the 8.62x speedup on an NVIDIA Tesla T4 GPU.
 
@@ -1178,16 +1232,17 @@ https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/n
         {
             "id": "buffer_li_d12_p2",
             "slot": "Mid-Morning Explainer",
-            "time": "09:36 MDT",
+            "time": "12:20 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar C: GPU / NVIDIA",
             "url": "https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb",
             "claims_verified": "YES - cuML vs scikit-learn mechanics documented",
             "manual_review": "NO",
             "media": [
-                "public/colab-evidence/03_colab_cuml_linear_regression.png",
-                "public/colab-evidence/04_colab_cuml_execution_progress.png",
-                "public/data/cpu_vs_gpu_speedup.png"
+                "public/images/social_card_accelerated_ml.png",
+                "public/screenshots/05_gpu_exploration_map.png",
+                "public/colab-evidence/07_github_notebook_code_provenance.png",
+                "public/marketing/ad_09.png"
             ],
             "text": """cuML vs scikit-learn: Why Random Forest trained 8.5x faster on GPU.
 
@@ -1213,15 +1268,17 @@ https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/n
         {
             "id": "buffer_li_d12_p3",
             "slot": "Noon Visual Proof",
-            "time": "11:32 MDT",
+            "time": "14:49 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar C: GPU / NVIDIA",
             "url": "https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb",
             "claims_verified": "YES - Chart matches public/data/cpu_vs_gpu_speedup.png",
             "manual_review": "NO",
             "media": [
+                "public/images/social_card_accelerated_ml.png",
+                "public/screenshots/06_architecture_evidence_view.png",
                 "public/data/cpu_vs_gpu_speedup.png",
-                "public/marketing/ad_03.png"
+                "public/marketing/ad_08.png"
             ],
             "text": """The empirical benchmark chart: CPU vs GPU across all 5 pipeline stages.
 
@@ -1236,16 +1293,17 @@ https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/n
         {
             "id": "buffer_li_d12_p4",
             "slot": "Evening Deep Dive",
-            "time": "17:42 MDT",
+            "time": "17:36 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar C: GPU / NVIDIA",
             "url": "https://github.com/zrt219/Z-WBE-Bottleneck-Lab",
             "claims_verified": "YES - CPU fallback semantics in cudf.pandas verified",
             "manual_review": "NO",
             "media": [
-                "public/colab-evidence/06_colab_gpu_extensions_and_terminal.png",
+                "public/images/social_card_data_analytics.png",
                 "public/screenshots/06_architecture_evidence_view.png",
-                "public/images/banner-dark.png"
+                "public/colab-evidence/07_github_notebook_code_provenance.png",
+                "public/marketing/ad_07.png"
             ],
             "text": """What happens when cudf.pandas encounters an unsupported operation?
 
@@ -1266,15 +1324,17 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
         {
             "id": "buffer_li_d12_p5",
             "slot": "Night Build Log",
-            "time": "19:36 MDT",
+            "time": "20:20 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar F: Build Journey",
             "url": "https://github.com/zrt219/Z-WBE-Bottleneck-Lab",
             "claims_verified": "YES - scripts/benchmark_cpu_vs_gpu.py verified",
             "manual_review": "NO",
             "media": [
-                "public/marketing/ad_03.png",
-                "public/colab-evidence/05_colab_nvidia_smi_ensemble_eval.png"
+                "public/images/social_card_data_analytics.png",
+                "public/screenshots/02_imaging_wall_baseline.png",
+                "public/data/cpu_vs_gpu_speedup.png",
+                "public/marketing/ad_06.png"
             ],
             "text": """Day 12 Build Log: Eliminating benchmark warmup bias.
 
@@ -1299,15 +1359,17 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
         {
             "id": "buffer_x_d12_p1",
             "slot": "Morning Hook",
-            "time": "07:16 MDT",
+            "time": "10:20 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar C: GPU / NVIDIA",
             "url": "https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb",
             "claims_verified": "YES - Overall speedup numbers verified",
             "manual_review": "NO",
             "media": [
-                "public/marketing/ad_03.png",
-                "public/data/cpu_vs_gpu_speedup.png"
+                "public/images/social_card_data_analytics.png",
+                "public/screenshots/01_hero_overview.png",
+                "public/data/cpu_vs_gpu_speedup.png",
+                "public/marketing/ad_05.png"
             ],
             "text": """8.62x speedup on an NVIDIA Tesla T4:
 CPU: 1.907s
@@ -1324,15 +1386,17 @@ https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/n
         {
             "id": "buffer_x_d12_p2",
             "slot": "Mid-Morning Visual",
-            "time": "08:45 MDT",
+            "time": "12:35 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar C: GPU / NVIDIA",
             "url": "https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb",
             "claims_verified": "YES - Subtask speedups",
             "manual_review": "NO",
             "media": [
-                "public/colab-evidence/03_colab_cuml_linear_regression.png",
-                "public/colab-evidence/05_colab_nvidia_smi_ensemble_eval.png"
+                "public/images/golden_ticket_speed_up_data_analytics.png",
+                "public/screenshots/06_architecture_evidence_view.png",
+                "public/data/cpu_vs_gpu_speedup.png",
+                "public/marketing/ad_04.png"
             ],
             "text": """Where does the speedup come from?
 - XGBoost: 9.8x
@@ -1348,13 +1412,13 @@ Code: https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/
         {
             "id": "buffer_x_d12_p3",
             "slot": "Late-Morning Data",
-            "time": "10:30 MDT",
+            "time": "15:05 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar C: GPU / NVIDIA",
             "url": "https://github.com/zrt219/Z-WBE-Bottleneck-Lab",
             "claims_verified": "YES - CPU fallback in cudf.pandas",
             "manual_review": "NO",
-            "media": "public/recordings/colab_t4_live_execution.gif",
+            "media": "public/recordings/colab_t4_terminal_execution.gif",
             "text": """What happens if cudf.pandas hits an unsupported function?
 Zero crashes.
 It automatically falls back to CPU pandas and returns results to GPU memory.
@@ -1366,15 +1430,17 @@ Graceful acceleration: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
         {
             "id": "buffer_x_d12_p4",
             "slot": "Evening Hook",
-            "time": "16:56 MDT",
+            "time": "17:51 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar F: Build Journey",
             "url": "https://github.com/zrt219/Z-WBE-Bottleneck-Lab",
             "claims_verified": "YES - Warmup run methodology",
             "manual_review": "NO",
             "media": [
-                "public/marketing/ad_03.png",
-                "public/colab-evidence/t4-colab-runtime-proof.png"
+                "public/images/golden_ticket_intro_inference.png",
+                "public/screenshots/06_architecture_evidence_view.png",
+                "public/data/cpu_vs_gpu_speedup.png",
+                "public/marketing/ad_03.png"
             ],
             "text": """Never benchmark the first CUDA run.
 Context initialization skew is real.
@@ -1387,15 +1453,17 @@ Engineering rigor matters: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
         {
             "id": "buffer_x_d12_p5",
             "slot": "Night Observation",
-            "time": "18:28 MDT",
+            "time": "20:35 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar C: GPU / NVIDIA",
             "url": "https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb",
             "claims_verified": "YES - Tesla T4 accessibility",
             "manual_review": "NO",
             "media": [
-                "public/images/banner-dark.png",
-                "public/data/cpu_vs_gpu_speedup.png"
+                "public/images/golden_ticket_accelerated_ml.png",
+                "public/screenshots/04_nemotron_grounded_interpretation.png",
+                "public/data/cpu_vs_gpu_speedup.png",
+                "public/marketing/ad_02.png"
             ],
             "text": """You don't need an H100 to get an 8.6x speedup.
 A standard Tesla T4 in free Colab will collapse your tabular ETL time by 88%.
@@ -1416,17 +1484,17 @@ Try it: https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blo
         {
             "id": "buffer_li_d13_p1",
             "slot": "Morning Flagship",
-            "time": "07:46 MDT",
+            "time": "09:59 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar C: GPU / NVIDIA",
             "url": "https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb",
             "claims_verified": "YES - RAPIDS stack integration verified",
             "manual_review": "NO",
             "media": [
-                "public/marketing/ad_08.png",
-                "public/colab-evidence/06_colab_gpu_extensions_and_terminal.png",
-                "public/colab-evidence/03_colab_cuml_linear_regression.png",
-                "public/images/banner-dark.png"
+                "public/images/social_card_data_analytics.png",
+                "public/screenshots/05_gpu_exploration_map.png",
+                "public/colab-evidence/07_github_notebook_code_provenance.png",
+                "public/marketing/ad_01.png"
             ],
             "text": """How NVIDIA RAPIDS turns Python data science into a GPU supercomputer.
 
@@ -1449,14 +1517,15 @@ https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/n
         {
             "id": "buffer_li_d13_p2",
             "slot": "Mid-Morning Explainer",
-            "time": "09:34 MDT",
+            "time": "12:14 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar C: GPU / NVIDIA",
             "url": "https://github.com/zrt219/Z-WBE-Bottleneck-Lab",
             "claims_verified": "YES - Parquet tutorial and optimization verified",
             "manual_review": "NO",
             "media": [
-                "public/marketing/ad_05.png",
+                "public/images/social_card_data_analytics.png",
+                "public/screenshots/05_gpu_exploration_map.png",
                 "public/colab-evidence/07_github_notebook_code_provenance.png",
                 "public/images/banner-light.png"
             ],
@@ -1479,13 +1548,13 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
         {
             "id": "buffer_li_d13_p3",
             "slot": "Noon Visual Proof",
-            "time": "11:30 MDT",
+            "time": "14:44 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar D: Google Cloud / Colab",
             "url": "https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb",
             "claims_verified": "YES - Colab execution capture",
             "manual_review": "NO",
-            "media": "public/recordings/colab_t4_live_execution.gif",
+            "media": "public/recordings/colab_t4_terminal_execution.gif",
             "text": """Watch cuDF and cuML train an ensemble model in under 250 milliseconds in Google Colab.
 
 Notice how the terminal shows zero memory warnings and instant completion of both Random Forest and XGBoost model training.
@@ -1498,7 +1567,7 @@ https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/n
         {
             "id": "buffer_li_d13_p4",
             "slot": "Evening Deep Dive",
-            "time": "17:38 MDT",
+            "time": "17:30 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar I: Learning Paths",
             "url": "https://g.dev/zhane",
@@ -1506,8 +1575,9 @@ https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/n
             "manual_review": "NO",
             "media": [
                 "public/images/social_card_data_analytics.png",
-                "public/images/badge_data_analytics.png",
-                "public/images/google-nvidia-developer-badges.png"
+                "public/screenshots/01_hero_overview.png",
+                "public/data/cpu_vs_gpu_speedup.png",
+                "public/images/banner-dark.png"
             ],
             "text": """From Course to Code: What I learned from 'Speed Up Data Analytics on GPUs'.
 
@@ -1532,15 +1602,17 @@ https://g.dev/zhane
         {
             "id": "buffer_li_d13_p5",
             "slot": "Night Build Log",
-            "time": "19:32 MDT",
+            "time": "20:14 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar F: Build Journey",
             "url": "https://github.com/zrt219/Z-WBE-Bottleneck-Lab",
             "claims_verified": "YES - scripts/test_cudf_profiling.py verified",
             "manual_review": "NO",
             "media": [
-                "public/marketing/ad_08.png",
-                "public/colab-evidence/06_colab_gpu_extensions_and_terminal.png"
+                "public/images/social_card_data_analytics.png",
+                "public/screenshots/06_architecture_evidence_view.png",
+                "public/colab-evidence/07_github_notebook_code_provenance.png",
+                "public/marketing/ad_10.png"
             ],
             "text": """Day 13 Build Log: Validating GPU package availability on Colab startup.
 
@@ -1563,13 +1635,13 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
         {
             "id": "buffer_x_d13_p1",
             "slot": "Morning Hook",
-            "time": "07:14 MDT",
+            "time": "10:14 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar C: GPU / NVIDIA",
             "url": "https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb",
             "claims_verified": "YES - cuDF and cuML acceleration thesis",
             "manual_review": "NO",
-            "media": "public/recordings/colab_t4_live_execution.gif",
+            "media": "public/recordings/colab_t4_terminal_execution.gif",
             "text": """Why wait 45 minutes on CPU pandas?
 NVIDIA cuDF and cuML sweep 100,000 scenarios in <5 seconds.
 
@@ -1581,15 +1653,17 @@ https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/n
         {
             "id": "buffer_x_d13_p2",
             "slot": "Mid-Morning Visual",
-            "time": "08:40 MDT",
+            "time": "12:28 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar C: GPU / NVIDIA",
             "url": "https://github.com/zrt219/Z-WBE-Bottleneck-Lab",
             "claims_verified": "YES - Parquet columnar storage tutorial",
             "manual_review": "NO",
             "media": [
-                "public/marketing/ad_05.png",
-                "public/colab-evidence/06_colab_gpu_extensions_and_terminal.png"
+                "public/images/social_card_accelerated_ml.png",
+                "public/screenshots/06_architecture_evidence_view.png",
+                "public/colab-evidence/07_github_notebook_code_provenance.png",
+                "public/marketing/ad_09.png"
             ],
             "text": """Why Parquet is mandatory for GPU ETL:
 Columnar layout streams chunks directly into GDDR6 device memory without CPU staging.
@@ -1601,7 +1675,7 @@ Tutorial in repo: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
         {
             "id": "buffer_x_d13_p3",
             "slot": "Late-Morning Data",
-            "time": "10:26 MDT",
+            "time": "14:58 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar I: Learning Paths",
             "url": "https://g.dev/zhane",
@@ -1609,7 +1683,9 @@ Tutorial in repo: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
             "manual_review": "NO",
             "media": [
                 "public/images/social_card_data_analytics.png",
-                "public/images/badge_data_analytics.png"
+                "public/screenshots/04_nemotron_grounded_interpretation.png",
+                "public/data/cpu_vs_gpu_speedup.png",
+                "public/marketing/ad_08.png"
             ],
             "text": """Completed 'Speed Up Data Analytics on GPUs' on Google Cloud Skills Boost.
 Then applied it directly to build our 8.62x benchmark.
@@ -1621,15 +1697,17 @@ Badges: https://g.dev/zhane
         {
             "id": "buffer_x_d13_p4",
             "slot": "Evening Hook",
-            "time": "16:52 MDT",
+            "time": "17:44 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar C: GPU / NVIDIA",
             "url": "https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb",
             "claims_verified": "YES - cuML Random Forest training speedup",
             "manual_review": "NO",
             "media": [
-                "public/colab-evidence/03_colab_cuml_linear_regression.png",
-                "public/data/cpu_vs_gpu_speedup.png"
+                "public/images/social_card_accelerated_ml.png",
+                "public/screenshots/03_bottleneck_moved_transition.png",
+                "public/colab-evidence/07_github_notebook_code_provenance.png",
+                "public/marketing/ad_07.png"
             ],
             "text": """cuML Random Forest: 0.154 seconds on Tesla T4.
 scikit-learn on CPU: 1.308 seconds.
@@ -1642,15 +1720,17 @@ Code: https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/
         {
             "id": "buffer_x_d13_p5",
             "slot": "Night Observation",
-            "time": "18:20 MDT",
+            "time": "20:28 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar F: Build Journey",
             "url": "https://github.com/zrt219/Z-WBE-Bottleneck-Lab",
             "claims_verified": "YES - Zero rewrite pandas migration",
             "manual_review": "NO",
             "media": [
-                "public/images/banner-dark.png",
-                "public/marketing/ad_08.png"
+                "public/images/social_card_data_analytics.png",
+                "public/screenshots/02_imaging_wall_baseline.png",
+                "public/colab-evidence/07_github_notebook_code_provenance.png",
+                "public/marketing/ad_06.png"
             ],
             "text": """One line changed our entire pipeline:
 `%load_ext cudf.pandas`
@@ -1672,17 +1752,17 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
         {
             "id": "buffer_li_d14_p1",
             "slot": "Morning Flagship",
-            "time": "07:45 MDT",
+            "time": "10:03 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar C: GPU / NVIDIA",
             "url": "https://z-wbe-bottleneck-lab.vercel.app",
             "claims_verified": "YES - 100k scenario sweep summary verified in gpu-sweep-summary.json",
             "manual_review": "NO",
             "media": [
-                "public/marketing/ad_05.png",
-                "public/screenshots/05_gpu_exploration_map.png",
-                "public/data/eda_scatter_matrix.png",
-                "public/images/banner-dark.png"
+                "public/images/social_card_data_analytics.png",
+                "public/screenshots/02_imaging_wall_baseline.png",
+                "public/colab-evidence/08_colab_rapids_and_variable_inspector.png",
+                "public/marketing/ad_05.png"
             ],
             "text": """Mapping 100,000 futures for Whole-Brain Emulation in GPU memory.
 
@@ -1712,16 +1792,17 @@ https://z-wbe-bottleneck-lab.vercel.app
         {
             "id": "buffer_li_d14_p2",
             "slot": "Mid-Morning Explainer",
-            "time": "09:32 MDT",
+            "time": "12:17 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar C: GPU / NVIDIA",
             "url": "https://github.com/zrt219/Z-WBE-Bottleneck-Lab",
             "claims_verified": "YES - scripts/generate_gpu_sweep.py code verified",
             "manual_review": "NO",
             "media": [
-                "public/marketing/ad_04.png",
-                "public/data/eda_histograms.png",
-                "public/images/banner-light.png"
+                "public/images/social_card_data_analytics.png",
+                "public/screenshots/05_gpu_exploration_map.png",
+                "public/colab-evidence/07_github_notebook_code_provenance.png",
+                "public/marketing/ad_04.png"
             ],
             "text": """How we generated 100,000 synthetic parameter scenarios in under 2 seconds.
 
@@ -1743,15 +1824,17 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
         {
             "id": "buffer_li_d14_p3",
             "slot": "Noon Visual Proof",
-            "time": "11:28 MDT",
+            "time": "14:46 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar H: Product Demo",
             "url": "https://z-wbe-bottleneck-lab.vercel.app",
             "claims_verified": "YES - UI screenshot of heatmap",
             "manual_review": "NO",
             "media": [
-                "public/screenshots/05_gpu_exploration_map.png",
-                "public/screenshots/01_hero_overview.png"
+                "public/images/golden_ticket_data_analytics.png",
+                "public/screenshots/02_imaging_wall_baseline.png",
+                "public/data/eda_histograms.png",
+                "public/marketing/ad_03.png"
             ],
             "text": """The GPU Exploration Map in Z-WBE Bottleneck Lab.
 
@@ -1771,16 +1854,17 @@ https://z-wbe-bottleneck-lab.vercel.app
         {
             "id": "buffer_li_d14_p4",
             "slot": "Evening Deep Dive",
-            "time": "17:36 MDT",
+            "time": "17:33 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar B: Systems Engineering",
             "url": "https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb",
             "claims_verified": "YES - eda_scatter_matrix.png verified",
             "manual_review": "NO",
             "media": [
-                "public/data/eda_scatter_matrix.png",
-                "public/marketing/ad_05.png",
-                "public/images/banner-dark.png"
+                "public/images/golden_ticket_nim_gke.png",
+                "public/screenshots/02_imaging_wall_baseline.png",
+                "public/colab-evidence/07_github_notebook_code_provenance.png",
+                "public/marketing/ad_02.png"
             ],
             "text": """Correlation Analysis: What correlates most strongly with total project delay?
 
@@ -1799,16 +1883,17 @@ https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/n
         {
             "id": "buffer_li_d14_p5",
             "slot": "Night Build Log",
-            "time": "19:30 MDT",
+            "time": "20:17 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar F: Build Journey",
             "url": "https://z-wbe-bottleneck-lab.vercel.app",
             "claims_verified": "YES - Week 2 completion verified",
             "manual_review": "NO",
             "media": [
-                "public/marketing/ad_10.png",
-                "public/images/google-nvidia-developer-badges.png",
-                "public/images/banner-dark.png"
+                "public/images/social_card_data_analytics.png",
+                "public/screenshots/04_nemotron_grounded_interpretation.png",
+                "public/data/cpu_vs_gpu_speedup.png",
+                "public/marketing/ad_01.png"
             ],
             "text": """Week 2 Retrospective: The Engineering Milestone.
 
@@ -1836,15 +1921,17 @@ https://z-wbe-bottleneck-lab.vercel.app
         {
             "id": "buffer_x_d14_p1",
             "slot": "Morning Hook",
-            "time": "07:12 MDT",
+            "time": "10:18 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar C: GPU / NVIDIA",
             "url": "https://z-wbe-bottleneck-lab.vercel.app",
             "claims_verified": "YES - 100k sweep statistics verified",
             "manual_review": "NO",
             "media": [
-                "public/marketing/ad_05.png",
-                "public/screenshots/05_gpu_exploration_map.png"
+                "public/images/social_card_data_analytics.png",
+                "public/screenshots/02_imaging_wall_baseline.png",
+                "public/colab-evidence/08_colab_rapids_and_variable_inspector.png",
+                "public/images/banner-light.png"
             ],
             "text": """We mapped 100,000 WBE futures in GPU memory via NVIDIA cuDF:
 48.2% Acquisition-bound
@@ -1860,15 +1947,17 @@ Map: https://z-wbe-bottleneck-lab.vercel.app
         {
             "id": "buffer_x_d14_p2",
             "slot": "Mid-Morning Visual",
-            "time": "08:44 MDT",
+            "time": "12:32 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar D: Google Cloud / Colab",
             "url": "https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb",
             "claims_verified": "YES - Scatter matrix visual",
             "manual_review": "NO",
             "media": [
-                "public/data/eda_scatter_matrix.png",
-                "public/data/eda_histograms.png"
+                "public/images/google-nvidia-developer-badges.png",
+                "public/screenshots/01_hero_overview.png",
+                "public/colab-evidence/07_github_notebook_code_provenance.png",
+                "public/images/banner-dark.png"
             ],
             "text": """100k scenarios generated and evaluated in 1.84s on a Tesla T4.
 Zero Python loops. Pure GPU vectorization.
@@ -1880,7 +1969,7 @@ Colab code: https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab
         {
             "id": "buffer_x_d14_p3",
             "slot": "Late-Morning Data",
-            "time": "10:28 MDT",
+            "time": "15:02 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar H: Product Demo",
             "url": "https://z-wbe-bottleneck-lab.vercel.app",
@@ -1897,15 +1986,17 @@ Try it live: https://z-wbe-bottleneck-lab.vercel.app
         {
             "id": "buffer_x_d14_p4",
             "slot": "Evening Hook",
-            "time": "16:54 MDT",
+            "time": "17:48 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar B: Systems Engineering",
             "url": "https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb",
             "claims_verified": "YES - Pearson r correlation data",
             "manual_review": "NO",
             "media": [
-                "public/marketing/ad_01.png",
-                "public/screenshots/03_bottleneck_moved_transition.png"
+                "public/images/social_card_data_analytics.png",
+                "public/screenshots/06_architecture_evidence_view.png",
+                "public/colab-evidence/07_github_notebook_code_provenance.png",
+                "public/marketing/ad_10.png"
             ],
             "text": """Correlation insight:
 Dwell time dictates project length (r=0.88).
@@ -1919,15 +2010,17 @@ https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/n
         {
             "id": "buffer_x_d14_p5",
             "slot": "Night Observation",
-            "time": "18:24 MDT",
+            "time": "20:32 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar F: Build Journey",
             "url": "https://z-wbe-bottleneck-lab.vercel.app",
             "claims_verified": "YES - Week 2 close / Week 3 teaser",
             "manual_review": "NO",
             "media": [
-                "public/images/banner-dark.png",
-                "public/marketing/ad_10.png"
+                "public/images/social_card_nim_gke.png",
+                "public/screenshots/05_gpu_exploration_map.png",
+                "public/data/eda_histograms.png",
+                "public/marketing/ad_09.png"
             ],
             "text": """Week 2 is a wrap!
 Week 3 starts tomorrow: Preservation limits, biophysical functionalization, and consciousness validation.

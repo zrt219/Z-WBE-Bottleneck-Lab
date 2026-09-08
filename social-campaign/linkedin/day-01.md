@@ -8,19 +8,19 @@
 
 ---
 
-## Post 1: Morning Flagship (07:45 MDT)
+## Post 1: Morning Flagship (10:00 MDT)
 
 - **Buffer Post ID**: `6a9fae8f1900c10a4f0e8946`
 - **Buffer Status**: `DRAFT (Buffer Verified)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 01
 - **Content Pillar**: Pillar B: Systems Engineering
-- **Scheduled Time (MDT)**: 07:45 MDT
+- **Scheduled Time (MDT)**: 10:00 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
 - **Hook**: What breaks first when you attempt Whole-Brain Emulation?
 - **Post Summary**: In computational neuroscience and high-performance computing, the conversation is too often fragmented into isolated domain silos:
-- **Media**: `ad_01.png, 02_imaging_wall_baseline.png, 03_bottleneck_moved_transition.png, cpu_vs_gpu_speedup.png`
-- **Media Order**: 1. ad_01.png -> 2. 02_imaging_wall_baseline.png -> 3. 03_bottleneck_moved_transition.png -> 4. cpu_vs_gpu_speedup.png
+- **Media**: `social_card_nim_gke.png, social_card_data_analytics.png, social_card_accelerated_ml.png, social_card_intro_inference.png`
+- **Media Order**: 1. social_card_nim_gke.png -> 2. social_card_data_analytics.png -> 3. social_card_accelerated_ml.png -> 4. social_card_intro_inference.png
 - **Hashtags**: #NVIDIAGTC #GoogleCloud #NVIDIA #Nemotron #OpenRouter #RAPIDS #cuDF #CloudRun #ComputationalNeuroscience #SystemsEngineering #OpenSource #DevChallenge
 - **Mentions**: Google for Developers | NVIDIA AI | Jen Harvey | Ray Harvey
 - **Claims Verified**: YES - 12 equations, 89 tests, 8.62x speedup on T4
@@ -28,10 +28,10 @@
 
 ### Media Attachments
 **Format**: Multi-Image Carousel (4 images)
-1. `public/marketing/ad_01.png`
-2. `public/screenshots/02_imaging_wall_baseline.png`
-3. `public/screenshots/03_bottleneck_moved_transition.png`
-4. `public/data/cpu_vs_gpu_speedup.png`
+1. `public/images/social_card_nim_gke.png`
+2. `public/images/social_card_data_analytics.png`
+3. `public/images/social_card_accelerated_ml.png`
+4. `public/images/social_card_intro_inference.png`
 
 ### Post Copy
 
@@ -69,19 +69,19 @@ Mentions & Judges: Google for Developers | NVIDIA AI | Jen Harvey | Ray Harvey
 
 ---
 
-## Post 2: Mid-Morning Explainer (09:32 MDT)
+## Post 2: Mid-Morning Explainer (11:45 MDT)
 
 - **Buffer Post ID**: `6a9fae907c96d9873c8f77d2`
 - **Buffer Status**: `DRAFT (Buffer Verified)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 01
 - **Content Pillar**: Pillar B: Systems Engineering
-- **Scheduled Time (MDT)**: 09:32 MDT
+- **Scheduled Time (MDT)**: 11:45 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: Most discussions about brain emulation focus on compute. The math says compute is rarely the first wall.
 - **Post Summary**: In Z-WBE Bottleneck Lab, we model 8 distinct physical and economic constraint dimensions simultaneously:
-- **Media**: `ad_04.png, 01_hero_overview.png, 06_architecture_evidence_view.png, banner-dark.png`
-- **Media Order**: 1. ad_04.png -> 2. 01_hero_overview.png -> 3. 06_architecture_evidence_view.png -> 4. banner-dark.png
+- **Media**: `social_card_intro_inference.png, 02_imaging_wall_baseline.png, 07_github_notebook_code_provenance.png, ad_02.png`
+- **Media Order**: 1. social_card_intro_inference.png -> 2. 02_imaging_wall_baseline.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_02.png
 - **Hashtags**: #NVIDIAGTC #SystemsEngineering #ComputationalNeuroscience #HighPerformanceComputing #HardwareArchitecture #TypeScript #OpenSource
 - **Mentions**: None
 - **Claims Verified**: YES - 8 bottleneck dimensions defined in shared/src/types.ts
@@ -89,10 +89,10 @@ Mentions & Judges: Google for Developers | NVIDIA AI | Jen Harvey | Ray Harvey
 
 ### Media Attachments
 **Format**: Multi-Image Carousel (4 images)
-1. `public/marketing/ad_04.png`
-2. `public/screenshots/01_hero_overview.png`
-3. `public/screenshots/06_architecture_evidence_view.png`
-4. `public/images/banner-dark.png`
+1. `public/images/social_card_intro_inference.png`
+2. `public/screenshots/02_imaging_wall_baseline.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/marketing/ad_02.png`
 
 ### Post Copy
 
@@ -123,14 +123,14 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 ---
 
-## Post 3: Noon Visual Proof (11:28 MDT)
+## Post 3: Noon Visual Proof (13:45 MDT)
 
 - **Buffer Post ID**: `6a9fae92b11a426090bd7a56`
 - **Buffer Status**: `DRAFT (Buffer Verified)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 01
 - **Content Pillar**: Pillar H: Product Demo
-- **Scheduled Time (MDT)**: 11:28 MDT
+- **Scheduled Time (MDT)**: 13:45 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
 - **Hook**: Here is a 60-second guided walkthrough of Z-WBE Bottleneck Lab.
 - **Post Summary**: In this demo, you can see:
@@ -166,19 +166,19 @@ https://z-wbe-bottleneck-lab.vercel.app
 
 ---
 
-## Post 4: Evening Deep Dive (17:34 MDT)
+## Post 4: Evening Deep Dive (16:30 MDT)
 
 - **Buffer Post ID**: `6a9fae937eee3ace70b77e2b`
 - **Buffer Status**: `DRAFT (Buffer Verified)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 01
 - **Content Pillar**: Pillar A: WBE Research
-- **Scheduled Time (MDT)**: 17:34 MDT
+- **Scheduled Time (MDT)**: 16:30 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: Why connectomics is only Stage 2 of a 6-stage engineering journey.
 - **Post Summary**: In popular science coverage, scanning a brain is frequently conflated with simulating a brain. But in rigorous systems modeling...
-- **Media**: `ad_06.png, 02_imaging_wall_baseline.png, 07_github_notebook_code_provenance.png, banner-light.png`
-- **Media Order**: 1. ad_06.png -> 2. 02_imaging_wall_baseline.png -> 3. 07_github_notebook_code_provenance.png -> 4. banner-light.png
+- **Media**: `social_card_accelerated_ml.png, 02_imaging_wall_baseline.png, 07_github_notebook_code_provenance.png, ad_01.png`
+- **Media Order**: 1. social_card_accelerated_ml.png -> 2. 02_imaging_wall_baseline.png -> 3. 07_github_notebook_code_provenance.png -> 4. ad_01.png
 - **Hashtags**: #NVIDIAGTC #ComputationalNeuroscience #Connectomics #SystemsModeling #Research #OpenSource
 - **Mentions**: None
 - **Claims Verified**: YES - 6 pipeline stages documented in README.md
@@ -186,10 +186,10 @@ https://z-wbe-bottleneck-lab.vercel.app
 
 ### Media Attachments
 **Format**: Multi-Image Carousel (4 images)
-1. `public/marketing/ad_06.png`
+1. `public/images/social_card_accelerated_ml.png`
 2. `public/screenshots/02_imaging_wall_baseline.png`
 3. `public/colab-evidence/07_github_notebook_code_provenance.png`
-4. `public/images/banner-light.png`
+4. `public/marketing/ad_01.png`
 
 ### Post Copy
 
@@ -217,19 +217,19 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 ---
 
-## Post 5: Night Build Log (19:26 MDT)
+## Post 5: Night Build Log (18:45 MDT)
 
 - **Buffer Post ID**: `6a9fae951900c10a4f0e89e8`
 - **Buffer Status**: `DRAFT (Buffer Verified)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 01
 - **Content Pillar**: Pillar F: Build Journey
-- **Scheduled Time (MDT)**: 19:26 MDT
+- **Scheduled Time (MDT)**: 18:45 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
 - **Hook**: Day 1 Build Log: Why I refused to let the LLM calculate the numbers.
 - **Post Summary**: When building an AI-powered scientific application, the most common trap is passing raw prompt parameters to an LLM and asking it:
-- **Media**: `ad_04.png, 04_nemotron_grounded_interpretation.png, 06_architecture_evidence_view.png, banner-dark.png`
-- **Media Order**: 1. ad_04.png -> 2. 04_nemotron_grounded_interpretation.png -> 3. 06_architecture_evidence_view.png -> 4. banner-dark.png
+- **Media**: `social_card_intro_inference.png, 04_nemotron_grounded_interpretation.png, 01_colab_notebook_overview.png, banner-light.png`
+- **Media Order**: 1. social_card_intro_inference.png -> 2. 04_nemotron_grounded_interpretation.png -> 3. 01_colab_notebook_overview.png -> 4. banner-light.png
 - **Hashtags**: #NVIDIAGTC #AIEngineering #Nemotron #SoftwareArchitecture #TypeScript #BuildInPublic
 - **Mentions**: None
 - **Claims Verified**: YES - Epistemic separation architecture verified in tests/security.test.ts
@@ -237,10 +237,10 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 ### Media Attachments
 **Format**: Multi-Image Carousel (4 images)
-1. `public/marketing/ad_04.png`
+1. `public/images/social_card_intro_inference.png`
 2. `public/screenshots/04_nemotron_grounded_interpretation.png`
-3. `public/screenshots/06_architecture_evidence_view.png`
-4. `public/images/banner-dark.png`
+3. `public/colab-evidence/01_colab_notebook_overview.png`
+4. `public/images/banner-light.png`
 
 ### Post Copy
 
@@ -268,29 +268,30 @@ https://z-wbe-bottleneck-lab.vercel.app
 
 ---
 
-## Post 6: Late Night Reflection (21:38 MDT)
+## Post 6: Late Night Reflection (20:45 MDT)
 
 - **Buffer Post ID**: `6a9fae97e638e16871e6419a`
 - **Buffer Status**: `DRAFT (Buffer Verified)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 01
 - **Content Pillar**: Pillar B: Systems Engineering
-- **Scheduled Time (MDT)**: 21:38 MDT
+- **Scheduled Time (MDT)**: 20:45 MDT
 - **Primary Destination URL**: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 - **Hook**: Systems engineering insight of the day:
 - **Post Summary**: Optimizing an unconstrained component is the fastest way to waste engineering capital.
-- **Media**: `ad_01.png, 03_bottleneck_moved_transition.png, banner-dark.png`
-- **Media Order**: 1. ad_01.png -> 2. 03_bottleneck_moved_transition.png -> 3. banner-dark.png
+- **Media**: `social_card_accelerated_ml.png, 02_imaging_wall_baseline.png, 07_github_notebook_code_provenance.png, banner-dark.png`
+- **Media Order**: 1. social_card_accelerated_ml.png -> 2. 02_imaging_wall_baseline.png -> 3. 07_github_notebook_code_provenance.png -> 4. banner-dark.png
 - **Hashtags**: #NVIDIAGTC #AmdahlsLaw #SystemsEngineering #HardwareDesign #ScientificComputing
 - **Mentions**: None
 - **Claims Verified**: YES - 12 equations in shared/src/equations.ts
 - **Manual Review Required**: NO
 
 ### Media Attachments
-**Format**: Multi-Image Carousel (3 images)
-1. `public/marketing/ad_01.png`
-2. `public/screenshots/03_bottleneck_moved_transition.png`
-3. `public/images/banner-dark.png`
+**Format**: Multi-Image Carousel (4 images)
+1. `public/images/social_card_accelerated_ml.png`
+2. `public/screenshots/02_imaging_wall_baseline.png`
+3. `public/colab-evidence/07_github_notebook_code_provenance.png`
+4. `public/images/banner-dark.png`
 
 ### Post Copy
 
