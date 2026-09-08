@@ -12,6 +12,12 @@
 [![TypeScript Monorepo](https://img.shields.io/badge/TypeScript-Strict%20Monorepo-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
+<div align="center">
+  <a href="https://z-wbe-bottleneck-lab.vercel.app">
+    <img src="./public/images/banner-dark.png" alt="Z-WBE Bottleneck Lab — Change the assumptions. See what breaks first." width="100%" style="border-radius: 10px; max-width: 1000px;" />
+  </a>
+</div>
+
 **Built for the Google Cloud × NVIDIA GTC Berlin 2026 Golden Ticket Challenge**  
 GitHub Repository: [https://github.com/zrt219/Z-WBE-Bottleneck-Lab](https://github.com/zrt219/Z-WBE-Bottleneck-Lab)  
 Contest Hashtag: **`#NVIDIAGTC`**
@@ -656,6 +662,15 @@ npm test
   * [Speed Up Data Analytics on GPUs](https://developers.google.com/profile/badges/playlists/speed-up-data-analytics-GPUs?u=110918189625880989910) • [Pathway](https://developers.google.com/learn/pathways/speed-up-data-analytics-GPUs)
   * [Accelerated Machine Learning with Google Cloud and NVIDIA](https://developers.google.com/profile/badges/playlists/accelerated-machine-learning-with-google-cloud-and-nvidia?u=110918189625880989910) • [Pathway](https://developers.google.com/learn/pathways/accelerated-machine-learning-with-google-cloud-and-nvidia)
   * [Intro to Inference: How to Run AI Models on a GPU](https://developers.google.com/learn/pathways/ai-models-on-gpu-intro)
+
+---
+
+<div align="center">
+  <a href="https://z-wbe-bottleneck-lab.vercel.app">
+    <img src="./public/images/banner-light.png" alt="Z-WBE Bottleneck Lab — Whole-brain emulation bottleneck exploration" width="100%" style="border-radius: 12px; border: 1px solid #d0d7de; box-shadow: 0 4px 20px rgba(0,0,0,0.06); max-width: 1000px;" />
+  </a>
+  <p><em>Z-WBE Bottleneck Lab: Whole-brain emulation bottleneck exploration — <a href="https://z-wbe-bottleneck-lab.vercel.app">Launch Demonstrator</a></em></p>
+</div>
 
 ---
 
