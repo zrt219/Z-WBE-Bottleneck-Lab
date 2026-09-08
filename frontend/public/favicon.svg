@@ -1,4 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
-  <rect width="32" height="32" rx="6" fill="#0f172a"/>
-  <path d="M7 9H25L10 23H25" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect width="32" height="32" rx="7" fill="#0b0f19"/>
+  <!-- Hourglass top and bottom plates -->
+  <path d="M8 6h16M8 26h16" stroke="#00e5ff" stroke-width="2" stroke-linecap="round"/>
+  <!-- Hourglass waist walls -->
+  <path d="M9.5 6.5C9.5 11 15 15 16 16C17 15 22.5 11 22.5 6.5" stroke="#00e5ff" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M9.5 25.5C9.5 21 15 17 16 16C17 17 22.5 21 22.5 25.5" stroke="#00e5ff" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- Neural nodes in top bulb -->
+  <circle cx="16" cy="10" r="1.5" fill="#00e5ff"/>
+  <circle cx="12.5" cy="8.5" r="1" fill="#00e5ff"/>
+  <circle cx="19.5" cy="8.5" r="1" fill="#00e5ff"/>
+  <path d="M12.5 8.5L16 10L19.5 8.5M16 10V14" stroke="#00e5ff" stroke-width="1" stroke-linecap="round"/>
+  <!-- Emerald compute blocks falling into bottom bulb -->
+  <rect x="15" y="17.5" width="2" height="2" rx="0.4" fill="#10b981"/>
+  <rect x="13.5" y="21" width="2.5" height="2.5" rx="0.5" fill="#10b981"/>
+  <rect x="17" y="21.5" width="2" height="2" rx="0.4" fill="#10b981"/>
+  <rect x="11.5" y="24" width="2.5" height="1.8" rx="0.4" fill="#10b981"/>
+  <rect x="15" y="24" width="3" height="1.8" rx="0.4" fill="#10b981"/>
+  <rect x="19" y="24" width="2" height="1.8" rx="0.4" fill="#10b981"/>
 </svg>
