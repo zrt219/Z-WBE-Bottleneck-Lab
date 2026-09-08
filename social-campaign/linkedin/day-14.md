@@ -11,7 +11,7 @@
 ## Post 1: Morning Flagship (07:45 MDT)
 
 - **Buffer Post ID**: `buffer_li_d14_p1`
-- **Buffer Status**: `SCHEDULED`
+- **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 14
 - **Content Pillar**: Pillar C: GPU / NVIDIA
@@ -67,7 +67,7 @@ https://z-wbe-bottleneck-lab.vercel.app
 ## Post 2: Mid-Morning Explainer (09:32 MDT)
 
 - **Buffer Post ID**: `buffer_li_d14_p2`
-- **Buffer Status**: `SCHEDULED`
+- **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 14
 - **Content Pillar**: Pillar C: GPU / NVIDIA
@@ -114,7 +114,7 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 ## Post 3: Noon Visual Proof (11:28 MDT)
 
 - **Buffer Post ID**: `buffer_li_d14_p3`
-- **Buffer Status**: `SCHEDULED`
+- **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 14
 - **Content Pillar**: Pillar H: Product Demo
@@ -158,7 +158,7 @@ https://z-wbe-bottleneck-lab.vercel.app
 ## Post 4: Evening Deep Dive (17:36 MDT)
 
 - **Buffer Post ID**: `buffer_li_d14_p4`
-- **Buffer Status**: `SCHEDULED`
+- **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 14
 - **Content Pillar**: Pillar B: Systems Engineering
@@ -202,7 +202,7 @@ https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/n
 ## Post 5: Night Build Log (19:30 MDT)
 
 - **Buffer Post ID**: `buffer_li_d14_p5`
-- **Buffer Status**: `SCHEDULED`
+- **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 14
 - **Content Pillar**: Pillar F: Build Journey

@@ -11,7 +11,7 @@
 ## Post 1: Morning Flagship (07:44 MDT)
 
 - **Buffer Post ID**: `buffer_li_d15_p1`
-- **Buffer Status**: `SCHEDULED`
+- **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 15
 - **Content Pillar**: Pillar A: WBE Research
@@ -64,7 +64,7 @@ https://z-wbe-bottleneck-lab.vercel.app
 ## Post 2: Mid-Morning Explainer (09:32 MDT)
 
 - **Buffer Post ID**: `buffer_li_d15_p2`
-- **Buffer Status**: `SCHEDULED`
+- **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 15
 - **Content Pillar**: Pillar A: WBE Research
@@ -114,7 +114,7 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 ## Post 3: Noon Visual Proof (11:28 MDT)
 
 - **Buffer Post ID**: `buffer_li_d15_p3`
-- **Buffer Status**: `SCHEDULED`
+- **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 15
 - **Content Pillar**: Pillar H: Product Demo
@@ -154,7 +154,7 @@ https://z-wbe-bottleneck-lab.vercel.app
 ## Post 4: Evening Deep Dive (17:36 MDT)
 
 - **Buffer Post ID**: `buffer_li_d15_p4`
-- **Buffer Status**: `SCHEDULED`
+- **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 15
 - **Content Pillar**: Pillar G: Scientific Integrity
@@ -201,7 +201,7 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 ## Post 5: Night Build Log (19:28 MDT)
 
 - **Buffer Post ID**: `buffer_li_d15_p5`
-- **Buffer Status**: `SCHEDULED`
+- **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 15
 - **Content Pillar**: Pillar F: Build Journey

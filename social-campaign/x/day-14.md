@@ -11,7 +11,7 @@
 ## Post 1: Morning Hook (07:12 MDT)
 
 - **Buffer Post ID**: `buffer_x_d14_p1`
-- **Buffer Status**: `SCHEDULED`
+- **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 14
 - **Content Pillar**: Pillar C: GPU / NVIDIA
@@ -51,7 +51,7 @@ Map: https://z-wbe-bottleneck-lab.vercel.app
 ## Post 2: Mid-Morning Visual (08:44 MDT)
 
 - **Buffer Post ID**: `buffer_x_d14_p2`
-- **Buffer Status**: `SCHEDULED`
+- **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 14
 - **Content Pillar**: Pillar D: Google Cloud / Colab
@@ -87,7 +87,7 @@ Colab code: https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab
 ## Post 3: Late-Morning Data (10:28 MDT)
 
 - **Buffer Post ID**: `buffer_x_d14_p3`
-- **Buffer Status**: `SCHEDULED`
+- **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 14
 - **Content Pillar**: Pillar H: Product Demo
@@ -122,7 +122,7 @@ Try it live: https://z-wbe-bottleneck-lab.vercel.app
 ## Post 4: Evening Hook (16:54 MDT)
 
 - **Buffer Post ID**: `buffer_x_d14_p4`
-- **Buffer Status**: `SCHEDULED`
+- **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 14
 - **Content Pillar**: Pillar B: Systems Engineering
@@ -160,7 +160,7 @@ https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/n
 ## Post 5: Night Observation (18:24 MDT)
 
 - **Buffer Post ID**: `buffer_x_d14_p5`
-- **Buffer Status**: `SCHEDULED`
+- **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 14
 - **Content Pillar**: Pillar F: Build Journey

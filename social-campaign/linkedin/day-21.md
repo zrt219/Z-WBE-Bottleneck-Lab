@@ -11,7 +11,7 @@
 ## Post 1: Morning Flagship (07:45 MDT)
 
 - **Buffer Post ID**: `buffer_li_d21_p1`
-- **Buffer Status**: `SCHEDULED`
+- **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 21
 - **Content Pillar**: Pillar F: Build Journey
@@ -73,7 +73,7 @@ Mentions & Judges: Google for Developers | NVIDIA AI | Jen Harvey | Ray Harvey
 ## Post 2: Mid-Morning Explainer (09:32 MDT)
 
 - **Buffer Post ID**: `buffer_li_d21_p2`
-- **Buffer Status**: `SCHEDULED`
+- **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 21
 - **Content Pillar**: Pillar J: Future Work
@@ -124,7 +124,7 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 ## Post 3: Noon Visual Proof (11:28 MDT)
 
 - **Buffer Post ID**: `buffer_li_d21_p3`
-- **Buffer Status**: `SCHEDULED`
+- **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 21
 - **Content Pillar**: Pillar H: Product Demo
@@ -161,7 +161,7 @@ https://z-wbe-bottleneck-lab.vercel.app
 ## Post 4: Evening Deep Dive (17:36 MDT)
 
 - **Buffer Post ID**: `buffer_li_d21_p4`
-- **Buffer Status**: `SCHEDULED`
+- **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 21
 - **Content Pillar**: Pillar I: Learning Paths
@@ -212,7 +212,7 @@ https://g.dev/zhane
 ## Post 5: Final Campaign Sign-off (19:30 MDT)
 
 - **Buffer Post ID**: `buffer_li_d21_p5`
-- **Buffer Status**: `SCHEDULED`
+- **Buffer Status**: `DRAFT (Pending: 24h Quota Queued)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 21
 - **Content Pillar**: Pillar F: Build Journey

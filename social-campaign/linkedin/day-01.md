@@ -10,8 +10,8 @@
 
 ## Post 1: Morning Flagship (07:45 MDT)
 
-- **Buffer Post ID**: `buffer_li_d01_p1`
-- **Buffer Status**: `SCHEDULED`
+- **Buffer Post ID**: `6a9fae8f1900c10a4f0e8946`
+- **Buffer Status**: `DRAFT (Buffer Verified)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 01
 - **Content Pillar**: Pillar B: Systems Engineering
@@ -71,8 +71,8 @@ Mentions & Judges: Google for Developers | NVIDIA AI | Jen Harvey | Ray Harvey
 
 ## Post 2: Mid-Morning Explainer (09:32 MDT)
 
-- **Buffer Post ID**: `buffer_li_d01_p2`
-- **Buffer Status**: `SCHEDULED`
+- **Buffer Post ID**: `6a9fae907c96d9873c8f77d2`
+- **Buffer Status**: `DRAFT (Buffer Verified)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 01
 - **Content Pillar**: Pillar B: Systems Engineering
@@ -125,8 +125,8 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 ## Post 3: Noon Visual Proof (11:28 MDT)
 
-- **Buffer Post ID**: `buffer_li_d01_p3`
-- **Buffer Status**: `SCHEDULED`
+- **Buffer Post ID**: `6a9fae92b11a426090bd7a56`
+- **Buffer Status**: `DRAFT (Buffer Verified)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 01
 - **Content Pillar**: Pillar H: Product Demo
@@ -168,8 +168,8 @@ https://z-wbe-bottleneck-lab.vercel.app
 
 ## Post 4: Evening Deep Dive (17:34 MDT)
 
-- **Buffer Post ID**: `buffer_li_d01_p4`
-- **Buffer Status**: `SCHEDULED`
+- **Buffer Post ID**: `6a9fae937eee3ace70b77e2b`
+- **Buffer Status**: `DRAFT (Buffer Verified)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 01
 - **Content Pillar**: Pillar A: WBE Research
@@ -219,8 +219,8 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 ## Post 5: Night Build Log (19:26 MDT)
 
-- **Buffer Post ID**: `buffer_li_d01_p5`
-- **Buffer Status**: `SCHEDULED`
+- **Buffer Post ID**: `6a9fae951900c10a4f0e89e8`
+- **Buffer Status**: `DRAFT (Buffer Verified)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 01
 - **Content Pillar**: Pillar F: Build Journey
@@ -270,8 +270,8 @@ https://z-wbe-bottleneck-lab.vercel.app
 
 ## Post 6: Late Night Reflection (21:38 MDT)
 
-- **Buffer Post ID**: `buffer_li_d01_p6`
-- **Buffer Status**: `SCHEDULED`
+- **Buffer Post ID**: `6a9fae97e638e16871e6419a`
+- **Buffer Status**: `DRAFT (Buffer Verified)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 01
 - **Content Pillar**: Pillar B: Systems Engineering

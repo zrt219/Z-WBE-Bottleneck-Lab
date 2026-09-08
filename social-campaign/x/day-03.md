@@ -11,7 +11,7 @@
 ## Post 1: Contest Flagship Hook (07:11 MDT)
 
 - **Buffer Post ID**: `buffer_x_d03_p1`
-- **Buffer Status**: `SCHEDULED`
+- **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 03
 - **Content Pillar**: Pillar C: GPU / NVIDIA
@@ -49,7 +49,7 @@ Colab: https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob
 ## Post 2: Mid-Morning Visual (08:44 MDT)
 
 - **Buffer Post ID**: `buffer_x_d03_p2`
-- **Buffer Status**: `SCHEDULED`
+- **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 03
 - **Content Pillar**: Pillar C: GPU / NVIDIA
@@ -89,7 +89,7 @@ https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/n
 ## Post 3: Late-Morning Data (10:28 MDT)
 
 - **Buffer Post ID**: `buffer_x_d03_p3`
-- **Buffer Status**: `SCHEDULED`
+- **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 03
 - **Content Pillar**: Pillar C: GPU / NVIDIA
@@ -129,7 +129,7 @@ Code: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 ## Post 4: Evening Hook (16:54 MDT)
 
 - **Buffer Post ID**: `buffer_x_d03_p4`
-- **Buffer Status**: `SCHEDULED`
+- **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 03
 - **Content Pillar**: Pillar G: Scientific Integrity
@@ -168,7 +168,7 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 ## Post 5: Night Observation (18:28 MDT)
 
 - **Buffer Post ID**: `buffer_x_d03_p5`
-- **Buffer Status**: `SCHEDULED`
+- **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 03
 - **Content Pillar**: Pillar I: Learning Paths
@@ -208,7 +208,7 @@ Badges: https://g.dev/zhane
 ## Post 6: Late Night Reflection (20:15 MDT)
 
 - **Buffer Post ID**: `buffer_x_d03_p6`
-- **Buffer Status**: `SCHEDULED`
+- **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 03
 - **Content Pillar**: Pillar F: Build Journey

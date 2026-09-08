@@ -11,7 +11,7 @@
 ## Post 1: Morning Hook (07:12 MDT)
 
 - **Buffer Post ID**: `buffer_x_d09_p1`
-- **Buffer Status**: `SCHEDULED`
+- **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 09
 - **Content Pillar**: Pillar C: GPU / NVIDIA
@@ -49,7 +49,7 @@ Try it: https://z-wbe-bottleneck-lab.vercel.app
 ## Post 2: Mid-Morning Visual (08:48 MDT)
 
 - **Buffer Post ID**: `buffer_x_d09_p2`
-- **Buffer Status**: `SCHEDULED`
+- **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 09
 - **Content Pillar**: Pillar C: GPU / NVIDIA
@@ -86,7 +86,7 @@ Prompt source: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 ## Post 3: Late-Morning Data (10:30 MDT)
 
 - **Buffer Post ID**: `buffer_x_d09_p3`
-- **Buffer Status**: `SCHEDULED`
+- **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 09
 - **Content Pillar**: Pillar F: Build Journey
@@ -121,7 +121,7 @@ Backend code: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 ## Post 4: Evening Hook (17:04 MDT)
 
 - **Buffer Post ID**: `buffer_x_d09_p4`
-- **Buffer Status**: `SCHEDULED`
+- **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 09
 - **Content Pillar**: Pillar F: Build Journey
@@ -157,7 +157,7 @@ Tests: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 ## Post 5: Night Observation (18:38 MDT)
 
 - **Buffer Post ID**: `buffer_x_d09_p5`
-- **Buffer Status**: `SCHEDULED`
+- **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 09
 - **Content Pillar**: Pillar C: GPU / NVIDIA

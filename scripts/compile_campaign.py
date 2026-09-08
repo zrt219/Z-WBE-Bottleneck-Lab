@@ -135,6 +135,17 @@ def main():
     w3 = get_week3_data()
     all_days = w1 + w2 + w3
 
+    # Load deployed buffer state if available
+    deployed_state_file = os.path.join(BASE_DIR, "buffer_deployed_posts.json")
+    deployed_state = {}
+    if os.path.exists(deployed_state_file):
+        try:
+            with open(deployed_state_file, "r", encoding="utf-8") as f:
+                deployed_state = json.load(f)
+            print(f"Loaded {len(deployed_state)} deployed posts from buffer_deployed_posts.json")
+        except Exception as e:
+            print("Could not load deployed state:", e)
+
     total_li_posts = 0
     total_x_posts = 0
     colab_li_count = 0
@@ -148,6 +159,13 @@ def main():
         d_theme = day['theme']
 
         for p in day['linkedin']:
+            orig_id = p['id']
+            if orig_id in deployed_state:
+                p['id'] = deployed_state[orig_id]['buffer_id']
+                p['status'] = "DRAFT (Buffer Verified)"
+            else:
+                p['status'] = "DRAFT (Pending: 24h Quota Queued)"
+
             p['hook'] = extract_hook(p['text'])
             p['summary'] = extract_summary(p['text'], p['pillar'], p['slot'])
             p['hashtags'] = extract_hashtags(p['text'])
@@ -162,6 +180,7 @@ def main():
                 "time": p['time'],
                 "pillar": p['pillar'],
                 "id": p['id'],
+                "orig_id": orig_id,
                 "status": p['status'],
                 "url": p['url'],
                 "claims_verified": p['claims_verified'],
@@ -175,6 +194,8 @@ def main():
             })
 
         for p in day['x']:
+            orig_id = p['id']
+            p['status'] = "DRAFT (Blocked: @ZRT219 Locked in Buffer)"
             p['hook'] = extract_hook(p['text'])
             p['summary'] = extract_summary(p['text'], p['pillar'], p['slot'])
             p['hashtags'] = extract_hashtags(p['text'])
@@ -189,6 +210,7 @@ def main():
                 "time": p['time'],
                 "pillar": p['pillar'],
                 "id": p['id'],
+                "orig_id": orig_id,
                 "status": p['status'],
                 "url": p['url'],
                 "claims_verified": p['claims_verified'],

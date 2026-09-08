@@ -10,8 +10,8 @@
 
 ## Post 1: Morning Flagship (07:48 MDT)
 
-- **Buffer Post ID**: `buffer_li_d05_p1`
-- **Buffer Status**: `SCHEDULED`
+- **Buffer Post ID**: `6a9faeb21900c10a4f0e8dc5`
+- **Buffer Status**: `DRAFT (Buffer Verified)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 05
 - **Content Pillar**: Pillar B: Systems Engineering
@@ -66,8 +66,8 @@ https://z-wbe-bottleneck-lab.vercel.app
 
 ## Post 2: Mid-Morning Explainer (09:36 MDT)
 
-- **Buffer Post ID**: `buffer_li_d05_p2`
-- **Buffer Status**: `SCHEDULED`
+- **Buffer Post ID**: `6a9faeb3e638e16871e64364`
+- **Buffer Status**: `DRAFT (Buffer Verified)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 05
 - **Content Pillar**: Pillar B: Systems Engineering
@@ -117,8 +117,8 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
 ## Post 3: Noon Visual Proof (11:34 MDT)
 
-- **Buffer Post ID**: `buffer_li_d05_p3`
-- **Buffer Status**: `SCHEDULED`
+- **Buffer Post ID**: `6a9faeb51900c10a4f0e8ded`
+- **Buffer Status**: `DRAFT (Buffer Verified)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 05
 - **Content Pillar**: Pillar H: Product Demo
@@ -156,8 +156,8 @@ https://z-wbe-bottleneck-lab.vercel.app
 
 ## Post 4: Evening Deep Dive (17:40 MDT)
 
-- **Buffer Post ID**: `buffer_li_d05_p4`
-- **Buffer Status**: `SCHEDULED`
+- **Buffer Post ID**: `6a9faeb6b11a426090bd7de6`
+- **Buffer Status**: `DRAFT (Buffer Verified)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 05
 - **Content Pillar**: Pillar C: GPU / NVIDIA
@@ -202,8 +202,8 @@ https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/n
 
 ## Post 5: Night Build Log (19:38 MDT)
 
-- **Buffer Post ID**: `buffer_li_d05_p5`
-- **Buffer Status**: `SCHEDULED`
+- **Buffer Post ID**: `6a9faeb87eee3ace70b780ca`
+- **Buffer Status**: `DRAFT (Buffer Verified)`
 - **Platform**: LinkedIn
 - **Campaign Day**: Day 05
 - **Content Pillar**: Pillar F: Build Journey

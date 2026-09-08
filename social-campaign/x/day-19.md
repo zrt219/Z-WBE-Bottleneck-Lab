@@ -11,7 +11,7 @@
 ## Post 1: Morning Hook (07:14 MDT)
 
 - **Buffer Post ID**: `buffer_x_d19_p1`
-- **Buffer Status**: `SCHEDULED`
+- **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 19
 - **Content Pillar**: Pillar A: WBE Research
@@ -48,7 +48,7 @@ https://z-wbe-bottleneck-lab.vercel.app
 ## Post 2: Mid-Morning Visual (08:42 MDT)
 
 - **Buffer Post ID**: `buffer_x_d19_p2`
-- **Buffer Status**: `SCHEDULED`
+- **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 19
 - **Content Pillar**: Pillar A: WBE Research
@@ -87,7 +87,7 @@ Formulas: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 ## Post 3: Late-Morning Data (10:24 MDT)
 
 - **Buffer Post ID**: `buffer_x_d19_p3`
-- **Buffer Status**: `SCHEDULED`
+- **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 19
 - **Content Pillar**: Pillar G: Scientific Integrity
@@ -123,7 +123,7 @@ https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 ## Post 4: Evening Hook (16:50 MDT)
 
 - **Buffer Post ID**: `buffer_x_d19_p4`
-- **Buffer Status**: `SCHEDULED`
+- **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 19
 - **Content Pillar**: Pillar F: Build Journey
@@ -160,7 +160,7 @@ Backend tests: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 ## Post 5: Night Observation (18:20 MDT)
 
 - **Buffer Post ID**: `buffer_x_d19_p5`
-- **Buffer Status**: `SCHEDULED`
+- **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 19
 - **Content Pillar**: Pillar A: WBE Research
