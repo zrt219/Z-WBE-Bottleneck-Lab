@@ -862,7 +862,7 @@ npm test
 * **Judges & Channels**:
   * **LinkedIn**: Google for Developers, NVIDIA AI, Jen Harvey, Ray Harvey
   * **X (Twitter)**: `@GoogleDevs`, `@NVIDIAAI`
-* **Google Developers Public Profile**: [developers.google.com/profile/u/zhane](https://developers.google.com/profile/u/zhane) • [ID: 110918189625880989910](https://developers.google.com/profile/u/110918189625880989910)
+* **Google Developers Public Profile**: [developers.google.com/profile/u/zhane](https://developers.google.com/profile/u/zhane) • [ID: 110918189625880989910](https://developers.google.com/profile/u/110918189625880989910) • <img src="./public/images/google_developer_profile_level11.png" alt="Google Developers Level 11 Milestone" width="32" style="vertical-align: middle; display: inline-block;" /> **Level 11 Milestone**
 * **Verified Pathways & Public Credentials (Earned Sep 7, 2026 - 4/4 Complete Sweep)**:
   * [Deploy Faster Generative AI Models with NVIDIA NIM on GKE](https://developers.google.com/profile/badges/playlists/nvidia-deploy-with-gen-ai?u=zhane) • [Pathway](https://developers.google.com/learn/pathways/deploy-faster-gen-ai-models-nvidia-gke)
   * [Speed Up Data Analytics on GPUs](https://developers.google.com/profile/badges/playlists/speed-up-data-analytics-GPUs?u=zhane) • [Pathway](https://developers.google.com/learn/pathways/speed-up-data-analytics-GPUs)
