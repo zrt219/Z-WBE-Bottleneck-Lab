@@ -62,9 +62,11 @@ export const Header: React.FC<HeaderProps> = ({ onStartTutorial, onOneClickDemo 
             {/* Brand & Logo Lockup */}
             <div className="flex items-center space-x-3 shrink-0">
               <Link to="/" className="flex items-center space-x-2.5 group shrink-0">
-                <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-slate-900 text-white flex items-center justify-center font-mono font-bold text-sm tracking-wider shadow-sm ring-1 ring-slate-800/80 group-hover:bg-blue-600 transition-all duration-150 group-hover:scale-105 shrink-0">
-                  Z
-                </div>
+                <img
+                  src="/images/zwbe-logo.jpg"
+                  alt="Z-WBE Bottleneck Lab Logo"
+                  className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl object-cover shadow-sm ring-1 ring-slate-800/80 group-hover:scale-105 transition-all duration-150 shrink-0"
+                />
                 <div className="flex items-center space-x-1.5">
                   <span className="font-extrabold text-slate-900 text-xs sm:text-sm tracking-tight group-hover:text-blue-600 transition-colors font-mono whitespace-nowrap">
                     Z-WBE BOTTLENECK LAB
