@@ -3,10 +3,11 @@
 > **Change the assumptions. See what breaks first.**
 
 [![Golden Ticket Contest](https://img.shields.io/badge/Google%20Cloud%20%C3%97%20NVIDIA-GTC%20Berlin%202026%20Golden%20Ticket-FFB800?logo=nvidia&logoColor=black&style=for-the-badge)](https://cloud.google.com)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb)
 [![Google Cloud Run](https://img.shields.io/badge/Google%20Cloud-Cloud%20Run-4285F4?logo=google-cloud&logoColor=white)](https://cloud.google.com/run)
 [![NVIDIA Nemotron 3 Super](https://img.shields.io/badge/NVIDIA-Nemotron%203%20Super%20120B-76B900?logo=nvidia&logoColor=white)](https://openrouter.ai/models/nvidia/nemotron-3-super-120b-a12b:free)
 [![NVIDIA RAPIDS](https://img.shields.io/badge/NVIDIA-RAPIDS%20cuDF-76B900?logo=nvidia&logoColor=white)](https://rapids.ai)
-[![Vercel Deployment](https://img.shields.io/badge/Vercel-Fullstack%20Deploy-000000?logo=vercel&logoColor=white)](https://vercel.com)
+[![Vercel Deployment](https://img.shields.io/badge/Vercel-Fullstack%20Deploy-000000?logo=vercel&logoColor=white)](https://z-wbe-bottleneck-lab.vercel.app)
 [![Tests: 84 Passed](https://img.shields.io/badge/Vitest-84%20Passing-brightgreen?logo=vitest&logoColor=white)](https://vitest.dev)
 [![TypeScript Monorepo](https://img.shields.io/badge/TypeScript-Strict%20Monorepo-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
@@ -31,7 +32,7 @@ To develop Z-WBE Bottleneck Lab, the developer completed the official **Google C
 * **Verification Status**: 3 Official Digital Badges + 4 Learning Pathways Completed
 
 <div align="center">
-  <img src="./public/images/google-nvidia-developer-badges.png" alt="Google Cloud and NVIDIA Developer Community Completed Badges - September 7, 2026" width="760" style="border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.12);" />
+  <img src="./public/images/google-nvidia-developer-badges.png" alt="Google Cloud and NVIDIA Developer Community Completed Badges - September 7, 2026" width="820" style="border-radius: 12px; box-shadow: 0 4px 24px rgba(0,0,0,0.15);" />
   <p><em>Verified Google Cloud & NVIDIA Developer Community Badges (Earned Sep 7, 2026)</em></p>
 </div>
 
@@ -55,7 +56,7 @@ Entries are evaluated by a joint Google Cloud & NVIDIA judging panel on four equ
 | **(a) Technical Innovation** | Novelty, biophysical scaling, and real-time Amdahl's Law modeling | First public scientific tool to connect all 8 dimensions of Whole Brain Emulation (imaging, segmentation, PFLOPS, memory bandwidth, NVLink interconnect, power, proofreading, budget) into 12 coupled analytical equations executing in **&lt; 1 ms** locally. Eliminates speculative timelines with deterministic sensitivity curves. |
 | **(b) Effective Use of NVIDIA & Google Cloud** | Ecosystem synergy and full-stack integration | End-to-end integration: **Google Cloud Colab Enterprise** hosts the parameter sweeps; **NVIDIA RAPIDS cuDF** accelerates 100,000-scenario Monte Carlo simulations; **Google Cloud Run** containerization configurations are provided for serverless microservice deployment; and **NVIDIA Nemotron 3 Super 120B** (`nvidia/nemotron-3-super-120b-a12b:free` via OpenRouter) delivers grounded causal interpretation. |
 | **(c) Potential Impact & Usefulness** | Value to developers, researchers, and scientific community | De-silos neuroscience, electron microscopy, and HPC engineering. When researchers ask *"What happens if imaging becomes 100x faster?"*, the lab proves that the dominant bottleneck immediately jumps to memory bandwidth and cold storage, preventing millions in misallocated capital grants. |
-| **(d) Quality of Documentation & Presentation** | Code cleanliness, tests, accessibility, and documentation | Complete mathematical specification for all 12 equations; **84 passing automated Vitest unit tests**; strict TypeScript monorepo; WCAG 2.1 AAA accessibility mode; 1-click interactive demo; scenario permalink state synchronization; and comprehensive reproducibility guides. |
+| **(d) Quality of Documentation & Presentation** | Code cleanliness, tests, accessibility, and documentation | Complete mathematical specification for all 12 equations; **84 passing automated Vitest unit tests** across 10 suites; strict TypeScript monorepo; WCAG 2.1 AAA accessibility mode; 1-click interactive demo; scenario permalink state synchronization; comprehensive visual walkthroughs, animated GIFs, and Colab runtime verification proofs. |
 
 ---
 
@@ -72,7 +73,10 @@ Language models frequently hallucinate when asked open-ended scientific or econo
 1. **Deterministic Calculation**: The TypeScript shared engine (`@z-wbe/shared`) computes every physical number, voxel count, FLOPS rating, memory bandwidth, and dollar cost deterministically.
 2. **Strict Grounding Payload**: When users click `[ EXPLAIN WITH NEMOTRON ]`, the backend transmits only the pre-computed metrics inside a structured JSON schema (`NemotronInputSchema`).
 3. **Structured Causal Synthesis**: Nemotron's system prompt forbids inventing numbers; it is tasked strictly with explaining *why* the identified bottleneck dominates and *where* it will shift next under Amdahl's Law.
-4. **Resilient Circuit Breaker**: If OpenRouter encounters HTTP 429 rate limiting or network downtime, a deterministic analytical explanation is generated client-side from the code's sensitivity derivatives—ensuring uninterrupted scientific operation.
+4. **Dual Interpretation Modes**:
+   - **🔬 Expert Mode**: Deep biophysical and systems-architecture synthesis referencing tensor pipelines, HBM3e saturation, and optical throughput limits.
+   - **🎓 ELI5 Mode**: High-level, accessible intuition utilizing everyday analogies (e.g. comparing microscope imaging queues to city traffic jams and memory bottlenecks to congested highway offramps).
+5. **Resilient Circuit Breaker**: If OpenRouter encounters HTTP 429 rate limiting or network downtime, a deterministic analytical explanation is generated client-side from the code's sensitivity derivatives—ensuring uninterrupted scientific operation.
 
 ---
 
@@ -80,18 +84,22 @@ Language models frequently hallucinate when asked open-ended scientific or econo
 1. [Research Premise & Core Question](#1-research-premise--core-question)
 2. [Why This Laboratory Exists: Amdahl's Law for Neurotechnology](#2-why-this-laboratory-exists-amdahls-law-for-neurotechnology)
 3. [Live Demonstrator & The Hero Scenario](#3-live-demonstrator--the-hero-scenario)
-4. [Dual-Path System Architecture](#4-dual-path-system-architecture)
-5. [The Epistemic Grounding Contract](#5-the-epistemic-grounding-contract)
-6. [Comprehensive Mathematical Specification (All 12 Equations)](#6-comprehensive-mathematical-specification-all-12-equations)
-7. [The 8-Dimensional Bottleneck Matrix](#7-the-8-dimensional-bottleneck-matrix)
-8. [Biological Presets & Physical Baselines](#8-biological-presets--physical-baselines)
-9. [NVIDIA Acceleration Stack](#9-nvidia-acceleration-stack)
-10. [Google Cloud Infrastructure](#10-google-cloud-infrastructure)
-11. [Vercel Fullstack Deployment Guide](#11-vercel-fullstack-deployment-guide)
-12. [Local Installation & Development](#12-local-installation--development)
-13. [Verification Test Suite (84/84 Passing)](#13-verification-test-suite-8484-passing)
-14. [Scientific Limitations & Epistemic Boundaries](#14-scientific-limitations--epistemic-boundaries)
-15. [Contest Submission Details & Checklist](#15-contest-submission-details--checklist)
+4. [Visual Walkthrough & Interactive Demo Recordings](#4-visual-walkthrough--interactive-demo-recordings)
+5. [Application High-Resolution Screenshot Gallery (1920×1080)](#5-application-high-resolution-screenshot-gallery-19201080)
+6. [Dual-Path System Architecture](#6-dual-path-system-architecture)
+7. [The Epistemic Grounding Contract](#7-the-epistemic-grounding-contract)
+8. [Comprehensive Mathematical Specification (All 12 Equations)](#8-comprehensive-mathematical-specification-all-12-equations)
+9. [The 8-Dimensional Bottleneck Matrix](#9-the-8-dimensional-bottleneck-matrix)
+10. [Biological Presets & Physical Baselines](#10-biological-presets--physical-baselines)
+11. [NVIDIA Acceleration Stack & Tesla T4 Colab Benchmarks](#11-nvidia-acceleration-stack--tesla-t4-colab-benchmarks)
+12. [Google Cloud Infrastructure](#12-google-cloud-infrastructure)
+13. [Vercel Fullstack Deployment Guide](#13-vercel-fullstack-deployment-guide)
+14. [Local Installation & Development](#14-local-installation--development)
+15. [Visual Assets & Campaign Media Showcase (Contest Showcase Gallery)](#15-visual-assets--campaign-media-showcase-contest-showcase-gallery)
+16. [Verification Test Suite (84/84 Passing)](#16-verification-test-suite-8484-passing)
+17. [Scientific Limitations & Epistemic Boundaries](#17-scientific-limitations--epistemic-boundaries)
+18. [Submission Metadata & Verified Credentials](#18-submission-metadata--verified-credentials)
+19. [License & Citation](#19-license--citation)
 
 ---
 
@@ -142,12 +150,96 @@ When a 100× breakthrough in imaging acquisition throughput is achieved, acquisi
    * The interface immediately flags: **`THE BOTTLENECK MOVED.`**
    * The primary constraint transitions dynamically to **Memory Bandwidth** or **Storage**.
 5. **Invoke NVIDIA Nemotron 3 Super**: Click **`[ EXPLAIN WITH NEMOTRON ]`** to request structured scientific interpretation via OpenRouter. Nemotron explains *why* the shift occurred, identifies high-leverage vs low-return parameters, and highlights empirical validation requirements.
-6. **Compare Scenarios**: Launch the side-by-side comparison modal to audit baseline versus modified parameters with delta percentages and constraint shifts.
-7. **Run Sensitivity Analysis**: View 0.5×, 1×, 2×, 10×, and 100× local sensitivity curves to isolate the single highest-leverage variable in the active scenario.
+6. **Toggle ELI5 Mode**: Switch between **🔬 Expert Mode** (biophysical formulas and hardware metrics) and **🎓 ELI5 Mode** (accessible analogies) with zero latency.
+7. **Compare Scenarios**: Launch the side-by-side comparison modal to audit baseline versus modified parameters with delta percentages and constraint shifts.
+8. **Run Sensitivity Analysis**: View 0.5×, 1×, 2×, 10×, and 100× local sensitivity curves to isolate the single highest-leverage variable in the active scenario.
 
 ---
 
-## 4. Dual-Path System Architecture
+## 4. Visual Walkthrough & Interactive Demo Recordings
+
+Experience the live interactive demonstrator through high-resolution recordings capturing real-time simulation, dynamic constraint transitions, and Colab GPU acceleration:
+
+### 🎬 Hero Scenario: The Bottleneck Shift Transition
+When imaging acquisition is accelerated by 100×, acquisition pressure collapses, revealing downstream High-Bandwidth Memory (HBM3e) and cold storage saturation in real time:
+
+<div align="center">
+  <img src="./public/recordings/hero_bottleneck_shift.gif" alt="The Hero Bottleneck Shift Demo" width="880" style="border-radius: 12px; box-shadow: 0 6px 30px rgba(0,0,0,0.25);" />
+  <p><em>Interactive Hero Moment: Clicking "What happens if imaging becomes 100x faster?" collapses acquisition pressure and triggers "THE BOTTLENECK MOVED."</em></p>
+</div>
+
+### 🧠 Grounded NVIDIA Nemotron 3 Super & ELI5 Mode Toggle
+Watch NVIDIA Nemotron 3 Super synthesize biophysical constraints and switch seamlessly between deep mathematical analysis and intuitive everyday analogies:
+
+<div align="center">
+  <img src="./public/recordings/nemotron_eli5_toggle.gif" alt="NVIDIA Nemotron 3 Super Interpretation and ELI5 Mode Toggle" width="880" style="border-radius: 12px; box-shadow: 0 6px 30px rgba(0,0,0,0.25);" />
+  <p><em>NVIDIA Nemotron 3 Super Grounded Interpretation: Toggling between Expert Biophysical Mode and ELI5 (Explain Like I'm 5) Accessible Mode.</em></p>
+</div>
+
+### 🗺️ Guided Tour & Application Walkthrough
+An interactive walkthrough guiding judges and researchers through physical sliders, 8-dimensional gauge dials, sensitivity curves, and comparison modes:
+
+<div align="center">
+  <img src="./public/recordings/guided_tour_walkthrough.gif" alt="Interactive Guided Tour Walkthrough" width="880" style="border-radius: 12px; box-shadow: 0 6px 30px rgba(0,0,0,0.25);" />
+  <p><em>Guided Tour Walkthrough: Step-by-step exploration of the 6-stage pipeline, parameter controls, and hardware stress tests.</em></p>
+</div>
+
+### ⚡ Google Cloud Colab Enterprise: Live Tesla T4 Acceleration
+Real-time recording of the Google Cloud Colab Enterprise notebook executing the accelerated pipeline with NVIDIA RAPIDS `cudf.pandas`, `cuml.accel`, and live `nvidia-smi` terminal output:
+
+<div align="center">
+  <img src="./public/colab-evidence/colab_t4_live_execution.gif" alt="Google Cloud Colab Live Execution on Tesla T4" width="880" style="border-radius: 12px; box-shadow: 0 6px 30px rgba(0,0,0,0.25);" />
+  <p><em>Live Google Cloud Colab Session: Running zero-code GPU-accelerated pipelines with active terminal monitoring on NVIDIA Tesla T4.</em></p>
+</div>
+
+---
+
+## 5. Application High-Resolution Screenshot Gallery (1920×1080)
+
+All core interface views captured at 1920×1080 judge-grade resolution:
+
+<table align="center" width="100%">
+  <tr>
+    <td width="50%" align="center">
+      <a href="./public/screenshots/01_hero_overview.png"><img src="./public/screenshots/01_hero_overview.png" alt="Hero Overview & Pipeline Layout" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
+      <strong>01. Hero Overview & Pipeline Layout</strong><br />
+      <em>Full 3-column scientific interface evaluating biological assumptions, 6-stage WBE pipeline, and dominant constraint card.</em>
+    </td>
+    <td width="50%" align="center">
+      <a href="./public/screenshots/02_imaging_wall_baseline.png"><img src="./public/screenshots/02_imaging_wall_baseline.png" alt="Preset 1 — The Imaging Wall Baseline" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
+      <strong>02. The Imaging Wall Baseline</strong><br />
+      <em>Baseline high-resolution electron microscopy state where physical microscope acquisition time dominates total feasibility.</em>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <a href="./public/screenshots/03_bottleneck_moved_transition.png"><img src="./public/screenshots/03_bottleneck_moved_transition.png" alt="The Breakthrough — THE BOTTLENECK MOVED" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
+      <strong>03. The Breakthrough: "THE BOTTLENECK MOVED"</strong><br />
+      <em>Instantaneous Amdahl's Law transition: accelerating imaging 100x shifts the dominant constraint to memory bus bandwidth in &lt;1ms.</em>
+    </td>
+    <td width="50%" align="center">
+      <a href="./public/screenshots/04_nemotron_grounded_interpretation.png"><img src="./public/screenshots/04_nemotron_grounded_interpretation.png" alt="Grounded NVIDIA Nemotron 3 Super Interpretation" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
+      <strong>04. Grounded Nemotron 3 Super AI Layer</strong><br />
+      <em>Strict epistemic grounding badge, executive constraint synthesis, highest-leverage suggestions, and ELI5 mode toggle.</em>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <a href="./public/screenshots/05_gpu_exploration_map.png"><img src="./public/screenshots/05_gpu_exploration_map.png" alt="GPU Exploration Map — 100,000 Scenario Sweep" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
+      <strong>05. 100,000-Scenario GPU Exploration Map</strong><br />
+      <em>Monte Carlo parameter sweep powered by NVIDIA RAPIDS cuDF showing global constraint phase transitions.</em>
+    </td>
+    <td width="50%" align="center">
+      <a href="./public/screenshots/06_architecture_evidence_view.png"><img src="./public/screenshots/06_architecture_evidence_view.png" alt="Architecture & Contest Evidence View" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
+      <strong>06. Architecture & Contest Evidence View</strong><br />
+      <em>Verified Google Cloud & NVIDIA digital credentials, Cloud Run Dockerfile provenance, and epistemic boundaries.</em>
+    </td>
+  </tr>
+</table>
+
+---
+
+## 6. Dual-Path System Architecture
 
 The application enforces a strict separation between deterministic physical mathematics and generative language reasoning:
 
@@ -183,7 +275,7 @@ The application enforces a strict separation between deterministic physical math
 
 ---
 
-## 5. The Epistemic Grounding Contract
+## 7. The Epistemic Grounding Contract
 
 To ensure scientific credibility, the application enforces the following epistemic rules:
 
@@ -204,7 +296,7 @@ To ensure scientific credibility, the application enforces the following epistem
 
 ---
 
-## 6. Comprehensive Mathematical Specification (All 12 Equations)
+## 8. Comprehensive Mathematical Specification (All 12 Equations)
 
 All physical metrics are calculated by the deterministic TypeScript core (`@z-wbe/shared/src/equations.ts`):
 
@@ -258,7 +350,7 @@ $$C_{\text{total}} = C_{\text{microscopes}} + C_{\text{compute}} + C_{\text{stor
 
 ---
 
-## 7. The 8-Dimensional Bottleneck Matrix
+## 9. The 8-Dimensional Bottleneck Matrix
 
 To evaluate where a proposed emulation architecture fails, the engine normalizes each of the 8 technical dimensions against an empirically grounded feasibility envelope:
 
@@ -273,7 +365,7 @@ To evaluate where a proposed emulation architecture fails, the engine normalizes
 
 ---
 
-## 8. Biological Presets & Physical Baselines
+## 10. Biological Presets & Physical Baselines
 
 | Parameter | *C. elegans* | *Drosophila* | Mouse Cortex (10 mm³) | Human Reference |
 | :--- | :--- | :--- | :--- | :--- |
@@ -285,26 +377,82 @@ To evaluate where a proposed emulation architecture fails, the engine normalizes
 
 ---
 
-## 9. NVIDIA Acceleration Stack
+## 11. NVIDIA Acceleration Stack & Tesla T4 Colab Benchmarks
 
-* **NVIDIA Nemotron 3 Super 120B**: Open model accessed via OpenRouter (`nvidia/nemotron-3-super-120b-a12b:free`) to synthesize multi-dimensional scientific trade-offs.
-* **NVIDIA RAPIDS cuDF**: Accelerates Monte Carlo parameter sweeps using `cudf.pandas` in Google Cloud Colab Enterprise.
-* **NVIDIA Tesla T4 GPU Benchmark**: 8.62× measured end-to-end acceleration (88.4% time reduction) across tabular ML pipeline stages with cuDF and GPU XGBoost.
-* **NVIDIA NIM on GKE Architecture**: Informs microservice containerization, structured inference caching, and deterministic grounding contracts.
+> ### 📓 Canonical Google Colab GPU Lab Notebook
+> Launch the consolidated 10-stage GPU analytics and parameter sweep laboratory:  
+> [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb) • **[Read the Colab & Sync Guide (COLAB.md)](COLAB.md)**  
+> *Permanent Direct Link*: [`https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb`](https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb)
+
+### 8.62× End-to-End Speedup Benchmark on NVIDIA Tesla T4
+To validate the real-world performance gains taught in the **Speed Up Data Analytics on GPUs** and **Accelerated Machine Learning with Google Cloud and NVIDIA** pathways, an end-to-end machine learning pipeline was benchmarked on Google Cloud Colab Enterprise comparing CPU (2-core Intel Xeon) vs GPU (**NVIDIA Tesla T4 16GB** with CUDA 13.0 and Driver 580.82.07):
+
+* **CPU Total Execution Time**: **131.62 seconds**
+* **NVIDIA Tesla T4 Total Execution Time**: **15.27 seconds**
+* **Overall Speedup**: **8.62× Faster (88.4% Latency Reduction)**
+* **Zero Code Changes**: Powered by `%load_ext cudf.pandas` and `%load_ext cuml.accel`
+
+<div align="center">
+  <img src="./public/data/cpu_vs_gpu_speedup.png" alt="NVIDIA Tesla T4 8.62x Benchmark Speedup Chart" width="760" style="border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.15);" />
+  <p><em>Empirical Benchmark: CPU vs NVIDIA Tesla T4 GPU Runtime across Tabular ML Pipeline Stages</em></p>
+</div>
+
+### Google Cloud Colab Enterprise Runtime & Provenance Gallery
+
+All benchmark metrics were executed in Google Cloud Colab Enterprise with full reproducible telemetry and runtime logging:
+
+<table align="center" width="100%">
+  <tr>
+    <td width="50%" align="center">
+      <a href="./public/colab-evidence/02_colab_t4_gpu_runtime_dialog.png"><img src="./public/colab-evidence/02_colab_t4_gpu_runtime_dialog.png" alt="Google Colab Change Runtime Type — T4 GPU" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
+      <strong>Colab Runtime Type: NVIDIA T4 GPU</strong><br />
+      <em>Verification of Google Colab Enterprise environment configured with active T4 GPU hardware accelerator and Python 3.</em>
+    </td>
+    <td width="50%" align="center">
+      <a href="./public/colab-evidence/05_colab_nvidia_smi_ensemble_eval.png"><img src="./public/colab-evidence/05_colab_nvidia_smi_ensemble_eval.png" alt="NVIDIA-SMI Terminal Output on Tesla T4" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
+      <strong>Live Terminal: <code>nvidia-smi</code> Verification</strong><br />
+      <em>Active terminal displaying Tesla T4 16GB, Driver 580.82.07, CUDA 13.0, and Python3 process PID 3883.</em>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <a href="./public/colab-evidence/03_colab_cuml_linear_regression.png"><img src="./public/colab-evidence/03_colab_cuml_linear_regression.png" alt="cuML Linear Regression Benchmark" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
+      <strong>cuML-Accelerated Linear Regression</strong><br />
+      <em>Interactive cross-validation execution intercepting scikit-learn calls and routing directly to GPU via cuML (23.78s).</em>
+    </td>
+    <td width="50%" align="center">
+      <a href="./public/colab-evidence/06_colab_gpu_extensions_and_terminal.png"><img src="./public/colab-evidence/06_colab_gpu_extensions_and_terminal.png" alt="Zero-Code cudf.pandas and cuml.accel Extensions" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
+      <strong>Zero-Code GPU Acceleration Extensions</strong><br />
+      <em>Loading <code>%load_ext cudf.pandas</code> and <code>%load_ext cuml.accel</code> with live execution timing scripts.</em>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <a href="./public/colab-evidence/01_colab_notebook_overview.png"><img src="./public/colab-evidence/01_colab_notebook_overview.png" alt="Colab Notebook Overview & Authorship" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
+      <strong>Colab Notebook Header & Environment</strong><br />
+      <em>Notebook setup: Accelerated Data Science with Google Cloud and NVIDIA, connected to T4 runtime.</em>
+    </td>
+    <td width="50%" align="center">
+      <a href="./public/colab-evidence/07_github_notebook_code_provenance.png"><img src="./public/colab-evidence/07_github_notebook_code_provenance.png" alt="GitHub Repository Notebook Provenance" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
+      <strong>GitHub Repository Provenance</strong><br />
+      <em>Committed and tracked notebook code located in <code>notebooks/gpu_accelerated_regression.ipynb</code>.</em>
+    </td>
+  </tr>
+</table>
 
 ---
 
-## 10. Google Cloud Infrastructure
+## 12. Google Cloud Infrastructure
 
 * **Google Cloud Run**: Serverless container configuration and Dockerfile provided for hosting the Node.js TypeScript API, managing sub-second cold starts, automated scaling, and secure environment variable isolation.
-* **Google Cloud Colab Enterprise**: High-performance GPU notebook execution environment used to execute the Tesla T4 benchmark and simulate 100,000 scenario combinations with RAPIDS cuDF.
+* **Google Cloud Colab Enterprise**: High-performance GPU notebook execution environment used to execute the Tesla T4 benchmark and simulate 100,000 scenario combinations with RAPIDS cuDF. See [COLAB.md](COLAB.md) for the complete Google Colab Enterprise execution guide, synchronization workflow, and permanent launch link.
 * **Cloud Build & Artifact Registry**: Automated container image construction and registry storage for Cloud Run revisions.
 * **Secret Manager**: Secure externalized storage for OpenRouter credentials outside client-side application code.
 * **GKE Architectural Alignment**: Follows Google Kubernetes Engine best practices for hosting accelerated microservices.
 
 ---
 
-## 11. Vercel Fullstack Deployment Guide
+## 13. Vercel Fullstack Deployment Guide
 
 The project is structured with native Vercel Serverless support (`vercel.json` and `api/explain.ts`):
 ```bash
@@ -316,7 +464,7 @@ Configure environment variable in the Vercel project dashboard:
 
 ---
 
-## 12. Local Installation & Development
+## 14. Local Installation & Development
 
 ### Prerequisites
 * **Node.js**: v20+ (v22 or v24 recommended)
@@ -334,7 +482,7 @@ npm install
 # 3. Compile shared mathematical core
 npm run build:shared
 
-# 4. Run automated test suite (77 passing tests)
+# 4. Run automated test suite (84 passing tests)
 npm test
 
 # 5. Build all packages
@@ -348,7 +496,126 @@ npm run dev
 
 ---
 
-## 13. Verification Test Suite (77/77 Passing)
+## 15. Visual Assets & Campaign Media Showcase (Contest Showcase Gallery)
+
+A curated gallery of visual campaign media cards illustrating the key engineering principles, architecture, and contest highlights:
+
+<table align="center" width="100%">
+  <tr>
+    <td width="50%" align="center">
+      <a href="./public/marketing/ad_01.png"><img src="./public/marketing/ad_01.png" alt="Campaign Card 01 — What Breaks First?" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
+      <strong>Card 01: What Breaks First?</strong><br />
+      <em>"Change the assumptions. See what breaks first." The core thesis of Whole Brain Emulation Amdahl's Law modeling.</em>
+    </td>
+    <td width="50%" align="center">
+      <a href="./public/marketing/ad_02.png"><img src="./public/marketing/ad_02.png" alt="Campaign Card 02 — The Imaging Illusion" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
+      <strong>Card 02: The Imaging Illusion vs Memory Wall</strong><br />
+      <em>Accelerating electron microscopy 100x exposes downstream High-Bandwidth Memory (HBM3e) bus saturation.</em>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <a href="./public/marketing/ad_03.png"><img src="./public/marketing/ad_03.png" alt="Campaign Card 03 — 8-Dimensional Matrix" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
+      <strong>Card 03: 8-Dimensional Bottleneck Matrix</strong><br />
+      <em>Connecting imaging, segmentation, PFLOPS, memory bandwidth, NVLink, power, proofreading, and budget into coupled equations.</em>
+    </td>
+    <td width="50%" align="center">
+      <a href="./public/marketing/ad_04.png"><img src="./public/marketing/ad_04.png" alt="Campaign Card 04 — NVIDIA Nemotron 3 Super Grounded AI" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
+      <strong>Card 04: Grounded NVIDIA Nemotron 3 Super AI</strong><br />
+      <em>Strict epistemic grounding: open foundation model explains calculated dynamics without inventing numbers.</em>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <a href="./public/marketing/ad_05.png"><img src="./public/marketing/ad_05.png" alt="Campaign Card 05 — 8.62x Speedup on Tesla T4" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
+      <strong>Card 05: 8.62× Acceleration on NVIDIA Tesla T4</strong><br />
+      <em>Proven in Google Cloud Colab Enterprise with RAPIDS cuDF and cuML (131.6s CPU -> 15.3s GPU).</em>
+    </td>
+    <td width="50%" align="center">
+      <a href="./public/marketing/ad_06.png"><img src="./public/marketing/ad_06.png" alt="Campaign Card 06 — 100,000-Scenario Monte Carlo Map" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
+      <strong>Card 06: 100,000-Scenario Monte Carlo Exploration</strong><br />
+      <em>Exhaustive parameter space sweep mapping phase boundaries across biological scales and hardware envelopes.</em>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <a href="./public/marketing/ad_09.png"><img src="./public/marketing/ad_09.png" alt="Campaign Card 09 — Deterministic Biophysics Meets Open AI Reasoning" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
+      <strong>Card 09: Deterministic Biophysics & Open AI</strong><br />
+      <em>Strict separation of math and language reasoning: code computes physics, Nemotron synthesizes causal dynamics.</em>
+    </td>
+    <td width="50%" align="center">
+      <a href="./public/marketing/ad_10.png"><img src="./public/marketing/ad_10.png" alt="Campaign Card 10 — Full-Stack Architecture Showcase" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
+      <strong>Card 10: Full-Stack Architecture Showcase</strong><br />
+      <em>Vercel edge delivery, Google Cloud Run microservice containerization, and NVIDIA accelerated computing.</em>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <a href="./public/marketing/ad_07.png"><img src="./public/marketing/ad_07.png" alt="Campaign Card 07 — Widescreen Banner" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
+      <strong>Card 07: Official Campaign Widescreen Banner</strong><br />
+      <em>Wide-format banner built for Google Cloud × NVIDIA Developer Challenge social media showcase.</em>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <a href="./public/marketing/ad_08.png"><img src="./public/marketing/ad_08.png" alt="Campaign Card 08 — Contest Showcase Banner" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
+      <strong>Card 08: Golden Ticket Contest Showcase Banner</strong><br />
+      <em>Featuring verified Google Developers ID <code>110918189625880989910</code> and Google Cloud & NVIDIA completed credentials.</em>
+    </td>
+  </tr>
+</table>
+
+### Live Interactive Screen Recording & In-Browser UI Gallery
+
+<div align="center">
+  <img src="./public/recordings/demo_walkthrough_live.gif" alt="Full Interactive Session Walkthrough GIF" width="920" style="border-radius: 12px; box-shadow: 0 6px 30px rgba(0,0,0,0.25);" />
+  <p><em>Comprehensive Live Application Walkthrough: Exploring presets, parameter sliders, Amdahl's Law shift, and NVIDIA Nemotron 3 Super grounded causal synthesis.</em></p>
+</div>
+
+<table align="center" width="100%">
+  <tr>
+    <td width="50%" align="center">
+      <a href="./public/marketing/chrome_zWngoxY6QA.png"><img src="./public/marketing/chrome_zWngoxY6QA.png" alt="Z-WBE Full Interface in Chrome" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
+      <strong>Full Dashboard & Pipeline Map</strong><br />
+      <em>Responsive desktop layout with 8-stage pressure gauges and real-time Amdahl's Law tracking.</em>
+    </td>
+    <td width="50%" align="center">
+      <a href="./public/marketing/chrome_gu5yJH94VE.png"><img src="./public/marketing/chrome_gu5yJH94VE.png" alt="Assumption Sliders in Chrome" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
+      <strong>Interactive Biophysical Sliders</strong><br />
+      <em>Fine-grained control over tissue volume, voxel resolution, scan rates, and budget ceilings.</em>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <a href="./public/marketing/chrome_OFcZMwuzbh.png"><img src="./public/marketing/chrome_OFcZMwuzbh.png" alt="NVIDIA Nemotron AI Panel in Chrome" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
+      <strong>NVIDIA Nemotron 3 Super Reasoning</strong><br />
+      <em>Structured causal explanation identifying why constraints dominate without hallucinating data.</em>
+    </td>
+    <td width="50%" align="center">
+      <a href="./public/marketing/chrome_9l3I7FBWzD.png"><img src="./public/marketing/chrome_9l3I7FBWzD.png" alt="ELI5 Mode in Chrome" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
+      <strong>Accessible ELI5 Analogies</strong><br />
+      <em>Translating complex tensor and memory constraints into plain-English analogies.</em>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <a href="./public/marketing/chrome_qGadeh5X5m.png"><img src="./public/marketing/chrome_qGadeh5X5m.png" alt="Sensitivity Analysis Lab in Chrome" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
+      <strong>Multi-Variable Sensitivity Lab</strong><br />
+      <em>Local perturbation derivatives (0.5× to 100×) revealing highest-leverage engineering investments.</em>
+    </td>
+    <td width="50%" align="center">
+      <a href="./public/marketing/chrome_2RGKrFcnKX.png"><img src="./public/marketing/chrome_2RGKrFcnKX.png" alt="Hero Bottleneck Shift Alert in Chrome" width="100%" style="border-radius: 8px; border: 1px solid #333;" /></a><br />
+      <strong>"The Bottleneck Moved" Dynamic State</strong><br />
+      <em>Visual feedback when 100× imaging acceleration shifts the primary blocker to memory bandwidth.</em>
+    </td>
+  </tr>
+</table>
+
+---
+
+## 16. Verification Test Suite (84/84 Passing)
+
+The project maintains 100% automated test pass status across all 10 unit and integration test suites:
 
 ```bash
 npm test
@@ -359,21 +626,35 @@ npm test
 
  ✓ tests/accessibility.test.ts (7 tests)
  ✓ tests/contest.test.ts (6 tests)
+ ✓ tests/security.test.ts (6 tests)
  ✓ shared/tests/equations.test.ts (19 tests)
  ✓ shared/tests/bottlenecks.test.ts (6 tests)
  ✓ shared/tests/sensitivity.test.ts (5 tests)
  ✓ tests/heroDemo.test.ts (3 tests)
  ✓ tests/urlParams.test.ts (4 tests)
- ✓ tests/security.test.ts (6 tests)
+ ✓ shared/tests/grounding.test.ts (7 tests)
  ✓ backend/tests/api.test.ts (21 tests)
 
- Test Files  9 passed (9)
-      Tests  77 passed (77)
+ Test Files  10 passed (10)
+      Tests  84 passed (84)
+   Duration  1.03s
 ```
+
+### Key Test Coverage Areas
+1. **Equations Core** (`shared/tests/equations.test.ts`): Mathematical validation of all 12 biophysical, acquisition, memory, and economic equations against boundary inputs.
+2. **Bottleneck Evaluation** (`shared/tests/bottlenecks.test.ts`): Validates dominant bottleneck ranking, normalization, and margin computation.
+3. **Sensitivity Derivatives** (`shared/tests/sensitivity.test.ts`): Checks multi-variable step curves (0.5×, 1×, 2×, 10×, 100×).
+4. **Hero Demo Transition** (`tests/heroDemo.test.ts`): Confirms that accelerating acquisition 100× shifts the dominant constraint to memory bandwidth or storage.
+5. **Epistemic Grounding Contract** (`shared/tests/grounding.test.ts`): Enforces deterministic schema validation, zero hallucination bounds, and strict model prompt constraints.
+6. **Backend API & Degradation** (`backend/tests/api.test.ts`): Tests HTTP 429 rate limiting, HTTP 500 retry limits, offline fallback generation, and session metering.
+7. **Security & Secrets** (`tests/security.test.ts`): Verifies that `OPENROUTER_API_KEY` is never leaked to client bundles or serialized payloads.
+8. **Contest Criteria Alignment** (`tests/contest.test.ts`): Asserts that all official challenge dimensions are met programmatically.
+9. **Accessibility** (`tests/accessibility.test.ts`): Checks WCAG 2.1 AAA color contrast compliance, keyboard navigation, and screen-reader readiness.
+10. **State Synchronization** (`tests/urlParams.test.ts`): Verifies deterministic URL hash serialization and scenario permalink restoration.
 
 ---
 
-## 14. Scientific Limitations & Epistemic Boundaries
+## 17. Scientific Limitations & Epistemic Boundaries
 
 1. **Continuous Scaling Approximations**: Mathematical equations model macroscopic engineering throughput; they do not simulate nanoscale biochemical degradation or stochastic ion channel noise.
 2. **Proofreading Labor Modeling**: Proofreading hours are computed as an aggregate function of volumetric error rates. Physical connectomics proofreading concentrates non-linearly at complex dendritic arborizations.
@@ -382,7 +663,7 @@ npm test
 
 ---
 
-## 15. Submission Metadata & Verified Credentials
+## 18. Submission Metadata & Verified Credentials
 
 * **Competition**: Google Cloud × NVIDIA Developer Challenge 2026
 * **Social Hashtag**: **`#NVIDIAGTC`**
@@ -398,7 +679,7 @@ npm test
 
 ---
 
-## 16. License & Citation
+## 19. License & Citation
 
 Distributed under the **MIT License**. See [`LICENSE`](LICENSE) for details.
 
