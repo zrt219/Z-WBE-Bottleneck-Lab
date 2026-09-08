@@ -95,14 +95,14 @@ export const AboutPage: React.FC = () => {
             </h2>
           </div>
           <span className="text-xs font-mono font-bold bg-emerald-50 text-emerald-800 border border-emerald-300 px-3 py-1 rounded-full self-start sm:self-auto">
-            All Verified • Sep 7, 2026
+            4/4 Badges Verified • Sep 7, 2026
           </span>
         </div>
 
         {/* Badge Screenshot Image Card */}
         <div className="rounded-2xl border border-slate-200/90 bg-gradient-to-b from-slate-50 to-white p-4 sm:p-6 space-y-4">
           <div className="flex flex-wrap items-center justify-between gap-2 text-xs font-mono">
-            <span className="font-bold text-slate-800">Official Profile Credentials</span>
+            <span className="font-bold text-slate-800">Official Profile Credentials (4/4 Complete Sweep)</span>
             <span>Issued by Google Cloud Skills Boost / NVIDIA AI</span>
           </div>
 
@@ -127,12 +127,12 @@ export const AboutPage: React.FC = () => {
           <div className="rounded-xl overflow-hidden border border-slate-200 shadow-sm bg-white p-2">
             <img
               src="/images/google-nvidia-developer-badges.png"
-              alt="Google Cloud & NVIDIA Developer Community Completed Badges: Deploy Faster Generative AI Models with NVIDIA NIM on GKE, Speed Up Data Analytics with GPUs, Accelerated Machine Learning with Google Cloud and NVIDIA - Completed Sep 7, 2026"
+              alt="Google Cloud & NVIDIA Developer Community Completed Badges (4/4 Complete Sweep): Deploy Faster Generative AI Models with NVIDIA NIM on GKE, Speed Up Data Analytics with GPUs, Accelerated Machine Learning with Google Cloud and NVIDIA, Intro to Inference: How to Run AI Models on a GPU - Completed Sep 7, 2026"
               className="w-full max-h-72 object-contain mx-auto"
             />
           </div>
           <p className="text-[11px] text-slate-500 text-center font-mono">
-            Direct screenshot of verified learner profile badges completed on September 7, 2026.
+            Direct screenshot of verified learner profile badges (4/4 complete sweep) earned on September 7, 2026.
           </p>
         </div>
 
@@ -144,157 +144,194 @@ export const AboutPage: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
             {/* Pathway 1 */}
-            <div className="p-4 rounded-2xl border border-slate-200 bg-slate-50/70 hover:bg-slate-50 transition-colors space-y-2.5">
-              <div className="flex items-start justify-between gap-2">
-                <a
-                  href="https://developers.google.com/profile/badges/playlists/nvidia-deploy-with-gen-ai?u=110918189625880989910"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-extrabold text-slate-900 text-sm hover:text-blue-600 transition-colors inline-flex items-center space-x-1 group"
-                >
-                  <span className="group-hover:underline">1. Deploy Faster Generative AI Models with NVIDIA NIM on GKE</span>
-                  <ExternalLink className="w-3.5 h-3.5 text-slate-400 group-hover:text-blue-600 shrink-0" />
-                </a>
-                <span className="text-[10px] font-mono bg-emerald-100 text-emerald-800 font-bold px-1.5 py-0.5 rounded shrink-0 ml-2">
-                  Sep 7, 2026
-                </span>
-              </div>
-              <p className="text-slate-600 leading-relaxed">
-                <strong>Architectural Impact:</strong> Taught modern microservice containerization patterns for NVIDIA inference runtimes. Guided our Google Cloud Run TypeScript backend architecture, establishing strict low-latency JSON grounding schemas and deterministic circuit-breaker fallbacks when invoking NVIDIA Nemotron 3 Super.
-              </p>
-              <div className="flex items-center space-x-3 text-[11px] font-mono pt-1">
-                <a
-                  href="https://developers.google.com/profile/badges/playlists/nvidia-deploy-with-gen-ai?u=110918189625880989910"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-emerald-700 hover:text-emerald-800 font-bold inline-flex items-center space-x-1"
-                >
-                  <span>✅ Verified Badge Credential</span>
-                  <ExternalLink className="w-3 h-3" />
-                </a>
-                <span className="text-slate-300">•</span>
-                <a
-                  href="https://developers.google.com/learn/pathways/deploy-faster-gen-ai-models-nvidia-gke"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-slate-500 hover:text-slate-700"
-                >
-                  Course Pathway
-                </a>
+            <div className="p-4 rounded-2xl border border-slate-200 bg-slate-50/70 hover:bg-slate-50 transition-colors flex flex-col sm:flex-row gap-3.5 items-start">
+              <img
+                src="/images/badge_nim_gke.png"
+                alt="Deploy Faster Generative AI Models with NVIDIA NIM on GKE Badge"
+                className="w-14 h-14 object-contain shrink-0 drop-shadow-xs"
+              />
+              <div className="space-y-2 flex-1 min-w-0">
+                <div className="flex items-start justify-between gap-2">
+                  <a
+                    href="https://developers.google.com/profile/badges/playlists/nvidia-deploy-with-gen-ai?u=110918189625880989910"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-extrabold text-slate-900 text-sm hover:text-blue-600 transition-colors inline-flex items-center space-x-1 group"
+                  >
+                    <span className="group-hover:underline">1. Deploy Faster Generative AI Models with NVIDIA NIM on GKE</span>
+                    <ExternalLink className="w-3.5 h-3.5 text-slate-400 group-hover:text-blue-600 shrink-0" />
+                  </a>
+                  <span className="text-[10px] font-mono bg-emerald-100 text-emerald-800 font-bold px-1.5 py-0.5 rounded shrink-0 ml-2">
+                    Sep 7, 2026
+                  </span>
+                </div>
+                <p className="text-slate-600 leading-relaxed">
+                  <strong>Architectural Impact:</strong> Taught modern microservice containerization patterns for NVIDIA inference runtimes. Guided our Google Cloud Run TypeScript backend architecture, establishing strict low-latency JSON grounding schemas and deterministic circuit-breaker fallbacks when invoking NVIDIA Nemotron 3 Super.
+                </p>
+                <div className="flex items-center space-x-3 text-[11px] font-mono pt-1">
+                  <a
+                    href="https://developers.google.com/profile/badges/playlists/nvidia-deploy-with-gen-ai?u=110918189625880989910"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-emerald-700 hover:text-emerald-800 font-bold inline-flex items-center space-x-1"
+                  >
+                    <span>✅ Verified Badge Credential</span>
+                    <ExternalLink className="w-3 h-3" />
+                  </a>
+                  <span className="text-slate-300">•</span>
+                  <a
+                    href="https://developers.google.com/learn/pathways/deploy-faster-gen-ai-models-nvidia-gke"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-slate-500 hover:text-slate-700"
+                  >
+                    Course Pathway
+                  </a>
+                </div>
               </div>
             </div>
 
             {/* Pathway 2 */}
-            <div className="p-4 rounded-2xl border border-slate-200 bg-slate-50/70 hover:bg-slate-50 transition-colors space-y-2.5">
-              <div className="flex items-start justify-between gap-2">
-                <a
-                  href="https://developers.google.com/profile/badges/playlists/speed-up-data-analytics-GPUs?u=110918189625880989910"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-extrabold text-slate-900 text-sm hover:text-blue-600 transition-colors inline-flex items-center space-x-1 group"
-                >
-                  <span className="group-hover:underline">2. Speed Up Data Analytics with GPUs</span>
-                  <ExternalLink className="w-3.5 h-3.5 text-slate-400 group-hover:text-blue-600 shrink-0" />
-                </a>
-                <span className="text-[10px] font-mono bg-emerald-100 text-emerald-800 font-bold px-1.5 py-0.5 rounded shrink-0 ml-2">
-                  Sep 7, 2026
-                </span>
-              </div>
-              <p className="text-slate-600 leading-relaxed">
-                <strong>Architectural Impact:</strong> Applied GPU acceleration using NVIDIA RAPIDS <code className="font-mono bg-slate-200/70 px-1 py-0.5 rounded text-slate-900">cudf.pandas</code> in Google Cloud Colab Enterprise, unlocking zero-code GPU parallel processing across a 100,000-scenario multi-dimensional parameter exploration sweep.
-              </p>
-              <div className="flex items-center space-x-3 text-[11px] font-mono pt-1">
-                <a
-                  href="https://developers.google.com/profile/badges/playlists/speed-up-data-analytics-GPUs?u=110918189625880989910"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-emerald-700 hover:text-emerald-800 font-bold inline-flex items-center space-x-1"
-                >
-                  <span>✅ Verified Badge Credential</span>
-                  <ExternalLink className="w-3 h-3" />
-                </a>
-                <span className="text-slate-300">•</span>
-                <a
-                  href="https://developers.google.com/learn/pathways/speed-up-data-analytics-GPUs"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-slate-500 hover:text-slate-700"
-                >
-                  Course Pathway
-                </a>
+            <div className="p-4 rounded-2xl border border-slate-200 bg-slate-50/70 hover:bg-slate-50 transition-colors flex flex-col sm:flex-row gap-3.5 items-start">
+              <img
+                src="/images/badge_data_analytics.png"
+                alt="Speed Up Data Analytics on GPUs Badge"
+                className="w-14 h-14 object-contain shrink-0 drop-shadow-xs"
+              />
+              <div className="space-y-2 flex-1 min-w-0">
+                <div className="flex items-start justify-between gap-2">
+                  <a
+                    href="https://developers.google.com/profile/badges/playlists/speed-up-data-analytics-GPUs?u=110918189625880989910"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-extrabold text-slate-900 text-sm hover:text-blue-600 transition-colors inline-flex items-center space-x-1 group"
+                  >
+                    <span className="group-hover:underline">2. Speed Up Data Analytics with GPUs</span>
+                    <ExternalLink className="w-3.5 h-3.5 text-slate-400 group-hover:text-blue-600 shrink-0" />
+                  </a>
+                  <span className="text-[10px] font-mono bg-emerald-100 text-emerald-800 font-bold px-1.5 py-0.5 rounded shrink-0 ml-2">
+                    Sep 7, 2026
+                  </span>
+                </div>
+                <p className="text-slate-600 leading-relaxed">
+                  <strong>Architectural Impact:</strong> Applied GPU acceleration using NVIDIA RAPIDS <code className="font-mono bg-slate-200/70 px-1 py-0.5 rounded text-slate-900">cudf.pandas</code> in Google Cloud Colab Enterprise, unlocking zero-code GPU parallel processing across a 100,000-scenario multi-dimensional parameter exploration sweep.
+                </p>
+                <div className="flex items-center space-x-3 text-[11px] font-mono pt-1">
+                  <a
+                    href="https://developers.google.com/profile/badges/playlists/speed-up-data-analytics-GPUs?u=110918189625880989910"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-emerald-700 hover:text-emerald-800 font-bold inline-flex items-center space-x-1"
+                  >
+                    <span>✅ Verified Badge Credential</span>
+                    <ExternalLink className="w-3 h-3" />
+                  </a>
+                  <span className="text-slate-300">•</span>
+                  <a
+                    href="https://developers.google.com/learn/pathways/speed-up-data-analytics-GPUs"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-slate-500 hover:text-slate-700"
+                  >
+                    Course Pathway
+                  </a>
+                </div>
               </div>
             </div>
 
             {/* Pathway 3 */}
-            <div className="p-4 rounded-2xl border border-slate-200 bg-slate-50/70 hover:bg-slate-50 transition-colors space-y-2.5">
-              <div className="flex items-start justify-between gap-2">
-                <a
-                  href="https://developers.google.com/profile/badges/playlists/accelerated-machine-learning-with-google-cloud-and-nvidia?u=110918189625880989910"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-extrabold text-slate-900 text-sm hover:text-blue-600 transition-colors inline-flex items-center space-x-1 group"
-                >
-                  <span className="group-hover:underline">3. Accelerated Machine Learning with Google Cloud and NVIDIA</span>
-                  <ExternalLink className="w-3.5 h-3.5 text-slate-400 group-hover:text-blue-600 shrink-0" />
-                </a>
-                <span className="text-[10px] font-mono bg-emerald-100 text-emerald-800 font-bold px-1.5 py-0.5 rounded shrink-0 ml-2">
-                  Sep 7, 2026
-                </span>
-              </div>
-              <p className="text-slate-600 leading-relaxed">
-                <strong>Architectural Impact:</strong> Provided the hardware modeling foundation for our 8-dimensional bottleneck matrix. Taught how memory bandwidth (HBM3e) and interconnect topology (NVLink) become dominant limits when compute operations are scaled across multi-GPU supercomputing nodes.
-              </p>
-              <div className="flex items-center space-x-3 text-[11px] font-mono pt-1">
-                <a
-                  href="https://developers.google.com/profile/badges/playlists/accelerated-machine-learning-with-google-cloud-and-nvidia?u=110918189625880989910"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-emerald-700 hover:text-emerald-800 font-bold inline-flex items-center space-x-1"
-                >
-                  <span>✅ Verified Badge Credential</span>
-                  <ExternalLink className="w-3 h-3" />
-                </a>
-                <span className="text-slate-300">•</span>
-                <a
-                  href="https://developers.google.com/learn/pathways/accelerated-machine-learning-with-google-cloud-and-nvidia"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-slate-500 hover:text-slate-700"
-                >
-                  Course Pathway
-                </a>
+            <div className="p-4 rounded-2xl border border-slate-200 bg-slate-50/70 hover:bg-slate-50 transition-colors flex flex-col sm:flex-row gap-3.5 items-start">
+              <img
+                src="/images/badge_accelerated_ml.png"
+                alt="Accelerated Machine Learning with Google Cloud and NVIDIA Badge"
+                className="w-14 h-14 object-contain shrink-0 drop-shadow-xs"
+              />
+              <div className="space-y-2 flex-1 min-w-0">
+                <div className="flex items-start justify-between gap-2">
+                  <a
+                    href="https://developers.google.com/profile/badges/playlists/accelerated-machine-learning-with-google-cloud-and-nvidia?u=110918189625880989910"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-extrabold text-slate-900 text-sm hover:text-blue-600 transition-colors inline-flex items-center space-x-1 group"
+                  >
+                    <span className="group-hover:underline">3. Accelerated Machine Learning with Google Cloud and NVIDIA</span>
+                    <ExternalLink className="w-3.5 h-3.5 text-slate-400 group-hover:text-blue-600 shrink-0" />
+                  </a>
+                  <span className="text-[10px] font-mono bg-emerald-100 text-emerald-800 font-bold px-1.5 py-0.5 rounded shrink-0 ml-2">
+                    Sep 7, 2026
+                  </span>
+                </div>
+                <p className="text-slate-600 leading-relaxed">
+                  <strong>Architectural Impact:</strong> Provided the hardware modeling foundation for our 8-dimensional bottleneck matrix. Taught how memory bandwidth (HBM3e) and interconnect topology (NVLink) become dominant limits when compute operations are scaled across multi-GPU supercomputing nodes.
+                </p>
+                <div className="flex items-center space-x-3 text-[11px] font-mono pt-1">
+                  <a
+                    href="https://developers.google.com/profile/badges/playlists/accelerated-machine-learning-with-google-cloud-and-nvidia?u=110918189625880989910"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-emerald-700 hover:text-emerald-800 font-bold inline-flex items-center space-x-1"
+                  >
+                    <span>✅ Verified Badge Credential</span>
+                    <ExternalLink className="w-3 h-3" />
+                  </a>
+                  <span className="text-slate-300">•</span>
+                  <a
+                    href="https://developers.google.com/learn/pathways/accelerated-machine-learning-with-google-cloud-and-nvidia"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-slate-500 hover:text-slate-700"
+                  >
+                    Course Pathway
+                  </a>
+                </div>
               </div>
             </div>
 
             {/* Pathway 4 */}
-            <div className="p-4 rounded-2xl border border-slate-200 bg-slate-50/70 hover:bg-slate-50 transition-colors space-y-2.5">
-              <div className="flex items-start justify-between gap-2">
-                <a
-                  href="https://developers.google.com/learn/pathways/ai-models-on-gpu-intro"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-extrabold text-slate-900 text-sm hover:text-blue-600 transition-colors inline-flex items-center space-x-1 group"
-                >
-                  <span className="group-hover:underline">4. Intro to Inference: How to Run AI Models on a GPU</span>
-                  <ExternalLink className="w-3.5 h-3.5 text-slate-400 group-hover:text-blue-600 shrink-0" />
-                </a>
-                <span className="text-[10px] font-mono bg-emerald-100 text-emerald-800 font-bold px-1.5 py-0.5 rounded shrink-0 ml-2">
-                  Verified
-                </span>
-              </div>
-              <p className="text-slate-600 leading-relaxed">
-                <strong>Architectural Impact:</strong> Established key knowledge regarding KV-cache memory constraints, latency vs throughput trade-offs, and temperature calibration. Enabled seamless integration of NVIDIA's open model <code className="font-mono bg-slate-200/70 px-1 py-0.5 rounded text-slate-900">nvidia/nemotron-3-super-120b-a12b:free</code> on OpenRouter with zero token bloat.
-              </p>
-              <div className="flex items-center space-x-3 text-[11px] font-mono pt-1">
-                <a
-                  href="https://developers.google.com/learn/pathways/ai-models-on-gpu-intro"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-emerald-700 hover:text-emerald-800 font-bold inline-flex items-center space-x-1"
-                >
-                  <span>🔗 Official Learning Pathway</span>
-                  <ExternalLink className="w-3 h-3" />
-                </a>
+            <div className="p-4 rounded-2xl border border-slate-200 bg-slate-50/70 hover:bg-slate-50 transition-colors flex flex-col sm:flex-row gap-3.5 items-start">
+              <img
+                src="/images/badge_intro_inference.png"
+                alt="Intro to Inference: How to Run AI Models on a GPU Badge"
+                className="w-14 h-14 object-contain shrink-0 drop-shadow-xs"
+              />
+              <div className="space-y-2 flex-1 min-w-0">
+                <div className="flex items-start justify-between gap-2">
+                  <a
+                    href="https://developers.google.com/profile/badges/playlists/ai-models-on-gpu-intro?u=110918189625880989910"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-extrabold text-slate-900 text-sm hover:text-blue-600 transition-colors inline-flex items-center space-x-1 group"
+                  >
+                    <span className="group-hover:underline">4. Intro to Inference: How to Run AI Models on a GPU</span>
+                    <ExternalLink className="w-3.5 h-3.5 text-slate-400 group-hover:text-blue-600 shrink-0" />
+                  </a>
+                  <span className="text-[10px] font-mono bg-emerald-100 text-emerald-800 font-bold px-1.5 py-0.5 rounded shrink-0 ml-2">
+                    Sep 7, 2026
+                  </span>
+                </div>
+                <p className="text-slate-600 leading-relaxed">
+                  <strong>Architectural Impact:</strong> Established key knowledge regarding KV-cache memory constraints, latency vs throughput trade-offs, and temperature calibration. Enabled seamless integration of NVIDIA's open model <code className="font-mono bg-slate-200/70 px-1 py-0.5 rounded text-slate-900">nvidia/nemotron-3-super-120b-a12b:free</code> on OpenRouter with zero token bloat.
+                </p>
+                <div className="flex items-center space-x-3 text-[11px] font-mono pt-1">
+                  <a
+                    href="https://developers.google.com/profile/badges/playlists/ai-models-on-gpu-intro?u=110918189625880989910"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-emerald-700 hover:text-emerald-800 font-bold inline-flex items-center space-x-1"
+                  >
+                    <span>✅ Verified Badge Credential</span>
+                    <ExternalLink className="w-3 h-3" />
+                  </a>
+                  <span className="text-slate-300">•</span>
+                  <a
+                    href="https://developers.google.com/learn/pathways/ai-models-on-gpu-intro"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-slate-500 hover:text-slate-700"
+                  >
+                    Course Pathway
+                  </a>
+                </div>
               </div>
             </div>
           </div>

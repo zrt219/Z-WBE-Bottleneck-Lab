@@ -36,11 +36,22 @@ Key Repository Topics: `nvidia-gtc` `google-cloud` `google-cloud-run` `nvidia-ne
 To develop Z-WBE Bottleneck Lab, the developer completed the official **Google Cloud & NVIDIA Learning Pathways**, earning verified credentials on **September 7, 2026**:
 
 * **Google Developers Public Profile**: [developers.google.com/profile/u/110918189625880989910](https://developers.google.com/profile/u/110918189625880989910) (Developer ID: `110918189625880989910`)
-* **Verification Status**: 3 Official Digital Badges + 4 Learning Pathways Completed
+* **Verification Status**: 4 Official Digital Badges (4/4 Complete Sweep) + 4 Learning Pathways Completed
 
 <div align="center">
-  <img src="./public/images/google-nvidia-developer-badges.png" alt="Google Cloud and NVIDIA Developer Community Completed Badges - September 7, 2026" width="820" style="border-radius: 12px; box-shadow: 0 4px 24px rgba(0,0,0,0.15);" />
-  <p><em>Verified Google Cloud & NVIDIA Developer Community Badges (Earned Sep 7, 2026)</em></p>
+  <img src="./public/images/google-nvidia-developer-badges.png" alt="Google Cloud and NVIDIA Developer Community Completed Badges (4/4 Complete Sweep) - September 7, 2026" width="820" style="border-radius: 12px; box-shadow: 0 4px 24px rgba(0,0,0,0.15);" />
+  <p><em>Verified Google Cloud &amp; NVIDIA Developer Community Badges (4/4 Complete Sweep Earned Sep 7, 2026)</em></p>
+</div>
+
+<div align="center">
+  <table border="0">
+    <tr>
+      <td align="center" width="25%"><a href="https://developers.google.com/profile/badges/playlists/nvidia-deploy-with-gen-ai?u=110918189625880989910"><img src="./public/images/badge_nim_gke.png" width="130" alt="Deploy Faster Generative AI Models with NVIDIA NIM on GKE" /></a><br><strong>1. Deploy Faster GenAI</strong><br><small><a href="https://developers.google.com/profile/badges/playlists/nvidia-deploy-with-gen-ai?u=110918189625880989910">✅ Verified Badge</a></small></td>
+      <td align="center" width="25%"><a href="https://developers.google.com/profile/badges/playlists/speed-up-data-analytics-GPUs?u=110918189625880989910"><img src="./public/images/badge_data_analytics.png" width="130" alt="Speed Up Data Analytics on GPUs" /></a><br><strong>2. Data Analytics on GPUs</strong><br><small><a href="https://developers.google.com/profile/badges/playlists/speed-up-data-analytics-GPUs?u=110918189625880989910">✅ Verified Badge</a></small></td>
+      <td align="center" width="25%"><a href="https://developers.google.com/profile/badges/playlists/accelerated-machine-learning-with-google-cloud-and-nvidia?u=110918189625880989910"><img src="./public/images/badge_accelerated_ml.png" width="130" alt="Accelerated Machine Learning with Google Cloud and NVIDIA" /></a><br><strong>3. Accelerated ML</strong><br><small><a href="https://developers.google.com/profile/badges/playlists/accelerated-machine-learning-with-google-cloud-and-nvidia?u=110918189625880989910">✅ Verified Badge</a></small></td>
+      <td align="center" width="25%"><a href="https://developers.google.com/profile/badges/playlists/ai-models-on-gpu-intro?u=110918189625880989910"><img src="./public/images/badge_intro_inference.png" width="130" alt="Intro to Inference: How to Run AI Models on a GPU" /></a><br><strong>4. Intro to Inference</strong><br><small><a href="https://developers.google.com/profile/badges/playlists/ai-models-on-gpu-intro?u=110918189625880989910">✅ Verified Badge</a></small></td>
+    </tr>
+  </table>
 </div>
 
 ### How Each Pathway Directly Enabled Z-WBE Bottleneck Lab
@@ -50,7 +61,7 @@ To develop Z-WBE Bottleneck Lab, the developer completed the official **Google C
 | **1. [Deploy Faster Generative AI Models with NVIDIA NIM on GKE](https://developers.google.com/profile/badges/playlists/nvidia-deploy-with-gen-ai?u=110918189625880989910)**<br>[🔗 Course Pathway](https://developers.google.com/learn/pathways/deploy-faster-gen-ai-models-nvidia-gke) | ✅ Verified Badge<br>(Sep 7, 2026) | **Containerized Microservice & Inference Gateway**: Informed the high-throughput serverless microservice design for Google Cloud Run. Guided the strict JSON schema serialization, low-latency client caching, and resilient circuit-breaker fallbacks when requesting generative reasoning from NVIDIA Nemotron. |
 | **2. [Speed Up Data Analytics on GPUs](https://developers.google.com/profile/badges/playlists/speed-up-data-analytics-GPUs?u=110918189625880989910)**<br>[🔗 Course Pathway](https://developers.google.com/learn/pathways/speed-up-data-analytics-GPUs) | ✅ Verified Badge<br>(Sep 7, 2026) | **100,000-Scenario Monte Carlo Exploration Map**: Applied GPU-accelerated dataframe processing with NVIDIA RAPIDS `cudf.pandas` in Google Cloud Colab Enterprise, enabling zero-code GPU parallelism across a 100,000-scenario multi-dimensional parameter space. |
 | **3. [Accelerated Machine Learning with Google Cloud and NVIDIA](https://developers.google.com/profile/badges/playlists/accelerated-machine-learning-with-google-cloud-and-nvidia?u=110918189625880989910)**<br>[🔗 Course Pathway](https://developers.google.com/learn/pathways/accelerated-machine-learning-with-google-cloud-and-nvidia) | ✅ Verified Badge<br>(Sep 7, 2026) | **8-Dimensional Hardware Bottleneck Matrix**: Provided the systems-level engineering foundation to model tensor compute scaling (PFLOPS), High-Bandwidth Memory (HBM3e) bus bandwidth saturation, NVLink cluster fabric communication, and megawatt data-center power limits. |
-| **4. [Intro to Inference: How to Run AI Models on a GPU](https://developers.google.com/learn/pathways/ai-models-on-gpu-intro)** | ✅ Completed<br>(Verified) | **Latency Budgeting & Token Calibration**: Taught KV-cache sizing, memory-bandwidth-bound vs. compute-bound inference phases, and temperature control. Enabled seamless zero-token-waste integration with `nvidia/nemotron-3-super-120b-a12b:free` on OpenRouter. |
+| **4. [Intro to Inference: How to Run AI Models on a GPU](https://developers.google.com/profile/badges/playlists/ai-models-on-gpu-intro?u=110918189625880989910)**<br>[🔗 Course Pathway](https://developers.google.com/learn/pathways/ai-models-on-gpu-intro) | ✅ Verified Badge<br>(Sep 7, 2026) | **Latency Budgeting & Token Calibration**: Taught KV-cache sizing, memory-bandwidth-bound vs. compute-bound inference phases, and temperature control. Enabled seamless zero-token-waste integration with `nvidia/nemotron-3-super-120b-a12b:free` on OpenRouter. |
 
 ---
 
@@ -819,7 +830,7 @@ npm test
   * [Deploy Faster Generative AI Models with NVIDIA NIM on GKE](https://developers.google.com/profile/badges/playlists/nvidia-deploy-with-gen-ai?u=110918189625880989910) • [Pathway](https://developers.google.com/learn/pathways/deploy-faster-gen-ai-models-nvidia-gke)
   * [Speed Up Data Analytics on GPUs](https://developers.google.com/profile/badges/playlists/speed-up-data-analytics-GPUs?u=110918189625880989910) • [Pathway](https://developers.google.com/learn/pathways/speed-up-data-analytics-GPUs)
   * [Accelerated Machine Learning with Google Cloud and NVIDIA](https://developers.google.com/profile/badges/playlists/accelerated-machine-learning-with-google-cloud-and-nvidia?u=110918189625880989910) • [Pathway](https://developers.google.com/learn/pathways/accelerated-machine-learning-with-google-cloud-and-nvidia)
-  * [Intro to Inference: How to Run AI Models on a GPU](https://developers.google.com/learn/pathways/ai-models-on-gpu-intro)
+  * [Intro to Inference: How to Run AI Models on a GPU](https://developers.google.com/profile/badges/playlists/ai-models-on-gpu-intro?u=110918189625880989910) • [Pathway](https://developers.google.com/learn/pathways/ai-models-on-gpu-intro)
 
 ### 🏷️ Official Challenge Hashtags & Discovery Topics
 

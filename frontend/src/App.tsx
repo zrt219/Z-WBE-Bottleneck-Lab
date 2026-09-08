@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route, Navigate, useNavigate, useLocation } from 'react-router-dom';
 import { Header } from './components/Header';
 import { SimulatorPage } from './pages/SimulatorPage';
 import { MethodologyPage } from './pages/MethodologyPage';
@@ -15,6 +15,8 @@ import { AccessibilityProvider } from './context/AccessibilityContext';
 import { Cpu, ShieldCheck, Sparkles } from 'lucide-react';
 
 export const App: React.FC = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
   const [isTourOpen, setIsTourOpen] = useState(false);
   const [isApiLoading, setIsApiLoading] = useState(false);
   const [hasInterpretation, setHasInterpretation] = useState(false);
@@ -24,6 +26,17 @@ export const App: React.FC = () => {
     window.addEventListener('zwbe:start-tour', handleStartTourEvent);
     return () => window.removeEventListener('zwbe:start-tour', handleStartTourEvent);
   }, []);
+
+  const handleOneClickDemo = () => {
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        window.dispatchEvent(new CustomEvent('zwbe:one-click-demo'));
+      }, 150);
+    } else {
+      window.dispatchEvent(new CustomEvent('zwbe:one-click-demo'));
+    }
+  };
 
   const handleTriggerApiCall = async () => {
     setIsApiLoading(true);
@@ -46,7 +59,10 @@ export const App: React.FC = () => {
   return (
     <AccessibilityProvider>
       <div className="min-h-screen flex flex-col bg-[#f8fafc] text-slate-900 bg-scientific-grid selection:bg-blue-100 selection:text-blue-900">
-        <Header onStartTutorial={() => setIsTourOpen(true)} />
+        <Header
+          onStartTutorial={() => setIsTourOpen(true)}
+          onOneClickDemo={handleOneClickDemo}
+        />
         <main id="main-simulator-content" tabIndex={-1} className="flex-1 max-w-[1600px] w-full mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-12 focus:outline-hidden">
           <Routes>
             <Route path="/" element={<SimulatorPage />} />

@@ -125,7 +125,7 @@ Whole-brain emulation is often discussed as if it depends on a single breakthrou
 ## 10. What Was Learned (Four GTC Learning Pathways) & Verified Credentials
 
 * **Google Developers Public Profile**: [developers.google.com/profile/u/110918189625880989910](https://developers.google.com/profile/u/110918189625880989910) (User ID: `110918189625880989910`)
-* **Verification Timestamp**: All badges earned and verified on **September 7, 2026**
+* **Verification Timestamp**: All 4 official badges earned and verified on **September 7, 2026** (4/4 Complete Sweep)
 
 ### 1. [Deploy Faster Generative AI Models with NVIDIA NIM on GKE](https://developers.google.com/profile/badges/playlists/nvidia-deploy-with-gen-ai?u=110918189625880989910)
 * **Public Badge Credential**: [Verified Badge Playlist](https://developers.google.com/profile/badges/playlists/nvidia-deploy-with-gen-ai?u=110918189625880989910) • [Official Pathway](https://developers.google.com/learn/pathways/deploy-faster-gen-ai-models-nvidia-gke)
@@ -142,8 +142,8 @@ Whole-brain emulation is often discussed as if it depends on a single breakthrou
 * **Applied Where Genuinely Used**: Used GPU-accelerated array and dataframe processing for multidimensional correlation calculations and threshold boundary discovery across the 100,000-scenario dataset.
 * **Strict Integrity**: Did *not* falsely claim execution of cuML or XGBoost models, as the scenario sweep is an analytical parameter space exploration rather than a supervised learning task.
 
-### 4. [Intro to Inference: How to Run AI Models on a GPU](https://developers.google.com/learn/pathways/ai-models-on-gpu-intro)
-* **Official Pathway**: [Intro to Inference Pathway](https://developers.google.com/learn/pathways/ai-models-on-gpu-intro)
+### 4. [Intro to Inference: How to Run AI Models on a GPU](https://developers.google.com/profile/badges/playlists/ai-models-on-gpu-intro?u=110918189625880989910)
+* **Public Badge Credential**: [Verified Badge Playlist](https://developers.google.com/profile/badges/playlists/ai-models-on-gpu-intro?u=110918189625880989910) • [Official Pathway](https://developers.google.com/learn/pathways/ai-models-on-gpu-intro)
 * **Learned**: Latency vs throughput trade-offs, time-to-first-token (TTFT), KV cache memory dynamics, model serving architectures, and prompt token efficiency.
 * **Applied**: Structured scenario inputs into compact JSON (~15 key numerical metrics) rather than verbose text dumps, keeping response times under 4 seconds. Implemented deterministic FNV-1a caching to eliminate redundant queries.
 

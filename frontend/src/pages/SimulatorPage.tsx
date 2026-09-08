@@ -152,6 +152,12 @@ export const SimulatorPage: React.FC = () => {
     setBottleneckMovedBanner(true);
     announce('Running 1-Click Hero Demo: 100x acceleration + requesting grounded Nemotron explanation...');
 
+    // Scroll to hero demo section
+    const heroEl = document.getElementById('tour-hero-demo');
+    if (heroEl) {
+      heroEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
     // 4. Automatically trigger Nemotron/grounded interpretation
     await handleExplainScenario(accelerated);
   };
@@ -319,7 +325,7 @@ export const SimulatorPage: React.FC = () => {
             <div className="flex flex-wrap items-center gap-2 text-[11px] text-slate-600">
               <span className="inline-flex items-center space-x-1 font-semibold text-emerald-700">
                 <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
-                <span>4 Verified Learning Pathways (Sep 7, 2026)</span>
+                <span>4/4 Verified Badges (Full Sweep • Sep 7, 2026)</span>
               </span>
               <span className="text-slate-300 hidden sm:inline">•</span>
               <span className="hidden sm:inline text-slate-500">Cloud Run Container Architecture</span>

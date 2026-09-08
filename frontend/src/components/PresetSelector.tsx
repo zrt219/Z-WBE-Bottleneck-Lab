@@ -182,6 +182,7 @@ export const PresetSelector: React.FC<PresetSelectorProps> = ({
             return (
               <motion.button
                 key={scale.id}
+                data-testid={`preset-${scale.id}`}
                 onClick={() => onSelectPreset(scale.preset)}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
@@ -243,6 +244,7 @@ export const PresetSelector: React.FC<PresetSelectorProps> = ({
             return (
               <motion.button
                 key={demo.id}
+                data-testid={`demo-preset-${demo.id}`}
                 onClick={() => onSelectPreset(demo.preset)}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}

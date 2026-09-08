@@ -38,8 +38,11 @@ app.get('*', (req, res, next) => {
         }
     });
 });
-const isDirectExecution = process.argv[1] && (process.argv[1].endsWith('server.ts') ||
-    process.argv[1].endsWith('server.js'));
+const normalizedArgv1 = (process.argv[1] || '').replace(/\\/g, '/');
+const isDirectExecution = (normalizedArgv1.endsWith('server.ts') ||
+    normalizedArgv1.endsWith('server.js') ||
+    normalizedArgv1.includes('server') ||
+    typeof require !== 'undefined' && require.main === module);
 if (process.env.NODE_ENV !== 'test' && !process.env.VERCEL && isDirectExecution) {
     (0, config_1.validateStartupEnvironment)();
     app.listen(config_1.config.port, '0.0.0.0', () => {

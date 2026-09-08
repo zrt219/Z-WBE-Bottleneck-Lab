@@ -13,17 +13,30 @@ describe('Google Cloud × NVIDIA Developer Challenge 2026 Submission Verificatio
   const aboutTsxPath = path.join(rootDir, 'frontend/src/pages/AboutPage.tsx');
   const simulatorTsxPath = path.join(rootDir, 'frontend/src/pages/SimulatorPage.tsx');
 
-  it('verifies that the official badge screenshot exists in public asset directories', () => {
-    expect(fs.existsSync(publicBadgeImg)).toBe(true);
-    expect(fs.existsSync(frontendBadgeImg)).toBe(true);
+  const badgeFilenames = [
+    'google-nvidia-developer-badges.png',
+    'badge_nim_gke.png',
+    'badge_data_analytics.png',
+    'badge_accelerated_ml.png',
+    'badge_intro_inference.png'
+  ];
 
-    const publicStats = fs.statSync(publicBadgeImg);
-    const frontendStats = fs.statSync(frontendBadgeImg);
-    expect(publicStats.size).toBeGreaterThan(10000);
-    expect(frontendStats.size).toBe(publicStats.size);
+  it('verifies that all official badge assets exist in both public asset directories', () => {
+    for (const filename of badgeFilenames) {
+      const pubPath = path.join(rootDir, 'public/images', filename);
+      const frontPath = path.join(rootDir, 'frontend/public/images', filename);
+
+      expect(fs.existsSync(pubPath), `Missing public/images/${filename}`).toBe(true);
+      expect(fs.existsSync(frontPath), `Missing frontend/public/images/${filename}`).toBe(true);
+
+      const pubStats = fs.statSync(pubPath);
+      const frontStats = fs.statSync(frontPath);
+      expect(pubStats.size).toBeGreaterThan(10000);
+      expect(frontStats.size).toBe(pubStats.size);
+    }
   });
 
-  it('verifies that README.md highlights developer credentials, open models, and contains no sweepstakes promotion or deadline', () => {
+  it('verifies that README.md highlights 4/4 verified credentials, open models, and contains no sweepstakes promotion or deadline', () => {
     const content = fs.readFileSync(readmePath, 'utf-8');
 
     // Submission identity & Hashtags
@@ -41,13 +54,21 @@ describe('Google Cloud × NVIDIA Developer Challenge 2026 Submission Verificatio
     expect(content).toContain('nvidia/nemotron-3-super-120b-a12b:free');
     expect(content).toContain('OpenRouter');
 
-    // Public Profile & Verified Playlist URLs
+    // Public Profile & Verified Playlist URLs (All 4 verified badges)
     expect(content).toContain('110918189625880989910');
     expect(content).toContain('https://developers.google.com/profile/u/110918189625880989910');
+    expect(content).toContain('4 Official Digital Badges (4/4 Complete Sweep)');
     expect(content).toContain('https://developers.google.com/profile/badges/playlists/nvidia-deploy-with-gen-ai?u=110918189625880989910');
     expect(content).toContain('https://developers.google.com/profile/badges/playlists/speed-up-data-analytics-GPUs?u=110918189625880989910');
     expect(content).toContain('https://developers.google.com/profile/badges/playlists/accelerated-machine-learning-with-google-cloud-and-nvidia?u=110918189625880989910');
+    expect(content).toContain('https://developers.google.com/profile/badges/playlists/ai-models-on-gpu-intro?u=110918189625880989910');
     expect(content).toContain('https://developers.google.com/learn/pathways/ai-models-on-gpu-intro');
+
+    // High-res badge artwork images
+    expect(content).toContain('badge_nim_gke.png');
+    expect(content).toContain('badge_data_analytics.png');
+    expect(content).toContain('badge_accelerated_ml.png');
+    expect(content).toContain('badge_intro_inference.png');
 
     // 4 Judging Criteria
     expect(content).toContain('(a) Technical Innovation');
@@ -56,17 +77,19 @@ describe('Google Cloud × NVIDIA Developer Challenge 2026 Submission Verificatio
     expect(content).toContain('(d) Quality of Documentation & Presentation');
   });
 
-  it('verifies that CONTEST_SUBMISSION.md includes verified public profile and badge playlists', () => {
+  it('verifies that CONTEST_SUBMISSION.md includes verified public profile and all 4 badge playlists', () => {
     const content = fs.readFileSync(contestSubmissionPath, 'utf-8');
     expect(content).toContain('110918189625880989910');
     expect(content).toContain('https://developers.google.com/profile/u/110918189625880989910');
+    expect(content).toContain('4/4 Complete Sweep');
     expect(content).toContain('https://developers.google.com/profile/badges/playlists/nvidia-deploy-with-gen-ai?u=110918189625880989910');
     expect(content).toContain('https://developers.google.com/profile/badges/playlists/speed-up-data-analytics-GPUs?u=110918189625880989910');
     expect(content).toContain('https://developers.google.com/profile/badges/playlists/accelerated-machine-learning-with-google-cloud-and-nvidia?u=110918189625880989910');
+    expect(content).toContain('https://developers.google.com/profile/badges/playlists/ai-models-on-gpu-intro?u=110918189625880989910');
     expect(content).toContain('nvidia/nemotron-3-super-120b-a12b:free');
   });
 
-  it('verifies that ContestBadgesModal has ARIA dialog attributes, backdrop dismiss, and verified badge links with no prize marketing', () => {
+  it('verifies that ContestBadgesModal has ARIA dialog attributes, backdrop dismiss, 4/4 badge links, and artwork with no prize marketing', () => {
     const content = fs.readFileSync(modalTsxPath, 'utf-8');
     expect(content).toContain('role="dialog"');
     expect(content).toContain('aria-modal="true"');
@@ -78,6 +101,12 @@ describe('Google Cloud × NVIDIA Developer Challenge 2026 Submission Verificatio
     expect(content).toContain('110918189625880989910');
     expect(content).toContain('https://developers.google.com/profile/u/110918189625880989910');
     expect(content).toContain('/images/google-nvidia-developer-badges.png');
+    expect(content).toContain('4 Official Badges Verified');
+    expect(content).toContain('https://developers.google.com/profile/badges/playlists/ai-models-on-gpu-intro?u=110918189625880989910');
+    expect(content).toContain('/images/badge_nim_gke.png');
+    expect(content).toContain('/images/badge_data_analytics.png');
+    expect(content).toContain('/images/badge_accelerated_ml.png');
+    expect(content).toContain('/images/badge_intro_inference.png');
 
     // No prize promotion or deadline
     expect(content).not.toContain('The Grand Prize');
@@ -85,11 +114,17 @@ describe('Google Cloud × NVIDIA Developer Challenge 2026 Submission Verificatio
     expect(content).not.toContain('Deadline:');
   });
 
-  it('verifies that AboutPage includes architectural pillars, verified badges image, and scoring criteria with no prize marketing or deadline', () => {
+  it('verifies that AboutPage includes architectural pillars, 4/4 verified badges, artwork, and scoring criteria with no prize marketing or deadline', () => {
     const content = fs.readFileSync(aboutTsxPath, 'utf-8');
     expect(content).toContain('Google Cloud × NVIDIA Developer Challenge 2026');
     expect(content).toContain('/images/google-nvidia-developer-badges.png');
     expect(content).toContain('110918189625880989910');
+    expect(content).toContain('4/4 Badges Verified');
+    expect(content).toContain('https://developers.google.com/profile/badges/playlists/ai-models-on-gpu-intro?u=110918189625880989910');
+    expect(content).toContain('/images/badge_nim_gke.png');
+    expect(content).toContain('/images/badge_data_analytics.png');
+    expect(content).toContain('/images/badge_accelerated_ml.png');
+    expect(content).toContain('/images/badge_intro_inference.png');
     expect(content).toContain('Technical Innovation');
     expect(content).toContain('Effective Use of NVIDIA & Google Cloud');
     expect(content).toContain('Potential Impact & Usefulness');
@@ -102,7 +137,7 @@ describe('Google Cloud × NVIDIA Developer Challenge 2026 Submission Verificatio
     expect(content).not.toContain('Deadline:');
   });
 
-  it('verifies that Header and SimulatorPage integrate verified credentials access points', () => {
+  it('verifies that Header and SimulatorPage integrate verified credentials access points with 4/4 sweep indicators', () => {
     const headerContent = fs.readFileSync(headerTsxPath, 'utf-8');
     const simulatorContent = fs.readFileSync(simulatorTsxPath, 'utf-8');
 
@@ -110,6 +145,7 @@ describe('Google Cloud × NVIDIA Developer Challenge 2026 Submission Verificatio
     expect(headerContent).toContain('ContestBadgesModal');
     expect(simulatorContent).toContain('Google Cloud × NVIDIA Developer Challenge 2026');
     expect(simulatorContent).toContain('Inspect Verified Credentials');
+    expect(simulatorContent).toContain('4/4 Verified Badges (Full Sweep • Sep 7, 2026)');
 
     // No prize promotion or deadline
     expect(headerContent).not.toContain('Golden Ticket');

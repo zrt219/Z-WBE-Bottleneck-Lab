@@ -39,9 +39,12 @@ app.get('*', (req, res, next) => {
   });
 });
 
-const isDirectExecution = process.argv[1] && (
-  process.argv[1].endsWith('server.ts') ||
-  process.argv[1].endsWith('server.js')
+const normalizedArgv1 = (process.argv[1] || '').replace(/\\/g, '/');
+const isDirectExecution = (
+  normalizedArgv1.endsWith('server.ts') ||
+  normalizedArgv1.endsWith('server.js') ||
+  normalizedArgv1.includes('server') ||
+  typeof require !== 'undefined' && require.main === module
 );
 
 if (process.env.NODE_ENV !== 'test' && !process.env.VERCEL && isDirectExecution) {
