@@ -241,7 +241,7 @@ Change the assumptions. See what fractures.
 
 Key Highlights:
 ⚡ Deterministic scaling equations compute all metrics (FLOPs, TB/s, scan times, costs) in <1ms.
-🧠 NVIDIA Nemotron 3 Super 120B via @OpenRouter explains *why* bottlenecks shift—bound by a strict zero-hallucination grounding contract.
+🧠 NVIDIA Nemotron 3 Super 120B via @OpenRouter explains *why* bottlenecks shift—bound by a strict grounding contract.
 💥 The Hero Moment: Imaging gets 100x faster? The bottleneck instantly moves to memory bandwidth.
 🏎️ 8.62× speedup on NVIDIA Tesla T4 GPU with zero code changes using RAPIDS cuDF in Google Cloud Colab Enterprise!
 📊 100,000 Monte Carlo sweep mapping global phase transitions.
