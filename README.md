@@ -44,12 +44,13 @@ To develop Z-WBE Bottleneck Lab, the developer completed the official **Google C
 </div>
 
 <div align="center">
-  <table border="0">
+  <table border="0" width="100%">
     <tr>
-      <td align="center" width="25%"><a href="https://developers.google.com/profile/badges/playlists/nvidia-deploy-with-gen-ai?u=zhane"><img src="./public/images/badge_nim_gke.png" width="130" alt="Deploy Faster Generative AI Models with NVIDIA NIM on GKE" /></a><br><strong>1. Deploy Faster GenAI</strong><br><small><a href="https://developers.google.com/profile/badges/playlists/nvidia-deploy-with-gen-ai?u=zhane">✅ Verified Badge</a></small></td>
-      <td align="center" width="25%"><a href="https://developers.google.com/profile/badges/playlists/speed-up-data-analytics-GPUs?u=zhane"><img src="./public/images/badge_data_analytics.png" width="130" alt="Speed Up Data Analytics on GPUs" /></a><br><strong>2. Data Analytics on GPUs</strong><br><small><a href="https://developers.google.com/profile/badges/playlists/speed-up-data-analytics-GPUs?u=zhane">✅ Verified Badge</a></small></td>
-      <td align="center" width="25%"><a href="https://developers.google.com/profile/badges/playlists/accelerated-machine-learning-with-google-cloud-and-nvidia?u=110918189625880989910"><img src="./public/images/badge_accelerated_ml.png" width="130" alt="Accelerated Machine Learning with Google Cloud and NVIDIA" /></a><br><strong>3. Accelerated ML</strong><br><small><a href="https://developers.google.com/profile/badges/playlists/accelerated-machine-learning-with-google-cloud-and-nvidia?u=110918189625880989910">✅ Verified Badge</a></small></td>
-      <td align="center" width="25%"><a href="https://developers.google.com/profile/badges/playlists/ai-models-on-gpu-intro?u=zhane"><img src="./public/images/badge_intro_inference.png" width="130" alt="Intro to Inference: How to Run AI Models on a GPU" /></a><br><strong>4. Intro to Inference</strong><br><small><a href="https://developers.google.com/profile/badges/playlists/ai-models-on-gpu-intro?u=zhane">✅ Verified Badge</a></small></td>
+      <td align="center" width="20%"><a href="https://developers.google.com/profile/u/zhane"><img src="./public/images/google_developer_profile_level11.png" width="130" alt="Google Developers Level 11 Milestone" /></a><br><strong>Level 11 Milestone</strong><br><small><a href="https://developers.google.com/profile/u/zhane">🌟 Public Profile</a></small></td>
+      <td align="center" width="20%"><a href="https://developers.google.com/profile/badges/playlists/nvidia-deploy-with-gen-ai?u=zhane"><img src="./public/images/badge_nim_gke.png" width="130" alt="Deploy Faster Generative AI Models with NVIDIA NIM on GKE" /></a><br><strong>1. Deploy Faster GenAI</strong><br><small><a href="https://developers.google.com/profile/badges/playlists/nvidia-deploy-with-gen-ai?u=zhane">✅ Verified Badge</a></small></td>
+      <td align="center" width="20%"><a href="https://developers.google.com/profile/badges/playlists/speed-up-data-analytics-GPUs?u=zhane"><img src="./public/images/badge_data_analytics.png" width="130" alt="Speed Up Data Analytics on GPUs" /></a><br><strong>2. Data Analytics on GPUs</strong><br><small><a href="https://developers.google.com/profile/badges/playlists/speed-up-data-analytics-GPUs?u=zhane">✅ Verified Badge</a></small></td>
+      <td align="center" width="20%"><a href="https://developers.google.com/profile/badges/playlists/accelerated-machine-learning-with-google-cloud-and-nvidia?u=110918189625880989910"><img src="./public/images/badge_accelerated_ml.png" width="130" alt="Accelerated Machine Learning with Google Cloud and NVIDIA" /></a><br><strong>3. Accelerated ML</strong><br><small><a href="https://developers.google.com/profile/badges/playlists/accelerated-machine-learning-with-google-cloud-and-nvidia?u=110918189625880989910">✅ Verified Badge</a></small></td>
+      <td align="center" width="20%"><a href="https://developers.google.com/profile/badges/playlists/ai-models-on-gpu-intro?u=zhane"><img src="./public/images/badge_intro_inference.png" width="130" alt="Intro to Inference: How to Run AI Models on a GPU" /></a><br><strong>4. Intro to Inference</strong><br><small><a href="https://developers.google.com/profile/badges/playlists/ai-models-on-gpu-intro?u=zhane">✅ Verified Badge</a></small></td>
     </tr>
   </table>
 </div>
@@ -862,7 +863,7 @@ npm test
 * **Judges & Channels**:
   * **LinkedIn**: Google for Developers, NVIDIA AI, Jen Harvey, Ray Harvey
   * **X (Twitter)**: `@GoogleDevs`, `@NVIDIAAI`
-* **Google Developers Public Profile**: [developers.google.com/profile/u/zhane](https://developers.google.com/profile/u/zhane) • [ID: 110918189625880989910](https://developers.google.com/profile/u/110918189625880989910) • <img src="./public/images/google_developer_profile_level11.png" alt="Google Developers Level 11 Milestone" width="32" style="vertical-align: middle; display: inline-block;" /> **Level 11 Milestone**
+* **Google Developers Public Profile**: [developers.google.com/profile/u/zhane](https://developers.google.com/profile/u/zhane) • [ID: 110918189625880989910](https://developers.google.com/profile/u/110918189625880989910) • **Verified Level 11 Developer**
 * **Verified Pathways & Public Credentials (Earned Sep 7, 2026 - 4/4 Complete Sweep)**:
   * [Deploy Faster Generative AI Models with NVIDIA NIM on GKE](https://developers.google.com/profile/badges/playlists/nvidia-deploy-with-gen-ai?u=zhane) • [Pathway](https://developers.google.com/learn/pathways/deploy-faster-gen-ai-models-nvidia-gke)
   * [Speed Up Data Analytics on GPUs](https://developers.google.com/profile/badges/playlists/speed-up-data-analytics-GPUs?u=zhane) • [Pathway](https://developers.google.com/learn/pathways/speed-up-data-analytics-GPUs)
@@ -876,36 +877,43 @@ npm test
   <p><strong>4/4 Verified Google Cloud × NVIDIA Learning Pathway Developer Badges</strong></p>
 </div>
 
-### 🏅 Official Learning Pathway Badge Artwork
+### 🏅 Official Google Developer Milestones & Badge Artwork
 
 <table width="100%" align="center">
   <tr>
-    <td width="25%" align="center">
-      <a href="https://developers.google.com/profile/badges/playlists/nvidia-deploy-with-gen-ai?u=zhane">
-        <img src="./public/images/badge_nim_gke.png" alt="NVIDIA NIM on GKE Badge" width="140" />
+    <td width="20%" align="center">
+      <a href="https://developers.google.com/profile/u/zhane">
+        <img src="./public/images/google_developer_profile_level11.png" alt="Google Developers Level 11 Milestone" width="130" />
       </a><br />
-      <strong>NIM on GKE</strong><br />
+      <strong>Level 11 Milestone</strong><br />
+      <small><a href="https://developers.google.com/profile/u/zhane">🌟 Public Profile</a></small>
+    </td>
+    <td width="20%" align="center">
+      <a href="https://developers.google.com/profile/badges/playlists/nvidia-deploy-with-gen-ai?u=zhane">
+        <img src="./public/images/badge_nim_gke.png" alt="NVIDIA NIM on GKE Badge" width="130" />
+      </a><br />
+      <strong>1. NIM on GKE</strong><br />
       <small><a href="https://developers.google.com/profile/badges/playlists/nvidia-deploy-with-gen-ai?u=zhane">View Credential</a></small>
     </td>
-    <td width="25%" align="center">
+    <td width="20%" align="center">
       <a href="https://developers.google.com/profile/badges/playlists/speed-up-data-analytics-GPUs?u=zhane">
-        <img src="./public/images/badge_data_analytics.png" alt="Data Analytics on GPUs Badge" width="140" />
+        <img src="./public/images/badge_data_analytics.png" alt="Data Analytics on GPUs Badge" width="130" />
       </a><br />
-      <strong>Data Analytics</strong><br />
+      <strong>2. Data Analytics</strong><br />
       <small><a href="https://developers.google.com/profile/badges/playlists/speed-up-data-analytics-GPUs?u=zhane">View Credential</a></small>
     </td>
-    <td width="25%" align="center">
+    <td width="20%" align="center">
       <a href="https://developers.google.com/profile/badges/playlists/accelerated-machine-learning-with-google-cloud-and-nvidia?u=110918189625880989910">
-        <img src="./public/images/badge_accelerated_ml.png" alt="Accelerated Machine Learning Badge" width="140" />
+        <img src="./public/images/badge_accelerated_ml.png" alt="Accelerated Machine Learning Badge" width="130" />
       </a><br />
-      <strong>Accelerated ML</strong><br />
+      <strong>3. Accelerated ML</strong><br />
       <small><a href="https://developers.google.com/profile/badges/playlists/accelerated-machine-learning-with-google-cloud-and-nvidia?u=110918189625880989910">View Credential</a></small>
     </td>
-    <td width="25%" align="center">
+    <td width="20%" align="center">
       <a href="https://developers.google.com/profile/badges/playlists/ai-models-on-gpu-intro?u=zhane">
-        <img src="./public/images/badge_intro_inference.png" alt="Intro to Inference Badge" width="140" />
+        <img src="./public/images/badge_intro_inference.png" alt="Intro to Inference Badge" width="130" />
       </a><br />
-      <strong>Intro to Inference</strong><br />
+      <strong>4. Intro to Inference</strong><br />
       <small><a href="https://developers.google.com/profile/badges/playlists/ai-models-on-gpu-intro?u=zhane">View Credential</a></small>
     </td>
   </tr>
