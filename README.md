@@ -876,6 +876,41 @@ npm test
   <p><strong>4/4 Verified Google Cloud × NVIDIA Learning Pathway Developer Badges</strong></p>
 </div>
 
+### 🏅 Official Learning Pathway Badge Artwork
+
+<table width="100%" align="center">
+  <tr>
+    <td width="25%" align="center">
+      <a href="https://developers.google.com/profile/badges/playlists/nvidia-deploy-with-gen-ai?u=zhane">
+        <img src="./public/images/badge_nim_gke.png" alt="NVIDIA NIM on GKE Badge" width="140" />
+      </a><br />
+      <strong>NIM on GKE</strong><br />
+      <small><a href="https://developers.google.com/profile/badges/playlists/nvidia-deploy-with-gen-ai?u=zhane">View Credential</a></small>
+    </td>
+    <td width="25%" align="center">
+      <a href="https://developers.google.com/profile/badges/playlists/speed-up-data-analytics-GPUs?u=zhane">
+        <img src="./public/images/badge_data_analytics.png" alt="Data Analytics on GPUs Badge" width="140" />
+      </a><br />
+      <strong>Data Analytics</strong><br />
+      <small><a href="https://developers.google.com/profile/badges/playlists/speed-up-data-analytics-GPUs?u=zhane">View Credential</a></small>
+    </td>
+    <td width="25%" align="center">
+      <a href="https://developers.google.com/profile/badges/playlists/accelerated-machine-learning-with-google-cloud-and-nvidia?u=110918189625880989910">
+        <img src="./public/images/badge_accelerated_ml.png" alt="Accelerated Machine Learning Badge" width="140" />
+      </a><br />
+      <strong>Accelerated ML</strong><br />
+      <small><a href="https://developers.google.com/profile/badges/playlists/accelerated-machine-learning-with-google-cloud-and-nvidia?u=110918189625880989910">View Credential</a></small>
+    </td>
+    <td width="25%" align="center">
+      <a href="https://developers.google.com/profile/badges/playlists/ai-models-on-gpu-intro?u=zhane">
+        <img src="./public/images/badge_intro_inference.png" alt="Intro to Inference Badge" width="140" />
+      </a><br />
+      <strong>Intro to Inference</strong><br />
+      <small><a href="https://developers.google.com/profile/badges/playlists/ai-models-on-gpu-intro?u=zhane">View Credential</a></small>
+    </td>
+  </tr>
+</table>
+
 ### 🎟️ Official Google Cloud × NVIDIA Golden Ticket Completion Cards (4/4 Complete Sweep)
 
 <table width="100%" align="center">
