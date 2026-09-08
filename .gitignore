@@ -18,3 +18,5 @@ nyc_taxi_data/
 .edge-profile-prod-test/
 Z-WBE-GTC-Berlin-2026-Final-Kit/
 scratch/
+__pycache__/
+*.pyc

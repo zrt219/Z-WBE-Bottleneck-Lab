@@ -1,0 +1,42 @@
+﻿[
+  {
+    "dominant_bottleneck": "ACQUISITION", 
+    "pct": "27.34", 
+    "scenarios": "27335"
+  }, 
+  {
+    "dominant_bottleneck": "ECONOMIC_COST", 
+    "pct": "27.25", 
+    "scenarios": "27253"
+  }, 
+  {
+    "dominant_bottleneck": "RECONSTRUCTION", 
+    "pct": "18.83", 
+    "scenarios": "18833"
+  }, 
+  {
+    "dominant_bottleneck": "MEMORY_BANDWIDTH", 
+    "pct": "14.09", 
+    "scenarios": "14092"
+  }, 
+  {
+    "dominant_bottleneck": "STORAGE", 
+    "pct": "10.72", 
+    "scenarios": "10719"
+  }, 
+  {
+    "dominant_bottleneck": "POWER", 
+    "pct": "1.75", 
+    "scenarios": "1750"
+  }, 
+  {
+    "dominant_bottleneck": "INTERCONNECT", 
+    "pct": "0.02", 
+    "scenarios": "16"
+  }, 
+  {
+    "dominant_bottleneck": "COMPUTE", 
+    "pct": "0.0", 
+    "scenarios": "2"
+  }
+]

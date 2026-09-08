@@ -1,0 +1,12 @@
+﻿Dataset geometric-kiln-457011-h4:z_wbe_research
+
+   Last modified              ACLs             Labels    Type     Max time travel (Hours)  
+ ----------------- -------------------------- -------- --------- ------------------------- 
+  08 Sep 02:53:55   Owners:                             DEFAULT   168                      
+                      projectOwners,                                                       
+                      zhane.umattr@gmail.com                                               
+                    Writers:                                                               
+                      projectWriters                                                       
+                    Readers:                                                               
+                      projectReaders                                                       
+

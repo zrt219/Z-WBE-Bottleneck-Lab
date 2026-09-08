@@ -1,0 +1,207 @@
+﻿[
+  {
+    "mode": "NULLABLE",
+    "name": "scenario_id",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "tissue_volume_mm3",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "voxel_count",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "raw_data_bytes",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "imaging_rate_mm3_year",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "machine_count",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "machine_utilization",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "effective_imaging_rate_mm3_year",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "acquisition_time_years",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "segmentation_accuracy",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "proofreading_mult",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "auto_throughput_mm3_year",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "proofreading_hours",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "reconstruction_years",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "neuron_count",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "synapse_count",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "compute_demand_pflops",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "memory_demand_tb_s",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "interconnect_demand_tb_s",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "power_demand_mw",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "compute_throughput_pflops",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "memory_bandwidth_tb_s",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "interconnect_bandwidth_tb_s",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "storage_capacity_pb",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "power_capacity_mw",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "budget_ceiling_usd",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "imaging_cost_usd",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "storage_cost_usd",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "compute_cost_usd",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "energy_cost_usd",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "proofreading_cost_usd",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "total_cost_usd",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "acq_pressure",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "recon_pressure",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "storage_pressure",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "compute_pressure",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "memory_pressure",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "interconnect_pressure",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "power_pressure",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "cost_pressure",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "dominant_bottleneck",
+    "type": "STRING"
+  }
+]

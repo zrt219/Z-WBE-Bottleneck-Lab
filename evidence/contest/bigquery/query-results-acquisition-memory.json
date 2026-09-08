@@ -1,0 +1,12 @@
+﻿[
+  {
+    "avg_imaging_rate": "1.017077871702944", 
+    "avg_memory_bandwidth": "510.12282364126656", 
+    "dominant_bottleneck": "ACQUISITION"
+  }, 
+  {
+    "avg_imaging_rate": "8.404979560246954", 
+    "avg_memory_bandwidth": "12.351849820536533", 
+    "dominant_bottleneck": "MEMORY_BANDWIDTH"
+  }
+]

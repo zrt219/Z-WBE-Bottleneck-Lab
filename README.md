@@ -5,6 +5,7 @@
 [![Golden Ticket Contest](https://img.shields.io/badge/Google%20Cloud%20%C3%97%20NVIDIA-GTC%20Berlin%202026%20Golden%20Ticket-FFB800?logo=nvidia&logoColor=black&style=for-the-badge)](https://cloud.google.com)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb)
 [![Google Cloud Run](https://img.shields.io/badge/Google%20Cloud-Cloud%20Run-4285F4?logo=google-cloud&logoColor=white)](https://cloud.google.com/run)
+[![Google BigQuery Sandbox](https://img.shields.io/badge/Google%20Cloud-BigQuery%20Sandbox%20(100k%20Rows)-34A853?logo=google-cloud&logoColor=white)](https://cloud.google.com/bigquery/docs/sandbox)
 [![NVIDIA Nemotron 3 Super](https://img.shields.io/badge/NVIDIA-Nemotron%203%20Super%20120B-76B900?logo=nvidia&logoColor=white)](https://openrouter.ai/models/nvidia/nemotron-3-super-120b-a12b:free)
 [![NVIDIA RAPIDS](https://img.shields.io/badge/NVIDIA-RAPIDS%20cuDF%208.62x-76B900?logo=nvidia&logoColor=white)](https://rapids.ai)
 [![Vercel Deployment](https://img.shields.io/badge/Vercel-Fullstack%20Deploy-000000?logo=vercel&logoColor=white)](https://z-wbe-bottleneck-lab.vercel.app)

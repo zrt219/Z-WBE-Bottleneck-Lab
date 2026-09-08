@@ -1,0 +1,46 @@
+﻿Table geometric-kiln-457011-h4:z_wbe_research.scenarios_100k
+
+   Last modified                     Schema                     Total Rows   Total Bytes     Expiration      Time Partitioning   Clustered Fields   Total Logical Bytes   Total Physical Bytes   Labels  
+ ----------------- ------------------------------------------- ------------ ------------- ----------------- ------------------- ------------------ --------------------- ---------------------- -------- 
+  08 Sep 02:55:39   |- scenario_id: integer                     100000       33428097      07 Nov 01:55:39                                          33428097                                             
+                    |- tissue_volume_mm3: float                                                                                                                                                          
+                    |- voxel_count: integer                                                                                                                                                              
+                    |- raw_data_bytes: integer                                                                                                                                                           
+                    |- imaging_rate_mm3_year: float                                                                                                                                                      
+                    |- machine_count: integer                                                                                                                                                            
+                    |- machine_utilization: float                                                                                                                                                        
+                    |- effective_imaging_rate_mm3_year: float                                                                                                                                            
+                    |- acquisition_time_years: float                                                                                                                                                     
+                    |- segmentation_accuracy: float                                                                                                                                                      
+                    |- proofreading_mult: float                                                                                                                                                          
+                    |- auto_throughput_mm3_year: float                                                                                                                                                   
+                    |- proofreading_hours: float                                                                                                                                                         
+                    |- reconstruction_years: float                                                                                                                                                       
+                    |- neuron_count: integer                                                                                                                                                             
+                    |- synapse_count: integer                                                                                                                                                            
+                    |- compute_demand_pflops: float                                                                                                                                                      
+                    |- memory_demand_tb_s: float                                                                                                                                                         
+                    |- interconnect_demand_tb_s: float                                                                                                                                                   
+                    |- power_demand_mw: float                                                                                                                                                            
+                    |- compute_throughput_pflops: float                                                                                                                                                  
+                    |- memory_bandwidth_tb_s: float                                                                                                                                                      
+                    |- interconnect_bandwidth_tb_s: float                                                                                                                                                
+                    |- storage_capacity_pb: float                                                                                                                                                        
+                    |- power_capacity_mw: float                                                                                                                                                          
+                    |- budget_ceiling_usd: float                                                                                                                                                         
+                    |- imaging_cost_usd: float                                                                                                                                                           
+                    |- storage_cost_usd: float                                                                                                                                                           
+                    |- compute_cost_usd: float                                                                                                                                                           
+                    |- energy_cost_usd: float                                                                                                                                                            
+                    |- proofreading_cost_usd: float                                                                                                                                                      
+                    |- total_cost_usd: float                                                                                                                                                             
+                    |- acq_pressure: float                                                                                                                                                               
+                    |- recon_pressure: float                                                                                                                                                             
+                    |- storage_pressure: float                                                                                                                                                           
+                    |- compute_pressure: float                                                                                                                                                           
+                    |- memory_pressure: float                                                                                                                                                            
+                    |- interconnect_pressure: float                                                                                                                                                      
+                    |- power_pressure: float                                                                                                                                                             
+                    |- cost_pressure: float                                                                                                                                                              
+                    |- dominant_bottleneck: string                                                                                                                                                       
+
