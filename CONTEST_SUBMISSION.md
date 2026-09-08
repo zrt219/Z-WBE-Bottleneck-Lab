@@ -189,15 +189,19 @@ Unlike typical AI applications that prompt models to estimate or compute enginee
 ## 15. LinkedIn Launch Post
 
 **Recommended Media Attachments**: 
-* Primary: Dark Hero Banner (`public/images/banner-dark.png`) OR 
-* Benchmark Chart: Empirical Speedup Chart (`public/data/cpu_vs_gpu_speedup.png`) OR 
-* Video/GIF: Animated Walkthrough (`public/recordings/hero_bottleneck_shift.gif`)
+* **Official Contest Social Card**: [`public/images/social_card_data_analytics.png`](public/images/social_card_data_analytics.png) (Downloaded from official Google Cloud / NVIDIA contest assets)
+* **Demo Recording / Walkthrough**: [`public/recordings/hero_bottleneck_shift.gif`](public/recordings/hero_bottleneck_shift.gif)
+* **Project Banner**: [`public/images/banner-dark.png`](public/images/banner-dark.png)
 
 ---
 
 I am thrilled to present **Z-WBE Bottleneck Lab**, built for the **Google Cloud × NVIDIA GTC Berlin 2026 Golden Ticket Challenge**!
 
-The debate surrounding Whole Brain Emulation (WBE) is often trapped in domain silos: microscopists assume compute is trivial, while computer architects assume connectome imaging is already solved. 
+**What I Learned from the Google Cloud & NVIDIA Community**:
+Completing the **Speed Up Data Analytics on GPUs** and **Deploy Faster Generative AI Models with NVIDIA NIM on GKE** pathways fundamentally changed how I think about full-stack AI engineering. I learned that data engineering latency often dwarfs inference time—and that zero-code GPU acceleration with NVIDIA RAPIDS `cudf.pandas` can eliminate pipeline bottlenecks entirely. I also learned how to architect low-latency containerized microservices and ground open foundation models with strict deterministic contracts.
+
+**What I Built: Z-WBE Bottleneck Lab**
+The debate surrounding Whole Brain Emulation (WBE) is often trapped in domain silos: microscopists assume compute is trivial, while computer architects assume connectome imaging is solved. 
 
 **Z-WBE Bottleneck Lab** unifies the entire macroscopic engineering pipeline—Preservation, Acquisition, Reconstruction, Functionalization, Execution, and Validation—into a single interactive scaling demonstrator.
 
@@ -207,7 +211,7 @@ The debate surrounding Whole Brain Emulation (WBE) is often trapped in domain si
 
 **Key Architectural Highlights**:
 * 💥 **The Hero Moment**: Testing *"What happens if imaging becomes 100x faster?"* reveals Amdahl's Law in action: eliminating microscopy barriers causes the dominant bottleneck to instantly jump to Memory Bandwidth in <1ms.
-* ⚡ **8.62× GPU Acceleration**: Empirical tabular data pipeline benchmarked on **Google Cloud Colab Enterprise** on an **NVIDIA Tesla T4 GPU** (1.907s CPU vs 0.221s GPU, 88.4% time reduction) using zero-code-change `%load_ext cudf.pandas`.
+* ⚡ **8.62× GPU Acceleration**: Tabular data pipeline benchmarked on **Google Cloud Colab Enterprise** on an **NVIDIA Tesla T4 GPU** (1.907s CPU vs 0.221s GPU, 88.4% time reduction) using zero-code-change `%load_ext cudf.pandas`.
 * 📊 **100,000-Scenario Monte Carlo Sweep**: Parameter space explored in GPU memory with NVIDIA RAPIDS cuDF, exported directly into the web application's interactive heatmap.
 * 🚀 **1-Click Colab Launch**: Complete canonical 10-stage GPU notebook ready to run in one click via Google Colab.
 * 🛡️ **Verified Engineering**: 89 passing unit tests, full TypeScript monorepo, zero-secret server-side API boundary, and containerized microservice architected for Google Cloud Run.
@@ -224,20 +228,22 @@ Judges & Mentions: Google for Developers | NVIDIA AI | Jen Harvey | Ray Harvey
 
 ## 16. X (Twitter) Launch Post
 
-**Recommended Media Attachment**: Attach `public/recordings/hero_bottleneck_shift.gif` or `public/colab-evidence/colab_t4_live_execution.gif` (Motion/video drives 10× higher engagement on X).
+**Recommended Media Attachment**: Attach the official contest social card `public/images/social_card_data_analytics.png` or the animated execution GIF `public/recordings/hero_bottleneck_shift.gif` (Motion and visual cards drive 10× higher engagement on X).
 
 ---
 
 🚀 Excited to unveil **Z-WBE Bottleneck Lab** for the Google Cloud × NVIDIA GTC Berlin 2026 Golden Ticket Challenge!
 
-🔬 What actually breaks first if you attempt whole-brain emulation?
+🎓 What I Learned: Zero-code GPU acceleration with RAPIDS @rapidsai cuDF eliminates data bottlenecks, while open foundation models thrive when grounded against deterministic physics engines.
+
+🔬 What I Built: An interactive laboratory testing what breaks first in whole-brain emulation.
 Change the assumptions. See what fractures.
 
 Key Highlights:
 ⚡ Deterministic scaling equations compute all metrics (FLOPs, TB/s, scan times, costs) in <1ms.
 🧠 NVIDIA Nemotron 3 Super 120B via @OpenRouter explains *why* bottlenecks shift—bound by a strict zero-hallucination grounding contract.
 💥 The Hero Moment: Imaging gets 100x faster? The bottleneck instantly moves to memory bandwidth.
-🏎️ 8.62× speedup on NVIDIA Tesla T4 GPU with zero code changes using RAPIDS @rapidsai cuDF in Google Cloud Colab Enterprise!
+🏎️ 8.62× speedup on NVIDIA Tesla T4 GPU with zero code changes using RAPIDS cuDF in Google Cloud Colab Enterprise!
 📊 100,000 Monte Carlo sweep mapping global phase transitions.
 🧪 89 passing unit tests | TypeScript monorepo | Cloud Run container ready.
 
@@ -260,8 +266,37 @@ cc @GoogleDevs @NVIDIAAI
 
 - [x] **Typecheck passes**: `npm run typecheck` passes across `shared`, `backend`, and `frontend` with 0 errors.
 - [x] **Lint passes**: `npm run lint` passes cleanly.
-- [x] **Unit tests pass**: 84 tests passing across 10 test suites (`equations`, `bottlenecks`, `sensitivity`, `grounding`, `security`, `urlParams`, `heroDemo`, `accessibility`, `api`, and `contest`).
+- [x] **Unit tests pass**: 89 tests passing across 11 test suites (`equations`, `bottlenecks`, `sensitivity`, `grounding`, `security`, `urlParams`, `heroDemo`, `accessibility`, `api`, `contest`, and `colabNotebook`).
 - [x] **Production build passes**: `npm run build` bundles `shared`, `backend`, and `frontend` into production assets cleanly.
+- [x] **OpenRouter key server-side**: Zero secrets committed or exposed in client bundles.
+- [x] **Open Model Verified**: NVIDIA Nemotron 3 Super 120B (`nvidia/nemotron-3-super-120b-a12b:free`) integrated via backend proxy with FNV-1a deterministic caching.
+- [x] **Hardware Provenance Verified**: NVIDIA Tesla T4 GPU benchmark (1.907s CPU vs 0.221s GPU, 8.62× speedup) truthfully verified and documented with telemetry captures.
+- [x] **Google Cloud & Edge Deployment**: Live on Vercel (`https://z-wbe-bottleneck-lab.vercel.app`), Cloud Run container architecture verified with Dockerfile and port 8080 binding.
+- [x] **Canonical Colab Notebook**: Consolidated into `notebooks/Z_WBE_GPU_LAB.ipynb` with 10 structured sections; automated synchronization utility provided (`scripts/sync-colab.ps1`).
+- [x] **Repository Topics Live**: All 20 official topics active on GitHub repository.
+
+---
+
+## 19. Google Form Official Entry Submission Cheat Sheet
+
+Direct Entry Link: **[https://forms.gle/pVjTK6H8Vx4WtFWs5](https://forms.gle/pVjTK6H8Vx4WtFWs5)**  
+*Deadline: September 10, 2026 at 11:59 PM PST*
+
+| Form Question | Recommended Response |
+| :--- | :--- |
+| **Email\*** | `zhane.umattr@gmail.com` |
+| **First and Last Name\*** | *Your Full Legal Name (matching passport/ID)* |
+| **Are you 18 years of age or older?\*** | `Yes` |
+| **Country of Residence\*** | *Select your country (e.g., United States / Canada / Germany, etc.)* |
+| **LinkedIn Profile URL\*** | `https://www.linkedin.com/in/...` *(Your LinkedIn profile)* |
+| **X Handle (@username)\*** | `@...` *(Your Twitter/X handle)* |
+| **Which learning path have you completed?\*** | `Speed Up Data Analytics on GPUs` *(or Deploy Faster Generative AI Models with NVIDIA NIM on GKE)* |
+| **Link to social media post (LinkedIn or X)\*** | `https://www.linkedin.com/posts/...` *(Paste the direct URL to your published post)* |
+| **What would you like to learn next?\*** | *(See winning copy-paste answer below)* |
+| **Official Rules Agreement\*** | `Yes, I understand and agree with the official rules and terms of participation.` |
+
+### Winning Answer for: "What would you like to learn next?"
+> *"I would love to see deep-dive curriculum on multi-node GPU cluster interconnect optimization (NVLink / NVSwitch fabrics) with Google Kubernetes Engine (GKE) and NVIDIA NeMo Megatron for heterogeneous scientific workloads. Specifically: distributed tensor parallelism, HBM3e memory bandwidth profiling, and deploying hybrid Mamba-Transformer models (like Nemotron) at scale with TensorRT-LLM and vLLM on Google Cloud TPU/GPU accelerators for biophysical simulations and connectomics research."*
 - [x] **OpenRouter key is server-side**: Key is never exposed to client bundles, never prefixed with `VITE_`, never sent to the browser.
 - [x] **No Gemma references remain**: Legacy Gemma files purged, zero active dependencies.
 - [x] **No Gemini API references remain**: Zero Gemini API endpoints or configurations remain.
