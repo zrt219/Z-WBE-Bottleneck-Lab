@@ -8,43 +8,114 @@
 
 ---
 
-## Post 1: Morning Hook (10:15 MDT)
+## Post 1: Morning Hook & Signature Launch (10:00 MDT)
 
 - **Buffer Post ID**: `buffer_x_d01_p1`
-- **Buffer Status**: `DRAFT (Blocked: @ZRT219 Locked in Buffer)`
+- **Buffer Status**: `DRAFT (Buffer Draft 6aa1a52ad158a3222b7a07da)`
 - **Platform**: X (Twitter)
 - **Campaign Day**: Day 01
 - **Content Pillar**: Pillar B: Systems Engineering
-- **Scheduled Time (MDT)**: 10:15 MDT
+- **Scheduled Time (MDT)**: 10:00 MDT
 - **Primary Destination URL**: https://z-wbe-bottleneck-lab.vercel.app
 - **Hook**: What breaks first in whole-brain emulation?
 - **Post Summary**: I built Z-WBE Bottleneck Lab for the @googlecloud x @NVIDIAAI GTC Challenge.
-- **Media**: `social_card_nim_gke.png, social_card_data_analytics.png, social_card_accelerated_ml.png, social_card_intro_inference.png`
+- **Media**: `master-launch-post/02_hero_bottleneck_shift.mp4 (or 4-Card Carousel: social_card_nim_gke.png, social_card_data_analytics.png, social_card_accelerated_ml.png, social_card_intro_inference.png)`
 - **Media Order**: 1. social_card_nim_gke.png -> 2. social_card_data_analytics.png -> 3. social_card_accelerated_ml.png -> 4. social_card_intro_inference.png
 - **Hashtags**: #NVIDIAGTC
 - **Mentions**: @googlecloud | @NVIDIAAI | @GoogleDevs | @asierarranz
-- **Claims Verified**: YES - Upgraded launch draft
+- **Claims Verified**: YES - 100x imaging collapse, memory wall shift, 8.62x GPU, 100k BigQuery scenarios
 - **Manual Review Required**: NO
 
+### Buffer GraphQL Content Draft IDs
+- Root Post Draft: `6aa1a52ad158a3222b7a07da`
+- Reply 1 Draft: `6aa1a52a11252a6cf169e72c`
+- Reply 2 Draft: `6aa1a52bd158a3222b7a07e3`
+- Reply 3 Draft: `6aa1a52b15d60598e551fb09`
+- Reply 4 Draft: `6aa1a52b17610ce63803e5ce`
+- Live Thread Fix Draft: `6aa1a52b64ff2af5dcf93aa1`
+- Full Thread Bundle Draft: `6aa1a52c11252a6cf169e736`
+
 ### Media Attachments
-**Format**: Multi-Image Carousel (4 images)
+**Primary Format**: 30s/60s Signature Video (`master-launch-post/02_hero_bottleneck_shift.mp4`)  
+**Alternative Format**: Multi-Image Carousel (4 images)
 1. `public/images/social_card_nim_gke.png`
 2. `public/images/social_card_data_analytics.png`
 3. `public/images/social_card_accelerated_ml.png`
 4. `public/images/social_card_intro_inference.png`
 
-### Post Copy
+### Post Copy (Root Signature Post)
 
 ```markdown
 What breaks first in whole-brain emulation?
 
 I built Z-WBE Bottleneck Lab for the @googlecloud x @NVIDIAAI GTC Challenge.
 
-Change assumptions. See what fractures.
+Signature experiment: 100x imaging speedup collapses acquisition and exposes the memory wall.
+
+cc @googlecloud @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC
+```
+
+### Complete Corrected X Thread
+
+#### Reply 1 (Deterministic vs AI Interpretation)
+```markdown
+> Z-WBE separates deterministic calculations from AI interpretation.
+
+12 scaling equations calculate the scenario values. NVIDIA Nemotron 3 Super explains the resulting trade-offs without changing those values.
+
+GitHub: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
+
+@asierarranz @NVIDIAAI
+```
+
+#### Reply 2 (NVIDIA Tesla T4 Colab Evidence)
+```markdown
+> I also tested the research workflow on an NVIDIA Tesla T4 in Google Colab.
+
+CPU: 1.907 s
+GPU: 0.221 s
+Speedup: 8.62×
+
+RAPIDS cudf.pandas accelerated supported operations.
+
+Colab: https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
+
+@NVIDIAAI @googlecloud
+```
+
+#### Reply 3 (100,000 BigQuery Sandbox Scenarios)
+```markdown
+> For the larger parameter study, I generated 100,000 deterministic Z-WBE scenarios and stored them in Google BigQuery Sandbox.
+
+GoogleSQL analyzes which engineering constraint becomes dominant under different assumptions.
 
 Live: https://z-wbe-bottleneck-lab.vercel.app
 
-cc @googlecloud @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC
+@googlecloud @GoogleDevs
+```
+
+#### Reply 4 (Systems Engineering Conclusion)
+```markdown
+> The main idea is simple:
+
+Whole-Brain Emulation is not one engineering problem.
+
+Solve one bottleneck, and another can become the limiting factor.
+
+That is what Z-WBE is built to explore.
+
+@asierarranz @googlecloud
+#NVIDIAGTC
+```
+
+#### Live Thread Fix Reply (If Thread is Already Live on X)
+```markdown
+> Built for the Google Cloud × NVIDIA GTC Berlin Golden Ticket Challenge.
+
+Thanks @asierarranz for pushing builders to show something real working.
+
+@googlecloud @GoogleDevs @NVIDIAAI
+#NVIDIAGTC
 ```
 
 ---

@@ -98,9 +98,13 @@ def write_day_file(file_path, platform_name, day_num, date_str, theme, posts):
         f.write("---\n\n")
 
         for idx, post in enumerate(posts, 1):
-            media_str, order_str = format_media_info(post['media'])
+            if post.get('thread_replies'):
+                media_str = "master-launch-post/02_hero_bottleneck_shift.mp4 (or 4-Card Carousel: social_card_nim_gke.png, social_card_data_analytics.png, social_card_accelerated_ml.png, social_card_intro_inference.png)"
+                order_str = "1. social_card_nim_gke.png -> 2. social_card_data_analytics.png -> 3. social_card_accelerated_ml.png -> 4. social_card_intro_inference.png"
+            else:
+                media_str, order_str = format_media_info(post['media'])
             f.write(f"## Post {idx}: {post['slot']} ({post['time']})\n\n")
-            f.write(f"- **Buffer Post ID**: `{post['id']}`\n")
+            f.write(f"- **Buffer Post ID**: `{post.get('orig_id', post['id'])}`\n")
             f.write(f"- **Buffer Status**: `{post['status']}`\n")
             f.write(f"- **Platform**: {platform_name}\n")
             f.write(f"- **Campaign Day**: Day {day_num:02d}\n")
@@ -115,6 +119,36 @@ def write_day_file(file_path, platform_name, day_num, date_str, theme, posts):
             f.write(f"- **Mentions**: {post['mentions']}\n")
             f.write(f"- **Claims Verified**: {post['claims_verified']}\n")
             f.write(f"- **Manual Review Required**: {post['manual_review']}\n\n")
+
+            if post.get('thread_replies'):
+                f.write("### Buffer GraphQL Content Draft IDs\n")
+                b_ids = post.get('buffer_draft_ids', {})
+                f.write(f"- Root Post Draft: `{b_ids.get('root', '6aa1a52ad158a3222b7a07da')}`\n")
+                f.write(f"- Reply 1 Draft: `{b_ids.get('reply1', '6aa1a52a11252a6cf169e72c')}`\n")
+                f.write(f"- Reply 2 Draft: `{b_ids.get('reply2', '6aa1a52bd158a3222b7a07e3')}`\n")
+                f.write(f"- Reply 3 Draft: `{b_ids.get('reply3', '6aa1a52b15d60598e551fb09')}`\n")
+                f.write(f"- Reply 4 Draft: `{b_ids.get('reply4', '6aa1a52b17610ce63803e5ce')}`\n")
+                f.write(f"- Live Thread Fix Draft: `{b_ids.get('live_fix', '6aa1a52b64ff2af5dcf93aa1')}`\n")
+                f.write(f"- Full Thread Bundle Draft: `{b_ids.get('full_thread_bundle', '6aa1a52c11252a6cf169e736')}`\n\n")
+
+                f.write("### Media Attachments\n")
+                f.write("**Primary Format**: 30s/60s Signature Video (`master-launch-post/02_hero_bottleneck_shift.mp4`)  \n")
+                f.write("**Alternative Format**: Multi-Image Carousel (4 images)\n")
+                f.write("1. `public/images/social_card_nim_gke.png`\n")
+                f.write("2. `public/images/social_card_data_analytics.png`\n")
+                f.write("3. `public/images/social_card_accelerated_ml.png`\n")
+                f.write("4. `public/images/social_card_intro_inference.png`\n\n")
+
+                f.write(f"### Post Copy (Root Signature Post)\n\n```markdown\n{post['text']}\n```\n\n")
+                f.write("### Complete Corrected X Thread\n\n")
+                for rep in post['thread_replies']:
+                    if rep["num"] == "fix":
+                        f.write("#### Live Thread Fix Reply (If Thread is Already Live on X)\n")
+                    else:
+                        f.write(f"#### Reply {rep['num']} ({rep['title']})\n")
+                    f.write(f"```markdown\n{rep['text']}\n```\n\n")
+                f.write("---\n\n")
+                continue
 
             f.write("### Media Attachments\n")
             if isinstance(post['media'], list):
@@ -195,7 +229,13 @@ def main():
 
         for p in day['x']:
             orig_id = p['id']
-            p['status'] = "DRAFT (Blocked: @ZRT219 Locked in Buffer)"
+            p['orig_id'] = orig_id
+            if orig_id in deployed_state:
+                p['status'] = f"DRAFT (Buffer Draft {deployed_state[orig_id]['buffer_id']})"
+                if 'thread_drafts' in deployed_state[orig_id]:
+                    p['buffer_draft_ids'] = deployed_state[orig_id]['thread_drafts']
+            else:
+                p['status'] = "DRAFT (Blocked: @ZRT219 Locked in Buffer)"
             p['hook'] = extract_hook(p['text'])
             p['summary'] = extract_summary(p['text'], p['pillar'], p['slot'])
             p['hashtags'] = extract_hashtags(p['text'])

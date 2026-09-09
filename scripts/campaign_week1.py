@@ -237,28 +237,91 @@ Mentions & Judges: @Google Cloud | @Google for Developers | @NVIDIA AI | @Asier 
     d1_x = [
         {
             "id": "buffer_x_d01_p1",
-            "slot": "Morning Hook",
-            "time": "10:15 MDT",
+            "slot": "Morning Hook & Signature Launch",
+            "time": "10:00 MDT",
             "status": "SCHEDULED",
             "pillar": "Pillar B: Systems Engineering",
             "url": "https://z-wbe-bottleneck-lab.vercel.app",
-            "claims_verified": "YES - Upgraded launch draft",
+            "claims_verified": "YES - 100x imaging collapse, memory wall shift, 8.62x GPU, 100k BigQuery scenarios",
             "manual_review": "NO",
             "media": [
-                "public/images/social_card_nim_gke.png",
-                "public/images/social_card_data_analytics.png",
-                "public/images/social_card_accelerated_ml.png",
-                "public/images/social_card_intro_inference.png"
+                "master-launch-post/02_hero_bottleneck_shift.mp4"
             ],
             "text": """What breaks first in whole-brain emulation?
 
 I built Z-WBE Bottleneck Lab for the @googlecloud x @NVIDIAAI GTC Challenge.
 
-Change assumptions. See what fractures.
+Signature experiment: 100x imaging speedup collapses acquisition and exposes the memory wall.
+
+cc @googlecloud @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC""",
+            "thread_replies": [
+                {
+                    "num": 1,
+                    "title": "Deterministic vs AI Interpretation",
+                    "draft_id": "6aa1a52a11252a6cf169e72c",
+                    "text": """> Z-WBE separates deterministic calculations from AI interpretation.
+
+12 scaling equations calculate the scenario values. NVIDIA Nemotron 3 Super explains the resulting trade-offs without changing those values.
+
+GitHub: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
+
+@asierarranz @NVIDIAAI"""
+                },
+                {
+                    "num": 2,
+                    "title": "NVIDIA Tesla T4 Colab Evidence",
+                    "draft_id": "6aa1a52bd158a3222b7a07e3",
+                    "text": """> I also tested the research workflow on an NVIDIA Tesla T4 in Google Colab.
+
+CPU: 1.907 s
+GPU: 0.221 s
+Speedup: 8.62×
+
+RAPIDS cudf.pandas accelerated supported operations.
+
+Colab: https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
+
+@NVIDIAAI @googlecloud"""
+                },
+                {
+                    "num": 3,
+                    "title": "100,000 BigQuery Sandbox Scenarios",
+                    "draft_id": "6aa1a52b15d60598e551fb09",
+                    "text": """> For the larger parameter study, I generated 100,000 deterministic Z-WBE scenarios and stored them in Google BigQuery Sandbox.
+
+GoogleSQL analyzes which engineering constraint becomes dominant under different assumptions.
 
 Live: https://z-wbe-bottleneck-lab.vercel.app
 
-cc @googlecloud @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC"""
+@googlecloud @GoogleDevs"""
+                },
+                {
+                    "num": 4,
+                    "title": "Systems Engineering Conclusion",
+                    "draft_id": "6aa1a52b17610ce63803e5ce",
+                    "text": """> The main idea is simple:
+
+Whole-Brain Emulation is not one engineering problem.
+
+Solve one bottleneck, and another can become the limiting factor.
+
+That is what Z-WBE is built to explore.
+
+@asierarranz @googlecloud
+#NVIDIAGTC"""
+                },
+                {
+                    "num": "fix",
+                    "title": "Live Thread Fix Reply (If Thread is Already Live on X)",
+                    "draft_id": "6aa1a52b64ff2af5dcf93aa1",
+                    "text": """> Built for the Google Cloud × NVIDIA GTC Berlin Golden Ticket Challenge.
+
+Thanks @asierarranz for pushing builders to show something real working.
+
+@googlecloud @GoogleDevs @NVIDIAAI
+#NVIDIAGTC"""
+                }
+            ]
         },
         {
             "id": "buffer_x_d01_p2",

@@ -60,9 +60,8 @@ TIGHTENED_862_WORDING = (
 X_FLAGSHIP_POST_TEXTS = {
     "buffer_x_d01_p1": (
         "What breaks first in whole-brain emulation?\n\n"
-        "I built Z-WBE Bottleneck Lab for the @googlecloud x @NVIDIAAI GTC Golden Ticket Challenge.\n\n"
-        "Change assumptions. See what fractures.\n\n"
-        "Live app: https://z-wbe-bottleneck-lab.vercel.app\n\n"
+        "I built Z-WBE Bottleneck Lab for the @googlecloud x @NVIDIAAI GTC Challenge.\n\n"
+        "Signature experiment: 100x imaging speedup collapses acquisition and exposes the memory wall.\n\n"
         "cc @googlecloud @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC"
     ),
     "buffer_x_d01_p6": (

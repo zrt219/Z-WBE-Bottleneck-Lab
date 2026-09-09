@@ -13,3 +13,8 @@ See [`MASTER_POST.md`](./MASTER_POST.md) for the complete ready-to-copy launch c
 3. `02b_hero_bottleneck_shift_static.png` - Static high-res UI transition screenshot
 4. `03_tesla_t4_gpu_speedup.png` - 8.62× measured T4 speedup on the Google/NVIDIA tabular ML benchmark (1.907 s CPU vs 0.221 s GPU with cudf.pandas). Separately, Z-WBE includes a deterministic 100,000-scenario parameter sweep stored and analyzed in Google BigQuery Sandbox.
 5. `golden-ticket-cards/` - The 4 official Golden Ticket social cards
+
+### Corrected X Thread & Buffer GraphQL Deployment:
+- Full 5-part corrected thread (Root + Replies 1-4 + Live Fix Reply) documented in [`MASTER_POST.md`](./MASTER_POST.md) and [`POST_CAPTIONS.txt`](./POST_CAPTIONS.txt).
+- Buffer Organization Drafts verified: Root (`6aa1a52ad158a3222b7a07da`), Reply 1 (`6aa1a52a11252a6cf169e72c`), Reply 2 (`6aa1a52bd158a3222b7a07e3`), Reply 3 (`6aa1a52b15d60598e551fb09`), Reply 4 (`6aa1a52b17610ce63803e5ce`), Live Fix (`6aa1a52b64ff2af5dcf93aa1`), Bundle (`6aa1a52c11252a6cf169e736`).
+

@@ -107,10 +107,13 @@ cc @googlecloud @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC
 
 ---
 
-### Option 2: Full 3-Part Flagship Thread (Maximum Exposure)
+### Option 2: Corrected 10:00 AM Signature Post & 4-Part Thread (Contest Entry Flow)
 
-#### **Tweet 1 (The Hook & Visual Shift)**
-*Attach: `02_hero_bottleneck_shift.gif`*
+> **Official NVIDIA Contest Flow**: Requires short working demo + judge tag + `#NVIDIAGTC`.
+> Verified judge handle: **Asier Arranz** (`@asierarranz`).
+
+#### **Tweet 1: Root Signature Post (Attach 30s/60s Video)**
+*Attach: `02_hero_bottleneck_shift.mp4` / `02_hero_bottleneck_shift.gif`*
 ```text
 What breaks first in whole-brain emulation?
 
@@ -118,30 +121,88 @@ I built Z-WBE Bottleneck Lab for the @googlecloud x @NVIDIAAI GTC Challenge.
 
 Signature experiment: 100x imaging speedup collapses acquisition and exposes the memory wall.
 
-1/3 cc @googlecloud @GoogleDevs @NVIDIAAI #NVIDIAGTC
+cc @googlecloud @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC
 ```
 
-#### **Tweet 2 (The Architecture & 8.62x GPU Benchmark)**
-*Attach: `03_tesla_t4_gpu_speedup.png`*
+#### **Tweet 2: Reply 1 (Epistemic Separation & Equations)**
 ```text
-Epistemic separation: deterministic physics + Nemotron 3 Super causal reasoning.
+> Z-WBE separates deterministic calculations from AI interpretation.
 
-8.62× T4 speedup on tabular ML benchmark via RAPIDS cudf.pandas. 100k scenarios analyzed in BigQuery Sandbox.
+12 scaling equations calculate the scenario values. NVIDIA Nemotron 3 Super explains the resulting trade-offs without changing those values.
 
-2/3 cc @googlecloud @GoogleDevs @NVIDIAAI #NVIDIAGTC
+GitHub: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
+
+@asierarranz @NVIDIAAI
 ```
 
-#### **Tweet 3 (Reproducibility & Links)**
-*Attach: `01_google_nvidia_golden_ticket_badges.png`*
+#### **Tweet 3: Reply 2 (NVIDIA Tesla T4 Colab Benchmark)**
 ```text
-Open-source, fully tested (89 tests), reproducible:
+> I also tested the research workflow on an NVIDIA Tesla T4 in Google Colab.
+
+CPU: 1.907 s
+GPU: 0.221 s
+Speedup: 8.62×
+
+RAPIDS cudf.pandas accelerated supported operations.
+
+Colab: https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
+
+@NVIDIAAI @googlecloud
+```
+
+#### **Tweet 4: Reply 3 (100k BigQuery Sandbox Scenarios)**
+```text
+> For the larger parameter study, I generated 100,000 deterministic Z-WBE scenarios and stored them in Google BigQuery Sandbox.
+
+GoogleSQL analyzes which engineering constraint becomes dominant under different assumptions.
 
 Live: https://z-wbe-bottleneck-lab.vercel.app
-Colab: https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
-Code: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
-3/3 cc @googlecloud @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC
+@googlecloud @GoogleDevs
 ```
+
+#### **Tweet 5: Reply 4 (Systems Engineering Thesis)**
+```text
+> The main idea is simple:
+
+Whole-Brain Emulation is not one engineering problem.
+
+Solve one bottleneck, and another can become the limiting factor.
+
+That is what Z-WBE is built to explore.
+
+@asierarranz @googlecloud
+#NVIDIAGTC
+```
+
+---
+
+### Option 3: Live Thread Fix (If Thread is Already Live on X)
+
+If the thread is already live on X without the judge tag, do not delete it. Add this final reply to attach the required judge tag and official contest entry flow:
+
+```text
+> Built for the Google Cloud × NVIDIA GTC Berlin Golden Ticket Challenge.
+
+Thanks @asierarranz for pushing builders to show something real working.
+
+@googlecloud @GoogleDevs @NVIDIAAI
+#NVIDIAGTC
+```
+
+---
+
+### 📦 Buffer Draft Deployment Verification
+Deployed via Buffer GraphQL API (`https://api.buffer.com`):
+- **Root Post Draft**: Buffer ID `6aa1a52ad158a3222b7a07da`
+- **Reply 1 Draft**: Buffer ID `6aa1a52a11252a6cf169e72c`
+- **Reply 2 Draft**: Buffer ID `6aa1a52bd158a3222b7a07e3`
+- **Reply 3 Draft**: Buffer ID `6aa1a52b15d60598e551fb09`
+- **Reply 4 Draft**: Buffer ID `6aa1a52b17610ce63803e5ce`
+- **Live Thread Fix Draft**: Buffer ID `6aa1a52b64ff2af5dcf93aa1`
+- **Full Thread Bundle**: Buffer ID `6aa1a52c11252a6cf169e736`
+*(Note: X channel `69faecd95c4c051afa1628b6` is locked in Buffer; all drafts are stored at the organization level ready for immediate copy/publishing or scheduling once unlocked.)*
+
 
 ---
 

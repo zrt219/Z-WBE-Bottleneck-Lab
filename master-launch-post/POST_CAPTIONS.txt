@@ -53,28 +53,89 @@ Try live: https://z-wbe-bottleneck-lab.vercel.app
 cc @googlecloud @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC
 
 
---- OPTION B: 3-TWEET THREAD ---
-[TWEET 1/3]
+--- OPTION B: CORRECTED 10:00 AM SIGNATURE POST & 4-PART THREAD ---
+(Official contest flow: short working demo + judge tag @asierarranz + #NVIDIAGTC)
+
+[ROOT POST - ATTACH 30s/60s SIGNATURE VIDEO: 02_hero_bottleneck_shift.mp4]
 What breaks first in whole-brain emulation?
 
 I built Z-WBE Bottleneck Lab for the @googlecloud x @NVIDIAAI GTC Challenge.
 
 Signature experiment: 100x imaging speedup collapses acquisition and exposes the memory wall.
 
-1/3 cc @googlecloud @GoogleDevs @NVIDIAAI #NVIDIAGTC
+cc @googlecloud @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC
 
-[TWEET 2/3]
-Epistemic separation: deterministic physics + Nemotron 3 Super causal reasoning.
 
-8.62× T4 speedup on tabular ML benchmark via RAPIDS cudf.pandas. 100k scenarios analyzed in BigQuery Sandbox.
+[REPLY 1]
+> Z-WBE separates deterministic calculations from AI interpretation.
 
-2/3 cc @googlecloud @GoogleDevs @NVIDIAAI #NVIDIAGTC
+12 scaling equations calculate the scenario values. NVIDIA Nemotron 3 Super explains the resulting trade-offs without changing those values.
 
-[TWEET 3/3]
-Open-source, fully tested (89 tests), reproducible:
+GitHub: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
+
+@asierarranz @NVIDIAAI
+
+
+[REPLY 2]
+> I also tested the research workflow on an NVIDIA Tesla T4 in Google Colab.
+
+CPU: 1.907 s
+GPU: 0.221 s
+Speedup: 8.62×
+
+RAPIDS cudf.pandas accelerated supported operations.
+
+Colab: https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
+
+@NVIDIAAI @googlecloud
+
+
+[REPLY 3]
+> For the larger parameter study, I generated 100,000 deterministic Z-WBE scenarios and stored them in Google BigQuery Sandbox.
+
+GoogleSQL analyzes which engineering constraint becomes dominant under different assumptions.
 
 Live: https://z-wbe-bottleneck-lab.vercel.app
-Colab: https://colab.research.google.com/github/zrt219/Z-WBE-Bottleneck-Lab/blob/main/notebooks/Z_WBE_GPU_LAB.ipynb
-Code: https://github.com/zrt219/Z-WBE-Bottleneck-Lab
 
-3/3 cc @googlecloud @GoogleDevs @NVIDIAAI @asierarranz #NVIDIAGTC
+@googlecloud @GoogleDevs
+
+
+[REPLY 4]
+> The main idea is simple:
+
+Whole-Brain Emulation is not one engineering problem.
+
+Solve one bottleneck, and another can become the limiting factor.
+
+That is what Z-WBE is built to explore.
+
+@asierarranz @googlecloud
+#NVIDIAGTC
+
+
+--- OPTION C: LIVE THREAD FIX (IF THREAD IS ALREADY LIVE WITHOUT JUDGE TAG) ---
+If the thread is already live on X, do not delete it. Add one final reply now:
+
+> Built for the Google Cloud × NVIDIA GTC Berlin Golden Ticket Challenge.
+
+Thanks @asierarranz for pushing builders to show something real working.
+
+@googlecloud @GoogleDevs @NVIDIAAI
+#NVIDIAGTC
+
+
+================================================================================
+BUFFER GRAPHQL DEPLOYMENT STATUS
+================================================================================
+Organization ID: 69b906e3a76f6a37fede985b
+Channel: X (Twitter) @ZRT_219 (Channel ID: 69faecd95c4c051afa1628b6)
+Channel Status: isLocked=true (Requires OAuth re-authentication in Buffer UI)
+Buffer Content Item Drafts Deployed:
+- Root Post Draft:       Buffer ID `6aa1a52ad158a3222b7a07da`
+- Reply 1 Draft:         Buffer ID `6aa1a52a11252a6cf169e72c`
+- Reply 2 Draft:         Buffer ID `6aa1a52bd158a3222b7a07e3`
+- Reply 3 Draft:         Buffer ID `6aa1a52b15d60598e551fb09`
+- Reply 4 Draft:         Buffer ID `6aa1a52b17610ce63803e5ce`
+- Live Thread Fix Draft: Buffer ID `6aa1a52b64ff2af5dcf93aa1`
+- Full Thread Bundle:    Buffer ID `6aa1a52c11252a6cf169e736`
+
