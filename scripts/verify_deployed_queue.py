@@ -58,7 +58,7 @@ def verify_queue():
     # Fetch drafts from Buffer
     query = """
     query GetDrafts($orgId: OrganizationId!, $channelId: ChannelId!, $after: String) {
-      posts(input: { organizationId: $orgId, filter: { channelIds: [$channelId], status: [draft] } }, first: 100, after: $after) {
+      posts(input: { organizationId: $orgId, filter: { channelIds: [$channelId], status: [draft, scheduled] } }, first: 100, after: $after) {
         pageInfo {
           hasNextPage
           endCursor

@@ -382,5 +382,347 @@
     "channelId": "6a4e1a1c404834462881bed6",
     "platform": "LinkedIn",
     "created_at": "2026-09-08T06:44:20.819707+00:00"
+  },
+  "sketch_li_d01": {
+    "buffer_id": "6aa13f7f78008e080a247a1a",
+    "status": "scheduled",
+    "dueAt": "2026-09-09T23:30:00.000Z",
+    "channelId": "6a4e1a1c404834462881bed6",
+    "platform": "LinkedIn",
+    "topic": "The Nano-Banana Guide to Z-WBE Architecture",
+    "created_at": "2026-09-09T11:13:43.697616+00:00"
+  },
+  "sketch_li_d02": {
+    "buffer_id": "6aa13f8270cd3dc10db0319f",
+    "status": "scheduled",
+    "dueAt": "2026-09-10T23:30:00.000Z",
+    "channelId": "6a4e1a1c404834462881bed6",
+    "platform": "LinkedIn",
+    "topic": "Two Engines, One Intelligence: The Decoupled Systems Blueprint",
+    "created_at": "2026-09-09T11:13:46.534991+00:00"
+  },
+  "sketch_li_d03": {
+    "buffer_id": "6aa13f85f78ff5069b037e2d",
+    "status": "scheduled",
+    "dueAt": "2026-09-11T23:30:00.000Z",
+    "channelId": "6a4e1a1c404834462881bed6",
+    "platform": "LinkedIn",
+    "topic": "From Browser to Bottlenecks: The Full Cloud-Native Pipeline",
+    "created_at": "2026-09-09T11:13:49.533610+00:00"
+  },
+  "sketch_li_d04": {
+    "buffer_id": "6aa13fa9021e7193123727fe",
+    "status": "scheduled",
+    "dueAt": "2026-09-12T23:30:00.000Z",
+    "channelId": "6a4e1a1c404834462881bed6",
+    "platform": "LinkedIn",
+    "topic": "Math-Driven vs. AI-Reasoned: Navigating the Epistemic Boundary",
+    "created_at": "2026-09-09T11:14:25.467637+00:00"
+  },
+  "sketch_li_d05": {
+    "buffer_id": "6aa13fac021e719312372871",
+    "status": "scheduled",
+    "dueAt": "2026-09-13T23:30:00.000Z",
+    "channelId": "6a4e1a1c404834462881bed6",
+    "platform": "LinkedIn",
+    "topic": "Scaling from 180mm to 20nm: Multi-Scale Systems Thinking",
+    "created_at": "2026-09-09T11:14:28.636678+00:00"
+  },
+  "sketch_li_d06": {
+    "buffer_id": "6aa13faf70cd3dc10db03685",
+    "status": "scheduled",
+    "dueAt": "2026-09-14T23:30:00.000Z",
+    "channelId": "6a4e1a1c404834462881bed6",
+    "platform": "LinkedIn",
+    "topic": "Frontier AI Integration: 120B Parameter Open Hybrid MoE",
+    "created_at": "2026-09-09T11:14:31.576497+00:00"
+  },
+  "sketch_li_d07": {
+    "buffer_id": "6aa13fb270cd3dc10db03704",
+    "status": "scheduled",
+    "dueAt": "2026-09-15T23:30:00.000Z",
+    "channelId": "6a4e1a1c404834462881bed6",
+    "platform": "LinkedIn",
+    "topic": "8.62x Tabular Acceleration: Real Hardware Benchmarking",
+    "created_at": "2026-09-09T11:14:34.269181+00:00"
+  },
+  "sketch_li_d08": {
+    "buffer_id": "6aa13fb4bbdeadf036f759e0",
+    "status": "scheduled",
+    "dueAt": "2026-09-16T23:30:00.000Z",
+    "channelId": "6a4e1a1c404834462881bed6",
+    "platform": "LinkedIn",
+    "topic": "Planetary Analytics with Google BigQuery Sandbox",
+    "created_at": "2026-09-09T11:14:37.044022+00:00"
+  },
+  "sketch_li_d09": {
+    "buffer_id": "6aa13fb878008e080a247e8d",
+    "status": "scheduled",
+    "dueAt": "2026-09-17T23:30:00.000Z",
+    "channelId": "6a4e1a1c404834462881bed6",
+    "platform": "LinkedIn",
+    "topic": "Cloud Run-Ready Container Parity: Build Once, Run Anywhere",
+    "created_at": "2026-09-09T11:14:41.355722+00:00"
+  },
+  "sketch_li_d10": {
+    "buffer_id": "6aa13fbc78008e080a24800b",
+    "status": "scheduled",
+    "dueAt": "2026-09-18T23:30:00.000Z",
+    "channelId": "6a4e1a1c404834462881bed6",
+    "platform": "LinkedIn",
+    "topic": "The Core Lesson: Complex Systems Cannot Be Brute-Forced",
+    "created_at": "2026-09-09T11:14:44.422743+00:00"
+  },
+  "sketch_li_d11": {
+    "buffer_id": "6aa13fbf021e719312372e46",
+    "status": "scheduled",
+    "dueAt": "2026-09-19T23:30:00.000Z",
+    "channelId": "6a4e1a1c404834462881bed6",
+    "platform": "LinkedIn",
+    "topic": "The Systems Architecture Trilogy (Recap Part 1)",
+    "created_at": "2026-09-09T11:14:47.542396+00:00"
+  },
+  "sketch_li_d12": {
+    "buffer_id": "6aa13fc278008e080a24827a",
+    "status": "scheduled",
+    "dueAt": "2026-09-20T23:30:00.000Z",
+    "channelId": "6a4e1a1c404834462881bed6",
+    "platform": "LinkedIn",
+    "topic": "Compute, GPU & High-Throughput Analytics (Recap Part 2)",
+    "created_at": "2026-09-09T11:14:50.890349+00:00"
+  },
+  "sketch_li_d13": {
+    "buffer_id": "6aa13fc5021e719312372edd",
+    "status": "scheduled",
+    "dueAt": "2026-09-21T23:30:00.000Z",
+    "channelId": "6a4e1a1c404834462881bed6",
+    "platform": "LinkedIn",
+    "topic": "Hardware Provenance & Cloud Parity (Recap Part 3)",
+    "created_at": "2026-09-09T11:14:53.526555+00:00"
+  },
+  "sketch_li_d14": {
+    "buffer_id": "6aa13fc7f78ff5069b038926",
+    "status": "scheduled",
+    "dueAt": "2026-09-22T23:30:00.000Z",
+    "channelId": "6a4e1a1c404834462881bed6",
+    "platform": "LinkedIn",
+    "topic": "The Complete 10-Sketch Visual Masterclass (Grand Finale)",
+    "created_at": "2026-09-09T11:14:56.103255+00:00"
+  },
+  "sprint_li_d01_p1": {
+    "buffer_id": "6aa13fd378008e080a2489c5",
+    "status": "scheduled",
+    "dueAt": "2026-09-09T13:45:00.000Z",
+    "channelId": "6a4e1a1c404834462881bed6",
+    "platform": "LinkedIn",
+    "topic": "Flagship Launch: What Breaks First in Whole-Brain Emulation?",
+    "created_at": "2026-09-09T11:15:08.106402+00:00"
+  },
+  "sprint_li_d01_p2": {
+    "buffer_id": "6aa13fd778008e080a248b6c",
+    "status": "scheduled",
+    "dueAt": "2026-09-09T17:30:00.000Z",
+    "channelId": "6a4e1a1c404834462881bed6",
+    "platform": "LinkedIn",
+    "topic": "4 Learning Pathways -> 1 Working Systems Architecture",
+    "created_at": "2026-09-09T11:15:11.688649+00:00"
+  },
+  "sprint_li_d01_p3": {
+    "buffer_id": "6aa13fda021e719312373399",
+    "status": "scheduled",
+    "dueAt": "2026-09-09T21:30:00.000Z",
+    "channelId": "6a4e1a1c404834462881bed6",
+    "platform": "LinkedIn",
+    "topic": "The End-to-End WBE Pipeline: 6 Stages Across 8 Constraints",
+    "created_at": "2026-09-09T11:15:14.564432+00:00"
+  },
+  "sprint_li_d01_p4": {
+    "buffer_id": "6aa13fddbbdeadf036f761a2",
+    "status": "scheduled",
+    "dueAt": "2026-09-10T01:30:00.000Z",
+    "channelId": "6a4e1a1c404834462881bed6",
+    "platform": "LinkedIn",
+    "topic": "Epistemic Separation: Deterministic Mathematics vs. Generative AI Reasoning",
+    "created_at": "2026-09-09T11:15:17.247119+00:00"
+  },
+  "sprint_li_d02_p1": {
+    "buffer_id": "6aa13fdf021e7193123735b7",
+    "status": "scheduled",
+    "dueAt": "2026-09-10T13:40:00.000Z",
+    "channelId": "6a4e1a1c404834462881bed6",
+    "platform": "LinkedIn",
+    "topic": "Contest Deadline Day: The Bottleneck Moved",
+    "created_at": "2026-09-09T11:15:20.033727+00:00"
+  },
+  "sprint_li_d02_p2": {
+    "buffer_id": "6aa13fe270cd3dc10db04224",
+    "status": "scheduled",
+    "dueAt": "2026-09-10T17:25:00.000Z",
+    "channelId": "6a4e1a1c404834462881bed6",
+    "platform": "LinkedIn",
+    "topic": "The Nano-Banana Framework: From 180mm to 20nm Synaptic Voxels",
+    "created_at": "2026-09-09T11:15:22.717713+00:00"
+  },
+  "sprint_li_d02_p3": {
+    "buffer_id": "6aa13fe5bbdeadf036f76276",
+    "status": "scheduled",
+    "dueAt": "2026-09-10T21:45:00.000Z",
+    "channelId": "6a4e1a1c404834462881bed6",
+    "platform": "LinkedIn",
+    "topic": "Interactive Amdahl's Law Sandbox: Diminishing Returns in Biological Systems",
+    "created_at": "2026-09-09T11:15:25.740584+00:00"
+  },
+  "sprint_li_d02_p4": {
+    "buffer_id": "6aa13fe8bbdeadf036f762bc",
+    "status": "scheduled",
+    "dueAt": "2026-09-11T01:40:00.000Z",
+    "channelId": "6a4e1a1c404834462881bed6",
+    "platform": "LinkedIn",
+    "topic": "Final Contest Submission: 8.62x GPU Benchmark, 100k BigQuery Scenarios, 89 Tests",
+    "created_at": "2026-09-09T11:15:28.439354+00:00"
+  },
+  "sprint_li_d03_p1": {
+    "buffer_id": "6aa13febf78ff5069b038faf",
+    "status": "scheduled",
+    "dueAt": "2026-09-11T14:30:00.000Z",
+    "channelId": "6a4e1a1c404834462881bed6",
+    "platform": "LinkedIn",
+    "topic": "Raw Engineering Proof: Zero Mock Data, Sub-Millisecond Execution",
+    "created_at": "2026-09-09T11:15:31.564555+00:00"
+  },
+  "sprint_li_d03_p2": {
+    "buffer_id": "6aa1400f021e719312373bb4",
+    "status": "scheduled",
+    "dueAt": "2026-09-11T19:00:00.000Z",
+    "channelId": "6a4e1a1c404834462881bed6",
+    "platform": "LinkedIn",
+    "topic": "What Does 8.62x on an NVIDIA Tesla T4 Really Mean?",
+    "created_at": "2026-09-09T11:16:07.326232+00:00"
+  },
+  "sprint_li_d03_p3": {
+    "buffer_id": "6aa14011bbdeadf036f76689",
+    "status": "scheduled",
+    "dueAt": "2026-09-12T00:00:00.000Z",
+    "channelId": "6a4e1a1c404834462881bed6",
+    "platform": "LinkedIn",
+    "topic": "High-Performance Scenario Controls: 25+ Biophysical Parameters in Real Time",
+    "created_at": "2026-09-09T11:16:10.191857+00:00"
+  },
+  "sprint_li_d04_p1": {
+    "buffer_id": "6aa14014bbdeadf036f76705",
+    "status": "scheduled",
+    "dueAt": "2026-09-12T15:30:00.000Z",
+    "channelId": "6a4e1a1c404834462881bed6",
+    "platform": "LinkedIn",
+    "topic": "Weekend Deep Dive: Connectome Reconstruction vs. Functional Brain Emulation",
+    "created_at": "2026-09-09T11:16:12.935561+00:00"
+  },
+  "sprint_li_d04_p2": {
+    "buffer_id": "6aa14017021e719312373d8e",
+    "status": "scheduled",
+    "dueAt": "2026-09-12T20:00:00.000Z",
+    "channelId": "6a4e1a1c404834462881bed6",
+    "platform": "LinkedIn",
+    "topic": "Accelerated Machine Learning with cuML: Breaking the Memory Bottleneck",
+    "created_at": "2026-09-09T11:16:15.741342+00:00"
+  },
+  "sprint_li_d04_p3": {
+    "buffer_id": "6aa1401a4b5578624f123e20",
+    "status": "scheduled",
+    "dueAt": "2026-09-13T01:00:00.000Z",
+    "channelId": "6a4e1a1c404834462881bed6",
+    "platform": "LinkedIn",
+    "topic": "Interactive Heatmap: Mapping Constraints Across 100,000 Scenarios",
+    "created_at": "2026-09-09T11:16:18.537733+00:00"
+  },
+  "sprint_li_d05_p1": {
+    "buffer_id": "6aa1401cbbdeadf036f76808",
+    "status": "scheduled",
+    "dueAt": "2026-09-13T16:00:00.000Z",
+    "channelId": "6a4e1a1c404834462881bed6",
+    "platform": "LinkedIn",
+    "topic": "Systems Architecture Sunday: Building a Decoupled AI Research Demonstrator",
+    "created_at": "2026-09-09T11:16:21.170956+00:00"
+  },
+  "sprint_li_d05_p2": {
+    "buffer_id": "6aa1401fbbdeadf036f7687e",
+    "status": "scheduled",
+    "dueAt": "2026-09-13T20:30:00.000Z",
+    "channelId": "6a4e1a1c404834462881bed6",
+    "platform": "LinkedIn",
+    "topic": "Why Whole-Brain Emulation is an Interconnect and Memory Problem",
+    "created_at": "2026-09-09T11:16:23.956705+00:00"
+  },
+  "sprint_li_d05_p3": {
+    "buffer_id": "6aa1402270cd3dc10db04b23",
+    "status": "scheduled",
+    "dueAt": "2026-09-14T01:30:00.000Z",
+    "channelId": "6a4e1a1c404834462881bed6",
+    "platform": "LinkedIn",
+    "topic": "Built-In Onboarding: ELI5 Mode vs. Expert Mode",
+    "created_at": "2026-09-09T11:16:26.678011+00:00"
+  },
+  "sprint_li_d06_p1": {
+    "buffer_id": "6aa14025021e719312373f27",
+    "status": "scheduled",
+    "dueAt": "2026-09-14T13:45:00.000Z",
+    "channelId": "6a4e1a1c404834462881bed6",
+    "platform": "LinkedIn",
+    "topic": "Monday Workweek Kickoff: 4 Interactive Systems Engineering Tutorials",
+    "created_at": "2026-09-09T11:16:29.395927+00:00"
+  },
+  "sprint_li_d06_p2": {
+    "buffer_id": "6aa14027bbdeadf036f769f4",
+    "status": "scheduled",
+    "dueAt": "2026-09-14T17:30:00.000Z",
+    "channelId": "6a4e1a1c404834462881bed6",
+    "platform": "LinkedIn",
+    "topic": "Planetary-Scale Analytics in BigQuery Sandbox: 100k Scenarios at Zero Cost",
+    "created_at": "2026-09-09T11:16:32.045075+00:00"
+  },
+  "sprint_li_d06_p3": {
+    "buffer_id": "6aa1402abbdeadf036f76a53",
+    "status": "scheduled",
+    "dueAt": "2026-09-14T21:30:00.000Z",
+    "channelId": "6a4e1a1c404834462881bed6",
+    "platform": "LinkedIn",
+    "topic": "Dynamic Constraint Migration: Watching the Bottleneck Shift Live",
+    "created_at": "2026-09-09T11:16:35.030008+00:00"
+  },
+  "sprint_li_d06_p4": {
+    "buffer_id": "6aa1402d4b5578624f1240e5",
+    "status": "scheduled",
+    "dueAt": "2026-09-15T01:30:00.000Z",
+    "channelId": "6a4e1a1c404834462881bed6",
+    "platform": "LinkedIn",
+    "topic": "12 Analytical Scaling Laws: The Mathematical Foundation of Z-WBE",
+    "created_at": "2026-09-09T11:16:37.779468+00:00"
+  },
+  "sprint_li_d07_p1": {
+    "buffer_id": "6aa14030bbdeadf036f76b1e",
+    "status": "scheduled",
+    "dueAt": "2026-09-15T14:00:00.000Z",
+    "channelId": "6a4e1a1c404834462881bed6",
+    "platform": "LinkedIn",
+    "topic": "7-Day Sprint Retrospective: What We Learned Modeling Future Computing",
+    "created_at": "2026-09-09T11:16:40.639827+00:00"
+  },
+  "sprint_li_d07_p2": {
+    "buffer_id": "6aa14033bbdeadf036f76ba0",
+    "status": "scheduled",
+    "dueAt": "2026-09-15T18:30:00.000Z",
+    "channelId": "6a4e1a1c404834462881bed6",
+    "platform": "LinkedIn",
+    "topic": "Open-Source Reproducibility: How to Clone, Run, and Challenge Our Assumptions",
+    "created_at": "2026-09-09T11:16:43.335303+00:00"
+  },
+  "sprint_li_d07_p3": {
+    "buffer_id": "6aa140354b5578624f124498",
+    "status": "scheduled",
+    "dueAt": "2026-09-16T01:30:00.000Z",
+    "channelId": "6a4e1a1c404834462881bed6",
+    "platform": "LinkedIn",
+    "topic": "The Enduring Lesson: You Cannot Solve a Complex System by Optimizing a Single Wall",
+    "created_at": "2026-09-09T11:16:45.988851+00:00"
   }
 }
