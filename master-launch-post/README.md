@@ -9,7 +9,7 @@ See [`MASTER_POST.md`](./MASTER_POST.md) for the complete ready-to-copy launch c
 
 ### Assets in this folder:
 1. `01_google_nvidia_golden_ticket_badges.png` - Official Google Cloud × NVIDIA credentials (4/4 complete sweep)
-2. `02_hero_bottleneck_shift.gif` - Core thesis demo (100× imaging shift to Memory Bandwidth)
+2. `02_hero_bottleneck_shift.mp4` / `02_hero_bottleneck_shift.gif` - Signature 1080p 60fps walkthrough extending from the 100x imaging shift through the full app workflow to the 4 verified Golden Ticket learning cards modal.
 3. `02b_hero_bottleneck_shift_static.png` - Static high-res UI transition screenshot
 4. `03_tesla_t4_gpu_speedup.png` - 8.62× measured T4 speedup on the Google/NVIDIA tabular ML benchmark (1.907 s CPU vs 0.221 s GPU with cudf.pandas). Separately, Z-WBE includes a deterministic 100,000-scenario parameter sweep stored and analyzed in Google BigQuery Sandbox.
 5. `golden-ticket-cards/` - The 4 official Golden Ticket social cards
